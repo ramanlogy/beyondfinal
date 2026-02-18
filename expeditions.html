@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Himalayan Expeditions | 8000m Peaks & Technical Climbs | Beyond Summit</title>
+  <meta name="description" content="Guided expeditions to all 14 eight-thousanders including Everest, K2, Annapurna and Manaslu. Expert Sherpa teams, premium logistics, and proven safety protocols. Spring & Autumn 2026 slots available.">
+  <link rel="canonical" href="https://www.beyondsummitexped.com/expeditions">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=DM+Sans:wght@300;400;500;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Himalayan Expeditions","url":"https://www.beyondsummitexped.com/expeditions","description":"Guided expeditions to all 14 eight-thousanders and major Himalayan peaks.","provider":{"@type":"TravelAgency","name":"Beyond Summit Expeditions"}}</script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --gold:#c9933a;--gold-light:#e8b564;--gold-pale:#f5e6cc;
+      --onyx:#0d0d0f;--charcoal:#1c1c20;--mist:#f7f5f2;--snow:#fff;
+      --text:#2a2a2e;--text-muted:#7a7a82;--border:#e8e4df;
+      --fd:'DM Serif Display',serif;--fs:'Cormorant Garamond',serif;--fb:'DM Sans',sans-serif;
+      --tr:.4s cubic-bezier(.25,.46,.45,.94);--r:1.5rem;--rs:.75rem
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:var(--fb);color:var(--text);background:var(--snow);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    ::-webkit-scrollbar{width:5px}::-webkit-scrollbar-thumb{background:var(--gold);border-radius:10px}
+
+    /* NAV */
+    .nav{position:fixed;top:0;left:0;width:100%;z-index:200;padding:1.5rem;transition:var(--tr);display:flex;align-items:center;justify-content:space-between}
+    .nav.scrolled{background:rgba(255,255,255,.97);backdrop-filter:blur(20px);box-shadow:0 1px 30px rgba(0,0,0,.06);padding:1rem 1.5rem}
+    @media(min-width:1024px){.nav{padding:2rem 4rem}.nav.scrolled{padding:1.2rem 4rem}}
+    .nav-logo{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+    .logo-tri{width:34px;height:34px;background:var(--gold);clip-path:polygon(50% 0%,0% 100%,100% 100%);flex-shrink:0}
+    .logo-txt strong{display:block;font-family:var(--fd);font-size:1.1rem;color:#fff;letter-spacing:-.02em;transition:color var(--tr)}
+    .logo-txt span{display:block;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(255,255,255,.55);transition:color var(--tr)}
+    .nav.scrolled .logo-txt strong{color:var(--onyx)}.nav.scrolled .logo-txt span{color:var(--text-muted)}
+    .nav-links{display:none}
+    @media(min-width:1024px){
+      .nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
+      .nav-links a{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:rgba(255,255,255,.8);transition:color var(--tr)}
+      .nav-links a:hover,.nav-links a.active{color:var(--gold-light)}
+      .nav.scrolled .nav-links a{color:var(--text-muted)}.nav.scrolled .nav-links a:hover,.nav.scrolled .nav-links a.active{color:var(--gold)}
+      .nav-cta{background:var(--gold);color:#fff !important;padding:.6rem 1.4rem;border-radius:100px;transition:var(--tr)}
+      .nav-cta:hover{background:var(--onyx) !important}
+    }
+    .hamburger{background:none;border:none;cursor:pointer;display:flex;flex-direction:column;gap:5px;padding:.25rem}
+    .hamburger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:var(--tr)}
+    .nav.scrolled .hamburger span{background:var(--onyx)}
+    .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .hamburger.open span:nth-child(2){opacity:0}
+    .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    @media(min-width:1024px){.hamburger{display:none}}
+    .mob-menu{position:fixed;top:0;right:0;width:100%;max-width:320px;height:100vh;background:var(--onyx);z-index:300;padding:5rem 2.5rem 3rem;transform:translateX(100%);transition:transform .5s cubic-bezier(.77,0,.175,1);display:flex;flex-direction:column}
+    .mob-menu.open{transform:translateX(0)}
+    .mob-menu nav{display:flex;flex-direction:column;gap:.25rem}
+    .mob-menu nav a{font-family:var(--fd);font-size:1.8rem;color:rgba(255,255,255,.7);text-decoration:none;padding:.4rem 0;border-bottom:1px solid rgba(255,255,255,.08);transition:color var(--tr)}
+    .mob-menu nav a:hover{color:var(--gold-light)}
+    .mob-menu-close{position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;cursor:pointer;color:rgba(255,255,255,.4);font-size:1.4rem}
+    .mob-foot{margin-top:auto;padding-top:2rem;border-top:1px solid rgba(255,255,255,.08)}
+    .mob-foot p{font-size:.7rem;color:rgba(255,255,255,.3);margin-bottom:.4rem}
+    .mob-foot a{color:var(--gold);font-weight:700;text-decoration:none;font-size:.9rem}
+    .backdrop{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:250;opacity:0;pointer-events:none;transition:opacity var(--tr)}
+    .backdrop.open{opacity:1;pointer-events:all}
+
+    /* HERO */
+    .hero{position:relative;min-height:65vh;display:flex;align-items:flex-end;overflow:hidden;background:var(--onyx);padding:2rem 1.5rem 4rem}
+    @media(min-width:1024px){.hero{padding:4rem 4rem 5rem}}
+    .hero-bg{position:absolute;inset:0;background:linear-gradient(160deg,#0d1520 0%,#1a1008 60%,#0d0d0f 100%)}
+    .hero-pattern{position:absolute;inset:0;opacity:.06;background-image:repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,.5) 39px,rgba(255,255,255,.5) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,.5) 39px,rgba(255,255,255,.5) 40px)}
+    .hero-grd{position:absolute;bottom:0;left:0;right:0;height:80%;background:linear-gradient(to top,rgba(13,13,15,.95),transparent)}
+    .hero-content{position:relative;z-index:5;max-width:1200px;width:100%;margin:0 auto}
+    .eyebrow{display:inline-flex;align-items:center;gap:.6rem;background:rgba(201,147,58,.15);border:1px solid rgba(201,147,58,.3);color:var(--gold-light);padding:.35rem .9rem;border-radius:100px;font-size:.65rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;margin-bottom:1.25rem;animation:fadeUp .7s ease both}
+    .hero h1{font-family:var(--fd);font-size:clamp(2.8rem,8vw,7rem);line-height:.95;letter-spacing:-.02em;color:#fff;margin-bottom:1rem;animation:fadeUp .7s ease .1s both}
+    .hero h1 em{font-style:italic;color:var(--gold-light);font-family:var(--fs);font-size:1.05em}
+    .hero-sub{color:rgba(255,255,255,.55);font-size:1rem;max-width:560px;line-height:1.7;animation:fadeUp .7s ease .2s both}
+    @media(min-width:768px){.hero-sub{font-size:1.05rem}}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+
+    /* FILTER BAR */
+    .filter-bar{background:var(--mist);border-bottom:1px solid var(--border);padding:1.25rem 1.5rem;position:sticky;top:0;z-index:100}
+    @media(min-width:1024px){.filter-bar{padding:1.25rem 4rem}}
+    .filter-inner{max-width:1200px;margin:0 auto;display:flex;gap:.75rem;align-items:center;flex-wrap:wrap}
+    .filter-label{font-size:.65rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--text-muted);flex-shrink:0}
+    .filter-btn{background:#fff;border:1.5px solid var(--border);color:var(--text-muted);padding:.45rem 1.1rem;border-radius:100px;font-family:var(--fb);font-size:.75rem;font-weight:600;cursor:pointer;transition:var(--tr)}
+    .filter-btn:hover,.filter-btn.active{background:var(--gold);border-color:var(--gold);color:#fff}
+
+    /* SECTION */
+    .section{padding:4rem 1.5rem}
+    @media(min-width:768px){.section{padding:5rem 2rem}}
+    @media(min-width:1024px){.section{padding:6rem 4rem}}
+    .container{max-width:1200px;margin:0 auto}
+    .section-label{display:inline-block;font-size:.65rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem}
+    .section-title{font-family:var(--fd);font-size:clamp(2rem,4vw,3.2rem);line-height:1.05;letter-spacing:-.02em;color:var(--onyx);margin-bottom:1rem}
+    .section-title em{font-style:italic;color:var(--gold);font-family:var(--fs)}
+
+    /* PEAK CARDS - Main Grid */
+    .peaks-grid{display:grid;gap:1.5rem}
+    @media(min-width:640px){.peaks-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(min-width:1024px){.peaks-grid{grid-template-columns:repeat(3,1fr)}}
+
+    .peak-card{border-radius:var(--r);overflow:hidden;background:var(--snow);border:1px solid var(--border);text-decoration:none;display:block;transition:transform var(--tr),box-shadow var(--tr)}
+    .peak-card:hover{transform:translateY(-5px);box-shadow:0 20px 50px rgba(0,0,0,.12)}
+    .peak-card-img{position:relative;aspect-ratio:4/3;overflow:hidden}
+    .peak-card-img img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s ease}
+    .peak-card:hover .peak-card-img img{transform:scale(1.08)}
+    .peak-card-img-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,12,.7) 0%,transparent 60%)}
+    .peak-alt{position:absolute;bottom:1rem;left:1rem;font-family:var(--fs);font-size:1.4rem;color:#fff;font-style:italic}
+    .peak-rank{position:absolute;top:1rem;right:1rem;background:var(--gold);color:#fff;font-size:.6rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;padding:.3rem .75rem;border-radius:100px}
+    .peak-card-body{padding:1.5rem}
+    .peak-card-name{font-family:var(--fd);font-size:1.5rem;color:var(--onyx);margin-bottom:.4rem;line-height:1.1}
+    .peak-card-meta{display:flex;gap:1.25rem;flex-wrap:wrap;margin-bottom:1rem}
+    .peak-meta-item{display:flex;flex-direction:column;gap:.15rem}
+    .peak-meta-key{font-size:.6rem;text-transform:uppercase;letter-spacing:.15em;color:var(--text-muted)}
+    .peak-meta-val{font-size:.85rem;font-weight:700;color:var(--text)}
+    .peak-card-desc{font-size:.84rem;color:var(--text-muted);line-height:1.65;margin-bottom:1.25rem}
+    .peak-card-footer{display:flex;align-items:center;justify-content:space-between;padding-top:1.1rem;border-top:1px solid var(--border)}
+    .peak-price{font-family:var(--fd);font-size:1.3rem;color:var(--onyx)}
+    .peak-price span{font-family:var(--fb);font-size:.68rem;color:var(--text-muted);font-weight:400}
+    .peak-cta{display:inline-flex;align-items:center;gap:.4rem;color:var(--gold);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;transition:gap var(--tr)}
+    .peak-card:hover .peak-cta{gap:.7rem}
+
+    /* HERO CARD - Everest special */
+    .peak-card.hero-card{grid-column:1/-1}
+    @media(min-width:1024px){.peak-card.hero-card{grid-column:span 2}}
+    .peak-card.hero-card .peak-card-img{aspect-ratio:16/7}
+    @media(min-width:768px){.peak-card.hero-card .peak-card-img{aspect-ratio:21/8}}
+
+    /* DIFFICULTY BANDS */
+    .diff-badge{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.25rem .7rem;border-radius:100px;margin-bottom:.75rem}
+    .diff-extreme{background:rgba(192,57,43,.1);color:#c0392b;border:1px solid rgba(192,57,43,.2)}
+    .diff-technical{background:rgba(201,147,58,.1);color:#b07d20;border:1px solid rgba(201,147,58,.25)}
+    .diff-strenuous{background:rgba(39,174,96,.1);color:#1e8449;border:1px solid rgba(39,174,96,.25)}
+
+    /* COMPARISON TABLE */
+    .compare-section{background:var(--onyx)}
+    .compare-section .section-title{color:#fff}
+    .compare-section .section-label{color:var(--gold-light)}
+    .compare-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:2.5rem}
+    table{width:100%;border-collapse:collapse;min-width:700px}
+    th{text-align:left;font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);padding:.9rem 1.25rem;border-bottom:1px solid rgba(255,255,255,.1)}
+    td{padding:.85rem 1.25rem;border-bottom:1px solid rgba(255,255,255,.06);font-size:.85rem;color:rgba(255,255,255,.65);vertical-align:middle}
+    tr:hover td{background:rgba(255,255,255,.03)}
+    td:first-child{font-family:var(--fd);font-size:1rem;color:#fff}
+    .diff-dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:.4rem}
+    .dot-extreme{background:#e74c3c}
+    .dot-technical{background:var(--gold)}
+    .dot-moderate{background:#27ae60}
+    .td-price{font-family:var(--fd);color:var(--gold-light) !important;font-size:1rem !important}
+    .view-link{color:var(--gold);font-size:.72rem;font-weight:700;text-decoration:none;letter-spacing:.08em;text-transform:uppercase;transition:color var(--tr)}
+    .view-link:hover{color:var(--gold-light)}
+
+    /* WHY */
+    .why-grid{display:grid;gap:1.5rem;margin-top:2.5rem}
+    @media(min-width:640px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(min-width:1024px){.why-grid{grid-template-columns:repeat(4,1fr)}}
+    .why-card{background:var(--mist);border:1px solid var(--border);border-radius:var(--r);padding:1.75rem 1.5rem;transition:border-color var(--tr),background var(--tr)}
+    .why-card:hover{background:var(--gold-pale);border-color:rgba(201,147,58,.3)}
+    .why-icon{width:44px;height:44px;border-radius:12px;background:var(--gold-pale);border:1px solid rgba(201,147,58,.3);display:flex;align-items:center;justify-content:center;color:var(--gold);margin-bottom:1.25rem}
+    .why-title{font-family:var(--fd);font-size:1.1rem;color:var(--onyx);margin-bottom:.5rem}
+    .why-desc{font-size:.83rem;color:var(--text-muted);line-height:1.65}
+
+    /* CTA */
+    .cta-band{background:var(--gold);padding:4.5rem 1.5rem;text-align:center}
+    .cta-band h2{font-family:var(--fd);font-size:clamp(2rem,5vw,3.5rem);color:#fff;margin-bottom:.75rem}
+    .cta-band p{color:rgba(255,255,255,.8);font-size:1rem;margin-bottom:2rem;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.65}
+    .btn{display:inline-flex;align-items:center;gap:.6rem;padding:.9rem 2rem;border-radius:100px;font-family:var(--fb);font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:var(--tr)}
+    .btn-white{background:#fff;color:var(--gold)}.btn-white:hover{background:var(--onyx);color:#fff;transform:translateY(-2px)}
+    .btn-outline{background:transparent;color:rgba(255,255,255,.85);border:1.5px solid rgba(255,255,255,.4)}.btn-outline:hover{border-color:#fff;color:#fff;transform:translateY(-2px)}
+    .btn-gap{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+
+    /* FOOTER */
+    .footer{background:var(--onyx);color:rgba(255,255,255,.5);padding:3rem 1.5rem;text-align:center}
+    @media(min-width:1024px){.footer{padding:3rem 4rem;text-align:left}}
+    .footer-inner{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:space-between;align-items:center}
+    .footer a{color:var(--gold-light);text-decoration:none}
+    .footer-links{display:flex;gap:1.5rem;flex-wrap:wrap}
+    .footer-links a{font-size:.75rem;color:rgba(255,255,255,.35);transition:color var(--tr)}
+    .footer-links a:hover{color:var(--gold-light)}
+    p.copy{font-size:.75rem}
+
+    /* REVEAL */
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+  </style>
+</head>
+<body>
+
+<div class="backdrop" id="backdrop" onclick="closeMob()"></div>
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-menu-close" onclick="closeMob()">✕</button>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="expeditions.html">Expeditions</a>
+    <a href="trekking.html">Trekking</a>
+    <a href="guides.html">Our Guides</a>
+    <a href="blog.html">Blog</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="mob-foot"><p>Call Us</p><a href="tel:+9779811157421">+977-9811157421</a></div>
+</div>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo">
+    <div class="logo-tri"></div>
+    <div class="logo-txt"><strong>Beyond Summit</strong><span>Elite Expeditions · Nepal</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="expeditions.html" class="active">Expeditions</a></li>
+    <li><a href="trekking.html">Trekking</a></li>
+    <li><a href="guides.html">Guides</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html" class="nav-cta">Book Now</a></li>
+  </ul>
+  <button class="hamburger" id="ham" onclick="toggleMob()"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-grd"></div>
+  <div class="hero-content">
+    <div class="eyebrow">Spring & Autumn 2026 Slots Open</div>
+    <h1>Himalayan<br><em>Expeditions</em></h1>
+    <p class="hero-sub">From the world's highest summit to Nepal's most demanding technical peaks — every expedition guided to the highest standard. 2,400+ summits. 15 years of excellence.</p>
+  </div>
+</header>
+
+<!-- FILTER -->
+<div class="filter-bar">
+  <div class="filter-inner">
+    <span class="filter-label">Filter by:</span>
+    <button class="filter-btn active" onclick="filterPeaks('all',this)">All Peaks</button>
+    <button class="filter-btn" onclick="filterPeaks('8000',this)">8000m Peaks</button>
+    <button class="filter-btn" onclick="filterPeaks('7000',this)">6000–7000m</button>
+    <button class="filter-btn" onclick="filterPeaks('spring',this)">Spring Season</button>
+    <button class="filter-btn" onclick="filterPeaks('autumn',this)">Autumn Season</button>
+  </div>
+</div>
+
+<!-- PEAKS -->
+<section class="section" id="peaks-section">
+  <div class="container">
+    <div style="margin-bottom:2.5rem">
+      <span class="section-label reveal">The Roof of the World</span>
+      <h2 class="section-title reveal d1">Choose Your<br><em>Summit</em></h2>
+    </div>
+    <div class="peaks-grid" id="peaks-grid">
+
+      <!-- EVEREST - hero card -->
+      <a href="expedition-everest.html" class="peak-card hero-card reveal" data-cat="8000 spring">
+        <div class="peak-card-img">
+          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1400&auto=format&fit=crop" alt="Mount Everest South Face at dawn Nepal Himalaya">
+          <div class="peak-card-img-overlay"></div>
+          <div class="peak-alt">8,848m</div>
+          <div class="peak-rank">#1 Highest on Earth</div>
+        </div>
+        <div class="peak-card-body">
+          <span class="diff-badge diff-extreme">Extreme Altitude</span>
+          <div class="peak-card-name">Mount Everest</div>
+          <div class="peak-card-meta">
+            <div class="peak-meta-item"><div class="peak-meta-key">Duration</div><div class="peak-meta-val">55 Days</div></div>
+            <div class="peak-meta-item"><div class="peak-meta-key">Season</div><div class="peak-meta-val">Spring (Apr–May)</div></div>
+            <div class="peak-meta-item"><div class="peak-meta-key">Sherpa Ratio</div><div class="peak-meta-val">1:1</div></div>
+            <div class="peak-meta-item"><div class="peak-meta-key">Group Size</div><div class="peak-meta-val">Max 8</div></div>
+          </div>
+          <div class="peak-card-desc">The ultimate mountaineering objective. Our Spring 2026 expedition offers premium oxygen systems, luxury heated base camp, and the most experienced Sherpa team in the Khumbu. 60+ successful Everest summits guided.</div>
+          <div class="peak-card-footer">
+            <div class="peak-price">From $45,000 <span>/ person</span></div>
+            <div class="peak-cta">Full Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </div>
+      </a>
+
+      <!-- AMA DABLAM -->
+      <a href="expedition-ama-dablam.html" class="peak-card reveal d1" data-cat="7000 autumn spring">
+        <div class="peak-card-img">
+          <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=800&auto=format&fit=crop" alt="Ama Dablam technical peak Khumbu Nepal">
+          <div class="peak-card-img-overlay"></div>
+          <div class="peak-alt">6,812m</div>
+          <div class="peak-rank">Most Popular</div>
+        </div>
+        <div class="peak-card-body">
+          <span class="diff-badge diff-technical">Technical Elite</span>
+          <div class="peak-card-name">Ama Dablam</div>
+          <div class="peak-card-meta">
+            <div class="peak-meta-item"><div class="peak-meta-key">Duration</div><div class="peak-meta-val">22 Days</div></div>
+            <div class="peak-meta-item"><div class="peak-meta-key">Season</div><div class="peak-meta-val">Oct–Nov</div></div>
+            <div class="peak-meta-item"><div class="peak-meta-key">Group Size</div><div class="peak-meta-val">Max 6</div></div>
+          </div>
+          <div class="peak-card-desc">Widely regarded as the world's most beautiful mountain. A spectacular technical climb demanding rock, ice and mixed skills on the classic Southwest Ridge.</div>
+          <div class="peak-card-footer">
+            <div class="peak-price">From $5,900 <span>/ person</span></div>
+            <div class="peak-cta">Full Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </div>
+      </a>
+
+      <!-- MANASLU -->
+      <a href="expedition-manaslu.html" class="peak-card reveal d2" data-cat="8000 autumn">
+        <div class="peak-card-img">
+          <img src="https://images.unsplash.com/photo-1508193638397-1c4234db14d8?q=80&w=800&auto=format&fit=crop" alt="Manaslu 8000m peak Nepal expedition">
+          <div class="peak-card-img-overlay"></div>
+          <div class="peak-alt">8,163m</div>
+          <div class="peak-rank">#8 World</div>
+        </div>
+        <div class="peak-card-body">
+          <span class="diff-badge diff-extreme">Extreme Altitude</span>
+          <div class="peak-card-name">Manaslu</div>
+          <div class="peak-card-meta">
+            <div class="peak-meta-item"><div class="peak-meta-key">Duration</div><div class="peak-meta-val">45 Days</div></div>
+            <div class="peak-meta-item"><div class="peak-meta-key">Season</div><div class="peak-meta-val">Sep–Oct</div></div>
+            <div class="peak-meta-item"><div class="peak-meta-key">Group Size</div><div class="peak-meta-val">Max 8</div></div>
+          </div>
+          <div class="peak-card-desc">Spirit of the Mountain. The eighth highest peak combines an outstanding circuit trek approach with a stunning Northeast Face route. The ideal second 8000m peak.</div>
+          <div class="peak-card-footer">
+            <div class="peak-price">From $22,000 <span>/ person</span></div>
+            <div class="peak-cta">Full Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </div>
+      </a>
+
+      <!-- ANNAPURNA -->
+      <a href="expedition-annapurna.html" class="peak-card reveal" data-cat="8000 spring">
+        <div class="peak-card-img">
+          <img src="https://images.unsplash.com/photo-1506466010722-395ee2bef877?q=80&w=800&auto=format&fit=crop" alt="Annapurna I South Face Nepal">
+          <div class="peak-card-img-overlay"></div>
+          <div class="peak-alt">8,091m</div>
+          <div class="peak-rank">#10 World</div>
+        </div>
+        <div class="peak-card-body">
+          <span class="diff-badge diff-extreme">Expert Only</span>
+          <div class="peak-card-name">Annapurna I</div>
+          <div class="peak-card-meta">
+            <div class="peak-meta-item"><div class="peak-meta-key">Duration</div><div class="peak-meta-val">50 Days</div></div>
+            <div class="peak-meta-item"><div class="peak-meta-key">Season</div><div class="peak-meta-val">Apr–May</div></div>
+            <div class="peak-meta-item"><div class="peak-meta-key">Group Size</div><div class="peak-meta-val">Max 4</div></div>
+          </div>
+          <div class="peak-card-desc">First 8000m peak ever climbed (1950), and still one of the most challenging. Our ultra-conservative programme requires two prior 8000m summits. Reserved for the elite.</div>
+          <div class="peak-card-footer">
+            <div class="peak-price">From $28,000 <span>/ person</span></div>
+            <div class="peak-cta">Full Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </div>
+      </a>
+
+      <!-- CHO OYU -->
+      <a href="expedition-cho-oyu.html" class="peak-card reveal d1" data-cat="8000 autumn">
+        <div class="peak-card-img">
+          <img src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?q=80&w=800&auto=format&fit=crop" alt="Cho Oyu 8188m Tibet Nepal border expedition">
+          <div class="peak-card-img-overlay"></div>
+          <div class="peak-alt">8,188m</div>
+          <div class="peak-rank">#6 World</div>
+        </div>
+        <div class="peak-card-body">
+          <span class="diff-badge diff-technical">High Altitude</span>
+          <div class="peak-card-name">Cho Oyu</div>
+          <div class="peak-card-meta">
+            <div class="peak-meta-item"><div class="peak-meta-key">Duration</div><div class="peak-meta-val">42 Days</div></div>
+            <div class="peak-meta-item"><div class="peak-meta-key">Season</div><div class="peak-meta-val">Sep–Oct</div></div>
+            <div class="peak-meta-item"><div class="peak-meta-key">Group Size</div><div class="peak-meta-val">Max 10</div></div>
+          </div>
+          <div class="peak-card-desc">The most accessible 8000m peak in the world — a superb objective for climbers making their first foray into extreme altitude. Straightforward route, manageable logistics.</div>
+          <div class="peak-card-footer">
+            <div class="peak-price">From $18,000 <span>/ person</span></div>
+            <div class="peak-cta">Full Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </div>
+      </a>
+
+      <!-- DHAULAGIRI -->
+      <a href="expedition-dhaulagiri.html" class="peak-card reveal d2" data-cat="8000 spring">
+        <div class="peak-card-img">
+          <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?q=80&w=800&auto=format&fit=crop" alt="Dhaulagiri White Mountain Nepal expedition">
+          <div class="peak-card-img-overlay"></div>
+          <div class="peak-alt">8,167m</div>
+          <div class="peak-rank">#7 World</div>
+        </div>
+        <div class="peak-card-body">
+          <span class="diff-badge diff-extreme">Extreme</span>
+          <div class="peak-card-name">Dhaulagiri</div>
+          <div class="peak-card-meta">
+            <div class="peak-meta-item"><div class="peak-meta-key">Duration</div><div class="peak-meta-val">48 Days</div></div>
+            <div class="peak-meta-item"><div class="peak-meta-key">Season</div><div class="peak-meta-val">Apr–May</div></div>
+            <div class="peak-meta-item"><div class="peak-meta-key">Group Size</div><div class="peak-meta-val">Max 6</div></div>
+          </div>
+          <div class="peak-card-desc">"White Mountain" — one of Nepal's most isolated 8000m peaks. The remote Northeast Ridge route takes you through rarely visited terrain. A serious undertaking for experienced alpinists.</div>
+          <div class="peak-card-footer">
+            <div class="peak-price">From $24,000 <span>/ person</span></div>
+            <div class="peak-cta">Full Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </div>
+      </a>
+
+    </div><!-- /peaks-grid -->
+  </div>
+</section>
+
+<!-- COMPARISON TABLE -->
+<section class="compare-section section">
+  <div class="container">
+    <span class="section-label">Side by Side</span>
+    <h2 class="section-title" style="color:#fff">Expedition <em style="color:var(--gold-light)">Comparison</em></h2>
+    <div class="compare-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Peak</th><th>Altitude</th><th>Duration</th><th>Difficulty</th><th>Best Season</th><th>From Price</th><th>Prior Experience</th><th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Mount Everest</td><td>8,848m</td><td>55 Days</td>
+            <td><span class="diff-dot dot-extreme"></span>Extreme</td>
+            <td>Spring</td><td class="td-price">$45,000</td><td>7000m+ summit required</td>
+            <td><a href="expedition-everest.html" class="view-link">View →</a></td>
+          </tr>
+          <tr>
+            <td>Annapurna I</td><td>8,091m</td><td>50 Days</td>
+            <td><span class="diff-dot dot-extreme"></span>Expert Only</td>
+            <td>Spring</td><td class="td-price">$28,000</td><td>Two 8000m summits</td>
+            <td><a href="expedition-annapurna.html" class="view-link">View →</a></td>
+          </tr>
+          <tr>
+            <td>Dhaulagiri</td><td>8,167m</td><td>48 Days</td>
+            <td><span class="diff-dot dot-extreme"></span>Extreme</td>
+            <td>Spring</td><td class="td-price">$24,000</td><td>One 8000m summit</td>
+            <td><a href="expedition-dhaulagiri.html" class="view-link">View →</a></td>
+          </tr>
+          <tr>
+            <td>Manaslu</td><td>8,163m</td><td>45 Days</td>
+            <td><span class="diff-dot dot-extreme"></span>Extreme</td>
+            <td>Autumn</td><td class="td-price">$22,000</td><td>6500m+ summit</td>
+            <td><a href="expedition-manaslu.html" class="view-link">View →</a></td>
+          </tr>
+          <tr>
+            <td>Cho Oyu</td><td>8,188m</td><td>42 Days</td>
+            <td><span class="diff-dot dot-moderate"></span>Moderate High</td>
+            <td>Autumn</td><td class="td-price">$18,000</td><td>6000m+ recommended</td>
+            <td><a href="expedition-cho-oyu.html" class="view-link">View →</a></td>
+          </tr>
+          <tr>
+            <td>Ama Dablam</td><td>6,812m</td><td>22 Days</td>
+            <td><span class="diff-dot dot-moderate"></span>Technical</td>
+            <td>Autumn/Spring</td><td class="td-price">$5,900</td><td>5500m + technical skills</td>
+            <td><a href="expedition-ama-dablam.html" class="view-link">View →</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="section" style="background:var(--mist)">
+  <div class="container">
+    <span class="section-label reveal">Our Standards</span>
+    <h2 class="section-title reveal d1">Why Choose<br><em>Beyond Summit</em></h2>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="why-title">Safety First</div>
+        <div class="why-desc">Dedicated high-altitude medics, fixed turnaround protocols, satellite comms and helicopter evacuation on standby for every expedition.</div>
+      </div>
+      <div class="why-card reveal d1">
+        <div class="why-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></div>
+        <div class="why-title">Certified Sherpa Guides</div>
+        <div class="why-desc">UIAA-certified, first-aid trained guides with combined 150+ Everest summits. Many of our Sherpas have climbed Everest more than 10 times.</div>
+      </div>
+      <div class="why-card reveal d2">
+        <div class="why-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div class="why-title">1:1 Sherpa Ratio</div>
+        <div class="why-desc">On all 8000m peaks, every climber is paired with a dedicated Sherpa. Above Camp 3, no one goes unsupported.</div>
+      </div>
+      <div class="why-card reveal d3">
+        <div class="why-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <div class="why-title">Premium Logistics</div>
+        <div class="why-desc">Heated luxury base camp tents, top-grade Poisk oxygen systems, gourmet base camp catering by our dedicated kitchen team.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-band">
+  <h2>Not Sure Which<br>Peak Is Right for You?</h2>
+  <p>Our expedition team offers free 30-minute consultations to help you find the right objective based on your experience, fitness, and timeline.</p>
+  <div class="btn-gap">
+    <a href="contact.html" class="btn btn-white">Book a Free Consultation</a>
+    <a href="tel:+9779811157421" class="btn btn-outline">Call Us: +977-9811157421</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <p class="copy">© 2026 Beyond Summit Expeditions · Licensed by Dept. of Tourism, Nepal</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a><a href="trekking.html">Trekking</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>80),{passive:true});
+  function toggleMob(){const o=document.getElementById('mobMenu').classList.toggle('open');document.getElementById('backdrop').classList.toggle('open',o);document.getElementById('ham').classList.toggle('open',o);document.body.style.overflow=o?'hidden':'';}
+  function closeMob(){document.getElementById('mobMenu').classList.remove('open');document.getElementById('backdrop').classList.remove('open');document.getElementById('ham').classList.remove('open');document.body.style.overflow='';}
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMob()});
+  const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}}),{rootMargin:'0px 0px -50px 0px',threshold:.08});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+  function filterPeaks(cat,btn){
+    document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.peak-card').forEach(c=>{
+      const cats=c.dataset.cat||'';
+      c.style.display=(cat==='all'||cats.includes(cat))?'block':'none';
+    });
+  }
+</script>
+</body>
+</html>

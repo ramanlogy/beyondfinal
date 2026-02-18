@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Beyond Summit Expeditions · Nepal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Mono:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --obsidian: #0d0c0a; --deep: #141210; --bark: #1f1c17;
+      --amber: #c8832a; --amber-light: #e8a84a; --amber-pale: #f2d9a8;
+      --glacier: #8ab4c8; --snow: #f5f2ec;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --mono: 'DM Mono', monospace; --sans: 'Outfit', system-ui, sans-serif;
+      --ease: cubic-bezier(0.22, 1, 0.36, 1); --ease-in: cubic-bezier(0.65, 0, 0.35, 1);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); background: var(--obsidian); color: var(--snow); overflow-x: hidden; -webkit-font-smoothing: antialiased; cursor: none; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+
+    /* NOISE */
+    body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); pointer-events: none; z-index: 9000; opacity: 0.35; }
+
+    /* CURSOR */
+    .cursor { position: fixed; top: 0; left: 0; width: 10px; height: 10px; background: var(--amber); border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%,-50%); transition: width .4s var(--ease), height .4s var(--ease); }
+    .cursor-ring { position: fixed; top: 0; left: 0; width: 36px; height: 36px; border: 1px solid rgba(200,131,42,.4); border-radius: 50%; pointer-events: none; z-index: 9998; transform: translate(-50%,-50%); transition: width .4s var(--ease), height .4s var(--ease), border-color .3s; }
+    body:has(a:hover) .cursor { width: 16px; height: 16px; }
+    body:has(a:hover) .cursor-ring { width: 52px; height: 52px; border-color: rgba(200,131,42,.7); }
+    @media (max-width: 768px) { .cursor, .cursor-ring { display: none; } body { cursor: auto; } }
+
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 800; display: flex; align-items: center; justify-content: space-between; padding: 2rem 4rem; transition: padding .5s var(--ease); }
+    nav.shrunk { padding: 1.25rem 4rem; background: rgba(13,12,10,.9); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,.05); }
+    .nav-logo { display: flex; align-items: center; gap: .75rem; cursor: pointer; }
+    .nav-logo-icon { width: 32px; height: 32px; }
+    .nav-logo-text { font-family: var(--serif); font-size: 1.1rem; font-weight: 400; letter-spacing: .04em; color: var(--snow); }
+    .nav-logo-text em { display: block; font-family: var(--mono); font-size: .52rem; letter-spacing: .25em; text-transform: uppercase; color: var(--amber); opacity: .8; font-style: normal; margin-top: 2px; }
+    .nav-links { display: flex; align-items: center; gap: 2.5rem; }
+    .nav-links a { font-family: var(--mono); font-size: .62rem; letter-spacing: .18em; text-transform: uppercase; color: rgba(245,242,236,.45); transition: color .3s; }
+    .nav-links a:hover { color: var(--snow); }
+    .nav-links a.active-nav { color: var(--snow); border-bottom: 1px solid rgba(200,131,42,.5); padding-bottom: 1px; }
+    .nav-links a.cta { color: var(--amber-light); border-bottom: 1px solid rgba(200,131,42,.35); padding-bottom: 1px; }
+    .nav-links a.cta:hover { color: var(--amber-pale); border-color: var(--amber); }
+    .nav-hamburger { display: none; flex-direction: column; justify-content: center; align-items: center; width: 44px; height: 44px; gap: 6px; cursor: pointer; background: rgba(200,131,42,.08); border: 1px solid rgba(200,131,42,.2); border-radius: 4px; padding: 0 10px; transition: background .3s, border-color .3s; z-index: 900; }
+    .nav-hamburger:hover { background: rgba(200,131,42,.15); border-color: rgba(200,131,42,.4); }
+    .nav-hamburger span { display: block; width: 100%; height: 1px; background: var(--amber); transition: transform .4s var(--ease), opacity .3s, width .3s; transform-origin: center; }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; width: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* MOBILE MENU */
+    .mobile-menu { position: fixed; inset: 0; z-index: 700; background: var(--obsidian); display: flex; flex-direction: column; padding: 7rem 2.5rem 3rem; transform: translateX(100%); transition: transform .6s var(--ease); border-left: 1px solid rgba(200,131,42,.1); }
+    .mobile-menu.open { transform: translateX(0); }
+    .mobile-menu-links { display: flex; flex-direction: column; gap: 0; flex: 1; }
+    .mobile-menu-item { display: flex; align-items: center; justify-content: space-between; padding: 1.5rem 0; border-bottom: 1px solid rgba(245,242,236,.05); opacity: 0; transform: translateX(30px); transition: opacity .5s var(--ease), transform .5s var(--ease); }
+    .mobile-menu.open .mobile-menu-item:nth-child(1) { opacity:1; transform:none; transition-delay:.08s; }
+    .mobile-menu.open .mobile-menu-item:nth-child(2) { opacity:1; transform:none; transition-delay:.14s; }
+    .mobile-menu.open .mobile-menu-item:nth-child(3) { opacity:1; transform:none; transition-delay:.20s; }
+    .mobile-menu.open .mobile-menu-item:nth-child(4) { opacity:1; transform:none; transition-delay:.26s; }
+    .mobile-menu.open .mobile-menu-item:nth-child(5) { opacity:1; transform:none; transition-delay:.32s; }
+    .mobile-menu-link { font-family: var(--serif); font-size: 2.2rem; font-weight: 300; color: var(--snow); line-height: 1; transition: color .3s; }
+    .mobile-menu-link:hover { color: var(--amber-light); }
+    .mobile-menu-link.active-nav { color: var(--amber-light); }
+    .mobile-menu-link.cta-link { color: var(--amber); }
+    .mobile-menu-arrow { width: 32px; height: 32px; border: 1px solid rgba(200,131,42,.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--amber); opacity: .5; }
+    .mobile-menu-footer { opacity: 0; transition: opacity .5s .4s; padding-top: 2rem; }
+    .mobile-menu.open .mobile-menu-footer { opacity: 1; }
+    .mobile-menu-contact { font-family: var(--mono); font-size: .6rem; letter-spacing: .18em; text-transform: uppercase; color: rgba(245,242,236,.25); }
+    .mobile-menu-contact a { color: rgba(245,242,236,.4); transition: color .3s; }
+    .mobile-menu-contact a:hover { color: var(--amber-light); }
+
+    /* COMMONS */
+    .eyebrow { font-family: var(--mono); font-size: .6rem; letter-spacing: .3em; text-transform: uppercase; color: var(--amber); opacity: .8; display: block; margin-bottom: 1rem; }
+    .h2 { font-family: var(--serif); font-size: clamp(2.8rem, 5vw, 4.8rem); font-weight: 300; line-height: .95; letter-spacing: -.02em; color: var(--snow); }
+    .h2 em { font-style: italic; color: var(--amber-light); }
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+    .reveal.in { opacity: 1; transform: none; }
+    .reveal.d1 { transition-delay: .12s; } .reveal.d2 { transition-delay: .24s; } .reveal.d3 { transition-delay: .36s; }
+
+    /* WHATSAPP */
+    .whatsapp-float { position: fixed; bottom: 2rem; right: 2rem; z-index: 500; width: 52px; height: 52px; border-radius: 50%; background: #25D366; color: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 24px rgba(37,211,102,.35); transition: transform .4s var(--ease), box-shadow .4s; }
+    .whatsapp-float:hover { transform: scale(1.12); box-shadow: 0 10px 36px rgba(37,211,102,.5); }
+
+    /* PAGE HERO */
+    .page-hero { position: relative; height: 70vh; min-height: 500px; display: flex; align-items: flex-end; overflow: hidden; }
+    .page-hero-bg { position: absolute; inset: 0; }
+    .page-hero-bg img { width: 100%; height: 100%; object-fit: cover; filter: brightness(.35) saturate(.7); }
+    .page-hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, var(--obsidian) 0%, rgba(13,12,10,.5) 40%, transparent 100%); }
+    .page-hero-content { position: relative; z-index: 2; padding: 0 4rem 5rem; width: 100%; max-width: 1300px; margin: 0 auto; }
+    .page-hero-pretitle { font-family: var(--mono); font-size: .6rem; letter-spacing: .3em; text-transform: uppercase; color: var(--amber); opacity: .8; margin-bottom: 1rem; display: block; }
+    .page-hero-title { font-family: var(--serif); font-size: clamp(3.5rem,8vw,7rem); font-weight: 300; line-height: .9; letter-spacing: -.025em; color: var(--snow); }
+    .page-hero-title em { font-style: italic; color: transparent; -webkit-text-stroke: 1px rgba(245,242,236,.35); }
+    .page-hero-sub { font-family: var(--sans); font-size: .9rem; color: rgba(245,242,236,.4); margin-top: 1.5rem; max-width: 500px; line-height: 1.7; }
+
+    /* ABOUT INTRO */
+    .about-intro { padding: 7rem 4rem; max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 8rem; align-items: start; }
+    .about-lead { font-family: var(--serif); font-size: clamp(1.5rem,2.5vw,2rem); font-weight: 300; line-height: 1.45; color: var(--snow); margin-bottom: 2rem; }
+    .about-lead em { font-style: italic; color: var(--amber-light); }
+    .about-body { font-family: var(--sans); font-size: .9rem; color: rgba(245,242,236,.45); line-height: 1.85; }
+    .about-body p { margin-bottom: 1.25rem; }
+    .about-body p:last-child { margin-bottom: 0; }
+    .about-visual { position: sticky; top: 8rem; display: flex; flex-direction: column; gap: 1.5rem; }
+    .about-img-main { border-radius: 2px; overflow: hidden; position: relative; }
+    .about-img-main img { width: 100%; display: block; filter: brightness(.65) saturate(.8); }
+    .about-img-main::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(13,12,10,.6) 0%, transparent 50%); }
+    .about-img-caption { position: absolute; bottom: 0; left: 0; right: 0; z-index: 2; padding: 1.5rem; }
+    .about-img-caption span { font-family: var(--mono); font-size: .52rem; letter-spacing: .2em; text-transform: uppercase; color: var(--amber); opacity: .8; }
+    .about-img-small-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .about-img-small { border-radius: 2px; overflow: hidden; aspect-ratio: 4/3; }
+    .about-img-small img { width: 100%; height: 100%; object-fit: cover; filter: brightness(.5) saturate(.7); }
+
+    /* TIMELINE */
+    .about-timeline { background: var(--bark); border-top: 1px solid rgba(245,242,236,.04); padding: 7rem 4rem; }
+    .about-timeline-inner { max-width: 1300px; margin: 0 auto; }
+    .about-timeline-list { display: flex; flex-direction: column; gap: 0; margin-top: 4rem; }
+    .about-tl-item { display: grid; grid-template-columns: 120px 1px 1fr; gap: 0 3rem; padding-bottom: 4rem; }
+    .about-tl-item:last-child { padding-bottom: 0; }
+    .about-tl-year { font-family: var(--serif); font-size: 2.5rem; font-weight: 300; color: rgba(200,131,42,.4); line-height: 1; padding-top: .2rem; }
+    .about-tl-line { background: linear-gradient(to bottom, rgba(200,131,42,.4), rgba(200,131,42,.1)); position: relative; }
+    .about-tl-dot { position: absolute; top: .4rem; left: 50%; transform: translateX(-50%); width: 8px; height: 8px; border-radius: 50%; background: var(--amber); box-shadow: 0 0 0 4px rgba(200,131,42,.15); }
+    .about-tl-content { padding-left: 2rem; }
+    .about-tl-title { font-family: var(--serif); font-size: 1.4rem; font-weight: 400; color: var(--snow); margin-bottom: .5rem; }
+    .about-tl-desc { font-family: var(--sans); font-size: .82rem; color: rgba(245,242,236,.38); line-height: 1.75; max-width: 580px; }
+
+    /* VALUES */
+    .about-values { padding: 7rem 4rem; max-width: 1300px; margin: 0 auto; }
+    .about-values-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: rgba(245,242,236,.05); margin-top: 4rem; }
+    .value-card { padding: 3rem 2.5rem; background: var(--obsidian); transition: background .3s; }
+    .value-card:hover { background: var(--bark); }
+    .value-icon { width: 48px; height: 48px; color: var(--amber); opacity: .7; margin-bottom: 1.5rem; }
+    .value-title { font-family: var(--serif); font-size: 1.4rem; font-weight: 400; color: var(--snow); margin-bottom: .75rem; }
+    .value-desc { font-family: var(--sans); font-size: .82rem; color: rgba(245,242,236,.35); line-height: 1.75; }
+
+    /* CERTIFICATIONS */
+    .certifications { background: var(--bark); border-top: 1px solid rgba(245,242,236,.04); padding: 5rem 4rem; }
+    .certifications-inner { max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 6rem; align-items: center; }
+    .cert-list { display: flex; flex-direction: column; gap: 1.25rem; }
+    .cert-item { display: flex; align-items: center; gap: 1.25rem; padding: 1.25rem 1.5rem; border: 1px solid rgba(245,242,236,.06); background: rgba(13,12,10,.4); transition: border-color .3s; }
+    .cert-item:hover { border-color: rgba(200,131,42,.2); }
+    .cert-badge { width: 36px; height: 36px; border-radius: 50%; background: rgba(200,131,42,.1); border: 1px solid rgba(200,131,42,.2); display: flex; align-items: center; justify-content: center; color: var(--amber); flex-shrink: 0; }
+    .cert-name { font-family: var(--mono); font-size: .62rem; letter-spacing: .12em; color: rgba(245,242,236,.55); }
+
+    /* QUOTE */
+    .quote-section { position: relative; overflow: hidden; min-height: 60vh; display: flex; align-items: center; justify-content: center; }
+    .quote-bg { position: absolute; inset: 0; }
+    .quote-bg img { width: 100%; height: 100%; object-fit: cover; filter: brightness(.25) saturate(.5); transform: scale(1.05); }
+    .quote-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to right,rgba(13,12,10,.8) 0%,rgba(13,12,10,.3) 50%,rgba(13,12,10,.7) 100%), linear-gradient(to bottom,rgba(13,12,10,.7) 0%,transparent 30%,transparent 70%,rgba(13,12,10,.7) 100%); }
+    .quote-content { position: relative; z-index: 2; text-align: center; padding: 6rem 4rem; max-width: 900px; }
+    .quote-mark { font-family: var(--serif); font-size: 6rem; color: var(--amber); opacity: .25; line-height: 0; display: block; margin-bottom: 2rem; }
+    .quote-text { font-family: var(--serif); font-size: clamp(1.8rem,3.5vw,3rem); font-weight: 300; font-style: italic; color: var(--snow); line-height: 1.35; margin-bottom: 2.5rem; }
+    .quote-text em { color: var(--amber-light); font-style: normal; }
+    .quote-attr { font-family: var(--mono); font-size: .62rem; letter-spacing: .25em; text-transform: uppercase; color: rgba(245,242,236,.3); display: flex; align-items: center; justify-content: center; gap: 1rem; }
+    .quote-attr::before, .quote-attr::after { content:''; width:30px; height:1px; background:rgba(245,242,236,.18); }
+
+    /* BOOKING STRIP */
+    .booking-section { position: relative; overflow: hidden; padding: 7rem 4rem; background: var(--bark); border-top: 1px solid rgba(245,242,236,.04); }
+    .booking-inner { max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+    .booking-cta-row { display: flex; align-items: center; gap: 1.5rem; margin-top: 3rem; }
+    .btn-book { display: inline-flex; align-items: center; gap: .875rem; background: var(--amber); color: var(--obsidian); padding: 1rem 2.5rem; font-family: var(--mono); font-size: .65rem; letter-spacing: .22em; text-transform: uppercase; clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 100%, 0 100%); transition: background .35s, transform .4s, letter-spacing .4s; cursor: pointer; border: none; }
+    .btn-book:hover { background: var(--amber-pale); transform: translateX(5px); letter-spacing: .28em; }
+    .btn-phone { font-family: var(--mono); font-size: .65rem; letter-spacing: .12em; color: rgba(245,242,236,.35); transition: color .3s; }
+    .btn-phone:hover { color: var(--amber-light); }
+    .booking-visual { position: relative; }
+    .booking-img-wrap { border-radius: 2px; overflow: hidden; }
+    .booking-img { width: 100%; display: block; filter: brightness(.55) saturate(.75); }
+    .booking-badge { position: absolute; bottom: -1.5rem; left: -1.5rem; background: var(--obsidian); border: 1px solid rgba(200,131,42,.2); padding: 1.5rem 2rem; }
+    .booking-badge-num { font-family: var(--serif); font-size: 3rem; font-weight: 300; color: var(--amber); line-height: 1; }
+    .booking-badge-label { font-family: var(--mono); font-size: .55rem; letter-spacing: .2em; text-transform: uppercase; color: rgba(245,242,236,.3); margin-top: .3rem; }
+    .booking-deco { position: absolute; right: -5rem; top: 50%; transform: translateY(-50%); width: 40%; opacity: .03; pointer-events: none; }
+
+    /* FOOTER */
+    footer { background: var(--obsidian); border-top: 1px solid rgba(245,242,236,.05); padding: 5rem 4rem 3rem; }
+    .footer-grid { max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; margin-bottom: 4rem; padding-bottom: 4rem; border-bottom: 1px solid rgba(245,242,236,.05); }
+    .footer-brand-desc { font-family: var(--sans); font-size: .8rem; color: rgba(245,242,236,.28); line-height: 1.75; margin-top: 1.25rem; }
+    .footer-contact { margin-top: 1.75rem; display: flex; flex-direction: column; gap: .6rem; }
+    .footer-contact a { font-family: var(--mono); font-size: .65rem; letter-spacing: .08em; color: rgba(245,242,236,.3); display: flex; align-items: center; gap: .6rem; transition: color .3s; }
+    .footer-contact a:hover { color: var(--amber-light); }
+    .footer-col h4 { font-family: var(--mono); font-size: .55rem; letter-spacing: .28em; text-transform: uppercase; color: var(--amber); opacity: .7; margin-bottom: 1.25rem; }
+    .footer-col ul { display: flex; flex-direction: column; gap: .6rem; }
+    .footer-col a { font-family: var(--sans); font-size: .8rem; color: rgba(245,242,236,.3); transition: color .3s, padding-left .3s; }
+    .footer-col a:hover { color: rgba(245,242,236,.75); padding-left: 4px; }
+    .footer-bottom { max-width: 1300px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+    .footer-bottom p { font-family: var(--mono); font-size: .58rem; letter-spacing: .12em; color: rgba(245,242,236,.15); }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      nav { padding: 1.5rem 2rem; }
+      nav.shrunk { padding: 1rem 2rem; }
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      .about-intro { grid-template-columns: 1fr; gap: 4rem; }
+      .about-visual { position: static; }
+      .about-values-grid { grid-template-columns: repeat(2,1fr); }
+      .certifications-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .booking-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+      .about-intro, .about-values { padding-left: 2rem; padding-right: 2rem; }
+      .about-timeline { padding: 5rem 2rem; }
+      .certifications { padding: 4rem 2rem; }
+      .booking-section { padding: 5rem 2rem; }
+      footer { padding: 4rem 2rem 2rem; }
+      .page-hero-content { padding: 0 2rem 4rem; }
+    }
+    @media (max-width: 640px) {
+      .about-values-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .about-tl-item { grid-template-columns: 80px 1px 1fr; gap: 0 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- WHATSAPP -->
+  <a href="https://wa.me/9779811157421" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-links">
+      <div class="mobile-menu-item"><a class="mobile-menu-link" href="index.html">Home</a><div class="mobile-menu-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div>
+      <div class="mobile-menu-item"><a class="mobile-menu-link active-nav" href="about.html">About</a><div class="mobile-menu-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div>
+      <div class="mobile-menu-item"><a class="mobile-menu-link" href="guides.html">Our Guides</a><div class="mobile-menu-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div>
+      <div class="mobile-menu-item"><a class="mobile-menu-link" href="#">Expeditions</a><div class="mobile-menu-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div>
+      <div class="mobile-menu-item"><a class="mobile-menu-link cta-link" href="#">Book Your Ascent →</a><div class="mobile-menu-arrow" style="border-color:rgba(200,131,42,.4);color:var(--amber-light)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div>
+    </div>
+    <div class="mobile-menu-footer">
+      <div class="mobile-menu-contact"><a href="tel:+9779811157421">+977 9811 157 421</a> · <a href="mailto:info@beyondsummitexped.com">info@beyondsummitexped.com</a></div>
+      <div class="mobile-menu-contact" style="margin-top:.5rem">Thamel, Kathmandu, Nepal</div>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a class="nav-logo" href="index.html">
+      <svg class="nav-logo-icon" viewBox="0 0 40 40" fill="none">
+        <path d="M20 4 L4 36 L36 36 Z" stroke="rgba(200,131,42,0.7)" stroke-width="1.2" fill="none"/>
+        <path d="M20 4 L12 36 L20 30 Z" fill="rgba(200,131,42,0.22)"/>
+        <path d="M20 4 L20 30 L28 36 Z" fill="rgba(200,131,42,0.12)"/>
+        <circle cx="20" cy="4" r="1.8" fill="rgba(200,131,42,0.9)"/>
+      </svg>
+      <div class="nav-logo-text">Beyond Summit<em>Expeditions · Nepal</em></div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active-nav">About</a>
+      <a href="guides.html">Guides</a>
+      <a href="#">Expeditions</a>
+      <a href="#" class="cta">Book Your Ascent →</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="page-hero-bg"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=85&w=1800&auto=format&fit=crop" alt="Himalayan ridgeline"></div>
+    <div class="page-hero-content">
+      <span class="page-hero-pretitle">Our Story</span>
+      <h1 class="page-hero-title">Born from the<br><em>Mountains</em></h1>
+      <p class="page-hero-sub">Fifteen years of ascents, discoveries, and lives transformed at altitude. A Kathmandu-rooted company with a single obsession: taking you higher, safely.</p>
+    </div>
+  </section>
+
+  <!-- ABOUT INTRO -->
+  <div class="about-intro">
+    <div class="about-intro-text">
+      <span class="eyebrow reveal">Who We Are</span>
+      <p class="about-lead reveal d1">We are a team of Sherpa climbers, mountain guides, and <em>altitude believers</em> — built in Thamel, hardened on Everest.</p>
+      <div class="about-body reveal d2">
+        <p>Beyond Summit Expeditions was founded in 2010 by Dawa Sherpa and Pemba Norbu, two Everest summiteers who believed that high-altitude mountaineering could be safer, more personalised, and more deeply connected to Nepal's Sherpa heritage than existing operators offered.</p>
+        <p>From our first season with 6 clients on Ama Dablam, we have grown into Nepal's most trusted expedition operator — running programmes across all fourteen 8000-metre peaks, countless technical routes, and Nepal's most iconic trekking corridors.</p>
+        <p>We are licensed by the Department of Tourism, Government of Nepal. Our Sherpa guides hold UIAA and IFMGA certification. And every single member of our logistics team has been on the mountain — not just in an office.</p>
+        <p>Our mission has never changed: to design expeditions where your summit becomes possible because everything else is impossible to fail.</p>
+      </div>
+    </div>
+    <div class="about-visual reveal d1">
+      <div class="about-img-main">
+        <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=900&auto=format&fit=crop" alt="Beyond Summit team at base camp">
+        <div class="about-img-caption"><span>Base Camp · Everest South Col Route</span></div>
+      </div>
+      <div class="about-img-small-row">
+        <div class="about-img-small"><img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?q=80&w=500&auto=format&fit=crop" alt="Sherpa guide"></div>
+        <div class="about-img-small"><img src="https://images.unsplash.com/photo-1506466010722-395ee2bef877?q=80&w=500&auto=format&fit=crop" alt="Mountain camp"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIMELINE -->
+  <div class="about-timeline">
+    <div class="about-timeline-inner">
+      <span class="eyebrow reveal">Our Journey</span>
+      <h2 class="h2 reveal d1">Fifteen Years of<br><em>Ascent</em></h2>
+      <div class="about-timeline-list">
+        <div class="about-tl-item reveal">
+          <div class="about-tl-year">2010</div>
+          <div class="about-tl-line"><div class="about-tl-dot"></div></div>
+          <div class="about-tl-content">
+            <div class="about-tl-title">Founded in Thamel</div>
+            <div class="about-tl-desc">Dawa Sherpa and Pemba Norbu establish Beyond Summit Expeditions. First season: six climbers, one mountain (Ama Dablam), six summits. A 100% success rate from day one.</div>
+          </div>
+        </div>
+        <div class="about-tl-item reveal d1">
+          <div class="about-tl-year">2013</div>
+          <div class="about-tl-line"><div class="about-tl-dot"></div></div>
+          <div class="about-tl-content">
+            <div class="about-tl-title">First Everest Season</div>
+            <div class="about-tl-desc">We run our inaugural Everest expedition. Four of five clients summit. Our first O₂ and high-altitude medical protocols are developed, later adopted as industry standards.</div>
+          </div>
+        </div>
+        <div class="about-tl-item reveal d2">
+          <div class="about-tl-year">2018</div>
+          <div class="about-tl-line"><div class="about-tl-dot"></div></div>
+          <div class="about-tl-content">
+            <div class="about-tl-title">500th Summit Milestone</div>
+            <div class="about-tl-desc">We reach 500 successful summits across all programmes. Launch of our Trekking Division, opening Nepal's classic routes to a new audience with the same attention to detail.</div>
+          </div>
+        </div>
+        <div class="about-tl-item reveal d3">
+          <div class="about-tl-year">2022</div>
+          <div class="about-tl-line"><div class="about-tl-dot"></div></div>
+          <div class="about-tl-content">
+            <div class="about-tl-title">All 14 Eight-Thousanders</div>
+            <div class="about-tl-desc">Beyond Summit becomes one of only three Nepal operators to offer guided programmes on all fourteen 8000m peaks simultaneously. 1,800 total summits and counting.</div>
+          </div>
+        </div>
+        <div class="about-tl-item reveal">
+          <div class="about-tl-year">2026</div>
+          <div class="about-tl-line"><div class="about-tl-dot"></div></div>
+          <div class="about-tl-content">
+            <div class="about-tl-title">Spring Season Opens</div>
+            <div class="about-tl-desc">2,400+ summits achieved. Spring 2026 is our largest season yet — seven concurrent expedition teams across five peaks. The story continues. Yours can begin now.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VALUES -->
+  <div class="about-values">
+    <span class="eyebrow reveal">What We Stand For</span>
+    <h2 class="h2 reveal d1">Core<br><em>Values</em></h2>
+    <div class="about-values-grid">
+      <div class="value-card reveal">
+        <svg class="value-icon" viewBox="0 0 48 48" fill="none"><path d="M24 6 L38 12 L38 26 Q38 38 24 44 Q10 38 10 26 L10 12 Z" stroke="currentColor" stroke-width="1.2" fill="rgba(200,131,42,.06)"/><path d="M18 24 L22 28 L32 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="value-title">Safety Above All</div>
+        <div class="value-desc">No summit is worth a life. We have walked away from the top — and we are proud of it. Strict turnaround times, real-time medical monitoring, weather holds honoured without debate.</div>
+      </div>
+      <div class="value-card reveal d1">
+        <svg class="value-icon" viewBox="0 0 48 48" fill="none"><path d="M24 8 L8 40 L40 40 Z" stroke="currentColor" stroke-width="1.2" fill="rgba(200,131,42,.06)"/><path d="M24 8 L18 40 L24 35 Z" fill="rgba(200,131,42,.2)"/><circle cx="24" cy="8" r="2.5" fill="currentColor" opacity=".8"/></svg>
+        <div class="value-title">Sherpa Heritage</div>
+        <div class="value-desc">Our company is Sherpa-founded and Sherpa-led. We invest in our guide teams, pay above-industry wages, and share expedition profits with the communities that make our work possible.</div>
+      </div>
+      <div class="value-card reveal d2">
+        <svg class="value-icon" viewBox="0 0 48 48" fill="none"><path d="M24 10 Q34 16 34 24 Q34 34 24 40 Q14 34 14 24 Q14 16 24 10 Z" stroke="currentColor" stroke-width="1.2" fill="rgba(200,131,42,.06)"/><path d="M20 24 L24 20 L28 24 L24 28 Z" fill="currentColor" opacity=".4"/></svg>
+        <div class="value-title">Personalised Experience</div>
+        <div class="value-desc">Maximum 8 climbers per team. Your Sherpa guide is assigned to you personally. We know your name, your training history, and your goals before you land in Kathmandu.</div>
+      </div>
+      <div class="value-card reveal">
+        <svg class="value-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="14" stroke="currentColor" stroke-width="1.2" opacity=".4"/><path d="M24 14 L26 22 L24 24 L22 22 Z" fill="currentColor" opacity=".8"/><path d="M24 34 L22 26 L24 24 L26 26 Z" fill="currentColor" opacity=".25"/><line x1="14" y1="24" x2="34" y2="24" stroke="currentColor" stroke-width=".8" opacity=".2"/></svg>
+        <div class="value-title">Relentless Preparation</div>
+        <div class="value-desc">Months of planning behind every expedition. Logistics, permits, equipment, medical supplies, acclimatisation planning — all meticulously arranged so you can focus on climbing.</div>
+      </div>
+      <div class="value-card reveal d1">
+        <svg class="value-icon" viewBox="0 0 48 48" fill="none"><path d="M12 36 L22 16 L30 26 L36 18" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity=".8"/><circle cx="36" cy="18" r="2.5" fill="currentColor" opacity=".6"/><path d="M8 40 L40 40" stroke="currentColor" stroke-width=".8" opacity=".2"/></svg>
+        <div class="value-title">Transparent Pricing</div>
+        <div class="value-desc">What you see is what you pay. Full permit fees, Sherpa wages, oxygen, meals and accommodation at Base Camp — all included, all disclosed. No hidden costs. No surprises.</div>
+      </div>
+      <div class="value-card reveal d2">
+        <svg class="value-icon" viewBox="0 0 48 48" fill="none"><path d="M14 34 C14 26 20 22 24 18 C28 22 34 26 34 34" stroke="currentColor" stroke-width="1.2" fill="rgba(200,131,42,.06)" stroke-linejoin="round"/><path d="M18 34 C18 28 22 26 24 22 C26 26 30 28 30 34" fill="rgba(200,131,42,.15)" stroke="none"/><line x1="10" y1="34" x2="38" y2="34" stroke="currentColor" stroke-width=".8" opacity=".2"/></svg>
+        <div class="value-title">Environmental Stewardship</div>
+        <div class="value-desc">Leave no trace on every route. We fund annual clean-up expeditions on Everest and Manaslu, and source all supplies locally to support Nepali mountain communities.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CERTIFICATIONS -->
+  <div class="certifications">
+    <div class="certifications-inner">
+      <div>
+        <span class="eyebrow reveal">Accreditation</span>
+        <h2 class="h2 reveal d1">Certified &<br><em>Licensed</em></h2>
+        <p class="reveal d2" style="font-family:var(--sans);font-size:.85rem;color:rgba(245,242,236,.38);line-height:1.8;margin-top:1.5rem;">Every certification we hold exists because we chose a harder path — higher standards, more rigorous training, and genuine accountability to the clients who trust us with their lives.</p>
+      </div>
+      <div class="cert-list reveal d1">
+        <div class="cert-item"><div class="cert-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><div class="cert-name">Nepal Tourism Board — Licensed Trekking & Expedition Agency</div></div>
+        <div class="cert-item"><div class="cert-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><div class="cert-name">UIAA Mountain Protection Award — High-Altitude Safety Protocols</div></div>
+        <div class="cert-item"><div class="cert-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><div class="cert-name">IFMGA / NMAS Certified Guides — All Lead Sherpa Climbers</div></div>
+        <div class="cert-item"><div class="cert-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><div class="cert-name">Himalayan Rescue Association — Partner & Annual Donor</div></div>
+        <div class="cert-item"><div class="cert-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><div class="cert-name">ISO 21101 — Adventure Tourism Safety Management</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUOTE -->
+  <section class="quote-section">
+    <div class="quote-bg"><img src="https://images.unsplash.com/photo-1506466010722-395ee2bef877?q=80&w=1800&auto=format&fit=crop" alt="Himalayan view"></div>
+    <div class="quote-content">
+      <span class="quote-mark">"</span>
+      <blockquote class="quote-text reveal">We didn't start this company to be the biggest.<br>We started it to be <em>trusted</em>.</blockquote>
+      <div class="quote-attr reveal d1">Dawa Sherpa · Co-Founder, Beyond Summit Expeditions</div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section class="booking-section">
+    <div class="booking-inner">
+      <div>
+        <span class="eyebrow reveal">Plan Your Journey</span>
+        <h2 class="h2 reveal d1">Ready for Your<br><em>Himalayan Moment?</em></h2>
+        <p class="reveal d2" style="font-family:var(--sans);font-size:.9rem;color:rgba(245,242,236,.38);line-height:1.75;max-width:420px;margin-top:1.25rem;">Spring 2026 expedition slots are filling. Our senior expedition leaders will design a programme matched to your experience, fitness, and ambition.</p>
+        <div class="booking-cta-row reveal d3">
+          <button class="btn-book">Plan My Expedition <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+          <a href="tel:+9779811157421" class="btn-phone">+977 9811 157 421</a>
+        </div>
+      </div>
+      <div class="booking-visual reveal d1">
+        <div class="booking-img-wrap"><img class="booking-img" src="https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=800&auto=format&fit=crop" alt="Himalayan expedition team"></div>
+        <div class="booking-badge"><div class="booking-badge-num">2,400+</div><div class="booking-badge-label">Successful Summits</div></div>
+      </div>
+    </div>
+    <div class="booking-deco"><svg viewBox="0 0 500 300" fill="none"><path d="M0 300 L100 100 L180 180 L250 60 L320 150 L400 80 L500 200 L500 300 Z" fill="white"/></svg></div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <a class="nav-logo" href="index.html" style="margin-bottom:1.25rem;display:inline-flex">
+          <svg class="nav-logo-icon" viewBox="0 0 40 40" fill="none"><path d="M20 4 L4 36 L36 36 Z" stroke="rgba(200,131,42,.7)" stroke-width="1.2" fill="none"/><path d="M20 4 L12 36 L20 30 Z" fill="rgba(200,131,42,.22)"/><circle cx="20" cy="4" r="1.8" fill="rgba(200,131,42,.9)"/></svg>
+          <div class="nav-logo-text">Beyond Summit<em>Elite Expeditions · Nepal</em></div>
+        </a>
+        <p class="footer-brand-desc">Nepal's premier mountaineering company. Licensed by the Department of Tourism, Government of Nepal. We take you where others pause.</p>
+        <div class="footer-contact">
+          <a href="tel:+9779811157421"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.71 3.53 2 2 0 0 1 3.68 1.38h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.07a16 16 0 0 0 6 6l1.06-1.06a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>+977-9811157421</a>
+          <a href="mailto:info@beyondsummitexped.com"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@beyondsummitexped.com</a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Expeditions</h4><ul><li><a href="#">Mount Everest</a></li><li><a href="#">Ama Dablam</a></li><li><a href="#">Annapurna I</a></li><li><a href="#">Manaslu</a></li><li><a href="#">All Peaks</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="guides.html">Our Guides</a></li><li><a href="#">Safety</a></li><li><a href="#">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="https://instagram.com" target="_blank">Instagram</a></li><li><a href="https://facebook.com" target="_blank">Facebook</a></li><li><a href="https://youtube.com" target="_blank">YouTube</a></li><li><a href="https://wa.me/9779811157421" target="_blank">WhatsApp</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Beyond Summit Expeditions · Licensed by Dept. of Tourism, Government of Nepal</p></div>
+  </footer>
+
+  <script>
+    /* CURSOR */
+    const cursor = document.getElementById('cursor');
+    const ring = document.getElementById('cursorRing');
+    let mx=0,my=0,rx=0,ry=0;
+    if(window.matchMedia('(pointer:fine)').matches){
+      document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursor.style.left=mx+'px';cursor.style.top=my+'px';});
+      (function a(){rx+=(mx-rx)*.15;ry+=(my-ry)*.15;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(a);})();
+    }
+
+    /* NAV SHRINK */
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll',()=>navbar.classList.toggle('shrunk',window.scrollY>60),{passive:true});
+
+    /* HAMBURGER */
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    let menuOpen=false;
+    hamburger.addEventListener('click',()=>{
+      menuOpen=!menuOpen;
+      hamburger.classList.toggle('open',menuOpen);
+      hamburger.setAttribute('aria-expanded',menuOpen);
+      mobileMenu.classList.toggle('open',menuOpen);
+      document.body.style.overflow=menuOpen?'hidden':'';
+    });
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'&&menuOpen){menuOpen=false;hamburger.classList.remove('open');mobileMenu.classList.remove('open');document.body.style.overflow='';}});
+
+    /* SCROLL REVEAL */
+    const obs = new IntersectionObserver(entries=>{
+      entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}});
+    },{rootMargin:'0px 0px -40px 0px',threshold:.05});
+    document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+  </script>
+</body>
+</html>

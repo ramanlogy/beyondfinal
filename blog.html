@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Himalayan Trekking & Climbing Blog | Expert Advice | Beyond Summit</title>
+  <meta name="description" content="Expert guides, expedition reports, and trekking advice from Nepal's leading mountaineering company. Read about Everest, K2, Annapurna, acclimatization, gear, and more.">
+  <link rel="canonical" href="https://www.beyondsummitexped.com/blog">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=DM+Sans:wght@300;400;500;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--gold:#c9933a;--gold-light:#e8b564;--gold-pale:#f5e6cc;--onyx:#0d0d0f;--mist:#f7f5f2;--snow:#fff;--text:#2a2a2e;--text-muted:#7a7a82;--border:#e8e4df;--fd:'DM Serif Display',serif;--fs:'Cormorant Garamond',serif;--fb:'DM Sans',sans-serif;--tr:.4s cubic-bezier(.25,.46,.45,.94);--r:1.5rem;--rs:.75rem}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--fb);color:var(--text);background:var(--snow);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    ::-webkit-scrollbar{width:5px}::-webkit-scrollbar-thumb{background:var(--gold);border-radius:10px}
+    .nav{position:fixed;top:0;left:0;width:100%;z-index:200;padding:1.5rem;transition:var(--tr);display:flex;align-items:center;justify-content:space-between}
+    .nav.scrolled{background:rgba(255,255,255,.97);backdrop-filter:blur(20px);box-shadow:0 1px 30px rgba(0,0,0,.06);padding:1rem 1.5rem}
+    @media(min-width:1024px){.nav{padding:2rem 4rem}.nav.scrolled{padding:1.2rem 4rem}}
+    .nav-logo{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+    .logo-tri{width:34px;height:34px;background:var(--gold);clip-path:polygon(50% 0%,0% 100%,100% 100%);flex-shrink:0}
+    .logo-txt strong{display:block;font-family:var(--fd);font-size:1.1rem;color:#fff;transition:color var(--tr)}
+    .logo-txt span{display:block;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(255,255,255,.55);transition:color var(--tr)}
+    .nav.scrolled .logo-txt strong{color:var(--onyx)}.nav.scrolled .logo-txt span{color:var(--text-muted)}
+    .nav-links{display:none}
+    @media(min-width:1024px){.nav-links{display:flex;align-items:center;gap:2rem;list-style:none}.nav-links a{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:rgba(255,255,255,.8);transition:color var(--tr)}.nav-links a:hover,.nav-links a.active{color:var(--gold-light)}.nav.scrolled .nav-links a{color:var(--text-muted)}.nav.scrolled .nav-links a:hover,.nav.scrolled .nav-links a.active{color:var(--gold)}.nav-cta{background:var(--gold);color:#fff !important;padding:.6rem 1.4rem;border-radius:100px;transition:var(--tr)}.nav-cta:hover{background:var(--onyx) !important}}
+    .hamburger{background:none;border:none;cursor:pointer;display:flex;flex-direction:column;gap:5px;padding:.25rem}.hamburger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:var(--tr)}.nav.scrolled .hamburger span{background:var(--onyx)}.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}.hamburger.open span:nth-child(2){opacity:0}.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    @media(min-width:1024px){.hamburger{display:none}}
+    .mob-menu{position:fixed;top:0;right:0;width:100%;max-width:320px;height:100vh;background:var(--onyx);z-index:300;padding:5rem 2.5rem 3rem;transform:translateX(100%);transition:transform .5s cubic-bezier(.77,0,.175,1);display:flex;flex-direction:column}.mob-menu.open{transform:translateX(0)}.mob-menu nav{display:flex;flex-direction:column;gap:.25rem}.mob-menu nav a{font-family:var(--fd);font-size:1.8rem;color:rgba(255,255,255,.7);text-decoration:none;padding:.4rem 0;border-bottom:1px solid rgba(255,255,255,.08);transition:color var(--tr)}.mob-menu nav a:hover{color:var(--gold-light)}.mob-menu-close{position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;cursor:pointer;color:rgba(255,255,255,.4);font-size:1.4rem}.mob-foot{margin-top:auto;padding-top:2rem;border-top:1px solid rgba(255,255,255,.08)}.mob-foot p{font-size:.7rem;color:rgba(255,255,255,.3);margin-bottom:.4rem}.mob-foot a{color:var(--gold);font-weight:700;text-decoration:none;font-size:.9rem}
+    .backdrop{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:250;opacity:0;pointer-events:none;transition:opacity var(--tr)}.backdrop.open{opacity:1;pointer-events:all}
+    /* PAGE HEADER */
+    .page-header{background:var(--onyx);padding:9rem 1.5rem 4rem;position:relative;overflow:hidden}
+    @media(min-width:1024px){.page-header{padding:11rem 4rem 5rem}}
+    .page-header-pattern{position:absolute;inset:0;opacity:.04;background-image:radial-gradient(circle,rgba(255,255,255,.8) 1px,transparent 1px);background-size:32px 32px}
+    .page-header-grd{position:absolute;bottom:0;left:0;right:0;height:60%;background:linear-gradient(to top,var(--onyx),transparent)}
+    .ph-content{position:relative;z-index:2;max-width:1200px;margin:0 auto}
+    .ph-label{display:inline-block;font-size:.65rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem;animation:fadeUp .7s ease both}
+    .ph-title{font-family:var(--fd);font-size:clamp(2.8rem,7vw,6rem);line-height:.95;letter-spacing:-.02em;color:#fff;animation:fadeUp .7s ease .1s both}
+    .ph-title em{font-style:italic;color:var(--gold-light);font-family:var(--fs)}
+    .ph-sub{color:rgba(255,255,255,.5);font-size:1rem;max-width:480px;line-height:1.7;margin-top:1rem;animation:fadeUp .7s ease .2s both}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+    /* LAYOUT */
+    .blog-layout{padding:4rem 1.5rem}
+    @media(min-width:768px){.blog-layout{padding:5rem 2rem}}
+    @media(min-width:1024px){.blog-layout{padding:6rem 4rem}}
+    .blog-wrap{max-width:1200px;margin:0 auto;display:grid;gap:3rem}
+    @media(min-width:1024px){.blog-wrap{grid-template-columns:1fr 320px;gap:4rem}}
+    /* CATEGORIES */
+    .cat-bar{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:2.5rem}
+    .cat-btn{background:var(--mist);border:1.5px solid var(--border);color:var(--text-muted);padding:.4rem 1rem;border-radius:100px;font-family:var(--fb);font-size:.72rem;font-weight:700;cursor:pointer;transition:var(--tr)}
+    .cat-btn:hover,.cat-btn.active{background:var(--gold);border-color:var(--gold);color:#fff}
+    /* FEATURED POST */
+    .featured-post{border-radius:var(--r);overflow:hidden;margin-bottom:2.5rem;text-decoration:none;display:block;border:1px solid var(--border);transition:box-shadow var(--tr)}
+    .featured-post:hover{box-shadow:0 16px 45px rgba(0,0,0,.1)}
+    @media(min-width:768px){.featured-post{display:grid;grid-template-columns:1fr 1fr}}
+    .featured-img{position:relative;aspect-ratio:16/10;overflow:hidden}
+    @media(min-width:768px){.featured-img{aspect-ratio:auto}}
+    .featured-img img{width:100%;height:100%;object-fit:cover;transition:transform 1s ease}
+    .featured-post:hover .featured-img img{transform:scale(1.05)}
+    .featured-img-overlay{position:absolute;inset:0;background:linear-gradient(to right,transparent,rgba(10,10,12,.3))}
+    .featured-body{padding:2rem 1.75rem;display:flex;flex-direction:column;justify-content:center}
+    .featured-badge{display:inline-block;background:var(--gold-pale);color:var(--gold);font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:.3rem .8rem;border-radius:100px;margin-bottom:1rem;align-self:flex-start}
+    .featured-title{font-family:var(--fd);font-size:clamp(1.4rem,3vw,2rem);color:var(--onyx);line-height:1.15;margin-bottom:.75rem;transition:color var(--tr)}
+    .featured-post:hover .featured-title{color:var(--gold)}
+    .featured-excerpt{font-size:.88rem;color:var(--text-muted);line-height:1.7;margin-bottom:1.25rem}
+    .post-meta{display:flex;align-items:center;gap:.75rem;font-size:.72rem;color:var(--text-muted)}
+    .post-meta-dot{width:4px;height:4px;border-radius:50%;background:var(--border)}
+    .read-more{display:inline-flex;align-items:center;gap:.4rem;color:var(--gold);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-top:1rem;transition:gap var(--tr)}
+    .featured-post:hover .read-more{gap:.7rem}
+    /* POSTS GRID */
+    .posts-grid{display:grid;gap:2rem}
+    @media(min-width:640px){.posts-grid{grid-template-columns:repeat(2,1fr)}}
+    .post-card{border-radius:var(--rs);overflow:hidden;border:1px solid var(--border);text-decoration:none;display:block;transition:transform var(--tr),box-shadow var(--tr)}
+    .post-card:hover{transform:translateY(-4px);box-shadow:0 12px 35px rgba(0,0,0,.09)}
+    .post-img{aspect-ratio:16/9;overflow:hidden}
+    .post-img img{width:100%;height:100%;object-fit:cover;transition:transform 1s ease}
+    .post-card:hover .post-img img{transform:scale(1.06)}
+    .post-body{padding:1.25rem 1.5rem 1.5rem}
+    .post-cat{font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;display:block}
+    .post-title{font-family:var(--fd);font-size:1.2rem;color:var(--onyx);line-height:1.25;margin-bottom:.6rem;transition:color var(--tr)}
+    .post-card:hover .post-title{color:var(--gold)}
+    .post-excerpt{font-size:.82rem;color:var(--text-muted);line-height:1.65;margin-bottom:.9rem}
+    .post-footer{display:flex;align-items:center;justify-content:space-between;padding-top:.9rem;border-top:1px solid var(--border)}
+    .post-date{font-size:.7rem;color:var(--text-muted)}
+    .post-read{font-size:.7rem;color:var(--text-muted)}
+    /* SIDEBAR */
+    .sidebar{display:flex;flex-direction:column;gap:1.5rem}
+    .sidebar-widget{background:var(--mist);border-radius:var(--r);padding:1.5rem;border:1px solid var(--border)}
+    .sw-title{font-family:var(--fd);font-size:1.15rem;color:var(--onyx);margin-bottom:1.1rem}
+    .tag-cloud{display:flex;flex-wrap:wrap;gap:.5rem}
+    .tag{background:#fff;border:1.5px solid var(--border);color:var(--text-muted);padding:.3rem .8rem;border-radius:100px;font-size:.72rem;font-weight:600;cursor:pointer;transition:var(--tr);text-decoration:none}
+    .tag:hover{background:var(--gold);border-color:var(--gold);color:#fff}
+    .popular-list{display:flex;flex-direction:column;gap:.75rem}
+    .pop-item{display:flex;gap:.9rem;text-decoration:none;align-items:center}
+    .pop-img{width:70px;height:55px;border-radius:.5rem;overflow:hidden;flex-shrink:0}
+    .pop-img img{width:100%;height:100%;object-fit:cover}
+    .pop-title{font-size:.82rem;font-weight:600;color:var(--text);line-height:1.35;transition:color var(--tr)}
+    .pop-item:hover .pop-title{color:var(--gold)}
+    .pop-date{font-size:.68rem;color:var(--text-muted);margin-top:.25rem}
+    .newsletter-widget{background:var(--onyx);border-radius:var(--r);padding:1.75rem}
+    .nw-title{font-family:var(--fd);font-size:1.3rem;color:#fff;margin-bottom:.5rem}
+    .nw-sub{font-size:.82rem;color:rgba(255,255,255,.45);line-height:1.6;margin-bottom:1.25rem}
+    .nw-form{display:flex;flex-direction:column;gap:.6rem}
+    .nw-input{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:.5rem;padding:.7rem 1rem;color:#fff;font-family:var(--fb);font-size:.85rem;outline:none;transition:border-color var(--tr)}
+    .nw-input::placeholder{color:rgba(255,255,255,.3)}
+    .nw-input:focus{border-color:rgba(201,147,58,.5)}
+    .nw-btn{background:var(--gold);color:#fff;border:none;border-radius:.5rem;padding:.75rem;font-family:var(--fb);font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:var(--tr)}
+    .nw-btn:hover{background:var(--gold-light)}
+    /* LOAD MORE */
+    .load-more{text-align:center;margin-top:2.5rem}
+    .btn-outline-gold{display:inline-flex;align-items:center;gap:.6rem;background:transparent;border:2px solid var(--gold);color:var(--gold);padding:.85rem 2rem;border-radius:100px;font-family:var(--fb);font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:var(--tr)}
+    .btn-outline-gold:hover{background:var(--gold);color:#fff}
+    /* FOOTER */
+    .footer{background:var(--onyx);color:rgba(255,255,255,.5);padding:3rem 1.5rem}
+    @media(min-width:1024px){.footer{padding:3rem 4rem}}
+    .footer-inner{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:space-between;align-items:center}
+    .footer a{color:var(--gold-light);text-decoration:none}
+    .footer-links{display:flex;gap:1.5rem;flex-wrap:wrap}
+    .footer-links a{font-size:.75rem;color:rgba(255,255,255,.35);transition:color var(--tr)}
+    .footer-links a:hover{color:var(--gold-light)}
+    p.copy{font-size:.75rem}
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:translateY(0)}.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+  </style>
+</head>
+<body>
+<div class="backdrop" id="backdrop" onclick="closeMob()"></div>
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-menu-close" onclick="closeMob()">✕</button>
+  <nav><a href="index.html">Home</a><a href="expeditions.html">Expeditions</a><a href="trekking.html">Trekking</a><a href="guides.html">Our Guides</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></nav>
+  <div class="mob-foot"><p>Call Us</p><a href="tel:+9779811157421">+977-9811157421</a></div>
+</div>
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo"><div class="logo-tri"></div><div class="logo-txt"><strong>Beyond Summit</strong><span>Elite Expeditions · Nepal</span></div></a>
+  <ul class="nav-links"><li><a href="expeditions.html">Expeditions</a></li><li><a href="trekking.html">Trekking</a></li><li><a href="guides.html">Guides</a></li><li><a href="blog.html" class="active">Blog</a></li><li><a href="contact.html" class="nav-cta">Book Now</a></li></ul>
+  <button class="hamburger" id="ham" onclick="toggleMob()"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-pattern"></div>
+  <div class="page-header-grd"></div>
+  <div class="ph-content">
+    <span class="ph-label">Expert Knowledge</span>
+    <h1 class="ph-title">Expedition<br><em>Insights</em></h1>
+    <p class="ph-sub">Guides, trip reports, gear advice and news from the field — written by people who live and breathe the Himalayas.</p>
+  </div>
+</div>
+
+<div class="blog-layout">
+  <div class="blog-wrap">
+    <!-- MAIN -->
+    <main>
+      <!-- CATEGORIES -->
+      <div class="cat-bar">
+        <button class="cat-btn active" onclick="filterCat('all',this)">All</button>
+        <button class="cat-btn" onclick="filterCat('guide',this)">Trekking Guides</button>
+        <button class="cat-btn" onclick="filterCat('expedition',this)">Expedition Planning</button>
+        <button class="cat-btn" onclick="filterCat('safety',this)">Safety & Health</button>
+        <button class="cat-btn" onclick="filterCat('news',this)">News</button>
+        <button class="cat-btn" onclick="filterCat('gear',this)">Gear</button>
+      </div>
+
+      <!-- FEATURED -->
+      <a href="blog-article.html" class="featured-post reveal" data-cat="guide">
+        <div class="featured-img">
+          <img src="https://images.unsplash.com/photo-1521334884481-35cb3c078044?q=80&w=900&auto=format&fit=crop" alt="Everest Base Camp trail at dawn Khumbu Nepal">
+          <div class="featured-img-overlay"></div>
+        </div>
+        <div class="featured-body">
+          <span class="featured-badge">Featured · Trekking Guide</span>
+          <h2 class="featured-title">Complete Guide to Everest Base Camp Trek 2026</h2>
+          <p class="featured-excerpt">Everything you need to plan the trek of a lifetime — 14-day itinerary, permits, costs, gear list and expert acclimatization advice from guides who've walked this trail 400+ times.</p>
+          <div class="post-meta"><span>January 20, 2026</span><span class="post-meta-dot"></span><span>12 min read</span></div>
+          <div class="read-more">Read Full Guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </div>
+      </a>
+
+      <!-- POSTS GRID -->
+      <div class="posts-grid" id="posts-grid">
+
+        <a href="blog-everest-season.html" class="post-card reveal" data-cat="expedition">
+          <div class="post-img"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=700&auto=format&fit=crop" alt="Everest season spring climbing Nepal" loading="lazy"></div>
+          <div class="post-body">
+            <span class="post-cat">Expedition Planning</span>
+            <h3 class="post-title">Best Time to Climb Mount Everest: A Season-by-Season Guide</h3>
+            <p class="post-excerpt">Spring vs autumn windows, jet stream patterns, permit deadlines, and what Everest looks like when the mountain is "in condition."</p>
+            <div class="post-footer"><span class="post-date">Jan 15, 2026</span><span class="post-read">8 min read</span></div>
+          </div>
+        </a>
+
+        <a href="blog-year-review.html" class="post-card reveal d1" data-cat="news">
+          <div class="post-img"><img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?q=80&w=700&auto=format&fit=crop" alt="Summit celebration Nepal 2025 mountaineering" loading="lazy"></div>
+          <div class="post-body">
+            <span class="post-cat">Company News</span>
+            <h3 class="post-title">Beyond Summit: Year in Review 2025</h3>
+            <p class="post-excerpt">47 successful summits, a historic first ascent of Numbur's south wall, and 312 trekkers guided safely through Nepal's greatest routes.</p>
+            <div class="post-footer"><span class="post-date">Dec 31, 2025</span><span class="post-read">6 min read</span></div>
+          </div>
+        </a>
+
+        <a href="blog-ama-dablam.html" class="post-card reveal" data-cat="expedition">
+          <div class="post-img"><img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=700&auto=format&fit=crop" alt="Ama Dablam technical climbing route Nepal" loading="lazy"></div>
+          <div class="post-body">
+            <span class="post-cat">Expedition Planning</span>
+            <h3 class="post-title">How to Prepare for Ama Dablam: The Complete Pre-Expedition Guide</h3>
+            <p class="post-excerpt">Technical prerequisites, training programmes, gear specifics and route conditions for Nepal's most beautiful technical climb.</p>
+            <div class="post-footer"><span class="post-date">Dec 8, 2025</span><span class="post-read">10 min read</span></div>
+          </div>
+        </a>
+
+        <a href="blog-acclimatization.html" class="post-card reveal d1" data-cat="safety">
+          <div class="post-img"><img src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?q=80&w=700&auto=format&fit=crop" alt="High altitude trekking acclimatization Nepal mountains" loading="lazy"></div>
+          <div class="post-body">
+            <span class="post-cat">Safety & Health</span>
+            <h3 class="post-title">High Altitude Acclimatization: A Complete Guide for Trekkers</h3>
+            <p class="post-excerpt">Understanding AMS, HACE and HAPE — how to recognize them, prevent them, and when to descend. Written with our expedition medic.</p>
+            <div class="post-footer"><span class="post-date">Nov 22, 2025</span><span class="post-read">11 min read</span></div>
+          </div>
+        </a>
+
+        <a href="blog-annapurna-vs-ebc.html" class="post-card reveal" data-cat="guide">
+          <div class="post-img"><img src="https://images.unsplash.com/photo-1506466010722-395ee2bef877?q=80&w=700&auto=format&fit=crop" alt="Annapurna circuit vs Everest Base Camp comparison" loading="lazy"></div>
+          <div class="post-body">
+            <span class="post-cat">Trekking Guide</span>
+            <h3 class="post-title">Annapurna Circuit vs Everest Base Camp: Which Trek is Right for You?</h3>
+            <p class="post-excerpt">A head-to-head comparison of Nepal's two greatest treks across difficulty, scenery, cost, crowds and what kind of trekker suits each route.</p>
+            <div class="post-footer"><span class="post-date">Nov 5, 2025</span><span class="post-read">9 min read</span></div>
+          </div>
+        </a>
+
+        <a href="blog-gear-guide.html" class="post-card reveal d1" data-cat="gear">
+          <div class="post-img"><img src="https://images.unsplash.com/photo-1508193638397-1c4234db14d8?q=80&w=700&auto=format&fit=crop" alt="Himalayan trekking gear equipment packing guide" loading="lazy"></div>
+          <div class="post-body">
+            <span class="post-cat">Gear</span>
+            <h3 class="post-title">The Ultimate Himalayan Trekking Gear Guide 2026</h3>
+            <p class="post-excerpt">What to bring, what to rent in Kathmandu, and what to leave at home. Our guides' definitive gear list after hundreds of Himalayan treks.</p>
+            <div class="post-footer"><span class="post-date">Oct 18, 2025</span><span class="post-read">14 min read</span></div>
+          </div>
+        </a>
+
+        <a href="blog-numbur.html" class="post-card reveal" data-cat="news">
+          <div class="post-img"><img src="https://images.unsplash.com/photo-1521334884481-35cb3c078044?q=80&w=700&auto=format&fit=crop" alt="Numbur south wall first ascent Nepal expedition report" loading="lazy"></div>
+          <div class="post-body">
+            <span class="post-cat">Expedition Report</span>
+            <h3 class="post-title">First Alpine-Style Ascent of Numbur's South Wall</h3>
+            <p class="post-excerpt">A detailed trip report from our team's historic first ascent of the challenging south wall of Numbur (6,959m) in October 2025.</p>
+            <div class="post-footer"><span class="post-date">Oct 11, 2025</span><span class="post-read">7 min read</span></div>
+          </div>
+        </a>
+
+        <a href="blog-upper-mustang.html" class="post-card reveal d1" data-cat="guide">
+          <div class="post-img"><img src="https://images.unsplash.com/photo-1466187836-55b365a20bec?q=80&w=700&auto=format&fit=crop" alt="Upper Mustang trek guide Lo Manthang forbidden kingdom" loading="lazy"></div>
+          <div class="post-body">
+            <span class="post-cat">Trekking Guide</span>
+            <h3 class="post-title">Upper Mustang Trek: A Complete Guide to the Forbidden Kingdom</h3>
+            <p class="post-excerpt">Permits, best time, itinerary and cultural tips for Nepal's most distinctive restricted-area trek through a living Tibetan culture.</p>
+            <div class="post-footer"><span class="post-date">Sep 29, 2025</span><span class="post-read">10 min read</span></div>
+          </div>
+        </a>
+
+      </div>
+      <div class="load-more">
+        <button class="btn-outline-gold" onclick="this.textContent='Loading...'">Load More Articles <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+      </div>
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="newsletter-widget">
+        <h3 class="nw-title">Expedition Updates</h3>
+        <p class="nw-sub">Get trip reports, season forecasts and early booking offers direct to your inbox.</p>
+        <div class="nw-form">
+          <input type="email" class="nw-input" placeholder="your@email.com">
+          <button class="nw-btn">Subscribe Free</button>
+        </div>
+      </div>
+
+      <div class="sidebar-widget">
+        <h3 class="sw-title">Popular Posts</h3>
+        <div class="popular-list">
+          <a href="blog-article.html" class="pop-item">
+            <div class="pop-img"><img src="https://images.unsplash.com/photo-1521334884481-35cb3c078044?q=80&w=200&auto=format&fit=crop" alt="EBC trek" loading="lazy"></div>
+            <div><div class="pop-title">Complete Guide to Everest Base Camp Trek 2026</div><div class="pop-date">Jan 20, 2026</div></div>
+          </a>
+          <a href="blog-acclimatization.html" class="pop-item">
+            <div class="pop-img"><img src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?q=80&w=200&auto=format&fit=crop" alt="Acclimatization" loading="lazy"></div>
+            <div><div class="pop-title">High Altitude Acclimatization Guide</div><div class="pop-date">Nov 22, 2025</div></div>
+          </a>
+          <a href="blog-gear-guide.html" class="pop-item">
+            <div class="pop-img"><img src="https://images.unsplash.com/photo-1508193638397-1c4234db14d8?q=80&w=200&auto=format&fit=crop" alt="Gear guide" loading="lazy"></div>
+            <div><div class="pop-title">Ultimate Himalayan Trekking Gear Guide</div><div class="pop-date">Oct 18, 2025</div></div>
+          </a>
+        </div>
+      </div>
+
+      <div class="sidebar-widget">
+        <h3 class="sw-title">Browse by Topic</h3>
+        <div class="tag-cloud">
+          <a href="#" class="tag">Everest</a><a href="#" class="tag">Annapurna</a><a href="#" class="tag">Manaslu</a><a href="#" class="tag">K2</a><a href="#" class="tag">Trekking</a><a href="#" class="tag">Acclimatization</a><a href="#" class="tag">Gear</a><a href="#" class="tag">Safety</a><a href="#" class="tag">Permits</a><a href="#" class="tag">Sherpa</a><a href="#" class="tag">8000m</a><a href="#" class="tag">Base Camp</a>
+        </div>
+      </div>
+
+      <div class="sidebar-widget" style="background:var(--onyx);border-color:transparent;text-align:center">
+        <p style="color:var(--gold);font-size:.65rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;margin-bottom:.5rem">Plan Your Trip</p>
+        <h3 style="font-family:var(--fd);color:#fff;font-size:1.35rem;margin-bottom:.6rem">Ready to Book?</h3>
+        <p style="color:rgba(255,255,255,.45);font-size:.82rem;line-height:1.6;margin-bottom:1.25rem">Talk to our team about the right expedition or trek for your experience level.</p>
+        <a href="contact.html" style="display:block;background:var(--gold);color:#fff;text-decoration:none;padding:.85rem;border-radius:.75rem;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;transition:background .3s">Get Free Consultation</a>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <p class="copy">© 2026 Beyond Summit Expeditions · Licensed by Dept. of Tourism, Nepal</p>
+    <div class="footer-links"><a href="index.html">Home</a><a href="expeditions.html">Expeditions</a><a href="trekking.html">Trekking</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a></div>
+  </div>
+</footer>
+
+<script>
+  const nav=document.getElementById('nav');
+  window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>80),{passive:true});
+  function toggleMob(){const o=document.getElementById('mobMenu').classList.toggle('open');document.getElementById('backdrop').classList.toggle('open',o);document.getElementById('ham').classList.toggle('open',o);document.body.style.overflow=o?'hidden':'';}
+  function closeMob(){document.getElementById('mobMenu').classList.remove('open');document.getElementById('backdrop').classList.remove('open');document.getElementById('ham').classList.remove('open');document.body.style.overflow='';}
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMob()});
+  const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}}),{rootMargin:'0px 0px -50px 0px',threshold:.08});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+  function filterCat(cat,btn){
+    document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');
+    document.querySelectorAll('.post-card').forEach(c=>{c.style.display=(cat==='all'||c.dataset.cat===cat)?'block':'none';});
+  }
+</script>
+</body>
+</html>
