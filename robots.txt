@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.beyondsummitexped.com/sitemap.xml
+
+# Disallow private/admin paths
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /search?
+
+# Allow important assets
+Allow: /assets/
+Allow: /images/
+
+# Crawl delay (optional, respectful to search bots)
+Crawl-delay: 1

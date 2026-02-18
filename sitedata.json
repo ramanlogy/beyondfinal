@@ -1,0 +1,374 @@
+{
+  "organization": {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "@id": "https://www.beyondsummitexped.com/#organization",
+    "name": "Beyond Summit Expeditions",
+    "alternateName": "Beyond Summit",
+    "url": "https://www.beyondsummitexped.com",
+    "logo": "https://www.beyondsummitexped.com/assets/logo.png",
+    "description": "Elite mountaineering and trekking expeditions in the Himalayas. Specialists in 8000m peak expeditions and luxury trekking in Nepal.",
+    "foundingDate": "2010",
+    "foundingLocation": {
+      "@type": "Place",
+      "name": "Kathmandu, Nepal"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Thamel",
+      "addressLocality": "Kathmandu",
+      "postalCode": "44600",
+      "addressCountry": "NP"
+    },
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+977-9811157421",
+        "contactType": "customer service",
+        "availableLanguage": ["English", "Nepali"],
+        "contactOption": "TollFree",
+        "areaServed": "Worldwide"
+      },
+      {
+        "@type": "ContactPoint",
+        "email": "contact@beyondsummitexped.com",
+        "contactType": "sales"
+      }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/beyondsummitexped",
+      "https://www.facebook.com/beyondsummitexped",
+      "https://www.youtube.com/beyondsummitexped",
+      "https://twitter.com/beyondsummit"
+    ],
+    "license": "Department of Tourism, Government of Nepal",
+    "areaServed": {
+      "@type": "Country",
+      "name": "Nepal"
+    },
+    "hasMap": "https://maps.google.com/?q=Thamel,Kathmandu",
+    "priceRange": "$$$"
+  },
+
+  "website": {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://www.beyondsummitexped.com/#website",
+    "url": "https://www.beyondsummitexped.com",
+    "name": "Beyond Summit Expeditions",
+    "description": "Plan your Himalayan adventure with Nepal's premier mountaineering and trekking company.",
+    "publisher": {
+      "@id": "https://www.beyondsummitexped.com/#organization"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.beyondsummitexped.com/search?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  },
+
+  "breadcrumbTemplates": {
+    "expedition": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.beyondsummitexped.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Expeditions", "item": "https://www.beyondsummitexped.com/expeditions" },
+      { "@type": "ListItem", "position": 3, "name": "{Expedition Name}", "item": "https://www.beyondsummitexped.com/expeditions/{slug}" }
+    ],
+    "trekking": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.beyondsummitexped.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Trekking", "item": "https://www.beyondsummitexped.com/trekking" },
+      { "@type": "ListItem", "position": 3, "name": "{Trek Name}", "item": "https://www.beyondsummitexped.com/trekking/{slug}" }
+    ],
+    "blog": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.beyondsummitexped.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.beyondsummitexped.com/blog" },
+      { "@type": "ListItem", "position": 3, "name": "{Article Title}", "item": "https://www.beyondsummitexped.com/blog/{slug}" }
+    ]
+  },
+
+  "faqSchema": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the best time to climb Mount Everest?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The best seasons to climb Mount Everest are spring (April–May) and autumn (September–October). The spring season is the most popular, with stable weather windows typically occurring in mid-May. The autumn season offers cleaner skies but shorter weather windows."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does an Everest expedition cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A fully guided Everest expedition with Beyond Summit Expeditions starts from USD 45,000 per person for a supported climb. This includes the Nepal government permit ($11,000), liaison officer fees, base camp setup, oxygen, Sherpa support, and all meals at base camp."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need previous mountaineering experience for Everest?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Nepal's Department of Tourism requires climbers to have previous high-altitude experience. Beyond Summit recommends candidates have summited at least one 7000m peak and demonstrate proficiency in technical climbing skills including ice axe, crampons, and fixed rope ascent."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Everest Base Camp Trek suitable for beginners?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Everest Base Camp Trek (5,364m) is suitable for fit beginners with no prior mountaineering experience. The trek requires 12–14 days and good physical fitness. Proper acclimatization days are built into our itineraries to ensure your safety."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What permits are needed for trekking in Nepal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "All trekkers in Nepal need a TIMS (Trekkers' Information Management System) card. Restricted area treks like Upper Mustang and Manaslu require special restricted area permits. Sagarmatha (Everest) and Annapurna zones require National Park entry permits. Beyond Summit handles all permits on behalf of clients."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is included in your trekking packages?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our trekking packages include airport transfers, accommodation (teahouse or camping), all meals on trek, licensed trek guides, porters, all permits, first aid kit, and 24/7 emergency support. International flights and travel insurance are not included."
+        }
+      }
+    ]
+  },
+
+  "tours": [
+    {
+      "@context": "https://schema.org",
+      "@type": "TouristTrip",
+      "name": "Mount Everest Expedition Spring 2026",
+      "description": "Join the ultimate mountaineering challenge with Beyond Summit Expeditions. Our Spring 2026 Everest expedition offers full logistics, 1:1 Sherpa ratio, premium oxygen systems, and luxury base camp facilities.",
+      "url": "https://www.beyondsummitexped.com/expeditions/mount-everest",
+      "image": "https://www.beyondsummitexped.com/assets/everest-expedition.jpg",
+      "touristType": "Adventure Traveler",
+      "itinerary": {
+        "@type": "ItemList",
+        "numberOfItems": 55
+      },
+      "availableLanguage": ["English", "Nepali"],
+      "provider": {
+        "@id": "https://www.beyondsummitexped.com/#organization"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "45000",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/LimitedAvailability",
+        "validFrom": "2025-11-01",
+        "validThrough": "2026-03-15"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "TouristTrip",
+      "name": "Everest Base Camp Trek",
+      "description": "The classic Everest Base Camp trek is the most iconic Himalayan adventure. Trek through Sherpa villages, ancient monasteries, and dramatic ice formations to reach the foot of the world's highest peak.",
+      "url": "https://www.beyondsummitexped.com/trekking/everest-base-camp",
+      "image": "https://www.beyondsummitexped.com/assets/ebc-trek.jpg",
+      "touristType": "Trekker",
+      "itinerary": {
+        "@type": "ItemList",
+        "numberOfItems": 14
+      },
+      "availableLanguage": ["English", "Nepali"],
+      "provider": {
+        "@id": "https://www.beyondsummitexped.com/#organization"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "1650",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "TouristTrip",
+      "name": "Annapurna Circuit Trek",
+      "description": "One of the world's greatest treks, the Annapurna Circuit circumnavigates the Annapurna massif and crosses the Thorong La Pass at 5,416m through dramatic landscape diversity.",
+      "url": "https://www.beyondsummitexped.com/trekking/annapurna-circuit",
+      "image": "https://www.beyondsummitexped.com/assets/annapurna-circuit.jpg",
+      "touristType": "Trekker",
+      "itinerary": {
+        "@type": "ItemList",
+        "numberOfItems": 18
+      },
+      "availableLanguage": ["English", "Nepali"],
+      "provider": {
+        "@id": "https://www.beyondsummitexped.com/#organization"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "1350",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+  ],
+
+  "blogPosts": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Beyond Summit: Year in Review 2025",
+      "description": "Looking back at an extraordinary year of Himalayan expeditions, successful summits, and unforgettable trekking journeys with Beyond Summit Expeditions.",
+      "url": "https://www.beyondsummitexped.com/blog/beyond-summit-year-in-review-2025",
+      "datePublished": "2025-12-31",
+      "dateModified": "2025-12-31",
+      "author": { "@id": "https://www.beyondsummitexped.com/#organization" },
+      "publisher": { "@id": "https://www.beyondsummitexped.com/#organization" },
+      "image": "https://images.unsplash.com/photo-1521334884481-35cb3c078044",
+      "keywords": ["Himalayan expeditions", "Nepal 2025", "mountaineering review", "summit success"]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "First Alpine-Style Ascent of Numbur's South Wall",
+      "description": "Our team achieved a historic first alpine-style ascent of the challenging south wall of Numbur (6,959m) in the Solu Khumbu region of Nepal.",
+      "url": "https://www.beyondsummitexped.com/blog/first-alpine-style-ascent-numbur-south-wall",
+      "datePublished": "2025-10-11",
+      "dateModified": "2025-10-11",
+      "author": { "@id": "https://www.beyondsummitexped.com/#organization" },
+      "publisher": { "@id": "https://www.beyondsummitexped.com/#organization" },
+      "image": "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2",
+      "keywords": ["Numbur", "alpine style climbing", "Nepal expedition", "first ascent", "Solu Khumbu"]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Complete Guide: Everest Base Camp Trek 2026",
+      "description": "Everything you need to know about trekking to Everest Base Camp in 2026 — itinerary, cost, best time, permits, gear list, and what to expect on the trail.",
+      "url": "https://www.beyondsummitexped.com/blog/everest-base-camp-trek-complete-guide",
+      "datePublished": "2026-01-20",
+      "dateModified": "2026-02-10",
+      "author": { "@id": "https://www.beyondsummitexped.com/#organization" },
+      "publisher": { "@id": "https://www.beyondsummitexped.com/#organization" },
+      "keywords": ["Everest Base Camp trek", "EBC trek guide", "Nepal trekking 2026", "Khumbu", "Namche Bazaar"]
+    }
+  ],
+
+  "navigationMenu": {
+    "primary": [
+      { "label": "Home", "href": "/", "icon": "home" },
+      {
+        "label": "Expeditions",
+        "href": "/expeditions",
+        "children": [
+          { "label": "Mount Everest (8,848m)", "href": "/expeditions/mount-everest", "badge": "2026 Slots Open" },
+          { "label": "K2 (8,611m)", "href": "/expeditions/k2" },
+          { "label": "Kangchenjunga (8,586m)", "href": "/expeditions/kangchenjunga" },
+          { "label": "Lhotse (8,516m)", "href": "/expeditions/lhotse" },
+          { "label": "Makalu (8,485m)", "href": "/expeditions/makalu" },
+          { "label": "Cho Oyu (8,188m)", "href": "/expeditions/cho-oyu" },
+          { "label": "Dhaulagiri (8,167m)", "href": "/expeditions/dhaulagiri" },
+          { "label": "Manaslu (8,163m)", "href": "/expeditions/manaslu" },
+          { "label": "Annapurna I (8,091m)", "href": "/expeditions/annapurna" },
+          { "label": "Ama Dablam (6,812m)", "href": "/expeditions/ama-dablam", "badge": "Most Popular" }
+        ]
+      },
+      {
+        "label": "Trekking",
+        "href": "/trekking",
+        "children": [
+          { "label": "Everest Base Camp", "href": "/trekking/everest-base-camp", "badge": "Best Seller" },
+          { "label": "Annapurna Circuit", "href": "/trekking/annapurna-circuit" },
+          { "label": "Annapurna Base Camp", "href": "/trekking/annapurna-base-camp" },
+          { "label": "Manaslu Circuit", "href": "/trekking/manaslu-circuit" },
+          { "label": "Upper Mustang", "href": "/trekking/upper-mustang" },
+          { "label": "Langtang Valley", "href": "/trekking/langtang-valley" },
+          { "label": "Gokyo Lakes", "href": "/trekking/gokyo-lakes" },
+          { "label": "Three Passes Trek", "href": "/trekking/three-passes" },
+          { "label": "Luxury Trekking", "href": "/trekking/luxury", "badge": "VIP" }
+        ]
+      },
+      {
+        "label": "Services",
+        "href": "/services",
+        "children": [
+          { "label": "VIP & Luxury Expeditions", "href": "/services/vip-expeditions" },
+          { "label": "Training Programs", "href": "/services/training-programs" },
+          { "label": "Permit Services", "href": "/services/permit-services" }
+        ]
+      },
+      { "label": "Our Guides", "href": "/guides" },
+      { "label": "Blog", "href": "/blog" },
+      { "label": "Contact", "href": "/contact" }
+    ],
+    "footer": {
+      "expeditions": [
+        { "label": "Mount Everest", "href": "/expeditions/mount-everest" },
+        { "label": "K2", "href": "/expeditions/k2" },
+        { "label": "Annapurna", "href": "/expeditions/annapurna" },
+        { "label": "Manaslu", "href": "/expeditions/manaslu" },
+        { "label": "Ama Dablam", "href": "/expeditions/ama-dablam" },
+        { "label": "All Expeditions", "href": "/expeditions" }
+      ],
+      "trekking": [
+        { "label": "Everest Base Camp", "href": "/trekking/everest-base-camp" },
+        { "label": "Annapurna Circuit", "href": "/trekking/annapurna-circuit" },
+        { "label": "Upper Mustang", "href": "/trekking/upper-mustang" },
+        { "label": "Luxury Trekking", "href": "/trekking/luxury" },
+        { "label": "All Treks", "href": "/trekking" }
+      ],
+      "company": [
+        { "label": "About Us", "href": "/about" },
+        { "label": "Our Guides", "href": "/guides" },
+        { "label": "Safety", "href": "/safety" },
+        { "label": "Gallery", "href": "/gallery" },
+        { "label": "Blog", "href": "/blog" },
+        { "label": "FAQ", "href": "/faq" },
+        { "label": "Contact", "href": "/contact" }
+      ],
+      "legal": [
+        { "label": "Privacy Policy", "href": "/privacy-policy" },
+        { "label": "Terms & Conditions", "href": "/terms" }
+      ]
+    }
+  },
+
+  "siteConfig": {
+    "siteName": "Beyond Summit Expeditions",
+    "tagline": "Where Earth Meets Sky",
+    "domain": "https://www.beyondsummitexped.com",
+    "locale": "en_US",
+    "language": "en",
+    "timezone": "Asia/Kathmandu",
+    "currency": "USD",
+    "social": {
+      "instagram": "https://instagram.com/beyondsummitexped",
+      "facebook": "https://facebook.com/beyondsummitexped",
+      "youtube": "https://youtube.com/beyondsummitexped",
+      "twitter": "https://twitter.com/beyondsummit"
+    },
+    "contact": {
+      "phone": "+977-9811157421",
+      "whatsapp": "+977-9811157421",
+      "email": "contact@beyondsummitexped.com",
+      "address": "Thamel, Kathmandu 44600, Nepal"
+    },
+    "meta": {
+      "defaultTitle": "Beyond Summit Expeditions | Elite Himalayan Mountaineering & Trekking Nepal",
+      "defaultDescription": "Nepal's premier mountaineering company offering guided expeditions to Everest, K2, Annapurna and all 8000m peaks. Expert-led trekking packages to Everest Base Camp, Annapurna Circuit and more.",
+      "defaultKeywords": ["Nepal mountaineering", "Everest expedition", "Himalayan trekking", "Everest Base Camp trek", "8000m peaks", "Nepal trekking company"],
+      "ogImage": "https://www.beyondsummitexped.com/assets/og-default.jpg",
+      "twitterCard": "summary_large_image",
+      "robots": "index, follow"
+    },
+    "analytics": {
+      "googleAnalytics": "G-XXXXXXXXXX",
+      "googleTagManager": "GTM-XXXXXXX",
+      "facebookPixel": "XXXXXXXXXXXXXXXXXX"
+    }
+  }
+}
