@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete Guide to Island Peak Climbing 2026 | Beyond Summit Expeditions</title>
+  <meta name="description" content="The definitive Island Peak (Imja Tse) guide for 2026. Full 17-day itinerary, the real story on the headwall, permit costs, gear list and honest expectations for Nepal's most popular trekking peak at 6,189m. Updated February 2026.">
+  <meta name="author" content="Beyond Summit Expeditions">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=DM+Sans:wght@300;400;500;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --gold: #c9933a; --gold-light: #e8b564; --gold-pale: #f5e6cc;
+      --onyx: #0d0d0f; --mist: #f7f5f2; --snow: #ffffff;
+      --text: #2a2a2e; --text-muted: #7a7a82; --border: #e8e4df;
+      --rust: #7a3020; --rust-pale: rgba(122,48,32,0.07);
+      --font-display: 'DM Serif Display', serif;
+      --font-serif: 'Cormorant Garamond', serif;
+      --font-body: 'DM Sans', sans-serif;
+      --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --radius: 1.5rem;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--text); background: var(--snow); -webkit-font-smoothing: antialiased; }
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 10px; }
+
+    .nav {
+      position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(20px); border-bottom: 1px solid var(--border);
+      padding: 1rem 1.5rem; display: flex; align-items: center; justify-content: space-between;
+    }
+    @media(min-width:1024px) { .nav { padding: 1rem 4rem; } }
+    .nav-logo { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; }
+    .nav-logo-icon { width: 28px; height: 28px; background: var(--gold); clip-path: polygon(50% 0%,0% 100%,100% 100%); flex-shrink: 0; }
+    .nav-logo-name { font-family: var(--font-display); font-size: 1rem; color: var(--onyx); }
+    .nav-back { display: flex; align-items: center; gap: 0.5rem; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; transition: color var(--transition); }
+    .nav-back:hover { color: var(--gold); }
+    .nav-back svg { transition: transform var(--transition); }
+    .nav-back:hover svg { transform: translateX(-3px); }
+
+    .breadcrumb { padding: 1rem 1.5rem; max-width: 800px; margin: 0 auto; }
+    @media(min-width:1024px) { .breadcrumb { padding: 1.25rem 0; } }
+    .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; }
+    .breadcrumb li { display: flex; align-items: center; gap: 0.4rem; font-size: 0.72rem; color: var(--text-muted); }
+    .breadcrumb li a { color: var(--text-muted); text-decoration: none; transition: color var(--transition); }
+    .breadcrumb li a:hover { color: var(--gold); }
+    .breadcrumb li:not(:last-child)::after { content: '›'; opacity: 0.5; }
+    .breadcrumb li:last-child { color: var(--text); font-weight: 600; }
+
+    .article-hero { position: relative; height: 55vh; min-height: 320px; overflow: hidden; background: var(--onyx); }
+    .article-hero img { width: 100%; height: 100%; object-fit: cover; opacity: 0.62; }
+    .article-hero-gradient { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(13,13,15,0.4) 0%, rgba(13,13,15,0.1) 40%, var(--snow) 100%); }
+    .article-hero-label {
+      position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+      font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase;
+      color: rgba(255,255,255,0.45); white-space: nowrap;
+    }
+
+    .article-wrap { max-width: 1120px; margin: 0 auto; padding: 0 1.5rem; }
+    @media(min-width:1024px) { .article-wrap { display: grid; grid-template-columns: 1fr 300px; gap: 4rem; padding: 0 2rem; } }
+    .article-main { padding-bottom: 4rem; }
+
+    .article-header { margin-bottom: 2.5rem; }
+    .article-meta-top { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; margin-bottom: 1.25rem; }
+    .article-cat { background: var(--gold-pale); color: var(--gold); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 100px; }
+    .article-cat.popular { background: var(--rust-pale); color: var(--rust); }
+    .article-date { font-size: 0.78rem; color: var(--text-muted); }
+    .article-read { font-size: 0.78rem; color: var(--text-muted); }
+    .article-title { font-family: var(--font-display); font-size: clamp(1.9rem, 5vw, 3.2rem); line-height: 1.1; color: var(--onyx); margin-bottom: 1.25rem; letter-spacing: -0.01em; }
+    .article-excerpt { font-size: 1.1rem; line-height: 1.7; color: var(--text-muted); border-left: 3px solid var(--gold); padding-left: 1.25rem; margin-bottom: 1.75rem; }
+    .article-share { display: flex; align-items: center; gap: 0.75rem; padding: 1rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .article-share span { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); }
+    .share-btn { display: flex; align-items: center; gap: 0.4rem; background: var(--mist); border: none; cursor: pointer; padding: 0.4rem 0.9rem; border-radius: 100px; font-family: var(--font-body); font-size: 0.72rem; font-weight: 600; color: var(--text); transition: var(--transition); }
+    .share-btn:hover { background: var(--gold-pale); color: var(--gold); }
+
+    .article-content { font-size: 1rem; line-height: 1.85; color: var(--text); }
+    @media(min-width:768px) { .article-content { font-size: 1.05rem; } }
+    .article-content h2 { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2rem); color: var(--onyx); margin: 2.5rem 0 1rem; line-height: 1.15; }
+    .article-content h3 { font-family: var(--font-display); font-size: 1.3rem; color: var(--onyx); margin: 2rem 0 0.75rem; }
+    .article-content p { margin-bottom: 1.25rem; }
+    .article-content ul, .article-content ol { margin: 0 0 1.25rem 1.5rem; }
+    .article-content li { margin-bottom: 0.5rem; }
+    .article-content strong { font-weight: 700; color: var(--onyx); }
+    .article-content a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
+    .article-content a:hover { color: var(--onyx); }
+    .article-content blockquote {
+      background: var(--mist); border-left: 4px solid var(--gold);
+      padding: 1.5rem 1.75rem; border-radius: 0 var(--radius) var(--radius) 0;
+      margin: 2rem 0; font-family: var(--font-serif); font-size: 1.2rem;
+      color: var(--onyx); line-height: 1.6; font-style: italic;
+    }
+    .article-content blockquote cite { display: block; margin-top: 0.75rem; font-size: 0.8rem; font-style: normal; color: var(--text-muted); font-family: var(--font-body); }
+
+    /* HONEST BANNER */
+    .honest-banner {
+      background: linear-gradient(135deg, var(--rust-pale), rgba(122,48,32,0.03));
+      border: 1.5px solid rgba(122,48,32,0.2);
+      border-radius: var(--radius); padding: 1.5rem 1.75rem; margin: 2rem 0;
+      display: flex; gap: 1.25rem; align-items: flex-start;
+    }
+    .honest-banner-icon { flex-shrink: 0; margin-top: 0.1rem; color: var(--rust); }
+    .honest-banner h4 { font-family: var(--font-display); font-size: 1rem; color: var(--rust); margin-bottom: 0.4rem; }
+    .honest-banner p { font-size: 0.88rem; line-height: 1.65; color: var(--text); margin: 0; }
+
+    /* PROGRESSION LADDER */
+    .progression-ladder { margin: 2rem 0; display: flex; flex-direction: column; }
+    .ladder-step {
+      display: flex; align-items: center; gap: 1rem; padding: 0.9rem 1.25rem;
+      border: 1px solid var(--border); border-bottom: none; background: var(--snow);
+    }
+    .ladder-step:first-child { border-radius: var(--radius) var(--radius) 0 0; }
+    .ladder-step:last-child { border-bottom: 1px solid var(--border); border-radius: 0 0 var(--radius) var(--radius); }
+    .ladder-step.active { background: var(--mist); border-color: rgba(201,147,58,0.3); }
+    .ladder-step.active .ladder-peak { color: var(--gold); }
+    .ladder-num { width: 28px; height: 28px; background: var(--mist); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 0.8rem; color: var(--text-muted); flex-shrink: 0; }
+    .ladder-step.active .ladder-num { background: var(--gold); color: var(--snow); }
+    .ladder-peak { font-weight: 700; font-size: 0.88rem; color: var(--text); }
+    .ladder-alt { font-size: 0.75rem; color: var(--text-muted); margin-left: auto; white-space: nowrap; }
+
+    /* VS BANNER */
+    .vs-banner {
+      display: flex; align-items: flex-start; gap: 1rem;
+      background: linear-gradient(135deg, rgba(201,147,58,0.08), rgba(201,147,58,0.04));
+      border: 1px solid rgba(201,147,58,0.25); border-radius: var(--radius);
+      padding: 1.25rem 1.5rem; margin: 2rem 0;
+    }
+    .vs-banner-icon { flex-shrink: 0; color: var(--gold); margin-top: 0.15rem; }
+    .vs-banner p { margin: 0; font-size: 0.9rem; line-height: 1.6; color: var(--text); }
+    .vs-banner strong { color: var(--gold); }
+
+    /* INFO BOXES */
+    .info-box { border-radius: var(--radius); padding: 1.5rem 1.75rem; margin: 2rem 0; border: 1px solid transparent; }
+    .info-box.tip { background: rgba(201,147,58,0.08); border-color: rgba(201,147,58,0.2); }
+    .info-box.warning { background: rgba(231,76,60,0.06); border-color: rgba(231,76,60,0.2); }
+    .info-box.note { background: var(--mist); border-color: var(--border); }
+    .info-box.green { background: rgba(39,174,96,0.06); border-color: rgba(39,174,96,0.2); }
+    .info-box.rust { background: var(--rust-pale); border-color: rgba(122,48,32,0.2); }
+    .info-box-header { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.6rem; }
+    .info-box-title { font-size: 0.7rem; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; }
+    .info-box.tip .info-box-title { color: var(--gold); }
+    .info-box.warning .info-box-title { color: #c0392b; }
+    .info-box.note .info-box-title { color: var(--text-muted); }
+    .info-box.green .info-box-title { color: #27ae60; }
+    .info-box.rust .info-box-title { color: var(--rust); }
+    .info-box-icon { flex-shrink: 0; }
+    .info-box.tip .info-box-icon { color: var(--gold); }
+    .info-box.warning .info-box-icon { color: #c0392b; }
+    .info-box.note .info-box-icon { color: var(--text-muted); }
+    .info-box.green .info-box-icon { color: #27ae60; }
+    .info-box.rust .info-box-icon { color: var(--rust); }
+    .info-box p { font-size: 0.9rem; line-height: 1.7; margin: 0; color: var(--text); }
+
+    /* ITINERARY */
+    .phase-label { font-size: 0.65rem; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); padding: 1rem 0 0.25rem; border-top: 2px solid var(--border); margin-top: 1rem; display: block; }
+    .phase-label:first-child { border-top: none; margin-top: 0; padding-top: 0; }
+    .itinerary { margin: 2rem 0; }
+    .itinerary-day { display: flex; gap: 1.25rem; padding: 1.25rem 0; border-bottom: 1px solid var(--border); }
+    .itinerary-day:last-child { border-bottom: none; }
+    .day-number { width: 48px; height: 48px; flex-shrink: 0; background: var(--onyx); color: var(--snow); border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; font-family: var(--font-display); }
+    .day-number.summit-day { background: linear-gradient(135deg, #3a1a00, #c9933a); }
+    .day-number.acclimatise { background: #1c3a2d; }
+    .day-number.rest { background: #3a2010; }
+    .day-number span:first-child { font-size: 0.5rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); }
+    .day-number.acclimatise span:first-child { color: #6abf99; }
+    .day-number.rest span:first-child { color: #e8a87c; }
+    .day-number span:last-child { font-size: 1.1rem; line-height: 1; }
+    .day-content h4 { font-family: var(--font-display); font-size: 1.05rem; color: var(--onyx); margin-bottom: 0.3rem; }
+    .day-content p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin: 0; }
+    .day-meta { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.4rem; }
+    .day-tag { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; background: var(--mist); color: var(--text-muted); padding: 0.2rem 0.6rem; border-radius: 100px; }
+    .day-tag.peak { background: rgba(201,147,58,0.1); color: var(--gold); }
+    .day-tag.rust { background: var(--rust-pale); color: var(--rust); }
+    .day-tag.green { background: rgba(39,174,96,0.08); color: #27ae60; }
+
+    /* TABLES */
+    .cost-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
+    .cost-table th { text-align: left; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); padding: 0.75rem 1rem; border-bottom: 2px solid var(--gold-pale); }
+    .cost-table td { padding: 0.85rem 1rem; border-bottom: 1px solid var(--border); font-size: 0.88rem; }
+    .cost-table tr:nth-child(even) td { background: var(--mist); }
+    .cost-table tr:last-child td { font-weight: 700; border-bottom: none; }
+
+    .compare-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
+    .compare-table th { text-align: left; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); padding: 0.75rem 1rem; border-bottom: 2px solid var(--gold-pale); }
+    .compare-table td { padding: 0.85rem 1rem; border-bottom: 1px solid var(--border); font-size: 0.88rem; vertical-align: top; }
+    .compare-table tr:nth-child(even) td { background: var(--mist); }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table .hl { color: var(--gold); font-weight: 700; }
+
+    /* SIDEBAR */
+    .article-sidebar { padding-top: 2rem; }
+    @media(min-width:1024px) { .article-sidebar { padding-top: 0; } }
+    .sidebar-sticky { position: sticky; top: 5rem; display: flex; flex-direction: column; gap: 1.5rem; }
+    .sidebar-widget { background: var(--mist); border-radius: var(--radius); padding: 1.5rem; border: 1px solid var(--border); }
+    .sidebar-widget-title { font-family: var(--font-display); font-size: 1.1rem; color: var(--onyx); margin-bottom: 1rem; }
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 0.35rem; }
+    .toc-list li a { font-size: 0.82rem; color: var(--text-muted); text-decoration: none; transition: color var(--transition); display: block; padding: 0.2rem 0; }
+    .toc-list li a:hover { color: var(--gold); padding-left: 4px; }
+    .cta-widget { background: var(--onyx); border-radius: var(--radius); padding: 1.75rem; text-align: center; }
+    .cta-widget h3 { font-family: var(--font-display); color: var(--snow); font-size: 1.4rem; margin-bottom: 0.6rem; }
+    .cta-widget p { font-size: 0.82rem; color: rgba(255,255,255,0.5); line-height: 1.65; margin-bottom: 1.25rem; }
+    .btn-gold { display: block; background: var(--gold); color: var(--snow); text-decoration: none; text-align: center; padding: 0.85rem 1.5rem; border-radius: 0.75rem; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; transition: var(--transition); }
+    .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); }
+    .sidebar-fact { display: flex; align-items: center; gap: 0.75rem; padding: 0.6rem 0; border-bottom: 1px solid var(--border); }
+    .sidebar-fact:last-child { border-bottom: none; }
+    .sidebar-fact-icon { color: var(--gold); flex-shrink: 0; }
+    .sidebar-fact-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-muted); }
+    .sidebar-fact-val { font-size: 0.9rem; font-weight: 700; color: var(--text); }
+    .sidebar-next-peaks { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.5rem; }
+    .next-peak-item { display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; padding: 0.5rem 0.75rem; background: var(--snow); border-radius: 0.6rem; border: 1px solid var(--border); text-decoration: none; color: var(--text); transition: border-color var(--transition), color var(--transition); }
+    .next-peak-item:hover { border-color: var(--gold); color: var(--gold); }
+    .next-peak-item span:last-child { font-size: 0.68rem; color: var(--text-muted); }
+
+    .related-posts { background: var(--mist); padding: 4rem 1.5rem; }
+    @media(min-width:1024px) { .related-posts { padding: 5rem 4rem; } }
+    .related-grid { display: grid; gap: 1.5rem; max-width: 1120px; margin: 2rem auto 0; }
+    @media(min-width:640px) { .related-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media(min-width:1024px) { .related-grid { grid-template-columns: repeat(3, 1fr); } }
+    .related-card { background: var(--snow); border-radius: var(--radius); overflow: hidden; text-decoration: none; display: block; border: 1px solid var(--border); transition: transform var(--transition), box-shadow var(--transition); }
+    .related-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.08); }
+    .related-card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; }
+    .related-card-body { padding: 1.25rem; }
+    .related-card-cat { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.4rem; display: block; }
+    .related-card-title { font-family: var(--font-display); font-size: 1.1rem; color: var(--onyx); line-height: 1.25; }
+    .related-posts h2 { font-family: var(--font-display); font-size: 2rem; color: var(--onyx); text-align: center; }
+
+    .footer { background: var(--onyx); color: rgba(255,255,255,0.5); padding: 3rem 1.5rem; text-align: center; }
+    .footer a { color: var(--gold-light); text-decoration: none; }
+    .footer p { font-size: 0.8rem; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" role="navigation" aria-label="Site navigation">
+    <a href="/" class="nav-logo" aria-label="Beyond Summit Expeditions - Home">
+      <div class="nav-logo-icon" aria-hidden="true"></div>
+      <span class="nav-logo-name">Beyond Summit</span>
+    </a>
+    <a href="/blog" class="nav-back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      All Articles
+    </a>
+  </nav>
+
+  <div class="breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li>Island Peak Climbing Guide 2026</li>
+    </ol>
+  </div>
+
+  <div class="article-hero" role="img" aria-label="Island Peak's Northeast Ridge rising above the Chhukung Valley with Lhotse's south face in the background">
+    <img src="https://images.unsplash.com/photo-1502786129293-79981df4e689?q=80&w=1800&auto=format&fit=crop" alt="Island Peak Imja Tse summit ridge with dramatic Lhotse South Face rising behind" loading="eager">
+    <div class="article-hero-gradient"></div>
+    <div class="article-hero-label">Island Peak (Imja Tse) · 6,189m · Chhukung, Nepal</div>
+  </div>
+
+  <article class="article-wrap">
+
+    <main class="article-main">
+      <header class="article-header">
+        <div class="article-meta-top">
+          <span class="article-cat">Trekking Peak Guide</span>
+          <span class="article-cat popular">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="display:inline;vertical-align:middle;margin-right:3px"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Most Climbed Trekking Peak
+          </span>
+          <time class="article-date" datetime="2026-02-19">February 19, 2026</time>
+          <span class="article-read">· 13 min read</span>
+        </div>
+        <h1 class="article-title">Complete Guide to Island Peak Climbing 2026</h1>
+        <p class="article-excerpt">
+          Island Peak is Nepal's most climbed trekking peak — which is both its greatest appeal and its biggest caveat. The mountain itself is genuinely spectacular: a 6,189m summit with the Lhotse South Face filling the entire sky above the headwall. But there are things you should know before you book.
+        </p>
+        <div class="article-share" aria-label="Share this article">
+          <span>Share:</span>
+          <button class="share-btn" onclick="navigator.clipboard?.writeText(window.location.href)">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            Copy Link
+          </button>
+          <button class="share-btn">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            Facebook
+          </button>
+        </div>
+      </header>
+
+      <div class="article-content">
+
+        <p>The name "Island Peak" came from Eric Shipton's 1951 Everest reconnaissance expedition, whose members looked up at the peak from the Chhukung valley and thought it resembled an island rising from a sea of ice. The Nepali name — <strong>Imja Tse</strong> — is more evocative: it refers to the Imja Glacier that wraps around its base. Both names are accurate. The mountain looks like something that shouldn't quite exist in the position it occupies, hemmed in by the Lhotse-Nuptse wall on one side and the sprawl of the Khumbu glacier system on the other.</p>
+
+        <p>Several hundred people attempt Island Peak each season, making it the busiest trekking peak in Nepal by a significant margin. This popularity is earned — the mountain has a dramatic setting, a satisfying route, and a summit view that includes Lhotse, Nuptse, Makalu, and the upper sections of Everest. But popularity has a cost, and it's worth understanding that cost before you commit.</p>
+
+        <div class="honest-banner">
+          <div class="honest-banner-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <div>
+            <h4>An Honest Word About the Crowds</h4>
+            <p>In peak autumn season, the headwall fixed ropes on Island Peak can have 30–50 climbers on them simultaneously. This is not a rumour or an exaggeration — it's a known feature of the mountain. Early October mornings see queues at the base of the headwall. We'd rather tell you this now than have you find out at 05:30 on summit day. If that's a dealbreaker, we'll point you toward <a href="/blog/lobuche-east-peak-climbing-guide">Lobuche East</a> or <a href="/blog/mera-peak-guide">Mera Peak</a>. If it isn't — and for many people it genuinely isn't — Island Peak remains one of the best trekking peaks in Nepal.</p>
+          </div>
+        </div>
+
+        <div class="info-box note">
+          <div class="info-box-header">
+            <svg class="info-box-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <div class="info-box-title">Key Facts at a Glance</div>
+          </div>
+          <p><strong>Summit altitude:</strong> 6,189m (20,305ft) · <strong>Also known as:</strong> Imja Tse · <strong>Classification:</strong> NMA trekking peak · <strong>Normal route:</strong> Southeast Ridge via high camp · <strong>Total duration:</strong> 14–18 days · <strong>Best seasons:</strong> October–November and March–May · <strong>Technical grade:</strong> PD — headwall requires crampons, fixed rope ascent, rappel on descent · <strong>High camp:</strong> One camp at ~5,600m · <strong>Prior experience:</strong> High-altitude trekking required; no prior climbing experience needed</p>
+        </div>
+
+        <h2 id="overview">The Mountain, Honestly</h2>
+
+        <p>Island Peak has two distinct characters — and which one you experience depends heavily on when you go and who guides you. Below the headwall, the approach from Chhukung is a beautiful high-altitude walk through some of the most dramatic scenery in the Khumbu. The base camp at 5,087m looks directly across at Lhotse's south face — a wall of ice and rock so large it distorts your sense of scale. The glacier walk to the headwall is serious and committing without being technically difficult. And then there's the headwall.</p>
+
+        <p>The <strong>headwall</strong> — a steep 50–55° snow and ice slope of roughly 150 vertical metres just below the summit ridge — is the crux of the route and the defining experience of the climb. It's where crampons and a Jumar are essential, where confidence matters, and where, in peak season, you may be waiting in line. Above it, a narrow snow ridge leads to the summit at 6,189m. Below the headwall on the descent, rappel. The whole upper mountain — from high camp to the top and back — is done in a single day.</p>
+
+        <p>Island Peak was first climbed in 1953 by a British expedition team using it as acclimatisation for Everest. It has been in the NMA trekking peak list since 1978. The route has changed little since the first ascent; the crowds have changed considerably.</p>
+
+        <div class="vs-banner">
+          <div class="vs-banner-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          </div>
+          <p>Island Peak is <strong>the most technically demanding</strong> of the three major trekking peaks covered in this series — harder than Mera's glacier dome, comparable to Lobuche East's mixed ridge. The headwall is steeper than anything on Mera and asks for more decisive crampon technique. If you're choosing between the three, read our <a href="/blog/lobuche-east-peak-climbing-guide">Lobuche East guide</a> and <a href="/blog/mera-peak-guide">Mera Peak guide</a> side by side. The right choice depends on your approach preferences as much as your technical ambition.</p>
+        </div>
+
+        <h2 id="progression">Where Island Peak Sits in the Progression</h2>
+
+        <p>Island Peak works well as a first technical climbing experience and equally well as a second peak after Lobuche East or Mera, adding slightly more altitude and a different technical challenge. Here's the full picture:</p>
+
+        <div class="progression-ladder" role="list">
+          <div class="ladder-step" role="listitem">
+            <div class="ladder-num">1</div>
+            <div>
+              <div class="ladder-peak">Everest Base Camp Trek</div>
+              <div style="font-size:0.75rem;color:var(--text-muted)">Foundation altitude, no technical skills</div>
+            </div>
+            <span class="ladder-alt">5,364m</span>
+          </div>
+          <div class="ladder-step active" role="listitem">
+            <div class="ladder-num">2</div>
+            <div>
+              <div class="ladder-peak">Island Peak (Imja Tse) <span style="font-size:0.7rem;color:var(--gold);font-weight:700;margin-left:0.4rem">YOU ARE HERE</span></div>
+              <div style="font-size:0.75rem;color:var(--text-muted)">First or second summit — fixed rope headwall, crampons</div>
+            </div>
+            <span class="ladder-alt">6,189m</span>
+          </div>
+          <div class="ladder-step" role="listitem">
+            <div class="ladder-num">3</div>
+            <div>
+              <div class="ladder-peak">Mera Peak</div>
+              <div style="font-size:0.75rem;color:var(--text-muted)">Higher altitude, glacier travel consolidation</div>
+            </div>
+            <span class="ladder-alt">6,476m</span>
+          </div>
+          <div class="ladder-step" role="listitem">
+            <div class="ladder-num">4</div>
+            <div>
+              <div class="ladder-peak">Ama Dablam</div>
+              <div style="font-size:0.75rem;color:var(--text-muted)">Full technical alpine — three high camps</div>
+            </div>
+            <span class="ladder-alt">6,812m</span>
+          </div>
+          <div class="ladder-step" role="listitem">
+            <div class="ladder-num">5</div>
+            <div>
+              <div class="ladder-peak">Eight-Thousanders</div>
+              <div style="font-size:0.75rem;color:var(--text-muted)">Manaslu, Lhotse, Everest and beyond</div>
+            </div>
+            <span class="ladder-alt">8,000m+</span>
+          </div>
+        </div>
+
+        <h2 id="best-time">When to Go — and a Note on Timing</h2>
+
+        <h3>Autumn (October to November)</h3>
+        <p>Autumn is when Island Peak is at its best and also at its busiest. The mountain is in excellent condition — firm snow on the headwall, stable weather windows, and clear views of the Lhotse face from the summit. <strong>The first two weeks of October</strong> are when crowds peak; late October through early November sees similar conditions with noticeably fewer people on the fixed ropes. If crowd management matters to you, aim for the back half of the autumn window.</p>
+
+        <h3>Spring (March to May)</h3>
+        <p>Spring is significantly quieter on Island Peak than autumn — most Khumbu spring traffic heads toward the big Everest season climbing, leaving Island Peak comparatively uncrowded. The headwall in spring can carry more variable snow conditions: April is typically the most reliable month. By late May, the mountain softens and conditions on the upper face become less predictable.</p>
+
+        <div class="info-box tip">
+          <div class="info-box-header">
+            <svg class="info-box-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div class="info-box-title">The Case for Spring</div>
+          </div>
+          <p>Beyond Summit runs more Island Peak groups in autumn, because that's what client demand dictates. But if you have flexibility on dates, <strong>April on Island Peak is genuinely excellent</strong>: fewer climbers, good snow on the headwall, and the Khumbu rhododendron season in full colour on the approach. The fixed ropes are the same; there's just nobody queuing for them at 05:00. Worth serious consideration.</p>
+        </div>
+
+        <h2 id="route">The Route — What's Actually Up There</h2>
+
+        <p>Island Peak's normal route approaches from Chhukung, crosses the moraine to a glacier camp at base camp (5,087m), and then climbs the Southeast Ridge via a single high camp to the headwall and summit. It's a compact, efficient route that packs a lot of variety into a relatively short vertical gain.</p>
+
+        <h3>Chhukung to Base Camp (5,087m)</h3>
+        <p>Base camp is a 2–3 hour walk from Chhukung (4,730m) across terminal moraine and the lower Imja Glacier. The walk is non-technical but requires careful footing on loose rock. Base camp itself is a broad, flat area on the moraine that offers one of the most striking views of any trekking peak in Nepal: the Lhotse south face rises almost directly ahead, its 3,200m vertical drop occupying the entire skyline. People stop talking when they first see it.</p>
+
+        <h3>Base Camp to High Camp (5,600m)</h3>
+        <p>High camp is reached via the lower glacier — crampons on, roped up, moving carefully over the crevassed section below the Southeast Ridge. A 3–4 hour push from base camp. High camp sits on a snow platform with fixed tent positions; our Sherpa team has this in place before clients ascend. Wind can be brutal at high camp — anchoring is checked by the guide on arrival. Sleep by 19:00. Tomorrow starts in the dark.</p>
+
+        <h3>High Camp to Summit (6,189m)</h3>
+        <p>The 03:00 departure from high camp follows the Southeast Ridge to the base of the headwall. The lower ridge is relatively straightforward — crampons, headtorch, moving carefully in the pre-dawn cold. The headwall arrives abruptly: a 150-metre section of 50–55° snow and ice on fixed rope, climbed with a Jumar. This section is technically the crux and the most committing part of the route. Above it, a final narrow snow arête leads to the summit plateau. The descent reverses the route, with rappel on the headwall fixed ropes.</p>
+
+        <div class="info-box warning">
+          <div class="info-box-header">
+            <svg class="info-box-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            <div class="info-box-title">The Headwall in Busy Conditions</div>
+          </div>
+          <p>In peak season, the base of the headwall becomes a bottleneck. Groups arrive simultaneously, ropes get congested, and summit day timelines extend. Beyond Summit's response to this is to depart high camp earlier than most groups — 02:00 rather than 03:00 in October — targeting the headwall before the main wave of climbers. Our guides monitor conditions and adjust departure times accordingly. This is one of the strongest arguments for choosing a small, well-organised guided group over a larger operator on Island Peak.</p>
+        </div>
+
+        <h2 id="itinerary">17-Day Island Peak Itinerary</h2>
+
+        <p>Island Peak pairs naturally with the Everest Base Camp approach and the Chhukung valley — the itinerary below uses the EBC route as far as Dingboche, then branches south into the Chhukung valley for the climb. It's the most efficient combination available and gives solid acclimatisation through the EBC approach before the summit push.</p>
+
+        <div class="itinerary">
+
+          <span class="phase-label">Phase 1 — Approach via EBC Route</span>
+
+          <div class="itinerary-day">
+            <div class="day-number"><span>Day</span><span>1</span></div>
+            <div class="day-content">
+              <h4>Kathmandu → Lukla → Phakding (2,610m)</h4>
+              <p>Early mountain flight to Lukla (2,860m) and a short walk to Phakding along the Dudh Koshi. In Kathmandu the night before, Beyond Summit's pre-departure briefing covers the headwall technique — crampon walking, Jumar use, and rappel — so that the base camp skills session reinforces rather than introduces these concepts for the first time.</p>
+              <div class="day-meta"><span class="day-tag">Lukla flight</span><span class="day-tag">~3hr walk</span></div>
+            </div>
+          </div>
+
+          <div class="itinerary-day">
+            <div class="day-number"><span>Day</span><span>2–3</span></div>
+            <div class="day-content">
+              <h4>Phakding → Namche Bazaar + Acclimatisation Day</h4>
+              <p>The 800m climb to Namche Bazaar (3,440m) on Day 2 is the biggest single-day altitude gain on the approach — take it steady. Day 3 is a rest day: hike to the Everest View Hotel (3,962m) in the morning, return to Namche for the afternoon. The Saturday market in Namche is worth timing if it aligns.</p>
+              <div class="day-meta"><span class="day-tag green">Acclimatisation day</span><span class="day-tag">Namche: 3,440m</span></div>
+            </div>
+          </div>
+
+          <div class="itinerary-day">
+            <div class="day-number"><span>Day</span><span>4–6</span></div>
+            <div class="day-content">
+              <h4>Namche → Tengboche → Dingboche (4,410m)</h4>
+              <p>Three classic days on the EBC route. Tengboche Monastery (3,867m) on Day 4, Pangboche on Day 5, and the climb to Dingboche on Day 6. Island Peak's summit is just visible from the ridge above Pangboche — a first look at what's ahead. Dingboche is the point where the route splits: EBC traffic turns north, Island Peak climbers head east into Chhukung.</p>
+              <div class="day-meta"><span class="day-tag">Tengboche Monastery</span><span class="day-tag">Dingboche: 4,410m</span></div>
+            </div>
+          </div>
+
+          <div class="itinerary-day">
+            <div class="day-number acclimatise"><span>Rest</span><span>4,410</span></div>
+            <div class="day-content">
+              <h4>Acclimatisation Day — Dingboche</h4>
+              <p>A morning hike to Nagarjun Hill (5,083m) and back — the single most important altitude preparation day on the itinerary. Sleeping at 4,410m after touching 5,083m is the classic acclimatisation formula. The afternoon at Dingboche is genuinely free: read, hydrate, sleep if you can. This day is not negotiable and should not be skipped regardless of how well you feel.</p>
+              <div class="day-meta"><span class="day-tag green">Nagarjun Hill: 5,083m</span><span class="day-tag">Don't skip</span></div>
+            </div>
+          </div>
+
+          <div class="itinerary-day">
+            <div class="day-number"><span>Day</span><span>8–9</span></div>
+            <div class="day-content">
+              <h4>Dingboche → Chhukung (4,730m) → Island Peak Base Camp (5,087m)</h4>
+              <p>The walk from Dingboche to Chhukung takes 3–4 hours through the upper Imja Valley, with Lhotse and Island Peak growing larger ahead. On Day 9, the route continues to Island Peak Base Camp across the moraine. The first direct sighting of the Lhotse South Face from base camp tends to stop conversations mid-sentence.</p>
+              <div class="day-meta"><span class="day-tag">Chhukung: 4,730m</span><span class="day-tag peak">Base Camp: 5,087m</span></div>
+            </div>
+          </div>
+
+          <span class="phase-label">Phase 2 — The Climb</span>
+
+          <div class="itinerary-day">
+            <div class="day-number rest"><span>Day</span><span>10</span></div>
+            <div class="day-content">
+              <h4>Base Camp — Skills Session and Rest</h4>
+              <p>A full rest day at base camp before the climb. Beyond Summit's climbing guide runs a practical skills session: crampon fitting and walking technique on snow, Jumar operation on a practice rope anchored at camp, rappel technique with a belay device. Even climbers who've been on Lobuche East or done previous mountaineering attend this session — it aligns technique on the specific methods and gear used on this route, which matters on the headwall when everyone needs to move efficiently.</p>
+              <div class="day-meta"><span class="day-tag rust">Skills session</span><span class="day-tag">Headwall technique practice</span></div>
+            </div>
+          </div>
+
+          <div class="itinerary-day">
+            <div class="day-number"><span>Day</span><span>11</span></div>
+            <div class="day-content">
+              <h4>Base Camp → High Camp (5,600m)</h4>
+              <p>Crampons on at base camp. The route crosses the lower Imja Glacier — crevassed, requiring rope team travel — before gaining the Southeast Ridge and climbing to high camp at 5,600m. 4–5 hours. High camp tent platforms are set by our Sherpa team. Arrive in the early afternoon, melt snow for water, eat a warm meal, and sleep as early as possible. Beyond Summit's guides wake the group at 02:00 in peak season — significantly earlier than most operators to beat the headwall queue.</p>
+              <div class="day-meta"><span class="day-tag peak">High Camp: 5,600m</span><span class="day-tag">02:00 wake-up in peak season</span></div>
+            </div>
+          </div>
+
+          <div class="itinerary-day">
+            <div class="day-number summit-day"><span>▲</span><span>6189</span></div>
+            <div class="day-content">
+              <h4>Summit Day — High Camp → 6,189m → Base Camp</h4>
+              <p>Headtorches on in the dark. The lower Southeast Ridge to the headwall takes 2–3 hours from high camp. Then the headwall: 150 metres of fixed rope, Jumar clipped, crampons biting into 55° ice and snow. Above it, the narrow summit arête, and then the top. <strong>Lhotse's south face occupies the entire sky to the north — one of the most dramatic summit views in Himalayan trekking.</strong> Descend the headwall on rappel, return to base camp in the afternoon. Most groups reach Chhukung village for dinner — a warm lodge, hot food, and the particular satisfaction of having earned it.</p>
+              <div class="day-meta"><span class="day-tag peak">Summit: 6,189m</span><span class="day-tag">02:00 departure</span><span class="day-tag">Full day: 10–13 hrs</span></div>
+            </div>
+          </div>
+
+          <span class="phase-label">Phase 3 — Return</span>
+
+          <div class="itinerary-day">
+            <div class="day-number"><span>Day</span><span>13–15</span></div>
+            <div class="day-content">
+              <h4>Chhukung → Namche → Lukla</h4>
+              <p>The descent covers in three days what took six on the way up. The trail is familiar by now and moves fast — most groups are in good spirits and covering ground comfortably. One night in Namche, then a long final day to Lukla.</p>
+              <div class="day-meta"><span class="day-tag">Fast descent</span><span class="day-tag">Lukla: Day 15</span></div>
+            </div>
+          </div>
+
+          <div class="itinerary-day">
+            <div class="day-number"><span>Day</span><span>16–17</span></div>
+            <div class="day-content">
+              <h4>Lukla → Kathmandu + Buffer Day</h4>
+              <p>Lukla flights are weather-dependent. Day 16 is the target; Day 17 is the buffer. Do not book international flights before Day 18 at the earliest. In Kathmandu: a team dinner, a proper shower, and the specific comfort of sleeping at sea level after two and a half weeks above 3,400m.</p>
+              <div class="day-meta"><span class="day-tag">Weather-dependent flight</span><span class="day-tag">Buffer essential</span></div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="info-box rust">
+          <div class="info-box-header">
+            <svg class="info-box-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div class="info-box-title">Why the EBC Approach Works</div>
+          </div>
+          <p>The EBC approach to Island Peak via Dingboche is longer than a direct Chhukung approach would be — but the extra days are acclimatisation, not tourism. Arriving at Chhukung having spent 7 days above 3,400m and crossed 5,083m at Nagarjun Hill means your body is genuinely prepared for high camp at 5,600m and the summit at 6,189m. Operators who cut this approach short have worse summit rates. The extra days at altitude are always worth it.</p>
+        </div>
+
+        <h2 id="skills">What You Actually Need to Be Able to Do</h2>
+
+        <p>Island Peak is frequently described as beginner-friendly, which is roughly true and also slightly misleading. The headwall is the most technical section on any of the three major trekking peaks covered in this series — not extreme by mountaineering standards, but demanding enough that poor crampon technique on a 55° slope has real consequences. Here's an honest list:</p>
+
+        <ul>
+          <li><strong>Crampon technique on steep terrain:</strong> The lower glacier and headwall require confident crampon walking. On the headwall specifically, this means front-pointing on steep ice rather than flat-footing on snow — a different skill that needs to be understood before summit day. Covered in the base camp skills session; internalised on the lower glacier on the way to high camp.</li>
+          <li><strong>Jumar on fixed rope:</strong> The headwall is climbed on a fixed rope with a Jumar. The technique is simple; using it efficiently at 5,900m when you've been climbing for three hours is less simple. Practice in the skills session matters more than people expect.</li>
+          <li><strong>Rappel on descent:</strong> The headwall is descended on rappel. This is the most technically demanding moment of the descent and should be practised deliberately in the base camp session, not improvised on the mountain.</li>
+          <li><strong>Patience and composure in a queue:</strong> This is not a technical skill but it matters on Island Peak in peak season. Waiting at the base of the headwall for 20–40 minutes in the cold while another group climbs above you is part of the Island Peak experience in October. Climbers who go in knowing this handle it better than those who don't.</li>
+          <li><strong>Physical stamina at altitude:</strong> Summit day from high camp is 10–13 hours at altitude between 5,600m and 6,189m. Prior high-altitude experience above 5,000m remains the most important preparation you can do.</li>
+        </ul>
+
+        <div class="info-box green">
+          <div class="info-box-header">
+            <svg class="info-box-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <div class="info-box-title">No Prior Climbing Experience Required</div>
+          </div>
+          <p>Like Lobuche East and Mera, Island Peak can be guided safely for trekkers with no prior mountaineering experience. The skills are learnable — and our guides have taught them to many hundreds of first-time climbers. What matters is fitness, honest altitude experience above 5,000m, and full engagement with the pre-summit skills sessions. If you arrive at base camp fit, acclimatised, and ready to learn, Island Peak is achievable.</p>
+        </div>
+
+        <h2 id="compare">Island Peak vs Lobuche East vs Mera Peak</h2>
+
+        <table class="compare-table" aria-label="Comparison of Island Peak, Lobuche East and Mera Peak">
+          <thead>
+            <tr>
+              <th>Factor</th>
+              <th>Island Peak</th>
+              <th>Lobuche East</th>
+              <th>Mera Peak</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Summit altitude</strong></td>
+              <td>6,189m</td>
+              <td>6,119m</td>
+              <td class="hl">6,476m — Highest</td>
+            </tr>
+            <tr>
+              <td><strong>Technical difficulty</strong></td>
+              <td class="hl">Hardest of three (headwall)</td>
+              <td>Moderate (mixed ridge)</td>
+              <td>Easiest (glacier dome)</td>
+            </tr>
+            <tr>
+              <td><strong>Best combined with</strong></td>
+              <td class="hl">Chhukung / EBC south</td>
+              <td>EBC — same trail</td>
+              <td>Hinku Valley standalone</td>
+            </tr>
+            <tr>
+              <td><strong>Summit view</strong></td>
+              <td class="hl">Lhotse South Face — dramatic, close</td>
+              <td>Full Khumbu massif</td>
+              <td>Five eight-thousanders — widest</td>
+            </tr>
+            <tr>
+              <td><strong>Crowds</strong></td>
+              <td class="hl">Highest — known queues in October</td>
+              <td>Moderate</td>
+              <td>Lowest — remote approach</td>
+            </tr>
+            <tr>
+              <td><strong>Approach character</strong></td>
+              <td>EBC route + Chhukung valley</td>
+              <td>EBC route</td>
+              <td>Remote Hinku Valley</td>
+            </tr>
+            <tr>
+              <td><strong>Best for</strong></td>
+              <td class="hl">Climbers who want a technical crux</td>
+              <td>EBC trekkers adding a summit</td>
+              <td>Altitude-focused, crowd-averse</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 id="permits">Permits and Costs</h2>
+
+        <p>Island Peak sits in the same NMA trekking peak permit system as Lobuche East and Mera — significantly cheaper than full expedition peaks, with logistics that are well-established after decades of traffic. The shorter approach (no Hinku Valley) keeps the overall package cost competitive.</p>
+
+        <table class="cost-table" aria-label="Island Peak climb cost breakdown 2026">
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Cost (2026)</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>NMA Trekking Peak Permit</strong></td>
+              <td>$250 / person (autumn)<br>$125 / person (spring)</td>
+              <td>Arranged by Beyond Summit before departure. Autumn premium reflects demand.</td>
+            </tr>
+            <tr>
+              <td><strong>Sagarmatha National Park Entry</strong></td>
+              <td>NPR 3,000 (~$22) / person</td>
+              <td>Covers full Khumbu region including Island Peak approach. Included in package.</td>
+            </tr>
+            <tr>
+              <td><strong>TIMS Card</strong></td>
+              <td>NPR 2,000 (~$15) / person</td>
+              <td>Included with package.</td>
+            </tr>
+            <tr>
+              <td><strong>Beyond Summit Island Peak Package</strong></td>
+              <td>$2,100–$2,900 / person</td>
+              <td>Guide, porter, Sherpa climbing guide, high camp tents, fixed ropes, all teahouse accommodation, Kathmandu briefing and skills sessions, cook at base camp.</td>
+            </tr>
+            <tr>
+              <td><strong>Lukla flights (return)</strong></td>
+              <td>$280 / person</td>
+              <td>Weather-dependent. Build buffer into itinerary end.</td>
+            </tr>
+            <tr>
+              <td><strong>Personal gear</strong></td>
+              <td>$200–$600</td>
+              <td>Mountaineering boots are the major cost. Rental available in Kathmandu — book ahead via our team.</td>
+            </tr>
+            <tr>
+              <td><strong>Total estimated cost per person</strong></td>
+              <td><strong>$2,870–$3,817</strong></td>
+              <td><strong>Excluding international flights. Helicopter rescue insurance strongly recommended (~$150–200 additional).</strong></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <blockquote>
+          "Island Peak asks you to trust yourself at the crux. The headwall is not hard — but it's steep enough that you can't just think your way through it. You have to commit, move, trust the crampon points. Clients who've practised this in the skills session do it without hesitation. The ones who haven't practised enough — you can see the moment they lose confidence. That's why we don't skip the practice."
+          <cite>— Pasang Dawa Sherpa, Lead Climbing Guide, Beyond Summit Expeditions. Island Peak summits: 91</cite>
+        </blockquote>
+
+        <h2 id="fitness">Getting Physically Ready</h2>
+
+        <p>Island Peak's summit day is demanding in a specific way: the headwall arrives after 3–4 hours of climbing, when your legs are tired and your lungs are already working hard at 5,900m. The technical crux of the route comes when you're fatigued, not fresh. Training for this requires building <strong>sustained aerobic endurance</strong> at moderate intensity, not just peak fitness.</p>
+
+        <ul>
+          <li>Long hikes of 6–8 hours with 1,000–1,200m of elevation gain, at least twice a month in the 12 weeks before departure</li>
+          <li>Sustained aerobic training 4 times per week — 45–60 minutes of running, cycling, or rowing at conversational pace</li>
+          <li>Stair climbing with a weighted pack (12–15kg), targeting 30–45 consecutive minutes — specifically for the headwall's sustained uphill demand</li>
+          <li>A multi-day trekking trip in the 2–3 months before departure, including at least one overnight above 3,000m if possible</li>
+        </ul>
+
+        <div class="info-box tip">
+          <div class="info-box-header">
+            <svg class="info-box-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9c1.51 0 2.93.37 4.18 1.02"/></svg>
+            <div class="info-box-title">Train for the Headwall Specifically</div>
+          </div>
+          <p>The headwall demands sustained effort with your arms and upper body alongside your legs — using a Jumar on a fixed rope is more physically demanding than it looks on a diagram. In the months before departure: include pull-ups, rowing, and loaded carrying in your training. Your forearms and grip will thank you partway up the fixed rope at 5,900m.</p>
+        </div>
+
+        <h2 id="gear">Gear for Island Peak</h2>
+
+        <p>Standard EBC trekking kit covers the approach through Dingboche and Chhukung. From base camp upward, the following additions are needed. Everything on this list can be rented in Kathmandu.</p>
+
+        <h3>Technical Climbing Additions</h3>
+        <ul>
+          <li><strong>Mountaineering boots:</strong> Crampon-compatible, insulated to –20°C. Your trekking boots are not suitable for the headwall. Non-negotiable — test fit with crampons attached before leaving Kathmandu.</li>
+          <li><strong>12-point crampons:</strong> Fitted to your mountaineering boots. Front-points essential for the headwall. Test on the glacier on the way to high camp — do not wait for the headwall to discover a fit issue.</li>
+          <li><strong>Jumar ascender:</strong> For the headwall fixed rope. Beyond Summit supplies these as part of the package; check at the Kathmandu briefing.</li>
+          <li><strong>Harness and locking carabiner:</strong> For the headwall ascent and the rappel descent. Comfortable over all your layers — test with everything on before summit day.</li>
+          <li><strong>Belay device:</strong> For the rappel descent. Covered in the base camp skills session; supplied with package.</li>
+          <li><strong>Helmet:</strong> Rockfall risk on the headwall and mixed sections. Not optional.</li>
+          <li><strong>Ice axe:</strong> For the lower glacier and the summit ridge. Standard walking length.</li>
+        </ul>
+
+        <h3>High Camp Additions</h3>
+        <ul>
+          <li><strong>Sleeping bag to –20°C:</strong> High camp at 5,600m is cold, and the pre-dawn departure adds cold. This is not a bag to underestimate.</li>
+          <li><strong>Down jacket, warm midlayer, expedition mitts:</strong> The headwall in the pre-dawn cold requires serious insulation on hands and torso. Bring more than you think you need.</li>
+          <li><strong>Headtorch with lithium batteries:</strong> A 02:00 departure is in complete darkness. Two full spare sets minimum. Do not rely on alkaline batteries in the cold.</li>
+          <li><strong>Glacier glasses:</strong> Category 4, wraparound. UV exposure on the headwall and summit ridge is severe. Snow blindness is avoidable; it just requires remembering to wear your glasses.</li>
+          <li><strong>Thermos and snacks:</strong> Hot liquid from the night before and high-calorie food you know you can eat when tired and at altitude. Appetite disappears above 5,500m — bring dense, palatable food.</li>
+        </ul>
+
+        <h2 id="faq-section">Frequently Asked Questions</h2>
+
+        <h3>Is Island Peak suitable for someone who has never climbed before?</h3>
+        <p>Yes, with important caveats. The technical skills are learnable and are taught in our pre-departure and base camp sessions. What cannot be taught in 17 days is cardiovascular fitness and the altitude acclimatisation capacity your body builds from prior high-altitude experience. If you have previously completed EBC or a similar high-altitude route (above 5,000m), are physically fit, and are willing to fully engage with the skills sessions, Island Peak is achievable for a first-time climber under good guidance.</p>
+
+        <h3>How crowded does it actually get?</h3>
+        <p>In the first two weeks of October, the headwall can have 30–50 climbers on the fixed ropes simultaneously. This creates queues and extends summit day timelines significantly. Beyond Summit's response is an earlier-than-average departure from high camp (02:00 in peak season) and small group sizes capped at six per guide. If crowds are a dealbreaker for you, we'll genuinely recommend Lobuche East or Mera Peak over Island Peak in October — both offer a more isolated experience at similar or higher altitudes.</p>
+
+        <h3>What is the success rate?</h3>
+        <p>Beyond Summit groups achieve summit rates above 82% on Island Peak. The primary reasons for turnaround are weather deterioration on summit day, AMS symptoms at high camp, and — occasionally — individual confidence issues at the headwall that are resolved by the guide's judgement and the client's own decision-making. Our itinerary is structured to minimise the first two; the skills sessions address the third.</p>
+
+        <h3>Can I combine Island Peak with EBC?</h3>
+        <p>Yes, and the itinerary above does exactly this. The EBC approach via Namche, Tengboche, and Dingboche provides the acclimatisation needed for the climb, and the Chhukung valley approach from Dingboche to Island Peak base camp adds only 1–2 days to a standard EBC itinerary. This is the most efficient and most popular way to book Island Peak and it genuinely works well.</p>
+
+        <h3>Is helicopter rescue insurance required?</h3>
+        <p>Yes, and it's a condition of all Beyond Summit packages. Emergency evacuation from the Chhukung area costs $3,000–$5,000 and is not covered by the NMA permit. Travel insurance with a minimum of $100,000 helicopter rescue coverage is the only financial protection available if you need to come off the mountain quickly. Our team will advise on appropriate policies before departure.</p>
+
+        <h2 id="book">Book Your Island Peak Expedition</h2>
+
+        <p>Beyond Summit runs Island Peak expeditions in both autumn (October–November) and spring (March–May). Groups are capped at six climbers per Sherpa guide — small enough for individual attention on the headwall, where it matters most.</p>
+
+        <p>Standalone Island Peak expeditions (without the full EBC combination) are available for returning trekkers who've already done EBC or for clients with a tighter schedule. Private expeditions for 2–4 clients can be customised within the two main seasons. We also run an Island Peak + Mera Peak combination for clients who want to experience both the Chhukung valley and the Hinku Valley — one of the finest back-to-back trekking peak itineraries available in Nepal.</p>
+
+        <p>All packages include the Kathmandu briefing and skills session, all permits, trekking guide, porter, dedicated Sherpa climbing guide, high camp tents and fixed ropes, base camp cook, and a post-summit dinner in Kathmandu.</p>
+
+        <p><a href="/trekking-peaks/island-peak">View our Island Peak packages →</a> or <a href="/contact">talk to our team</a> about which itinerary fits your schedule and experience level.</p>
+
+      </div>
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside class="article-sidebar">
+      <div class="sidebar-sticky">
+
+        <div class="sidebar-widget">
+          <h2 class="sidebar-widget-title">Quick Facts</h2>
+          <div class="sidebar-fact">
+            <div class="sidebar-fact-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div>
+              <div class="sidebar-fact-label">Summit Altitude</div>
+              <div class="sidebar-fact-val">6,189m (20,305ft)</div>
+            </div>
+          </div>
+          <div class="sidebar-fact">
+            <div class="sidebar-fact-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <div class="sidebar-fact-label">Total Duration</div>
+              <div class="sidebar-fact-val">14–18 Days</div>
+            </div>
+          </div>
+          <div class="sidebar-fact">
+            <div class="sidebar-fact-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <div>
+              <div class="sidebar-fact-label">Technical Grade</div>
+              <div class="sidebar-fact-val">PD — Headwall crux</div>
+            </div>
+          </div>
+          <div class="sidebar-fact">
+            <div class="sidebar-fact-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div>
+              <div class="sidebar-fact-label">Popularity</div>
+              <div class="sidebar-fact-val">Busiest trekking peak</div>
+            </div>
+          </div>
+          <div class="sidebar-fact">
+            <div class="sidebar-fact-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <div>
+              <div class="sidebar-fact-label">Price From</div>
+              <div class="sidebar-fact-val">USD 2,100 / person</div>
+            </div>
+          </div>
+          <div class="sidebar-fact">
+            <div class="sidebar-fact-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="sidebar-fact-label">Base</div>
+              <div class="sidebar-fact-val">Chhukung via Lukla</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-widget">
+          <h2 class="sidebar-widget-title">What's Next</h2>
+          <p style="font-size:0.78rem;color:var(--text-muted);margin-bottom:0.75rem;line-height:1.55;">Island Peak is a strong step 2 or 3. Here's where it leads:</p>
+          <div class="sidebar-next-peaks">
+            <a href="/blog/mera-peak-guide" class="next-peak-item">Mera Peak <span>6,476m →</span></a>
+            <a href="/blog/ama-dablam-climbing-guide" class="next-peak-item">Ama Dablam <span>6,812m →</span></a>
+            <a href="/expeditions/manaslu" class="next-peak-item">Manaslu <span>8,163m →</span></a>
+          </div>
+        </div>
+
+        <div class="sidebar-widget">
+          <h2 class="sidebar-widget-title">In This Guide</h2>
+          <ul class="toc-list">
+            <li><a href="#overview">The Mountain, Honestly</a></li>
+            <li><a href="#progression">Where Island Peak Fits</a></li>
+            <li><a href="#best-time">When to Go</a></li>
+            <li><a href="#route">The Route</a></li>
+            <li><a href="#itinerary">17-Day Itinerary</a></li>
+            <li><a href="#skills">Skills Required</a></li>
+            <li><a href="#compare">Island Peak vs Lobuche vs Mera</a></li>
+            <li><a href="#permits">Permits & Costs</a></li>
+            <li><a href="#fitness">Getting Ready</a></li>
+            <li><a href="#gear">Gear List</a></li>
+            <li><a href="#faq-section">FAQs</a></li>
+            <li><a href="#book">Book Your Expedition</a></li>
+          </ul>
+        </div>
+
+        <div class="cta-widget">
+          <h3>Climb Island Peak 2026</h3>
+          <p>Nepal's most famous trekking peak. Small groups, early starts, expert guides on the headwall.</p>
+          <a href="/trekking-peaks/island-peak" class="btn-gold">View Packages</a>
+        </div>
+
+      </div>
+    </aside>
+
+  </article>
+
+  <section class="related-posts" aria-labelledby="related-heading">
+    <div style="max-width:1120px;margin:0 auto">
+      <h2 id="related-heading">More From Our Blog</h2>
+      <div class="related-grid">
+        <a href="/blog/lobuche-east-peak-climbing-guide" class="related-card">
+          <img src="https://images.unsplash.com/photo-1516298773066-c48f8eb9e73e?q=80&w=600&auto=format&fit=crop" alt="Lobuche East Peak Khumbu" loading="lazy">
+          <div class="related-card-body">
+            <span class="related-card-cat">Trekking Peak Guide</span>
+            <h3 class="related-card-title">Complete Guide to Lobuche East Peak Climbing 2026</h3>
+          </div>
+        </a>
+        <a href="/blog/mera-peak-guide" class="related-card">
+          <img src="https://images.unsplash.com/photo-1555993539-1732b0258235?q=80&w=600&auto=format&fit=crop" alt="Mera Peak Hinku Valley" loading="lazy">
+          <div class="related-card-body">
+            <span class="related-card-cat">Trekking Peak Guide</span>
+            <h3 class="related-card-title">Complete Guide to Mera Peak Climbing 2026</h3>
+          </div>
+        </a>
+        <a href="/blog/ama-dablam-climbing-guide" class="related-card">
+          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=600&auto=format&fit=crop" alt="Ama Dablam Khumbu Valley" loading="lazy">
+          <div class="related-card-body">
+            <span class="related-card-cat">Expedition Guide</span>
+            <h3 class="related-card-title">Complete Guide to Climbing Ama Dablam 2026</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 <a href="/">Beyond Summit Expeditions</a> · Licensed by Dept. of Tourism, Nepal · <a href="/privacy-policy">Privacy</a> · <a href="/terms">Terms</a></p>
+  </footer>
+
+</body>
+</html>
