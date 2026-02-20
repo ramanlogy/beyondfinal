@@ -6,1668 +6,1685 @@
   <title>Beyond Summit Expeditions | Nepal's Premier Mountain Company</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Mono:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --obsidian: #0d0c0a;
-      --deep: #141210;
-      --bark: #1f1c17;
-      --amber: #c8832a;
-      --amber-light: #e8a84a;
-      --amber-pale: #f2d9a8;
-      --glacier: #8ab4c8;
-      --snow: #f5f2ec;
-      --mist: rgba(245,242,236,0.06);
-      --serif: 'Cormorant Garamond', Georgia, serif;
+      --cream: #faf7f2;
+      --cream-dark: #f2ede4;
+      --parchment: #ede8de;
+      --amber: #b8651a;
+      --amber-light: #d4812a;
+      --amber-pale: #f0c080;
+      --charcoal: #1c1814;
+      --stone: #3d3530;
+      --muted: #7a6e65;
+      --border: rgba(60,45,30,0.1);
+      --border-strong: rgba(60,45,30,0.18);
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans: 'DM Sans', system-ui, sans-serif;
       --mono: 'DM Mono', monospace;
-      --sans: 'Outfit', system-ui, sans-serif;
       --ease: cubic-bezier(0.22, 1, 0.36, 1);
-      --ease-in: cubic-bezier(0.65, 0, 0.35, 1);
+      --shadow-sm: 0 2px 12px rgba(60,40,20,0.08);
+      --shadow-md: 0 8px 32px rgba(60,40,20,0.12);
+      --shadow-lg: 0 20px 60px rgba(60,40,20,0.16);
     }
 
     html { scroll-behavior: smooth; font-size: 16px; }
     body {
       font-family: var(--sans);
-      background: var(--obsidian);
-      color: var(--snow);
+      background: var(--cream);
+      color: var(--charcoal);
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
-      cursor: none;
     }
     a { color: inherit; text-decoration: none; }
     ul { list-style: none; }
+    img { display: block; }
 
-    /* ─── CUSTOM CURSOR ─── */
-    .cursor {
-      position: fixed; top: 0; left: 0;
-      width: 10px; height: 10px;
-      background: var(--amber);
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 9999;
-      transform: translate(-50%, -50%);
-      transition: transform 0.1s, width 0.4s var(--ease), height 0.4s var(--ease), background 0.3s;
-    }
-    .cursor-ring {
-      position: fixed; top: 0; left: 0;
-      width: 36px; height: 36px;
-      border: 1px solid rgba(200,131,42,0.4);
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 9998;
-      transform: translate(-50%, -50%);
-      transition: transform 0.18s var(--ease), width 0.4s var(--ease), height 0.4s var(--ease), border-color 0.3s;
-    }
-    body:has(a:hover) .cursor { width: 16px; height: 16px; }
-    body:has(a:hover) .cursor-ring { width: 52px; height: 52px; border-color: rgba(200,131,42,0.7); }
-    @media (max-width: 768px) { .cursor, .cursor-ring { display: none; } body { cursor: auto; } }
-
-    /* ─── NOISE TEXTURE ─── */
-    body::before {
-      content: '';
-      position: fixed; inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-      pointer-events: none; z-index: 9000; opacity: 0.35;
-    }
-
-    /* ═══════════════════════════
-       NAV — with hamburger
-    ═══════════════════════════ */
+    /* ═══════════ NAV ═══════════ */
     nav {
       position: fixed; top: 0; left: 0; right: 0;
       z-index: 800;
       display: flex; align-items: center; justify-content: space-between;
-      padding: 2rem 4rem;
-      transition: padding 0.5s var(--ease);
+      padding: 1.5rem 4rem;
+      transition: all 0.5s var(--ease);
+      background: transparent;
     }
-    nav.shrunk {
-      padding: 1.25rem 4rem;
-      background: rgba(13,12,10,0.88);
+    nav.scrolled {
+      background: rgba(250,247,242,0.95);
       backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(255,255,255,0.05);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 4rem;
+      box-shadow: var(--shadow-sm);
     }
 
     .nav-logo { display: flex; align-items: center; gap: 0.75rem; }
-    .nav-logo-icon { width: 32px; height: 32px; }
+    .nav-logo-icon { width: 30px; height: 30px; }
     .nav-logo-text {
-      font-family: var(--serif); font-size: 1.6rem; font-weight: 600;
-      letter-spacing: 0.04em; color: var(--snow);
+      font-family: var(--serif); font-size: 1.4rem; font-weight: 700;
+      color: var(--cream); letter-spacing: 0.01em;
+      transition: color 0.4s;
     }
+    nav.scrolled .nav-logo-text { color: var(--charcoal); }
     .nav-logo-text em {
-      display: block;
-      font-family: var(--mono); font-size: 0.62rem;
-      letter-spacing: 0.55em; text-transform: uppercase;
-      color: var(--amber); opacity: 0.8; font-style: normal; margin-top: 2px;
+      display: block; font-style: normal;
+      font-family: var(--mono); font-size: 0.52rem;
+      letter-spacing: 0.4em; text-transform: uppercase;
+      color: rgba(250,247,242,0.7); margin-top: 2px;
+      transition: color 0.4s;
     }
+    nav.scrolled .nav-logo-text em { color: var(--amber); }
 
-    /* Desktop links */
     .nav-links {
-      display: flex; align-items: center; gap: 2.5rem;
+      display: flex; align-items: center; gap: 2rem;
     }
     .nav-links a {
-      font-family: var(--mono); font-size: 0.92rem;
-      letter-spacing: 0.18em; text-transform: uppercase;
-      color: rgba(245, 242, 236, 0.699); transition: color 0.3s;
+      font-family: var(--sans); font-size: 0.875rem; font-weight: 400;
+      color: rgba(250,247,242,0.85); transition: color 0.3s;
+      letter-spacing: 0.02em;
     }
-    .nav-links a:hover { color: var(--snow); }
-    .nav-links a.cta {
-      color: var(--amber-light);
-      border-bottom: 1px solid rgba(200,131,42,0.35); padding-bottom: 1px;
-    }
-    .nav-links a.cta:hover { color: var(--amber-pale); border-color: var(--amber); }
-
-    /* Hamburger button */
-    .nav-hamburger {
-      display: none;
-      flex-direction: column; justify-content: center; align-items: center;
-      width: 44px; height: 44px;
-      gap: 6px; cursor: pointer;
-      background: rgba(200,131,42,0.08);
-      border: 1px solid rgba(200,131,42,0.2);
-      border-radius: 4px;
-      padding: 0 10px;
-      transition: background 0.3s, border-color 0.3s;
-      z-index: 900;
-    }
-    .nav-hamburger:hover { background: rgba(200,131,42,0.15); border-color: rgba(200,131,42,0.4); }
-    .nav-hamburger span {
-      display: block; width: 100%; height: 1px;
+    nav.scrolled .nav-links a { color: var(--stone); }
+    .nav-links a:hover { color: var(--amber-light) !important; }
+    .nav-cta {
       background: var(--amber);
-      transition: transform 0.4s var(--ease), opacity 0.3s, width 0.3s;
-      transform-origin: center;
+      color: white !important;
+      padding: 0.6rem 1.5rem;
+      font-size: 0.82rem !important;
+      font-weight: 500 !important;
+      letter-spacing: 0.04em !important;
+      transition: background 0.3s, transform 0.3s !important;
     }
-    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .nav-hamburger.open span:nth-child(2) { opacity: 0; width: 0; }
-    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .nav-cta:hover { background: var(--amber-light) !important; transform: translateY(-1px); color: white !important; }
 
-    /* ─── MOBILE MENU DRAWER ─── */
-    .mobile-menu {
+    .nav-hamburger {
+      display: none; flex-direction: column; justify-content: center;
+      width: 44px; height: 44px; gap: 5px; cursor: pointer;
+      background: rgba(250,247,242,0.12);
+      border: 1px solid rgba(250,247,242,0.25);
+      border-radius: 6px; padding: 0 12px;
+      transition: all 0.3s;
+    }
+    nav.scrolled .nav-hamburger { background: rgba(60,40,20,0.06); border-color: var(--border); }
+    .nav-hamburger span {
+      display: block; width: 100%; height: 1.5px;
+      background: white; transition: all 0.4s var(--ease);
+    }
+    nav.scrolled .nav-hamburger span { background: var(--charcoal); }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+    /* Mobile Drawer */
+    .mobile-drawer {
       position: fixed; inset: 0; z-index: 700;
-      background: var(--obsidian);
+      background: var(--cream);
       display: flex; flex-direction: column;
-      padding: 7rem 2.5rem 3rem;
+      padding: 6rem 2rem 2rem;
       transform: translateX(100%);
-      transition: transform 0.6s var(--ease);
-      border-left: 1px solid rgba(200,131,42,0.1);
+      transition: transform 0.5s var(--ease);
     }
-    .mobile-menu.open { transform: translateX(0); }
-
-    /* Background mountain deco in menu */
-    .mobile-menu::before {
-      content: '';
-      position: absolute; bottom: 0; left: 0; right: 0; height: 45%;
-      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 200 L80 60 L140 120 L200 30 L260 100 L320 50 L400 130 L400 200 Z' fill='rgba(200,131,42,0.03)'/%3E%3C/svg%3E") bottom/cover no-repeat;
-      pointer-events: none;
-    }
-
-    .mobile-menu-links {
-      display: flex; flex-direction: column; gap: 0;
-      flex: 1;
-    }
-    .mobile-menu-item {
+    .mobile-drawer.open { transform: none; }
+    .mobile-drawer-link {
       display: flex; align-items: center; justify-content: space-between;
-      padding: 1.5rem 0;
-      border-bottom: 1px solid rgba(245,242,236,0.05);
-      opacity: 0; transform: translateX(30px);
-      transition: opacity 0.5s var(--ease), transform 0.5s var(--ease), border-color 0.3s;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--border);
+      font-family: var(--serif); font-size: 1.8rem; font-weight: 400;
+      color: var(--charcoal);
+      opacity: 0; transform: translateX(20px);
+      transition: opacity 0.4s, transform 0.4s, color 0.3s;
     }
-    .mobile-menu.open .mobile-menu-item:nth-child(1) { opacity: 1; transform: none; transition-delay: 0.08s; }
-    .mobile-menu.open .mobile-menu-item:nth-child(2) { opacity: 1; transform: none; transition-delay: 0.14s; }
-    .mobile-menu.open .mobile-menu-item:nth-child(3) { opacity: 1; transform: none; transition-delay: 0.2s; }
-    .mobile-menu.open .mobile-menu-item:nth-child(4) { opacity: 1; transform: none; transition-delay: 0.26s; }
-    .mobile-menu.open .mobile-menu-item:nth-child(5) { opacity: 1; transform: none; transition-delay: 0.32s; }
-    .mobile-menu-item:hover { border-color: rgba(200,131,42,0.2); }
+    .mobile-drawer.open .mobile-drawer-link:nth-child(1) { opacity: 1; transform: none; transition-delay: 0.06s; }
+    .mobile-drawer.open .mobile-drawer-link:nth-child(2) { opacity: 1; transform: none; transition-delay: 0.1s; }
+    .mobile-drawer.open .mobile-drawer-link:nth-child(3) { opacity: 1; transform: none; transition-delay: 0.14s; }
+    .mobile-drawer.open .mobile-drawer-link:nth-child(4) { opacity: 1; transform: none; transition-delay: 0.18s; }
+    .mobile-drawer.open .mobile-drawer-link:nth-child(5) { opacity: 1; transform: none; transition-delay: 0.22s; }
+    .mobile-drawer-link:hover { color: var(--amber); }
+    .mobile-drawer-link.highlight { color: var(--amber); }
 
-    .mobile-menu-link {
-      font-family: var(--serif); font-size: 2.2rem; font-weight: 300;
-      color: var(--snow); line-height: 1;
-      transition: color 0.3s;
-    }
-    .mobile-menu-link:hover { color: var(--amber-light); }
-    .mobile-menu-link.cta-link { color: var(--amber); }
-
-    .mobile-menu-arrow {
-      width: 32px; height: 32px;
-      border: 1px solid rgba(200,131,42,0.2); border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      color: var(--amber); opacity: 0.5;
-    }
-
-    .mobile-menu-footer {
-      display: flex; flex-direction: column; gap: 0.75rem;
-      padding-top: 2rem;
-      opacity: 0;
-      transition: opacity 0.5s 0.4s;
-    }
-    .mobile-menu.open .mobile-menu-footer { opacity: 1; }
-    .mobile-menu-contact {
-      font-family: var(--mono); font-size: 0.6rem;
-      letter-spacing: 0.18em; text-transform: uppercase;
-      color: rgba(245,242,236,0.25);
-    }
-    .mobile-menu-contact a {
-      color: rgba(245,242,236,0.4); transition: color 0.3s;
-    }
-    .mobile-menu-contact a:hover { color: var(--amber-light); }
-
-    /* ─── HERO ─── */
+    /* ═══════════ HERO ═══════════ */
     .hero {
-      position: relative;
-      width: 100%; height: 100svh; min-height: 700px;
-      overflow: hidden; background: var(--obsidian);
+      position: relative; width: 100%; height: 100svh; min-height: 650px;
+      overflow: hidden;
     }
     .slides-wrap { position: absolute; inset: 0; }
-    .slide { position: absolute; inset: 0; opacity: 0; transition: opacity 1.6s var(--ease-in); }
+    .slide { position: absolute; inset: 0; opacity: 0; transition: opacity 1.8s var(--ease); }
     .slide.active { opacity: 1; }
-    .slide.active .slide-img { transform: scale(1) translateX(0); }
     .slide-img {
       width: 100%; height: 100%; object-fit: cover;
-      transform: scale(1.08) translateX(12px);
-      transition: transform 9s var(--ease);
-      filter: brightness(0.52) saturate(0.8);
+      transform: scale(1.06); transition: transform 9s var(--ease);
+      filter: brightness(0.65) saturate(1.1);
     }
-    .hero-vignette {
+    .slide.active .slide-img { transform: scale(1); }
+    /* Bright overlay — lets images shine */
+    .hero-overlay {
       position: absolute; inset: 0; z-index: 2; pointer-events: none;
       background:
-        radial-gradient(ellipse 80% 60% at 20% 50%, rgba(13,12,10,0.5) 0%, transparent 70%),
-        linear-gradient(to right, rgba(13,12,10,0.85) 0%, rgba(13,12,10,0.1) 55%, transparent 100%),
-        linear-gradient(to top, rgba(13,12,10,0.95) 0%, transparent 45%);
-    }
-    .hero-altitude-lines {
-      position: absolute; right: 0; top: 0; bottom: 0; width: 28%;
-      z-index: 3; pointer-events: none; overflow: hidden; opacity: 0.18;
-    }
-    .hero-altitude-lines svg { width: 100%; height: 100%; }
-
-    /* Slide indicator */
-    .slide-indicator {
-      display: flex; flex-direction: column; align-items: center; gap: 0;
-      position: absolute; right: 4rem; top: 50%; transform: translateY(-50%);
-      z-index: 10;
-    }
-    .slide-ind-item {
-      display: flex; align-items: center; gap: 0.875rem;
-      padding: 0.6rem 0; cursor: pointer;
-      transition: opacity 0.4s; opacity: 0.3;
-    }
-    .slide-ind-item.active { opacity: 1; }
-    .slide-ind-item.active .ind-line { width: 32px; background: var(--amber); }
-    .slide-ind-item.active .ind-num { color: var(--snow); }
-    .ind-line {
-      width: 16px; height: 1px;
-      background: rgba(245,242,236,0.3);
-      transition: width 0.5s var(--ease), background 0.5s;
-    }
-    .ind-num {
-      font-family: var(--mono); font-size: 0.6rem;
-      letter-spacing: 0.12em; color: rgba(245,242,236,0.4);
-      transition: color 0.4s; writing-mode: vertical-rl;
+        linear-gradient(to top, rgba(15,10,5,0.82) 0%, rgba(15,10,5,0.3) 40%, transparent 70%),
+        linear-gradient(to right, rgba(15,10,5,0.55) 0%, transparent 60%);
     }
 
     .hero-content {
       position: absolute; inset: 0; z-index: 10;
-      display: grid; grid-template-rows: 1fr auto;
-      padding: 0 4rem 4rem;
-    }
-    .hero-lower { display: flex; flex-direction: column; gap: 2.5rem; }
-
-    .mountain-pill {
-      display: inline-flex; align-items: center; gap: 1rem;
-      opacity: 0; transform: translateY(10px);
-      animation: fadeSlideUp 0.8s 0.1s var(--ease) forwards;
-    }
-    .pill-tag {
-      font-family: var(--mono); font-size: 0.58rem;
-      letter-spacing: 0.25em; text-transform: uppercase;
-      color: var(--amber); opacity: 0.9;
-    }
-    .pill-sep { width: 0px; height: 1px; background: rgba(200,131,42,0.35); }
-
-    .mountain-title-wrap { overflow: hidden; }
-    .mountain-name {
-      font-family: var(--serif);
-      font-size: clamp(4.5rem, 10vw, 9rem);
-      font-weight: 300; line-height: 0.88;
-      letter-spacing: -0.025em; color: var(--snow);
-      display: block;
-      opacity: 0; transform: translateY(40px);
-      animation: fadeSlideUp 1s 0.25s var(--ease) forwards;
-    }
-   
-
-    .mountain-sub {
-      display: flex; align-items: center; gap: 2.5rem; margin-top: 1.5rem;
-      opacity: 0; transform: translateY(16px);
-      animation: fadeSlideUp 0.9s 0.45s var(--ease) forwards;
-    }
-    .mountain-alt { font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.15em; color: var(--amber-light); }
-    .mountain-region { font-family: var(--sans); font-size: 0.78rem; color: rgba(245,242,236,0.38); letter-spacing: 0.06em; }
-    .mountain-type {
-      font-family: var(--mono); font-size: 0.58rem;
-      letter-spacing: 0.2em; text-transform: uppercase;
-      color: rgba(245, 242, 236, 0.973); padding: 0.3rem 0.75rem;
-      border: 1px solid rgba(245, 242, 236, 0.568); border-radius: 100px;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      padding: 0 5rem 5rem;
     }
 
-    .hero-cta {
-      display: flex; align-items: center; gap: 2rem;
-      opacity: 0; transform: translateY(14px);
-      animation: fadeSlideUp 0.9s 0.6s var(--ease) forwards;
-    }
-    .btn-summit {
+    .hero-badge {
       display: inline-flex; align-items: center; gap: 0.75rem;
-      background: var(--amber); color: var(--obsidian);
-      padding: 0.9rem 2.2rem;
-      font-family: var(--mono); font-size: 0.65rem;
-      letter-spacing: 0.2em; text-transform: uppercase;
-      clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 100%, 0 100%);
-      transition: background 0.35s, transform 0.35s, letter-spacing 0.4s;
+      margin-bottom: 1.5rem;
+      opacity: 0; animation: riseUp 0.9s 0.2s var(--ease) forwards;
     }
-    .btn-summit:hover { background: var(--amber-pale); color: var(--obsidian); transform: translateX(4px); letter-spacing: 0.26em; }
-    .btn-summit svg { transition: transform 0.35s; }
-    .btn-summit:hover svg { transform: translateX(5px); }
-    .btn-ghost-text {
-      font-family: var(--mono); font-size: 0.62rem;
-      letter-spacing: 0.18em; text-transform: uppercase;
-      color: rgb(245, 242, 236);
-      position: relative; padding-bottom: 3px; transition: color 0.3s;
-    }
-    .btn-ghost-text::after {
-      content: ''; position: absolute; left: 0; bottom: 0;
-      width: 0; height: 1px; background: rgba(245,242,236,0.4);
-      transition: width 0.4s var(--ease);
-    }
-    .btn-ghost-text:hover { color: rgba(245,242,236,0.8); }
-    .btn-ghost-text:hover::after { width: 100%; }
-
-    .hero-progress { position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: rgba(245,242,236,0.06); z-index: 20; }
-    .hero-progress-fill { height: 100%; background: var(--amber); width: 0%; transition: width 0.12s linear; }
-
-    /* Facts ticker */
-    .facts-strip {
-      position: absolute; right: 0; top: 0; bottom: 0;
-      width: 3rem; z-index: 8; overflow: hidden;
-      display: flex; align-items: center; justify-content: center;
-      border-left: 1px solid rgba(245,242,236,0.04);
-    }
-    .facts-inner {
-      writing-mode: vertical-rl;
-      font-family: var(--mono); font-size: 0.54rem;
-      letter-spacing: 0.22em; text-transform: uppercase;
-      color: rgba(245,242,236,0.14); white-space: nowrap;
-      animation: scrollTicker 20s linear infinite;
-    }
-    @keyframes scrollTicker { from { transform: translateY(0); } to { transform: translateY(-50%); } }
-
-    /* ─── MARQUEE ─── */
-    .marquee-bar {
-      background: var(--bark);
-      border-top: 1px solid rgba(245,242,236,0.05);
-      border-bottom: 1px solid rgba(245,242,236,0.05);
-      overflow: hidden; padding: 0.8rem 0; position: relative;
-    }
-    .marquee-bar::before, .marquee-bar::after {
-      content: ''; position: absolute; top: 0; bottom: 0; width: 5rem; z-index: 2; pointer-events: none;
-    }
-    .marquee-bar::before { left: 0; background: linear-gradient(to right, var(--bark), transparent); }
-    .marquee-bar::after { right: 0; background: linear-gradient(to left, var(--bark), transparent); }
-    .marquee-track { display: flex; width: max-content; animation: marqueeAnim 40s linear infinite; }
-    .marquee-track:hover { animation-play-state: paused; }
-    .marquee-item {
-      display: flex; align-items: center; gap: 1rem;
-      padding: 0 2rem; white-space: nowrap;
-      font-family: var(--mono); font-size: 0.6rem;
-      letter-spacing: 0.2em; text-transform: uppercase;
-       color: var(--amber-light); transition: color 0.3s;
-    }
-    .marquee-item:hover { color: var(--amber-light); }
-    .marquee-sep { color: var(--amber); font-size: 0.35rem; }
-    @keyframes marqueeAnim { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-
-    /* ─── SECTION COMMONS ─── */
-    .eyebrow {
+    .hero-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--amber-pale); }
+    .hero-badge-text {
       font-family: var(--mono); font-size: 0.6rem;
       letter-spacing: 0.3em; text-transform: uppercase;
-      color: var(--amber); opacity: 0.8; display: block; margin-bottom: 1rem;
+      color: var(--amber-pale);
     }
-    .h2 {
+
+    .hero-title {
       font-family: var(--serif);
-      font-size: clamp(2.8rem, 5vw, 4.8rem);
-      font-weight: 300; line-height: 0.95;
-      letter-spacing: -0.02em; color: var(--snow);
+      font-size: clamp(3.5rem, 8.5vw, 8rem);
+      font-weight: 400; line-height: 0.9;
+      letter-spacing: -0.02em; color: white;
+      margin-bottom: 1.5rem;
+      opacity: 0; animation: riseUp 1s 0.35s var(--ease) forwards;
     }
-    .h2 em { font-style: italic; color: var(--amber-light); }
+    .hero-title em { font-style: italic; color: var(--amber-pale); }
 
-    /* ─── PILLARS ─── */
-   /* ─── PILLARS ─── */
-.pillars-section {
-  background: var(--bark);
-  border-top: 1px solid rgba(245,242,236,0.07);
-  border-bottom: 1px solid rgba(245,242,236,0.07);
-}
+    .hero-meta {
+      display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+      opacity: 0; animation: riseUp 0.9s 0.5s var(--ease) forwards;
+    }
+    .hero-alt { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.15em; color: var(--amber-pale); }
+    .hero-region { font-family: var(--sans); font-size: 0.8rem; color: rgba(255,255,255,0.55); }
+    .hero-tag {
+      font-family: var(--mono); font-size: 0.55rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.25);
+      padding: 0.3rem 0.85rem; border-radius: 100px;
+    }
 
-.pillars-track {
-  max-width: 1300px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
-  align-items: center;
-  padding: 2rem 3rem;
-  gap: 0;
-}
+    .hero-actions {
+      display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;
+      opacity: 0; animation: riseUp 0.9s 0.65s var(--ease) forwards;
+    }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      background: var(--amber); color: white;
+      padding: 0.85rem 2rem;
+      font-family: var(--sans); font-size: 0.85rem; font-weight: 500;
+      letter-spacing: 0.04em;
+      transition: background 0.3s, transform 0.3s, gap 0.3s;
+    }
+    .btn-primary:hover { background: var(--amber-light); transform: translateX(3px); gap: 0.9rem; }
+    .btn-ghost {
+      font-family: var(--sans); font-size: 0.82rem; font-weight: 400;
+      color: rgba(255,255,255,0.7);
+      display: flex; align-items: center; gap: 0.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.25); padding-bottom: 2px;
+      transition: color 0.3s, border-color 0.3s;
+    }
+    .btn-ghost:hover { color: white; border-color: white; }
 
-.pillar-stat {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.75rem 1rem;
-  text-align: center;
-}
+    /* Slide dots */
+    .slide-dots {
+      position: absolute; bottom: 2rem; right: 5rem; z-index: 20;
+      display: flex; gap: 0.6rem;
+    }
+    .sdot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: rgba(255,255,255,0.3); cursor: pointer;
+      transition: background 0.4s, transform 0.4s;
+    }
+    .sdot.active { background: var(--amber-pale); transform: scale(1.4); }
 
-.pillar-num {
-  font-family: var(--serif);
-  font-size: clamp(1.6rem, 3vw, 2.4rem);
-  font-weight: 500;
-  color: var(--amber);
-  letter-spacing: -0.02em;
-  line-height: 1;
-  min-width: 4ch;
-}
+    /* Progress */
+    .hero-prog { position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: rgba(255,255,255,0.08); z-index: 20; }
+    .hero-prog-fill { height: 100%; background: var(--amber); width: 0%; }
 
-.pillar-label {
-  font-family: var(--mono);
-  font-size: clamp(0.52rem, 1vw, 0.62rem);
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: rgba(245,242,236,0.4);
-  white-space: nowrap;
-}
+    @keyframes riseUp { to { opacity: 1; transform: translateY(0); } }
+    .hero-badge, .hero-title, .hero-meta, .hero-actions { transform: translateY(20px); }
 
-.pillar-sep {
-  width: 1px;
-  height: 2.5rem;
-  background: rgba(245,242,236,0.08);
-  flex-shrink: 0;
-}
+    /* ═══════════ MARQUEE ═══════════ */
+    .marquee-bar {
+      background: var(--charcoal);
+      overflow: hidden; padding: 0.75rem 0;
+    }
+    .marquee-track { display: flex; width: max-content; animation: marqueeScroll 35s linear infinite; }
+    .marquee-item {
+      display: flex; align-items: center; gap: 0.75rem;
+      padding: 0 1.75rem; white-space: nowrap;
+      font-family: var(--mono); font-size: 0.58rem;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: rgba(240,192,128,0.7);
+    }
+    .msep { color: var(--amber); font-size: 0.3rem; }
+    @keyframes marqueeScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
-/* ── Tablet ── */
-@media (max-width: 768px) {
-  .pillars-track {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 0;
-    padding: 1.5rem 1.25rem;
-  }
+    /* ═══════════ STATS STRIP ═══════════ */
+    .stats-strip {
+      background: white;
+      border-bottom: 1px solid var(--border);
+    }
+    .stats-inner {
+      max-width: 1300px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(4, 1fr);
+    }
+    .stat-item {
+      display: flex; flex-direction: column; align-items: center; gap: 0.35rem;
+      padding: 2.5rem 1rem;
+      border-right: 1px solid var(--border);
+      text-align: center;
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-num {
+      font-family: var(--serif); font-size: clamp(2rem, 3.5vw, 2.8rem);
+      font-weight: 500; color: var(--amber); line-height: 1;
+    }
+    .stat-label {
+      font-family: var(--mono); font-size: 0.56rem;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--muted);
+    }
 
-  /* Hide vertical separators on mobile grid */
-  .pillar-sep {
-    display: none;
-  }
+    /* ═══════════ SECTION COMMONS ═══════════ */
+    .section-wrap { padding: 6rem 0; }
+    .section-inner { max-width: 1300px; margin: 0 auto; padding: 0 4rem; }
+    .eyebrow {
+      font-family: var(--mono); font-size: 0.6rem;
+      letter-spacing: 0.35em; text-transform: uppercase;
+      color: var(--amber); display: block; margin-bottom: 0.875rem;
+    }
+    .section-title {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 400; line-height: 1;
+      letter-spacing: -0.02em; color: var(--charcoal);
+      margin-bottom: 0.5rem;
+    }
+    .section-title em { font-style: italic; color: var(--amber); }
+    .section-desc {
+      font-family: var(--sans); font-size: 0.9rem;
+      color: var(--muted); line-height: 1.7; max-width: 480px;
+      margin-top: 0.875rem;
+    }
 
-  .pillar-stat {
-    padding: 1rem 0.5rem;
-    position: relative;
-  }
+    /* ═══════════ CATEGORY SECTION ═══════════ */
+    .cat-section { padding: 5rem 0; }
+    .cat-section + .cat-section {
+      border-top: 1px solid var(--border);
+    }
+    .cat-section:nth-child(even) { background: white; }
 
-  /* Hairline borders between cells */
-  .pillar-stat:nth-child(1),
-  .pillar-stat:nth-child(3) {
-    border-right: 1px solid rgba(245,242,236,0.08);
-  }
-  .pillar-stat:nth-child(1),
-  .pillar-stat:nth-child(3) {
-    border-bottom: 1px solid rgba(245,242,236,0.08);
-  }
-  .pillar-stat:nth-child(5),
-  .pillar-stat:nth-child(7) {
-    border-right: 1px solid rgba(245,242,236,0.08);
-  }
-
-  .pillar-num {
-    font-size: clamp(1.7rem, 6vw, 2.2rem);
-  }
-
-  .pillar-label {
-    font-size: 0.56rem;
-    letter-spacing: 0.14em;
-  }
-}
-
-/* ── Small mobile ── */
-@media (max-width: 400px) {
-  .pillars-track {
-    padding: 1rem 0.75rem;
-  }
-  .pillar-stat {
-    padding: 0.85rem 0.4rem;
-  }
-}
-    /* ─── EXPEDITION CARDS ─── */
-    .exp-section { padding: 7rem 0; overflow: hidden; }
-    .exp-section-inner { padding: 0 4rem; max-width: 1300px; margin: 0 auto; }
-    .exp-header {
+    .cat-header {
+      max-width: 1300px; margin: 0 auto; padding: 0 4rem;
       display: flex; align-items: flex-end; justify-content: space-between;
-      margin-bottom: 4rem;
+      margin-bottom: 2.5rem;
     }
-    .view-all {
+    .cat-view-all {
       font-family: var(--mono); font-size: 0.58rem;
       letter-spacing: 0.2em; text-transform: uppercase;
-      color: rgba(245,242,236,0.3);
-      display: flex; align-items: center; gap: 0.6rem;
-      transition: color 0.3s; padding-bottom: 2px;
-      border-bottom: 1px solid rgba(245,242,236,0.1);
+      color: var(--muted);
+      display: flex; align-items: center; gap: 0.5rem;
+      border-bottom: 1px solid var(--border-strong); padding-bottom: 2px;
+      transition: color 0.3s, border-color 0.3s;
     }
-    .view-all:hover { color: var(--amber-light); border-color: rgba(200,131,42,0.4); }
-    .exp-cards-track {
-      display: grid; grid-template-columns: repeat(4, 1fr);
-      gap: 1px; background: rgba(245,242,236,0.06);
-    }
-    .exp-card {
-      position: relative; display: block;
-      aspect-ratio: 2/3; overflow: hidden;
-      background: var(--deep); cursor: none;
-    }
-    .exp-card-img {
-      width: 100%; height: 100%; object-fit: cover;
-      transition: transform 1.6s var(--ease), filter 0.8s;
-      filter: brightness(0.45) saturate(0.7);
-    }
-    .exp-card:hover .exp-card-img { transform: scale(1.1); filter: brightness(0.6) saturate(0.9); }
-    .exp-card-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(13,12,10,0.95) 0%, rgba(13,12,10,0.2) 50%, transparent 100%); }
-    .exp-card-body {
-      position: absolute; inset: 0;
-      display: flex; flex-direction: column; justify-content: flex-end;
-      padding: 2rem 1.75rem;
-      transition: transform 0.5s var(--ease);
-    }
-    .exp-card:hover .exp-card-body { transform: translateY(-8px); }
-    .exp-card-peak-icon { width: 32px; height: 32px; margin-bottom: 1rem; opacity: 0.5; transition: opacity 0.4s; }
-    .exp-card:hover .exp-card-peak-icon { opacity: 1; }
-    .exp-card-num { font-family: var(--mono); font-size: 0.55rem; letter-spacing: 0.2em; color: var(--amber); opacity: 0.7; margin-bottom: 0.5rem; }
-    .exp-card-name { font-family: var(--serif); font-size: 2rem; font-weight: 300; line-height: 1; color: var(--snow); margin-bottom: 0.35rem; }
-    .exp-card-alt { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.12em; color: var(--amber-light); margin-bottom: 1.25rem; }
-    .exp-card-action {
-      display: flex; align-items: center; gap: 0.75rem;
-      font-family: var(--mono); font-size: 0.6rem;
-      letter-spacing: 0.18em; text-transform: uppercase;
-      color: rgba(245,242,236,0.35);
-      transform: translateY(8px); opacity: 0;
-      transition: transform 0.5s var(--ease), opacity 0.4s;
-    }
-    .exp-card:hover .exp-card-action { opacity: 1; transform: translateY(0); }
-    .exp-card-action-line { width: 24px; height: 1px; background: var(--amber); transition: width 0.5s var(--ease); }
-    .exp-card:hover .exp-card-action-line { width: 40px; }
+    .cat-view-all:hover { color: var(--amber); border-color: var(--amber); }
 
-    /* ─── TREK CARDS ─── */
-    .trek-section { padding: 7rem 4rem; max-width: 1300px; margin: 0 auto; }
-    .trek-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 4rem; }
-    .trek-card {
-      display: block; background: var(--bark);
-      border: 1px solid rgba(245,242,236,0.05);
-      transition: border-color 0.4s, transform 0.5s var(--ease);
+    /* Horizontal scroll track */
+    .scroll-track-wrap {
+      padding-left: 4rem; position: relative;
     }
-    .trek-card:hover { border-color: rgba(200,131,42,0.25); transform: translateY(-4px); }
-    .trek-media { position: relative; aspect-ratio: 4/3; overflow: hidden; }
-    .trek-img {
-      width: 100%; height: 100%; object-fit: cover;
-      transition: transform 1.5s var(--ease); filter: brightness(0.5) saturate(0.75);
+    .scroll-track-wrap::after {
+      content: '';
+      position: absolute; top: 0; right: 0; bottom: 0; width: 5rem;
+      background: linear-gradient(to left, var(--cream), transparent);
+      pointer-events: none; z-index: 2;
     }
-    .trek-card:hover .trek-img { transform: scale(1.07); filter: brightness(0.65) saturate(0.9); }
-    .trek-badge {
-      position: absolute; top: 1rem; left: 1rem;
-      font-family: var(--mono); font-size: 0.55rem;
-      letter-spacing: 0.2em; text-transform: uppercase;
-      background: rgba(13,12,10,0.7); color: rgba(245,242,236,0.6);
-      padding: 0.3rem 0.75rem; backdrop-filter: blur(8px);
-      border: 1px solid rgba(245,242,236,0.08);
+    .cat-section:nth-child(even) .scroll-track-wrap::after {
+      background: linear-gradient(to left, white, transparent);
     }
-    .trek-body { padding: 1.75rem; }
-    .trek-name { font-family: var(--serif); font-size: 1.5rem; font-weight: 400; color: var(--snow); margin-bottom: 0.625rem; }
-    .trek-desc { font-family: var(--sans); font-size: 0.8rem; color: rgba(245,242,236,0.38); line-height: 1.65; margin-bottom: 1.5rem; }
-    .trek-specs { display: flex; gap: 2rem; padding-top: 1.25rem; border-top: 1px solid rgba(245,242,236,0.06); }
-    .trek-spec-val { font-family: var(--mono); font-size: 0.78rem; color: var(--snow); letter-spacing: 0.05em; }
-    .trek-spec-key { font-family: var(--mono); font-size: 0.55rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(245,242,236,0.25); margin-top: 0.2rem; }
-    .trek-foot { display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 1.75rem; border-top: 1px solid rgba(245,242,236,0.04); }
-    .trek-price { font-family: var(--serif); font-size: 1.6rem; font-weight: 300; color: var(--snow); }
-    .trek-price sub { font-family: var(--mono); font-size: 0.55rem; vertical-align: sub; color: rgba(245,242,236,0.35); letter-spacing: 0.1em; }
-    .trek-link { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--amber); display: flex; align-items: center; gap: 0.5rem; transition: gap 0.35s; }
-    .trek-card:hover .trek-link { gap: 0.85rem; }
-
-    /* ─── WHY US ─── */
-    .why-section {
-      padding: 8rem 4rem;
-      max-width: 1300px; margin: 0 auto;
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 8rem; align-items: start;
-    }
-    .why-intro { font-family: var(--serif); font-size: 1.15rem; font-weight: 300; color: rgba(245, 242, 236, 0.726); line-height: 1.8; margin-top: 2rem; margin-bottom: 3.5rem; }
-    .why-items { display: flex; flex-direction: column; gap: 0; }
-    .why-item {
-      display: flex; gap: 1.5rem; align-items: flex-start;
-      padding: 2rem 0; border-bottom: 1px solid rgba(245, 242, 236, 0.692);
-      transition: background 0.3s;
-    }
-    .why-item:last-child { border-bottom: none; }
-    .why-item-icon {
-      width: 44px; height: 44px; flex-shrink: 0;
-      background: rgba(200,131,42,0.08); border: 1px solid rgba(200,131,42,0.15);
-      border-radius: 8px; display: flex; align-items: center; justify-content: center;
-      color: var(--amber); transition: background 0.3s, border-color 0.3s;
-    }
-    .why-item:hover .why-item-icon { background: rgba(200,131,42,0.15); border-color: rgba(200,131,42,0.35); }
-    .why-item-title { font-family: var(--serif); font-size: 1.15rem; font-weight: 400; color: var(--snow); margin-bottom: 0.4rem; }
-    .why-item-desc { font-family: var(--sans); font-size: 0.8rem; color: rgba(245, 242, 236, 0.986); line-height: 1.65; }
-    .why-right { position: sticky; top: 8rem; }
-    .why-visual { position: relative; border-radius: 2px; overflow: hidden; }
-    .why-visual img { width: 100%; display: block; filter: brightness(0.7) saturate(0.85); }
-    .why-visual::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(13,12,10,0.8) 0%, transparent 50%); }
-    .why-visual-caption {
-      position: absolute; bottom: 0; left: 0; right: 0; z-index: 2; padding: 2rem;
-      font-family: var(--serif); font-size: 1.25rem; font-weight: 300; font-style: italic;
-      color: rgb(245, 242, 236); line-height: 1.5;
-    }
-    .why-visual-caption strong {
-      display: block; font-style: normal; font-size: 0.6rem;
-      font-family: var(--mono); letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--amber); opacity: 0.8; margin-bottom: 0.5rem;
-    }
-
-    /* ═══════════════════════════
-       TESTIMONIALS — Dream Achievers
-    ═══════════════════════════ */
-    .testimonials-section {
-      padding: 7rem 0;
-      background: var(--bark);
-      border-top: 1px solid rgba(245,242,236,0.04);
-      overflow: hidden;
-    }
-    .testimonials-header {
-      padding: 0 4rem; max-width: 1300px; margin: 0 auto 4rem;
-      display: flex; align-items: flex-end; justify-content: space-between;
-    }
-    .testimonials-nav {
-      display: flex; gap: 0.75rem; align-items: center;
-    }
-    .testi-nav-btn {
-      width: 44px; height: 44px;
-      border: 1px solid rgba(200,131,42,0.2);
-      background: rgba(200,131,42,0.06);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      color: var(--amber); cursor: pointer;
-      transition: background 0.3s, border-color 0.3s, transform 0.3s;
-    }
-    .testi-nav-btn:hover { background: rgba(200,131,42,0.18); border-color: rgba(200,131,42,0.5); transform: scale(1.08); }
-
-    /* Carousel track */
-    .testi-carousel-wrap {
-      padding-left: 4rem;
-      position: relative;
-    }
-    .testi-track {
-      display: flex; gap: 1.5rem;
-      overflow-x: auto; scroll-behavior: smooth;
+    .scroll-track {
+      display: flex; gap: 1.25rem;
+      overflow-x: auto; padding-right: 5rem; padding-bottom: 1.5rem;
       scrollbar-width: none; -ms-overflow-style: none;
-      padding-right: 4rem; padding-bottom: 0.5rem;
+      scroll-snap-type: x mandatory;
       cursor: grab;
+    }
+    .scroll-track:active { cursor: grabbing; }
+    .scroll-track::-webkit-scrollbar { display: none; }
+
+    /* ═══ MOUNTAIN CARD ═══ */
+    .mcard {
+      flex: 0 0 300px;
+      background: white; scroll-snap-align: start;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
+      display: flex; flex-direction: column;
+    }
+    .mcard:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+    .mcard-img-wrap {
+      position: relative; aspect-ratio: 3/4; overflow: hidden;
+    }
+    .mcard-img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 1.6s var(--ease), filter 0.6s;
+      filter: brightness(0.85) saturate(1.1);
+    }
+    .mcard:hover .mcard-img { transform: scale(1.08); filter: brightness(1) saturate(1.15); }
+    .mcard-img-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(15,8,3,0.75) 0%, rgba(15,8,3,0.1) 50%, transparent 100%);
+    }
+    .mcard-badge {
+      position: absolute; top: 1rem; left: 1rem;
+      font-family: var(--mono); font-size: 0.5rem;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      background: rgba(250,247,242,0.92); color: var(--stone);
+      padding: 0.3rem 0.75rem; backdrop-filter: blur(8px);
+      border: 1px solid rgba(60,45,30,0.12);
+    }
+    .mcard-alt-badge {
+      position: absolute; bottom: 1rem; right: 1rem;
+      font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.08em;
+      color: var(--amber-pale); font-weight: 400;
+    }
+    .mcard-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+    .mcard-num {
+      font-family: var(--mono); font-size: 0.52rem;
+      letter-spacing: 0.2em; color: var(--amber); margin-bottom: 0.4rem;
+    }
+    .mcard-name {
+      font-family: var(--serif); font-size: 1.5rem; font-weight: 400;
+      color: var(--charcoal); line-height: 1.1; margin-bottom: 0.5rem;
+    }
+    .mcard-desc {
+      font-family: var(--sans); font-size: 0.78rem;
+      color: var(--muted); line-height: 1.6; flex: 1;
+      margin-bottom: 1.25rem;
+    }
+    .mcard-specs {
+      display: flex; gap: 1.5rem;
+      padding-top: 1rem; border-top: 1px solid var(--border);
+      margin-bottom: 1.25rem;
+    }
+    .mcard-spec-val { font-family: var(--mono); font-size: 0.82rem; color: var(--charcoal); }
+    .mcard-spec-key {
+      font-family: var(--mono); font-size: 0.5rem;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--muted); margin-top: 0.15rem;
+    }
+    .mcard-link {
+      font-family: var(--sans); font-size: 0.78rem; font-weight: 500;
+      color: var(--amber); display: flex; align-items: center; gap: 0.4rem;
+      transition: gap 0.3s;
+    }
+    .mcard:hover .mcard-link { gap: 0.7rem; }
+
+    /* Wide card variant for featured */
+    .mcard.wide { flex: 0 0 380px; }
+    .mcard.wide .mcard-img-wrap { aspect-ratio: 16/10; }
+
+    /* Outdoor activity card */
+    .acard {
+      flex: 0 0 260px; scroll-snap-align: start;
+      overflow: hidden; position: relative; aspect-ratio: 3/4;
+      border: 1px solid var(--border);
+      transition: transform 0.5s var(--ease), box-shadow 0.5s;
+    }
+    .acard:hover { transform: translateY(-6px) scale(1.01); box-shadow: var(--shadow-lg); }
+    .acard-img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 1.6s var(--ease), filter 0.6s;
+      filter: brightness(0.78) saturate(1.1);
+    }
+    .acard:hover .acard-img { transform: scale(1.08); filter: brightness(0.9) saturate(1.2); }
+    .acard-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(15,8,3,0.85) 0%, rgba(15,8,3,0.2) 55%, transparent 100%);
+    }
+    .acard-body {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 1.75rem 1.5rem;
+    }
+    .acard-tag {
+      font-family: var(--mono); font-size: 0.5rem;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--amber-pale); margin-bottom: 0.4rem;
+    }
+    .acard-name {
+      font-family: var(--serif); font-size: 1.5rem; font-weight: 400;
+      color: white; line-height: 1.1; margin-bottom: 0.5rem;
+    }
+    .acard-meta { font-family: var(--sans); font-size: 0.72rem; color: rgba(255,255,255,0.55); }
+    .acard-link {
+      display: flex; align-items: center; gap: 0.4rem;
+      margin-top: 1rem;
+      font-family: var(--sans); font-size: 0.72rem; font-weight: 500;
+      color: rgba(255,255,255,0.7); transition: color 0.3s, gap 0.3s;
+    }
+    .acard:hover .acard-link { color: white; gap: 0.7rem; }
+
+    /* Scroll controls */
+    .scroll-controls {
+      max-width: 1300px; margin: 1.75rem auto 0;
+      padding: 0 4rem;
+      display: flex; gap: 0.75rem;
+    }
+    .scroll-btn {
+      width: 42px; height: 42px;
+      border: 1.5px solid var(--border-strong);
+      background: white; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--stone); cursor: pointer;
+      transition: all 0.3s;
+    }
+    .scroll-btn:hover { border-color: var(--amber); color: var(--amber); background: rgba(184,101,26,0.05); }
+
+    /* ═══════════ WHY US ═══════════ */
+    .why-section {
+      background: var(--charcoal);
+      padding: 7rem 0;
+    }
+    .why-inner {
+      max-width: 1300px; margin: 0 auto; padding: 0 4rem;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 7rem; align-items: center;
+    }
+    .why-eyebrow { color: var(--amber-pale); }
+    .why-title {
+      font-family: var(--serif); font-size: clamp(2.2rem, 4vw, 3.5rem);
+      font-weight: 400; color: white; line-height: 1; margin-bottom: 1.25rem;
+    }
+    .why-title em { font-style: italic; color: var(--amber-pale); }
+    .why-intro { font-family: var(--sans); font-size: 0.9rem; color: rgba(255,255,255,0.5); line-height: 1.75; margin-bottom: 3rem; }
+    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .why-item {
+      padding: 1.5rem;
+      border: 1px solid rgba(255,255,255,0.07);
+      background: rgba(255,255,255,0.03);
+      transition: border-color 0.4s, background 0.4s;
+    }
+    .why-item:hover { border-color: rgba(184,101,26,0.4); background: rgba(184,101,26,0.05); }
+    .why-icon { width: 36px; height: 36px; color: var(--amber-pale); margin-bottom: 1rem; }
+    .why-item-title { font-family: var(--serif); font-size: 1.05rem; font-weight: 400; color: white; margin-bottom: 0.4rem; }
+    .why-item-desc { font-family: var(--sans); font-size: 0.78rem; color: rgba(255,255,255,0.42); line-height: 1.65; }
+
+    .why-visual { position: relative; }
+    .why-img-wrap { overflow: hidden; }
+    .why-img { width: 100%; display: block; filter: brightness(0.85) saturate(1.05); }
+    .why-caption {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 2rem 2rem 1.75rem;
+      background: linear-gradient(to top, rgba(15,8,3,0.92), transparent);
+    }
+    .why-caption-label {
+      font-family: var(--mono); font-size: 0.5rem;
+      letter-spacing: 0.25em; text-transform: uppercase;
+      color: var(--amber-pale); margin-bottom: 0.5rem;
+    }
+    .why-caption-text {
+      font-family: var(--serif); font-size: 1.1rem; font-weight: 400; font-style: italic;
+      color: rgba(255,255,255,0.8); line-height: 1.5;
+    }
+
+    /* ═══════════ TESTIMONIALS ═══════════ */
+    .testi-section { padding: 7rem 0; background: white; }
+    .testi-header {
+      max-width: 1300px; margin: 0 auto; padding: 0 4rem;
+      display: flex; align-items: flex-end; justify-content: space-between;
+      margin-bottom: 3rem;
+    }
+    .testi-nav { display: flex; gap: 0.6rem; }
+    .testi-nav-btn {
+      width: 42px; height: 42px; border-radius: 50%;
+      border: 1.5px solid var(--border-strong); background: transparent;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--stone); cursor: pointer;
+      transition: all 0.3s;
+    }
+    .testi-nav-btn:hover { border-color: var(--amber); color: var(--amber); }
+    .testi-track-wrap { padding-left: 4rem; }
+    .testi-track {
+      display: flex; gap: 1.25rem; overflow-x: auto;
+      padding-right: 5rem; padding-bottom: 1rem;
+      scrollbar-width: none; cursor: grab;
+      scroll-snap-type: x mandatory;
     }
     .testi-track:active { cursor: grabbing; }
     .testi-track::-webkit-scrollbar { display: none; }
-
-    /* Auto-scroll pause on hover */
-    .testi-track.paused { animation-play-state: paused; }
-
-    /* Card */
-    .testi-card {
-      flex: 0 0 360px;
-      background: rgba(13,12,10,0.6);
-      border: 1px solid rgba(245,242,236,0.06);
-      padding: 2.5rem 2rem 2rem;
-      position: relative;
-      transition: border-color 0.4s, transform 0.5s var(--ease);
-      display: flex; flex-direction: column; gap: 1.5rem;
+    .tcard {
+      flex: 0 0 340px; scroll-snap-align: start;
+      background: var(--cream);
+      border: 1px solid var(--border);
+      padding: 2rem;
+      display: flex; flex-direction: column; gap: 1.25rem;
+      transition: transform 0.5s var(--ease), box-shadow 0.4s;
     }
-    .testi-card:hover { border-color: rgba(200,131,42,0.25); transform: translateY(-6px); }
-
-    /* Highlight card */
-    .testi-card.featured {
-      background: rgba(200,131,42,0.06);
-      border-color: rgba(200,131,42,0.2);
-      flex: 0 0 420px;
-    }
-    .testi-card.featured::before {
-      content: 'SUMMIT ACHIEVER';
-      position: absolute; top: 1.5rem; right: 1.5rem;
-      font-family: var(--mono); font-size: 0.45rem;
-      letter-spacing: 0.28em; text-transform: uppercase;
-      color: var(--amber); padding: 0.25rem 0.6rem;
-      border: 1px solid rgba(200,131,42,0.3);
-    }
-
-    .testi-quote-mark {
-      font-family: var(--serif); font-size: 3.5rem; line-height: 0.6;
-      color: var(--amber); opacity: 0.35; align-self: flex-start;
-    }
-    .testi-quote {
-      font-family: var(--serif); font-size: 1.08rem;
-      font-weight: 300; font-style: italic;
-      color: rgba(245,242,236,0.75); line-height: 1.65;
-      flex: 1;
-    }
-    .testi-card.featured .testi-quote { font-size: 1.2rem; }
-
-    /* Stars */
-    .testi-stars {
-      display: flex; gap: 3px;
-    }
-    .testi-star { color: var(--amber); font-size: 0.7rem; }
-
-    /* Divider */
-    .testi-divider { height: 1px; background: rgba(245,242,236,0.06); }
-
-    /* Author */
-    .testi-author { display: flex; align-items: center; gap: 1rem; }
-    .testi-avatar {
-      width: 44px; height: 44px; border-radius: 50%;
-      background: linear-gradient(135deg, rgba(200,131,42,0.3), rgba(200,131,42,0.1));
-      border: 1px solid rgba(200,131,42,0.25);
+    .tcard:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .tcard.featured { background: var(--charcoal); border-color: transparent; flex: 0 0 380px; }
+    .tcard-quote-mark { font-family: var(--serif); font-size: 3rem; line-height: 0.7; color: var(--amber); opacity: 0.5; }
+    .tcard.featured .tcard-quote-mark { opacity: 0.6; color: var(--amber-pale); }
+    .tcard-quote { font-family: var(--serif); font-size: 1rem; font-weight: 400; font-style: italic; color: var(--stone); line-height: 1.65; flex: 1; }
+    .tcard.featured .tcard-quote { color: rgba(255,255,255,0.7); }
+    .tcard-stars { display: flex; gap: 2px; }
+    .tcard-star { color: var(--amber); font-size: 0.65rem; }
+    .tcard.featured .tcard-star { color: var(--amber-pale); }
+    .tcard-divider { height: 1px; background: var(--border); }
+    .tcard.featured .tcard-divider { background: rgba(255,255,255,0.1); }
+    .tcard-author { display: flex; align-items: center; gap: 1rem; }
+    .tcard-avatar {
+      width: 42px; height: 42px; border-radius: 50%; flex-shrink: 0;
+      background: var(--parchment);
       display: flex; align-items: center; justify-content: center;
-      font-family: var(--serif); font-size: 1.1rem; font-weight: 400;
-      color: var(--amber); flex-shrink: 0;
+      font-family: var(--serif); font-size: 1rem; color: var(--amber);
+      border: 1.5px solid var(--border-strong);
     }
-    .testi-author-info { flex: 1; }
-    .testi-author-name {
-      font-family: var(--sans); font-size: 0.875rem; font-weight: 500;
-      color: var(--snow); margin-bottom: 0.2rem;
+    .tcard.featured .tcard-avatar { background: rgba(255,255,255,0.1); color: var(--amber-pale); border-color: rgba(255,255,255,0.15); }
+    .tcard-name { font-family: var(--sans); font-size: 0.85rem; font-weight: 500; color: var(--charcoal); }
+    .tcard.featured .tcard-name { color: white; }
+    .tcard-meta { font-family: var(--mono); font-size: 0.52rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-top: 0.15rem; }
+    .tcard.featured .tcard-meta { color: rgba(255,255,255,0.35); }
+    .tcard-peak {
+      font-family: var(--mono); font-size: 0.48rem; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--amber); background: rgba(184,101,26,0.1);
+      border: 1px solid rgba(184,101,26,0.2); padding: 0.2rem 0.55rem; white-space: nowrap; margin-left: auto;
     }
-    .testi-author-meta {
-      font-family: var(--mono); font-size: 0.54rem;
-      letter-spacing: 0.15em; text-transform: uppercase;
-      color: rgba(245,242,236,0.28);
-    }
-    .testi-peak-badge {
-      font-family: var(--mono); font-size: 0.5rem;
-      letter-spacing: 0.18em; text-transform: uppercase;
-      color: var(--amber-light); background: rgba(200,131,42,0.1);
-      border: 1px solid rgba(200,131,42,0.2);
-      padding: 0.2rem 0.6rem; white-space: nowrap;
-    }
+    .tcard.featured .tcard-peak { color: var(--amber-pale); background: rgba(240,192,128,0.1); border-color: rgba(240,192,128,0.2); }
 
-    /* Scroll dots */
-    .testi-dots {
-      display: flex; gap: 0.5rem; align-items: center;
-      justify-content: center; margin-top: 3rem;
+    /* ═══════════ QUOTE PARALLAX ═══════════ */
+    .quote-section {
+      position: relative; overflow: hidden;
+      min-height: 60vh; display: flex; align-items: center; justify-content: center;
+      background: var(--charcoal);
     }
-    .testi-dot {
-      width: 24px; height: 2px; background: rgba(245,242,236,0.15);
-      cursor: pointer; transition: background 0.3s, width 0.4s var(--ease);
+    .quote-bg-img {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+      filter: brightness(0.3) saturate(0.6);
     }
-    .testi-dot.active { background: var(--amber); width: 40px; }
+    .quote-bg-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to right, rgba(15,8,3,0.7), rgba(15,8,3,0.4), rgba(15,8,3,0.6));
+    }
+    .quote-content {
+      position: relative; z-index: 2; text-align: center; padding: 5rem 4rem; max-width: 860px;
+    }
+    .quote-mark { font-family: var(--serif); font-size: 5rem; color: var(--amber-pale); opacity: 0.25; line-height: 0; display: block; margin-bottom: 2rem; }
+    .quote-text {
+      font-family: var(--serif); font-size: clamp(1.6rem, 3vw, 2.6rem);
+      font-weight: 400; font-style: italic; color: white;
+      line-height: 1.4; letter-spacing: -0.01em; margin-bottom: 2rem;
+    }
+    .quote-text em { color: var(--amber-pale); font-style: normal; }
+    .quote-attr {
+      font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.28em; text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      display: flex; align-items: center; justify-content: center; gap: 1rem;
+    }
+    .quote-attr::before, .quote-attr::after { content: ''; width: 28px; height: 1px; background: rgba(255,255,255,0.15); }
 
-    /* ═══════════════════════════
-       QUICK CONTACT STRIP
-    ═══════════════════════════ */
-    .contact-strip {
-      background: var(--obsidian);
-      border-top: 1px solid rgba(245,242,236,0.04);
-      border-bottom: 1px solid rgba(245,242,236,0.04);
-      padding: 0 4rem;
-    }
-    .contact-strip-inner {
-      max-width: 1300px; margin: 0 auto;
-      display: grid; grid-template-columns: repeat(3, 1fr);
-    }
-    .contact-strip-item {
+    /* ═══════════ CONTACT STRIP ═══════════ */
+    .contact-strip { background: var(--cream-dark); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .contact-inner { max-width: 1300px; margin: 0 auto; padding: 0 4rem; display: grid; grid-template-columns: repeat(3, 1fr); }
+    .contact-item {
       display: flex; align-items: center; gap: 1.25rem;
-      padding: 2.5rem 0;
-      border-right: 1px solid rgba(245,242,236,0.05);
-      padding-right: 3rem;
-      transition: opacity 0.3s;
+      padding: 2.5rem 2rem;
+      border-right: 1px solid var(--border);
+      transition: background 0.3s;
     }
-    .contact-strip-item:first-child { padding-left: 0; }
-    .contact-strip-item:last-child { border-right: none; padding-left: 3rem; }
-    .contact-strip-item:hover { opacity: 0.85; }
-    .contact-strip-icon {
-      width: 44px; height: 44px; flex-shrink: 0;
-      background: rgba(200,131,42,0.08);
-      border: 1px solid rgba(200,131,42,0.15);
+    .contact-item:first-child { padding-left: 0; }
+    .contact-item:last-child { border-right: none; }
+    .contact-item:hover { background: rgba(184,101,26,0.04); }
+    .contact-icon {
+      width: 42px; height: 42px; flex-shrink: 0;
+      background: white; border: 1px solid var(--border);
       border-radius: 8px; display: flex; align-items: center; justify-content: center;
       color: var(--amber);
     }
-    .contact-strip-label {
-      font-family: var(--mono); font-size: 0.52rem;
-      letter-spacing: 0.2em; text-transform: uppercase;
-      color: rgba(245,242,236,0.28); margin-bottom: 0.35rem;
-    }
-    .contact-strip-value {
-      font-family: var(--sans); font-size: 0.95rem;
-      font-weight: 400; color: var(--snow);
-    }
-    .contact-strip-value a { color: inherit; transition: color 0.3s; }
-    .contact-strip-value a:hover { color: var(--amber-light); }
+    .contact-label { font-family: var(--mono); font-size: 0.5rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.3rem; }
+    .contact-value { font-family: var(--sans); font-size: 0.9rem; font-weight: 500; color: var(--charcoal); }
+    .contact-value a { transition: color 0.3s; }
+    .contact-value a:hover { color: var(--amber); }
 
-    /* ═══════════════════════════
-       EXPEDITION TIMELINE
-    ═══════════════════════════ */
-    .timeline-section {
-      padding: 7rem 4rem;
-      max-width: 1300px; margin: 0 auto;
+    /* ═══════════ CTA BOOKING ═══════════ */
+    .booking-section { padding: 7rem 0; }
+    .booking-inner {
+      max-width: 1300px; margin: 0 auto; padding: 0 4rem;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center;
     }
-    .timeline-grid {
-      margin-top: 4rem;
-      display: grid; grid-template-columns: 1fr auto 1fr;
-      gap: 0; position: relative;
-    }
-    .timeline-line {
-      grid-column: 2;
-      grid-row: 1 / span 99;
-      width: 1px;
-      background: linear-gradient(to bottom, transparent, rgba(200,131,42,0.4), rgba(200,131,42,0.2), transparent);
-      position: relative;
-    }
-    .timeline-node {
-      position: absolute; left: 50%; transform: translateX(-50%);
-      width: 10px; height: 10px; border-radius: 50%;
-      background: var(--amber); border: 2px solid var(--bark);
-      box-shadow: 0 0 0 4px rgba(200,131,42,0.15);
-    }
-    .timeline-item-left, .timeline-item-right {
-      padding: 0 3rem 4rem;
-    }
-    .timeline-item-left { text-align: right; }
-    .timeline-step-num {
-      font-family: var(--mono); font-size: 0.52rem;
-      letter-spacing: 0.25em; text-transform: uppercase;
-      color: var(--amber); opacity: 0.7; margin-bottom: 0.5rem;
-    }
-    .timeline-step-title {
-      font-family: var(--serif); font-size: 1.35rem; font-weight: 400;
-      color: var(--snow); margin-bottom: 0.5rem;
-    }
-    .timeline-step-desc {
-      font-family: var(--sans); font-size: 0.78rem;
-      color: rgba(245,242,236,0.35); line-height: 1.65;
-      max-width: 280px;
-    }
-    .timeline-item-left .timeline-step-desc { margin-left: auto; }
-
-    /* ─── QUOTE SECTION ─── */
-    .quote-section {
-      position: relative; overflow: hidden;
-      min-height: 70vh; display: flex; align-items: center; justify-content: center;
-    }
-    .quote-bg { position: absolute; inset: 0; }
-    .quote-bg img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.25) saturate(0.5); transform: scale(1.05); }
-    .quote-bg::after {
-      content: ''; position: absolute; inset: 0;
-      background:
-        linear-gradient(to right, rgba(13,12,10,0.8) 0%, rgba(13,12,10,0.3) 50%, rgba(13,12,10,0.7) 100%),
-        linear-gradient(to bottom, rgba(13,12,10,0.7) 0%, transparent 30%, transparent 70%, rgba(13,12,10,0.7) 100%);
-    }
-    .quote-content { position: relative; z-index: 2; text-align: center; padding: 6rem 4rem; max-width: 900px; }
-    .quote-mark { font-family: var(--serif); font-size: 6rem; color: var(--amber); opacity: 0.25; line-height: 0; display: block; margin-bottom: 2rem; }
-    .quote-text { font-family: var(--serif); font-size: clamp(1.8rem, 3.5vw, 3rem); font-weight: 300; font-style: italic; color: var(--snow); line-height: 1.35; letter-spacing: -0.01em; margin-bottom: 2.5rem; }
-    .quote-text em { color: var(--amber-light); font-style: normal; }
-    .quote-attr { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(245,242,236,0.3); display: flex; align-items: center; justify-content: center; gap: 1rem; }
-    .quote-attr::before, .quote-attr::after { content: ''; width: 30px; height: 1px; background: rgba(245,242,236,0.18); }
-    .quote-deco-left, .quote-deco-right { position: absolute; top: 50%; width: 1px; background: linear-gradient(to bottom, transparent, rgba(200,131,42,0.3), transparent); height: 60%; transform: translateY(-50%); z-index: 2; }
-    .quote-deco-left { left: 4rem; }
-    .quote-deco-right { right: 4rem; }
-
-    /* ─── BOOKING CTA ─── */
-    .booking-section {
-      position: relative; overflow: hidden;
-      padding: 7rem 4rem;
-      background: var(--bark);
-      border-top: 1px solid rgba(245,242,236,0.04);
-    }
-    .booking-inner { max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
-    .booking-deco { position: absolute; right: -5rem; top: 50%; transform: translateY(-50%); width: 40%; opacity: 0.03; pointer-events: none; }
-    .booking-cta-row { display: flex; align-items: center; gap: 1.5rem; margin-top: 3rem; }
+    .booking-actions { display: flex; align-items: center; gap: 1.5rem; margin-top: 2.5rem; flex-wrap: wrap; }
     .btn-book {
-      display: inline-flex; align-items: center; gap: 0.875rem;
-      background: var(--amber); color: var(--obsidian);
-      padding: 1rem 2.5rem;
-      font-family: var(--mono); font-size: 0.65rem;
-      letter-spacing: 0.22em; text-transform: uppercase;
-      clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 100%, 0 100%);
-      transition: background 0.35s, transform 0.4s, letter-spacing 0.4s;
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      background: var(--charcoal); color: white;
+      padding: 0.95rem 2.25rem;
+      font-family: var(--sans); font-size: 0.85rem; font-weight: 500;
+      letter-spacing: 0.04em;
+      transition: background 0.3s, transform 0.3s, gap 0.3s;
     }
-    .btn-book:hover { background: var(--amber-pale); transform: translateX(5px); letter-spacing: 0.28em; }
-    .btn-phone { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.12em; color: rgba(245,242,236,0.35); transition: color 0.3s; }
-    .btn-phone:hover { color: var(--amber-light); }
-    .booking-visual { position: relative; }
-    .booking-img-wrap { border-radius: 2px; overflow: hidden; }
-    .booking-img { width: 100%; display: block; filter: brightness(0.55) saturate(0.75); }
-    .booking-badge { position: absolute; bottom: -1.5rem; left: -1.5rem; background: var(--obsidian); border: 1px solid rgba(200,131,42,0.2); padding: 1.5rem 2rem; }
-    .booking-badge-num { font-family: var(--serif); font-size: 3rem; font-weight: 300; color: var(--amber); line-height: 1; }
-    .booking-badge-label { font-family: var(--mono); font-size: 0.55rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(245,242,236,0.3); margin-top: 0.3rem; }
+    .btn-book:hover { background: var(--stone); transform: translateX(4px); gap: 0.9rem; }
+    .btn-link { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); display: flex; align-items: center; gap: 0.4rem; transition: color 0.3s; }
+    .btn-link:hover { color: var(--amber); }
+    .booking-img-wrap { position: relative; overflow: hidden; }
+    .booking-img { width: 100%; display: block; filter: brightness(0.88) saturate(1.05); transition: transform 1.5s var(--ease); }
+    .booking-img-wrap:hover .booking-img { transform: scale(1.04); }
+    .booking-badge {
+      position: absolute; bottom: -1.5rem; left: -1.5rem;
+      background: white; border: 1px solid var(--border);
+      padding: 1.5rem 2rem; box-shadow: var(--shadow-md);
+    }
+    .booking-badge-num { font-family: var(--serif); font-size: 2.6rem; font-weight: 400; color: var(--amber); line-height: 1; }
+    .booking-badge-label { font-family: var(--mono); font-size: 0.52rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-top: 0.25rem; }
 
-    /* ─── FOOTER ─── */
+    /* ═══════════ FOOTER ═══════════ */
     footer {
-      background: var(--obsidian);
-      border-top: 1px solid rgba(245,242,236,0.05);
-      padding: 5rem 4rem 3rem;
+      background: var(--charcoal);
+      border-top: 1px solid rgba(255,255,255,0.05);
+      padding: 5rem 4rem 2.5rem;
     }
     .footer-grid {
       max-width: 1300px; margin: 0 auto;
       display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 4rem; margin-bottom: 4rem;
-      padding-bottom: 4rem;
-      border-bottom: 1px solid rgba(245,242,236,0.05);
+      gap: 4rem; margin-bottom: 4rem; padding-bottom: 4rem;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
     }
-    .footer-brand-desc { font-family: var(--sans); font-size: 0.8rem; color: rgba(245, 242, 236, 0.705); line-height: 1.75; margin-top: 1.25rem; }
-    .footer-contact { margin-top: 1.75rem; display: flex; flex-direction: column; gap: 0.6rem; }
-    .footer-contact a { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.08em; color: rgb(185, 178, 163); display: flex; align-items: center; gap: 0.6rem; transition: color 0.3s; }
-    .footer-contact a:hover { color: var(--amber-light); }
-    .footer-col h4 { font-family: var(--mono); font-size: 0.55rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--amber); opacity: 0.7; margin-bottom: 1.25rem; }
+    .footer-logo-text { font-family: var(--serif); font-size: 1.3rem; font-weight: 700; color: white; }
+    .footer-logo-text em { display: block; font-style: normal; font-family: var(--mono); font-size: 0.5rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--amber); margin-top: 3px; }
+    .footer-desc { font-family: var(--sans); font-size: 0.8rem; color: rgba(255,255,255,0.38); line-height: 1.75; margin-top: 1rem; }
+    .footer-contact { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; }
+    .footer-contact a { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.06em; color: rgba(255,255,255,0.35); display: flex; align-items: center; gap: 0.5rem; transition: color 0.3s; }
+    .footer-contact a:hover { color: var(--amber-pale); }
+    .footer-col h4 { font-family: var(--mono); font-size: 0.52rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--amber); margin-bottom: 1.25rem; }
     .footer-col ul { display: flex; flex-direction: column; gap: 0.6rem; }
-    .footer-col a { font-family: var(--sans); font-size: 0.8rem; color: rgba(223, 218, 208, 0.767); transition: color 0.3s, padding-left 0.3s; }
-    .footer-col a:hover { color: rgba(255, 255, 255, 0.75); padding-left: 4px; }
+    .footer-col a { font-family: var(--sans); font-size: 0.8rem; color: rgba(255,255,255,0.38); transition: color 0.3s, padding-left 0.3s; }
+    .footer-col a:hover { color: rgba(255,255,255,0.7); padding-left: 4px; }
     .footer-bottom { max-width: 1300px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
-    .footer-bottom p { font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.12em; color: rgba(245,242,236,0.15); }
-    .footer-socials { display: flex; gap: 1rem; }
-    .social-ico { width: 34px; height: 34px; border: 1px solid rgba(245,242,236,0.08); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: rgba(245,242,236,0.3); transition: border-color 0.3s, color 0.3s; }
+    .footer-bottom p { font-family: var(--mono); font-size: 0.55rem; letter-spacing: 0.1em; color: rgba(255,255,255,0.18); }
+    .footer-socials { display: flex; gap: 0.75rem; }
+    .social-ico { width: 32px; height: 32px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.28); transition: all 0.3s; }
     .social-ico:hover { border-color: var(--amber); color: var(--amber); }
 
-    /* ─── WHATSAPP FLOAT ─── */
-    .whatsapp-float {
+    /* WhatsApp */
+    .wa-float {
       position: fixed; bottom: 2rem; right: 2rem; z-index: 500;
-      width: 52px; height: 52px; border-radius: 50%;
-      background: #25D366; color: #fff;
-      display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 6px 24px rgba(37,211,102,0.35);
-      transition: transform 0.4s var(--ease), box-shadow 0.4s;
+      width: 52px; height: 52px; border-radius: 50%; background: #25D366;
+      display: flex; align-items: center; justify-content: center; color: white;
+      box-shadow: 0 6px 20px rgba(37,211,102,0.4);
+      transition: transform 0.4s var(--ease);
     }
-    .whatsapp-float:hover { transform: scale(1.12); box-shadow: 0 10px 36px rgba(37,211,102,0.5); }
+    .wa-float:hover { transform: scale(1.1); }
 
-    /* ─── ANIMATIONS ─── */
-    @keyframes fadeSlideUp { to { opacity: 1; transform: translateY(0); } }
-    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
+    /* Reveal animations */
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
     .reveal.in { opacity: 1; transform: none; }
-    .reveal.d1 { transition-delay: 0.12s; }
-    .reveal.d2 { transition-delay: 0.24s; }
-    .reveal.d3 { transition-delay: 0.36s; }
+    .reveal.d1 { transition-delay: 0.1s; }
+    .reveal.d2 { transition-delay: 0.2s; }
+    .reveal.d3 { transition-delay: 0.3s; }
 
-    /* ─── RESPONSIVE ─── */
+    /* ═══════════ RESPONSIVE ═══════════ */
     @media (max-width: 1024px) {
-      nav { padding: 1.5rem 2rem; }
-      nav.shrunk { padding: 1rem 2rem; }
+      nav { padding: 1.25rem 2rem; }
+      nav.scrolled { padding: 0.875rem 2rem; }
       .nav-links { display: none; }
       .nav-hamburger { display: flex; }
-      .hero-content { padding: 0 2rem 3rem; }
-      .exp-cards-track { grid-template-columns: repeat(2, 1fr); }
-      .pillars-grid { grid-template-columns: repeat(2, 1fr); }
-      .why-section { grid-template-columns: 1fr; gap: 4rem; padding: 5rem 2.5rem; }
-      .why-right { position: static; }
-      .trek-grid { grid-template-columns: 1fr; }
-      .booking-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .hero-content { padding: 0 2.5rem 4rem; }
+      .why-inner { grid-template-columns: 1fr; gap: 4rem; padding: 0 2.5rem; }
       .footer-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
-      .slide-indicator { display: none; }
-      .facts-strip { display: none; }
-      .section, .trek-section, .exp-section-inner { padding-left: 2rem; padding-right: 2rem; }
-      .booking-section { padding: 5rem 2rem; }
-      footer { padding: 4rem 2rem 2rem; }
-      .contact-strip { padding: 0 2rem; }
-      .contact-strip-inner { grid-template-columns: 1fr; }
-      .contact-strip-item { border-right: none; border-bottom: 1px solid rgba(245,242,236,0.05); padding: 1.75rem 0; }
-      .contact-strip-item:last-child { border-bottom: none; padding-left: 0; }
-      .timeline-section { padding: 5rem 2rem; }
-      .testimonials-header { padding: 0 2rem; }
-      .testi-carousel-wrap { padding-left: 2rem; }
-      .testi-track { padding-right: 2rem; }
-      .testi-card { flex: 0 0 290px; }
-      .testi-card.featured { flex: 0 0 310px; }
+      .booking-inner { grid-template-columns: 1fr; gap: 3rem; padding: 0 2.5rem; }
+      .contact-inner { grid-template-columns: 1fr; padding: 0 2.5rem; }
+      .contact-item { border-right: none; border-bottom: 1px solid var(--border); padding: 1.75rem 0; }
+      .contact-item:last-child { border-bottom: none; }
+      .stats-inner { grid-template-columns: repeat(2, 1fr); }
+      .stat-item:nth-child(2) { border-right: none; }
+      .cat-header { padding: 0 2.5rem; }
+      .scroll-track-wrap { padding-left: 2.5rem; }
+      .scroll-controls { padding: 0 2.5rem; }
+      .testi-header { padding: 0 2.5rem; }
+      .testi-track-wrap { padding-left: 2.5rem; }
+      .section-inner { padding: 0 2.5rem; }
+      footer { padding: 4rem 2.5rem 2rem; }
     }
 
     @media (max-width: 768px) {
-      .timeline-grid { display: block; }
-      .timeline-line { display: none; }
-      .timeline-item-left { text-align: left; padding: 0 0 2.5rem; }
-      .timeline-item-right { padding: 0 0 2.5rem; }
-      .timeline-item-left .timeline-step-desc { margin-left: 0; }
+      .hero-content { padding: 0 1.5rem 3rem; }
+      .hero-title { font-size: clamp(2.8rem, 12vw, 5rem); }
+      .slide-dots { right: 1.5rem; bottom: 1.5rem; }
+      .why-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .section-wrap { padding: 4rem 0; }
+      .cat-section { padding: 4rem 0; }
+      .mcard { flex: 0 0 260px; }
+      .mcard.wide { flex: 0 0 300px; }
+      .acard { flex: 0 0 220px; }
+      .tcard { flex: 0 0 280px; }
+      .tcard.featured { flex: 0 0 300px; }
+      .booking-section { padding: 4rem 0; }
+      .testi-section { padding: 4rem 0; }
+      .why-section { padding: 5rem 0; }
+      footer { padding: 3.5rem 1.5rem 1.5rem; }
+      .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+      .hero-badge-text { font-size: 0.52rem; }
+      .hero-actions { gap: 1rem; }
     }
 
-    @media (max-width: 640px) {
-      .mountain-name { font-size: clamp(3.5rem, 14vw, 6rem); }
-      .exp-cards-track { grid-template-columns: 1fr; }
-      .pillars-grid { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr; }
-      .hero-cta { flex-direction: column; align-items: flex-start; gap: 1.25rem; }
-      .testi-card { flex: 0 0 270px; }
-      .testi-card.featured { flex: 0 0 270px; }
+    @media (max-width: 480px) {
+      .stats-inner { grid-template-columns: 1fr 1fr; }
+      .hero-meta { gap: 1rem; }
+      .hero-tag { display: none; }
+      .cat-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+      .booking-badge { bottom: -1rem; left: -0.75rem; }
     }
   </style>
 </head>
 <body>
 
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-ring" id="cursorRing"></div>
-
-  <!-- WhatsApp Float -->
-  <a href="https://wa.me/9779811157421" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+  <!-- WhatsApp -->
+  <a href="https://wa.me/9779811157421" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
 
-  <!-- ═══ MOBILE MENU ═══ -->
-  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-    <div class="mobile-menu-links">
-      <div class="mobile-menu-item">
-        <a href="#expeditions" class="mobile-menu-link" onclick="closeMobileMenu()">Expeditions</a>
-        <div class="mobile-menu-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-      </div>
-      <div class="mobile-menu-item">
-        <a href="#trekking" class="mobile-menu-link" onclick="closeMobileMenu()">Trekking</a>
-        <div class="mobile-menu-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-      </div>
-      <div class="mobile-menu-item">
-        <a href="guides.html" class="mobile-menu-link">Our Guides</a>
-        <div class="mobile-menu-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-      </div>
-      <div class="mobile-menu-item">
-        <a href="about.html" class="mobile-menu-link">About</a>
-        <div class="mobile-menu-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-      </div>
-      
-      <div class="mobile-menu-item">
-        <a href="contact.html" class="mobile-menu-link cta-link">Book Your Ascent →</a>
-        <div class="mobile-menu-arrow" style="border-color:rgba(200,131,42,0.4);color:var(--amber-light)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-      </div>
-    </div>
-    <div class="mobile-menu-item">
-        <a href="blog.html" class="mobile-menu-link">Blog</a>
-        <div class="mobile-menu-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-      </div>
-    <div class="mobile-menu-footer">
-      <div class="mobile-menu-contact">
-        <a href="tel:+9779811157421">+977 9811 157 421</a>
-        &nbsp;·&nbsp;
-        <a href="mailto:info@beyondsummitexped.com">info@beyondsummitexped.com</a>
-      </div>
-      <div class="mobile-menu-contact">Thamel, Kathmandu, Nepal</div>
-    </div>
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <a href="#expeditions" class="mobile-drawer-link" onclick="closeDrawer()">Expeditions <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <a href="#trekking" class="mobile-drawer-link" onclick="closeDrawer()">Trekking <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <a href="#eightthousanders" class="mobile-drawer-link" onclick="closeDrawer()">8000ers <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <a href="#activities" class="mobile-drawer-link" onclick="closeDrawer()">Outdoor Activities <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <a href="/contact.html" class="mobile-drawer-link highlight" onclick="closeDrawer()">Book Your Ascent →</a>
   </div>
 
-  <!-- ═══ NAV ═══ -->
+  <!-- NAV -->
   <nav id="navbar">
     <a href="/" class="nav-logo">
       <svg class="nav-logo-icon" viewBox="0 0 40 40" fill="none">
-        <path d="M20 4 L4 36 L36 36 Z" stroke="rgba(200,131,42,0.7)" stroke-width="1.2" fill="none"/>
-        <path d="M20 4 L12 36 L20 30 Z" fill="rgba(200,131,42,0.22)"/>
-        <path d="M20 4 L20 30 L28 36 Z" fill="rgba(200,131,42,0.12)"/>
-        <line x1="10" y1="28" x2="30" y2="28" stroke="rgba(200,131,42,0.18)" stroke-width="0.8"/>
-        <circle cx="20" cy="4" r="1.8" fill="rgba(200,131,42,0.9)"/>
+        <path d="M20 4 L4 36 L36 36 Z" stroke="rgba(240,192,128,0.8)" stroke-width="1.2" fill="none"/>
+        <path d="M20 4 L12 36 L20 30 Z" fill="rgba(240,192,128,0.25)"/>
+        <circle cx="20" cy="4" r="1.8" fill="rgba(240,192,128,0.9)"/>
       </svg>
       <div class="nav-logo-text">BEYOND SUMMIT<em>Expeditions · Nepal</em></div>
     </a>
     <div class="nav-links">
       <a href="#expeditions">Expeditions</a>
       <a href="#trekking">Trekking</a>
+      <a href="#eightthousanders">8000ers</a>
       <a href="/guides.html">Guides</a>
       <a href="/about.html">About</a>
-      <a href="/blog.html">Blogs</a>
-
-      <a href="/contact.html" class="cta">Book Your Ascent →</a>
+      <a href="/blog.html">Blog</a>
+      <a href="/contact.html" class="nav-cta">Book Your Ascent →</a>
     </div>
-    <!-- Hamburger -->
     <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </button>
   </nav>
 
   <!-- ═══ HERO ═══ -->
   <section class="hero" id="hero">
-    <div class="slides-wrap">
-      <div class="slide active" data-idx="0" data-name="Mount Everest" data-namealt="Sagarmatha" data-alt="8,848 m" data-region="Khumbu, Nepal" data-duration="55 Days" data-tag="World's Highest Peak" data-href="articles/everest-base-camp-guide.html">
+    <div class="slides-wrap" id="slidesWrap">
+      <div class="slide active" data-name="Mount Everest" data-alt="8,848 m" data-region="Khumbu, Nepal" data-tag="World's Highest Peak" data-href="/articles/everest-base-camp-guide.html" data-badge="Spring 2026 Open">
         <img class="slide-img" src="/assets/mteverest.png" alt="Mount Everest at dawn" loading="eager">
       </div>
-      <div class="slide" data-idx="1" data-name="Ama Dablam" data-namealt="Mother's Necklace" data-alt="6,812 m" data-region="Khumbu Region" data-duration="22 Days" data-tag="Most Beloved Technical Peak" data-href="/articles/amadablam-blog.html">
-        <img class="slide-img" src="/assets/amadablam.png" alt="Ama Dablam peak" loading="lazy">
+      <div class="slide" data-name="Ama Dablam" data-alt="6,812 m" data-region="Khumbu Region" data-tag="Most Beloved Technical Peak" data-href="/articles/amadablam-blog.html" data-badge="Most Popular">
+        <img class="slide-img" src="/assets/amadablam.png" alt="Ama Dablam" loading="lazy">
       </div>
-      <div class="slide" data-idx="2" data-name="Annapurna" data-namealt="Goddess of Harvest" data-alt="8,091 m" data-region="Annapurna, Nepal" data-duration="50 Days" data-tag="Most Challenging 8000er" data-href="/articles/annapurna-blog.html">
+      <div class="slide" data-name="Annapurna" data-alt="8,091 m" data-region="Annapurna, Nepal" data-tag="Most Challenging 8000er" data-href="/articles/annapurna-blog.html" data-badge="Expert Route">
         <img class="slide-img" src="/assets/annapurna.png" alt="Annapurna" loading="lazy">
       </div>
-      <div class="slide" data-idx="3" data-name="Manaslu" data-namealt="Spirit of the Mountain" data-alt="8,163 m" data-region="Gorkha District" data-duration="45 Days" data-tag="Eighth Highest Peak" data-href="/articles/manaslu-blog.html">
+      <div class="slide" data-name="Manaslu" data-alt="8,163 m" data-region="Gorkha District" data-tag="Eighth Highest Peak" data-href="/articles/manaslu-blog.html" data-badge="Autumn 2026">
         <img class="slide-img" src="/assets/manaslu.png" alt="Manaslu" loading="lazy">
       </div>
-      <div class="slide" data-idx="4" data-name="Upper Mustang" data-namealt="The Forbidden Kingdom" data-alt="3,840 m" data-region="Lo Manthang" data-duration="14 Days" data-tag="Nepal's Hidden Gem Trek" data-href="/articles/upper-mustang-blog.html">
+      <div class="slide" data-name="Upper Mustang" data-alt="3,840 m" data-region="Lo Manthang" data-tag="Nepal's Forbidden Kingdom Trek" data-href="/articles/upper-mustang-blog.html" data-badge="Year-Round Trek">
         <img class="slide-img" src="/assets/Mustang,Nepal.jpeg" alt="Upper Mustang" loading="lazy">
       </div>
     </div>
-    <div class="hero-vignette"></div>
-    <div class="hero-altitude-lines" aria-hidden="true">
-      <svg viewBox="0 0 300 800" preserveAspectRatio="none" fill="none">
-        <path d="M 50 800 Q 120 650 80 500 Q 40 350 110 200 Q 160 100 130 0" stroke="rgba(200,131,42,0.5)" stroke-width="0.6" fill="none"/>
-        <path d="M 100 800 Q 160 680 130 530 Q 95 380 150 240 Q 185 140 170 0" stroke="rgba(200,131,42,0.3)" stroke-width="0.5" fill="none"/>
-        <path d="M 160 800 Q 200 700 190 570 Q 175 440 220 300 Q 245 200 240 0" stroke="rgba(200,131,42,0.2)" stroke-width="0.4" fill="none"/>
-        <text x="60" y="400" fill="rgba(200,131,42,0.35)" font-size="7" font-family="monospace" letter-spacing="2">5500m</text>
-        <text x="60" y="520" fill="rgba(200,131,42,0.25)" font-size="7" font-family="monospace" letter-spacing="2">4200m</text>
-        <text x="60" y="640" fill="rgba(200,131,42,0.2)" font-size="7" font-family="monospace" letter-spacing="2">3100m</text>
-        <line x1="30" y1="400" x2="55" y2="400" stroke="rgba(200,131,42,0.3)" stroke-width="0.5"/>
-        <line x1="30" y1="520" x2="55" y2="520" stroke="rgba(200,131,42,0.2)" stroke-width="0.5"/>
-        <line x1="30" y1="640" x2="55" y2="640" stroke="rgba(200,131,42,0.15)" stroke-width="0.5"/>
-      </svg>
-    </div>
-    <div class="facts-strip" aria-hidden="true">
-      <div class="facts-inner">EVEREST · 8848M · AMA DABLAM · 6812M · MANASLU · 8163M · ANNAPURNA · 8091M · LHOTSE · 8516M · CHO OYU · 8188M · DHAULAGIRI · 8167M · MAKALU · 8485M · &nbsp; EVEREST · 8848M · AMA DABLAM · 6812M · MANASLU · 8163M · ANNAPURNA · 8091M · LHOTSE · 8516M · CHO OYU · 8188M ·</div>
-    </div>
-    <div class="slide-indicator" id="slideIndicator"></div>
+    <div class="hero-overlay"></div>
     <div class="hero-content">
-      <div></div>
-      <div class="hero-lower">
-        <div class="mountain-pill" id="heroMountainPill">
-          <span class="pill-tag" id="pillTag">Expedition <em></em></span>
-          <span class="pill-sep"></span>
-          <span class="pill-tag" id="pillTagSub" style="color:rgb(245, 242, 236);">2026 Booking Open Now!</span>
-        </div>
-        <div class="mountain-title-wrap">
-          <span class="mountain-name" id="heroMountainName">Mount Everest</span>
-        </div>
-        <div class="mountain-sub" id="heroMountainSub">
-          <span class="mountain-alt" id="heroAlt">8,848 m</span>
-          <span class="mountain-region" id="heroRegion">Khumbu, Nepal</span>
-          <span class="mountain-type" id="heroType">World's Highest Peak</span>
-        </div>
-        <div class="hero-cta" id="heroCta">
-          <a class="btn-summit" id="heroBtn" href="/articles/everest-base-camp-guide.html">
-            View This Expedition
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-          <a class="btn-ghost-text" href="#expeditions">Explore all peaks</a>
-        </div>
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        <span class="hero-badge-text" id="heroBadge">Spring 2026 Open</span>
+      </div>
+      <h1 class="hero-title" id="heroTitle">Mount <em>Everest</em></h1>
+      <div class="hero-meta">
+        <span class="hero-alt" id="heroAlt">8,848 m</span>
+        <span class="hero-region" id="heroRegion">Khumbu, Nepal</span>
+        <span class="hero-tag" id="heroTag">World's Highest Peak</span>
+      </div>
+      <div class="hero-actions">
+        <a class="btn-primary" id="heroBtn" href="/articles/everest-base-camp-guide.html">
+          View Expedition
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a class="btn-ghost" href="#expeditions">
+          All Peaks
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l10-10M17 7H7v10"/></svg>
+        </a>
       </div>
     </div>
-    <div class="hero-progress"><div class="hero-progress-fill" id="heroProg"></div></div>
+    <div class="slide-dots" id="slideDots"></div>
+    <div class="hero-prog"><div class="hero-prog-fill" id="heroProg"></div></div>
   </section>
 
-  <!-- ═══ MARQUEE ═══ -->
+  <!-- MARQUEE -->
   <div class="marquee-bar" aria-hidden="true">
     <div class="marquee-track">
-      <div class="marquee-item">Everest <span class="marquee-sep">◆</span> 8,848m</div>
-      <div class="marquee-item">K2 <span class="marquee-sep">◆</span> 8,611m</div>
-      <div class="marquee-item">Kangchenjunga <span class="marquee-sep">◆</span> 8,586m</div>
-      <div class="marquee-item">Lhotse <span class="marquee-sep">◆</span> 8,516m</div>
-      <div class="marquee-item">Makalu <span class="marquee-sep">◆</span> 8,485m</div>
-      <div class="marquee-item">Cho Oyu <span class="marquee-sep">◆</span> 8,188m</div>
-      <div class="marquee-item">Dhaulagiri <span class="marquee-sep">◆</span> 8,167m</div>
-      <div class="marquee-item">Manaslu <span class="marquee-sep">◆</span> 8,163m</div>
-      <div class="marquee-item">Annapurna I <span class="marquee-sep">◆</span> 8,091m</div>
-      <div class="marquee-item">Ama Dablam <span class="marquee-sep">◆</span> 6,812m</div>
-      <div class="marquee-item">EBC Trek <span class="marquee-sep">◆</span> 5,364m</div>
-      <div class="marquee-item">Thorong La <span class="marquee-sep">◆</span> 5,416m</div>
-      <div class="marquee-item">Everest <span class="marquee-sep">◆</span> 8,848m</div>
-      <div class="marquee-item">K2 <span class="marquee-sep">◆</span> 8,611m</div>
-      <div class="marquee-item">Kangchenjunga <span class="marquee-sep">◆</span> 8,586m</div>
-      <div class="marquee-item">Lhotse <span class="marquee-sep">◆</span> 8,516m</div>
-      <div class="marquee-item">Makalu <span class="marquee-sep">◆</span> 8,485m</div>
-      <div class="marquee-item">Cho Oyu <span class="marquee-sep">◆</span> 8,188m</div>
-      <div class="marquee-item">Dhaulagiri <span class="marquee-sep">◆</span> 8,167m</div>
-      <div class="marquee-item">Manaslu <span class="marquee-sep">◆</span> 8,163m</div>
-      <div class="marquee-item">Annapurna I <span class="marquee-sep">◆</span> 8,091m</div>
-      <div class="marquee-item">Ama Dablam <span class="marquee-sep">◆</span> 6,812m</div>
-      <div class="marquee-item">EBC Trek <span class="marquee-sep">◆</span> 5,364m</div>
-      <div class="marquee-item">Thorong La <span class="marquee-sep">◆</span> 5,416m</div>
+      <div class="marquee-item">Everest <span class="msep">◆</span> 8,848m</div>
+      <div class="marquee-item">K2 <span class="msep">◆</span> 8,611m</div>
+      <div class="marquee-item">Kangchenjunga <span class="msep">◆</span> 8,586m</div>
+      <div class="marquee-item">Lhotse <span class="msep">◆</span> 8,516m</div>
+      <div class="marquee-item">Makalu <span class="msep">◆</span> 8,485m</div>
+      <div class="marquee-item">Cho Oyu <span class="msep">◆</span> 8,188m</div>
+      <div class="marquee-item">Dhaulagiri <span class="msep">◆</span> 8,167m</div>
+      <div class="marquee-item">Manaslu <span class="msep">◆</span> 8,163m</div>
+      <div class="marquee-item">Annapurna I <span class="msep">◆</span> 8,091m</div>
+      <div class="marquee-item">Ama Dablam <span class="msep">◆</span> 6,812m</div>
+      <div class="marquee-item">EBC Trek <span class="msep">◆</span> 5,364m</div>
+      <div class="marquee-item">Thorong La <span class="msep">◆</span> 5,416m</div>
+      <div class="marquee-item">Everest <span class="msep">◆</span> 8,848m</div>
+      <div class="marquee-item">K2 <span class="msep">◆</span> 8,611m</div>
+      <div class="marquee-item">Kangchenjunga <span class="msep">◆</span> 8,586m</div>
+      <div class="marquee-item">Lhotse <span class="msep">◆</span> 8,516m</div>
+      <div class="marquee-item">Makalu <span class="msep">◆</span> 8,485m</div>
+      <div class="marquee-item">Cho Oyu <span class="msep">◆</span> 8,188m</div>
+      <div class="marquee-item">Dhaulagiri <span class="msep">◆</span> 8,167m</div>
+      <div class="marquee-item">Manaslu <span class="msep">◆</span> 8,163m</div>
+      <div class="marquee-item">Annapurna I <span class="msep">◆</span> 8,091m</div>
+      <div class="marquee-item">Ama Dablam <span class="msep">◆</span> 6,812m</div>
+      <div class="marquee-item">EBC Trek <span class="msep">◆</span> 5,364m</div>
+      <div class="marquee-item">Thorong La <span class="msep">◆</span> 5,416m</div>
     </div>
   </div>
 
-  
-
-  <!-- ═══ EXPEDITIONS ═══ -->
-  <section id="expeditions">
-    <div class="exp-section">
-      <div class="exp-section-inner">
-        <div class="exp-header">
-          <div>
-            <span class="eyebrow reveal">Peak Expeditions</span>
-            <h2 class="h2 reveal d1">Conquer the<br><em>World's Roof</em></h2>
-          </div>
-          <a href="/expeditions.html" class="view-all reveal d1">All 14 Eight-Thousanders <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-        </div>
+  <!-- STATS -->
+  <div class="stats-strip">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <div class="stat-num" data-target="10" data-suffix=" Yrs">10 Yrs</div>
+        <div class="stat-label">Guiding Experience</div>
       </div>
-      <div class="exp-cards-track">
-        <a href="/articles/everest-base-camp-guide.html" class="exp-card reveal">
-          <img class="exp-card-img" src="/assets/mteverest.png" alt="Mount Everest" loading="lazy">
-          <div class="exp-card-overlay"></div>
-          <div class="exp-card-body">
-            <svg class="exp-card-peak-icon" viewBox="0 0 32 32" fill="none"><path d="M16 3 L3 29 L29 29 Z" stroke="rgba(200,131,42,0.8)" stroke-width="1" fill="rgba(200,131,42,0.1)"/><path d="M16 3 L11 29 L16 25 Z" fill="rgba(200,131,42,0.3)"/><circle cx="16" cy="3" r="1.5" fill="rgba(200,131,42,0.9)"/></svg>
-            <div class="exp-card-num">01 · Spring 2026</div>
-            <div class="exp-card-name">Mount Everest</div>
-            <div class="exp-card-alt">8,848 m · 55 Days</div>
-            <div class="exp-card-action"><span class="exp-card-action-line"></span>View Expedition</div>
-          </div>
-        </a>
-        <a href="/articles/amadablam-blog.html" class="exp-card reveal d1">
-          <img class="exp-card-img" src="/assets/amadablam.png" alt="Ama Dablam" loading="lazy">
-          <div class="exp-card-overlay"></div>
-          <div class="exp-card-body">
-            <svg class="exp-card-peak-icon" viewBox="0 0 32 32" fill="none"><path d="M16 5 L6 27 L26 27 Z" stroke="rgba(200,131,42,0.8)" stroke-width="1" fill="rgba(200,131,42,0.1)"/><circle cx="16" cy="5" r="1.5" fill="rgba(200,131,42,0.9)"/></svg>
-            <div class="exp-card-num">02 · Most Popular</div>
-            <div class="exp-card-name">Ama Dablam</div>
-            <div class="exp-card-alt">6,812 m · 22 Days</div>
-            <div class="exp-card-action"><span class="exp-card-action-line"></span>View Expedition</div>
-          </div>
-        </a>
-        <a href="/articles/manaslu-blog.html" class="exp-card reveal d2">
-          <img class="exp-card-img" src="/assets/manaslu.png" alt="Manaslu" loading="lazy">
-          <div class="exp-card-overlay"></div>
-          <div class="exp-card-body">
-            <svg class="exp-card-peak-icon" viewBox="0 0 32 32" fill="none"><path d="M16 4 L4 28 L28 28 Z" stroke="rgba(200,131,42,0.8)" stroke-width="1" fill="rgba(200,131,42,0.1)"/><circle cx="16" cy="4" r="1.5" fill="rgba(200,131,42,0.9)"/></svg>
-            <div class="exp-card-num">03 · 8000er</div>
-            <div class="exp-card-name">Manaslu</div>
-            <div class="exp-card-alt">8,163 m · 45 Days</div>
-            <div class="exp-card-action"><span class="exp-card-action-line"></span>View Expedition</div>
-          </div>
-        </a>
-        <a href="/articles/annapurna-blog.html" class="exp-card reveal d3">
-          <img class="exp-card-img" src="/assets/annapurna.png" alt="Annapurna I" loading="lazy">
-          <div class="exp-card-overlay"></div>
-          <div class="exp-card-body">
-            <svg class="exp-card-peak-icon" viewBox="0 0 32 32" fill="none"><path d="M16 3 L2 29 L30 29 Z" stroke="rgba(200,131,42,0.8)" stroke-width="1" fill="rgba(200,131,42,0.1)"/><circle cx="16" cy="3" r="1.5" fill="rgba(200,131,42,0.9)"/></svg>
-            <div class="exp-card-num">04 · Expert Only</div>
-            <div class="exp-card-name">Annapurna I</div>
-            <div class="exp-card-alt">8,091 m · 50 Days</div>
-            <div class="exp-card-action"><span class="exp-card-action-line"></span>View Expedition</div>
-          </div>
-        </a>
+      <div class="stat-item">
+        <div class="stat-num" data-target="10" data-suffix="+">10+</div>
+        <div class="stat-label">Eight-Thousanders</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-target="469" data-suffix="+">469+</div>
+        <div class="stat-label">Clients Guided</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-target="100" data-suffix="%">100%</div>
+        <div class="stat-label">Safety Record</div>
       </div>
     </div>
-  </section>
-  <!-- ═══ PILLARS ═══ -->
-<div class="pillars-section">
-  <div class="pillars-track">
-
-     <div class="pillar-stat">
-      <div class="pillar-num" data-target="10" data-suffix=" Yrs">0+</div>
-      <div class="pillar-label">Guiding experience</div>
-    </div>
-
-    <div class="pillar-sep"></div>
-    <div class="pillar-stat">
-      <div class="pillar-num" data-target="10" data-suffix="+">0+</div>
-      <div class="pillar-label">Eight-Thousanders</div>
-    </div>
-
-    <div class="pillar-sep"></div>
-
-    <div class="pillar-stat">
-      <div class="pillar-num" data-target="450" data-suffix="+">0+</div>
-      <div class="pillar-label">Clients Guided</div>
-    </div>
-
-    <div class="pillar-sep"></div>
-
-   
-
-    <div class="pillar-stat">
-      <div class="pillar-num" data-target="100" data-suffix="%">0%</div>
-      <div class="pillar-label">Safety Record</div>
-    </div>
-
   </div>
-</div>
 
-  <!-- ═══ TREKS ═══ -->
-  <section id="trekking">
-    <div class="trek-section">
-      <span class="eyebrow reveal">Classic Routes</span>
-      <h2 class="h2 reveal d1">Iconic<br><em>Himalayan Treks</em></h2>
-      <div class="trek-grid">
-        <a href="/articles/amadablam.html" class="trek-card reveal">
-          <div class="trek-media">
-            <img class="trek-img" src="/assets/everestbasecamp.png" alt="Everest Base Camp Trek" loading="lazy">
-            <span class="trek-badge">Moderate–Strenuous</span>
+  <!-- ══════════════════════════════════
+       CATEGORY 1: EXPEDITIONS
+  ══════════════════════════════════ -->
+  <section class="cat-section" id="expeditions">
+    <div class="cat-header reveal">
+      <div>
+        <span class="eyebrow">Peak Expeditions</span>
+        <h2 class="section-title">All <em>Expeditions</em></h2>
+        <p class="section-desc">World-class ascents guided by Nepal's most experienced Sherpa teams. From your first technical peak to the world's summit.</p>
+      </div>
+      <a href="/expeditions.html" class="cat-view-all">All Expeditions <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+    <div class="scroll-track-wrap">
+      <div class="scroll-track" id="expTrack">
+        <a href="/articles/everest-base-camp-guide.html" class="mcard wide">
+          <div class="mcard-img-wrap">
+            <img class="mcard-img" src="/assets/mteverest.png" alt="Mount Everest">
+            <div class="mcard-img-overlay"></div>
+            <span class="mcard-badge">Spring 2026</span>
+            <span class="mcard-alt-badge">8,848 m</span>
           </div>
-          <div class="trek-body">
-            <h3 class="trek-name">Everest Base Camp Trek</h3>
-            <p class="trek-desc">Journey through Sherpa villages and monasteries to the foot of the world's highest peak. The walk of a lifetime.</p>
-            <div class="trek-specs">
-              <div><div class="trek-spec-val">14</div><div class="trek-spec-key">Days</div></div>
-              <div><div class="trek-spec-val">5,364m</div><div class="trek-spec-key">Max Alt.</div></div>
-              <div><div class="trek-spec-val">All Year</div><div class="trek-spec-key">Season</div></div>
+          <div class="mcard-body">
+            <div class="mcard-num">01 · Flagship Expedition</div>
+            <div class="mcard-name">Mount Everest</div>
+            <div class="mcard-desc">The ultimate mountaineering objective. Stand on top of the world with our expert Sherpa guides and world-class logistics.</div>
+            <div class="mcard-specs">
+              <div><div class="mcard-spec-val">55</div><div class="mcard-spec-key">Days</div></div>
+              <div><div class="mcard-spec-val">8,848m</div><div class="mcard-spec-key">Summit</div></div>
+              <div><div class="mcard-spec-val">Expert</div><div class="mcard-spec-key">Level</div></div>
             </div>
-          </div>
-          <div class="trek-foot">
-            <div class="trek-price">1,650 <sub>usd / person</sub></div>
-            <span class="trek-link">View Trek <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            <span class="mcard-link">View Expedition <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
           </div>
         </a>
-        <a href="/articles/annapurna-blog.html" class="trek-card reveal d1">
-          <div class="trek-media">
-            <img class="trek-img" src="/assets/annapurnacircuit.png" alt="Annapurna Circuit Trek" loading="lazy">
-            <span class="trek-badge">Strenuous</span>
+        <a href="/articles/amadablam-blog.html" class="mcard">
+          <div class="mcard-img-wrap">
+            <img class="mcard-img" src="/assets/amadablam.png" alt="Ama Dablam">
+            <div class="mcard-img-overlay"></div>
+            <span class="mcard-badge">Most Popular</span>
+            <span class="mcard-alt-badge">6,812 m</span>
           </div>
-          <div class="trek-body">
-            <h3 class="trek-name">Annapurna Circuit</h3>
-            <p class="trek-desc">Circumnavigate the Annapurna massif over the legendary Thorong La. Nepal's most diverse landscape in one epic loop.</p>
-            <div class="trek-specs">
-              <div><div class="trek-spec-val">18</div><div class="trek-spec-key">Days</div></div>
-              <div><div class="trek-spec-val">5,416m</div><div class="trek-spec-key">Max Alt.</div></div>
-              <div><div class="trek-spec-val">Spr / Aut</div><div class="trek-spec-key">Season</div></div>
+          <div class="mcard-body">
+            <div class="mcard-num">02 · Technical Peak</div>
+            <div class="mcard-name">Ama Dablam</div>
+            <div class="mcard-desc">The most photographed mountain in Nepal. A technical classic beloved by alpine climbers worldwide.</div>
+            <div class="mcard-specs">
+              <div><div class="mcard-spec-val">22</div><div class="mcard-spec-key">Days</div></div>
+              <div><div class="mcard-spec-val">6,812m</div><div class="mcard-spec-key">Summit</div></div>
             </div>
-          </div>
-          <div class="trek-foot">
-            <div class="trek-price">1,350 <sub>usd / person</sub></div>
-            <span class="trek-link">View Trek <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            <span class="mcard-link">View Expedition <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
           </div>
         </a>
-        <a href="/trekking/upper-mustang" class="trek-card reveal d2">
-          <div class="trek-media">
-            <img class="trek-img" src="/assets/uppermustang.png" alt="Upper Mustang Trek" loading="lazy">
-            <span class="trek-badge">Moderate</span>
+        <a href="/articles/manaslu-blog.html" class="mcard">
+          <div class="mcard-img-wrap">
+            <img class="mcard-img" src="/assets/manaslu.png" alt="Manaslu">
+            <div class="mcard-img-overlay"></div>
+            <span class="mcard-badge">Autumn 2026</span>
+            <span class="mcard-alt-badge">8,163 m</span>
           </div>
-          <div class="trek-body">
-            <h3 class="trek-name">Upper Mustang Trek</h3>
-            <p class="trek-desc">Enter the Forbidden Kingdom — a Tibetan plateau of ancient cave monasteries, walled cities, and ochre canyons.</p>
-            <div class="trek-specs">
-              <div><div class="trek-spec-val">14</div><div class="trek-spec-key">Days</div></div>
-              <div><div class="trek-spec-val">3,840m</div><div class="trek-spec-key">Max Alt.</div></div>
-              <div><div class="trek-spec-val">All Year</div><div class="trek-spec-key">Season</div></div>
+          <div class="mcard-body">
+            <div class="mcard-num">03 · 8000er</div>
+            <div class="mcard-name">Manaslu</div>
+            <div class="mcard-desc">The Spirit of the Mountain. A quieter yet formidable 8000m peak offering a genuine Himalayan expedition experience.</div>
+            <div class="mcard-specs">
+              <div><div class="mcard-spec-val">45</div><div class="mcard-spec-key">Days</div></div>
+              <div><div class="mcard-spec-val">8,163m</div><div class="mcard-spec-key">Summit</div></div>
             </div>
+            <span class="mcard-link">View Expedition <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
           </div>
-          <div class="trek-foot">
-            <div class="trek-price">2,850 <sub>usd / person</sub></div>
-            <span class="trek-link">View Trek <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </a>
+        <a href="/articles/merapeak.html" class="mcard">
+          <div class="mcard-img-wrap">
+            <img class="mcard-img" src="/assets/amadablam.png" alt="Mera Peak" style="filter:brightness(0.9) saturate(1.0) hue-rotate(10deg)">
+            <div class="mcard-img-overlay"></div>
+            <span class="mcard-badge">Beginner-Friendly</span>
+            <span class="mcard-alt-badge">6,476 m</span>
+          </div>
+          <div class="mcard-body">
+            <div class="mcard-num">04 · Trekking Peak</div>
+            <div class="mcard-name">Mera Peak</div>
+            <div class="mcard-desc">Nepal's highest trekking peak. Spectacular Himalayan panoramas accessible to motivated beginners with basic fitness.</div>
+            <div class="mcard-specs">
+              <div><div class="mcard-spec-val">18</div><div class="mcard-spec-key">Days</div></div>
+              <div><div class="mcard-spec-val">6,476m</div><div class="mcard-spec-key">Summit</div></div>
+            </div>
+            <span class="mcard-link">View Expedition <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+        </a>
+        <a href="/articles/islandpeak.html" class="mcard">
+          <div class="mcard-img-wrap">
+            <img class="mcard-img" src="/assets/mteverest.png" alt="Island Peak" style="object-position: 60% center; filter:brightness(0.88) saturate(1.05)">
+            <div class="mcard-img-overlay"></div>
+            <span class="mcard-badge">Classic Route</span>
+            <span class="mcard-alt-badge">6,189 m</span>
+          </div>
+          <div class="mcard-body">
+            <div class="mcard-num">05 · Trekking Peak</div>
+            <div class="mcard-name">Island Peak</div>
+            <div class="mcard-desc">Perfectly paired with EBC Trek. A superb introduction to technical high-altitude climbing amid iconic Khumbu scenery.</div>
+            <div class="mcard-specs">
+              <div><div class="mcard-spec-val">20</div><div class="mcard-spec-key">Days</div></div>
+              <div><div class="mcard-spec-val">6,189m</div><div class="mcard-spec-key">Summit</div></div>
+            </div>
+            <span class="mcard-link">View Expedition <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
           </div>
         </a>
       </div>
     </div>
+    <div class="scroll-controls">
+      <button class="scroll-btn" onclick="scrollTrack('expTrack', -1)" aria-label="Previous">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      </button>
+      <button class="scroll-btn" onclick="scrollTrack('expTrack', 1)" aria-label="Next">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
   </section>
 
-  <!-- ═══ WHY US ═══ -->
-  <section style="background: var(--bark); border-top: 1px solid rgba(245,242,236,0.04);">
-    <div class="why-section">
-      <div class="why-left">
-        <span class="eyebrow reveal">Why Beyond Summit</span>
-        <h2 class="h2 reveal d1">Your Safety.<br><em>Our Mission.</em></h2>
-        <p class="why-intro reveal d2">For fifteen seasons we have guided humans to the highest places on earth. Not by rushing — but by understanding the mountain, respecting its moods, and preparing with obsessive care.</p>
-        <div class="why-items">
+  <!-- ══════════════════════════════════
+       CATEGORY 2: TREKKING
+  ══════════════════════════════════ -->
+  <section class="cat-section" id="trekking">
+    <div class="cat-header reveal">
+      <div>
+        <span class="eyebrow">Classic Routes</span>
+        <h2 class="section-title">Himalayan <em>Trekking</em></h2>
+        <p class="section-desc">Walk through living landscapes of ancient monasteries, Sherpa villages, and glacial valleys with expert local guides.</p>
+      </div>
+      <a href="/trekking.html" class="cat-view-all">All Treks <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+    <div class="scroll-track-wrap">
+      <div class="scroll-track" id="trekTrack">
+        <a href="/articles/everest-base-camp-guide.html" class="mcard wide">
+          <div class="mcard-img-wrap">
+            <img class="mcard-img" src="/assets/everestbasecamp.png" alt="Everest Base Camp">
+            <div class="mcard-img-overlay"></div>
+            <span class="mcard-badge">Moderate–Strenuous</span>
+            <span class="mcard-alt-badge">5,364 m</span>
+          </div>
+          <div class="mcard-body">
+            <div class="mcard-num">01 · Most Popular Trek</div>
+            <div class="mcard-name">Everest Base Camp</div>
+            <div class="mcard-desc">Nepal's most iconic trek. Through Sherpa villages and rhododendron forests to the foot of the world's highest mountain.</div>
+            <div class="mcard-specs">
+              <div><div class="mcard-spec-val">14</div><div class="mcard-spec-key">Days</div></div>
+              <div><div class="mcard-spec-val">5,364m</div><div class="mcard-spec-key">Max Alt.</div></div>
+              <div><div class="mcard-spec-val">$1,650</div><div class="mcard-spec-key">From</div></div>
+            </div>
+            <span class="mcard-link">View Trek <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+        </a>
+        <a href="/articles/annapurna-blog.html" class="mcard">
+          <div class="mcard-img-wrap">
+            <img class="mcard-img" src="/assets/annapurnacircuit.png" alt="Annapurna Circuit">
+            <div class="mcard-img-overlay"></div>
+            <span class="mcard-badge">Strenuous</span>
+            <span class="mcard-alt-badge">5,416 m</span>
+          </div>
+          <div class="mcard-body">
+            <div class="mcard-num">02 · Classic Loop</div>
+            <div class="mcard-name">Annapurna Circuit</div>
+            <div class="mcard-desc">Nepal's most diverse landscape in one epic loop. Cross the legendary Thorong La and experience every climate zone.</div>
+            <div class="mcard-specs">
+              <div><div class="mcard-spec-val">18</div><div class="mcard-spec-key">Days</div></div>
+              <div><div class="mcard-spec-val">5,416m</div><div class="mcard-spec-key">Max Alt.</div></div>
+              <div><div class="mcard-spec-val">$1,350</div><div class="mcard-spec-key">From</div></div>
+            </div>
+            <span class="mcard-link">View Trek <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+        </a>
+        <a href="/articles/upper-mustang-blog.html" class="mcard">
+          <div class="mcard-img-wrap">
+            <img class="mcard-img" src="/assets/uppermustang.png" alt="Upper Mustang">
+            <div class="mcard-img-overlay"></div>
+            <span class="mcard-badge">Moderate</span>
+            <span class="mcard-alt-badge">3,840 m</span>
+          </div>
+          <div class="mcard-body">
+            <div class="mcard-num">03 · Forbidden Kingdom</div>
+            <div class="mcard-name">Upper Mustang</div>
+            <div class="mcard-desc">Enter a hidden Tibetan world of cave monasteries, walled cities, and stunning ochre canyons. A permit trek unlike any other.</div>
+            <div class="mcard-specs">
+              <div><div class="mcard-spec-val">14</div><div class="mcard-spec-key">Days</div></div>
+              <div><div class="mcard-spec-val">3,840m</div><div class="mcard-spec-key">Max Alt.</div></div>
+              <div><div class="mcard-spec-val">$2,850</div><div class="mcard-spec-key">From</div></div>
+            </div>
+            <span class="mcard-link">View Trek <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+        </a>
+        <a href="/articles/manaslu-blog.html" class="mcard">
+          <div class="mcard-img-wrap">
+            <img class="mcard-img" src="/assets/manaslu.png" alt="Manaslu Circuit">
+            <div class="mcard-img-overlay"></div>
+            <span class="mcard-badge">Strenuous</span>
+            <span class="mcard-alt-badge">5,160 m</span>
+          </div>
+          <div class="mcard-body">
+            <div class="mcard-num">04 · Remote Circuit</div>
+            <div class="mcard-name">Manaslu Circuit</div>
+            <div class="mcard-desc">Nepal's most dramatic off-the-beaten-path circuit. Wild landscapes, remote villages, minimal crowds — pure adventure.</div>
+            <div class="mcard-specs">
+              <div><div class="mcard-spec-val">16</div><div class="mcard-spec-key">Days</div></div>
+              <div><div class="mcard-spec-val">5,160m</div><div class="mcard-spec-key">Max Alt.</div></div>
+              <div><div class="mcard-spec-val">$1,580</div><div class="mcard-spec-key">From</div></div>
+            </div>
+            <span class="mcard-link">View Trek <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+        </a>
+        <a href="/articles/langtang-valley-blog.html" class="mcard">
+          <div class="mcard-img-wrap">
+            <img class="mcard-img" src="/assets/everestbasecamp.png" alt="Langtang Valley" style="filter:brightness(0.85) saturate(1.1) hue-rotate(-5deg)">
+            <div class="mcard-img-overlay"></div>
+            <span class="mcard-badge">Moderate</span>
+            <span class="mcard-alt-badge">4,984 m</span>
+          </div>
+          <div class="mcard-body">
+            <div class="mcard-num">05 · Valley of Glaciers</div>
+            <div class="mcard-name">Langtang Valley</div>
+            <div class="mcard-desc">Closest major trek to Kathmandu. Alpine meadows, yak pastures, and the warmth of Tamang culture await.</div>
+            <div class="mcard-specs">
+              <div><div class="mcard-spec-val">10</div><div class="mcard-spec-key">Days</div></div>
+              <div><div class="mcard-spec-val">4,984m</div><div class="mcard-spec-key">Max Alt.</div></div>
+              <div><div class="mcard-spec-val">$980</div><div class="mcard-spec-key">From</div></div>
+            </div>
+            <span class="mcard-link">View Trek <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="scroll-controls">
+      <button class="scroll-btn" onclick="scrollTrack('trekTrack', -1)" aria-label="Previous">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      </button>
+      <button class="scroll-btn" onclick="scrollTrack('trekTrack', 1)" aria-label="Next">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       CATEGORY 3: 8000ers
+  ══════════════════════════════════ -->
+  <section class="cat-section" id="eightthousanders">
+    <div class="cat-header reveal">
+      <div>
+        <span class="eyebrow">Earth's Highest</span>
+        <h2 class="section-title">The <em>8000ers</em></h2>
+        <p class="section-desc">The fourteen highest mountains on earth — all above 8,000 metres. Nepal is home to eight. We guide them all.</p>
+      </div>
+      <a href="/expeditions.html" class="cat-view-all">All 14 Peaks <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+    <div class="scroll-track-wrap">
+      <div class="scroll-track" id="eightTrack">
+        <a href="/articles/everest-base-camp-guide.html" class="mcard">
+          <div class="mcard-img-wrap">
+            <img class="mcard-img" src="/assets/mteverest.png" alt="Everest">
+            <div class="mcard-img-overlay"></div>
+            <span class="mcard-badge">#1 Highest</span>
+            <span class="mcard-alt-badge">8,848 m</span>
+          </div>
+          <div class="mcard-body">
+            <div class="mcard-num">Rank 01</div>
+            <div class="mcard-name">Everest</div>
+            <div class="mcard-desc">Sagarmatha — goddess of the sky. The world's highest summit and the ultimate mountaineering achievement.</div>
+            <div class="mcard-specs">
+              <div><div class="mcard-spec-val">8,848m</div><div class="mcard-spec-key">Elevation</div></div>
+              <div><div class="mcard-spec-val">55 days</div><div class="mcard-spec-key">Duration</div></div>
+            </div>
+            <span class="mcard-link">Explore <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+        </a>
+        <a href="/articles/annapurna-blog.html" class="mcard">
+          <div class="mcard-img-wrap">
+            <img class="mcard-img" src="/assets/annapurna.png" alt="Annapurna">
+            <div class="mcard-img-overlay"></div>
+            <span class="mcard-badge">#10 Highest</span>
+            <span class="mcard-alt-badge">8,091 m</span>
+          </div>
+          <div class="mcard-body">
+            <div class="mcard-num">Rank 10</div>
+            <div class="mcard-name">Annapurna I</div>
+            <div class="mcard-desc">The most dangerous 8000er. A historic peak with the highest fatality ratio — for expert climbers only.</div>
+            <div class="mcard-specs">
+              <div><div class="mcard-spec-val">8,091m</div><div class="mcard-spec-key">Elevation</div></div>
+              <div><div class="mcard-spec-val">50 days</div><div class="mcard-spec-key">Duration</div></div>
+            </div>
+            <span class="mcard-link">Explore <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+        </a>
+        <a href="/articles/manaslu-blog.html" class="mcard">
+          <div class="mcard-img-wrap">
+            <img class="mcard-img" src="/assets/manaslu.png" alt="Manaslu">
+            <div class="mcard-img-overlay"></div>
+            <span class="mcard-badge">#8 Highest</span>
+            <span class="mcard-alt-badge">8,163 m</span>
+          </div>
+          <div class="mcard-body">
+            <div class="mcard-num">Rank 08</div>
+            <div class="mcard-name">Manaslu</div>
+            <div class="mcard-desc">The Spirit of the Mountain. A remarkable Nepal-only permit peak growing in popularity among serious alpinists.</div>
+            <div class="mcard-specs">
+              <div><div class="mcard-spec-val">8,163m</div><div class="mcard-spec-key">Elevation</div></div>
+              <div><div class="mcard-spec-val">45 days</div><div class="mcard-spec-key">Duration</div></div>
+            </div>
+            <span class="mcard-link">Explore <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+        </a>
+        <a href="/articles/cho-oyu.html" class="mcard">
+          <div class="mcard-img-wrap">
+            <img class="mcard-img" src="/assets/amadablam.png" alt="Cho Oyu" style="filter:brightness(0.8) saturate(1.1) hue-rotate(15deg)">
+            <div class="mcard-img-overlay"></div>
+            <span class="mcard-badge">#6 Highest</span>
+            <span class="mcard-alt-badge">8,188 m</span>
+          </div>
+          <div class="mcard-body">
+            <div class="mcard-num">Rank 06</div>
+            <div class="mcard-name">Cho Oyu</div>
+            <div class="mcard-desc">Considered the most accessible 8000er. An ideal first eight-thousander for experienced high-altitude mountaineers.</div>
+            <div class="mcard-specs">
+              <div><div class="mcard-spec-val">8,188m</div><div class="mcard-spec-key">Elevation</div></div>
+              <div><div class="mcard-spec-val">40 days</div><div class="mcard-spec-key">Duration</div></div>
+            </div>
+            <span class="mcard-link">Explore <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+        </a>
+        <a href="/articles/dhaulagiri.html" class="mcard">
+          <div class="mcard-img-wrap">
+            <img class="mcard-img" src="/assets/annapurnacircuit.png" alt="Dhaulagiri" style="filter:brightness(0.85) saturate(1.05)">
+            <div class="mcard-img-overlay"></div>
+            <span class="mcard-badge">#7 Highest</span>
+            <span class="mcard-alt-badge">8,167 m</span>
+          </div>
+          <div class="mcard-body">
+            <div class="mcard-num">Rank 07</div>
+            <div class="mcard-name">Dhaulagiri</div>
+            <div class="mcard-desc">The White Mountain. Remote, technical, and magnificent — one of the world's most demanding Himalayan objectives.</div>
+            <div class="mcard-specs">
+              <div><div class="mcard-spec-val">8,167m</div><div class="mcard-spec-key">Elevation</div></div>
+              <div><div class="mcard-spec-val">50 days</div><div class="mcard-spec-key">Duration</div></div>
+            </div>
+            <span class="mcard-link">Explore <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="scroll-controls">
+      <button class="scroll-btn" onclick="scrollTrack('eightTrack', -1)" aria-label="Previous">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      </button>
+      <button class="scroll-btn" onclick="scrollTrack('eightTrack', 1)" aria-label="Next">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       CATEGORY 4: SEVEN THOUSANDERS
+  ══════════════════════════════════ -->
+  <section class="cat-section" id="seventhousanders">
+    <div class="cat-header reveal">
+      <div>
+        <span class="eyebrow">Premier Peaks</span>
+        <h2 class="section-title">Seven <em>Thousanders</em></h2>
+        <p class="section-desc">Spectacular summits between 7,000–7,999 metres. Technical, rewarding, and often more accessible than the 8000ers.</p>
+      </div>
+      <a href="/expeditions.html" class="cat-view-all">View All <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+    <div class="scroll-track-wrap">
+      <div class="scroll-track" id="sevenTrack">
+        <a href="/articles/amadablam-blog.html" class="mcard wide">
+          <div class="mcard-img-wrap">
+            <img class="mcard-img" src="/assets/amadablam.png" alt="Ama Dablam">
+            <div class="mcard-img-overlay"></div>
+            <span class="mcard-badge">Most Beloved</span>
+            <span class="mcard-alt-badge">6,812 m</span>
+          </div>
+          <div class="mcard-body">
+            <div class="mcard-num">Featured Peak</div>
+            <div class="mcard-name">Ama Dablam</div>
+            <div class="mcard-desc">The Matterhorn of the Himalayas. Iconic ridgeline, dramatic technical climbing, and unrivalled views from the summit.</div>
+            <div class="mcard-specs">
+              <div><div class="mcard-spec-val">6,812m</div><div class="mcard-spec-key">Summit</div></div>
+              <div><div class="mcard-spec-val">22 days</div><div class="mcard-spec-key">Duration</div></div>
+              <div><div class="mcard-spec-val">Technical</div><div class="mcard-spec-key">Grade</div></div>
+            </div>
+            <span class="mcard-link">View Expedition <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+        </a>
+        <a href="/articles/himlung.html" class="mcard">
+          <div class="mcard-img-wrap">
+            <img class="mcard-img" src="/assets/manaslu.png" alt="Himlung Himal" style="filter:brightness(0.88) saturate(1.0)">
+            <div class="mcard-img-overlay"></div>
+            <span class="mcard-badge">Remote</span>
+            <span class="mcard-alt-badge">7,126 m</span>
+          </div>
+          <div class="mcard-body">
+            <div class="mcard-num">7000er</div>
+            <div class="mcard-name">Himlung Himal</div>
+            <div class="mcard-desc">A hidden gem of the Nar-Phu valley. Challenging but achievable for strong climbers seeking solitude at altitude.</div>
+            <div class="mcard-specs">
+              <div><div class="mcard-spec-val">7,126m</div><div class="mcard-spec-key">Summit</div></div>
+              <div><div class="mcard-spec-val">28 days</div><div class="mcard-spec-key">Duration</div></div>
+            </div>
+            <span class="mcard-link">View Expedition <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+        </a>
+        <a href="/articles/lobuche.html" class="mcard">
+          <div class="mcard-img-wrap">
+            <img class="mcard-img" src="/assets/mteverest.png" alt="Lobuche" style="object-position: 40% center; filter:brightness(0.85) saturate(1.0)">
+            <div class="mcard-img-overlay"></div>
+            <span class="mcard-badge">Technical</span>
+            <span class="mcard-alt-badge">6,119 m</span>
+          </div>
+          <div class="mcard-body">
+            <div class="mcard-num">6000er</div>
+            <div class="mcard-name">Lobuche East</div>
+            <div class="mcard-desc">A superb technical objective in the Khumbu region. Steep mixed terrain and incredible views of Everest's south face.</div>
+            <div class="mcard-specs">
+              <div><div class="mcard-spec-val">6,119m</div><div class="mcard-spec-key">Summit</div></div>
+              <div><div class="mcard-spec-val">18 days</div><div class="mcard-spec-key">Duration</div></div>
+            </div>
+            <span class="mcard-link">View Expedition <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+        </a>
+        <a href="/articles/merapeak.html" class="mcard">
+          <div class="mcard-img-wrap">
+            <img class="mcard-img" src="/assets/everestbasecamp.png" alt="Mera Peak" style="filter:brightness(0.82) saturate(1.05)">
+            <div class="mcard-img-overlay"></div>
+            <span class="mcard-badge">Entry Level</span>
+            <span class="mcard-alt-badge">6,476 m</span>
+          </div>
+          <div class="mcard-body">
+            <div class="mcard-num">6000er</div>
+            <div class="mcard-name">Mera Peak</div>
+            <div class="mcard-desc">Nepal's highest trekking peak and the perfect first summit. Snow walking and breathtaking Himalayan panoramas await.</div>
+            <div class="mcard-specs">
+              <div><div class="mcard-spec-val">6,476m</div><div class="mcard-spec-key">Summit</div></div>
+              <div><div class="mcard-spec-val">18 days</div><div class="mcard-spec-key">Duration</div></div>
+            </div>
+            <span class="mcard-link">View Expedition <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="scroll-controls">
+      <button class="scroll-btn" onclick="scrollTrack('sevenTrack', -1)" aria-label="Previous">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      </button>
+      <button class="scroll-btn" onclick="scrollTrack('sevenTrack', 1)" aria-label="Next">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       CATEGORY 5: OUTDOOR ACTIVITIES
+  ══════════════════════════════════ -->
+  <section class="cat-section" id="activities">
+    <div class="cat-header reveal">
+      <div>
+        <span class="eyebrow">Beyond the Peaks</span>
+        <h2 class="section-title">Outdoor <em>Activities</em></h2>
+        <p class="section-desc">Nepal is more than mountains. Rafting, paragliding, jungle safaris, cultural tours — adventure in every form.</p>
+      </div>
+      <a href="/activities.html" class="cat-view-all">All Activities <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+    <div class="scroll-track-wrap">
+      <div class="scroll-track" id="actTrack">
+        <a href="/activities/paragliding" class="acard">
+          <img class="acard-img" src="/assets/Mustang,Nepal.jpeg" alt="Paragliding Pokhara">
+          <div class="acard-overlay"></div>
+          <div class="acard-body">
+            <div class="acard-tag">Adventure · Pokhara</div>
+            <div class="acard-name">Paragliding</div>
+            <div class="acard-meta">Fly over Phewa Lake with Annapurna views</div>
+            <div class="acard-link">Learn more <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </a>
+        <a href="/activities/rafting" class="acard">
+          <img class="acard-img" src="/assets/annapurnacircuit.png" alt="White Water Rafting" style="object-position: center 70%;">
+          <div class="acard-overlay"></div>
+          <div class="acard-body">
+            <div class="acard-tag">Water · Trisuli River</div>
+            <div class="acard-name">White Water Rafting</div>
+            <div class="acard-meta">Grade 3–4 rapids through jungle gorges</div>
+            <div class="acard-link">Learn more <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </a>
+        <a href="/activities/jungle-safari" class="acard">
+          <img class="acard-img" src="/assets/uppermustang.png" alt="Jungle Safari Chitwan">
+          <div class="acard-overlay"></div>
+          <div class="acard-body">
+            <div class="acard-tag">Wildlife · Chitwan</div>
+            <div class="acard-name">Jungle Safari</div>
+            <div class="acard-meta">Spot rhinos, tigers, and elephants</div>
+            <div class="acard-link">Learn more <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </a>
+        <a href="/activities/mountain-biking" class="acard">
+          <img class="acard-img" src="/assets/everestbasecamp.png" alt="Mountain Biking" style="filter:brightness(0.82) saturate(1.0)">
+          <div class="acard-overlay"></div>
+          <div class="acard-body">
+            <div class="acard-tag">Cycling · Kathmandu Valley</div>
+            <div class="acard-name">Mountain Biking</div>
+            <div class="acard-meta">Trail riding through ancient temple towns</div>
+            <div class="acard-link">Learn more <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </a>
+        <a href="/activities/yoga-meditation" class="acard">
+          <img class="acard-img" src="/assets/manaslu.png" alt="Yoga and Meditation" style="filter:brightness(0.75) saturate(0.95)">
+          <div class="acard-overlay"></div>
+          <div class="acard-body">
+            <div class="acard-tag">Wellness · Pokhara</div>
+            <div class="acard-name">Yoga & Meditation</div>
+            <div class="acard-meta">Lakeside retreats with Himalayan backdrops</div>
+            <div class="acard-link">Learn more <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </a>
+        <a href="/activities/helicopter-tours" class="acard">
+          <img class="acard-img" src="/assets/amadablam.png" alt="Helicopter Tour" style="filter:brightness(0.85) saturate(1.1)">
+          <div class="acard-overlay"></div>
+          <div class="acard-body">
+            <div class="acard-tag">Aerial · Luxury</div>
+            <div class="acard-name">Helicopter Tours</div>
+            <div class="acard-meta">Sunrise over Everest from the sky</div>
+            <div class="acard-link">Learn more <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="scroll-controls">
+      <button class="scroll-btn" onclick="scrollTrack('actTrack', -1)" aria-label="Previous">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      </button>
+      <button class="scroll-btn" onclick="scrollTrack('actTrack', 1)" aria-label="Next">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <div class="why-section">
+    <div class="why-inner">
+      <div>
+        <span class="eyebrow why-eyebrow reveal">Why Beyond Summit</span>
+        <h2 class="why-title reveal d1">Your Safety.<br><em>Our Mission.</em></h2>
+        <p class="why-intro reveal d2">For fifteen seasons we have guided climbers to the highest places on earth. Not by rushing — but by understanding the mountain, respecting its moods, and preparing with obsessive care.</p>
+        <div class="why-grid">
           <div class="why-item reveal">
-            <div class="why-item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12h6M12 9v6"/><circle cx="12" cy="12" r="9" opacity="0.3"/></svg></div>
-            <div class="why-item-content">
-              <div class="why-item-title">Safety-First Protocol</div>
-              <div class="why-item-desc">High-altitude medics on every expedition. Daily weather briefings. Strict turnaround policies no summit justifies breaking.</div>
-            </div>
+            <svg class="why-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 12h6M12 9v6"/><circle cx="12" cy="12" r="9" opacity="0.3"/></svg>
+            <div class="why-item-title">Safety-First Protocol</div>
+            <div class="why-item-desc">High-altitude medics on every expedition. Daily weather briefings. Strict turnaround policies.</div>
           </div>
           <div class="why-item reveal d1">
-            <div class="why-item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg></div>
-            <div class="why-item-content">
-              <div class="why-item-title">UIAA-Certified Sherpa Guides</div>
-              <div class="why-item-desc">Combined 150+ Everest summits across our team. Their knowledge of these mountains exists nowhere else on earth.</div>
-            </div>
+            <svg class="why-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <div class="why-item-title">Small, Focused Groups</div>
+            <div class="why-item-desc">Max 8 climbers per team. Better acclimatisation, more attention, safer operations.</div>
           </div>
           <div class="why-item reveal d2">
-            <div class="why-item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-            <div class="why-item-content">
-              <div class="why-item-title">Small, Focused Groups</div>
-              <div class="why-item-desc">Max 8 climbers per team. More attention per person, better acclimatisation management, safer operations for all.</div>
-            </div>
+            <svg class="why-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+            <div class="why-item-title">UIAA-Certified Guides</div>
+            <div class="why-item-desc">Combined 150+ Everest summits. Knowledge that exists nowhere else on earth.</div>
           </div>
           <div class="why-item reveal d3">
-            <div class="why-item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.5 18.5L22 22"/><circle cx="14" cy="14" r="6"/><path d="M2 2l20 20"/></svg></div>
-            <div class="why-item-content">
-              <div class="why-item-title">Premium Logistics</div>
-              <div class="why-item-desc">Heated base camp, Poisk O₂ systems, satellite communications, helicopter evacuation on standby throughout.</div>
-            </div>
+            <svg class="why-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+            <div class="why-item-title">Premium Logistics</div>
+            <div class="why-item-desc">Heated base camp, Poisk O₂ systems, satellite comms, helicopter evacuation on standby.</div>
           </div>
         </div>
       </div>
-      <div class="why-right reveal d2">
-        <div class="why-visual">
-          <img src="/images/submmit-photo.jpeg">
-          <div class="why-visual-caption">
-            <strong>Sherpa-to-Climber Ratio</strong>
-            "The mountains are not stadiums where I satisfy my ambition to achieve. They are cathedrals where I practice my religion."
-          </div>
+      <div class="why-visual reveal d2">
+        <div class="why-img-wrap">
+          <img class="why-img" src="/images/submmit-photo.jpeg" alt="Summit team" onerror="this.src='/assets/mteverest.png'">
+        </div>
+        <div class="why-caption">
+          <div class="why-caption-label">Sherpa-to-Climber Ratio · 1:1 on Summit Day</div>
+          <div class="why-caption-text">"The mountains are not stadiums where I satisfy ambition. They are cathedrals where I practise my religion."</div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- ═══ HOW IT WORKS TIMELINE ═══ -->
-  <section class="timeline-section">
-    <span class="eyebrow reveal">Your Journey With Us</span>
-    <h2 class="h2 reveal d1">From Dream to<br><em>Summit</em></h2>
-    <div class="timeline-grid">
-      <!-- Step 1 left -->
-      <div class="timeline-item-left reveal">
-        <div class="timeline-step-num">Step 01</div>
-        <div class="timeline-step-title">Consultation Call</div>
-        <div class="timeline-step-desc">Speak with our senior expedition leaders. We assess your experience, fitness, and ambition to match you with the right peak.</div>
-      </div>
-      <!-- center line -->
-      <div class="timeline-line" style="padding-top:2rem;">
-        <div class="timeline-node" style="top:2rem;"></div>
-        <div class="timeline-node" style="top:calc(25% + 1rem);"></div>
-        <div class="timeline-node" style="top:calc(50% + 0.5rem);"></div>
-        <div class="timeline-node" style="top:calc(75% - 1rem);"></div>
-      </div>
-      <!-- Step 2 right -->
-      <div class="timeline-item-right reveal d1">
-        <div class="timeline-step-num">Step 02</div>
-        <div class="timeline-step-title">Custom Programme</div>
-        <div class="timeline-step-desc">We design your full itinerary: permits, acclimatisation schedule, gear list, and Sherpa assignment. Every detail managed.</div>
-      </div>
-      <!-- Step 3 left -->
-      <div class="timeline-item-left reveal d1" style="margin-top:0;">
-        <div class="timeline-step-num">Step 03</div>
-        <div class="timeline-step-title">Pre-Departure Prep</div>
-        <div class="timeline-step-desc">Training plan, medical brief, gear check, and a full pre-expedition briefing in Kathmandu with your guide team.</div>
-      </div>
-      <div></div>
-      <!-- Step 4 right -->
-      <div class="timeline-item-right reveal d2">
-        <div class="timeline-step-num">Step 04</div>
-        <div class="timeline-step-title">Summit & Beyond</div>
-        <div class="timeline-step-desc">We stand with you at the top. And support your safe descent. Your story continues — our after-summit alumni community awaits.</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ TESTIMONIALS — Dream Achievers ═══ -->
-  <section class="testimonials-section" id="testimonials">
-    <div class="testimonials-header">
+  <!-- TESTIMONIALS -->
+  <section class="testi-section">
+    <div class="testi-header">
       <div>
         <span class="eyebrow reveal">Dream Achievers</span>
-        <h2 class="h2 reveal d1">What Our Summiteers<br><em>Say</em></h2>
+        <h2 class="section-title reveal d1">What Our<br><em>Summiteers Say</em></h2>
       </div>
-      <div class="testimonials-nav reveal d1">
-        <button class="testi-nav-btn" id="testiPrev" aria-label="Previous testimonial">
+      <div class="testi-nav reveal d1">
+        <button class="testi-nav-btn" onclick="scrollTrack('testiTrack', -1)" aria-label="Previous">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
         </button>
-        <button class="testi-nav-btn" id="testiNext" aria-label="Next testimonial">
+        <button class="testi-nav-btn" onclick="scrollTrack('testiTrack', 1)" aria-label="Next">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </button>
       </div>
     </div>
-
-    <div class="testi-carousel-wrap">
+    <div class="testi-track-wrap">
       <div class="testi-track" id="testiTrack">
-
-        <div class="testi-card featured">
-          <div class="testi-quote-mark">"</div>
-          <div class="testi-quote">Standing at 8,848 metres, I realised it wasn't the altitude that made this extraordinary — it was knowing the team below me had prepared everything so I could simply be present in that moment.</div>
-          <div class="testi-stars">
-            <span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span>
-          </div>
-          <div class="testi-divider"></div>
-          <div class="testi-author">
-            <div class="testi-avatar">M</div>
-            <div class="testi-author-info">
-              <div class="testi-author-name">Marcus Thévenot</div>
-              <div class="testi-author-meta">Architect · Lyon, France</div>
+        <div class="tcard featured">
+          <div class="tcard-quote-mark">"</div>
+          <div class="tcard-quote">Standing at 8,848 metres, I realised it wasn't the altitude that made this extraordinary — it was knowing the team below me had prepared everything so I could simply be present in that moment.</div>
+          <div class="tcard-stars"><span class="tcard-star">★</span><span class="tcard-star">★</span><span class="tcard-star">★</span><span class="tcard-star">★</span><span class="tcard-star">★</span></div>
+          <div class="tcard-divider"></div>
+          <div class="tcard-author">
+            <div class="tcard-avatar">M</div>
+            <div>
+              <div class="tcard-name">Marcus Thévenot</div>
+              <div class="tcard-meta">Architect · Lyon, France</div>
             </div>
-            <div class="testi-peak-badge">Everest 2024</div>
+            <div class="tcard-peak">Everest 2024</div>
           </div>
         </div>
-
-        <div class="testi-card">
-          <div class="testi-quote-mark">"</div>
-          <div class="testi-quote">Ama Dablam was my first technical climb. The Sherpa team never let me feel out of depth — patient, knowledgeable, and deeply invested in my success.</div>
-          <div class="testi-stars">
-            <span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span>
-          </div>
-          <div class="testi-divider"></div>
-          <div class="testi-author">
-            <div class="testi-avatar">S</div>
-            <div class="testi-author-info">
-              <div class="testi-author-name">Suki Nakamura</div>
-              <div class="testi-author-meta">Surgeon · Tokyo, Japan</div>
+        <div class="tcard">
+          <div class="tcard-quote-mark">"</div>
+          <div class="tcard-quote">Ama Dablam was my first technical climb. The Sherpa team never let me feel out of depth — patient, knowledgeable, and deeply invested in my success.</div>
+          <div class="tcard-stars"><span class="tcard-star">★</span><span class="tcard-star">★</span><span class="tcard-star">★</span><span class="tcard-star">★</span><span class="tcard-star">★</span></div>
+          <div class="tcard-divider"></div>
+          <div class="tcard-author">
+            <div class="tcard-avatar">S</div>
+            <div>
+              <div class="tcard-name">Suki Nakamura</div>
+              <div class="tcard-meta">Surgeon · Tokyo, Japan</div>
             </div>
-            <div class="testi-peak-badge">Ama Dablam 2025</div>
+            <div class="tcard-peak">Ama Dablam 2025</div>
           </div>
         </div>
-
-        <div class="testi-card">
-          <div class="testi-quote-mark">"</div>
-          <div class="testi-quote">The EBC trek was flawlessly organised. Every tea house, every rest day, every altitude precaution was thought through. I never worried once — I just walked.</div>
-          <div class="testi-stars">
-            <span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span>
-          </div>
-          <div class="testi-divider"></div>
-          <div class="testi-author">
-            <div class="testi-avatar">A</div>
-            <div class="testi-author-info">
-              <div class="testi-author-name">Amara Diallo</div>
-              <div class="testi-author-meta">Writer · Dakar, Senegal</div>
+        <div class="tcard">
+          <div class="tcard-quote-mark">"</div>
+          <div class="tcard-quote">The EBC trek was flawlessly organised. Every tea house, every rest day, every altitude precaution was thought through. I never worried once — I just walked.</div>
+          <div class="tcard-stars"><span class="tcard-star">★</span><span class="tcard-star">★</span><span class="tcard-star">★</span><span class="tcard-star">★</span><span class="tcard-star">★</span></div>
+          <div class="tcard-divider"></div>
+          <div class="tcard-author">
+            <div class="tcard-avatar">A</div>
+            <div>
+              <div class="tcard-name">Amara Diallo</div>
+              <div class="tcard-meta">Writer · Dakar, Senegal</div>
             </div>
-            <div class="testi-peak-badge">EBC Trek 2025</div>
+            <div class="tcard-peak">EBC Trek 2025</div>
           </div>
         </div>
-
-        <div class="testi-card">
-          <div class="testi-quote-mark">"</div>
-          <div class="testi-quote">I came back from Manaslu a different person. Beyond Summit gave me not just a summit — they gave me the confidence that I am capable of far more than I imagined.</div>
-          <div class="testi-stars">
-            <span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span>
-          </div>
-          <div class="testi-divider"></div>
-          <div class="testi-author">
-            <div class="testi-avatar">D</div>
-            <div class="testi-author-info">
-              <div class="testi-author-name">Dmitri Volkov</div>
-              <div class="testi-author-meta">Engineer · Moscow, Russia</div>
+        <div class="tcard featured">
+          <div class="tcard-quote-mark">"</div>
+          <div class="tcard-quote">On summit day, my Sherpa Nima carried extra oxygen because he read that I was struggling. Nobody asked him to. That instinct — that care — separates Beyond Summit from everyone else.</div>
+          <div class="tcard-stars"><span class="tcard-star">★</span><span class="tcard-star">★</span><span class="tcard-star">★</span><span class="tcard-star">★</span><span class="tcard-star">★</span></div>
+          <div class="tcard-divider"></div>
+          <div class="tcard-author">
+            <div class="tcard-avatar">R</div>
+            <div>
+              <div class="tcard-name">Renata Kowalski</div>
+              <div class="tcard-meta">CEO · Warsaw, Poland</div>
             </div>
-            <div class="testi-peak-badge">Manaslu 2023</div>
+            <div class="tcard-peak">Annapurna 2024</div>
           </div>
         </div>
-
-        <div class="testi-card">
-          <div class="testi-quote-mark">"</div>
-          <div class="testi-quote">Upper Mustang felt like stepping through time. Our guide Pasang explained every cave painting, every prayer flag, every tradition with genuine love for his heritage.</div>
-          <div class="testi-stars">
-            <span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span>
-          </div>
-          <div class="testi-divider"></div>
-          <div class="testi-author">
-            <div class="testi-avatar">L</div>
-            <div class="testi-author-info">
-              <div class="testi-author-name">Layla Hassan</div>
-              <div class="testi-author-meta">Photographer · Cairo, Egypt</div>
+        <div class="tcard">
+          <div class="tcard-quote-mark">"</div>
+          <div class="tcard-quote">Upper Mustang felt like stepping through time. Our guide explained every cave painting and prayer flag with genuine love for his heritage. Unforgettable.</div>
+          <div class="tcard-stars"><span class="tcard-star">★</span><span class="tcard-star">★</span><span class="tcard-star">★</span><span class="tcard-star">★</span><span class="tcard-star">★</span></div>
+          <div class="tcard-divider"></div>
+          <div class="tcard-author">
+            <div class="tcard-avatar">L</div>
+            <div>
+              <div class="tcard-name">Layla Hassan</div>
+              <div class="tcard-meta">Photographer · Cairo, Egypt</div>
             </div>
-            <div class="testi-peak-badge">Upper Mustang 2025</div>
+            <div class="tcard-peak">Upper Mustang 2025</div>
           </div>
         </div>
-
-        <div class="testi-card featured">
-          <div class="testi-quote-mark">"</div>
-          <div class="testi-quote">On summit day, my Sherpa Nima carried extra oxygen because he read that I was struggling. Nobody asked him to. That instinct — that care — is what separates Beyond Summit from everyone else.</div>
-          <div class="testi-stars">
-            <span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span>
-          </div>
-          <div class="testi-divider"></div>
-          <div class="testi-author">
-            <div class="testi-avatar">R</div>
-            <div class="testi-author-info">
-              <div class="testi-author-name">Renata Kowalski</div>
-              <div class="testi-author-meta">CEO · Warsaw, Poland</div>
-            </div>
-            <div class="testi-peak-badge">Annapurna 2024</div>
-          </div>
-        </div>
-
       </div>
-    </div>
-
-    <div class="testi-dots" id="testiDots">
-      <div class="testi-dot active" data-idx="0"></div>
-      <div class="testi-dot" data-idx="1"></div>
-      <div class="testi-dot" data-idx="2"></div>
-      <div class="testi-dot" data-idx="3"></div>
-      <div class="testi-dot" data-idx="4"></div>
-      <div class="testi-dot" data-idx="5"></div>
     </div>
   </section>
 
-  <!-- ═══ CONTACT STRIP ═══ -->
+  <!-- QUOTE -->
+  <section class="quote-section">
+    <img class="quote-bg-img" src="/images/shephoskundo-group-photo.jpeg" alt="Mountains" onerror="this.src='/assets/annapurna.png'">
+    <div class="quote-bg-overlay"></div>
+    <div class="quote-content">
+      <span class="quote-mark" aria-hidden="true">"</span>
+      <blockquote class="quote-text reveal">It is not the mountain we conquer,<br>but <em>ourselves</em>.</blockquote>
+      <div class="quote-attr reveal d1">Sir Edmund Hillary · First Everest Summit, 1953</div>
+    </div>
+  </section>
+
+  <!-- CONTACT STRIP -->
   <div class="contact-strip">
-    <div class="contact-strip-inner">
-      <div class="contact-strip-item">
-        <div class="contact-strip-icon">
+    <div class="contact-inner">
+      <div class="contact-item">
+        <div class="contact-icon">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.71 3.53 2 2 0 0 1 3.68 1.38h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.07a16 16 0 0 0 6 6l1.06-1.06a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         </div>
         <div>
-          <div class="contact-strip-label">Call Us Anytime</div>
-          <div class="contact-strip-value"><a href="tel:+9779811157421">+977 9811 157 421</a></div>
+          <div class="contact-label">Call Anytime</div>
+          <div class="contact-value"><a href="tel:+9779811157421">+977 9811 157 421</a></div>
         </div>
       </div>
-      <div class="contact-strip-item">
-        <div class="contact-strip-icon">
+      <div class="contact-item">
+        <div class="contact-icon">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         </div>
         <div>
-          <div class="contact-strip-label">Email Us</div>
-          <div class="contact-strip-value"><a href="mailto:info@beyondsummitexped.com">info@beyondsummitexped.com</a></div>
+          <div class="contact-label">Email Us</div>
+          <div class="contact-value"><a href="mailto:info@beyondsummitexped.com">info@beyondsummitexped.com</a></div>
         </div>
       </div>
-      <div class="contact-strip-item">
-        <div class="contact-strip-icon">
+      <div class="contact-item">
+        <div class="contact-icon">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
         </div>
         <div>
-          <div class="contact-strip-label">Find Us</div>
-          <div class="contact-strip-value"><a href="https://maps.google.com/?q=Thamel,Kathmandu,Nepal" target="_blank" rel="noopener noreferrer">Thamel, Kathmandu</a></div>
+          <div class="contact-label">Find Us</div>
+          <div class="contact-value"><a href="https://maps.google.com/?q=Thamel,Kathmandu,Nepal" target="_blank" rel="noopener noreferrer">Thamel, Kathmandu</a></div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ═══ QUOTE SECTION ═══ -->
-  <section class="quote-section">
-    <div class="quote-bg">
-      <img src="/images/shephoskundo-group-photo.jpeg" alt="Himalayan backdrop">
-    </div>
-    <div class="quote-deco-left"></div>
-    <div class="quote-deco-right"></div>
-    <div class="quote-content">
-      <span class="quote-mark" aria-hidden="true">"</span>
-      <blockquote class="quote-text reveal">It is not the mountain we conquer,<br>but <em>ourselves</em>.</blockquote>
-      <div class="quote-attr reveal d1">Sir Edmund Hillary · First Everest Summit 1953</div>
-    </div>
-  </section>
-
-  <!-- ═══ BOOKING CTA ═══ -->
+  <!-- BOOKING CTA -->
   <section class="booking-section">
     <div class="booking-inner">
       <div>
         <span class="eyebrow reveal">Plan Your Journey</span>
-        <h2 class="h2 reveal d1">Ready for Your<br><em>Himalayan Moment?</em></h2>
-        <p class="reveal d2" style="font-family:var(--sans);font-size:0.9rem;color:rgba(245,242,236,0.38);line-height:1.75;max-width:420px;margin-top:1.25rem;">
-          Spring 2026 expedition slots are filling. Our senior expedition leaders will design a programme matched to your experience, fitness, and ambition.
-        </p>
-        <div class="booking-cta-row reveal d3">
-          <a href="/contact" class="btn-book">Plan My Expedition <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-          <a href="tel:+9779811157421" class="btn-phone">+977 9811 157 421</a>
+        <h2 class="section-title reveal d1">Ready for Your<br><em>Himalayan Moment?</em></h2>
+        <p class="section-desc reveal d2">Spring 2026 expedition slots are filling. Our senior expedition leaders will design a programme matched to your experience, fitness, and ambition.</p>
+        <div class="booking-actions reveal d3">
+          <a href="/contact.html" class="btn-book">
+            Plan My Expedition
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="tel:+9779811157421" class="btn-link">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.71 3.53 2 2 0 0 1 3.68 1.38h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.07a16 16 0 0 0 6 6l1.06-1.06a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +977 9811 157 421
+          </a>
         </div>
       </div>
       <div class="booking-visual reveal d1">
         <div class="booking-img-wrap">
-          <img class="booking-img" src="/images/larke-pass.jpeg" alt="Himalayan expedition team">
+          <img class="booking-img" src="/images/larke-pass.jpeg" alt="Himalayan expedition" onerror="this.src='/assets/amadablam.png'">
         </div>
         <div class="booking-badge">
           <div class="booking-badge-num">469+</div>
-          <div class="booking-badge-label">clients guided</div>
+          <div class="booking-badge-label">Clients Guided</div>
         </div>
       </div>
     </div>
-    <div class="booking-deco" aria-hidden="true">
-      <svg viewBox="0 0 500 300" fill="none"><path d="M0 300 L100 100 L180 180 L250 60 L320 150 L400 80 L500 200 L500 300 Z" fill="white"/></svg>
-    </div>
   </section>
 
-  <!-- ═══ FOOTER ═══ -->
+  <!-- FOOTER -->
   <footer>
     <div class="footer-grid">
       <div>
-        <a href="/" class="nav-logo" style="margin-bottom:1.25rem;">
-          <svg class="nav-logo-icon" viewBox="0 0 40 40" fill="none">
-            <path d="M20 4 L4 36 L36 36 Z" stroke="rgba(200,131,42,0.7)" stroke-width="1.2" fill="none"/>
-            <path d="M20 4 L12 36 L20 30 Z" fill="rgba(200,131,42,0.22)"/>
-            <circle cx="20" cy="4" r="1.8" fill="rgba(200,131,42,0.9)"/>
-          </svg>
-          <div class="nav-logo-text">Beyond Summit<em> Expeditions · Nepal</em></div>
-        </a>
-        <p class="footer-brand-desc">Nepal's premier mountaineering company. Licensed by the Department of Tourism, Government of Nepal. We take you where others pause.</p>
+        <div class="footer-logo-text">Beyond Summit<em>Expeditions · Nepal</em></div>
+        <p class="footer-desc">Nepal's premier mountaineering company. Licensed by the Department of Tourism, Government of Nepal. We take you where others pause.</p>
         <div class="footer-contact">
-          <a href="tel:+9779811157421"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.71 3.53 2 2 0 0 1 3.68 1.38h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.07a16 16 0 0 0 6 6l1.06-1.06a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>+977-9811157421</a>
-          <a href="mailto:info@beyondsummitexped.com"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@beyondsummitexped.com</a>
-          <a href="https://maps.google.com/?q=Thamel,Kathmandu,Nepal" target="_blank" rel="noopener noreferrer"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Thamel, Kathmandu, Nepal</a>
+          <a href="tel:+9779811157421"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.71 3.53 2 2 0 0 1 3.68 1.38h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.07a16 16 0 0 0 6 6l1.06-1.06a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +977-9811157421</a>
+          <a href="mailto:info@beyondsummitexped.com"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> info@beyondsummitexped.com</a>
+          <a href="https://maps.google.com/?q=Thamel,Kathmandu" target="_blank"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Thamel, Kathmandu, Nepal</a>
         </div>
       </div>
       <div class="footer-col">
         <h4>Expeditions</h4>
         <ul>
           <li><a href="/articles/everest-base-camp-guide.html">Mount Everest</a></li>
+          <li><a href="/articles/amadablam-blog.html">Ama Dablam</a></li>
+          <li><a href="/articles/manaslu-blog.html">Manaslu</a></li>
           <li><a href="/articles/merapeak.html">Mera Peak</a></li>
           <li><a href="/articles/islandpeak.html">Island Peak</a></li>
-          <li><a href="/articles/himlung.html">Himlung</a></li>
-          <li><a href="/articles/lobuche.html">Lobuche</a></li>
-          <li><a href="/expeditions.html">All Peaks</a></li>
+          <li><a href="/expeditions.html">All Expeditions</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -1678,298 +1695,199 @@
           <li><a href="/articles/upper-mustang-blog.html">Upper Mustang</a></li>
           <li><a href="/articles/manaslu-blog.html">Manaslu Circuit</a></li>
           <li><a href="/articles/langtang-valley-blog.html">Langtang Valley</a></li>
-          <li><a href="/trekking/luxury">Luxury Trekking</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Company</h4>
         <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="guides.html">Our Guides</a></li>
-          <li><a href="safety.html">Safety</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="blog.html">Insights</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/guides.html">Our Guides</a></li>
+          <li><a href="/safety.html">Safety</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/contact.html">Contact</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <p>© 2026 Beyond Summit Expeditions · Licensed by Dept. of Tourism, Government of Nepal</p>
       <div class="footer-socials">
-        <a href="https://instagram.com/beyondsummitexpeditions" class="social-ico" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
-        <a href="https://facebook.com/beyondsummitexped" class="social-ico" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
-      
+        <a href="https://instagram.com/beyondsummitexpeditions" class="social-ico" target="_blank" aria-label="Instagram">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://facebook.com/beyondsummitexped" class="social-ico" target="_blank" aria-label="Facebook">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
       </div>
     </div>
   </footer>
 
   <script>
-    /* ── CURSOR ── */
-    const cursor = document.getElementById('cursor');
-    const ring = document.getElementById('cursorRing');
-    let mx = 0, my = 0, rx = 0, ry = 0;
-    if (window.matchMedia('(pointer: fine)').matches) {
-      document.addEventListener('mousemove', e => {
-        mx = e.clientX; my = e.clientY;
-        cursor.style.left = mx + 'px'; cursor.style.top = my + 'px';
-      });
-      (function animateRing() {
-        rx += (mx - rx) * 0.15; ry += (my - ry) * 0.15;
-        ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
-        requestAnimationFrame(animateRing);
-      })();
-    }
-
-    /* ── NAV SHRINK ── */
+    /* ── NAV SCROLL ── */
     const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => navbar.classList.toggle('shrunk', window.scrollY > 60), { passive: true });
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    }, { passive: true });
 
     /* ── HAMBURGER ── */
     const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    let menuOpen = false;
-    
-
-   function openMobileMenu() {
-  menuOpen = true;
-  hamburger.classList.add('open');
-  hamburger.setAttribute('aria-expanded', 'true');
-  mobileMenu.classList.add('open');
-  mobileMenu.setAttribute('aria-hidden', 'false'); // ← was 'true', wrong
-  document.body.style.overflow = 'hidden';
-}
-    function closeMobileMenu() {
-      menuOpen = false;
+    const drawer = document.getElementById('mobileDrawer');
+    let drawerOpen = false;
+    function closeDrawer() {
+      drawerOpen = false;
       hamburger.classList.remove('open');
       hamburger.setAttribute('aria-expanded', 'false');
-      mobileMenu.classList.remove('open');
-      mobileMenu.setAttribute('aria-hidden', 'true');
+      drawer.classList.remove('open');
       document.body.style.overflow = '';
     }
-    hamburger.addEventListener('click', () => menuOpen ? closeMobileMenu() : openMobileMenu());
-    document.addEventListener('keydown', e => { if (e.key === 'Escape' && menuOpen) closeMobileMenu(); });
-
-/* ─── PILLAR COUNTER ANIMATION ─── */
-(function () {
-  const easeOut = t => 1 - Math.pow(1 - t, 3);
-
-  function animateCount(el) {
-    const target   = +el.dataset.target;
-    const suffix   = el.dataset.suffix || '';
-    const duration = target >= 1000 ? 2000 : 1400;
-    const start    = performance.now();
-
-    const format = n =>
-      target >= 1000
-        ? (n >= 1000 ? (n / 1000).toFixed(1).replace('.0', '') + 'k' : n)
-        : n;
-
-    function tick(now) {
-      const progress = Math.min((now - start) / duration, 1);
-      const value    = Math.round(easeOut(progress) * target);
-      el.textContent = format(value) + suffix;
-      if (progress < 1) requestAnimationFrame(tick);
-    }
-    requestAnimationFrame(tick);
-  }
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      entry.target.querySelectorAll('.pillar-num[data-target]').forEach(el => {
-        if (el.dataset.animated) return;
-        el.dataset.animated = '1';
-        animateCount(el);
-      });
+    hamburger.addEventListener('click', () => {
+      drawerOpen = !drawerOpen;
+      hamburger.classList.toggle('open', drawerOpen);
+      hamburger.setAttribute('aria-expanded', String(drawerOpen));
+      drawer.classList.toggle('open', drawerOpen);
+      document.body.style.overflow = drawerOpen ? 'hidden' : '';
     });
-  }, { threshold: 0.4 });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
 
-  const section = document.querySelector('.pillars-section');
-  if (section) observer.observe(section);
-})();
     /* ── HERO SLIDER ── */
     const slides = document.querySelectorAll('.slide');
-    const totalSlides = slides.length;
-    let current = 0;
-    let slideTimeout;
-    const DURATION = 6500;
+    const dotsEl = document.getElementById('slideDots');
+    const prog = document.getElementById('heroProg');
+    let cur = 0, timer;
+    const DELAY = 6800;
 
-    const indContainer = document.getElementById('slideIndicator');
-    slides.forEach((s, i) => {
-      const item = document.createElement('div');
-      item.className = 'slide-ind-item' + (i === 0 ? ' active' : '');
-      item.innerHTML = `<span class="ind-line"></span><span class="ind-num">0${i+1}</span>`;
-      item.onclick = () => goTo(i);
-      indContainer.appendChild(item);
+    slides.forEach((_, i) => {
+      const d = document.createElement('div');
+      d.className = 'sdot' + (i === 0 ? ' active' : '');
+      d.onclick = () => goTo(i);
+      dotsEl.appendChild(d);
     });
 
-    function updateHeroContent(slideEl) {
-      const name = slideEl.dataset.name || '';
-      const tag = slideEl.dataset.tag || '';
-      const alt = slideEl.dataset.alt || '';
-      const region = slideEl.dataset.region || '';
-      const href = slideEl.dataset.href || '#';
-      ['heroMountainName','heroMountainSub','heroMountainPill','heroCta'].forEach(id => {
-        const el = document.getElementById(id);
-        el.style.transition = 'opacity 0.35s, transform 0.35s';
-        el.style.opacity = '0'; el.style.transform = 'translateY(12px)';
-      });
-      setTimeout(() => {
-        const parts = name.split(' ');
-        const first = parts.slice(0, -1).join(' ');
-        const last = parts[parts.length - 1];
-        document.getElementById('heroMountainName').innerHTML = first ? `${first} <em>${last}</em>` : `<em>${last}</em>`;
-        document.getElementById('heroAlt').textContent = alt;
-        document.getElementById('heroRegion').textContent = region;
-        document.getElementById('heroType').textContent = tag;
-        document.getElementById('pillTag').textContent = href.includes('trekking') ? 'Trekking' : 'Expedition';
-        const btn = document.getElementById('heroBtn');
-        btn.innerHTML = `${href.includes('trekking') ? 'View This Trek' : 'View This Expedition'} <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>`;
-        btn.href = href;
-        ['heroMountainName','heroMountainSub','heroMountainPill','heroCta'].forEach((id, idx) => {
-          setTimeout(() => {
-            const el = document.getElementById(id);
-            el.style.opacity = '1'; el.style.transform = 'translateY(0)';
-          }, idx * 80);
-        });
-      }, 380);
+    function updateContent(s) {
+      const fn = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
+      fn('heroBadge', s.dataset.badge || '');
+      fn('heroAlt', s.dataset.alt || '');
+      fn('heroRegion', s.dataset.region || '');
+      fn('heroTag', s.dataset.tag || '');
+      const titleEl = document.getElementById('heroTitle');
+      const btn = document.getElementById('heroBtn');
+      if (titleEl) {
+        const parts = (s.dataset.name || '').split(' ');
+        const last = parts.pop();
+        titleEl.innerHTML = (parts.length ? parts.join(' ') + ' ' : '') + `<em>${last}</em>`;
+      }
+      if (btn) {
+        btn.href = s.dataset.href || '#';
+        const isTrek = (s.dataset.href || '').includes('trek') || (s.dataset.tag || '').toLowerCase().includes('trek');
+        btn.innerHTML = `${isTrek ? 'View Trek' : 'View Expedition'} <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>`;
+      }
     }
 
     function goTo(idx) {
-      slides[current].classList.remove('active');
-      document.querySelectorAll('.slide-ind-item')[current].classList.remove('active');
-      current = (idx + totalSlides) % totalSlides;
-      slides[current].classList.add('active');
-      document.querySelectorAll('.slide-ind-item')[current].classList.add('active');
-      updateHeroContent(slides[current]);
-      resetProgress();
+      slides[cur].classList.remove('active');
+      document.querySelectorAll('.sdot')[cur].classList.remove('active');
+      cur = (idx + slides.length) % slides.length;
+      slides[cur].classList.add('active');
+      document.querySelectorAll('.sdot')[cur].classList.add('active');
+      updateContent(slides[cur]);
+      resetProg();
     }
-    function next() { goTo(current + 1); }
-    function prev() { goTo(current - 1); }
 
-    const progBar = document.getElementById('heroProg');
-    function resetProgress() {
-      clearTimeout(slideTimeout);
-      progBar.style.transition = 'none'; progBar.style.width = '0%';
+    function resetProg() {
+      clearTimeout(timer);
+      prog.style.transition = 'none'; prog.style.width = '0%';
       requestAnimationFrame(() => requestAnimationFrame(() => {
-        progBar.style.transition = `width ${DURATION}ms linear`; progBar.style.width = '100%';
+        prog.style.transition = `width ${DELAY}ms linear`; prog.style.width = '100%';
       }));
-      slideTimeout = setTimeout(next, DURATION);
+      timer = setTimeout(() => goTo(cur + 1), DELAY);
     }
-    resetProgress();
+    resetProg();
 
-    let touchX = 0;
-    const hero = document.getElementById('hero');
-    hero.addEventListener('touchstart', e => touchX = e.changedTouches[0].screenX, { passive: true });
-    hero.addEventListener('touchend', e => {
-      const diff = touchX - e.changedTouches[0].screenX;
-      if (Math.abs(diff) > 50) diff > 0 ? next() : prev();
+    /* touch swipe hero */
+    let tx = 0;
+    const heroEl = document.getElementById('hero');
+    heroEl.addEventListener('touchstart', e => tx = e.changedTouches[0].screenX, { passive: true });
+    heroEl.addEventListener('touchend', e => {
+      const dx = tx - e.changedTouches[0].screenX;
+      if (Math.abs(dx) > 45) dx > 0 ? goTo(cur + 1) : goTo(cur - 1);
     }, { passive: true });
     document.addEventListener('keydown', e => {
-      if (e.key === 'ArrowLeft') prev();
-      if (e.key === 'ArrowRight') next();
+      if (e.key === 'ArrowLeft') goTo(cur - 1);
+      if (e.key === 'ArrowRight') goTo(cur + 1);
     });
 
-    /* ── TESTIMONIALS AUTO-SCROLL + DRAG ── */
-    const track = document.getElementById('testiTrack');
-    const dots = document.querySelectorAll('.testi-dot');
-    const cards = track.querySelectorAll('.testi-card');
-    let autoScrollInterval;
-    let isDragging = false;
-    let dragStartX = 0;
-    let dragStartScroll = 0;
-    let activeDot = 0;
-
-    function setActiveDot(idx) {
-      dots.forEach(d => d.classList.remove('active'));
-      if (dots[idx]) dots[idx].classList.add('active');
-      activeDot = idx;
+    /* ── SCROLL TRACK FUNCTION ── */
+    function scrollTrack(id, dir) {
+      const track = document.getElementById(id);
+      if (!track) return;
+      const card = track.querySelector('.mcard, .acard, .tcard');
+      const width = card ? card.offsetWidth + 20 : 300;
+      track.scrollBy({ left: dir * width, behavior: 'smooth' });
     }
 
-    // Update dot based on scroll position
-    track.addEventListener('scroll', () => {
-      const cardWidth = cards[0] ? cards[0].offsetWidth + 24 : 400; // +gap
-      const idx = Math.round(track.scrollLeft / cardWidth);
-      setActiveDot(Math.min(idx, dots.length - 1));
-    }, { passive: true });
-
-    // Dot click
-    dots.forEach(dot => {
-      dot.addEventListener('click', () => {
-        const idx = parseInt(dot.dataset.idx);
-        const cardWidth = cards[0] ? cards[0].offsetWidth + 24 : 400;
-        track.scrollTo({ left: idx * cardWidth, behavior: 'smooth' });
-        setActiveDot(idx);
+    /* ── DRAG TO SCROLL ── */
+    document.querySelectorAll('.scroll-track, .testi-track').forEach(track => {
+      let isDown = false, startX, scrollL;
+      track.addEventListener('mousedown', e => {
+        isDown = true; startX = e.pageX; scrollL = track.scrollLeft;
+        track.style.cursor = 'grabbing';
       });
+      document.addEventListener('mouseup', () => { isDown = false; track.style.cursor = 'grab'; });
+      document.addEventListener('mousemove', e => {
+        if (!isDown) return;
+        track.scrollLeft = scrollL - (e.pageX - startX);
+      });
+      let tsx = 0, tsl = 0;
+      track.addEventListener('touchstart', e => { tsx = e.touches[0].pageX; tsl = track.scrollLeft; }, { passive: true });
+      track.addEventListener('touchmove', e => {
+        track.scrollLeft = tsl - (e.touches[0].pageX - tsx);
+      }, { passive: true });
     });
 
-    // Nav buttons
-    document.getElementById('testiNext').addEventListener('click', () => {
-      const cardWidth = cards[0] ? cards[0].offsetWidth + 24 : 400;
-      track.scrollBy({ left: cardWidth, behavior: 'smooth' });
-    });
-    document.getElementById('testiPrev').addEventListener('click', () => {
-      const cardWidth = cards[0] ? cards[0].offsetWidth + 24 : 400;
-      track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-    });
+    /* ── COUNTER ANIMATION ── */
+    (function () {
+      const ease = t => 1 - Math.pow(1 - t, 3);
+      function animate(el) {
+        const target = +el.dataset.target;
+        const suffix = el.dataset.suffix || '';
+        const dur = 1600;
+        const start = performance.now();
+        (function tick(now) {
+          const p = Math.min((now - start) / dur, 1);
+          el.textContent = Math.round(ease(p) * target) + suffix;
+          if (p < 1) requestAnimationFrame(tick);
+        })(performance.now());
+      }
+      new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (!e.isIntersecting) return;
+          e.target.querySelectorAll('[data-target]').forEach(el => {
+            if (el.dataset.animated) return;
+            el.dataset.animated = '1';
+            animate(el);
+          });
+        });
+      }, { threshold: 0.3 }).observe(document.querySelector('.stats-strip'));
+    })();
 
-    // Auto scroll
-    function startAutoScroll() {
-      autoScrollInterval = setInterval(() => {
-        if (isDragging) return;
-        const maxScroll = track.scrollWidth - track.clientWidth;
-        if (track.scrollLeft >= maxScroll - 10) {
-          track.scrollTo({ left: 0, behavior: 'smooth' });
-        } else {
-          const cardWidth = cards[0] ? cards[0].offsetWidth + 24 : 400;
-          track.scrollBy({ left: cardWidth, behavior: 'smooth' });
-        }
-      }, 4000);
-    }
-    startAutoScroll();
-    track.addEventListener('mouseenter', () => clearInterval(autoScrollInterval));
-    track.addEventListener('mouseleave', () => startAutoScroll());
+    /* ── REVEAL ON SCROLL ── */
+    new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); } });
+    }, { rootMargin: '0px 0px -50px 0px', threshold: 0.05 })
+    .observe = (() => {
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); } });
+      }, { rootMargin: '0px 0px -50px 0px', threshold: 0.05 });
+      document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+      return obs.observe.bind(obs);
+    })();
 
-    // Drag to scroll
-    track.addEventListener('mousedown', e => {
-      isDragging = true; dragStartX = e.pageX; dragStartScroll = track.scrollLeft;
-      track.style.cursor = 'grabbing'; track.style.userSelect = 'none';
-    });
-    document.addEventListener('mouseup', () => {
-      isDragging = false; track.style.cursor = 'grab'; track.style.userSelect = '';
-    });
-    document.addEventListener('mousemove', e => {
-      if (!isDragging) return;
-      const dx = e.pageX - dragStartX;
-      track.scrollLeft = dragStartScroll - dx;
-    });
-
-    // Touch drag
-    let touchStartX = 0, touchStartScroll = 0;
-    track.addEventListener('touchstart', e => {
-      touchStartX = e.touches[0].pageX; touchStartScroll = track.scrollLeft;
-    }, { passive: true });
-    track.addEventListener('touchmove', e => {
-      const dx = e.touches[0].pageX - touchStartX;
-      track.scrollLeft = touchStartScroll - dx;
-    }, { passive: true });
-
-    /* ── SCROLL REVEAL ── */
-    const reveals = document.querySelectorAll('.reveal');
-    const revealObs = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); revealObs.unobserve(e.target); } });
-    }, { rootMargin: '0px 0px -40px 0px', threshold: 0.05 });
-    reveals.forEach(el => revealObs.observe(el));
-
-    /* ── SMOOTH ANCHOR SCROLL ── */
+    /* ── SMOOTH ANCHOR ── */
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', e => {
-        const target = document.querySelector(a.getAttribute('href'));
-        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+        const t = document.querySelector(a.getAttribute('href'));
+        if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
       });
     });
-
-    setTimeout(() => hero.classList.add('ready'), 800);
   </script>
 </body>
 </html>
