@@ -3,156 +3,680 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Himalayan Trekking & Climbing Blog | Expert Advice | Beyond Summit</title>
-  <meta name="description" content="Expert guides, expedition reports, and trekking advice from Nepal's leading mountaineering company. Read about Everest, K2, Annapurna, acclimatization, gear, and more.">
-  <link rel="canonical" href="https://www.beyondsummitexped.com/blog">
+  <title>Expedition Insights | Blog | Beyond Summit Expeditions</title>
+  <meta name="description" content="Expert guides, expedition reports, and trekking advice from Nepal's leading mountaineering company.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=DM+Sans:wght@300;400;500;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+
   <style>
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{--gold:#c9933a;--gold-light:#e8b564;--gold-pale:#f5e6cc;--onyx:#0d0d0f;--mist:#f7f5f2;--snow:#fff;--text:#2a2a2e;--text-muted:#7a7a82;--border:#e8e4df;--fd:'DM Serif Display',serif;--fs:'Cormorant Garamond',serif;--fb:'DM Sans',sans-serif;--tr:.4s cubic-bezier(.25,.46,.45,.94);--r:1.5rem;--rs:.75rem}
-    html{scroll-behavior:smooth}
-    body{font-family:var(--fb);color:var(--text);background:var(--snow);-webkit-font-smoothing:antialiased;overflow-x:hidden}
-    ::-webkit-scrollbar{width:5px}::-webkit-scrollbar-thumb{background:var(--gold);border-radius:10px}
-    .nav{position:fixed;top:0;left:0;width:100%;z-index:200;padding:1.5rem;transition:var(--tr);display:flex;align-items:center;justify-content:space-between}
-    .nav.scrolled{background:rgba(255,255,255,.97);backdrop-filter:blur(20px);box-shadow:0 1px 30px rgba(0,0,0,.06);padding:1rem 1.5rem}
-    @media(min-width:1024px){.nav{padding:2rem 4rem}.nav.scrolled{padding:1.2rem 4rem}}
-    .nav-logo{display:flex;align-items:center;gap:.75rem;text-decoration:none}
-    .logo-tri{width:34px;height:34px;background:var(--gold);clip-path:polygon(50% 0%,0% 100%,100% 100%);flex-shrink:0}
-    .logo-txt strong{display:block;font-family:var(--fd);font-size:1.1rem;color:#fff;transition:color var(--tr)}
-    .logo-txt span{display:block;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(255,255,255,.55);transition:color var(--tr)}
-    .nav.scrolled .logo-txt strong{color:var(--onyx)}.nav.scrolled .logo-txt span{color:var(--text-muted)}
-    .nav-links{display:none}
-    @media(min-width:1024px){.nav-links{display:flex;align-items:center;gap:2rem;list-style:none}.nav-links a{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:rgba(255,255,255,.8);transition:color var(--tr)}.nav-links a:hover,.nav-links a.active{color:var(--gold-light)}.nav.scrolled .nav-links a{color:var(--text-muted)}.nav.scrolled .nav-links a:hover,.nav.scrolled .nav-links a.active{color:var(--gold)}.nav-cta{background:var(--gold);color:#fff !important;padding:.6rem 1.4rem;border-radius:100px;transition:var(--tr)}.nav-cta:hover{background:var(--onyx) !important}}
-    .hamburger{background:none;border:none;cursor:pointer;display:flex;flex-direction:column;gap:5px;padding:.25rem}.hamburger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:var(--tr)}.nav.scrolled .hamburger span{background:var(--onyx)}.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}.hamburger.open span:nth-child(2){opacity:0}.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-    @media(min-width:1024px){.hamburger{display:none}}
-    .mob-menu{position:fixed;top:0;right:0;width:100%;max-width:320px;height:100vh;background:var(--onyx);z-index:300;padding:5rem 2.5rem 3rem;transform:translateX(100%);transition:transform .5s cubic-bezier(.77,0,.175,1);display:flex;flex-direction:column}.mob-menu.open{transform:translateX(0)}.mob-menu nav{display:flex;flex-direction:column;gap:.25rem}.mob-menu nav a{font-family:var(--fd);font-size:1.8rem;color:rgba(255,255,255,.7);text-decoration:none;padding:.4rem 0;border-bottom:1px solid rgba(255,255,255,.08);transition:color var(--tr)}.mob-menu nav a:hover{color:var(--gold-light)}.mob-menu-close{position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;cursor:pointer;color:rgba(255,255,255,.4);font-size:1.4rem}.mob-foot{margin-top:auto;padding-top:2rem;border-top:1px solid rgba(255,255,255,.08)}.mob-foot p{font-size:.7rem;color:rgba(255,255,255,.3);margin-bottom:.4rem}.mob-foot a{color:var(--gold);font-weight:700;text-decoration:none;font-size:.9rem}
-    .backdrop{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:250;opacity:0;pointer-events:none;transition:opacity var(--tr)}.backdrop.open{opacity:1;pointer-events:all}
-    /* PAGE HEADER */
-    .page-header{background:var(--onyx);padding:9rem 1.5rem 4rem;position:relative;overflow:hidden}
-    @media(min-width:1024px){.page-header{padding:11rem 4rem 5rem}}
-    .page-header-pattern{position:absolute;inset:0;opacity:.04;background-image:radial-gradient(circle,rgba(255,255,255,.8) 1px,transparent 1px);background-size:32px 32px}
-    .page-header-grd{position:absolute;bottom:0;left:0;right:0;height:60%;background:linear-gradient(to top,var(--onyx),transparent)}
-    .ph-content{position:relative;z-index:2;max-width:1200px;margin:0 auto}
-    .ph-label{display:inline-block;font-size:.65rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem;animation:fadeUp .7s ease both}
-    .ph-title{font-family:var(--fd);font-size:clamp(2.8rem,7vw,6rem);line-height:.95;letter-spacing:-.02em;color:#fff;animation:fadeUp .7s ease .1s both}
-    .ph-title em{font-style:italic;color:var(--gold-light);font-family:var(--fs)}
-    .ph-sub{color:rgba(255,255,255,.5);font-size:1rem;max-width:480px;line-height:1.7;margin-top:1rem;animation:fadeUp .7s ease .2s both}
-    @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
-    /* LAYOUT */
-    .blog-layout{padding:4rem 1.5rem}
-    @media(min-width:768px){.blog-layout{padding:5rem 2rem}}
-    @media(min-width:1024px){.blog-layout{padding:6rem 4rem}}
-    .blog-wrap{max-width:1200px;margin:0 auto;display:grid;gap:3rem}
-    @media(min-width:1024px){.blog-wrap{grid-template-columns:1fr 320px;gap:4rem}}
-    /* CATEGORIES */
-    .cat-bar{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:2.5rem}
-    .cat-btn{background:var(--mist);border:1.5px solid var(--border);color:var(--text-muted);padding:.4rem 1rem;border-radius:100px;font-family:var(--fb);font-size:.72rem;font-weight:700;cursor:pointer;transition:var(--tr)}
-    .cat-btn:hover,.cat-btn.active{background:var(--gold);border-color:var(--gold);color:#fff}
-    /* FEATURED POST */
-    .featured-post{border-radius:var(--r);overflow:hidden;margin-bottom:2.5rem;text-decoration:none;display:block;border:1px solid var(--border);transition:box-shadow var(--tr)}
-    .featured-post:hover{box-shadow:0 16px 45px rgba(0,0,0,.1)}
-    @media(min-width:768px){.featured-post{display:grid;grid-template-columns:1fr 1fr}}
-    .featured-img{position:relative;aspect-ratio:16/10;overflow:hidden}
-    @media(min-width:768px){.featured-img{aspect-ratio:auto}}
-    .featured-img img{width:100%;height:100%;object-fit:cover;transition:transform 1s ease}
-    .featured-post:hover .featured-img img{transform:scale(1.05)}
-    .featured-img-overlay{position:absolute;inset:0;background:linear-gradient(to right,transparent,rgba(10,10,12,.3))}
-    .featured-body{padding:2rem 1.75rem;display:flex;flex-direction:column;justify-content:center}
-    .featured-badge{display:inline-block;background:var(--gold-pale);color:var(--gold);font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:.3rem .8rem;border-radius:100px;margin-bottom:1rem;align-self:flex-start}
-    .featured-title{font-family:var(--fd);font-size:clamp(1.4rem,3vw,2rem);color:var(--onyx);line-height:1.15;margin-bottom:.75rem;transition:color var(--tr)}
-    .featured-post:hover .featured-title{color:var(--gold)}
-    .featured-excerpt{font-size:.88rem;color:var(--text-muted);line-height:1.7;margin-bottom:1.25rem}
-    .post-meta{display:flex;align-items:center;gap:.75rem;font-size:.72rem;color:var(--text-muted)}
-    .post-meta-dot{width:4px;height:4px;border-radius:50%;background:var(--border)}
-    .read-more{display:inline-flex;align-items:center;gap:.4rem;color:var(--gold);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-top:1rem;transition:gap var(--tr)}
-    .featured-post:hover .read-more{gap:.7rem}
-    /* POSTS GRID */
-    .posts-grid{display:grid;gap:2rem}
-    @media(min-width:640px){.posts-grid{grid-template-columns:repeat(2,1fr)}}
-    .post-card{border-radius:var(--rs);overflow:hidden;border:1px solid var(--border);text-decoration:none;display:block;transition:transform var(--tr),box-shadow var(--tr)}
-    .post-card:hover{transform:translateY(-4px);box-shadow:0 12px 35px rgba(0,0,0,.09)}
-    .post-img{aspect-ratio:16/9;overflow:hidden}
-    .post-img img{width:100%;height:100%;object-fit:cover;transition:transform 1s ease}
-    .post-card:hover .post-img img{transform:scale(1.06)}
-    .post-body{padding:1.25rem 1.5rem 1.5rem}
-    .post-cat{font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;display:block}
-    .post-title{font-family:var(--fd);font-size:1.2rem;color:var(--onyx);line-height:1.25;margin-bottom:.6rem;transition:color var(--tr)}
-    .post-card:hover .post-title{color:var(--gold)}
-    .post-excerpt{font-size:.82rem;color:var(--text-muted);line-height:1.65;margin-bottom:.9rem}
-    .post-footer{display:flex;align-items:center;justify-content:space-between;padding-top:.9rem;border-top:1px solid var(--border)}
-    .post-date{font-size:.7rem;color:var(--text-muted)}
-    .post-read{font-size:.7rem;color:var(--text-muted)}
-    /* SIDEBAR */
-    .sidebar{display:flex;flex-direction:column;gap:1.5rem}
-    .sidebar-widget{background:var(--mist);border-radius:var(--r);padding:1.5rem;border:1px solid var(--border)}
-    .sw-title{font-family:var(--fd);font-size:1.15rem;color:var(--onyx);margin-bottom:1.1rem}
-    .tag-cloud{display:flex;flex-wrap:wrap;gap:.5rem}
-    .tag{background:#fff;border:1.5px solid var(--border);color:var(--text-muted);padding:.3rem .8rem;border-radius:100px;font-size:.72rem;font-weight:600;cursor:pointer;transition:var(--tr);text-decoration:none}
-    .tag:hover{background:var(--gold);border-color:var(--gold);color:#fff}
-    .popular-list{display:flex;flex-direction:column;gap:.75rem}
-    .pop-item{display:flex;gap:.9rem;text-decoration:none;align-items:center}
-    .pop-img{width:70px;height:55px;border-radius:.5rem;overflow:hidden;flex-shrink:0}
-    .pop-img img{width:100%;height:100%;object-fit:cover}
-    .pop-title{font-size:.82rem;font-weight:600;color:var(--text);line-height:1.35;transition:color var(--tr)}
-    .pop-item:hover .pop-title{color:var(--gold)}
-    .pop-date{font-size:.68rem;color:var(--text-muted);margin-top:.25rem}
-    .newsletter-widget{background:var(--onyx);border-radius:var(--r);padding:1.75rem}
-    .nw-title{font-family:var(--fd);font-size:1.3rem;color:#fff;margin-bottom:.5rem}
-    .nw-sub{font-size:.82rem;color:rgba(255,255,255,.45);line-height:1.6;margin-bottom:1.25rem}
-    .nw-form{display:flex;flex-direction:column;gap:.6rem}
-    .nw-input{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:.5rem;padding:.7rem 1rem;color:#fff;font-family:var(--fb);font-size:.85rem;outline:none;transition:border-color var(--tr)}
-    .nw-input::placeholder{color:rgba(255,255,255,.3)}
-    .nw-input:focus{border-color:rgba(201,147,58,.5)}
-    .nw-btn{background:var(--gold);color:#fff;border:none;border-radius:.5rem;padding:.75rem;font-family:var(--fb);font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:var(--tr)}
-    .nw-btn:hover{background:var(--gold-light)}
-    /* LOAD MORE */
-    .load-more{text-align:center;margin-top:2.5rem}
-    .btn-outline-gold{display:inline-flex;align-items:center;gap:.6rem;background:transparent;border:2px solid var(--gold);color:var(--gold);padding:.85rem 2rem;border-radius:100px;font-family:var(--fb);font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:var(--tr)}
-    .btn-outline-gold:hover{background:var(--gold);color:#fff}
-    /* FOOTER */
-    .footer{background:var(--onyx);color:rgba(255,255,255,.5);padding:3rem 1.5rem}
-    @media(min-width:1024px){.footer{padding:3rem 4rem}}
-    .footer-inner{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:space-between;align-items:center}
-    .footer a{color:var(--gold-light);text-decoration:none}
-    .footer-links{display:flex;gap:1.5rem;flex-wrap:wrap}
-    .footer-links a{font-size:.75rem;color:rgba(255,255,255,.35);transition:color var(--tr)}
-    .footer-links a:hover{color:var(--gold-light)}
-    p.copy{font-size:.75rem}
-    .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:translateY(0)}.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #faf7f2;
+      --cream-dark: #f2ede4;
+      --parchment: #ede8de;
+      --amber: #b8651a;
+      --amber-light: #d4812a;
+      --amber-pale: #f0c080;
+      --charcoal: #1c1814;
+      --stone: #3d3530;
+      --muted: #7a6e65;
+      --border: rgba(60,45,30,0.1);
+      --border-strong: rgba(60,45,30,0.18);
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans: 'DM Sans', system-ui, sans-serif;
+      --mono: 'DM Mono', monospace;
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+      --shadow-sm: 0 2px 12px rgba(60,40,20,0.08);
+      --shadow-md: 0 8px 32px rgba(60,40,20,0.12);
+      --shadow-lg: 0 20px 60px rgba(60,40,20,0.16);
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: var(--sans);
+      background: var(--cream);
+      color: var(--charcoal);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    img { display: block; }
+
+    /* ═══════════ NAV ═══════════ */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 800;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.5rem 4rem;
+      transition: all 0.5s var(--ease);
+      background: transparent;
+    }
+    nav.scrolled {
+      background: rgba(250,247,242,0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 4rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .nav-logo { display: flex; align-items: center; gap: 0.75rem; }
+    .nav-logo-icon { width: 30px; height: 30px; }
+    .nav-logo-text {
+      font-family: var(--serif); font-size: 1.4rem; font-weight: 700;
+      color: var(--cream); letter-spacing: 0.01em;
+      transition: color 0.4s;
+    }
+    nav.scrolled .nav-logo-text { color: var(--charcoal); }
+    .nav-logo-text em {
+      display: block; font-style: normal;
+      font-family: var(--mono); font-size: 0.52rem;
+      letter-spacing: 0.4em; text-transform: uppercase;
+      color: rgba(250,247,242,0.7); margin-top: 2px;
+      transition: color 0.4s;
+    }
+    nav.scrolled .nav-logo-text em { color: var(--amber); }
+
+    .nav-links {
+      display: flex; align-items: center; gap: 2rem;
+    }
+    .nav-links a {
+      font-family: var(--sans); font-size: 0.875rem; font-weight: 400;
+      color: rgba(250,247,242,0.85); transition: color 0.3s;
+      letter-spacing: 0.02em;
+    }
+    nav.scrolled .nav-links a { color: var(--stone); }
+    .nav-links a:hover { color: var(--amber-light) !important; }
+    .nav-links a.active { color: var(--amber-pale) !important; }
+    nav.scrolled .nav-links a.active { color: var(--amber) !important; }
+    .nav-cta {
+      background: var(--amber);
+      color: white !important;
+      padding: 0.6rem 1.5rem;
+      font-size: 0.82rem !important;
+      font-weight: 500 !important;
+      letter-spacing: 0.04em !important;
+      transition: background 0.3s, transform 0.3s !important;
+    }
+    .nav-cta:hover { background: var(--amber-light) !important; transform: translateY(-1px); color: white !important; }
+
+    .nav-hamburger {
+      display: none; flex-direction: column; justify-content: center;
+      width: 44px; height: 44px; gap: 5px; cursor: pointer;
+      background: rgba(250,247,242,0.12);
+      border: 1px solid rgba(250,247,242,0.25);
+      border-radius: 6px; padding: 0 12px;
+      transition: all 0.3s;
+    }
+    nav.scrolled .nav-hamburger { background: rgba(60,40,20,0.06); border-color: var(--border); }
+    .nav-hamburger span {
+      display: block; width: 100%; height: 1.5px;
+      background: white; transition: all 0.4s var(--ease);
+    }
+    nav.scrolled .nav-hamburger span { background: var(--charcoal); }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+    /* Mobile Drawer */
+    .mobile-drawer {
+      position: fixed; inset: 0; z-index: 700;
+      background: var(--cream);
+      display: flex; flex-direction: column;
+      padding: 6rem 2rem 2rem;
+      transform: translateX(100%);
+      transition: transform 0.5s var(--ease);
+    }
+    .mobile-drawer.open { transform: none; }
+    .mobile-drawer-link {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--border);
+      font-family: var(--serif); font-size: 1.8rem; font-weight: 400;
+      color: var(--charcoal);
+      opacity: 0; transform: translateX(20px);
+      transition: opacity 0.4s, transform 0.4s, color 0.3s;
+    }
+    .mobile-drawer.open .mobile-drawer-link:nth-child(1) { opacity: 1; transform: none; transition-delay: 0.06s; }
+    .mobile-drawer.open .mobile-drawer-link:nth-child(2) { opacity: 1; transform: none; transition-delay: 0.1s; }
+    .mobile-drawer.open .mobile-drawer-link:nth-child(3) { opacity: 1; transform: none; transition-delay: 0.14s; }
+    .mobile-drawer.open .mobile-drawer-link:nth-child(4) { opacity: 1; transform: none; transition-delay: 0.18s; }
+    .mobile-drawer.open .mobile-drawer-link:nth-child(5) { opacity: 1; transform: none; transition-delay: 0.22s; }
+    .mobile-drawer-link:hover { color: var(--amber); }
+    .mobile-drawer-link.highlight { color: var(--amber); }
+
+    /* ═══════════ PAGE HEADER ═══════════ */
+    .page-header {
+      position: relative;
+      background: var(--charcoal);
+      min-height: 52vh;
+      display: flex; align-items: flex-end;
+      overflow: hidden;
+      padding-bottom: 5rem;
+    }
+    .page-header-bg {
+      position: absolute; inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1521334884481-35cb3c078044?q=80&w=1600&auto=format&fit=crop');
+      background-size: cover; background-position: center 40%;
+      filter: brightness(0.35) saturate(0.8);
+    }
+    .page-header-overlay {
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(to top, rgba(28,24,20,0.95) 0%, rgba(28,24,20,0.4) 50%, rgba(28,24,20,0.2) 100%),
+        linear-gradient(to right, rgba(28,24,20,0.7) 0%, transparent 60%);
+    }
+    .page-header-pattern {
+      position: absolute; inset: 0;
+      background-image: radial-gradient(circle, rgba(240,192,128,0.04) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+    .page-header-content {
+      position: relative; z-index: 2;
+      max-width: 1300px; margin: 0 auto;
+      padding: 0 4rem;
+      width: 100%;
+    }
+    .ph-eyebrow {
+      font-family: var(--mono); font-size: 0.6rem;
+      letter-spacing: 0.35em; text-transform: uppercase;
+      color: var(--amber); display: block;
+      margin-bottom: 0.875rem;
+      opacity: 0; animation: riseUp 0.9s 0.2s var(--ease) forwards;
+    }
+    .ph-title {
+      font-family: var(--serif);
+      font-size: clamp(3.2rem, 7vw, 6.5rem);
+      font-weight: 400; line-height: 0.92;
+      letter-spacing: -0.02em; color: white;
+      margin-bottom: 1.25rem;
+      opacity: 0; animation: riseUp 1s 0.35s var(--ease) forwards;
+    }
+    .ph-title em { font-style: italic; color: var(--amber-pale); }
+    .ph-desc {
+      font-family: var(--sans); font-size: 0.92rem;
+      color: rgba(255,255,255,0.45); line-height: 1.75;
+      max-width: 460px;
+      opacity: 0; animation: riseUp 0.9s 0.5s var(--ease) forwards;
+    }
+
+    /* scroll indicator */
+    .ph-scroll-hint {
+      position: absolute; bottom: 2rem; right: 4rem; z-index: 2;
+      display: flex; align-items: center; gap: 0.6rem;
+      font-family: var(--mono); font-size: 0.52rem;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: rgba(255,255,255,0.25);
+      opacity: 0; animation: riseUp 0.9s 0.7s var(--ease) forwards;
+    }
+    .ph-scroll-line {
+      width: 40px; height: 1px; background: rgba(255,255,255,0.15);
+    }
+
+    @keyframes riseUp { to { opacity: 1; transform: translateY(0); } }
+    .ph-eyebrow, .ph-title, .ph-desc { transform: translateY(20px); }
+
+    /* ═══════════ LAYOUT ═══════════ */
+    .blog-layout {
+      max-width: 1300px; margin: 0 auto;
+      padding: 5rem 4rem 7rem;
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    /* ═══════════ CATEGORIES ═══════════ */
+    .cat-filter {
+      display: flex; gap: 0.5rem; flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+    .cat-btn {
+      font-family: var(--mono); font-size: 0.56rem;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--muted);
+      background: white; border: 1.5px solid var(--border-strong);
+      padding: 0.45rem 1.1rem;
+      cursor: pointer; transition: all 0.3s;
+    }
+    .cat-btn:hover { border-color: var(--amber); color: var(--amber); }
+    .cat-btn.active {
+      background: var(--charcoal); border-color: var(--charcoal);
+      color: var(--amber-pale);
+    }
+
+    /* ═══════════ FEATURED POST ═══════════ */
+    .featured-card {
+      display: grid; grid-template-columns: 1fr 1fr;
+      border: 1px solid var(--border-strong);
+      overflow: hidden; margin-bottom: 3rem;
+      text-decoration: none;
+      transition: box-shadow 0.5s var(--ease), transform 0.5s var(--ease);
+      background: white;
+    }
+    .featured-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+    .featured-img-wrap { position: relative; overflow: hidden; aspect-ratio: 4/3; }
+    .featured-img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 1.5s var(--ease), filter 0.6s;
+      filter: brightness(0.88) saturate(1.1);
+    }
+    .featured-card:hover .featured-img { transform: scale(1.07); filter: brightness(1) saturate(1.15); }
+    .featured-img-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to right, transparent 60%, rgba(28,24,20,0.2));
+    }
+    .featured-badge {
+      position: absolute; top: 1.25rem; left: 1.25rem;
+      font-family: var(--mono); font-size: 0.48rem;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      background: var(--amber); color: white;
+      padding: 0.3rem 0.8rem;
+    }
+    .featured-body {
+      padding: 2.5rem 2.25rem;
+      display: flex; flex-direction: column; justify-content: center;
+      background: white;
+    }
+    .post-eyebrow {
+      font-family: var(--mono); font-size: 0.52rem;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--amber); margin-bottom: 0.75rem; display: block;
+    }
+    .featured-title {
+      font-family: var(--serif); font-size: clamp(1.4rem, 2.5vw, 2rem);
+      font-weight: 400; color: var(--charcoal); line-height: 1.15;
+      margin-bottom: 0.9rem;
+      transition: color 0.3s;
+    }
+    .featured-card:hover .featured-title { color: var(--amber); }
+    .featured-excerpt {
+      font-family: var(--sans); font-size: 0.85rem;
+      color: var(--muted); line-height: 1.75;
+      margin-bottom: 1.5rem; flex: 1;
+    }
+    .post-meta {
+      display: flex; align-items: center; gap: 0.75rem;
+      font-family: var(--mono); font-size: 0.52rem;
+      letter-spacing: 0.1em; color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+    .meta-sep { color: var(--border-strong); }
+    .read-more-link {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-family: var(--sans); font-size: 0.78rem; font-weight: 500;
+      color: var(--amber);
+      border-bottom: 1px solid rgba(184,101,26,0.3); padding-bottom: 2px;
+      transition: gap 0.3s, border-color 0.3s;
+      align-self: flex-start;
+    }
+    .featured-card:hover .read-more-link { gap: 0.8rem; border-color: var(--amber); }
+
+    /* ═══════════ POSTS GRID ═══════════ */
+    .posts-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1.75rem;
+    }
+
+    .post-card {
+      background: white; border: 1px solid var(--border);
+      overflow: hidden; text-decoration: none;
+      display: flex; flex-direction: column;
+      transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
+    }
+    .post-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+
+    .post-img-wrap { position: relative; aspect-ratio: 16/10; overflow: hidden; }
+    .post-img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 1.5s var(--ease), filter 0.6s;
+      filter: brightness(0.85) saturate(1.05);
+    }
+    .post-card:hover .post-img { transform: scale(1.07); filter: brightness(0.95); }
+
+    .post-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+    .post-cat {
+      font-family: var(--mono); font-size: 0.48rem;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--amber); margin-bottom: 0.6rem; display: block;
+    }
+    .post-title {
+      font-family: var(--serif); font-size: 1.2rem; font-weight: 400;
+      color: var(--charcoal); line-height: 1.25;
+      margin-bottom: 0.65rem; transition: color 0.3s;
+    }
+    .post-card:hover .post-title { color: var(--amber); }
+    .post-excerpt {
+      font-family: var(--sans); font-size: 0.8rem;
+      color: var(--muted); line-height: 1.65;
+      margin-bottom: 1.25rem; flex: 1;
+    }
+    .post-footer {
+      display: flex; align-items: center; justify-content: space-between;
+      padding-top: 1rem; border-top: 1px solid var(--border);
+      font-family: var(--mono); font-size: 0.5rem;
+      letter-spacing: 0.1em; color: var(--muted);
+    }
+
+    /* Load more */
+    .load-more-wrap {
+      margin-top: 3rem; text-align: center;
+      grid-column: 1 / -1;
+    }
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      background: transparent; border: 1.5px solid var(--border-strong);
+      color: var(--stone);
+      padding: 0.85rem 2.25rem;
+      font-family: var(--sans); font-size: 0.8rem; font-weight: 500;
+      letter-spacing: 0.04em;
+      cursor: pointer; transition: all 0.35s;
+    }
+    .btn-outline:hover { border-color: var(--amber); color: var(--amber); background: rgba(184,101,26,0.04); }
+
+    /* ═══════════ SIDEBAR ═══════════ */
+    .sidebar { display: flex; flex-direction: column; gap: 2rem; position: sticky; top: 6rem; }
+
+    .sidebar-widget {
+      background: white; border: 1px solid var(--border);
+      padding: 1.75rem;
+    }
+    .sw-title {
+      font-family: var(--serif); font-size: 1.15rem; font-weight: 400;
+      color: var(--charcoal); margin-bottom: 1.25rem;
+    }
+
+    /* Newsletter */
+    .newsletter-widget {
+      background: var(--charcoal);
+      padding: 2rem;
+    }
+    .nw-title {
+      font-family: var(--serif); font-size: 1.4rem; font-weight: 400;
+      color: white; margin-bottom: 0.4rem;
+    }
+    .nw-title em { font-style: italic; color: var(--amber-pale); }
+    .nw-desc {
+      font-family: var(--sans); font-size: 0.8rem;
+      color: rgba(255,255,255,0.38); line-height: 1.65;
+      margin-bottom: 1.5rem;
+    }
+    .nw-input {
+      display: block; width: 100%;
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+      padding: 0.75rem 1rem;
+      font-family: var(--sans); font-size: 0.82rem;
+      color: white; outline: none;
+      transition: border-color 0.3s;
+      margin-bottom: 0.65rem;
+    }
+    .nw-input::placeholder { color: rgba(255,255,255,0.25); }
+    .nw-input:focus { border-color: rgba(184,101,26,0.5); }
+    .nw-btn {
+      display: block; width: 100%;
+      background: var(--amber); color: white; border: none;
+      padding: 0.8rem;
+      font-family: var(--sans); font-size: 0.78rem; font-weight: 500;
+      letter-spacing: 0.04em;
+      cursor: pointer; transition: background 0.3s;
+    }
+    .nw-btn:hover { background: var(--amber-light); }
+
+    /* Popular posts */
+    .popular-list { display: flex; flex-direction: column; gap: 1.1rem; }
+    .pop-item {
+      display: flex; gap: 1rem; align-items: flex-start;
+      text-decoration: none; transition: opacity 0.3s;
+    }
+    .pop-item:hover { opacity: 0.75; }
+    .pop-thumb {
+      width: 68px; height: 54px; flex-shrink: 0; overflow: hidden;
+    }
+    .pop-thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .pop-title {
+      font-family: var(--sans); font-size: 0.8rem; font-weight: 500;
+      color: var(--charcoal); line-height: 1.4;
+      transition: color 0.3s;
+    }
+    .pop-item:hover .pop-title { color: var(--amber); }
+    .pop-date {
+      font-family: var(--mono); font-size: 0.5rem;
+      letter-spacing: 0.1em; color: var(--muted); margin-top: 0.3rem;
+    }
+
+    /* Tag cloud */
+    .tag-cloud { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .tag {
+      font-family: var(--mono); font-size: 0.5rem;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--muted);
+      border: 1px solid var(--border-strong);
+      background: var(--cream); padding: 0.35rem 0.85rem;
+      transition: all 0.3s; cursor: pointer; text-decoration: none;
+    }
+    .tag:hover { border-color: var(--amber); color: var(--amber); background: rgba(184,101,26,0.05); }
+
+    /* CTA widget */
+    .cta-widget {
+      background: var(--charcoal);
+      padding: 2rem; text-align: center;
+    }
+    .cta-widget-eyebrow {
+      font-family: var(--mono); font-size: 0.5rem;
+      letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--amber); margin-bottom: 0.6rem; display: block;
+    }
+    .cta-widget-title {
+      font-family: var(--serif); font-size: 1.5rem; font-weight: 400;
+      color: white; margin-bottom: 0.5rem;
+    }
+    .cta-widget-title em { font-style: italic; color: var(--amber-pale); }
+    .cta-widget-desc {
+      font-family: var(--sans); font-size: 0.78rem;
+      color: rgba(255,255,255,0.38); line-height: 1.65;
+      margin-bottom: 1.5rem;
+    }
+    .cta-widget-btn {
+      display: block;
+      background: var(--amber); color: white; border: none;
+      padding: 0.875rem 1.5rem;
+      font-family: var(--sans); font-size: 0.78rem; font-weight: 500;
+      letter-spacing: 0.04em; text-decoration: none;
+      transition: background 0.3s;
+    }
+    .cta-widget-btn:hover { background: var(--amber-light); }
+
+    /* ═══════════ QUOTE STRIP ═══════════ */
+    .quote-strip {
+      background: var(--cream-dark);
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      padding: 3.5rem 4rem;
+      text-align: center;
+    }
+    .quote-strip blockquote {
+      font-family: var(--serif); font-size: clamp(1.2rem, 2vw, 1.7rem);
+      font-weight: 400; font-style: italic;
+      color: var(--stone); line-height: 1.5; max-width: 720px;
+      margin: 0 auto 0.75rem;
+    }
+    .quote-strip blockquote em { font-style: normal; color: var(--amber); }
+    .quote-attr {
+      font-family: var(--mono); font-size: 0.55rem;
+      letter-spacing: 0.25em; text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ═══════════ CONTACT STRIP ═══════════ */
+    .contact-strip { background: var(--cream-dark); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .contact-inner { max-width: 1300px; margin: 0 auto; padding: 0 4rem; display: grid; grid-template-columns: repeat(3, 1fr); }
+    .contact-item {
+      display: flex; align-items: center; gap: 1.25rem;
+      padding: 2.5rem 2rem; border-right: 1px solid var(--border);
+      transition: background 0.3s;
+    }
+    .contact-item:first-child { padding-left: 0; }
+    .contact-item:last-child { border-right: none; }
+    .contact-item:hover { background: rgba(184,101,26,0.04); }
+    .contact-icon {
+      width: 42px; height: 42px; flex-shrink: 0;
+      background: white; border: 1px solid var(--border); border-radius: 8px;
+      display: flex; align-items: center; justify-content: center; color: var(--amber);
+    }
+    .contact-label { font-family: var(--mono); font-size: 0.5rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.3rem; }
+    .contact-value { font-family: var(--sans); font-size: 0.9rem; font-weight: 500; color: var(--charcoal); }
+    .contact-value a { transition: color 0.3s; }
+    .contact-value a:hover { color: var(--amber); }
+
+    /* ═══════════ FOOTER ═══════════ */
+    footer {
+      background: var(--charcoal);
+      border-top: 1px solid rgba(255,255,255,0.05);
+      padding: 5rem 4rem 2.5rem;
+    }
+    .footer-grid {
+      max-width: 1300px; margin: 0 auto;
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 4rem; margin-bottom: 4rem; padding-bottom: 4rem;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .footer-logo-text { font-family: var(--serif); font-size: 1.3rem; font-weight: 700; color: white; }
+    .footer-logo-text em { display: block; font-style: normal; font-family: var(--mono); font-size: 0.5rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--amber); margin-top: 3px; }
+    .footer-desc { font-family: var(--sans); font-size: 0.8rem; color: rgba(255,255,255,0.38); line-height: 1.75; margin-top: 1rem; }
+    .footer-contact { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; }
+    .footer-contact a { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.06em; color: rgba(255,255,255,0.35); display: flex; align-items: center; gap: 0.5rem; transition: color 0.3s; }
+    .footer-contact a:hover { color: var(--amber-pale); }
+    .footer-col h4 { font-family: var(--mono); font-size: 0.52rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--amber); margin-bottom: 1.25rem; }
+    .footer-col ul { display: flex; flex-direction: column; gap: 0.6rem; }
+    .footer-col a { font-family: var(--sans); font-size: 0.8rem; color: rgba(255,255,255,0.38); transition: color 0.3s, padding-left 0.3s; }
+    .footer-col a:hover { color: rgba(255,255,255,0.7); padding-left: 4px; }
+    .footer-bottom { max-width: 1300px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+    .footer-bottom p { font-family: var(--mono); font-size: 0.55rem; letter-spacing: 0.1em; color: rgba(255,255,255,0.18); }
+    .footer-socials { display: flex; gap: 0.75rem; }
+    .social-ico { width: 32px; height: 32px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.28); transition: all 0.3s; }
+    .social-ico:hover { border-color: var(--amber); color: var(--amber); }
+
+    /* WhatsApp */
+    .wa-float {
+      position: fixed; bottom: 2rem; right: 2rem; z-index: 500;
+      width: 52px; height: 52px; border-radius: 50%; background: #25D366;
+      display: flex; align-items: center; justify-content: center; color: white;
+      box-shadow: 0 6px 20px rgba(37,211,102,0.4);
+      transition: transform 0.4s var(--ease);
+    }
+    .wa-float:hover { transform: scale(1.1); }
+
+    /* Reveal */
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
+    .reveal.in { opacity: 1; transform: none; }
+    .reveal.d1 { transition-delay: 0.1s; }
+    .reveal.d2 { transition-delay: 0.2s; }
+    .reveal.d3 { transition-delay: 0.3s; }
+
+    /* ═══════════ RESPONSIVE ═══════════ */
+    @media (max-width: 1100px) {
+      .blog-layout { grid-template-columns: 1fr; gap: 4rem; }
+      .sidebar { position: static; }
+      .posts-grid { grid-template-columns: 1fr 1fr; }
+      .featured-card { grid-template-columns: 1fr; }
+      .featured-img-wrap { aspect-ratio: 16/9; }
+    }
+    @media (max-width: 1024px) {
+      nav { padding: 1.25rem 2rem; }
+      nav.scrolled { padding: 0.875rem 2rem; }
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      .page-header-content { padding: 0 2.5rem; }
+      .blog-layout { padding: 4rem 2.5rem 6rem; }
+      .contact-inner { grid-template-columns: 1fr; padding: 0 2.5rem; }
+      .contact-item { border-right: none; border-bottom: 1px solid var(--border); padding: 1.75rem 0; }
+      .contact-item:last-child { border-bottom: none; }
+      footer { padding: 4rem 2.5rem 2rem; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+      .quote-strip { padding: 3rem 2.5rem; }
+    }
+    @media (max-width: 640px) {
+      .blog-layout { padding: 3rem 1.5rem 5rem; }
+      .posts-grid { grid-template-columns: 1fr; }
+      .page-header-content { padding: 0 1.5rem; }
+      .page-header { min-height: 46vh; padding-bottom: 4rem; }
+      .contact-inner { padding: 0 1.5rem; }
+      .quote-strip { padding: 2.5rem 1.5rem; }
+      footer { padding: 3.5rem 1.5rem 1.5rem; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+      .ph-scroll-hint { right: 1.5rem; }
+    }
   </style>
 </head>
 <body>
-<div class="backdrop" id="backdrop" onclick="closeMob()"></div>
-<div class="mob-menu" id="mobMenu">
-  <button class="mob-menu-close" onclick="closeMob()">✕</button>
-  <nav><a href="index.html">Home</a><a href="expeditions.html">Expeditions</a><a href="trekking.html">Trekking</a><a href="guides.html">Our Guides</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></nav>
-  <div class="mob-foot"><p>Call Us</p><a href="tel:+9779811157421">+977-9811157421</a></div>
-</div>
-<nav class="nav" id="nav">
-  <a href="index.html" class="nav-logo"><div class="logo-tri"></div><div class="logo-txt"><strong>Beyond Summit</strong><span>Elite Expeditions · Nepal</span></div></a>
-  <ul class="nav-links"><li><a href="expeditions.html">Expeditions</a></li><li><a href="trekking.html">Trekking</a></li><li><a href="guides.html">Guides</a></li><li><a href="blog.html" class="active">Blog</a></li><li><a href="contact.html" class="nav-cta">Book Now</a></li></ul>
-  <button class="hamburger" id="ham" onclick="toggleMob()"><span></span><span></span><span></span></button>
-</nav>
 
-<div class="page-header">
-  <div class="page-header-pattern"></div>
-  <div class="page-header-grd"></div>
-  <div class="ph-content">
-    <span class="ph-label">Expert Knowledge</span>
-    <h1 class="ph-title">Expedition<br><em>Insights</em></h1>
-    <p class="ph-sub">Guides, trip reports, gear advice and news from the field — written by people who live and breathe the Himalayas.</p>
+  <!-- WhatsApp -->
+  <a href="https://wa.me/9779811157421" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <a href="index.html" class="mobile-drawer-link" onclick="closeDrawer()">Home <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <a href="index.html#expeditions" class="mobile-drawer-link" onclick="closeDrawer()">Expeditions <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <a href="index.html#trekking" class="mobile-drawer-link" onclick="closeDrawer()">Trekking <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <a href="guides.html" class="mobile-drawer-link" onclick="closeDrawer()">Guides <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <a href="contact.html" class="mobile-drawer-link highlight" onclick="closeDrawer()">Book Your Ascent →</a>
   </div>
-</div>
 
-<div class="blog-layout">
-  <div class="blog-wrap">
-    <!-- MAIN -->
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">
+      <svg class="nav-logo-icon" viewBox="0 0 40 40" fill="none">
+        <path d="M20 4 L4 36 L36 36 Z" stroke="rgba(240,192,128,0.8)" stroke-width="1.2" fill="none"/>
+        <path d="M20 4 L12 36 L20 30 Z" fill="rgba(240,192,128,0.25)"/>
+        <circle cx="20" cy="4" r="1.8" fill="rgba(240,192,128,0.9)"/>
+      </svg>
+      <div class="nav-logo-text">BEYOND SUMMIT<em>Expeditions · Nepal</em></div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#expeditions">Expeditions</a>
+      <a href="index.html#trekking">Trekking</a>
+      <a href="index.html#eightthousanders">8000ers</a>
+      <a href="guides.html">Guides</a>
+      <a href="about.html">About</a>
+      <a href="blog.html" class="active">Blog</a>
+      <a href="contact.html" class="nav-cta">Book Your Ascent →</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <div class="page-header-bg"></div>
+    <div class="page-header-overlay"></div>
+    <div class="page-header-pattern"></div>
+    <div class="page-header-content">
+      <span class="ph-eyebrow">From The Field</span>
+      <h1 class="ph-title">Expedition<br><em>Insights</em></h1>
+      <p class="ph-desc">Guides, trip reports, gear advice and news written by people who live and breathe the Himalayas.</p>
+    </div>
+    <div class="ph-scroll-hint">
+      <div class="ph-scroll-line"></div>
+      Scroll to Read
+    </div>
+  </header>
+
+  <!-- BLOG LAYOUT -->
+  <div class="blog-layout">
+
+    <!-- MAIN CONTENT -->
     <main>
-      <!-- CATEGORIES -->
-      <div class="cat-bar">
-        <button class="cat-btn active" onclick="filterCat('all',this)">All</button>
+      <!-- CATEGORY FILTER -->
+      <div class="cat-filter reveal">
+        <button class="cat-btn active" onclick="filterCat('all',this)">All Posts</button>
         <button class="cat-btn" onclick="filterCat('guide',this)">Trekking Guides</button>
         <button class="cat-btn" onclick="filterCat('expedition',this)">Expedition Planning</button>
         <button class="cat-btn" onclick="filterCat('safety',this)">Safety & Health</button>
@@ -160,18 +684,30 @@
         <button class="cat-btn" onclick="filterCat('gear',this)">Gear</button>
       </div>
 
-      <!-- FEATURED -->
-      <a href="blog-article.html" class="featured-post reveal" data-cat="guide">
-        <div class="featured-img">
-          <img src="https://images.unsplash.com/photo-1521334884481-35cb3c078044?q=80&w=900&auto=format&fit=crop" alt="Everest Base Camp trail at dawn Khumbu Nepal">
+      <!-- FEATURED POST -->
+      <a href="blog-article.html" class="featured-card reveal" id="featured-post" data-cat="guide">
+        <div class="featured-img-wrap">
+          <img class="featured-img"
+            src="https://images.unsplash.com/photo-1521334884481-35cb3c078044?q=80&w=900&auto=format&fit=crop"
+            alt="Everest Base Camp trail at dawn">
           <div class="featured-img-overlay"></div>
+          <span class="featured-badge">Featured</span>
         </div>
         <div class="featured-body">
-          <span class="featured-badge">Featured · Trekking Guide</span>
+          <span class="post-eyebrow">Trekking Guide</span>
           <h2 class="featured-title">Complete Guide to Everest Base Camp Trek 2026</h2>
-          <p class="featured-excerpt">Everything you need to plan the trek of a lifetime — 14-day itinerary, permits, costs, gear list and expert acclimatization advice from guides who've walked this trail 400+ times.</p>
-          <div class="post-meta"><span>January 20, 2026</span><span class="post-meta-dot"></span><span>12 min read</span></div>
-          <div class="read-more">Read Full Guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          <p class="featured-excerpt">Everything you need to plan the trek of a lifetime — 14-day itinerary, permits, costs, full gear list and expert acclimatization advice from guides who've walked this trail 400+ times. Whether it's your first Himalayan adventure or your tenth, this is the definitive resource.</p>
+          <div class="post-meta">
+            <span>January 20, 2026</span>
+            <span class="meta-sep">·</span>
+            <span>12 min read</span>
+            <span class="meta-sep">·</span>
+            <span>By Pemba Sherpa</span>
+          </div>
+          <span class="read-more-link">
+            Read Full Guide
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
         </div>
       </a>
 
@@ -179,156 +715,328 @@
       <div class="posts-grid" id="posts-grid">
 
         <a href="blog-everest-season.html" class="post-card reveal" data-cat="expedition">
-          <div class="post-img"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=700&auto=format&fit=crop" alt="Everest season spring climbing Nepal" loading="lazy"></div>
+          <div class="post-img-wrap">
+            <img class="post-img" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=700&auto=format&fit=crop" alt="Everest season spring" loading="lazy">
+          </div>
           <div class="post-body">
             <span class="post-cat">Expedition Planning</span>
-            <h3 class="post-title">Best Time to Climb Mount Everest: A Season-by-Season Guide</h3>
+            <h3 class="post-title">Best Time to Climb Everest: A Season-by-Season Guide</h3>
             <p class="post-excerpt">Spring vs autumn windows, jet stream patterns, permit deadlines, and what Everest looks like when the mountain is "in condition."</p>
-            <div class="post-footer"><span class="post-date">Jan 15, 2026</span><span class="post-read">8 min read</span></div>
+            <div class="post-footer"><span>Jan 15, 2026</span><span>8 min read</span></div>
           </div>
         </a>
 
         <a href="blog-year-review.html" class="post-card reveal d1" data-cat="news">
-          <div class="post-img"><img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?q=80&w=700&auto=format&fit=crop" alt="Summit celebration Nepal 2025 mountaineering" loading="lazy"></div>
+          <div class="post-img-wrap">
+            <img class="post-img" src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?q=80&w=700&auto=format&fit=crop" alt="Summit 2025" loading="lazy">
+          </div>
           <div class="post-body">
             <span class="post-cat">Company News</span>
             <h3 class="post-title">Beyond Summit: Year in Review 2025</h3>
             <p class="post-excerpt">47 successful summits, a historic first ascent of Numbur's south wall, and 312 trekkers guided safely through Nepal's greatest routes.</p>
-            <div class="post-footer"><span class="post-date">Dec 31, 2025</span><span class="post-read">6 min read</span></div>
+            <div class="post-footer"><span>Dec 31, 2025</span><span>6 min read</span></div>
           </div>
         </a>
 
         <a href="blog-ama-dablam.html" class="post-card reveal" data-cat="expedition">
-          <div class="post-img"><img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=700&auto=format&fit=crop" alt="Ama Dablam technical climbing route Nepal" loading="lazy"></div>
+          <div class="post-img-wrap">
+            <img class="post-img" src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=700&auto=format&fit=crop" alt="Ama Dablam" loading="lazy">
+          </div>
           <div class="post-body">
             <span class="post-cat">Expedition Planning</span>
             <h3 class="post-title">How to Prepare for Ama Dablam: The Complete Pre-Expedition Guide</h3>
             <p class="post-excerpt">Technical prerequisites, training programmes, gear specifics and route conditions for Nepal's most beautiful technical climb.</p>
-            <div class="post-footer"><span class="post-date">Dec 8, 2025</span><span class="post-read">10 min read</span></div>
+            <div class="post-footer"><span>Dec 8, 2025</span><span>10 min read</span></div>
           </div>
         </a>
 
         <a href="blog-acclimatization.html" class="post-card reveal d1" data-cat="safety">
-          <div class="post-img"><img src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?q=80&w=700&auto=format&fit=crop" alt="High altitude trekking acclimatization Nepal mountains" loading="lazy"></div>
+          <div class="post-img-wrap">
+            <img class="post-img" src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?q=80&w=700&auto=format&fit=crop" alt="Acclimatization Nepal" loading="lazy">
+          </div>
           <div class="post-body">
             <span class="post-cat">Safety & Health</span>
             <h3 class="post-title">High Altitude Acclimatization: A Complete Guide for Trekkers</h3>
             <p class="post-excerpt">Understanding AMS, HACE and HAPE — how to recognize them, prevent them, and when to descend. Written with our expedition medic.</p>
-            <div class="post-footer"><span class="post-date">Nov 22, 2025</span><span class="post-read">11 min read</span></div>
+            <div class="post-footer"><span>Nov 22, 2025</span><span>11 min read</span></div>
           </div>
         </a>
 
         <a href="blog-annapurna-vs-ebc.html" class="post-card reveal" data-cat="guide">
-          <div class="post-img"><img src="https://images.unsplash.com/photo-1506466010722-395ee2bef877?q=80&w=700&auto=format&fit=crop" alt="Annapurna circuit vs Everest Base Camp comparison" loading="lazy"></div>
+          <div class="post-img-wrap">
+            <img class="post-img" src="https://images.unsplash.com/photo-1506466010722-395ee2bef877?q=80&w=700&auto=format&fit=crop" alt="Annapurna vs EBC" loading="lazy">
+          </div>
           <div class="post-body">
             <span class="post-cat">Trekking Guide</span>
             <h3 class="post-title">Annapurna Circuit vs Everest Base Camp: Which Trek is Right for You?</h3>
-            <p class="post-excerpt">A head-to-head comparison of Nepal's two greatest treks across difficulty, scenery, cost, crowds and what kind of trekker suits each route.</p>
-            <div class="post-footer"><span class="post-date">Nov 5, 2025</span><span class="post-read">9 min read</span></div>
+            <p class="post-excerpt">A head-to-head comparison across difficulty, scenery, cost, crowds and what kind of trekker suits each route.</p>
+            <div class="post-footer"><span>Nov 5, 2025</span><span>9 min read</span></div>
           </div>
         </a>
 
         <a href="blog-gear-guide.html" class="post-card reveal d1" data-cat="gear">
-          <div class="post-img"><img src="https://images.unsplash.com/photo-1508193638397-1c4234db14d8?q=80&w=700&auto=format&fit=crop" alt="Himalayan trekking gear equipment packing guide" loading="lazy"></div>
+          <div class="post-img-wrap">
+            <img class="post-img" src="https://images.unsplash.com/photo-1508193638397-1c4234db14d8?q=80&w=700&auto=format&fit=crop" alt="Himalayan gear" loading="lazy">
+          </div>
           <div class="post-body">
             <span class="post-cat">Gear</span>
             <h3 class="post-title">The Ultimate Himalayan Trekking Gear Guide 2026</h3>
-            <p class="post-excerpt">What to bring, what to rent in Kathmandu, and what to leave at home. Our guides' definitive gear list after hundreds of Himalayan treks.</p>
-            <div class="post-footer"><span class="post-date">Oct 18, 2025</span><span class="post-read">14 min read</span></div>
+            <p class="post-excerpt">What to bring, what to rent in Kathmandu, and what to leave at home. Our guides' definitive gear list after hundreds of treks.</p>
+            <div class="post-footer"><span>Oct 18, 2025</span><span>14 min read</span></div>
           </div>
         </a>
 
         <a href="blog-numbur.html" class="post-card reveal" data-cat="news">
-          <div class="post-img"><img src="https://images.unsplash.com/photo-1521334884481-35cb3c078044?q=80&w=700&auto=format&fit=crop" alt="Numbur south wall first ascent Nepal expedition report" loading="lazy"></div>
+          <div class="post-img-wrap">
+            <img class="post-img" src="https://images.unsplash.com/photo-1521334884481-35cb3c078044?q=80&w=700&auto=format&fit=crop" alt="Numbur first ascent" loading="lazy" style="filter:brightness(0.8) saturate(1.1) hue-rotate(10deg)">
+          </div>
           <div class="post-body">
             <span class="post-cat">Expedition Report</span>
             <h3 class="post-title">First Alpine-Style Ascent of Numbur's South Wall</h3>
             <p class="post-excerpt">A detailed trip report from our team's historic first ascent of the challenging south wall of Numbur (6,959m) in October 2025.</p>
-            <div class="post-footer"><span class="post-date">Oct 11, 2025</span><span class="post-read">7 min read</span></div>
+            <div class="post-footer"><span>Oct 11, 2025</span><span>7 min read</span></div>
           </div>
         </a>
 
         <a href="blog-upper-mustang.html" class="post-card reveal d1" data-cat="guide">
-          <div class="post-img"><img src="https://images.unsplash.com/photo-1466187836-55b365a20bec?q=80&w=700&auto=format&fit=crop" alt="Upper Mustang trek guide Lo Manthang forbidden kingdom" loading="lazy"></div>
+          <div class="post-img-wrap">
+            <img class="post-img" src="https://images.unsplash.com/photo-1466187836-55b365a20bec?q=80&w=700&auto=format&fit=crop" alt="Upper Mustang" loading="lazy">
+          </div>
           <div class="post-body">
             <span class="post-cat">Trekking Guide</span>
-            <h3 class="post-title">Upper Mustang Trek: A Complete Guide to the Forbidden Kingdom</h3>
-            <p class="post-excerpt">Permits, best time, itinerary and cultural tips for Nepal's most distinctive restricted-area trek through a living Tibetan culture.</p>
-            <div class="post-footer"><span class="post-date">Sep 29, 2025</span><span class="post-read">10 min read</span></div>
+            <h3 class="post-title">Upper Mustang: A Complete Guide to the Forbidden Kingdom</h3>
+            <p class="post-excerpt">Permits, best time, itinerary and cultural tips for Nepal's most distinctive restricted-area trek through living Tibetan culture.</p>
+            <div class="post-footer"><span>Sep 29, 2025</span><span>10 min read</span></div>
           </div>
         </a>
 
-      </div>
-      <div class="load-more">
-        <button class="btn-outline-gold" onclick="this.textContent='Loading...'">Load More Articles <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
-      </div>
+        <!-- Load more trigger -->
+        <div class="load-more-wrap">
+          <button class="btn-outline" onclick="this.innerHTML='Loading&hellip;'">
+            Load More Articles
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+        </div>
+
+      </div><!-- /posts-grid -->
     </main>
 
     <!-- SIDEBAR -->
     <aside class="sidebar">
-      <div class="newsletter-widget">
-        <h3 class="nw-title">Expedition Updates</h3>
-        <p class="nw-sub">Get trip reports, season forecasts and early booking offers direct to your inbox.</p>
-        <div class="nw-form">
-          <input type="email" class="nw-input" placeholder="your@email.com">
-          <button class="nw-btn">Subscribe Free</button>
-        </div>
+
+      <!-- Newsletter -->
+      <div class="newsletter-widget reveal">
+        <h3 class="nw-title">Expedition<br><em>Updates</em></h3>
+        <p class="nw-desc">Get trip reports, season forecasts and early booking offers direct to your inbox.</p>
+        <input type="email" class="nw-input" placeholder="your@email.com">
+        <button class="nw-btn">Subscribe Free</button>
       </div>
 
-      <div class="sidebar-widget">
+      <!-- Popular Posts -->
+      <div class="sidebar-widget reveal d1">
         <h3 class="sw-title">Popular Posts</h3>
         <div class="popular-list">
           <a href="blog-article.html" class="pop-item">
-            <div class="pop-img"><img src="https://images.unsplash.com/photo-1521334884481-35cb3c078044?q=80&w=200&auto=format&fit=crop" alt="EBC trek" loading="lazy"></div>
-            <div><div class="pop-title">Complete Guide to Everest Base Camp Trek 2026</div><div class="pop-date">Jan 20, 2026</div></div>
+            <div class="pop-thumb"><img src="https://images.unsplash.com/photo-1521334884481-35cb3c078044?q=80&w=200&auto=format&fit=crop" alt="EBC" loading="lazy"></div>
+            <div>
+              <div class="pop-title">Complete Guide to Everest Base Camp Trek 2026</div>
+              <div class="pop-date">Jan 20, 2026</div>
+            </div>
           </a>
           <a href="blog-acclimatization.html" class="pop-item">
-            <div class="pop-img"><img src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?q=80&w=200&auto=format&fit=crop" alt="Acclimatization" loading="lazy"></div>
-            <div><div class="pop-title">High Altitude Acclimatization Guide</div><div class="pop-date">Nov 22, 2025</div></div>
+            <div class="pop-thumb"><img src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?q=80&w=200&auto=format&fit=crop" alt="Acclimatization" loading="lazy"></div>
+            <div>
+              <div class="pop-title">High Altitude Acclimatization Guide</div>
+              <div class="pop-date">Nov 22, 2025</div>
+            </div>
           </a>
           <a href="blog-gear-guide.html" class="pop-item">
-            <div class="pop-img"><img src="https://images.unsplash.com/photo-1508193638397-1c4234db14d8?q=80&w=200&auto=format&fit=crop" alt="Gear guide" loading="lazy"></div>
-            <div><div class="pop-title">Ultimate Himalayan Trekking Gear Guide</div><div class="pop-date">Oct 18, 2025</div></div>
+            <div class="pop-thumb"><img src="https://images.unsplash.com/photo-1508193638397-1c4234db14d8?q=80&w=200&auto=format&fit=crop" alt="Gear" loading="lazy"></div>
+            <div>
+              <div class="pop-title">Ultimate Himalayan Trekking Gear Guide</div>
+              <div class="pop-date">Oct 18, 2025</div>
+            </div>
           </a>
         </div>
       </div>
 
-      <div class="sidebar-widget">
+      <!-- Tags -->
+      <div class="sidebar-widget reveal d2">
         <h3 class="sw-title">Browse by Topic</h3>
         <div class="tag-cloud">
-          <a href="#" class="tag">Everest</a><a href="#" class="tag">Annapurna</a><a href="#" class="tag">Manaslu</a><a href="#" class="tag">K2</a><a href="#" class="tag">Trekking</a><a href="#" class="tag">Acclimatization</a><a href="#" class="tag">Gear</a><a href="#" class="tag">Safety</a><a href="#" class="tag">Permits</a><a href="#" class="tag">Sherpa</a><a href="#" class="tag">8000m</a><a href="#" class="tag">Base Camp</a>
+          <a href="#" class="tag">Everest</a>
+          <a href="#" class="tag">Annapurna</a>
+          <a href="#" class="tag">Manaslu</a>
+          <a href="#" class="tag">K2</a>
+          <a href="#" class="tag">Trekking</a>
+          <a href="#" class="tag">Acclimatization</a>
+          <a href="#" class="tag">Gear</a>
+          <a href="#" class="tag">Safety</a>
+          <a href="#" class="tag">Permits</a>
+          <a href="#" class="tag">Sherpa</a>
+          <a href="#" class="tag">8000m</a>
+          <a href="#" class="tag">Base Camp</a>
         </div>
       </div>
 
-      <div class="sidebar-widget" style="background:var(--onyx);border-color:transparent;text-align:center">
-        <p style="color:var(--gold);font-size:.65rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;margin-bottom:.5rem">Plan Your Trip</p>
-        <h3 style="font-family:var(--fd);color:#fff;font-size:1.35rem;margin-bottom:.6rem">Ready to Book?</h3>
-        <p style="color:rgba(255,255,255,.45);font-size:.82rem;line-height:1.6;margin-bottom:1.25rem">Talk to our team about the right expedition or trek for your experience level.</p>
-        <a href="contact.html" style="display:block;background:var(--gold);color:#fff;text-decoration:none;padding:.85rem;border-radius:.75rem;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;transition:background .3s">Get Free Consultation</a>
+      <!-- CTA Widget -->
+      <div class="cta-widget reveal d3">
+        <span class="cta-widget-eyebrow">Plan Your Trip</span>
+        <h3 class="cta-widget-title">Ready to<br><em>Ascend?</em></h3>
+        <p class="cta-widget-desc">Talk to our team about the right expedition or trek for your experience level. Spring 2026 slots are filling.</p>
+        <a href="contact.html" class="cta-widget-btn">Get Free Consultation →</a>
       </div>
+
     </aside>
   </div>
-</div>
 
-<footer class="footer">
-  <div class="footer-inner">
-    <p class="copy">© 2026 Beyond Summit Expeditions · Licensed by Dept. of Tourism, Nepal</p>
-    <div class="footer-links"><a href="index.html">Home</a><a href="expeditions.html">Expeditions</a><a href="trekking.html">Trekking</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a></div>
+  <!-- QUOTE STRIP -->
+  <div class="quote-strip">
+    <blockquote>"It is not the mountain we conquer, but <em>ourselves</em>."</blockquote>
+    <div class="quote-attr">Sir Edmund Hillary · Everest, 1953</div>
   </div>
-</footer>
 
-<script>
-  const nav=document.getElementById('nav');
-  window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>80),{passive:true});
-  function toggleMob(){const o=document.getElementById('mobMenu').classList.toggle('open');document.getElementById('backdrop').classList.toggle('open',o);document.getElementById('ham').classList.toggle('open',o);document.body.style.overflow=o?'hidden':'';}
-  function closeMob(){document.getElementById('mobMenu').classList.remove('open');document.getElementById('backdrop').classList.remove('open');document.getElementById('ham').classList.remove('open');document.body.style.overflow='';}
-  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMob()});
-  const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}}),{rootMargin:'0px 0px -50px 0px',threshold:.08});
-  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-  function filterCat(cat,btn){
-    document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');
-    document.querySelectorAll('.post-card').forEach(c=>{c.style.display=(cat==='all'||c.dataset.cat===cat)?'block':'none';});
-  }
-</script>
+  <!-- CONTACT STRIP -->
+  <div class="contact-strip">
+    <div class="contact-inner">
+      <div class="contact-item">
+        <div class="contact-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.71 3.53 2 2 0 0 1 3.68 1.38h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.07a16 16 0 0 0 6 6l1.06-1.06a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <div>
+          <div class="contact-label">Call Anytime</div>
+          <div class="contact-value"><a href="tel:+9779811157421">+977 9811 157 421</a></div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div>
+          <div class="contact-label">Email Us</div>
+          <div class="contact-value"><a href="mailto:info@beyondsummitexped.com">info@beyondsummitexped.com</a></div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div>
+          <div class="contact-label">Find Us</div>
+          <div class="contact-value"><a href="https://maps.google.com/?q=Thamel,Kathmandu,Nepal" target="_blank" rel="noopener noreferrer">Thamel, Kathmandu</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo-text">Beyond Summit<em>Expeditions · Nepal</em></div>
+        <p class="footer-desc">Nepal's premier mountaineering company. Licensed by the Department of Tourism, Government of Nepal. We take you where others pause.</p>
+        <div class="footer-contact">
+          <a href="tel:+9779811157421"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.71 3.53 2 2 0 0 1 3.68 1.38h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.07a16 16 0 0 0 6 6l1.06-1.06a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +977-9811157421</a>
+          <a href="mailto:info@beyondsummitexped.com"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> info@beyondsummitexped.com</a>
+          <a href="https://maps.google.com/?q=Thamel,Kathmandu" target="_blank"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Thamel, Kathmandu, Nepal</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Expeditions</h4>
+        <ul>
+          <li><a href="/articles/everest-base-camp-guide.html">Mount Everest</a></li>
+          <li><a href="/articles/amadablam-blog.html">Ama Dablam</a></li>
+          <li><a href="/articles/manaslu-blog.html">Manaslu</a></li>
+          <li><a href="/articles/merapeak.html">Mera Peak</a></li>
+          <li><a href="/articles/islandpeak.html">Island Peak</a></li>
+          <li><a href="/expeditions.html">All Expeditions</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Trekking</h4>
+        <ul>
+          <li><a href="/articles/everest-base-camp-guide.html">Everest Base Camp</a></li>
+          <li><a href="/articles/annapurna-blog.html">Annapurna Circuit</a></li>
+          <li><a href="/articles/upper-mustang-blog.html">Upper Mustang</a></li>
+          <li><a href="/articles/manaslu-blog.html">Manaslu Circuit</a></li>
+          <li><a href="/articles/langtang-valley-blog.html">Langtang Valley</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/guides.html">Our Guides</a></li>
+          <li><a href="/safety.html">Safety</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Beyond Summit Expeditions · Licensed by Dept. of Tourism, Government of Nepal</p>
+      <div class="footer-socials">
+        <a href="https://instagram.com/beyondsummitexpeditions" class="social-ico" target="_blank" aria-label="Instagram">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://facebook.com/beyondsummitexped" class="social-ico" target="_blank" aria-label="Facebook">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* ── NAV SCROLL ── */
+    const navbar = document.getElementById('navbar');
+    /* start scrolled if page loads mid-scroll */
+    navbar.classList.toggle('scrolled', window.scrollY > 50);
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    }, { passive: true });
+
+    /* ── HAMBURGER ── */
+    const hamburger = document.getElementById('hamburger');
+    const drawer = document.getElementById('mobileDrawer');
+    let drawerOpen = false;
+    function closeDrawer() {
+      drawerOpen = false;
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      drawer.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    hamburger.addEventListener('click', () => {
+      drawerOpen = !drawerOpen;
+      hamburger.classList.toggle('open', drawerOpen);
+      hamburger.setAttribute('aria-expanded', String(drawerOpen));
+      drawer.classList.toggle('open', drawerOpen);
+      document.body.style.overflow = drawerOpen ? 'hidden' : '';
+    });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
+
+    /* ── REVEAL ON SCROLL ── */
+    const revealObs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); revealObs.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -50px 0px', threshold: 0.06 });
+    document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+    /* ── CATEGORY FILTER ── */
+    function filterCat(cat, btn) {
+      document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      /* featured post */
+      const featured = document.getElementById('featured-post');
+      if (featured) {
+        featured.style.display = (cat === 'all' || featured.dataset.cat === cat) ? '' : 'none';
+      }
+
+      /* grid cards */
+      document.querySelectorAll('#posts-grid .post-card').forEach(card => {
+        card.style.display = (cat === 'all' || card.dataset.cat === cat) ? 'flex' : 'none';
+      });
+    }
+  </script>
 </body>
 </html>
