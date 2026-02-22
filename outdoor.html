@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Outdoor Activities in Nepal | Beyond Summit Expeditions</title>
+  <meta name="description" content="Beyond trekking and climbing — paragliding, jungle safaris, rafting, bungee jumping, and more. Nepal's best outdoor adventures with expert local guides.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #faf7f2;
+      --cream-dark: #f2ede4;
+      --parchment: #ede8de;
+      --amber: #b8651a;
+      --amber-light: #d4812a;
+      --amber-pale: #f0c080;
+      --charcoal: #1c1814;
+      --stone: #3d3530;
+      --muted: #7a6e65;
+      --border: rgba(60,45,30,0.1);
+      --border-strong: rgba(60,45,30,0.18);
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans: 'DM Sans', system-ui, sans-serif;
+      --mono: 'DM Mono', monospace;
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+      --shadow-sm: 0 2px 12px rgba(60,40,20,0.08);
+      --shadow-md: 0 8px 32px rgba(60,40,20,0.12);
+      --shadow-lg: 0 20px 60px rgba(60,40,20,0.16);
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: var(--sans); background: var(--cream); color: var(--charcoal); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    img { display: block; }
+
+    /* ═══════════ NAV ═══════════ */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 800; display: flex; align-items: center; justify-content: space-between; padding: 1.5rem 4rem; transition: all 0.5s var(--ease); background: transparent; }
+    nav.scrolled { background: rgba(250,247,242,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); padding: 1rem 4rem; box-shadow: var(--shadow-sm); }
+    .nav-logo { display: flex; align-items: center; gap: 0.75rem; }
+    .nav-logo-icon { width: 30px; height: 30px; }
+    .nav-logo-text { font-family: var(--serif); font-size: 1.4rem; font-weight: 700; color: var(--cream); letter-spacing: 0.01em; transition: color 0.4s; }
+    nav.scrolled .nav-logo-text { color: var(--charcoal); }
+    .nav-logo-text em { display: block; font-style: normal; font-family: var(--mono); font-size: 0.52rem; letter-spacing: 0.4em; text-transform: uppercase; color: rgba(250,247,242,0.7); margin-top: 2px; transition: color 0.4s; }
+    nav.scrolled .nav-logo-text em { color: var(--amber); }
+    .nav-links { display: flex; align-items: center; gap: 2rem; }
+    .nav-links a { font-family: var(--sans); font-size: 0.875rem; font-weight: 400; color: rgba(250,247,242,0.85); transition: color 0.3s; letter-spacing: 0.02em; }
+    nav.scrolled .nav-links a { color: var(--stone); }
+    .nav-links a:hover { color: var(--amber-light) !important; }
+    .nav-links a.active { color: var(--amber-light) !important; font-weight: 500; }
+    .nav-cta { background: var(--amber); color: white !important; padding: 0.6rem 1.5rem; font-size: 0.82rem !important; font-weight: 500 !important; letter-spacing: 0.04em !important; transition: background 0.3s, transform 0.3s !important; }
+    .nav-cta:hover { background: var(--amber-light) !important; transform: translateY(-1px); color: white !important; }
+    .nav-hamburger { display: none; flex-direction: column; justify-content: center; width: 44px; height: 44px; gap: 5px; cursor: pointer; background: rgba(250,247,242,0.12); border: 1px solid rgba(250,247,242,0.25); border-radius: 6px; padding: 0 12px; transition: all 0.3s; }
+    nav.scrolled .nav-hamburger { background: rgba(60,40,20,0.06); border-color: var(--border); }
+    .nav-hamburger span { display: block; width: 100%; height: 1.5px; background: white; transition: all 0.4s var(--ease); }
+    nav.scrolled .nav-hamburger span { background: var(--charcoal); }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+    /* Mobile Drawer */
+    .mobile-drawer { position: fixed; inset: 0; z-index: 700; background: var(--cream); display: flex; flex-direction: column; padding: 6rem 2rem 2rem; transform: translateX(100%); transition: transform 0.5s var(--ease); }
+    .mobile-drawer.open { transform: none; }
+    .mobile-drawer-link { display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 0; border-bottom: 1px solid var(--border); font-family: var(--serif); font-size: 1.8rem; font-weight: 400; color: var(--charcoal); opacity: 0; transform: translateX(20px); transition: opacity 0.4s, transform 0.4s, color 0.3s; }
+    .mobile-drawer.open .mobile-drawer-link:nth-child(1) { opacity:1; transform:none; transition-delay:.06s; }
+    .mobile-drawer.open .mobile-drawer-link:nth-child(2) { opacity:1; transform:none; transition-delay:.10s; }
+    .mobile-drawer.open .mobile-drawer-link:nth-child(3) { opacity:1; transform:none; transition-delay:.14s; }
+    .mobile-drawer.open .mobile-drawer-link:nth-child(4) { opacity:1; transform:none; transition-delay:.18s; }
+    .mobile-drawer.open .mobile-drawer-link:nth-child(5) { opacity:1; transform:none; transition-delay:.22s; }
+    .mobile-drawer.open .mobile-drawer-link:nth-child(6) { opacity:1; transform:none; transition-delay:.26s; }
+    .mobile-drawer-link:hover { color: var(--amber); }
+    .mobile-drawer-link.highlight { color: var(--amber); }
+    .mobile-drawer-link.active-link { color: var(--amber); }
+
+    /* WhatsApp */
+    .wa-float { position: fixed; bottom: 2rem; right: 2rem; z-index: 500; width: 52px; height: 52px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; color: white; box-shadow: 0 6px 20px rgba(37,211,102,0.4); transition: transform 0.4s var(--ease); }
+    .wa-float:hover { transform: scale(1.1); }
+
+    /* Reveal */
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
+    .reveal.in { opacity: 1; transform: none; }
+    .reveal.d1 { transition-delay: 0.1s; }
+    .reveal.d2 { transition-delay: 0.2s; }
+    .reveal.d3 { transition-delay: 0.3s; }
+
+    .eyebrow { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--amber); display: block; margin-bottom: 0.875rem; }
+    .section-title { font-family: var(--serif); font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 400; line-height: 1; letter-spacing: -0.02em; color: var(--charcoal); }
+    .section-title em { font-style: italic; color: var(--amber); }
+
+    /* ═══════════ PAGE HERO ═══════════ */
+    .page-hero { position: relative; height: 72vh; min-height: 520px; display: flex; align-items: flex-end; overflow: hidden; }
+    .page-hero-bg { position: absolute; inset: 0; }
+    .page-hero-bg img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.55) saturate(1.1); }
+    .page-hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,10,5,0.92) 0%, rgba(15,10,5,0.3) 45%, transparent 100%), linear-gradient(to right, rgba(15,10,5,0.5) 0%, transparent 60%); }
+    .page-hero-content { position: relative; z-index: 2; padding: 0 5rem 5rem; width: 100%; max-width: 1300px; margin: 0 auto; }
+    .page-hero-badge { display: inline-flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem; opacity: 0; animation: riseUp 0.9s 0.2s var(--ease) forwards; }
+    .page-hero-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--amber-pale); }
+    .page-hero-badge-text { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--amber-pale); }
+    .page-hero-title { font-family: var(--serif); font-size: clamp(3.2rem, 8vw, 7.5rem); font-weight: 400; line-height: 0.9; letter-spacing: -0.025em; color: white; margin-bottom: 1.5rem; opacity: 0; animation: riseUp 1s 0.35s var(--ease) forwards; }
+    .page-hero-title em { font-style: italic; color: var(--amber-pale); }
+    .page-hero-sub { font-family: var(--sans); font-size: 0.95rem; color: rgba(255,255,255,0.5); max-width: 520px; line-height: 1.75; opacity: 0; animation: riseUp 0.9s 0.5s var(--ease) forwards; }
+    @keyframes riseUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
+
+    /* ═══════════ MARQUEE ═══════════ */
+    .marquee-bar { background: var(--charcoal); overflow: hidden; padding: 0.75rem 0; }
+    .marquee-track { display: flex; width: max-content; animation: marqueeScroll 38s linear infinite; }
+    .marquee-item { display: flex; align-items: center; gap: 0.75rem; padding: 0 1.75rem; white-space: nowrap; font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(240,192,128,0.7); }
+    .msep { color: var(--amber); font-size: 0.3rem; }
+    @keyframes marqueeScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* ═══════════ STATS STRIP ═══════════ */
+    .stats-strip { background: white; border-bottom: 1px solid var(--border); }
+    .stats-inner { max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); }
+    .stat-item { display: flex; flex-direction: column; align-items: center; gap: 0.35rem; padding: 2.5rem 1rem; border-right: 1px solid var(--border); text-align: center; }
+    .stat-item:last-child { border-right: none; }
+    .stat-num { font-family: var(--serif); font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 500; color: var(--amber); line-height: 1; }
+    .stat-label { font-family: var(--mono); font-size: 0.56rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+
+    /* ═══════════ FILTER BAR ═══════════ */
+    .filter-bar { background: var(--cream-dark); border-bottom: 1px solid var(--border); padding: 1.25rem 4rem; position: sticky; top: 0; z-index: 100; }
+    .filter-inner { max-width: 1300px; margin: 0 auto; display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; }
+    .filter-label { font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); flex-shrink: 0; margin-right: 0.5rem; }
+    .filter-btn { background: white; border: 1.5px solid var(--border-strong); color: var(--muted); padding: 0.45rem 1.1rem; font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; transition: all 0.3s var(--ease); }
+    .filter-btn:hover, .filter-btn.active { background: var(--charcoal); border-color: var(--charcoal); color: white; }
+
+    /* ═══════════ ACTIVITIES SECTION ═══════════ */
+    .activities-section { padding: 6rem 0; }
+    .activities-header { max-width: 1300px; margin: 0 auto; padding: 0 4rem; margin-bottom: 3rem; }
+
+    /* ─── FEATURED ACTIVITY (hero wide card) ─── */
+    .featured-activity { max-width: 1300px; margin: 0 auto; padding: 0 4rem; margin-bottom: 2rem; }
+    .act-featured { display: grid; grid-template-columns: 1.1fr 1fr; background: white; border: 1px solid var(--border); overflow: hidden; transition: box-shadow 0.5s var(--ease); text-decoration: none; color: inherit; }
+    .act-featured:hover { box-shadow: var(--shadow-lg); }
+    .act-featured-img { position: relative; overflow: hidden; min-height: 420px; }
+    .act-featured-img img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.78) saturate(1.05); transition: transform 1.6s var(--ease), filter 0.6s; }
+    .act-featured:hover .act-featured-img img { transform: scale(1.05); filter: brightness(0.9) saturate(1.15); }
+    .act-featured-img-overlay { position: absolute; inset: 0; background: linear-gradient(to right, transparent 55%, rgba(250,247,242,0.08) 100%), linear-gradient(to top, rgba(15,8,3,0.7) 0%, transparent 50%); }
+    .act-featured-badge { position: absolute; top: 1.5rem; left: 1.5rem; font-family: var(--mono); font-size: 0.5rem; letter-spacing: 0.22em; text-transform: uppercase; background: rgba(250,247,242,0.92); color: var(--stone); padding: 0.3rem 0.8rem; backdrop-filter: blur(8px); border: 1px solid rgba(60,45,30,0.12); }
+    .act-featured-location { position: absolute; bottom: 1.5rem; left: 1.5rem; }
+    .act-featured-loc-label { font-family: var(--mono); font-size: 0.48rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+    .act-featured-loc-val { font-family: var(--serif); font-size: 1.1rem; font-style: italic; color: white; }
+    .act-featured-body { padding: 3rem; display: flex; flex-direction: column; justify-content: center; }
+    .act-featured-tag { font-family: var(--mono); font-size: 0.52rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--amber); margin-bottom: 1rem; display: block; }
+    .act-featured-name { font-family: var(--serif); font-size: clamp(2rem, 3vw, 2.8rem); font-weight: 400; color: var(--charcoal); line-height: 1.05; margin-bottom: 1.25rem; }
+    .act-featured-name em { font-style: italic; color: var(--amber); }
+    .act-featured-desc { font-family: var(--sans); font-size: 0.88rem; color: var(--muted); line-height: 1.8; margin-bottom: 2rem; }
+    .act-featured-specs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); margin-bottom: 2rem; }
+    .afs-item { background: var(--cream); padding: 1rem; }
+    .afs-key { font-family: var(--mono); font-size: 0.5rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.25rem; }
+    .afs-val { font-family: var(--sans); font-size: 0.88rem; font-weight: 500; color: var(--charcoal); }
+    .act-featured-cta { display: inline-flex; align-items: center; gap: 0.6rem; background: var(--charcoal); color: white; padding: 0.9rem 2rem; font-family: var(--sans); font-size: 0.82rem; font-weight: 500; transition: background 0.3s, gap 0.3s; align-self: flex-start; }
+    .act-featured:hover .act-featured-cta { background: var(--stone); gap: 0.9rem; }
+
+    /* ─── ACTIVITY GRID ─── */
+    .activities-grid { max-width: 1300px; margin: 0 auto; padding: 0 4rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+
+    .act-card { background: white; border: 1px solid var(--border); overflow: hidden; display: flex; flex-direction: column; text-decoration: none; color: inherit; transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease); }
+    .act-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+    .act-card-img { position: relative; aspect-ratio: 4/3; overflow: hidden; }
+    .act-card-img img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.8) saturate(0.95); transition: transform 1.6s var(--ease), filter 0.6s; }
+    .act-card:hover .act-card-img img { transform: scale(1.07); filter: brightness(0.95) saturate(1.1); }
+    .act-card-img-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,8,3,0.75) 0%, rgba(15,8,3,0.1) 50%, transparent 100%); }
+    .act-card-badge { position: absolute; top: 1rem; left: 1rem; font-family: var(--mono); font-size: 0.5rem; letter-spacing: 0.22em; text-transform: uppercase; background: rgba(250,247,242,0.92); color: var(--stone); padding: 0.3rem 0.75rem; backdrop-filter: blur(8px); border: 1px solid rgba(60,45,30,0.12); }
+    .act-card-duration { position: absolute; top: 1rem; right: 1rem; font-family: var(--serif); font-size: 1.4rem; font-weight: 400; color: var(--amber-pale); opacity: 0.9; line-height: 1; text-align: right; }
+    .act-card-duration span { display: block; font-family: var(--mono); font-size: 0.42rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-top: 0.1rem; }
+    .act-card-location { position: absolute; bottom: 1rem; left: 1.25rem; }
+    .act-card-loc-sub { font-family: var(--mono); font-size: 0.44rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.45); }
+    .act-card-loc-name { font-family: var(--serif); font-size: 0.9rem; font-style: italic; color: rgba(255,255,255,0.85); }
+    .act-card-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+    .act-card-tag { font-family: var(--mono); font-size: 0.5rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--amber); margin-bottom: 0.6rem; display: block; }
+    .act-card-name { font-family: var(--serif); font-size: 1.45rem; font-weight: 400; color: var(--charcoal); line-height: 1.1; margin-bottom: 0.6rem; }
+    .act-card-desc { font-family: var(--sans); font-size: 0.82rem; color: var(--muted); line-height: 1.7; flex: 1; margin-bottom: 1.25rem; }
+    .act-card-meta { display: flex; gap: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--border); margin-bottom: 1rem; }
+    .act-meta-item { display: flex; flex-direction: column; gap: 0.1rem; }
+    .act-meta-key { font-family: var(--mono); font-size: 0.48rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); }
+    .act-meta-val { font-family: var(--sans); font-size: 0.8rem; font-weight: 500; color: var(--charcoal); }
+    .act-card-link { display: flex; align-items: center; gap: 0.4rem; font-family: var(--sans); font-size: 0.78rem; font-weight: 500; color: var(--amber); transition: gap 0.3s; }
+    .act-card:hover .act-card-link { gap: 0.7rem; }
+
+    /* intensity badge */
+    .intensity-badge { display: inline-block; font-family: var(--mono); font-size: 0.48rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.2rem 0.6rem; margin-bottom: 0.75rem; }
+    .intensity-easy { background: rgba(39,174,96,0.08); color: #1e8449; border: 1px solid rgba(39,174,96,0.2); }
+    .intensity-moderate { background: rgba(184,101,26,0.08); color: var(--amber); border: 1px solid rgba(184,101,26,0.2); }
+    .intensity-thrilling { background: rgba(192,57,43,0.08); color: #c0392b; border: 1px solid rgba(192,57,43,0.2); }
+
+    /* ═══════════ DARK HIGHLIGHT STRIP ═══════════ */
+    .highlight-strip { background: var(--charcoal); padding: 6rem 0; }
+    .highlight-inner { max-width: 1300px; margin: 0 auto; padding: 0 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+    .highlight-text .eyebrow { color: var(--amber-pale); opacity: 0.8; }
+    .highlight-title { font-family: var(--serif); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 400; color: white; line-height: 1.05; margin-bottom: 1.25rem; }
+    .highlight-title em { font-style: italic; color: var(--amber-pale); }
+    .highlight-desc { font-family: var(--sans); font-size: 0.88rem; color: rgba(255,255,255,0.45); line-height: 1.8; margin-bottom: 2.5rem; }
+    .highlight-list { display: flex; flex-direction: column; gap: 0; }
+    .highlight-item { display: flex; align-items: center; gap: 1.25rem; padding: 1.25rem 0; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .highlight-item:last-child { border-bottom: none; }
+    .highlight-item-icon { width: 38px; height: 38px; background: rgba(240,192,128,0.1); border: 1px solid rgba(240,192,128,0.2); display: flex; align-items: center; justify-content: center; color: var(--amber-pale); flex-shrink: 0; }
+    .highlight-item-title { font-family: var(--serif); font-size: 1rem; color: white; margin-bottom: 0.2rem; }
+    .highlight-item-desc { font-family: var(--sans); font-size: 0.78rem; color: rgba(255,255,255,0.38); line-height: 1.6; }
+    .highlight-visual { position: relative; }
+    .highlight-img-wrap { overflow: hidden; }
+    .highlight-img { width: 100%; display: block; filter: brightness(0.82) saturate(1.0); transition: transform 1.5s var(--ease); }
+    .highlight-img-wrap:hover .highlight-img { transform: scale(1.04); }
+    .highlight-caption { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); padding: 1.5rem; }
+    .highlight-caption-label { font-family: var(--mono); font-size: 0.5rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--amber-pale); margin-bottom: 0.5rem; opacity: 0.7; }
+    .highlight-caption-text { font-family: var(--serif); font-size: 0.95rem; font-style: italic; color: rgba(255,255,255,0.6); line-height: 1.65; }
+
+    /* ═══════════ SEASONAL GUIDE ═══════════ */
+    .seasonal-section { padding: 6rem 0; background: var(--cream-dark); border-top: 1px solid var(--border); }
+    .seasonal-inner { max-width: 1300px; margin: 0 auto; padding: 0 4rem; }
+    .seasonal-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); margin-top: 3rem; }
+    .season-card { background: var(--cream); padding: 2rem 1.75rem; }
+    .season-name { font-family: var(--serif); font-size: 1.2rem; font-weight: 400; color: var(--charcoal); margin-bottom: 0.25rem; }
+    .season-months { font-family: var(--mono); font-size: 0.52rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--amber); margin-bottom: 1rem; }
+    .season-activities { display: flex; flex-direction: column; gap: 0.5rem; }
+    .season-act { font-family: var(--sans); font-size: 0.8rem; color: var(--muted); display: flex; align-items: center; gap: 0.5rem; }
+    .season-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--amber); flex-shrink: 0; opacity: 0.6; }
+    .season-act.peak { color: var(--charcoal); font-weight: 500; }
+    .season-act.peak .season-dot { opacity: 1; }
+
+    /* ═══════════ QUOTE ═══════════ */
+    .quote-section { position: relative; overflow: hidden; min-height: 50vh; display: flex; align-items: center; justify-content: center; }
+    .quote-bg-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.28) saturate(0.6); }
+    .quote-bg-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(15,8,3,0.7), rgba(15,8,3,0.4), rgba(15,8,3,0.6)); }
+    .quote-content { position: relative; z-index: 2; text-align: center; padding: 5rem 4rem; max-width: 860px; }
+    .quote-mark { font-family: var(--serif); font-size: 5rem; color: var(--amber-pale); opacity: 0.25; line-height: 0; display: block; margin-bottom: 2rem; }
+    .quote-text { font-family: var(--serif); font-size: clamp(1.6rem, 3vw, 2.5rem); font-weight: 400; font-style: italic; color: white; line-height: 1.4; margin-bottom: 2rem; }
+    .quote-text em { color: var(--amber-pale); font-style: normal; }
+    .quote-attr { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(255,255,255,0.35); display: flex; align-items: center; justify-content: center; gap: 1rem; }
+    .quote-attr::before, .quote-attr::after { content: ''; width: 28px; height: 1px; background: rgba(255,255,255,0.15); }
+
+    /* ═══════════ CTA BAND ═══════════ */
+    .cta-band { background: var(--charcoal); padding: 6rem 4rem; text-align: center; }
+    .cta-band h2 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 400; color: white; line-height: 1.05; margin-bottom: 1rem; }
+    .cta-band h2 em { font-style: italic; color: var(--amber-pale); }
+    .cta-band p { font-family: var(--sans); font-size: 0.92rem; color: rgba(255,255,255,0.45); max-width: 480px; margin: 0 auto 2.5rem; line-height: 1.75; }
+    .cta-actions { display: flex; gap: 1.25rem; justify-content: center; flex-wrap: wrap; }
+    .btn-primary-light { display: inline-flex; align-items: center; gap: 0.6rem; background: white; color: var(--charcoal); padding: 0.95rem 2.25rem; font-family: var(--sans); font-size: 0.85rem; font-weight: 500; letter-spacing: 0.04em; transition: background 0.3s, transform 0.3s, gap 0.3s; }
+    .btn-primary-light:hover { background: var(--amber-pale); transform: translateY(-2px); gap: 0.9rem; }
+    .btn-outline-light { display: inline-flex; align-items: center; gap: 0.6rem; background: transparent; color: rgba(255,255,255,0.7); border: 1.5px solid rgba(255,255,255,0.2); padding: 0.95rem 2.25rem; font-family: var(--sans); font-size: 0.85rem; font-weight: 500; transition: border-color 0.3s, color 0.3s; }
+    .btn-outline-light:hover { border-color: rgba(255,255,255,0.5); color: white; }
+
+    /* ═══════════ CONTACT STRIP ═══════════ */
+    .contact-strip { background: var(--cream-dark); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .contact-inner { max-width: 1300px; margin: 0 auto; padding: 0 4rem; display: grid; grid-template-columns: repeat(3, 1fr); }
+    .contact-item { display: flex; align-items: center; gap: 1.25rem; padding: 2.5rem 2rem; border-right: 1px solid var(--border); transition: background 0.3s; }
+    .contact-item:first-child { padding-left: 0; }
+    .contact-item:last-child { border-right: none; }
+    .contact-item:hover { background: rgba(184,101,26,0.04); }
+    .contact-icon { width: 42px; height: 42px; flex-shrink: 0; background: white; border: 1px solid var(--border); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--amber); }
+    .contact-label { font-family: var(--mono); font-size: 0.5rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.3rem; }
+    .contact-value { font-family: var(--sans); font-size: 0.9rem; font-weight: 500; color: var(--charcoal); }
+    .contact-value a { transition: color 0.3s; }
+    .contact-value a:hover { color: var(--amber); }
+
+    /* ═══════════ FOOTER ═══════════ */
+    footer { background: var(--charcoal); border-top: 1px solid rgba(255,255,255,0.05); padding: 5rem 4rem 2.5rem; }
+    .footer-grid { max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; margin-bottom: 4rem; padding-bottom: 4rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .footer-logo-text { font-family: var(--serif); font-size: 1.3rem; font-weight: 700; color: white; }
+    .footer-logo-text em { display: block; font-style: normal; font-family: var(--mono); font-size: 0.5rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--amber); margin-top: 3px; }
+    .footer-desc { font-family: var(--sans); font-size: 0.8rem; color: rgba(255,255,255,0.38); line-height: 1.75; margin-top: 1rem; }
+    .footer-contact { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; }
+    .footer-contact a { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.06em; color: rgba(255,255,255,0.35); display: flex; align-items: center; gap: 0.5rem; transition: color 0.3s; }
+    .footer-contact a:hover { color: var(--amber-pale); }
+    .footer-col h4 { font-family: var(--mono); font-size: 0.52rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--amber); margin-bottom: 1.25rem; }
+    .footer-col ul { display: flex; flex-direction: column; gap: 0.6rem; }
+    .footer-col a { font-family: var(--sans); font-size: 0.8rem; color: rgba(255,255,255,0.38); transition: color 0.3s, padding-left 0.3s; }
+    .footer-col a:hover { color: rgba(255,255,255,0.7); padding-left: 4px; }
+    .footer-bottom { max-width: 1300px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+    .footer-bottom p { font-family: var(--mono); font-size: 0.55rem; letter-spacing: 0.1em; color: rgba(255,255,255,0.18); }
+    .footer-socials { display: flex; gap: 0.75rem; }
+    .social-ico { width: 32px; height: 32px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.28); transition: all 0.3s; }
+    .social-ico:hover { border-color: var(--amber); color: var(--amber); }
+
+    /* ═══════════ RESPONSIVE ═══════════ */
+    @media (max-width: 1024px) {
+      nav { padding: 1.25rem 2rem; }
+      nav.scrolled { padding: 0.875rem 2rem; }
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      .page-hero-content { padding: 0 2.5rem 4rem; }
+      .filter-bar { padding: 1.25rem 2.5rem; }
+      .activities-header { padding: 0 2.5rem; }
+      .featured-activity { padding: 0 2.5rem; }
+      .act-featured { grid-template-columns: 1fr; }
+      .act-featured-img { min-height: 320px; }
+      .activities-grid { grid-template-columns: repeat(2, 1fr); padding: 0 2.5rem; }
+      .highlight-inner { grid-template-columns: 1fr; gap: 3rem; padding: 0 2.5rem; }
+      .seasonal-inner { padding: 0 2.5rem; }
+      .seasonal-grid { grid-template-columns: repeat(2, 1fr); }
+      .contact-inner { grid-template-columns: 1fr; padding: 0 2.5rem; }
+      .contact-item { border-right: none; border-bottom: 1px solid var(--border); padding: 1.75rem 0; }
+      .contact-item:last-child { border-bottom: none; }
+      footer { padding: 4rem 2.5rem 2rem; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+      .stats-inner { grid-template-columns: repeat(2, 1fr); }
+      .stat-item:nth-child(2) { border-right: none; }
+      .cta-band { padding: 5rem 2.5rem; }
+    }
+    @media (max-width: 768px) {
+      .page-hero-title { font-size: clamp(2.8rem, 12vw, 5rem); }
+      .activities-grid { grid-template-columns: 1fr; padding: 0 1.5rem; }
+      .activities-header { padding: 0 1.5rem; }
+      .featured-activity { padding: 0 1.5rem; }
+      .seasonal-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      footer { padding: 3.5rem 1.5rem 1.5rem; }
+      .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+      .highlight-inner { padding: 0 1.5rem; }
+      .seasonal-inner { padding: 0 1.5rem; }
+      .filter-bar { padding: 1.25rem 1.5rem; }
+      .cta-band { padding: 4rem 1.5rem; }
+      .quote-content { padding: 4rem 2rem; }
+    }
+    @media (max-width: 480px) {
+      .seasonal-grid { grid-template-columns: 1fr; }
+      .act-featured-specs { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/9779811157421" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <a href="/index.html" class="mobile-drawer-link" onclick="closeDrawer()">Home <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <a href="/expeditions.html" class="mobile-drawer-link" onclick="closeDrawer()">Expeditions <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <a href="/trekking.html" class="mobile-drawer-link" onclick="closeDrawer()">Trekking <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <a href="/activities.html" class="mobile-drawer-link active-link" onclick="closeDrawer()">Activities <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <a href="/guides.html" class="mobile-drawer-link" onclick="closeDrawer()">Our Guides <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <a href="/contact.html" class="mobile-drawer-link highlight" onclick="closeDrawer()">Book Your Ascent →</a>
+  </div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="/index.html" class="nav-logo">
+      <svg class="nav-logo-icon" viewBox="0 0 40 40" fill="none">
+        <path d="M20 4 L4 36 L36 36 Z" stroke="rgba(240,192,128,0.8)" stroke-width="1.2" fill="none"/>
+        <path d="M20 4 L12 36 L20 30 Z" fill="rgba(240,192,128,0.25)"/>
+        <circle cx="20" cy="4" r="1.8" fill="rgba(240,192,128,0.9)"/>
+      </svg>
+      <div class="nav-logo-text">BEYOND SUMMIT<em>Expeditions · Nepal</em></div>
+    </a>
+    <div class="nav-links">
+      <a href="/expeditions.html">Expeditions</a>
+      <a href="/index.html#trekking">Trekking</a>
+      <a href="/activities.html" class="active">Activities</a>
+      <a href="/guides.html">Guides</a>
+      <a href="/about.html">About</a>
+      <a href="/blog.html">Blog</a>
+      <a href="/contact.html" class="nav-cta">Book Your Ascent →</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-bg">
+      <img src="https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?q=85&w=1800&auto=format&fit=crop" alt="Paragliding over Pokhara Nepal">
+    </div>
+    <div class="page-hero-content">
+      <div class="page-hero-badge">
+        <span class="page-hero-badge-dot"></span>
+        <span class="page-hero-badge-text">Year-Round Adventures · Expert Local Guides</span>
+      </div>
+      <h1 class="page-hero-title">Beyond the<br><em>Peaks</em></h1>
+      <p class="page-hero-sub">Nepal is more than mountains. Glide over the Himalayas, drift through jungle rivers, track one-horned rhinos, and freefall above the gorge that redefined extreme — all in one country.</p>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-bar" aria-hidden="true">
+    <div class="marquee-track">
+      <div class="marquee-item">Paragliding <span class="msep">◆</span> Pokhara</div>
+      <div class="marquee-item">Jungle Safari <span class="msep">◆</span> Chitwan</div>
+      <div class="marquee-item">White Water Rafting <span class="msep">◆</span> Trisuli</div>
+      <div class="marquee-item">Bungee Jump <span class="msep">◆</span> 160m</div>
+      <div class="marquee-item">Mountain Biking <span class="msep">◆</span> Kathmandu</div>
+      <div class="marquee-item">Zip Flyer <span class="msep">◆</span> 1800m Drop</div>
+      <div class="marquee-item">Heli Tour <span class="msep">◆</span> Everest</div>
+      <div class="marquee-item">Yoga &amp; Wellness <span class="msep">◆</span> Pokhara</div>
+      <div class="marquee-item">Paragliding <span class="msep">◆</span> Pokhara</div>
+      <div class="marquee-item">Jungle Safari <span class="msep">◆</span> Chitwan</div>
+      <div class="marquee-item">White Water Rafting <span class="msep">◆</span> Trisuli</div>
+      <div class="marquee-item">Bungee Jump <span class="msep">◆</span> 160m</div>
+      <div class="marquee-item">Mountain Biking <span class="msep">◆</span> Kathmandu</div>
+      <div class="marquee-item">Zip Flyer <span class="msep">◆</span> 1800m Drop</div>
+      <div class="marquee-item">Heli Tour <span class="msep">◆</span> Everest</div>
+      <div class="marquee-item">Yoga &amp; Wellness <span class="msep">◆</span> Pokhara</div>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats-strip">
+    <div class="stats-inner">
+      <div class="stat-item"><div class="stat-num">12+</div><div class="stat-label">Activities Offered</div></div>
+      <div class="stat-item"><div class="stat-num">3</div><div class="stat-label">Climate Zones</div></div>
+      <div class="stat-item"><div class="stat-num">469+</div><div class="stat-label">Clients Guided</div></div>
+      <div class="stat-item"><div class="stat-num">Year</div><div class="stat-label">Round Availability</div></div>
+    </div>
+  </div>
+
+  <!-- FILTER BAR -->
+  <div class="filter-bar">
+    <div class="filter-inner">
+      <span class="filter-label">Filter:</span>
+      <button class="filter-btn active" onclick="filterActs('all', this)">All Activities</button>
+      <button class="filter-btn" onclick="filterActs('aerial', this)">Aerial</button>
+      <button class="filter-btn" onclick="filterActs('water', this)">Water</button>
+      <button class="filter-btn" onclick="filterActs('wildlife', this)">Wildlife</button>
+      <button class="filter-btn" onclick="filterActs('land', this)">Land</button>
+      <button class="filter-btn" onclick="filterActs('wellness', this)">Wellness</button>
+    </div>
+  </div>
+
+  <!-- ACTIVITIES -->
+  <section class="activities-section">
+    <div class="activities-header">
+      <span class="eyebrow reveal">Nepal Beyond the Summit</span>
+      <h2 class="section-title reveal d1">Outdoor <em>Adventures</em></h2>
+      <p class="reveal d2" style="font-family:var(--sans);font-size:0.88rem;color:var(--muted);line-height:1.7;max-width:520px;margin-top:0.75rem;">From the subtropical jungles of the Terai to the alpine skies above Pokhara — Nepal packs more adventure per square kilometre than anywhere on earth.</p>
+    </div>
+
+    <!-- FEATURED: JUNGLE SAFARI -->
+    <div class="featured-activity reveal">
+      <a href="/activities/jungle-safari.html" class="act-featured" data-cat="wildlife">
+        <div class="act-featured-img">
+          <img src="https://images.unsplash.com/photo-1561731216-c3a4d99437d5?q=80&w=1000&auto=format&fit=crop" alt="Jungle Safari Chitwan National Park Nepal rhino elephant">
+          <div class="act-featured-img-overlay"></div>
+          <div class="act-featured-badge">Featured Experience</div>
+          <div class="act-featured-location">
+            <div class="act-featured-loc-sub">Location</div>
+            <div class="act-featured-loc-val">Chitwan National Park</div>
+          </div>
+        </div>
+        <div class="act-featured-body">
+          <span class="act-featured-tag">Wildlife · Subtropical</span>
+          <h2 class="act-featured-name">Jungle <em>Safari</em></h2>
+          <p class="act-featured-desc">Nepal's wild south — the Terai — is one of Asia's most biodiverse regions. Chitwan National Park shelters the one-horned rhinoceros, Bengal tiger, gharial crocodile, and over 500 species of bird. Our guided jeep and elephant safaris take you deep into the sal forest at dawn, when the jungle awakens. This is Nepal's other side — raw, humid, and breathtaking.</p>
+          <div class="act-featured-specs">
+            <div class="afs-item"><div class="afs-key">Duration</div><div class="afs-val">2–4 Days</div></div>
+            <div class="afs-item"><div class="afs-key">Intensity</div><div class="afs-val">Easy</div></div>
+            <div class="afs-item"><div class="afs-key">Best Season</div><div class="afs-val">Oct – Mar</div></div>
+          </div>
+          <div class="act-featured-cta">
+            Book Safari
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- ACTIVITY GRID -->
+    <div class="activities-grid" id="activities-grid">
+
+      <!-- PARAGLIDING -->
+      <a href="/activities/paragliding.html" class="act-card reveal" data-cat="aerial">
+        <div class="act-card-img">
+          <img src="https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?q=80&w=700&auto=format&fit=crop" alt="Paragliding Pokhara Phewa Lake Annapurna">
+          <div class="act-card-img-overlay"></div>
+          <div class="act-card-badge">Aerial</div>
+          <div class="act-card-duration">1<span>hr flight</span></div>
+          <div class="act-card-location">
+            <div class="act-card-loc-sub">Location</div>
+            <div class="act-card-loc-name">Pokhara</div>
+          </div>
+        </div>
+        <div class="act-card-body">
+          <span class="act-card-tag">Paragliding</span>
+          <span class="intensity-badge intensity-moderate">Moderate Thrill</span>
+          <div class="act-card-name">Paragliding Over Pokhara</div>
+          <div class="act-card-desc">Soar above Phewa Lake with the entire Annapurna range suspended before you. Launch from Sarangkot at dawn for the golden hour — arguably Nepal's single most spectacular view.</div>
+          <div class="act-card-meta">
+            <div class="act-meta-item"><div class="act-meta-key">Duration</div><div class="act-meta-val">30–60 min</div></div>
+            <div class="act-meta-item"><div class="act-meta-key">Season</div><div class="act-meta-val">Year-round</div></div>
+            <div class="act-meta-item"><div class="act-meta-key">From</div><div class="act-meta-val">$80</div></div>
+          </div>
+          <div class="act-card-link">Explore Activity <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </div>
+      </a>
+
+      <!-- WHITE WATER RAFTING -->
+      <a href="/activities/rafting.html" class="act-card reveal d1" data-cat="water">
+        <div class="act-card-img">
+          <img src="https://images.unsplash.com/photo-1530866495561-507c9faab2ed?q=80&w=700&auto=format&fit=crop" alt="White water rafting Trisuli River Nepal">
+          <div class="act-card-img-overlay"></div>
+          <div class="act-card-badge">Water</div>
+          <div class="act-card-duration">1–3<span>day trips</span></div>
+          <div class="act-card-location">
+            <div class="act-card-loc-sub">Location</div>
+            <div class="act-card-loc-name">Trisuli River</div>
+          </div>
+        </div>
+        <div class="act-card-body">
+          <span class="act-card-tag">White Water Rafting</span>
+          <span class="intensity-badge intensity-thrilling">Thrilling</span>
+          <div class="act-card-name">River Rafting</div>
+          <div class="act-card-desc">Nepal's rivers descend from the highest mountains on earth — nowhere else offers this volume of whitewater so accessible. Grade 3–4 rapids through deep jungle gorges.</div>
+          <div class="act-card-meta">
+            <div class="act-meta-item"><div class="act-meta-key">Duration</div><div class="act-meta-val">1–3 Days</div></div>
+            <div class="act-meta-item"><div class="act-meta-key">Grade</div><div class="act-meta-val">3–4</div></div>
+            <div class="act-meta-item"><div class="act-meta-key">From</div><div class="act-meta-val">$45</div></div>
+          </div>
+          <div class="act-card-link">Explore Activity <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </div>
+      </a>
+
+      <!-- BUNGEE JUMP -->
+      <a href="/activities/bungee.html" class="act-card reveal d2" data-cat="aerial land">
+        <div class="act-card-img">
+          <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=700&auto=format&fit=crop" alt="Bungee jumping Bhote Koshi gorge Nepal">
+          <div class="act-card-img-overlay"></div>
+          <div class="act-card-badge">Extreme</div>
+          <div class="act-card-duration">160<span>metre drop</span></div>
+          <div class="act-card-location">
+            <div class="act-card-loc-sub">Location</div>
+            <div class="act-card-loc-name">Bhote Koshi</div>
+          </div>
+        </div>
+        <div class="act-card-body">
+          <span class="act-card-tag">Bungee Jump</span>
+          <span class="intensity-badge intensity-thrilling">Extreme</span>
+          <div class="act-card-name">Bungee Jumping</div>
+          <div class="act-card-desc">One of the world's highest bungee jumps — 160m above the roaring Bhote Koshi River. The gorge is genuinely terrifying. The freefall is genuinely unforgettable.</div>
+          <div class="act-card-meta">
+            <div class="act-meta-item"><div class="act-meta-key">Drop Height</div><div class="act-meta-val">160 m</div></div>
+            <div class="act-meta-item"><div class="act-meta-key">From KTM</div><div class="act-meta-val">3 hrs</div></div>
+            <div class="act-meta-item"><div class="act-meta-key">From</div><div class="act-meta-val">$120</div></div>
+          </div>
+          <div class="act-card-link">Explore Activity <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </div>
+      </a>
+
+      <!-- MOUNTAIN BIKING -->
+      <a href="/activities/mountain-biking.html" class="act-card reveal" data-cat="land">
+        <div class="act-card-img">
+          <img src="https://images.unsplash.com/photo-1476611317561-60117649dd94?q=80&w=700&auto=format&fit=crop" alt="Mountain biking Kathmandu Valley Nepal trails">
+          <div class="act-card-img-overlay"></div>
+          <div class="act-card-badge">Land</div>
+          <div class="act-card-duration">1–7<span>day routes</span></div>
+          <div class="act-card-location">
+            <div class="act-card-loc-sub">Location</div>
+            <div class="act-card-loc-name">Kathmandu Valley</div>
+          </div>
+        </div>
+        <div class="act-card-body">
+          <span class="act-card-tag">Mountain Biking</span>
+          <span class="intensity-badge intensity-moderate">Moderate</span>
+          <div class="act-card-name">Mountain Biking</div>
+          <div class="act-card-desc">Ancient temple towns, terraced hillsides, and single-track trails through rhododendron forests. Kathmandu Valley is a mountain biker's paradise hiding in plain sight.</div>
+          <div class="act-card-meta">
+            <div class="act-meta-item"><div class="act-meta-key">Duration</div><div class="act-meta-val">Half–7 Days</div></div>
+            <div class="act-meta-item"><div class="act-meta-key">Level</div><div class="act-meta-val">All Levels</div></div>
+            <div class="act-meta-item"><div class="act-meta-key">From</div><div class="act-meta-val">$55</div></div>
+          </div>
+          <div class="act-card-link">Explore Activity <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </div>
+      </a>
+
+      <!-- HELICOPTER TOURS -->
+      <a href="/activities/helicopter-tours.html" class="act-card reveal d1" data-cat="aerial">
+        <div class="act-card-img">
+          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=700&auto=format&fit=crop" alt="Helicopter tour Everest Base Camp Nepal">
+          <div class="act-card-img-overlay"></div>
+          <div class="act-card-badge">Aerial · Luxury</div>
+          <div class="act-card-duration">4<span>hour flight</span></div>
+          <div class="act-card-location">
+            <div class="act-card-loc-sub">Location</div>
+            <div class="act-card-loc-name">Khumbu Region</div>
+          </div>
+        </div>
+        <div class="act-card-body">
+          <span class="act-card-tag">Helicopter Tour</span>
+          <span class="intensity-badge intensity-easy">All Abilities</span>
+          <div class="act-card-name">Everest Helicopter Tour</div>
+          <div class="act-card-desc">Experience Everest Base Camp without the weeks of trekking. Land at Kala Patthar (5,545m) for sunrise over the world's highest peak. The ultimate Himalayan luxury experience.</div>
+          <div class="act-card-meta">
+            <div class="act-meta-item"><div class="act-meta-key">Duration</div><div class="act-meta-val">4–5 Hours</div></div>
+            <div class="act-meta-item"><div class="act-meta-key">Max Alt.</div><div class="act-meta-val">5,545 m</div></div>
+            <div class="act-meta-item"><div class="act-meta-key">From</div><div class="act-meta-val">$1,200</div></div>
+          </div>
+          <div class="act-card-link">Explore Activity <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </div>
+      </a>
+
+      <!-- YOGA & WELLNESS -->
+      <a href="/activities/yoga-wellness.html" class="act-card reveal d2" data-cat="wellness">
+        <div class="act-card-img">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=700&auto=format&fit=crop" alt="Yoga meditation retreat Pokhara Nepal mountains">
+          <div class="act-card-img-overlay"></div>
+          <div class="act-card-badge">Wellness</div>
+          <div class="act-card-duration">3–7<span>day retreats</span></div>
+          <div class="act-card-location">
+            <div class="act-card-loc-sub">Location</div>
+            <div class="act-card-loc-name">Pokhara Lakeside</div>
+          </div>
+        </div>
+        <div class="act-card-body">
+          <span class="act-card-tag">Yoga &amp; Meditation</span>
+          <span class="intensity-badge intensity-easy">Restorative</span>
+          <div class="act-card-name">Yoga &amp; Wellness Retreat</div>
+          <div class="act-card-desc">Pokhara's Himalayan backdrop is the world's finest setting for yoga. Sunrise practice with Annapurna filling the horizon, lakeside meditation, and traditional Ayurvedic treatments.</div>
+          <div class="act-card-meta">
+            <div class="act-meta-item"><div class="act-meta-key">Duration</div><div class="act-meta-val">3–7 Days</div></div>
+            <div class="act-meta-item"><div class="act-meta-key">Style</div><div class="act-meta-val">Hatha / Yin</div></div>
+            <div class="act-meta-item"><div class="act-meta-key">From</div><div class="act-meta-val">$280</div></div>
+          </div>
+          <div class="act-card-link">Explore Activity <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </div>
+      </a>
+
+      <!-- ZIP FLYER -->
+      <a href="/activities/zip-flyer.html" class="act-card reveal" data-cat="aerial land">
+        <div class="act-card-img">
+          <img src="https://images.unsplash.com/photo-1499988921418-b7df40ff03f9?q=80&w=700&auto=format&fit=crop" alt="Zip line Pokhara Nepal 1800m altitude drop">
+          <div class="act-card-img-overlay"></div>
+          <div class="act-card-badge">Aerial · Extreme</div>
+          <div class="act-card-duration">1800<span>metre drop</span></div>
+          <div class="act-card-location">
+            <div class="act-card-loc-sub">Location</div>
+            <div class="act-card-loc-name">Pokhara</div>
+          </div>
+        </div>
+        <div class="act-card-body">
+          <span class="act-card-tag">Zip Flyer</span>
+          <span class="intensity-badge intensity-thrilling">Extreme</span>
+          <div class="act-card-name">World's Steepest Zip Line</div>
+          <div class="act-card-desc">The Zip Flyer in Pokhara holds the world record for steepness and speed — you hit 120km/h descending 1,800 vertical metres above Phewa Lake. Pure, screaming adrenaline.</div>
+          <div class="act-card-meta">
+            <div class="act-meta-item"><div class="act-meta-key">Length</div><div class="act-meta-val">1.8 km</div></div>
+            <div class="act-meta-item"><div class="act-meta-key">Max Speed</div><div class="act-meta-val">120 km/h</div></div>
+            <div class="act-meta-item"><div class="act-meta-key">From</div><div class="act-meta-val">$95</div></div>
+          </div>
+          <div class="act-card-link">Explore Activity <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </div>
+      </a>
+
+      <!-- KAYAKING -->
+      <a href="/activities/kayaking.html" class="act-card reveal d1" data-cat="water">
+        <div class="act-card-img">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=700&auto=format&fit=crop" alt="Kayaking Phewa Lake Pokhara Nepal">
+          <div class="act-card-img-overlay"></div>
+          <div class="act-card-badge">Water</div>
+          <div class="act-card-duration">Half<span>to full day</span></div>
+          <div class="act-card-location">
+            <div class="act-card-loc-sub">Location</div>
+            <div class="act-card-loc-name">Phewa Lake</div>
+          </div>
+        </div>
+        <div class="act-card-body">
+          <span class="act-card-tag">Kayaking</span>
+          <span class="intensity-badge intensity-easy">Relaxed</span>
+          <div class="act-card-name">Kayaking Phewa Lake</div>
+          <div class="act-card-desc">Paddle across mirror-still waters reflecting the Annapurnas in the early morning light. Visit the Tal Barahi island temple by kayak — a perfectly peaceful counterpoint to the big adventures.</div>
+          <div class="act-card-meta">
+            <div class="act-meta-item"><div class="act-meta-key">Duration</div><div class="act-meta-val">2–6 Hours</div></div>
+            <div class="act-meta-item"><div class="act-meta-key">Level</div><div class="act-meta-val">Beginner OK</div></div>
+            <div class="act-meta-item"><div class="act-meta-key">From</div><div class="act-meta-val">$30</div></div>
+          </div>
+          <div class="act-card-link">Explore Activity <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </div>
+      </a>
+
+      <!-- CANYONING -->
+      <a href="/activities/canyoning.html" class="act-card reveal d2" data-cat="water land">
+        <div class="act-card-img">
+          <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=700&auto=format&fit=crop" alt="Canyoning waterfall abseiling Nepal">
+          <div class="act-card-img-overlay"></div>
+          <div class="act-card-badge">Multi-Sport</div>
+          <div class="act-card-duration">Full<span>day adventure</span></div>
+          <div class="act-card-location">
+            <div class="act-card-loc-sub">Location</div>
+            <div class="act-card-loc-name">Jalbire, Sindhupalchok</div>
+          </div>
+        </div>
+        <div class="act-card-body">
+          <span class="act-card-tag">Canyoning</span>
+          <span class="intensity-badge intensity-thrilling">High Intensity</span>
+          <div class="act-card-name">Waterfall Canyoning</div>
+          <div class="act-card-desc">Abseil down thundering waterfalls, swim through emerald canyon pools, and scramble over jungle boulders. Nepal's hidden canyons near Jalbire are among Asia's finest.</div>
+          <div class="act-card-meta">
+            <div class="act-meta-item"><div class="act-meta-key">Duration</div><div class="act-meta-val">Full Day</div></div>
+            <div class="act-meta-item"><div class="act-meta-key">Season</div><div class="act-meta-val">Mar – Nov</div></div>
+            <div class="act-meta-item"><div class="act-meta-key">From</div><div class="act-meta-val">$85</div></div>
+          </div>
+          <div class="act-card-link">Explore Activity <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- DARK HIGHLIGHT: WHY NEPAL -->
+  <section class="highlight-strip">
+    <div class="highlight-inner">
+      <div class="highlight-text">
+        <span class="eyebrow reveal">Why Nepal</span>
+        <h2 class="highlight-title reveal d1">The World's Most <em>Diverse Adventure</em> Destination</h2>
+        <p class="highlight-desc reveal d2">In a single day you can watch the sun rise over the Himalayas, raft a Grade 4 river through the middle hills, and fall asleep listening to jungle wildlife. No other country on earth compresses this much adventure into this small a space.</p>
+        <div class="highlight-list reveal d2">
+          <div class="highlight-item">
+            <div class="highlight-item-icon">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 18l9-9 9 9"/><path d="M3 12l9-9 9 9"/></svg>
+            </div>
+            <div>
+              <div class="highlight-item-title">Vertical Variety</div>
+              <div class="highlight-item-desc">From 60m above sea level in the Terai jungle to 8,848m — every adventure operates in a different world.</div>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-item-icon">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <div class="highlight-item-title">Year-Round Access</div>
+              <div class="highlight-item-desc">While the high peaks have seasonal windows, most outdoor activities run year-round with expert guides.</div>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-item-icon">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div>
+              <div class="highlight-item-title">Local Expert Guides</div>
+              <div class="highlight-item-desc">Every activity is led by certified Nepali guides who know their terrain intimately and keep safety paramount.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="highlight-visual reveal d1">
+        <div class="highlight-img-wrap">
+          <img class="highlight-img" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=800&auto=format&fit=crop" alt="Nepal Himalayan landscape adventure">
+        </div>
+        <div class="highlight-caption">
+          <div class="highlight-caption-label">Nepal's Adventure Record</div>
+          <div class="highlight-caption-text">Home to the world's highest bungee, steepest zip line, highest paragliding launch sites, and wildest whitewater — all in a country smaller than Arkansas.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEASONAL GUIDE -->
+  <section class="seasonal-section">
+    <div class="seasonal-inner">
+      <span class="eyebrow reveal">When to Go</span>
+      <h2 class="section-title reveal d1">Seasonal <em>Activity Guide</em></h2>
+      <p class="reveal d2" style="font-family:var(--sans);font-size:0.88rem;color:var(--muted);line-height:1.7;max-width:520px;margin-top:0.75rem;">Nepal has four distinct seasons. Most activities run year-round, but here's when each shines brightest.</p>
+      <div class="seasonal-grid reveal d2">
+        <div class="season-card">
+          <div class="season-name">Spring</div>
+          <div class="season-months">March — May</div>
+          <div class="season-activities">
+            <div class="season-act peak"><span class="season-dot"></span>Paragliding (peak)</div>
+            <div class="season-act peak"><span class="season-dot"></span>Mountain Biking (peak)</div>
+            <div class="season-act"><span class="season-dot"></span>Rafting</div>
+            <div class="season-act"><span class="season-dot"></span>Helicopter Tours</div>
+            <div class="season-act"><span class="season-dot"></span>Canyoning</div>
+          </div>
+        </div>
+        <div class="season-card">
+          <div class="season-name">Monsoon</div>
+          <div class="season-months">June — August</div>
+          <div class="season-activities">
+            <div class="season-act peak"><span class="season-dot"></span>Jungle Safari (peak)</div>
+            <div class="season-act peak"><span class="season-dot"></span>Rafting (peak)</div>
+            <div class="season-act"><span class="season-dot"></span>Yoga Retreats</div>
+            <div class="season-act"><span class="season-dot"></span>Cultural Tours</div>
+            <div class="season-act" style="opacity:0.4;"><span class="season-dot"></span>Paragliding (limited)</div>
+          </div>
+        </div>
+        <div class="season-card">
+          <div class="season-name">Autumn</div>
+          <div class="season-months">September — November</div>
+          <div class="season-activities">
+            <div class="season-act peak"><span class="season-dot"></span>Paragliding (peak)</div>
+            <div class="season-act peak"><span class="season-dot"></span>Heli Tours (peak)</div>
+            <div class="season-act peak"><span class="season-dot"></span>Bungee / Zip Flyer</div>
+            <div class="season-act peak"><span class="season-dot"></span>Mountain Biking (peak)</div>
+            <div class="season-act"><span class="season-dot"></span>Kayaking</div>
+          </div>
+        </div>
+        <div class="season-card">
+          <div class="season-name">Winter</div>
+          <div class="season-months">December — February</div>
+          <div class="season-activities">
+            <div class="season-act peak"><span class="season-dot"></span>Jungle Safari (peak)</div>
+            <div class="season-act peak"><span class="season-dot"></span>Yoga Retreats (peak)</div>
+            <div class="season-act"><span class="season-dot"></span>Paragliding</div>
+            <div class="season-act"><span class="season-dot"></span>Heli Tours</div>
+            <div class="season-act"><span class="season-dot"></span>Kayaking</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section class="quote-section">
+    <img class="quote-bg-img" src="https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?q=80&w=1800&auto=format&fit=crop" alt="Nepal adventure landscape">
+    <div class="quote-bg-overlay"></div>
+    <div class="quote-content">
+      <span class="quote-mark" aria-hidden="true">"</span>
+      <blockquote class="quote-text reveal">Nepal does not give you one adventure.<br>It gives you <em>every adventure</em> at once.</blockquote>
+      <div class="quote-attr reveal d1">Beyond Summit Expeditions · Nepal</div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <h2>Ready to Go <em>Beyond</em><br>the Ordinary?</h2>
+    <p>Tell us what excites you and we'll build a custom adventure itinerary — combining activities, trekking, and culture in one unforgettable Nepal journey.</p>
+    <div class="cta-actions">
+      <a href="/contact.html" class="btn-primary-light">
+        Plan My Adventure
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="tel:+9779811157421" class="btn-outline-light">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.71 3.53 2 2 0 0 1 3.68 1.38h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.07a16 16 0 0 0 6 6l1.06-1.06a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +977-9811157421
+      </a>
+    </div>
+  </section>
+
+  <!-- CONTACT STRIP -->
+  <div class="contact-strip">
+    <div class="contact-inner">
+      <div class="contact-item">
+        <div class="contact-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.71 3.53 2 2 0 0 1 3.68 1.38h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.07a16 16 0 0 0 6 6l1.06-1.06a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <div>
+          <div class="contact-label">Call Anytime</div>
+          <div class="contact-value"><a href="tel:+9779811157421">+977 9811 157 421</a></div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div>
+          <div class="contact-label">Email Us</div>
+          <div class="contact-value"><a href="mailto:info@beyondsummitexped.com">info@beyondsummitexped.com</a></div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div>
+          <div class="contact-label">Find Us</div>
+          <div class="contact-value"><a href="https://maps.google.com/?q=Thamel,Kathmandu,Nepal" target="_blank" rel="noopener noreferrer">Thamel, Kathmandu</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo-text">Beyond Summit<em>Expeditions · Nepal</em></div>
+        <p class="footer-desc">Nepal's premier mountaineering and adventure company. Licensed by the Department of Tourism, Government of Nepal.</p>
+        <div class="footer-contact">
+          <a href="tel:+9779811157421">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.71 3.53 2 2 0 0 1 3.68 1.38h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.07a16 16 0 0 0 6 6l1.06-1.06a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +977-9811157421
+          </a>
+          <a href="mailto:info@beyondsummitexped.com">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            info@beyondsummitexped.com
+          </a>
+          <a href="https://maps.google.com/?q=Thamel,Kathmandu" target="_blank">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Thamel, Kathmandu, Nepal
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Activities</h4>
+        <ul>
+          <li><a href="/activities/jungle-safari.html">Jungle Safari</a></li>
+          <li><a href="/activities/paragliding.html">Paragliding</a></li>
+          <li><a href="/activities/rafting.html">White Water Rafting</a></li>
+          <li><a href="/activities/bungee.html">Bungee Jumping</a></li>
+          <li><a href="/activities/helicopter-tours.html">Helicopter Tours</a></li>
+          <li><a href="/activities.html">All Activities</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Expeditions</h4>
+        <ul>
+          <li><a href="/articles/everest-base-camp-guide.html">Mount Everest</a></li>
+          <li><a href="/articles/amadablam-blog.html">Ama Dablam</a></li>
+          <li><a href="/articles/manaslu-blog.html">Manaslu</a></li>
+          <li><a href="/index.html#trekking">Trekking</a></li>
+          <li><a href="/expeditions.html">All Expeditions</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/guides.html">Our Guides</a></li>
+          <li><a href="/safety.html">Safety</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Beyond Summit Expeditions · Licensed by Dept. of Tourism, Government of Nepal</p>
+      <div class="footer-socials">
+        <a href="https://instagram.com/beyondsummitexpeditions" class="social-ico" target="_blank" aria-label="Instagram">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://facebook.com/beyondsummitexped" class="social-ico" target="_blank" aria-label="Facebook">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* NAV SCROLL */
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    }, { passive: true });
+
+    /* HAMBURGER */
+    const hamburger = document.getElementById('hamburger');
+    const drawer = document.getElementById('mobileDrawer');
+    let drawerOpen = false;
+    function closeDrawer() {
+      drawerOpen = false;
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      drawer.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    hamburger.addEventListener('click', () => {
+      drawerOpen = !drawerOpen;
+      hamburger.classList.toggle('open', drawerOpen);
+      hamburger.setAttribute('aria-expanded', String(drawerOpen));
+      drawer.classList.toggle('open', drawerOpen);
+      document.body.style.overflow = drawerOpen ? 'hidden' : '';
+    });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
+
+    /* SCROLL REVEAL */
+    (() => {
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+      }, { rootMargin: '0px 0px -50px 0px', threshold: 0.05 });
+      document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    })();
+
+    /* FILTER */
+    function filterActs(cat, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.act-card').forEach(c => {
+        const cats = c.dataset.cat || '';
+        c.style.display = (cat === 'all' || cats.includes(cat)) ? '' : 'none';
+      });
+      const featured = document.querySelector('.featured-activity');
+      if (featured) {
+        const featCats = featured.querySelector('.act-featured')?.dataset.cat || '';
+        featured.style.display = (cat === 'all' || cat === 'wildlife') ? '' : 'none';
+      }
+    }
+  </script>
+</body>
+</html>
