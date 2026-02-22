@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Everest Base Camp Trek 2026 | Beyond Summit Expeditions</title>
+  <meta name="description" content="The complete Everest Base Camp Trek guide for 2026. 14-day itinerary, permits, best time, gear list, costs and expert tips from Beyond Summit Expeditions, Nepal.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --cream:#faf7f2;--cream-dark:#f2ede4;--parchment:#ede8de;
+      --amber:#b8651a;--amber-light:#d4812a;--amber-pale:#f0c080;
+      --charcoal:#1c1814;--stone:#3d3530;--muted:#7a6e65;
+      --glacier:#5a8fa0;
+      --border:rgba(60,45,30,0.1);--border-strong:rgba(60,45,30,0.18);
+      --serif:"Playfair Display",Georgia,serif;--sans:"DM Sans",system-ui,sans-serif;--mono:"DM Mono",monospace;
+      --ease:cubic-bezier(0.22,1,0.36,1);
+      --shadow-sm:0 2px 12px rgba(60,40,20,0.08);--shadow-md:0 8px 32px rgba(60,40,20,0.12);--shadow-lg:0 20px 60px rgba(60,40,20,0.18)
+    }
+    html{scroll-behavior:smooth;font-size:16px}
+    body{font-family:var(--sans);background:var(--cream);color:var(--charcoal);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}ul{list-style:none}img{display:block}
+
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;z-index:800;display:flex;align-items:center;justify-content:space-between;padding:1.5rem 4rem;transition:all 0.5s var(--ease);background:transparent}
+    nav.scrolled{background:rgba(250,247,242,0.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:1rem 4rem;box-shadow:var(--shadow-sm)}
+    .nav-logo{display:flex;align-items:center;gap:0.75rem}
+    .nav-logo-icon{width:30px;height:30px}
+    .nav-logo-text{font-family:var(--serif);font-size:1.4rem;font-weight:700;color:var(--cream);letter-spacing:0.01em;transition:color 0.4s}
+    nav.scrolled .nav-logo-text{color:var(--charcoal)}
+    .nav-logo-text em{display:block;font-style:normal;font-family:var(--mono);font-size:0.52rem;letter-spacing:0.4em;text-transform:uppercase;color:rgba(250,247,242,0.7);margin-top:2px;transition:color 0.4s}
+    nav.scrolled .nav-logo-text em{color:var(--amber)}
+    .nav-links{display:flex;align-items:center;gap:2rem}
+    .nav-links a{font-size:0.875rem;font-weight:400;color:rgba(250,247,242,0.85);transition:color 0.3s;letter-spacing:0.02em}
+    nav.scrolled .nav-links a{color:var(--stone)}
+    .nav-links a:hover{color:var(--amber-light)!important}
+    .nav-cta{background:var(--amber);color:white!important;padding:0.6rem 1.5rem;font-size:0.82rem!important;font-weight:500!important;letter-spacing:0.04em!important;transition:background 0.3s,transform 0.3s!important}
+    .nav-cta:hover{background:var(--amber-light)!important;transform:translateY(-1px)}
+    .nav-hamburger{display:none;flex-direction:column;justify-content:center;width:44px;height:44px;gap:5px;cursor:pointer;background:rgba(250,247,242,0.12);border:1px solid rgba(250,247,242,0.25);border-radius:6px;padding:0 12px;transition:all 0.3s}
+    nav.scrolled .nav-hamburger{background:rgba(60,40,20,0.06);border-color:var(--border)}
+    .nav-hamburger span{display:block;width:100%;height:1.5px;background:white;transition:all 0.4s var(--ease)}
+    nav.scrolled .nav-hamburger span{background:var(--charcoal)}
+    .nav-hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+    .nav-hamburger.open span:nth-child(2){opacity:0}
+    .nav-hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+    .mobile-drawer{position:fixed;inset:0;z-index:700;background:var(--cream);display:flex;flex-direction:column;padding:6rem 2rem 2rem;transform:translateX(100%);transition:transform 0.5s var(--ease)}
+    .mobile-drawer.open{transform:none}
+    .mobile-drawer-link{display:flex;align-items:center;justify-content:space-between;padding:1.25rem 0;border-bottom:1px solid var(--border);font-family:var(--serif);font-size:1.8rem;color:var(--charcoal);opacity:0;transform:translateX(20px);transition:opacity 0.4s,transform 0.4s,color 0.3s}
+    .mobile-drawer.open .mobile-drawer-link:nth-child(1){opacity:1;transform:none;transition-delay:0.06s}
+    .mobile-drawer.open .mobile-drawer-link:nth-child(2){opacity:1;transform:none;transition-delay:0.1s}
+    .mobile-drawer.open .mobile-drawer-link:nth-child(3){opacity:1;transform:none;transition-delay:0.14s}
+    .mobile-drawer.open .mobile-drawer-link:nth-child(4){opacity:1;transform:none;transition-delay:0.18s}
+    .mobile-drawer.open .mobile-drawer-link:nth-child(5){opacity:1;transform:none;transition-delay:0.22s}
+    .mobile-drawer-link:hover,.mobile-drawer-link.highlight{color:var(--amber)}
+
+    /* HERO */
+    .hero{position:relative;width:100%;height:100svh;min-height:650px;overflow:hidden}
+    .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(0.5) saturate(1.05);transform:scale(1.06);animation:heroZoom 14s var(--ease) forwards}
+    @keyframes heroZoom{to{transform:scale(1)}}
+    .hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(15,10,5,0.92) 0%,rgba(15,10,5,0.3) 40%,transparent 65%),linear-gradient(to right,rgba(15,10,5,0.55) 0%,transparent 55%)}
+    .hero-content{position:absolute;bottom:0;left:0;right:0;padding:0 5rem 5rem;z-index:2}
+    .hero-eyebrow{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.35em;text-transform:uppercase;color:var(--amber-pale);margin-bottom:1rem;display:flex;align-items:center;gap:0.75rem;opacity:0;animation:riseUp 0.8s 0.2s var(--ease) forwards;transform:translateY(20px)}
+    .hero-eyebrow-dot{width:6px;height:6px;border-radius:50%;background:var(--amber-pale)}
+    .hero-title{font-family:var(--serif);font-size:clamp(3.5rem,9vw,8.5rem);font-weight:400;line-height:0.88;color:white;margin-bottom:1.25rem;opacity:0;animation:riseUp 1s 0.35s var(--ease) forwards;transform:translateY(24px)}
+    .hero-title em{font-style:italic;color:var(--amber-pale);display:block}
+    .hero-subtitle{font-family:var(--mono);font-size:0.72rem;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:2.5rem;opacity:0;animation:riseUp 0.9s 0.5s var(--ease) forwards;transform:translateY(20px)}
+    .hero-actions{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;opacity:0;animation:riseUp 0.9s 0.65s var(--ease) forwards;transform:translateY(20px)}
+    .btn-primary{display:inline-flex;align-items:center;gap:0.6rem;background:var(--amber);color:white;padding:0.9rem 2.25rem;font-size:0.88rem;font-weight:500;letter-spacing:0.04em;transition:background 0.3s,transform 0.3s,gap 0.3s}
+    .btn-primary:hover{background:var(--amber-light);transform:translateX(3px);gap:0.9rem}
+    .btn-ghost{font-size:0.82rem;color:rgba(255,255,255,0.65);display:flex;align-items:center;gap:0.5rem;border-bottom:1px solid rgba(255,255,255,0.25);padding-bottom:2px;background:none;border-top:none;border-left:none;border-right:none;cursor:pointer;transition:color 0.3s,border-color 0.3s}
+    .btn-ghost:hover{color:white;border-bottom-color:white}
+    .hero-scroll{position:absolute;bottom:2rem;right:5rem;z-index:2;font-family:var(--mono);font-size:0.5rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.3);display:flex;align-items:center;gap:0.75rem}
+    .hero-scroll::before{content:"";width:36px;height:1px;background:rgba(255,255,255,0.2)}
+    @keyframes riseUp{to{opacity:1;transform:translateY(0)}}
+
+    /* MARQUEE */
+    .marquee-bar{background:var(--charcoal);overflow:hidden;padding:0.7rem 0;border-top:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06)}
+    .marquee-track{display:flex;width:max-content;animation:marqueeAnim 40s linear infinite}
+    .marquee-item{display:flex;align-items:center;gap:0.75rem;padding:0 1.75rem;font-family:var(--mono);font-size:0.54rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(240,192,128,0.4);white-space:nowrap}
+    .marquee-sep{color:var(--amber-pale);font-size:0.3rem}
+    @keyframes marqueeAnim{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+    /* STATS */
+    .stats-strip{background:white;border-bottom:1px solid var(--border)}
+    .stats-inner{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:repeat(6,1fr)}
+    .stat-item{display:flex;flex-direction:column;align-items:center;gap:0.3rem;padding:1.6rem 0.6rem;border-right:1px solid var(--border);text-align:center;transition:background 0.3s}
+    .stat-item:last-child{border-right:none}
+    .stat-item:hover{background:rgba(184,101,26,0.03)}
+    .stat-icon{color:var(--amber);margin-bottom:0.2rem}
+    .stat-num{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--amber);line-height:1}
+    .stat-label{font-family:var(--mono);font-size:0.46rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted)}
+
+    /* TAB NAV */
+    .tab-nav-wrap{position:sticky;top:0;z-index:400;background:rgba(250,247,242,0.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);box-shadow:var(--shadow-sm)}
+    .tab-nav-inner{max-width:1300px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 3rem}
+    .tab-nav{display:flex;overflow-x:auto;scrollbar-width:none}
+    .tab-nav::-webkit-scrollbar{display:none}
+    .tab-btn{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);background:none;border:none;border-bottom:2px solid transparent;cursor:pointer;padding:1.1rem 1.5rem;margin-bottom:-1px;transition:color 0.3s,border-color 0.3s;white-space:nowrap}
+    .tab-btn:hover{color:var(--charcoal)}
+    .tab-btn.active{color:var(--amber);border-bottom-color:var(--amber)}
+    .tab-enquire{background:var(--amber);color:white;font-size:0.82rem;font-weight:500;padding:0.65rem 1.5rem;white-space:nowrap;flex-shrink:0;transition:background 0.3s}
+    .tab-enquire:hover{background:var(--amber-light)}
+
+    /* COMMONS */
+    .section-anchor{display:flex;align-items:center;gap:1rem;padding:0.7rem 3rem;background:var(--cream-dark);border-bottom:1px solid var(--border)}
+    .section-anchor span{font-family:var(--mono);font-size:0.52rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--amber)}
+    .section-anchor::after{content:"";flex:1;height:1px;background:var(--border)}
+    .page-section{padding:5rem 0}
+    .page-section.alt-bg{background:white}
+    .section-inner{max-width:1300px;margin:0 auto;padding:0 3rem}
+    .eyebrow{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.32em;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:0.75rem}
+    .section-title{font-family:var(--serif);font-size:clamp(2rem,4vw,3rem);font-weight:400;line-height:1;letter-spacing:-0.01em;color:var(--charcoal)}
+    .section-title em{font-style:italic;color:var(--amber)}
+
+    /* REVEAL ANIMATIONS */
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity 0.9s var(--ease),transform 0.9s var(--ease)}
+    .reveal.in{opacity:1;transform:none}
+    .reveal.d1{transition-delay:0.12s}.reveal.d2{transition-delay:0.22s}.reveal.d3{transition-delay:0.34s}.reveal.d4{transition-delay:0.46s}
+    .reveal-r{opacity:0;transform:translateX(32px);transition:opacity 0.9s var(--ease),transform 0.9s var(--ease)}
+    .reveal-r.in{opacity:1;transform:none}
+
+    /* IMAGE SHAPES */
+    .shape-diagonal{clip-path:polygon(0 0,100% 0,100% 88%,0 100%);overflow:hidden}
+    .shape-diagonal img{width:100%;height:320px;object-fit:cover;transition:transform 1.4s var(--ease),filter 0.5s;filter:brightness(0.88) saturate(1.1)}
+    .shape-diagonal:hover img{transform:scale(1.06);filter:brightness(0.96) saturate(1.2)}
+    .shape-arch{border-radius:140px 140px 0 0;overflow:hidden}
+    .shape-arch img{width:100%;height:300px;object-fit:cover;transition:transform 1.4s var(--ease)}
+    .shape-arch:hover img{transform:scale(1.06)}
+    .shape-angled{clip-path:polygon(6% 0%,100% 0%,94% 100%,0% 100%);overflow:hidden}
+    .shape-angled img{width:100%;height:260px;object-fit:cover;transition:transform 1.4s var(--ease)}
+    .shape-angled:hover img{transform:scale(1.06)}
+    .shape-cinematic{overflow:hidden;aspect-ratio:21/9;border-radius:4px}
+    .shape-cinematic img{width:100%;height:100%;object-fit:cover;transition:transform 1.6s var(--ease),filter 0.5s;filter:brightness(0.85) saturate(1.1)}
+    .shape-cinematic:hover img{transform:scale(1.04);filter:brightness(0.95)}
+    .shape-diamond-wrap{display:flex;justify-content:center;padding:1.5rem}
+    .shape-diamond{width:210px;height:210px;clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%);overflow:hidden}
+    .shape-diamond img{width:100%;height:100%;object-fit:cover;transform:scale(1.42);transition:transform 1.4s var(--ease)}
+    .shape-diamond:hover img{transform:scale(1.55)}
+    .img-caption{font-family:var(--mono);font-size:0.5rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-top:0.65rem;display:flex;align-items:center;gap:0.5rem}
+    .img-caption::before{content:"";width:18px;height:1px;background:var(--amber)}
+
+    /* OVERVIEW */
+    .overview-layout{display:grid;grid-template-columns:1fr 360px;gap:5rem;align-items:start;padding-top:3rem}
+    .overview-lead{font-family:var(--serif);font-size:1.15rem;font-style:italic;color:var(--stone);line-height:1.65;margin-bottom:1.4rem}
+    .overview-body p{font-size:0.9rem;line-height:1.85;color:var(--stone);margin-bottom:1rem}
+    .overview-body strong{color:var(--charcoal)}
+    .alert{padding:1.4rem;margin:1.5rem 0;border-left:3px solid var(--amber);background:rgba(184,101,26,0.06)}
+    .alert.info{border-left-color:var(--glacier);background:rgba(90,143,160,0.06)}
+    .alert-label{font-family:var(--mono);font-size:0.5rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--amber);margin-bottom:0.45rem;display:flex;align-items:center;gap:0.45rem}
+    .alert.info .alert-label{color:var(--glacier)}
+    .alert p{font-size:0.84rem;line-height:1.7;color:var(--stone);margin:0}
+    .read-more-content{overflow:hidden;transition:max-height 0.6s var(--ease);max-height:0}
+    .read-more-content.open{max-height:4000px}
+    .read-more-btn{display:inline-flex;align-items:center;gap:0.5rem;margin-top:1.25rem;font-family:var(--mono);font-size:0.54rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--amber);background:none;border:1px solid rgba(184,101,26,0.3);padding:0.5rem 1rem;cursor:pointer;transition:all 0.3s}
+    .read-more-btn:hover{background:rgba(184,101,26,0.08);border-color:var(--amber)}
+    .read-more-btn svg{transition:transform 0.35s var(--ease)}
+    .read-more-btn.expanded svg{transform:rotate(180deg)}
+    .facts-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-top:1.5rem}
+    .fact-item{background:white;border:1px solid var(--border);padding:0.8rem;transition:border-color 0.3s}
+    .fact-item:hover{border-color:rgba(184,101,26,0.3)}
+    .fact-label{font-family:var(--mono);font-size:0.44rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-bottom:0.2rem}
+    .fact-val{font-family:var(--serif);font-size:0.9rem;color:var(--charcoal)}
+
+    /* SIDEBAR */
+    .sidebar{position:sticky;top:108px}
+    .sidebar-card{background:white;border:1px solid var(--border);padding:1.75rem;margin-bottom:1.25rem;box-shadow:var(--shadow-sm)}
+    .sidebar-card h3{font-family:var(--serif);font-size:1.15rem;font-weight:400;color:var(--charcoal);margin-bottom:1.1rem;padding-bottom:0.75rem;border-bottom:1px solid var(--border)}
+    .sidebar-row{display:flex;align-items:center;gap:0.8rem;padding:0.65rem 0;border-bottom:1px solid var(--border)}
+    .sidebar-row:last-child{border-bottom:none}
+    .sidebar-icon{color:var(--amber);flex-shrink:0}
+    .sidebar-label{font-family:var(--mono);font-size:0.43rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted)}
+    .sidebar-val{font-size:0.86rem;font-weight:500;color:var(--charcoal)}
+    .btn-book-full{display:block;background:var(--charcoal);color:white;text-align:center;padding:0.9rem;font-size:0.85rem;font-weight:500;margin-top:1rem;transition:background 0.3s,transform 0.3s}
+    .btn-book-full:hover{background:var(--stone);transform:translateY(-2px)}
+    .btn-pdf{display:block;text-align:center;padding:0.7rem;font-family:var(--mono);font-size:0.5rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);margin-top:0.6rem;background:none;width:100%;cursor:pointer;transition:all 0.3s}
+    .btn-pdf:hover{border-color:var(--amber);color:var(--amber)}
+
+    /* DATES */
+    .dates-band{background:var(--charcoal);padding:3rem 0;margin:3rem 0}
+    .dates-label{font-family:var(--mono);font-size:0.56rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--amber-pale);margin-bottom:1.5rem}
+    .dates-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+    .date-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);padding:1.5rem;transition:background 0.3s,border-color 0.3s}
+    .date-card:hover{background:rgba(184,101,26,0.12);border-color:rgba(184,101,26,0.4)}
+    .date-season{font-family:var(--mono);font-size:0.46rem;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.36);margin-bottom:0.4rem}
+    .date-range{font-family:var(--serif);font-size:1.1rem;color:white;margin-bottom:0.35rem}
+    .date-spots{font-family:var(--mono);font-size:0.5rem;letter-spacing:0.1em;color:var(--amber-pale)}
+    .date-price{font-size:0.8rem;color:rgba(255,255,255,0.55);margin-top:0.3rem}
+
+    /* ROUTE / WAYPOINTS */
+    .route-intro{font-family:var(--serif);font-size:1.05rem;font-style:italic;color:var(--stone);line-height:1.7;max-width:680px;margin:1rem 0 2.5rem}
+    .route-mosaic{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-bottom:3rem}
+    .mosaic-tall{grid-row:span 2}
+    .mosaic-tall .mosaic-img{height:100%;min-height:420px;border-radius:110px 110px 0 0;overflow:hidden}
+    .mosaic-wide{grid-column:span 2}
+    .mosaic-wide .mosaic-img{height:190px;overflow:hidden;border-radius:4px}
+    .mosaic-sq .mosaic-img{height:190px;overflow:hidden;border-radius:4px}
+    .mosaic-arc .mosaic-img{height:190px;overflow:hidden;border-radius:80px 80px 0 0}
+    .mosaic-img img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease),filter 0.5s;filter:brightness(0.85) saturate(1.05)}
+    .mosaic-img:hover img{transform:scale(1.07);filter:brightness(0.95) saturate(1.15)}
+
+    .camp-row{display:grid;grid-template-columns:56px 1fr;gap:2rem;padding:1.75rem 0;border-bottom:1px solid var(--border);align-items:start}
+    .camp-row:last-child{border-bottom:none}
+    .camp-marker{display:flex;flex-direction:column;align-items:center}
+    .camp-dot{width:44px;height:44px;border-radius:50%;border:2px solid var(--amber);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:0.65rem;font-weight:700;color:var(--amber);background:rgba(184,101,26,0.07);transition:background 0.3s;text-align:center;line-height:1.1}
+    .camp-row:hover .camp-dot{background:rgba(184,101,26,0.14)}
+    .camp-dot.summit{background:var(--amber);color:white;border-color:var(--amber);font-size:1.1rem}
+    .camp-line{width:1px;flex:1;min-height:28px;background:rgba(184,101,26,0.18);margin-top:4px}
+    .camp-title{font-family:var(--serif);font-size:1.15rem;font-weight:400;color:var(--charcoal);margin-bottom:0.3rem;display:flex;align-items:center;gap:0.875rem;flex-wrap:wrap}
+    .camp-alt{font-family:var(--mono);font-size:0.56rem;letter-spacing:0.1em;color:var(--amber)}
+    .camp-body{font-size:0.84rem;line-height:1.75;color:var(--stone);margin-bottom:0.65rem}
+    .camp-tags{display:flex;flex-wrap:wrap;gap:0.35rem}
+    .ctag{font-family:var(--mono);font-size:0.44rem;letter-spacing:0.13em;text-transform:uppercase;background:var(--cream-dark);color:var(--muted);border:1px solid var(--border);padding:0.16rem 0.55rem}
+    .ctag.gold{background:rgba(184,101,26,0.1);color:var(--amber);border-color:rgba(184,101,26,0.2)}
+    .ctag.blue{background:rgba(90,143,160,0.1);color:var(--glacier);border-color:rgba(90,143,160,0.2)}
+
+    /* DETAILS */
+    .detail-tabs{display:flex;border-bottom:1px solid var(--border);margin-bottom:2.5rem;overflow-x:auto;scrollbar-width:none}
+    .detail-tabs::-webkit-scrollbar{display:none}
+    .dtab{display:flex;flex-direction:column;align-items:center;gap:0.3rem;padding:1.2rem 2rem;cursor:pointer;border:none;border-bottom:2px solid transparent;margin-bottom:-1px;background:none;transition:all 0.3s;white-space:nowrap}
+    .dtab svg{color:var(--muted);transition:color 0.3s}
+    .dtab span{font-family:var(--mono);font-size:0.52rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);transition:color 0.3s}
+    .dtab.active{border-bottom-color:var(--amber)}
+    .dtab.active svg,.dtab.active span{color:var(--amber)}
+    .dtab:hover svg,.dtab:hover span{color:var(--charcoal)}
+    .dpanel{display:none}.dpanel.active{display:block}
+
+    /* ITINERARY */
+    .phase-label{font-family:var(--mono);font-size:0.5rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--muted);padding:0.4rem 0;border-top:1px solid var(--border);margin:1.5rem 0 0.3rem;display:flex;align-items:center;gap:0.8rem}
+    .phase-label:first-child{border-top:none;margin-top:0}
+    .phase-label::after{content:"";flex:1;height:1px;background:var(--border)}
+    .itin-day{display:flex;gap:1.4rem;padding:1.4rem 0;border-bottom:1px solid var(--border);align-items:flex-start}
+    .itin-day:last-child{border-bottom:none}
+    .day-box{flex-shrink:0;width:50px;height:50px;background:var(--cream-dark);border:1px solid var(--border-strong);display:flex;flex-direction:column;align-items:center;justify-content:center}
+    .day-box.acc{background:var(--amber);border-color:var(--amber)}
+    .day-box.acc2{background:rgba(90,143,160,0.12);border-color:rgba(90,143,160,0.25)}
+    .day-lbl{font-family:var(--mono);font-size:0.38rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);line-height:1}
+    .day-box.acc .day-lbl{color:rgba(255,255,255,0.65)}
+    .day-box.acc2 .day-lbl{color:rgba(90,143,160,0.7)}
+    .day-num{font-family:var(--serif);font-size:1.1rem;font-weight:500;color:var(--charcoal);line-height:1}
+    .day-box.acc .day-num{color:white;font-size:1.25rem}
+    .day-title{font-size:0.95rem;font-weight:500;color:var(--charcoal);margin-bottom:0.3rem}
+    .day-desc{font-size:0.82rem;line-height:1.72;color:var(--stone);margin-bottom:0.45rem}
+    .day-tags{display:flex;flex-wrap:wrap;gap:0.35rem}
+    .dtag-pill{font-family:var(--mono);font-size:0.42rem;letter-spacing:0.12em;text-transform:uppercase;background:var(--cream-dark);color:var(--muted);border:1px solid var(--border);padding:0.14rem 0.48rem}
+    .dtag-pill.alt{background:rgba(184,101,26,0.08);color:var(--amber);border-color:rgba(184,101,26,0.2)}
+    .dtag-pill.blue{background:rgba(90,143,160,0.08);color:var(--glacier);border-color:rgba(90,143,160,0.2)}
+
+    /* INCLUDED */
+    .inc-cols{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+    .inc-col h3{font-family:var(--serif);font-size:1.05rem;font-weight:400;color:var(--charcoal);padding-bottom:0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.875rem;display:flex;align-items:center;gap:0.5rem}
+    .inc-dot{width:8px;height:8px;border-radius:50%;background:var(--amber);flex-shrink:0}
+    .inc-dot.no{background:#c04040}
+    .inc-col li{font-size:0.84rem;color:var(--stone);padding:0.38rem 0 0.38rem 1.3rem;position:relative;border-bottom:1px solid var(--border);line-height:1.6}
+    .inc-col li:last-child{border-bottom:none}
+    .inc-col li::before{content:"✓";position:absolute;left:0;color:var(--amber);font-size:0.7rem;font-weight:700;top:0.45rem}
+    .inc-col.not li::before{content:"✗";color:#c04040}
+
+    /* PRACTICAL */
+    .cost-table{width:100%;border-collapse:collapse}
+    .cost-table th{text-align:left;font-family:var(--mono);font-size:0.48rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--amber);padding:0.7rem 1rem;border-bottom:2px solid rgba(184,101,26,0.25);background:white}
+    .cost-table td{padding:0.82rem 1rem;border-bottom:1px solid var(--border);font-size:0.84rem;color:var(--stone);vertical-align:top}
+    .cost-table tr:nth-child(even) td{background:var(--cream)}
+    .cost-table tr.total td{font-family:var(--serif);font-size:1rem;font-weight:500;color:var(--charcoal);background:var(--parchment);border-color:rgba(184,101,26,0.25)}
+    .cost-table td:first-child{color:var(--charcoal);font-weight:500}
+    .pcards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin:2.5rem 0}
+    .pcard{background:white;border:1px solid var(--border);padding:1.6rem;transition:border-color 0.3s,box-shadow 0.3s}
+    .pcard:hover{border-color:rgba(184,101,26,0.3);box-shadow:var(--shadow-sm)}
+    .pcard-icon{color:var(--amber);margin-bottom:0.75rem}
+    .pcard h3{font-family:var(--serif);font-size:1rem;font-weight:400;color:var(--charcoal);margin-bottom:0.65rem}
+    .pcard p{font-size:0.82rem;line-height:1.7;color:var(--stone);margin-bottom:0.4rem}
+    .pcard li{font-size:0.8rem;color:var(--stone);padding:0.26rem 0 0.26rem 1.1rem;position:relative;border-bottom:1px solid var(--border);line-height:1.5}
+    .pcard li:last-child{border-bottom:none}
+    .pcard li::before{content:"▸";position:absolute;left:0;color:var(--amber);font-size:0.58rem;top:0.34rem}
+    .gear-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:2rem}
+    .gcol{background:white;border:1px solid var(--border);padding:1.4rem}
+    .gcol h3{font-family:var(--mono);font-size:0.54rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--amber);border-bottom:1px solid var(--border);padding-bottom:0.7rem;margin-bottom:0.875rem}
+    .gcol li{font-size:0.78rem;color:var(--stone);padding:0.3rem 0 0.3rem 1rem;position:relative;border-bottom:1px solid var(--border);line-height:1.5}
+    .gcol li:last-child{border-bottom:none}
+    .gcol li::before{content:"·";position:absolute;left:0;color:var(--amber);font-size:1rem;line-height:1.1}
+    .gcol li strong{color:var(--charcoal)}
+
+    /* TIPS */
+    .tips-band{background:white;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:4rem 0}
+    .tips-inner{max-width:1300px;margin:0 auto;padding:0 3rem}
+    .tips-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:2.5rem}
+    .tip-item{text-align:center;padding:1.75rem 1.1rem;border:1px solid var(--border);transition:border-color 0.3s,box-shadow 0.3s}
+    .tip-item:hover{border-color:rgba(184,101,26,0.3);box-shadow:var(--shadow-sm)}
+    .tip-icon{width:46px;height:46px;margin:0 auto 0.875rem;background:rgba(184,101,26,0.08);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--amber)}
+    .tip-title{font-family:var(--serif);font-size:0.95rem;font-weight:400;color:var(--charcoal);margin-bottom:0.35rem}
+    .tip-desc{font-size:0.76rem;color:var(--muted);line-height:1.65}
+
+    /* QUOTE */
+    .quote-band{position:relative;overflow:hidden;min-height:44vh;display:flex;align-items:center;justify-content:center}
+    .quote-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(0.28) saturate(0.5)}
+    .quote-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(15,8,3,0.75),rgba(15,8,3,0.45),rgba(15,8,3,0.65))}
+    .quote-content{position:relative;z-index:2;text-align:center;padding:4rem 3rem;max-width:820px}
+    .qmark{font-family:var(--serif);font-size:4rem;color:var(--amber-pale);opacity:0.25;line-height:0;display:block;margin-bottom:1.75rem}
+    .qtext{font-family:var(--serif);font-size:clamp(1.35rem,2.5vw,2.1rem);font-style:italic;color:white;line-height:1.45;margin-bottom:1.65rem}
+    .qtext em{color:var(--amber-pale);font-style:normal}
+    .qattr{font-family:var(--mono);font-size:0.54rem;letter-spacing:0.24em;text-transform:uppercase;color:rgba(255,255,255,0.3);display:flex;align-items:center;justify-content:center;gap:1rem}
+    .qattr::before,.qattr::after{content:"";width:22px;height:1px;background:rgba(255,255,255,0.15)}
+
+    /* RELATED */
+    .related-section{background:var(--charcoal);padding:6rem 0}
+    .related-inner{max-width:1300px;margin:0 auto;padding:0 3rem}
+    .related-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:2.75rem}
+    .related-eyebrow{font-family:var(--mono);font-size:0.54rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--amber-pale);display:block;margin-bottom:0.5rem}
+    .related-title{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.5rem);font-weight:400;color:white}
+    .related-title em{font-style:italic;color:var(--amber-pale)}
+    .related-view-all{font-family:var(--mono);font-size:0.52rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.38);display:flex;align-items:center;gap:0.45rem;border-bottom:1px solid rgba(255,255,255,0.12);padding-bottom:2px;transition:color 0.3s,border-color 0.3s}
+    .related-view-all:hover{color:var(--amber-pale);border-bottom-color:var(--amber-pale)}
+    .related-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+    .rcard{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);overflow:hidden;transition:border-color 0.4s,transform 0.5s var(--ease),box-shadow 0.5s}
+    .rcard:hover{border-color:rgba(184,101,26,0.4);transform:translateY(-6px);box-shadow:0 24px 48px rgba(0,0,0,0.3)}
+    .rcard-img-wrap{overflow:hidden;position:relative}
+    .rcard-img{width:100%;height:200px;object-fit:cover;filter:brightness(0.7) saturate(1.05);transition:transform 1.4s var(--ease),filter 0.5s;display:block}
+    .rcard:hover .rcard-img{transform:scale(1.07);filter:brightness(0.85) saturate(1.15)}
+    .rcard-badge{position:absolute;top:0.875rem;left:0.875rem;font-family:var(--mono);font-size:0.44rem;letter-spacing:0.16em;text-transform:uppercase;background:rgba(250,247,242,0.9);color:var(--stone);padding:0.22rem 0.6rem;backdrop-filter:blur(8px)}
+    .rcard-alt{position:absolute;bottom:0.875rem;right:0.875rem;font-family:var(--mono);font-size:0.58rem;letter-spacing:0.08em;color:var(--amber-pale)}
+    .rcard-body{padding:1.4rem}
+    .rcard-num{font-family:var(--mono);font-size:0.46rem;letter-spacing:0.16em;text-transform:uppercase;color:rgba(240,192,128,0.55);margin-bottom:0.3rem}
+    .rcard-name{font-family:var(--serif);font-size:1.3rem;font-weight:400;color:white;margin-bottom:0.35rem}
+    .rcard-desc{font-size:0.76rem;color:rgba(255,255,255,0.4);line-height:1.6;margin-bottom:0.875rem}
+    .rcard-link{font-size:0.74rem;font-weight:500;color:var(--amber-pale);display:flex;align-items:center;gap:0.4rem;transition:gap 0.3s}
+    .rcard:hover .rcard-link{gap:0.7rem}
+
+    /* CONTACT STRIP */
+    .contact-strip{background:var(--cream-dark);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+    .contact-inner{max-width:1300px;margin:0 auto;padding:0 3rem;display:grid;grid-template-columns:repeat(3,1fr)}
+    .contact-item{display:flex;align-items:center;gap:1.1rem;padding:2.1rem 2rem;border-right:1px solid var(--border);transition:background 0.3s}
+    .contact-item:first-child{padding-left:0}
+    .contact-item:last-child{border-right:none}
+    .contact-item:hover{background:rgba(184,101,26,0.04)}
+    .contact-icon{width:40px;height:40px;flex-shrink:0;background:white;border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--amber)}
+    .contact-label{font-family:var(--mono);font-size:0.46rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-bottom:0.22rem}
+    .contact-value{font-size:0.86rem;font-weight:500;color:var(--charcoal)}
+    .contact-value a:hover{color:var(--amber)}
+
+    /* FOOTER */
+    footer{background:var(--charcoal);border-top:1px solid rgba(255,255,255,0.05);padding:5rem 4rem 2.5rem}
+    .footer-grid{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:4rem;margin-bottom:4rem;padding-bottom:4rem;border-bottom:1px solid rgba(255,255,255,0.06)}
+    .footer-logo-text{font-family:var(--serif);font-size:1.3rem;font-weight:700;color:white}
+    .footer-logo-text em{display:block;font-style:normal;font-family:var(--mono);font-size:0.5rem;letter-spacing:0.35em;text-transform:uppercase;color:var(--amber);margin-top:3px}
+    .footer-desc{font-size:0.8rem;color:rgba(255,255,255,0.38);line-height:1.75;margin-top:1rem}
+    .footer-contact{margin-top:1.5rem;display:flex;flex-direction:column;gap:0.5rem}
+    .footer-contact a{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.06em;color:rgba(255,255,255,0.34);display:flex;align-items:center;gap:0.5rem;transition:color 0.3s}
+    .footer-contact a:hover{color:var(--amber-pale)}
+    .footer-col h4{font-family:var(--mono);font-size:0.52rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--amber);margin-bottom:1.25rem}
+    .footer-col ul{display:flex;flex-direction:column;gap:0.6rem}
+    .footer-col a{font-size:0.8rem;color:rgba(255,255,255,0.38);transition:color 0.3s,padding-left 0.3s}
+    .footer-col a:hover{color:rgba(255,255,255,0.7);padding-left:4px}
+    .footer-bottom{max-width:1300px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+    .footer-bottom p{font-family:var(--mono);font-size:0.55rem;letter-spacing:0.1em;color:rgba(255,255,255,0.18)}
+    .footer-socials{display:flex;gap:0.75rem}
+    .social-ico{width:32px;height:32px;border-radius:50%;border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.28);transition:all 0.3s}
+    .social-ico:hover{border-color:var(--amber);color:var(--amber)}
+
+    /* WA FLOAT */
+    .wa-float{position:fixed;bottom:2rem;right:2rem;z-index:500;width:52px;height:52px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;color:white;box-shadow:0 6px 20px rgba(37,211,102,0.4);transition:transform 0.4s var(--ease)}
+    .wa-float:hover{transform:scale(1.1)}
+
+    /* READING PROGRESS */
+    .reading-progress{position:fixed;top:0;left:0;right:0;height:2px;background:rgba(184,101,26,0.1);z-index:1000;pointer-events:none}
+    .reading-progress-fill{height:100%;background:var(--amber);width:0%;transition:width 0.1s linear}
+
+    /* RESPONSIVE */
+    @media(max-width:1024px){
+      nav{padding:1.25rem 2rem}nav.scrolled{padding:0.875rem 2rem}
+      .nav-links{display:none}.nav-hamburger{display:flex}
+      .hero-content{padding:0 2.5rem 4rem}
+      .overview-layout{grid-template-columns:1fr;gap:3rem}
+      .sidebar{position:static}
+      .stats-inner{grid-template-columns:repeat(3,1fr)}
+      .route-mosaic{grid-template-columns:1fr 1fr}.mosaic-tall{grid-row:auto}.mosaic-wide{grid-column:auto}
+      .related-cards{grid-template-columns:1fr 1fr}
+      .tips-grid{grid-template-columns:1fr 1fr}
+      .pcards{grid-template-columns:1fr 1fr}
+      .gear-cols{grid-template-columns:1fr 1fr}
+      .footer-grid{grid-template-columns:1fr 1fr;gap:2.5rem}
+      .contact-inner{grid-template-columns:1fr;padding:0 2rem}
+      .contact-item{border-right:none;border-bottom:1px solid var(--border);padding:1.5rem 0}
+      .contact-item:last-child{border-bottom:none}
+    }
+    @media(max-width:768px){
+      .hero-content{padding:0 1.5rem 3rem}.hero-title{font-size:clamp(3rem,13vw,5rem)}
+      .stats-inner{grid-template-columns:repeat(2,1fr)}
+      .section-inner,.related-inner,.tips-inner{padding:0 1.5rem}
+      .tab-nav-inner{padding:0 1rem}
+      .dates-grid{grid-template-columns:1fr 1fr}
+      .route-mosaic{grid-template-columns:1fr}
+      .related-cards{grid-template-columns:1fr}
+      .related-header{flex-direction:column;align-items:flex-start;gap:1rem}
+      .inc-cols{grid-template-columns:1fr}
+      .pcards{grid-template-columns:1fr}
+      .gear-cols{grid-template-columns:1fr}
+      .tips-grid{grid-template-columns:1fr 1fr}
+      footer{padding:3.5rem 1.5rem 1.5rem}
+      .footer-grid{grid-template-columns:1fr;gap:2rem}
+      .footer-bottom{flex-direction:column;gap:1rem;text-align:center}
+    }
+    @media(max-width:480px){
+      .stats-inner{grid-template-columns:repeat(2,1fr)}
+      .dates-grid{grid-template-columns:1fr}
+      .tips-grid{grid-template-columns:1fr}
+      .facts-grid{grid-template-columns:1fr}
+      .hero-scroll{display:none}
+    }
+  </style>
+</head>
+<body>
+
+<!-- Reading Progress -->
+<div class="reading-progress"><div class="reading-progress-fill" id="readingFill"></div></div>
+
+<!-- WhatsApp -->
+<a href="https://wa.me/9779811157421" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- MOBILE DRAWER -->
+<div class="mobile-drawer" id="mobileDrawer">
+  <a href="/#expeditions" class="mobile-drawer-link" onclick="closeDrawer()">Expeditions <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+  <a href="/#trekking" class="mobile-drawer-link" onclick="closeDrawer()">Trekking <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+  <a href="/#eightthousanders" class="mobile-drawer-link" onclick="closeDrawer()">8000ers <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+  <a href="/#activities" class="mobile-drawer-link" onclick="closeDrawer()">Outdoor Activities <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+  <a href="/contact.html" class="mobile-drawer-link highlight" onclick="closeDrawer()">Book Your Trek &rarr;</a>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="/" class="nav-logo">
+    <svg class="nav-logo-icon" viewBox="0 0 40 40" fill="none">
+      <path d="M20 4 L4 36 L36 36 Z" stroke="rgba(240,192,128,0.8)" stroke-width="1.2" fill="none"/>
+      <path d="M20 4 L12 36 L20 30 Z" fill="rgba(240,192,128,0.25)"/>
+      <circle cx="20" cy="4" r="1.8" fill="rgba(240,192,128,0.9)"/>
+    </svg>
+    <div class="nav-logo-text">BEYOND SUMMIT<em>Expeditions &middot; Nepal</em></div>
+  </a>
+  <div class="nav-links">
+    <a href="/#expeditions">Expeditions</a>
+    <a href="/#trekking">Trekking</a>
+    <a href="/#eightthousanders">8000ers</a>
+    <a href="/guides.html">Guides</a>
+    <a href="/about.html">About</a>
+    <a href="/blog.html">Blog</a>
+    <a href="/contact.html" class="nav-cta">Book Your Trek &rarr;</a>
+  </div>
+  <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <img class="hero-bg" src="/assets/everestbasecamp.png" alt="Khumbu Valley trail at sunrise" loading="eager">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span class="hero-eyebrow-dot"></span>
+      Nepal &middot; Khumbu Region &middot; Classic Trek
+    </div>
+    <h1 class="hero-title">Everest<em>Base Camp</em></h1>
+    <p class="hero-subtitle">Classic EBC Route &middot; 5,364 m &middot; 12&ndash;16 Days</p>
+    <div class="hero-actions">
+      <a href="/contact.html" class="btn-primary">Enquire Now <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <button class="btn-ghost" onclick="window.print()">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Save as PDF
+      </button>
+    </div>
+  </div>
+  <div class="hero-scroll">Scroll to Explore</div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-bar" aria-hidden="true">
+  <div class="marquee-track">
+    <div class="marquee-item">Lukla <span class="marquee-sep">◆</span> 2,860m</div>
+    <div class="marquee-item">Namche Bazaar <span class="marquee-sep">◆</span> 3,440m</div>
+    <div class="marquee-item">Tengboche <span class="marquee-sep">◆</span> 3,867m</div>
+    <div class="marquee-item">Dingboche <span class="marquee-sep">◆</span> 4,410m</div>
+    <div class="marquee-item">Lobuche <span class="marquee-sep">◆</span> 4,940m</div>
+    <div class="marquee-item">Gorak Shep <span class="marquee-sep">◆</span> 5,140m</div>
+    <div class="marquee-item">Base Camp <span class="marquee-sep">◆</span> 5,364m</div>
+    <div class="marquee-item">Kala Patthar <span class="marquee-sep">◆</span> 5,550m</div>
+    <div class="marquee-item">Sagarmatha NP <span class="marquee-sep">◆</span> UNESCO WHS</div>
+    <div class="marquee-item">Lukla <span class="marquee-sep">◆</span> 2,860m</div>
+    <div class="marquee-item">Namche Bazaar <span class="marquee-sep">◆</span> 3,440m</div>
+    <div class="marquee-item">Tengboche <span class="marquee-sep">◆</span> 3,867m</div>
+    <div class="marquee-item">Dingboche <span class="marquee-sep">◆</span> 4,410m</div>
+    <div class="marquee-item">Lobuche <span class="marquee-sep">◆</span> 4,940m</div>
+    <div class="marquee-item">Gorak Shep <span class="marquee-sep">◆</span> 5,140m</div>
+    <div class="marquee-item">Base Camp <span class="marquee-sep">◆</span> 5,364m</div>
+    <div class="marquee-item">Kala Patthar <span class="marquee-sep">◆</span> 5,550m</div>
+    <div class="marquee-item">Sagarmatha NP <span class="marquee-sep">◆</span> UNESCO WHS</div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-strip">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <div class="stat-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+      <div class="stat-num">Nepal</div><div class="stat-label">Country</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 17l4-8 4 4 4-6 4 3"/><line x1="3" y1="21" x2="21" y2="21"/></svg></div>
+      <div class="stat-num">5,364m</div><div class="stat-label">Base Camp</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+      <div class="stat-num">12&ndash;16</div><div class="stat-label">Days</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+      <div class="stat-num">Mod+</div><div class="stat-label">Grade</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+      <div class="stat-num">12</div><div class="stat-label">Max Trekkers</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+      <div class="stat-num">Mar&ndash;Nov</div><div class="stat-label">Season</div>
+    </div>
+  </div>
+</div>
+
+<!-- TAB NAV -->
+<div class="tab-nav-wrap">
+  <div class="tab-nav-inner">
+    <nav class="tab-nav">
+      <button class="tab-btn active" onclick="scrollToSec('overview',this)">Overview</button>
+      <button class="tab-btn" onclick="scrollToSec('route',this)">Route</button>
+      <button class="tab-btn" onclick="scrollToSec('details',this)">Details</button>
+      <button class="tab-btn" onclick="scrollToSec('practical',this)">Practical Info</button>
+    </nav>
+    <a href="/contact.html" class="tab-enquire">Enquire Now</a>
+  </div>
+</div>
+
+<!-- ═══════════ OVERVIEW ═══════════ -->
+<div id="overview" class="page-section">
+  <div class="section-anchor"><span>Overview</span></div>
+  <div class="section-inner">
+    <div class="overview-layout">
+      <div>
+        <span class="eyebrow reveal">About This Trek</span>
+        <h2 class="section-title reveal d1">The World&rsquo;s Most<br><em>Famous Trek</em></h2>
+        <p class="overview-lead reveal d2">No trail on earth carries more legend. No journey at this altitude is more accessible. Everest Base Camp is the pilgrimage for those who love the mountains.</p>
+
+        <div class="reveal d2" style="margin:2rem 0">
+          <div class="shape-diagonal">
+            <img src="/assets/everestbasecamp.png" alt="Khumbu Valley on the EBC trail">
+          </div>
+          <div class="img-caption">Classic Khumbu Valley — the trail to the world&rsquo;s highest base camp</div>
+        </div>
+
+        <div class="overview-body reveal d3">
+          <p><strong>Everest Base Camp at 5,364 metres</strong> is the starting point of every Everest ascent — and one of the most iconic destinations on the planet. The trek follows ancient Sherpa trade routes through the Sagarmatha National Park, a UNESCO World Heritage Site, past Buddhist monasteries, prayer flags, and yak caravans that have moved through this valley for centuries.</p>
+          <div class="alert info">
+            <div class="alert-label">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              No Technical Skills Required
+            </div>
+            <p>This is a trekking route, not a climbing expedition. No crampons, ropes, or prior mountaineering experience needed — only solid fitness and a willingness to go slowly.</p>
+          </div>
+          <button class="read-more-btn" onclick="toggleRM(this)">Read More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="read-more-content">
+            <p style="margin-top:1.25rem">The standard route starts with a heart-stopping mountain flight into <strong>Lukla (2,860m)</strong>, then follows the Dudh Koshi River north through Phakding and up to the Sherpa capital of <strong>Namche Bazaar (3,440m)</strong>. From Namche the scenery intensifies at every step: Tengboche Monastery, Dingboche's wide yak-grazed valley, the stark moraine of Lobuche, and finally Gorak Shep — the last teahouse before Base Camp.</p>
+
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.75rem 0;align-items:end">
+              <div>
+                <div class="shape-arch"><img src="/assets/everestbasecamp.png" alt="Namche Bazaar"></div>
+                <div class="img-caption">Namche Bazaar &mdash; the gateway to the Khumbu</div>
+              </div>
+              <div>
+                <div class="shape-angled" style="margin-top:2rem"><img src="/assets/amadablam.png" alt="Tengboche Monastery with Ama Dablam"></div>
+                <div class="img-caption">Ama Dablam from Tengboche Monastery</div>
+              </div>
+            </div>
+
+            <h3 style="font-family:var(--serif);font-size:1.25rem;font-weight:400;color:var(--charcoal);margin:2rem 0 1rem">Key Facts</h3>
+            <div class="facts-grid">
+              <div class="fact-item"><div class="fact-label">Base Camp Altitude</div><div class="fact-val">5,364m (17,598ft)</div></div>
+              <div class="fact-item"><div class="fact-label">Highest Point</div><div class="fact-val">5,550m — Kala Patthar</div></div>
+              <div class="fact-item"><div class="fact-label">Duration</div><div class="fact-val">12&ndash;16 Days</div></div>
+              <div class="fact-item"><div class="fact-label">Grade</div><div class="fact-val">Moderate to Strenuous</div></div>
+              <div class="fact-item"><div class="fact-label">Total Distance</div><div class="fact-val">~130 km (Lukla loop)</div></div>
+              <div class="fact-item"><div class="fact-label">Permit</div><div class="fact-val">NP + TIMS Card</div></div>
+              <div class="fact-item"><div class="fact-label">Acclimatisation Days</div><div class="fact-val">3 (Beyond Summit standard)</div></div>
+              <div class="fact-item"><div class="fact-label">Completion Rate</div><div class="fact-val">~93% (BSE clients)</div></div>
+            </div>
+            <div class="alert" style="margin-top:2rem">
+              <div class="alert-label">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                Guided Trek Mandatory Since April 2023
+              </div>
+              <p>Solo unguided trekking in Nepal&rsquo;s national parks is no longer legally permitted. All trekkers must be accompanied by a licensed Nepali guide. Beyond Summit arranges all permits and licensed guides as part of every package.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar reveal-r">
+        <div class="sidebar-card">
+          <h3>Quick Facts</h3>
+          <div class="sidebar-row">
+            <div class="sidebar-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l4-8 4 4 4-6 4 3"/></svg></div>
+            <div><div class="sidebar-label">Base Camp</div><div class="sidebar-val">5,364 m</div></div>
+          </div>
+          <div class="sidebar-row">
+            <div class="sidebar-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l4-8 4 4 4-6 4 3"/></svg></div>
+            <div><div class="sidebar-label">Highest Point</div><div class="sidebar-val">5,550 m — Kala Patthar</div></div>
+          </div>
+          <div class="sidebar-row">
+            <div class="sidebar-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div><div class="sidebar-label">Duration</div><div class="sidebar-val">12&ndash;16 Days</div></div>
+          </div>
+          <div class="sidebar-row">
+            <div class="sidebar-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+            <div><div class="sidebar-label">Grade</div><div class="sidebar-val">Moderate – Strenuous</div></div>
+          </div>
+          <div class="sidebar-row">
+            <div class="sidebar-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+            <div><div class="sidebar-label">Max Group</div><div class="sidebar-val">12 Trekkers</div></div>
+          </div>
+          <div class="sidebar-row">
+            <div class="sidebar-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <div><div class="sidebar-label">Price From</div><div class="sidebar-val">USD 1,650</div></div>
+          </div>
+          <a href="/contact.html" class="btn-book-full">Enquire Now &rarr;</a>
+          <button class="btn-pdf" onclick="window.print()">&#8595; Download PDF</button>
+        </div>
+        <div class="sidebar-card" style="background:var(--parchment);text-align:center">
+          <div class="shape-diamond-wrap">
+            <div class="shape-diamond"><img src="/assets/mteverest.png" alt="Mount Everest summit view"></div>
+          </div>
+          <p style="font-family:var(--serif);font-style:italic;font-size:0.86rem;color:var(--stone);margin-top:0.875rem;line-height:1.6">&ldquo;The world&rsquo;s most iconic trekking destination — and for good reason&rdquo;</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- DATES BAND -->
+  <div class="dates-band">
+    <div class="section-inner">
+      <div class="dates-label reveal">Departure Dates &mdash; 2026 / 2027</div>
+      <div class="dates-grid">
+        <div class="date-card reveal"><div class="date-season">Spring Season</div><div class="date-range">15 Mar &ndash; 28 Mar 2026</div><div class="date-spots">4 spots remaining</div><div class="date-price">From USD 1,650/person</div></div>
+        <div class="date-card reveal d1"><div class="date-season">Spring Season</div><div class="date-range">01 Apr &ndash; 14 Apr 2026</div><div class="date-spots">8 spots remaining</div><div class="date-price">From USD 1,650/person</div></div>
+        <div class="date-card reveal d2"><div class="date-season">Autumn Season</div><div class="date-range">01 Oct &ndash; 14 Oct 2026</div><div class="date-spots">10 spots remaining</div><div class="date-price">From USD 1,650/person</div></div>
+        <div class="date-card reveal d3"><div class="date-season">Private Trek</div><div class="date-range">Custom Dates</div><div class="date-spots">Solo or small group</div><div class="date-price">Price on request</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ ROUTE ═══════════ -->
+<div id="route" class="page-section alt-bg">
+  <div class="section-anchor"><span>Route</span></div>
+  <div class="section-inner">
+    <span class="eyebrow reveal">Classic EBC Route</span>
+    <h2 class="section-title reveal d1">Day-by-Day <em>Waypoints</em></h2>
+    <p class="route-intro reveal d2">From the dramatic airstrip at Lukla to standing on the Khumbu Glacier, this route passes through the spiritual and geographical heart of the Sherpa world — with Everest growing larger every day.</p>
+
+    <div class="route-mosaic reveal d2">
+      <div class="mosaic-tall"><div class="mosaic-img"><img src="/assets/everestbasecamp.png" alt="EBC trail full view"></div></div>
+      <div class="mosaic-wide"><div class="mosaic-img"><img src="/assets/amadablam.png" alt="Khumbu valley with Ama Dablam"></div></div>
+      <div class="mosaic-arc"><div class="mosaic-img"><img src="/assets/mteverest.png" alt="Everest summit from Kala Patthar"></div></div>
+    </div>
+
+    <div class="camp-row reveal">
+      <div class="camp-marker"><div class="camp-dot" style="font-size:0.5rem">KTM</div><div class="camp-line"></div></div>
+      <div><div class="camp-title">Kathmandu <span class="camp-alt">1,400 m</span></div><div class="camp-body">Days 1&ndash;2: Permit collection, gear check, NMA/TIMS registration, and team briefing. Beyond Summit arranges all paperwork. Kathmandu is the only realistic acclimatisation shortcut — arrive a day early if flying from sea level.</div><div class="camp-tags"><span class="ctag">1,400 m</span><span class="ctag blue">Permits &amp; Briefing</span><span class="ctag gold">Gear Check</span></div></div>
+    </div>
+    <div class="camp-row reveal">
+      <div class="camp-marker"><div class="camp-dot" style="font-size:0.55rem">LUK</div><div class="camp-line"></div></div>
+      <div><div class="camp-title">Lukla &rarr; Phakding <span class="camp-alt">2,860 m</span></div><div class="camp-body">Day 3: A 30-minute mountain flight delivers you to one of the world&rsquo;s most dramatic runways. Walk 3–4 hours along the Dudh Koshi River to Phakding (2,610m). First prayer flags, first mani walls, first yaks.</div><div class="camp-tags"><span class="ctag">2,610 m</span><span class="ctag">~8 km</span><span class="ctag gold">Mountain Flight</span></div></div>
+    </div>
+    <div class="camp-row reveal">
+      <div class="camp-marker"><div class="camp-dot" style="font-size:0.5rem">NMC</div><div class="camp-line"></div></div>
+      <div><div class="camp-title">Namche Bazaar + Rest Day <span class="camp-alt">3,440 m</span></div><div class="camp-body">Days 4&ndash;5: The biggest climb of the trek — 800 vertical metres through forest and over high suspension bridges. Namche is the Sherpa capital: bakeries, gear shops, and the best views of Everest you can see from a teahouse window. Rest day hike to Everest View Hotel (3,962m).</div><div class="camp-tags"><span class="ctag">3,440 m</span><span class="ctag blue">Acclimatisation Day</span><span class="ctag">+830 m gain</span></div></div>
+    </div>
+    <div class="camp-row reveal">
+      <div class="camp-marker"><div class="camp-dot" style="font-size:0.5rem">TEN</div><div class="camp-line"></div></div>
+      <div><div class="camp-title">Tengboche Monastery <span class="camp-alt">3,867 m</span></div><div class="camp-body">Day 6: Pass through Kyangjuma with iconic views of Ama Dablam towering above the valley. Tengboche Monastery is the spiritual heart of the Khumbu — arrive in time for the evening puja ceremony. Everest, Lhotse, and Nuptse frame the horizon.</div><div class="camp-tags"><span class="ctag">3,867 m</span><span class="ctag gold">Puja Ceremony</span><span class="ctag">Ama Dablam Views</span></div></div>
+    </div>
+    <div class="camp-row reveal">
+      <div class="camp-marker"><div class="camp-dot" style="font-size:0.5rem">DIN</div><div class="camp-line"></div></div>
+      <div><div class="camp-title">Dingboche + Acclimatisation <span class="camp-alt">4,410 m</span></div><div class="camp-body">Days 7&ndash;8: Climb through rhododendron forest (in season) to Dingboche in the wide Imja Valley. Rest day hike to Nagarjun Hill (5,083m) — the most important single acclimatisation move of the trek. Island Peak and Makalu appear in the distance.</div><div class="camp-tags"><span class="ctag">4,410 m</span><span class="ctag blue">Acclimatisation Day</span><span class="ctag">Day hike 5,083m</span></div></div>
+    </div>
+    <div class="camp-row reveal">
+      <div class="camp-marker"><div class="camp-dot" style="font-size:0.5rem">LOB</div><div class="camp-line"></div></div>
+      <div><div class="camp-title">Lobuche <span class="camp-alt">4,940 m</span></div><div class="camp-body">Day 9: Cross the terminal moraine of the Khumbu Glacier into the high alpine zone. The landscape becomes stark and lunar. Pass memorial chortens honouring mountaineers lost on Everest. The air is noticeably thinner.</div><div class="camp-tags"><span class="ctag">4,940 m</span><span class="ctag">Khumbu Glacier</span><span class="ctag">Memorial Chortens</span></div></div>
+    </div>
+    <div class="camp-row reveal">
+      <div class="camp-marker"><div class="camp-dot" style="font-size:0.5rem">GKS</div><div class="camp-line"></div></div>
+      <div><div class="camp-title">Gorak Shep &rarr; Everest Base Camp <span class="camp-alt">5,140 m</span></div><div class="camp-body">Day 10: Reach the highest teahouses in the world (5,140m), drop your pack, and make the final push to <strong>Everest Base Camp (5,364m)</strong>. Stand on the Khumbu Glacier surrounded by the highest peaks on earth. Return to Gorak Shep for the night.</div><div class="camp-tags"><span class="ctag gold">EBC 5,364 m</span><span class="ctag">~16 km round trip</span><span class="ctag gold">Khumbu Glacier</span></div></div>
+    </div>
+    <div class="camp-row reveal">
+      <div class="camp-marker"><div class="camp-dot summit">&#9650;</div></div>
+      <div><div class="camp-title">Kala Patthar <span class="camp-alt">5,550 m</span></div><div class="camp-body">Day 11 sunrise: Rise at 04:30 for the pre-dawn hike to Kala Patthar — the highest point of the trek and the definitive viewpoint of Everest&rsquo;s summit ridge. Watch the sun hit the Lhotse Face while the valley below is still dark. <strong>The photograph that justifies the entire journey.</strong></div><div class="camp-tags"><span class="ctag gold">Highest Point 5,550m</span><span class="ctag">Sunrise Hike</span><span class="ctag gold">Everest Summit View</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ DETAILS ═══════════ -->
+<div id="details" class="page-section">
+  <div class="section-anchor"><span>Details</span></div>
+  <div class="section-inner">
+    <span class="eyebrow reveal">Full Trek Program</span>
+    <h2 class="section-title reveal d1">Trek <em>Details</em></h2>
+    <div class="detail-tabs" style="margin-top:2.5rem">
+      <button class="dtab active" onclick="switchTab('itinerary',event)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 5a2 2 0 0 0 2-2h2a2 2 0 0 0 2 2"/></svg><span>Itinerary</span></button>
+      <button class="dtab" onclick="switchTab('included',event)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg><span>Included / Not Included</span></button>
+      <button class="dtab" onclick="switchTab('fitness',event)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg><span>Fitness &amp; Preparation</span></button>
+    </div>
+
+    <!-- ITINERARY PANEL -->
+    <div id="dpanel-itinerary" class="dpanel active">
+      <div style="background:white;border:1px solid var(--border);padding:1.4rem;margin-bottom:2rem;display:flex;gap:1rem;align-items:flex-start">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.8" style="flex-shrink:0;margin-top:2px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <p style="font-size:0.84rem;line-height:1.75;color:var(--stone)">This is Beyond Summit&rsquo;s standard 14-day framework. <strong style="color:var(--charcoal)">We include 3 acclimatisation days — more than most operators offer.</strong> Build at least 2 buffer days into your travel for Lukla flight delays. Every rest day is essential, not optional.</p>
+      </div>
+      <div class="phase-label">Phase 1 &mdash; Approach</div>
+      <div class="itin-day"><div class="day-box"><div class="day-lbl">Day</div><div class="day-num" style="font-size:0.82rem">1&ndash;2</div></div><div><div class="day-title">Kathmandu &mdash; Permits, Briefing &amp; Gear Check</div><div class="day-desc">TIMS card, Sagarmatha National Park permit, gear review. Team briefing with your lead Sherpa guide. Two nights in Thamel.</div><div class="day-tags"><span class="dtag-pill">TIMS Card</span><span class="dtag-pill">NP Permit</span><span class="dtag-pill">Gear Check</span></div></div></div>
+      <div class="itin-day"><div class="day-box"><div class="day-lbl">Day</div><div class="day-num">3</div></div><div><div class="day-title">Kathmandu &rarr; Lukla &rarr; Phakding</div><div class="day-desc">Early morning flight to Lukla (2,860m). Walk 3–4 hours to Phakding (2,610m) through pine forest along the Dudh Koshi.</div><div class="day-tags"><span class="dtag-pill">Lukla Flight</span><span class="dtag-pill alt">2,610m</span><span class="dtag-pill">~8 km</span></div></div></div>
+      <div class="itin-day"><div class="day-box"><div class="day-lbl">Day</div><div class="day-num">4</div></div><div><div class="day-title">Phakding &rarr; Namche Bazaar</div><div class="day-desc">The steepest single day of the trek. Climb 800 vertical metres via high suspension bridges over the Dudh Koshi. First views of Everest appear at the Namche ridge on clear days.</div><div class="day-tags"><span class="dtag-pill">+830m gain</span><span class="dtag-pill alt">3,440m</span><span class="dtag-pill">~11 km</span></div></div></div>
+      <div class="itin-day"><div class="day-box acc2"><div class="day-lbl">Rest</div><div class="day-num">5</div></div><div><div class="day-title">Acclimatisation — Namche Bazaar</div><div class="day-desc">Mandatory acclimatisation day. Day hike to Everest View Hotel (3,962m) for the finest panoramic view of the Khumbu giants. Explore Namche&rsquo;s market, monastery and museum. Sleep low at 3,440m.</div><div class="day-tags"><span class="dtag-pill blue">Acclimatisation</span><span class="dtag-pill">Everest View Hotel</span><span class="dtag-pill">Day hike 3,962m</span></div></div></div>
+      <div class="phase-label">Phase 2 &mdash; Approach &amp; Acclimatisation</div>
+      <div class="itin-day"><div class="day-box"><div class="day-lbl">Day</div><div class="day-num">6</div></div><div><div class="day-title">Namche &rarr; Tengboche</div><div class="day-desc">Walk through Kyangjuma with Ama Dablam dominating the view. Tengboche Monastery evening puja is one of the most atmospheric experiences on the route.</div><div class="day-tags"><span class="dtag-pill alt">3,867m</span><span class="dtag-pill">~10 km</span><span class="dtag-pill">Ama Dablam Views</span></div></div></div>
+      <div class="itin-day"><div class="day-box"><div class="day-lbl">Day</div><div class="day-num">7</div></div><div><div class="day-title">Tengboche &rarr; Dingboche</div><div class="day-desc">Descend through Deboche, cross the Imja Khola, pass Pangboche village (Everest summit in full view), and climb to wide-open Dingboche (4,410m) in the Imja Valley.</div><div class="day-tags"><span class="dtag-pill alt">4,410m</span><span class="dtag-pill">~12 km</span></div></div></div>
+      <div class="itin-day"><div class="day-box acc2"><div class="day-lbl">Rest</div><div class="day-num">8</div></div><div><div class="day-title">Acclimatisation — Dingboche</div><div class="day-desc">Second acclimatisation day. Hike to Nagarjun Hill (5,083m) for views of Island Peak, Makalu, and Lhotse South Face. The most critical altitude-gain day of the trek. Sleep at 4,410m.</div><div class="day-tags"><span class="dtag-pill blue">Acclimatisation</span><span class="dtag-pill">Day hike 5,083m</span></div></div></div>
+      <div class="phase-label">Phase 3 &mdash; The High Khumbu</div>
+      <div class="itin-day"><div class="day-box"><div class="day-lbl">Day</div><div class="day-num">9</div></div><div><div class="day-title">Dingboche &rarr; Lobuche</div><div class="day-desc">Cross the Khumbu Glacier moraine. Pass the memorial chortens at Thokla. Lobuche (4,940m) feels genuinely remote and high — dinner and early bed.</div><div class="day-tags"><span class="dtag-pill alt">4,940m</span><span class="dtag-pill">Memorial Chortens</span></div></div></div>
+      <div class="itin-day"><div class="day-box acc"><div class="day-lbl">EBC</div><div class="day-num">10</div></div><div><div class="day-title">Lobuche &rarr; Gorak Shep &rarr; Everest Base Camp &rarr; Gorak Shep</div><div class="day-desc">The day you&rsquo;ve trained for. Walk to Gorak Shep (5,140m), drop your pack, and hike to <strong>Everest Base Camp (5,364m)</strong> on the Khumbu Glacier. You are standing where every Everest climber begins. Return to Gorak Shep.</div><div class="day-tags"><span class="dtag-pill alt">EBC 5,364m</span><span class="dtag-pill">Khumbu Glacier</span><span class="dtag-pill">~16 km round trip</span></div></div></div>
+      <div class="itin-day"><div class="day-box acc" style="background:var(--stone)"><div class="day-num" style="font-size:1.1rem">&#9650;</div></div><div><div class="day-title">Kala Patthar Sunrise &rarr; Pheriche</div><div class="day-desc">Rise at 04:30. Summit Kala Patthar (<strong>5,550m</strong>) at sunrise for the unobstructed view of Everest. The most photographed viewpoint on the planet. Descend all the way to Pheriche (4,243m) by afternoon.</div><div class="day-tags"><span class="dtag-pill alt">5,550m Highest Point</span><span class="dtag-pill">Sunrise</span><span class="dtag-pill alt">Everest Summit View</span></div></div></div>
+      <div class="itin-day"><div class="day-box"><div class="day-lbl">Day</div><div class="day-num" style="font-size:0.78rem">12&ndash;14</div></div><div><div class="day-title">Return: Pheriche &rarr; Namche &rarr; Lukla &rarr; Kathmandu</div><div class="day-desc">Three days descending the Khumbu to Lukla. The return is faster and the trail feels familiar in a deeply satisfying way. Lukla flight to Kathmandu on Day 13. Day 14 is a buffer for flight delays — and a well-earned celebration dinner in Thamel.</div><div class="day-tags"><span class="dtag-pill">Return Descent</span><span class="dtag-pill">Lukla Flight</span><span class="dtag-pill">Buffer Day</span></div></div></div>
+    </div>
+
+    <!-- INCLUDED PANEL -->
+    <div id="dpanel-included" class="dpanel">
+      <div class="inc-cols">
+        <div class="inc-col">
+          <h3><span class="inc-dot"></span> What&rsquo;s Included</h3>
+          <ul>
+            <li>All TIMS cards and permits (NP + TIMS)</li>
+            <li>Licensed Sherpa guide (1:6 ratio or better)</li>
+            <li>Porter service — 1 porter per 2 trekkers</li>
+            <li>All teahouse accommodation (twin sharing)</li>
+            <li>All meals Lukla to Lukla (B+D, lunch optional)</li>
+            <li>Sagarmatha National Park entry fees</li>
+            <li>Emergency supplemental oxygen (group kit)</li>
+            <li>Pulse oximeter and group first aid kit</li>
+            <li>Satellite communicator above Namche</li>
+            <li>Airport transfers in Kathmandu</li>
+            <li>Kathmandu hotel (2 nights pre/post)</li>
+            <li>Pre-trek briefing and gear orientation</li>
+            <li>Government TIMS registration</li>
+          </ul>
+        </div>
+        <div class="inc-col not">
+          <h3><span class="inc-dot no"></span> Not Included</h3>
+          <ul>
+            <li>International flights to/from Kathmandu</li>
+            <li>Nepal visa fees (~USD 50)</li>
+            <li>Lukla flights (USD 220&ndash;280 return)</li>
+            <li>Personal gear and trekking boots</li>
+            <li>Personal sleeping bag (–15°C or warmer)</li>
+            <li>Personal travel insurance (mandatory)</li>
+            <li>Helicopter rescue insurance (mandatory)</li>
+            <li>Tips for guides and porters (expected)</li>
+            <li>Personal snacks and extra beverages</li>
+            <li>Hot showers and battery charging fees</li>
+            <li>Internet and WiFi at teahouses</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- FITNESS PANEL -->
+    <div id="dpanel-fitness" class="dpanel">
+      <div class="alert" style="margin-top:0">
+        <div class="alert-label">Preparation Makes the Difference</div>
+        <p>The EBC trek requires no mountaineering skills, but demands genuine fitness. Trekkers who prepare well enjoy the journey far more. We recommend a minimum of 8–12 weeks of dedicated training before departure.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2rem">
+        <div>
+          <h3 style="font-family:var(--serif);font-size:1.1rem;font-weight:400;color:var(--charcoal);margin-bottom:1rem;padding-bottom:0.6rem;border-bottom:1px solid var(--border)">Training Recommendations</h3>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.6rem">
+            <li style="font-size:0.84rem;color:var(--stone);padding:0.4rem 0 0.4rem 1.2rem;position:relative;border-bottom:1px solid var(--border)"><span style="position:absolute;left:0;color:var(--amber)">▸</span> Weekly long hikes 3–6 hrs on hilly terrain with loaded daypack</li>
+            <li style="font-size:0.84rem;color:var(--stone);padding:0.4rem 0 0.4rem 1.2rem;position:relative;border-bottom:1px solid var(--border)"><span style="position:absolute;left:0;color:var(--amber)">▸</span> Cardio 3–4x per week (running, cycling, swimming)</li>
+            <li style="font-size:0.84rem;color:var(--stone);padding:0.4rem 0 0.4rem 1.2rem;position:relative;border-bottom:1px solid var(--border)"><span style="position:absolute;left:0;color:var(--amber)">▸</span> Stair climbs with weighted pack (10–12 kg)</li>
+            <li style="font-size:0.84rem;color:var(--stone);padding:0.4rem 0 0.4rem 1.2rem;position:relative;border-bottom:1px solid var(--border)"><span style="position:absolute;left:0;color:var(--amber)">▸</span> Leg strength: squats, lunges, step-ups</li>
+            <li style="font-size:0.84rem;color:var(--stone);padding:0.4rem 0 0.4rem 1.2rem;position:relative"><span style="position:absolute;left:0;color:var(--amber)">▸</span> Consult physician if over 50 or respiratory conditions</li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="font-family:var(--serif);font-size:1.1rem;font-weight:400;color:var(--charcoal);margin-bottom:1rem;padding-bottom:0.6rem;border-bottom:1px solid var(--border)">Altitude Sickness Prevention</h3>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.6rem">
+            <li style="font-size:0.84rem;color:var(--stone);padding:0.4rem 0 0.4rem 1.2rem;position:relative;border-bottom:1px solid var(--border)"><span style="position:absolute;left:0;color:var(--amber)">▸</span> Follow the golden rule: <strong style="color:var(--charcoal)">climb high, sleep low</strong></li>
+            <li style="font-size:0.84rem;color:var(--stone);padding:0.4rem 0 0.4rem 1.2rem;position:relative;border-bottom:1px solid var(--border)"><span style="position:absolute;left:0;color:var(--amber)">▸</span> Drink 3–4 litres of water daily at altitude</li>
+            <li style="font-size:0.84rem;color:var(--stone);padding:0.4rem 0 0.4rem 1.2rem;position:relative;border-bottom:1px solid var(--border)"><span style="position:absolute;left:0;color:var(--amber)">▸</span> Consider Diamox (acetazolamide) — consult GP before trek</li>
+            <li style="font-size:0.84rem;color:var(--stone);padding:0.4rem 0 0.4rem 1.2rem;position:relative;border-bottom:1px solid var(--border)"><span style="position:absolute;left:0;color:var(--amber)">▸</span> Never ascend with AMS symptoms — headache, nausea, ataxia</li>
+            <li style="font-size:0.84rem;color:var(--stone);padding:0.4rem 0 0.4rem 1.2rem;position:relative"><span style="position:absolute;left:0;color:var(--amber)">▸</span> Descent is the <strong style="color:var(--charcoal)">only cure</strong> for worsening altitude sickness</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ PRACTICAL ═══════════ -->
+<div id="practical" class="page-section alt-bg">
+  <div class="section-anchor"><span>Practical Info</span></div>
+  <div class="section-inner">
+    <span class="eyebrow reveal">Everything You Need to Know</span>
+    <h2 class="section-title reveal d1">Practical <em>Information</em></h2>
+
+    <div class="shape-cinematic reveal d2" style="margin:2rem 0 3rem">
+      <img src="/assets/everestbasecamp.png" alt="EBC trail panorama at high altitude">
+    </div>
+
+    <h3 style="font-family:var(--serif);font-size:1.35rem;font-weight:400;color:var(--charcoal);margin-bottom:1rem" class="reveal">Costs &amp; Permits 2026</h3>
+    <div style="overflow-x:auto" class="reveal d1">
+      <table class="cost-table">
+        <thead><tr><th>Item</th><th>Cost (2026)</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Sagarmatha National Park Permit</td><td>NPR 3,000 (~USD 22)</td><td>Required. Arranged by Beyond Summit.</td></tr>
+          <tr><td>TIMS Card</td><td>NPR 2,000 (~USD 15)</td><td>Trekkers' Information Management System. Included.</td></tr>
+          <tr><td>Beyond Summit Package</td><td>USD 1,650&ndash;2,200/person</td><td>Guide, porter, accommodation, meals Lukla–Lukla, permits, emergency O₂.</td></tr>
+          <tr><td>Lukla Flights (Return)</td><td>USD 220&ndash;280</td><td>Weather dependent. Always build 2 buffer days.</td></tr>
+          <tr><td>Personal Gear &amp; Rental</td><td>USD 100&ndash;400</td><td>Sleeping bag, down jacket, poles available in Thamel.</td></tr>
+          <tr><td>Personal Expenses on Trail</td><td>USD 150&ndash;250</td><td>Hot showers, snacks, WiFi, battery charging.</td></tr>
+          <tr><td>Helicopter Rescue Insurance</td><td>USD 150&ndash;300</td><td>Mandatory for all clients. World Nomads / Battleface.</td></tr>
+          <tr class="total"><td>Total Estimated Per Person</td><td>USD 2,100&ndash;3,000</td><td>Excluding international flights to Kathmandu</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="pcards">
+      <div class="pcard reveal"><div class="pcard-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><h3>Best Season</h3><p><strong>Spring (Mar&ndash;May)</strong> is the most popular. The rhododendrons bloom and Everest&rsquo;s climbing season fills Base Camp with colour and excitement. April is peak season.</p><p><strong>Autumn (Oct&ndash;Nov)</strong> offers crystal-clear post-monsoon skies and cooler temperatures — our personal favourite for visibility and photography.</p></div>
+      <div class="pcard reveal d1"><div class="pcard-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.71 3.53 2 2 0 0 1 3.68 1.38h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.07a16 16 0 0 0 6 6l1.06-1.06a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><h3>How to Book</h3><p>All bookings begin with a short <strong>orientation call</strong> to match you to the right itinerary.</p><ul><li>Enquire by email or WhatsApp</li><li>Orientation call with trek coordinator</li><li>30% deposit secures your place</li><li>Final payment 60 days before departure</li></ul></div>
+      <div class="pcard reveal d2"><div class="pcard-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><h3>Insurance</h3><p>Two policies are mandatory:</p><ul><li>Helicopter rescue (min USD 50k coverage)</li><li>Comprehensive travel insurance with evacuation</li></ul><p>Recommended providers: World Nomads, Battleface, Ripcord. Arrange before flying.</p></div>
+      <div class="pcard reveal"><div class="pcard-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg></div><h3>Getting There</h3><ul><li>Fly into Kathmandu (KTM) international</li><li>Morning mountain flight &rarr; Lukla (~30 min)</li><li>Day 1 walking: Lukla &rarr; Phakding (~3 hrs)</li><li>No roads beyond Lukla — everything on foot</li></ul></div>
+      <div class="pcard reveal d1"><div class="pcard-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div><h3>Safety Systems</h3><ul><li>Wilderness first aid trained guides</li><li>Pulse oximeter every morning above 3,500m</li><li>Satellite communicator above Namche</li><li>Emergency O₂ in group kit</li><li>Helicopter LZ at Pheriche and Lobuche</li></ul></div>
+      <div class="pcard reveal d2"><div class="pcard-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3>Group &amp; Guides</h3><p>Maximum <strong>12 trekkers per group</strong> with a 1:6 guide ratio. All guides are TIMS-registered, fluent in English, and wilderness first-aid certified. Private treks available at any time.</p></div>
+    </div>
+
+    <h3 style="font-family:var(--serif);font-size:1.35rem;font-weight:400;color:var(--charcoal);margin:2rem 0 0.5rem" class="reveal">Essential Gear List</h3>
+    <p style="font-size:0.8rem;color:var(--muted);margin-bottom:1rem" class="reveal d1">Keep your pack weight under 10–12 kg. Porters carry the bulk of your kit (included). Everything on this list is available for rent in Thamel, Kathmandu.</p>
+    <div class="gear-cols">
+      <div class="gcol reveal"><h3>Footwear &amp; Clothing</h3><ul><li><strong>Waterproof trekking boots</strong> &mdash; broken in before departure</li><li><strong>Warm camp footwear</strong> &mdash; sandals or down booties</li><li><strong>Moisture-wicking base layers ×2</strong></li><li><strong>Mid-layer fleece or softshell</strong></li><li><strong>Insulated down jacket</strong> &mdash; 800+ fill</li><li><strong>Waterproof hardshell jacket &amp; trousers</strong></li><li><strong>Warm hat, balaclava, liner gloves + outer mitts</strong></li></ul></div>
+      <div class="gcol reveal d1"><h3>Equipment</h3><ul><li><strong>Trekking poles ×2</strong> &mdash; strongly recommended for descent</li><li><strong>UV-protective sunglasses</strong> &mdash; glacier glasses above 4,500m</li><li><strong>Headtorch</strong> &mdash; essential for Kala Patthar pre-dawn</li><li><strong>Daypack 25–30L</strong> &mdash; carried by you</li><li><strong>Duffel bag 60–80L</strong> &mdash; carried by porter</li><li><strong>Water bottles ×2 (1L each)</strong> &mdash; avoid single-use plastic</li><li><strong>Gaiters</strong> &mdash; for snow above 4,500m in shoulder seasons</li></ul></div>
+      <div class="gcol reveal d2"><h3>Health &amp; Sleep</h3><ul><li><strong>Sleeping bag</strong> &mdash; rated to &minus;15°C minimum</li><li><strong>Sleeping bag liner</strong> &mdash; adds 5–10°C extra warmth</li><li><strong>Diamox (acetazolamide)</strong> &mdash; consult GP, get prescription before trek</li><li><strong>Ibuprofen, rehydration salts, blister kit</strong></li><li><strong>SPF 50+ sunscreen &amp; lip balm</strong></li><li><strong>High-capacity power bank</strong> &mdash; teahouses charge for electricity</li><li><strong>Offline maps downloaded</strong> (Maps.me / Gaia GPS)</li></ul></div>
+    </div>
+  </div>
+</div>
+
+<!-- TIPS -->
+<div class="tips-band">
+  <div class="tips-inner">
+    <span class="eyebrow reveal">Insider Knowledge</span>
+    <h2 class="section-title reveal d1">Expert <em>Tips</em></h2>
+    <div class="tips-grid">
+      <div class="tip-item reveal"><div class="tip-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div class="tip-title">Go Slow, Go Far</div><div class="tip-desc">Your pace should be "pressure breathing slow" — slower than you think is necessary. The trekkers who rush are the ones who turn around at Lobuche.</div></div>
+      <div class="tip-item reveal d1"><div class="tip-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 15a4 4 0 0 0 4 4h9a5 5 0 1 0-.1-9.999 5.002 5.002 0 0 0-9.78 2.096A4.001 4.001 0 0 0 3 15z"/></svg></div><div class="tip-title">Build in Buffer Days</div><div class="tip-desc">Lukla flights are weather-dependent. Never book an international connection within 48 hours of your scheduled Lukla flight. This is the single biggest mistake first-time trekkers make.</div></div>
+      <div class="tip-item reveal d2"><div class="tip-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="tip-title">Drink More Than You Think</div><div class="tip-desc">At altitude, dehydration accelerates AMS symptoms dramatically. Aim for 3–4 litres per day. Buy boiled or treated water from teahouses — carry a Steripen or purification tablets.</div></div>
+      <div class="tip-item reveal d3"><div class="tip-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><div class="tip-title">Trust Your Sherpa</div><div class="tip-desc">Your Sherpa guide has forgotten more about altitude and this route than any guidebook contains. If they say rest, rest. If they say turnaround, turnaround. They are right.</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- QUOTE -->
+<section class="quote-band">
+  <img class="quote-bg" src="/assets/everestbasecamp.png" alt="Everest Base Camp panorama">
+  <div class="quote-overlay"></div>
+  <div class="quote-content">
+    <span class="qmark" aria-hidden="true">&ldquo;</span>
+    <blockquote class="qtext reveal">Standing at Base Camp, you are not on Everest &mdash; but you have already done something <em>most people only dream about</em>.</blockquote>
+    <div class="qattr reveal d1">Pemba Sherpa &middot; Senior Trek Guide, Beyond Summit Expeditions</div>
+  </div>
+</section>
+
+<!-- RELATED -->
+<section class="related-section">
+  <div class="related-inner">
+    <div class="related-header">
+      <div>
+        <span class="related-eyebrow reveal">You May Also Like</span>
+        <h2 class="related-title reveal d1">Related <em>Treks &amp; Expeditions</em></h2>
+      </div>
+      <a href="/trekking.html" class="related-view-all reveal d1">All Treks <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+    <div class="related-cards">
+      <a href="/articles/amadablam-blog.html" class="rcard reveal">
+        <div class="rcard-img-wrap"><img class="rcard-img" src="/assets/amadablam.png" alt="Ama Dablam"><span class="rcard-badge">Expedition</span><span class="rcard-alt">6,812 m</span></div>
+        <div class="rcard-body"><div class="rcard-num">Technical Expedition &middot; Khumbu</div><div class="rcard-name">Ama Dablam</div><div class="rcard-desc">Nepal&rsquo;s most beautiful mountain. A serious technical expedition for trekkers ready to take the next step into high-altitude climbing.</div><div class="rcard-link">View Expedition <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div>
+      </a>
+      <a href="/articles/annapurna-blog.html" class="rcard reveal d1">
+        <div class="rcard-img-wrap"><img class="rcard-img" src="/assets/manaslu.png" alt="Annapurna Circuit"><span class="rcard-badge">Classic Trek</span><span class="rcard-alt">5,416 m</span></div>
+        <div class="rcard-body"><div class="rcard-num">Classic Trek &middot; Annapurna</div><div class="rcard-name">Annapurna Circuit</div><div class="rcard-desc">Nepal&rsquo;s great classic traverse. Crosses the Thorong La pass at 5,416m through one of the most diverse landscapes in the Himalaya.</div><div class="rcard-link">View Trek <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div>
+      </a>
+      <a href="/articles/islandpeak.html" class="rcard reveal d2">
+        <div class="rcard-img-wrap"><img class="rcard-img" src="/assets/mteverest.png" alt="Island Peak"><span class="rcard-badge">EBC Combo</span><span class="rcard-alt">6,189 m</span></div>
+        <div class="rcard-body"><div class="rcard-num">Trek &amp; Climb Combo &middot; Khumbu</div><div class="rcard-name">EBC + Island Peak</div><div class="rcard-desc">Combine the classic EBC Trek with an ascent of Island Peak (6,189m) — the perfect introduction to high-altitude technical climbing in the same region.</div><div class="rcard-link">View Expedition <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT STRIP -->
+<div class="contact-strip">
+  <div class="contact-inner">
+    <div class="contact-item">
+      <div class="contact-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.71 3.53 2 2 0 0 1 3.68 1.38h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.07a16 16 0 0 0 6 6l1.06-1.06a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+      <div><div class="contact-label">Call Anytime</div><div class="contact-value"><a href="tel:+9779811157421">+977 9811 157 421</a></div></div>
+    </div>
+    <div class="contact-item">
+      <div class="contact-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+      <div><div class="contact-label">Email Us</div><div class="contact-value"><a href="mailto:info@beyondsummitexped.com">info@beyondsummitexped.com</a></div></div>
+    </div>
+    <div class="contact-item">
+      <div class="contact-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <div><div class="contact-label">Find Us</div><div class="contact-value"><a href="https://maps.google.com/?q=Thamel,Kathmandu,Nepal" target="_blank" rel="noopener noreferrer">Thamel, Kathmandu</a></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo-text">Beyond Summit<em>Expeditions &middot; Nepal</em></div>
+      <p class="footer-desc">Nepal&rsquo;s premier mountaineering company. Licensed by the Department of Tourism, Government of Nepal. We take you where others pause.</p>
+      <div class="footer-contact">
+        <a href="tel:+9779811157421"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.71 3.53 2 2 0 0 1 3.68 1.38h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.07a16 16 0 0 0 6 6l1.06-1.06a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +977-9811157421</a>
+        <a href="mailto:info@beyondsummitexped.com"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> info@beyondsummitexped.com</a>
+        <a href="https://maps.google.com/?q=Thamel,Kathmandu" target="_blank" rel="noopener noreferrer"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Thamel, Kathmandu, Nepal</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Expeditions</h4>
+      <ul><li><a href="/articles/everest-base-camp-guide.html">Mount Everest</a></li><li><a href="/articles/amadablam-blog.html">Ama Dablam</a></li><li><a href="/articles/manaslu-blog.html">Manaslu</a></li><li><a href="/articles/merapeak.html">Mera Peak</a></li><li><a href="/articles/islandpeak.html">Island Peak</a></li><li><a href="/expeditions.html">All Expeditions</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h4>Trekking</h4>
+      <ul><li><a href="/articles/everest-base-camp-guide.html">Everest Base Camp</a></li><li><a href="/articles/annapurna-blog.html">Annapurna Circuit</a></li><li><a href="/articles/upper-mustang-blog.html">Upper Mustang</a></li><li><a href="/articles/manaslu-blog.html">Manaslu Circuit</a></li><li><a href="/articles/langtang-valley-blog.html">Langtang Valley</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul><li><a href="/about.html">About Us</a></li><li><a href="/guides.html">Our Guides</a></li><li><a href="/safety.html">Safety</a></li><li><a href="/blog.html">Blog</a></li><li><a href="/contact.html">Contact</a></li></ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Beyond Summit Expeditions &middot; Licensed by Dept. of Tourism, Government of Nepal</p>
+    <div class="footer-socials">
+      <a href="https://instagram.com/beyondsummitexpeditions" class="social-ico" target="_blank" aria-label="Instagram"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+      <a href="https://facebook.com/beyondsummitexped" class="social-ico" target="_blank" aria-label="Facebook"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* NAV SCROLL */
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
+
+  /* HAMBURGER */
+  const hamburger = document.getElementById('hamburger');
+  const drawer = document.getElementById('mobileDrawer');
+  let dOpen = false;
+  function closeDrawer() {
+    dOpen = false;
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    drawer.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  hamburger.addEventListener('click', () => {
+    dOpen = !dOpen;
+    hamburger.classList.toggle('open', dOpen);
+    hamburger.setAttribute('aria-expanded', String(dOpen));
+    drawer.classList.toggle('open', dOpen);
+    document.body.style.overflow = dOpen ? 'hidden' : '';
+  });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
+
+  /* TAB SCROLL */
+  function scrollToSec(id, btn) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const el = document.getElementById(id);
+    if (!el) return;
+    const offset = navbar.offsetHeight + document.querySelector('.tab-nav-wrap').offsetHeight + 8;
+    window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - offset, behavior: 'smooth' });
+  }
+
+  /* TAB ACTIVE ON SCROLL */
+  const secIds = ['overview', 'route', 'details', 'practical'];
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  window.addEventListener('scroll', () => {
+    const offset = navbar.offsetHeight + document.querySelector('.tab-nav-wrap').offsetHeight + 24;
+    let active = 0;
+    secIds.forEach((id, i) => {
+      const el = document.getElementById(id);
+      if (el && el.getBoundingClientRect().top <= offset) active = i;
+    });
+    tabBtns.forEach((b, i) => b.classList.toggle('active', i === active));
+  }, { passive: true });
+
+  /* DETAIL TABS */
+  function switchTab(panel, e) {
+    document.querySelectorAll('.dpanel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.dtab').forEach(b => b.classList.remove('active'));
+    document.getElementById('dpanel-' + panel).classList.add('active');
+    e.currentTarget.classList.add('active');
+  }
+
+  /* READ MORE */
+  function toggleRM(btn) {
+    const content = btn.nextElementSibling;
+    const isOpen = content.classList.contains('open');
+    content.classList.toggle('open', !isOpen);
+    btn.classList.toggle('expanded', !isOpen);
+    btn.childNodes[0].textContent = isOpen ? 'Read More' : 'Show Less';
+  }
+
+  /* SCROLL REVEAL */
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); }
+    });
+  }, { rootMargin: '0px 0px -48px 0px', threshold: 0.07 });
+  document.querySelectorAll('.reveal, .reveal-r').forEach(el => obs.observe(el));
+
+  /* READING PROGRESS */
+  const fill = document.getElementById('readingFill');
+  window.addEventListener('scroll', () => {
+    const doc = document.documentElement;
+    fill.style.width = (doc.scrollTop / (doc.scrollHeight - doc.clientHeight) * 100) + '%';
+  }, { passive: true });
+
+  /* SMOOTH ANCHORS */
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const t = document.querySelector(a.getAttribute('href'));
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+</script>
+</body>
+</html>
