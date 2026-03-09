@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paragliding Pokhara | Beyond Summit Expeditions · Nepal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #faf7f2;
+      --cream-dark: #f2ede4;
+      --parchment: #ede8de;
+      --amber: #b8651a;
+      --amber-light: #d4812a;
+      --amber-pale: #f0c080;
+      --charcoal: #1c1814;
+      --stone: #3d3530;
+      --muted: #7a6e65;
+      --sky: #4a8fa8;
+      --sky-light: #6fb8d4;
+      --border: rgba(60,45,30,0.1);
+      --border-strong: rgba(60,45,30,0.18);
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans: 'DM Sans', system-ui, sans-serif;
+      --mono: 'DM Mono', monospace;
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+      --shadow-sm: 0 2px 12px rgba(60,40,20,0.08);
+      --shadow-md: 0 8px 32px rgba(60,40,20,0.12);
+      --shadow-lg: 0 20px 60px rgba(60,40,20,0.16);
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); background: var(--cream); color: var(--charcoal); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+
+    /* ══════════ NAV ══════════ */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 800; display: flex; align-items: center; justify-content: space-between; padding: 1.5rem 4rem; transition: all 0.5s var(--ease); background: transparent; }
+    nav.scrolled { background: rgba(250,247,242,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); padding: 1rem 4rem; box-shadow: var(--shadow-sm); }
+    .nav-logo { display: flex; align-items: center; gap: 0.75rem; }
+    .nav-logo-icon { width: 30px; height: 30px; }
+    .nav-logo-text { font-family: var(--serif); font-size: 1.4rem; font-weight: 700; color: white; letter-spacing: 0.01em; transition: color 0.4s; }
+    nav.scrolled .nav-logo-text { color: var(--charcoal); }
+    .nav-logo-text em { display: block; font-style: normal; font-family: var(--mono); font-size: 0.52rem; letter-spacing: 0.4em; text-transform: uppercase; color: rgba(250,247,242,0.7); margin-top: 2px; transition: color 0.4s; }
+    nav.scrolled .nav-logo-text em { color: var(--amber); }
+    .nav-links { display: flex; align-items: center; gap: 2rem; }
+    .nav-links a { font-family: var(--sans); font-size: 0.875rem; font-weight: 400; color: rgba(250,247,242,0.85); transition: color 0.3s; letter-spacing: 0.02em; }
+    nav.scrolled .nav-links a { color: var(--stone); }
+    .nav-links a:hover { color: var(--amber-light) !important; }
+    .nav-links a.active { color: var(--amber) !important; }
+    nav.scrolled .nav-links a.active { color: var(--amber) !important; }
+    .nav-cta { background: var(--amber); color: white !important; padding: 0.6rem 1.5rem; font-size: 0.82rem !important; font-weight: 500 !important; letter-spacing: 0.04em !important; transition: background 0.3s, transform 0.3s !important; }
+    .nav-cta:hover { background: var(--amber-light) !important; transform: translateY(-1px); color: white !important; }
+    .nav-hamburger { display: none; flex-direction: column; justify-content: center; width: 44px; height: 44px; gap: 5px; cursor: pointer; background: rgba(250,247,242,0.12); border: 1px solid rgba(250,247,242,0.25); border-radius: 6px; padding: 0 12px; transition: all 0.3s; }
+    nav.scrolled .nav-hamburger { background: rgba(60,40,20,0.06); border-color: var(--border); }
+    .nav-hamburger span { display: block; width: 100%; height: 1.5px; background: white; transition: all 0.4s var(--ease); }
+    nav.scrolled .nav-hamburger span { background: var(--charcoal); }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+    /* Mobile Drawer */
+    .mobile-drawer { position: fixed; inset: 0; z-index: 700; background: var(--cream); display: flex; flex-direction: column; padding: 6rem 2rem 2rem; transform: translateX(100%); transition: transform 0.5s var(--ease); }
+    .mobile-drawer.open { transform: none; }
+    .mobile-drawer-link { display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 0; border-bottom: 1px solid var(--border); font-family: var(--serif); font-size: 1.8rem; font-weight: 400; color: var(--charcoal); opacity: 0; transform: translateX(20px); transition: opacity 0.4s, transform 0.4s, color 0.3s; }
+    .mobile-drawer.open .mobile-drawer-link:nth-child(1) { opacity:1;transform:none;transition-delay:.06s; }
+    .mobile-drawer.open .mobile-drawer-link:nth-child(2) { opacity:1;transform:none;transition-delay:.10s; }
+    .mobile-drawer.open .mobile-drawer-link:nth-child(3) { opacity:1;transform:none;transition-delay:.14s; }
+    .mobile-drawer.open .mobile-drawer-link:nth-child(4) { opacity:1;transform:none;transition-delay:.18s; }
+    .mobile-drawer.open .mobile-drawer-link:nth-child(5) { opacity:1;transform:none;transition-delay:.22s; }
+    .mobile-drawer.open .mobile-drawer-link:nth-child(6) { opacity:1;transform:none;transition-delay:.26s; }
+    .mobile-drawer-link:hover { color: var(--amber); }
+    .mobile-drawer-link.active-link { color: var(--amber); }
+    .mobile-drawer-link.highlight { color: var(--amber); }
+
+    /* WhatsApp */
+    .wa-float { position: fixed; bottom: 2rem; right: 2rem; z-index: 500; width: 52px; height: 52px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; color: white; box-shadow: 0 6px 20px rgba(37,211,102,0.4); transition: transform 0.4s var(--ease); }
+    .wa-float:hover { transform: scale(1.1); }
+
+    /* ══════════ COMMONS ══════════ */
+    .eyebrow { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--amber); display: block; margin-bottom: 0.875rem; }
+    .section-title { font-family: var(--serif); font-size: clamp(2rem,4vw,3.5rem); font-weight: 400; line-height: 1.05; letter-spacing: -0.02em; color: var(--charcoal); }
+    .section-title em { font-style: italic; color: var(--amber); }
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
+    .reveal.in { opacity: 1; transform: none; }
+    .reveal.d1 { transition-delay: 0.1s; } .reveal.d2 { transition-delay: 0.2s; } .reveal.d3 { transition-delay: 0.3s; } .reveal.d4 { transition-delay: 0.4s; }
+
+    /* ══════════ HERO ══════════ */
+    .page-hero { position: relative; height: 100svh; min-height: 600px; overflow: hidden; display: flex; align-items: flex-end; }
+    .page-hero-bg { position: absolute; inset: 0; }
+    .page-hero-bg img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) saturate(1.15); transform: scale(1.04); animation: slowZoom 12s var(--ease) forwards; }
+    @keyframes slowZoom { from { transform: scale(1.08); } to { transform: scale(1.0); } }
+    .page-hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,10,5,0.92) 0%, rgba(15,10,5,0.25) 45%, transparent 70%), linear-gradient(to right, rgba(15,10,5,0.5) 0%, transparent 55%); }
+    .page-hero-content { position: relative; z-index: 4; padding: 0 5rem 5.5rem; width: 100%; max-width: 1300px; margin: 0 auto; }
+    .hero-breadcrumb { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1.5rem; opacity: 0; animation: riseUp 0.8s 0.1s var(--ease) forwards; }
+    .hero-breadcrumb a, .hero-breadcrumb span { font-family: var(--mono); font-size: 0.55rem; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.45); transition: color 0.3s; }
+    .hero-breadcrumb a:hover { color: var(--amber-pale); }
+    .hero-breadcrumb-sep { color: rgba(255,255,255,0.25); font-size: 0.5rem; }
+    .hero-breadcrumb span:last-child { color: var(--amber-pale); }
+    .hero-badge { display: inline-flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem; opacity: 0; animation: riseUp 0.9s 0.2s var(--ease) forwards; }
+    .hero-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--amber-pale); animation: badgePulse 2s infinite; }
+    @keyframes badgePulse { 0%,100%{opacity:1;transform:scale(1)}50%{opacity:.6;transform:scale(1.3)} }
+    .hero-badge-text { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--amber-pale); }
+    .page-hero-title { font-family: var(--serif); font-size: clamp(3.8rem, 9vw, 8rem); font-weight: 400; line-height: 0.88; letter-spacing: -0.025em; color: white; margin-bottom: 1.5rem; opacity: 0; animation: riseUp 1s 0.35s var(--ease) forwards; }
+    .page-hero-title em { font-style: italic; color: var(--amber-pale); }
+    .page-hero-sub { font-family: var(--sans); font-size: 0.95rem; color: rgba(255,255,255,0.55); max-width: 500px; line-height: 1.75; opacity: 0; animation: riseUp 0.9s 0.5s var(--ease) forwards; margin-bottom: 2.5rem; }
+    .hero-actions { display: flex; align-items: center; gap: 1.5rem; opacity: 0; animation: riseUp 0.9s 0.65s var(--ease) forwards; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 0.6rem; background: var(--amber); color: white; padding: 0.9rem 2.2rem; font-family: var(--sans); font-size: 0.85rem; font-weight: 500; letter-spacing: 0.04em; transition: background 0.3s, transform 0.3s, gap 0.3s; }
+    .btn-primary:hover { background: var(--amber-light); transform: translateX(3px); gap: 0.9rem; }
+    .btn-ghost-hero { font-family: var(--sans); font-size: 0.82rem; color: rgba(255,255,255,0.65); display: flex; align-items: center; gap: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.22); padding-bottom: 2px; transition: color 0.3s, border-color 0.3s; }
+    .btn-ghost-hero:hover { color: white; border-color: white; }
+    /* Hero stats row */
+    .hero-stats { position: absolute; bottom: 5.5rem; right: 5rem; z-index: 5; display: flex; gap: 2px; opacity: 0; animation: riseUp 0.8s 0.8s var(--ease) forwards; }
+    .hstat { background: rgba(250,247,242,0.08); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); padding: 1.1rem 1.5rem; text-align: center; }
+    .hstat-num { font-family: var(--serif); font-size: 1.8rem; font-weight: 400; color: white; line-height: 1; }
+    .hstat-label { font-family: var(--mono); font-size: 0.48rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.42); margin-top: 0.3rem; }
+    @keyframes riseUp { to { opacity: 1; transform: translateY(0); } }
+    .page-hero-title,.page-hero-sub,.hero-badge,.hero-breadcrumb,.hero-actions,.hero-stats { transform: translateY(20px); }
+
+    /* ══════════ MARQUEE ══════════ */
+    .marquee-bar { background: var(--charcoal); overflow: hidden; padding: 0.75rem 0; }
+    .marquee-track { display: flex; width: max-content; animation: marqueeScroll 30s linear infinite; }
+    .marquee-item { display: flex; align-items: center; gap: 0.75rem; padding: 0 1.75rem; white-space: nowrap; font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(240,192,128,0.7); }
+    .msep { color: var(--amber); font-size: 0.3rem; }
+    @keyframes marqueeScroll { from{transform:translateX(0)}to{transform:translateX(-50%)} }
+
+    /* ══════════ OVERVIEW ══════════ */
+    .overview { padding: 7rem 4rem; max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 8rem; align-items: start; }
+    .overview-lead { font-family: var(--serif); font-size: clamp(1.4rem,2.2vw,1.9rem); font-weight: 400; line-height: 1.45; color: var(--charcoal); margin-bottom: 2rem; }
+    .overview-lead em { font-style: italic; color: var(--amber); }
+    .overview-body { font-family: var(--sans); font-size: 0.875rem; color: var(--muted); line-height: 1.85; }
+    .overview-body p { margin-bottom: 1.25rem; }
+    .overview-body p:last-child { margin-bottom: 0; }
+    .overview-quick-facts { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 1px; background: var(--border); }
+    .qf-row { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.25rem; background: white; }
+    .qf-row:hover { background: var(--cream-dark); }
+    .qf-key { font-family: var(--mono); font-size: 0.52rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .qf-val { font-family: var(--sans); font-size: 0.875rem; font-weight: 500; color: var(--charcoal); }
+    .qf-badge { font-family: var(--mono); font-size: 0.48rem; letter-spacing: 0.14em; text-transform: uppercase; background: rgba(184,101,26,0.1); color: var(--amber); border: 1px solid rgba(184,101,26,0.2); padding: 0.25rem 0.6rem; }
+
+    /* Overview visual */
+    .overview-visual { display: flex; flex-direction: column; gap: 1.25rem; position: sticky; top: 8rem; }
+    .ov-img-main { overflow: hidden; aspect-ratio: 4/3; border: 1px solid var(--border); position: relative; }
+    .ov-img-main img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.88) saturate(1.1); transition: transform 1.5s var(--ease); }
+    .ov-img-main:hover img { transform: scale(1.04); }
+    .ov-img-main::after { content:''; position:absolute; inset:0; background:linear-gradient(to top,rgba(15,8,3,.45) 0%,transparent 50%); pointer-events:none; }
+    .ov-img-caption { position: absolute; bottom: 1rem; left: 1.25rem; font-family: var(--mono); font-size: 0.5rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--amber-pale); z-index: 2; }
+    .ov-img-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    .ov-img-sm { overflow: hidden; aspect-ratio: 1; border: 1px solid var(--border); }
+    .ov-img-sm img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.85) saturate(1.05); transition: transform 1.5s var(--ease); }
+    .ov-img-sm:hover img { transform: scale(1.06); }
+
+    /* ══════════ EXPERIENCE TYPES ══════════ */
+    .experiences { background: white; border-top: 1px solid var(--border); padding: 7rem 4rem; }
+    .experiences-inner { max-width: 1300px; margin: 0 auto; }
+    .exp-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border); margin-top: 4rem; }
+    .exp-card { background: var(--cream); padding: 2.5rem; display: flex; flex-direction: column; gap: 1.25rem; transition: background 0.3s; cursor: default; }
+    .exp-card:hover { background: white; }
+    .exp-card.featured { background: var(--charcoal); }
+    .exp-card.featured:hover { background: var(--stone); }
+    .exp-num { font-family: var(--mono); font-size: 0.5rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--amber); }
+    .exp-card.featured .exp-num { color: var(--amber-pale); }
+    .exp-title { font-family: var(--serif); font-size: 1.5rem; font-weight: 400; color: var(--charcoal); line-height: 1.15; }
+    .exp-card.featured .exp-title { color: white; }
+    .exp-desc { font-family: var(--sans); font-size: 0.82rem; color: var(--muted); line-height: 1.72; flex: 1; }
+    .exp-card.featured .exp-desc { color: rgba(255,255,255,0.5); }
+    .exp-specs { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .exp-spec { font-family: var(--mono); font-size: 0.48rem; letter-spacing: 0.14em; text-transform: uppercase; border: 1px solid var(--border-strong); padding: 0.28rem 0.65rem; color: var(--muted); }
+    .exp-card.featured .exp-spec { border-color: rgba(255,255,255,0.15); color: rgba(255,255,255,0.45); }
+    .exp-price { display: flex; align-items: baseline; gap: 0.4rem; margin-top: auto; padding-top: 1.25rem; border-top: 1px solid var(--border); }
+    .exp-card.featured .exp-price { border-color: rgba(255,255,255,0.1); }
+    .exp-price-from { font-family: var(--mono); font-size: 0.5rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); }
+    .exp-card.featured .exp-price-from { color: rgba(255,255,255,0.35); }
+    .exp-price-num { font-family: var(--serif); font-size: 1.8rem; font-weight: 400; color: var(--amber); }
+    .exp-card.featured .exp-price-num { color: var(--amber-pale); }
+    .exp-price-pp { font-family: var(--mono); font-size: 0.48rem; color: var(--muted); }
+    .exp-card.featured .exp-price-pp { color: rgba(255,255,255,0.3); }
+
+    /* ══════════ WHAT TO EXPECT ══════════ */
+    .expect-section { padding: 7rem 4rem; }
+    .expect-inner { max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.2fr; gap: 8rem; align-items: start; }
+    .expect-steps { margin-top: 3rem; display: flex; flex-direction: column; gap: 0; }
+    .step-item { display: grid; grid-template-columns: 48px 1fr; gap: 1.5rem; padding-bottom: 2.5rem; position: relative; }
+    .step-item:last-child { padding-bottom: 0; }
+    .step-item:not(:last-child)::before { content:''; position:absolute; left:23px; top:48px; bottom:0; width:1px; background:linear-gradient(to bottom,var(--border-strong),transparent); }
+    .step-num { width: 48px; height: 48px; border: 1.5px solid var(--border-strong); background: white; display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.1em; color: var(--amber); flex-shrink: 0; transition: background 0.3s, border-color 0.3s; }
+    .step-item:hover .step-num { background: var(--amber); color: white; border-color: var(--amber); }
+    .step-content { padding-top: 0.6rem; }
+    .step-title { font-family: var(--serif); font-size: 1.2rem; font-weight: 400; color: var(--charcoal); margin-bottom: 0.5rem; }
+    .step-desc { font-family: var(--sans); font-size: 0.82rem; color: var(--muted); line-height: 1.72; }
+    /* expect visual */
+    .expect-visual { position: sticky; top: 8rem; display: flex; flex-direction: column; gap: 1.25rem; }
+    .expect-img-main { overflow: hidden; aspect-ratio: 3/4; border: 1px solid var(--border); position: relative; }
+    .expect-img-main img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.85) saturate(1.1); transition: transform 1.5s var(--ease); }
+    .expect-img-main:hover img { transform: scale(1.04); }
+    .expect-img-main::after { content:''; position:absolute; inset:0; background:linear-gradient(to top,rgba(15,8,3,.5) 0%,transparent 55%); pointer-events:none; }
+    .expect-caption { position: absolute; bottom: 1.25rem; left: 1.25rem; right: 1.25rem; z-index: 2; }
+    .expect-caption-label { font-family: var(--mono); font-size: 0.5rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--amber-pale); margin-bottom: 0.3rem; }
+    .expect-caption-text { font-family: var(--serif); font-size: 0.95rem; font-style: italic; color: rgba(255,255,255,0.8); }
+
+    /* ══════════ SEASON / INFO STRIP ══════════ */
+    .info-strip { background: white; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .info-strip-inner { max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: repeat(4,1fr); }
+    .info-item { display: flex; flex-direction: column; gap: 0.4rem; padding: 2.5rem 2rem; border-right: 1px solid var(--border); transition: background 0.3s; }
+    .info-item:last-child { border-right: none; }
+    .info-item:hover { background: var(--cream-dark); }
+    .info-item-icon { color: var(--amber); margin-bottom: 0.5rem; }
+    .info-item-label { font-family: var(--mono); font-size: 0.5rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); }
+    .info-item-val { font-family: var(--serif); font-size: 1.3rem; font-weight: 400; color: var(--charcoal); line-height: 1.2; }
+    .info-item-sub { font-family: var(--sans); font-size: 0.75rem; color: var(--muted); line-height: 1.5; }
+
+    /* ══════════ INCLUDED / EXCLUDED ══════════ */
+    .inclusions { padding: 7rem 4rem; background: var(--cream-dark); }
+    .inclusions-inner { max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; }
+    .incl-col-title { font-family: var(--serif); font-size: 1.6rem; font-weight: 400; color: var(--charcoal); margin-bottom: 2rem; }
+    .incl-col-title em { font-style: italic; color: var(--amber); }
+    .incl-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); }
+    .incl-item { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.25rem; background: white; transition: background 0.3s; }
+    .incl-item:hover { background: var(--cream); }
+    .incl-icon { width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .incl-icon.yes { background: rgba(74,222,128,0.12); color: #16a34a; }
+    .incl-icon.no { background: rgba(239,68,68,0.1); color: #dc2626; }
+    .incl-text { font-family: var(--sans); font-size: 0.82rem; color: var(--stone); line-height: 1.5; }
+
+    /* ══════════ SAFETY SECTION ══════════ */
+    .safety-section { background: var(--charcoal); padding: 7rem 4rem; }
+    .safety-inner { max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 7rem; align-items: center; }
+    .safety-text .eyebrow { color: var(--amber-pale); }
+    .safety-title { font-family: var(--serif); font-size: clamp(2rem,4vw,3rem); font-weight: 400; color: white; line-height: 1.05; margin-bottom: 1.5rem; }
+    .safety-title em { font-style: italic; color: var(--amber-pale); }
+    .safety-body { font-family: var(--sans); font-size: 0.875rem; color: rgba(255,255,255,0.5); line-height: 1.85; margin-bottom: 2.5rem; }
+    .safety-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(255,255,255,0.06); }
+    .safety-item { background: rgba(255,255,255,0.03); padding: 1.5rem; transition: background 0.3s; }
+    .safety-item:hover { background: rgba(255,255,255,0.06); }
+    .safety-item-icon { color: var(--amber-pale); margin-bottom: 0.75rem; }
+    .safety-item-title { font-family: var(--serif); font-size: 1rem; font-weight: 400; color: white; margin-bottom: 0.35rem; }
+    .safety-item-desc { font-family: var(--sans); font-size: 0.75rem; color: rgba(255,255,255,0.38); line-height: 1.65; }
+    .safety-visual { position: relative; }
+    .safety-img-wrap { overflow: hidden; border: 1px solid rgba(255,255,255,0.07); }
+    .safety-img { width: 100%; display: block; filter: brightness(0.82) saturate(1.0); transition: transform 1.5s var(--ease); }
+    .safety-img-wrap:hover .safety-img { transform: scale(1.03); }
+    .safety-badge { position: absolute; bottom: -1.5rem; right: -1.5rem; background: var(--amber); padding: 1.5rem 2rem; }
+    .safety-badge-num { font-family: var(--serif); font-size: 2.4rem; font-weight: 400; color: white; line-height: 1; }
+    .safety-badge-label { font-family: var(--mono); font-size: 0.48rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.75); margin-top: 0.25rem; }
+
+    /* ══════════ GALLERY ══════════ */
+    .gallery-section { padding: 7rem 4rem; }
+    .gallery-inner { max-width: 1300px; margin: 0 auto; }
+    .gallery-grid { margin-top: 3.5rem; display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: auto auto; gap: 1px; background: var(--border); }
+    .gallery-item { overflow: hidden; position: relative; }
+    .gallery-item:first-child { grid-row: span 2; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(0.88) saturate(1.1); transition: transform 1.5s var(--ease), filter 0.5s; aspect-ratio: auto; }
+    .gallery-item:first-child img { aspect-ratio: auto; height: 100%; }
+    .gallery-item img { min-height: 220px; }
+    .gallery-item:hover img { transform: scale(1.06); filter: brightness(0.96) saturate(1.15); }
+    .gallery-overlay { position: absolute; inset: 0; background: linear-gradient(to top,rgba(15,8,3,.5) 0%,transparent 50%); opacity: 0; transition: opacity 0.4s; pointer-events: none; }
+    .gallery-item:hover .gallery-overlay { opacity: 1; }
+
+    /* ══════════ FAQ ══════════ */
+    .faq-section { padding: 7rem 4rem; background: white; border-top: 1px solid var(--border); }
+    .faq-inner { max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.6fr; gap: 7rem; align-items: start; }
+    .faq-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); margin-top: 0; }
+    .faq-item { background: var(--cream); padding: 1.75rem 2rem; cursor: pointer; transition: background 0.3s; }
+    .faq-item:hover { background: white; }
+    .faq-q { font-family: var(--serif); font-size: 1rem; font-weight: 400; color: var(--charcoal); display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
+    .faq-q-icon { color: var(--amber); flex-shrink: 0; opacity: 0.55; transition: transform 0.4s var(--ease), opacity 0.3s; margin-top: 2px; }
+    .faq-item.open .faq-q-icon { transform: rotate(45deg); opacity: 1; }
+    .faq-a { font-family: var(--sans); font-size: 0.82rem; color: var(--muted); line-height: 1.75; max-height: 0; overflow: hidden; transition: max-height 0.5s var(--ease), padding-top 0.4s; }
+    .faq-item.open .faq-a { max-height: 200px; padding-top: 0.875rem; }
+
+    /* ══════════ QUOTE ══════════ */
+    .quote-section { position: relative; overflow: hidden; min-height: 50vh; display: flex; align-items: center; justify-content: center; }
+    .quote-bg { position: absolute; inset: 0; }
+    .quote-bg img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.28) saturate(0.8); }
+    .quote-bg-overlay { position: absolute; inset: 0; background: linear-gradient(to right,rgba(15,8,3,.7),rgba(15,8,3,.35),rgba(15,8,3,.6)); }
+    .quote-content { position: relative; z-index: 2; text-align: center; padding: 5rem 4rem; max-width: 820px; }
+    .quote-mark { font-family: var(--serif); font-size: 5rem; color: var(--amber-pale); opacity: 0.25; line-height: 0; display: block; margin-bottom: 2rem; }
+    .quote-text { font-family: var(--serif); font-size: clamp(1.6rem,3vw,2.5rem); font-weight: 400; font-style: italic; color: white; line-height: 1.4; margin-bottom: 2rem; }
+    .quote-text em { color: var(--amber-pale); font-style: normal; }
+    .quote-attr { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(255,255,255,0.35); display: flex; align-items: center; justify-content: center; gap: 1rem; }
+    .quote-attr::before,.quote-attr::after { content:''; width:28px; height:1px; background:rgba(255,255,255,0.15); }
+
+    /* ══════════ BOOKING CTA ══════════ */
+    .booking-section { padding: 7rem 4rem; }
+    .booking-inner { max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+    .booking-actions { display: flex; align-items: center; gap: 1.5rem; margin-top: 2.5rem; flex-wrap: wrap; }
+    .btn-book { display: inline-flex; align-items: center; gap: 0.6rem; background: var(--charcoal); color: white; padding: 0.95rem 2.25rem; font-family: var(--sans); font-size: 0.85rem; font-weight: 500; letter-spacing: 0.04em; transition: background 0.3s, transform 0.3s, gap 0.3s; }
+    .btn-book:hover { background: var(--stone); transform: translateX(4px); gap: 0.9rem; }
+    .btn-link { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); display: flex; align-items: center; gap: 0.4rem; transition: color 0.3s; }
+    .btn-link:hover { color: var(--amber); }
+    .booking-visual { position: relative; }
+    .booking-img-wrap { overflow: hidden; border: 1px solid var(--border); }
+    .booking-img { width: 100%; display: block; filter: brightness(0.88) saturate(1.1); transition: transform 1.5s var(--ease); }
+    .booking-img-wrap:hover .booking-img { transform: scale(1.04); }
+    .booking-badge { position: absolute; bottom: -1.5rem; left: -1.5rem; background: white; border: 1px solid var(--border); padding: 1.5rem 2rem; box-shadow: var(--shadow-md); }
+    .booking-badge-num { font-family: var(--serif); font-size: 2.4rem; font-weight: 400; color: var(--amber); line-height: 1; }
+    .booking-badge-label { font-family: var(--mono); font-size: 0.5rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-top: 0.25rem; }
+
+    /* ══════════ OTHER ACTIVITIES ══════════ */
+    .other-activities { background: var(--cream-dark); border-top: 1px solid var(--border); padding: 7rem 4rem; }
+    .other-inner { max-width: 1300px; margin: 0 auto; }
+    .other-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--border); margin-top: 3.5rem; }
+    .other-card { background: white; overflow: hidden; transition: transform 0.4s var(--ease), box-shadow 0.4s; }
+    .other-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+    .other-card-img { overflow: hidden; aspect-ratio: 3/4; position: relative; }
+    .other-card-img img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.8) saturate(1.05); transition: transform 1.4s var(--ease); }
+    .other-card:hover .other-card-img img { transform: scale(1.07); }
+    .other-card-img::after { content:''; position:absolute; inset:0; background:linear-gradient(to top,rgba(15,8,3,.7) 0%,transparent 55%); }
+    .other-card-tag { position: absolute; bottom: 1rem; left: 1rem; font-family: var(--mono); font-size: 0.48rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--amber-pale); }
+    .other-card-body { padding: 1.25rem 1.5rem 1.5rem; }
+    .other-card-name { font-family: var(--serif); font-size: 1.2rem; font-weight: 400; color: var(--charcoal); margin-bottom: 0.35rem; }
+    .other-card-meta { font-family: var(--sans); font-size: 0.75rem; color: var(--muted); }
+    .other-card-link { font-family: var(--sans); font-size: 0.75rem; font-weight: 500; color: var(--amber); display: flex; align-items: center; gap: 0.35rem; margin-top: 0.875rem; transition: gap 0.3s; }
+    .other-card:hover .other-card-link { gap: 0.6rem; }
+
+    /* ══════════ CONTACT STRIP ══════════ */
+    .contact-strip { background: var(--cream-dark); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .contact-strip-inner { max-width: 1300px; margin: 0 auto; padding: 0 4rem; display: grid; grid-template-columns: repeat(3,1fr); }
+    .cs-item { display: flex; align-items: center; gap: 1.25rem; padding: 2.5rem 2rem; border-right: 1px solid var(--border); transition: background 0.3s; }
+    .cs-item:first-child { padding-left: 0; }
+    .cs-item:last-child { border-right: none; }
+    .cs-item:hover { background: rgba(184,101,26,0.04); }
+    .cs-icon { width: 42px; height: 42px; flex-shrink: 0; background: white; border: 1px solid var(--border); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--amber); }
+    .cs-label { font-family: var(--mono); font-size: 0.5rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.3rem; }
+    .cs-value { font-family: var(--sans); font-size: 0.9rem; font-weight: 500; color: var(--charcoal); }
+    .cs-value a { transition: color 0.3s; }
+    .cs-value a:hover { color: var(--amber); }
+
+    /* ══════════ FOOTER ══════════ */
+    footer { background: var(--charcoal); border-top: 1px solid rgba(255,255,255,0.05); padding: 5rem 4rem 2.5rem; }
+    .footer-grid { max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; margin-bottom: 4rem; padding-bottom: 4rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .footer-logo-text { font-family: var(--serif); font-size: 1.3rem; font-weight: 700; color: white; }
+    .footer-logo-text em { display: block; font-style: normal; font-family: var(--mono); font-size: 0.5rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--amber); margin-top: 3px; }
+    .footer-desc { font-family: var(--sans); font-size: 0.8rem; color: rgba(255,255,255,0.38); line-height: 1.75; margin-top: 1rem; }
+    .footer-contact { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; }
+    .footer-contact a { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.06em; color: rgba(255,255,255,0.35); display: flex; align-items: center; gap: 0.5rem; transition: color 0.3s; }
+    .footer-contact a:hover { color: var(--amber-pale); }
+    .footer-col h4 { font-family: var(--mono); font-size: 0.52rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--amber); margin-bottom: 1.25rem; }
+    .footer-col ul { display: flex; flex-direction: column; gap: 0.6rem; }
+    .footer-col a { font-family: var(--sans); font-size: 0.8rem; color: rgba(255,255,255,0.38); transition: color 0.3s, padding-left 0.3s; }
+    .footer-col a:hover { color: rgba(255,255,255,0.7); padding-left: 4px; }
+    .footer-bottom { max-width: 1300px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+    .footer-bottom p { font-family: var(--mono); font-size: 0.55rem; letter-spacing: 0.1em; color: rgba(255,255,255,0.18); }
+    .footer-socials { display: flex; gap: 0.75rem; }
+    .social-ico { width: 32px; height: 32px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.28); transition: all 0.3s; }
+    .social-ico:hover { border-color: var(--amber); color: var(--amber); }
+
+    /* ══════════ RESPONSIVE ══════════ */
+    @media (max-width: 1024px) {
+      nav { padding: 1.25rem 2rem; } nav.scrolled { padding: 0.875rem 2rem; }
+      .nav-links { display: none; } .nav-hamburger { display: flex; }
+      .page-hero-content { padding: 0 2rem 4rem; }
+      .hero-stats { right: 2rem; bottom: 4rem; }
+      .overview { grid-template-columns: 1fr; gap: 4rem; padding: 5rem 2rem; }
+      .overview-visual { position: static; }
+      .experiences { padding: 5rem 2rem; }
+      .exp-grid { grid-template-columns: 1fr; }
+      .expect-section { padding: 5rem 2rem; }
+      .expect-inner { grid-template-columns: 1fr; gap: 4rem; }
+      .expect-visual { position: static; }
+      .info-strip-inner { grid-template-columns: repeat(2,1fr); }
+      .info-item:nth-child(2) { border-right: none; }
+      .inclusions { padding: 5rem 2rem; }
+      .inclusions-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .safety-section { padding: 5rem 2rem; }
+      .safety-inner { grid-template-columns: 1fr; gap: 4rem; }
+      .safety-badge { bottom: -1rem; right: -0.75rem; }
+      .gallery-section { padding: 5rem 2rem; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+      .gallery-item:first-child { grid-row: auto; }
+      .faq-section { padding: 5rem 2rem; }
+      .faq-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .booking-section { padding: 5rem 2rem; }
+      .booking-inner { grid-template-columns: 1fr; gap: 4rem; }
+      .other-activities { padding: 5rem 2rem; }
+      .other-grid { grid-template-columns: 1fr 1fr; }
+      .contact-strip-inner { grid-template-columns: 1fr; padding: 0 2rem; }
+      .cs-item { border-right: none; border-bottom: 1px solid var(--border); padding: 1.75rem 0; }
+      .cs-item:last-child { border-bottom: none; }
+      .cs-item:first-child { padding-left: 0; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+      footer { padding: 4rem 2rem 2rem; }
+    }
+    @media (max-width: 640px) {
+      .hero-stats { display: none; }
+      .info-strip-inner { grid-template-columns: 1fr 1fr; }
+      .other-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+      .safety-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/9779811157421" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <a href="index.html" class="mobile-drawer-link" onclick="closeDrawer()">Home <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <a href="about.html" class="mobile-drawer-link" onclick="closeDrawer()">About <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <a href="guides.html" class="mobile-drawer-link" onclick="closeDrawer()">Our Guides <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <a href="index.html#expeditions" class="mobile-drawer-link" onclick="closeDrawer()">Expeditions <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <a href="index.html#activities" class="mobile-drawer-link active-link" onclick="closeDrawer()">Activities <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <a href="contact.html" class="mobile-drawer-link highlight" onclick="closeDrawer()">Contact Us →</a>
+  </div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">
+      <svg class="nav-logo-icon" viewBox="0 0 40 40" fill="none">
+        <path d="M20 4 L4 36 L36 36 Z" stroke="rgba(240,192,128,0.8)" stroke-width="1.2" fill="none"/>
+        <path d="M20 4 L12 36 L20 30 Z" fill="rgba(240,192,128,0.25)"/>
+        <circle cx="20" cy="4" r="1.8" fill="rgba(240,192,128,0.9)"/>
+      </svg>
+      <div class="nav-logo-text">BEYOND SUMMIT<em>Expeditions · Nepal</em></div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="guides.html">Guides</a>
+      <a href="index.html#expeditions">Expeditions</a>
+      <a href="index.html#activities" class="active">Activities</a>
+      <a href="contact.html" class="nav-cta">Book Now →</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="page-hero-bg">
+      <img src="https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?q=85&w=1800&auto=format&fit=crop" alt="Paragliding over Pokhara with Annapurna backdrop" loading="eager">
+    </div>
+    <div class="page-hero-content">
+      <div class="hero-breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="hero-breadcrumb-sep">◆</span>
+        <a href="index.html#activities">Activities</a>
+        <span class="hero-breadcrumb-sep">◆</span>
+        <span>Paragliding</span>
+      </div>
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        <span class="hero-badge-text">Year-Round · Pokhara</span>
+      </div>
+      <h1 class="page-hero-title">Fly with the<br><em>Himalayas</em></h1>
+      <p class="page-hero-sub">Soar above Phewa Lake with the Annapurna massif filling your entire horizon. Nepal's most breathtaking paragliding experience, guided by certified pilots with 10,000+ flight hours.</p>
+      <div class="hero-actions">
+        <a href="contact.html" class="btn-primary">
+          Book Your Flight
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#overview" class="btn-ghost-hero">
+          Learn More
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="hstat">
+        <div class="hstat-num">3,200</div>
+        <div class="hstat-label">Ft Launch Alt.</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-num">30–45</div>
+        <div class="hstat-label">Min Airtime</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-num">100%</div>
+        <div class="hstat-label">Safety Record</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-bar" aria-hidden="true">
+    <div class="marquee-track">
+      <div class="marquee-item">Paragliding <span class="msep">◆</span> Pokhara</div>
+      <div class="marquee-item">Phewa Lake <span class="msep">◆</span> Aerial View</div>
+      <div class="marquee-item">Annapurna <span class="msep">◆</span> 8,091m</div>
+      <div class="marquee-item">Sarangkot <span class="msep">◆</span> Launch Site</div>
+      <div class="marquee-item">Tandem Flights <span class="msep">◆</span> All Levels</div>
+      <div class="marquee-item">APPI Certified <span class="msep">◆</span> Pilots</div>
+      <div class="marquee-item">Acrobatic <span class="msep">◆</span> Advanced</div>
+      <div class="marquee-item">Year-Round <span class="msep">◆</span> Activity</div>
+      <div class="marquee-item">Paragliding <span class="msep">◆</span> Pokhara</div>
+      <div class="marquee-item">Phewa Lake <span class="msep">◆</span> Aerial View</div>
+      <div class="marquee-item">Annapurna <span class="msep">◆</span> 8,091m</div>
+      <div class="marquee-item">Sarangkot <span class="msep">◆</span> Launch Site</div>
+      <div class="marquee-item">Tandem Flights <span class="msep">◆</span> All Levels</div>
+      <div class="marquee-item">APPI Certified <span class="msep">◆</span> Pilots</div>
+      <div class="marquee-item">Acrobatic <span class="msep">◆</span> Advanced</div>
+      <div class="marquee-item">Year-Round <span class="msep">◆</span> Activity</div>
+    </div>
+  </div>
+
+  <!-- OVERVIEW -->
+  <div class="overview" id="overview">
+    <div>
+      <span class="eyebrow reveal">The Experience</span>
+      <p class="overview-lead reveal d1">Pokhara is considered one of the world's <em>finest paragliding destinations</em> — and from the air, you'll understand why.</p>
+      <div class="overview-body reveal d2">
+        <p>Launching from Sarangkot at 1,600 metres, you'll catch the famous Pokhara thermals that carry you effortlessly above the Phewa Lake valley. On a clear day, the snow-capped peaks of Annapurna, Machapuchare (Fishtail), Dhaulagiri, and Manaslu stretch across the entire northern horizon.</p>
+        <p>Our tandem flights require zero prior experience. You'll be strapped securely to one of our APPI-certified pilots — all with a minimum of 3,000 flight hours over the Pokhara valley. You simply enjoy the view.</p>
+        <p>For those seeking more, our acrobatic and extended cross-country flights offer spirals, wingovers, and thermal soaring — the same experience that makes Pokhara a training destination for professional pilots from around the world.</p>
+      </div>
+
+      <div class="overview-quick-facts reveal d3" style="margin-top:2.5rem">
+        <div class="qf-row">
+          <span class="qf-key">Location</span>
+          <span class="qf-val">Sarangkot, Pokhara · Nepal</span>
+        </div>
+        <div class="qf-row">
+          <span class="qf-key">Duration</span>
+          <span class="qf-val">30 – 90 minutes (by package)</span>
+        </div>
+        <div class="qf-row">
+          <span class="qf-key">Difficulty</span>
+          <span class="qf-badge">All Levels Welcome</span>
+        </div>
+        <div class="qf-row">
+          <span class="qf-key">Season</span>
+          <span class="qf-val">Year-round (Oct–May optimal)</span>
+        </div>
+        <div class="qf-row">
+          <span class="qf-key">Minimum Age</span>
+          <span class="qf-val">5 years (with guardian consent)</span>
+        </div>
+        <div class="qf-row">
+          <span class="qf-key">Weight Limit</span>
+          <span class="qf-val">Max 110 kg per person</span>
+        </div>
+        <div class="qf-row">
+          <span class="qf-key">Pilot Certification</span>
+          <span class="qf-badge">APPI Tandem Certified</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="overview-visual reveal d1">
+      <div class="ov-img-main">
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=900&auto=format&fit=crop" alt="Paraglider over Phewa Lake">
+        <div class="ov-img-caption">Phewa Lake · 1,200m Altitude</div>
+      </div>
+      <div class="ov-img-row">
+        <div class="ov-img-sm"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=500&auto=format&fit=crop" alt="Annapurna range view"></div>
+        <div class="ov-img-sm"><img src="https://images.unsplash.com/photo-1469521669194-babb45599def?q=80&w=500&auto=format&fit=crop" alt="Sarangkot launch"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLIGHT PACKAGES -->
+  <div class="experiences">
+    <div class="experiences-inner">
+      <span class="eyebrow reveal">Choose Your Package</span>
+      <h2 class="section-title reveal d1">Three Ways to <em>Fly</em></h2>
+      <div class="exp-grid">
+        <div class="exp-card reveal">
+          <div class="exp-num">Package 01</div>
+          <div class="exp-title">Classic Tandem Flight</div>
+          <div class="exp-desc">The perfect introduction to paragliding. A 30-minute tandem flight from Sarangkot with your certified pilot. No experience needed — just sit back and let Pokhara's thermals do the work while Annapurna fills your view.</div>
+          <div class="exp-specs">
+            <span class="exp-spec">30 Minutes</span>
+            <span class="exp-spec">All Levels</span>
+            <span class="exp-spec">GoPro Included</span>
+          </div>
+          <div class="exp-price">
+            <span class="exp-price-from">From</span>
+            <span class="exp-price-num">$75</span>
+            <span class="exp-price-pp">/ person</span>
+          </div>
+        </div>
+        <div class="exp-card featured reveal d1">
+          <div class="exp-num">Package 02 · Most Popular</div>
+          <div class="exp-title">Sunrise Thermal Flight</div>
+          <div class="exp-desc">The definitive Pokhara paragliding experience. Depart at dawn to catch the morning thermals rising off the Annapurna foothills. Up to 45 minutes of soaring flight, often with Himalayan peaks lit gold by first light. Includes HD video & photos.</div>
+          <div class="exp-specs">
+            <span class="exp-spec">45 Minutes</span>
+            <span class="exp-spec">All Levels</span>
+            <span class="exp-spec">HD Video</span>
+            <span class="exp-spec">Sunrise</span>
+          </div>
+          <div class="exp-price">
+            <span class="exp-price-from">From</span>
+            <span class="exp-price-num">$110</span>
+            <span class="exp-price-pp">/ person</span>
+          </div>
+        </div>
+        <div class="exp-card reveal d2">
+          <div class="exp-num">Package 03</div>
+          <div class="exp-title">Acrobatic &amp; XC Flight</div>
+          <div class="exp-desc">For thrill-seekers and experienced fliers. 60–90 minutes of cross-country thermal soaring with spirals, wingovers, and SAT manoeuvres. Your pilot will read the sky like a map — this is paragliding at its absolute finest.</div>
+          <div class="exp-specs">
+            <span class="exp-spec">60–90 Min</span>
+            <span class="exp-spec">Acrobatic</span>
+            <span class="exp-spec">XC Route</span>
+          </div>
+          <div class="exp-price">
+            <span class="exp-price-from">From</span>
+            <span class="exp-price-num">$175</span>
+            <span class="exp-price-pp">/ person</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INFO STRIP -->
+  <div class="info-strip">
+    <div class="info-strip-inner">
+      <div class="info-item">
+        <svg class="info-item-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <div class="info-item-label">Flight Duration</div>
+        <div class="info-item-val">30 – 90 min</div>
+        <div class="info-item-sub">Depending on package</div>
+      </div>
+      <div class="info-item">
+        <svg class="info-item-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <div class="info-item-label">Launch Site</div>
+        <div class="info-item-val">Sarangkot</div>
+        <div class="info-item-sub">1,600 m elevation</div>
+      </div>
+      <div class="info-item">
+        <svg class="info-item-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        <div class="info-item-label">Landing Zone</div>
+        <div class="info-item-val">Phewa Lake</div>
+        <div class="info-item-sub">Lakeside shoreline</div>
+      </div>
+      <div class="info-item">
+        <svg class="info-item-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <div class="info-item-label">Group Size</div>
+        <div class="info-item-val">1 – 12 pax</div>
+        <div class="info-item-sub">Private & group available</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHAT TO EXPECT -->
+  <div class="expect-section">
+    <div class="expect-inner">
+      <div>
+        <span class="eyebrow reveal">Your Day</span>
+        <h2 class="section-title reveal d1">What to <em>Expect</em></h2>
+        <div class="expect-steps">
+          <div class="step-item reveal d1">
+            <div class="step-num">01</div>
+            <div class="step-content">
+              <div class="step-title">Hotel Pickup</div>
+              <div class="step-desc">We collect you from your Pokhara hotel early morning. Transport to Sarangkot is included. Journey takes approximately 30 minutes — watch the valley wake up below you.</div>
+            </div>
+          </div>
+          <div class="step-item reveal d2">
+            <div class="step-num">02</div>
+            <div class="step-content">
+              <div class="step-title">Briefing & Gear Up</div>
+              <div class="step-desc">Your certified pilot walks you through the flight plan, harness fitting, and safety procedures. Questions welcome — we want you comfortable before your feet leave the ground.</div>
+            </div>
+          </div>
+          <div class="step-item reveal d3">
+            <div class="step-num">03</div>
+            <div class="step-content">
+              <div class="step-title">Launch from Sarangkot</div>
+              <div class="step-desc">A few running steps and you're airborne. The Annapurna massif appears instantly — a 60km wall of snow and rock rising above the emerald valley below. No words quite prepare you for this.</div>
+            </div>
+          </div>
+          <div class="step-item reveal d1">
+            <div class="step-num">04</div>
+            <div class="step-content">
+              <div class="step-title">Soar & Explore</div>
+              <div class="step-desc">Your pilot reads the thermals to maximise your airtime. Glide over Phewa Lake's mirror surface, catch updrafts from the foothills, and on clear days see all the way to Dhaulagiri and Manaslu.</div>
+            </div>
+          </div>
+          <div class="step-item reveal d2">
+            <div class="step-num">05</div>
+            <div class="step-content">
+              <div class="step-title">Lakeside Landing</div>
+              <div class="step-desc">A smooth, controlled landing on the grassy shores of Phewa Lake. Your photos and video are ready within minutes. Most guests immediately ask to go again.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="expect-visual reveal d1">
+        <div class="expect-img-main">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=900&auto=format&fit=crop" alt="Paragliding Annapurna view">
+          <div class="expect-caption">
+            <div class="expect-caption-label">Annapurna Massif · North View from 1,400m</div>
+            <div class="expect-caption-text">"The silence up there — broken only by the wind — is something you carry home with you."</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INCLUSIONS -->
+  <div class="inclusions">
+    <div class="inclusions-inner">
+      <div class="reveal">
+        <span class="eyebrow" style="margin-bottom:.5rem">Package Includes</span>
+        <div class="incl-col-title">What's <em>Included</em></div>
+        <div class="incl-list">
+          <div class="incl-item"><div class="incl-icon yes"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="incl-text">Hotel pickup & drop-off (Pokhara lakeside)</div></div>
+          <div class="incl-item"><div class="incl-icon yes"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="incl-text">APPI-certified tandem pilot</div></div>
+          <div class="incl-item"><div class="incl-icon yes"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="incl-text">Full safety equipment & certified harness</div></div>
+          <div class="incl-item"><div class="incl-icon yes"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="incl-text">GoPro in-flight photos & video (HD)</div></div>
+          <div class="incl-item"><div class="incl-icon yes"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="incl-text">All government permits & activity fees</div></div>
+          <div class="incl-item"><div class="incl-icon yes"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="incl-text">Personal accident & liability insurance</div></div>
+        </div>
+      </div>
+      <div class="reveal d1">
+        <span class="eyebrow" style="margin-bottom:.5rem">Not Included</span>
+        <div class="incl-col-title">What to <em>Arrange</em></div>
+        <div class="incl-list">
+          <div class="incl-item"><div class="incl-icon no"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div><div class="incl-text">International travel insurance (recommended)</div></div>
+          <div class="incl-item"><div class="incl-icon no"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div><div class="incl-text">Meals & refreshments</div></div>
+          <div class="incl-item"><div class="incl-icon no"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div><div class="incl-text">Tips for pilot (optional but appreciated)</div></div>
+          <div class="incl-item"><div class="incl-icon no"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div><div class="incl-text">Personal sunscreen, sunglasses & warm layer</div></div>
+          <div class="incl-item"><div class="incl-icon no"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div><div class="incl-text">Additional flights (may be booked on day)</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SAFETY -->
+  <div class="safety-section">
+    <div class="safety-inner">
+      <div class="safety-text">
+        <span class="eyebrow reveal">Safety First</span>
+        <h2 class="safety-title reveal d1">Built on a<br><em>Flawless Record</em></h2>
+        <p class="safety-body reveal d2">Pokhara is home to some of the world's most favourable paragliding conditions — consistent thermals, wide open valleys, and a reliable weather window. But conditions alone don't make a safe experience. Our pilots do.</p>
+        <div class="safety-grid reveal d3">
+          <div class="safety-item">
+            <svg class="safety-item-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3 6.5L22 10l-5 5 1 7-6-3.5L6 22l1-7-5-5 7-1.5z"/></svg>
+            <div class="safety-item-title">APPI Certified</div>
+            <div class="safety-item-desc">All pilots hold APPI Tandem certification, Nepal's highest standard.</div>
+          </div>
+          <div class="safety-item">
+            <svg class="safety-item-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            <div class="safety-item-title">3,000+ Hours</div>
+            <div class="safety-item-desc">Minimum flight hours required before any pilot joins our team.</div>
+          </div>
+          <div class="safety-item">
+            <svg class="safety-item-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <div class="safety-item-title">Daily Equipment Check</div>
+            <div class="safety-item-desc">Wings, harnesses, and reserve parachutes inspected every morning before operations begin.</div>
+          </div>
+          <div class="safety-item">
+            <svg class="safety-item-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6s0-2 7-2 7 2 7 2v14s0-2-7-2-7 2-7 2V6z M15 6s0-2 7-2 7 2 7 2v14s0-2-7-2-7 2-7 2V6z"/></svg>
+            <div class="safety-item-title">Weather Protocol</div>
+            <div class="safety-item-desc">Flights postponed or cancelled whenever conditions fall below our strict thresholds. No debate.</div>
+          </div>
+        </div>
+      </div>
+      <div class="safety-visual reveal d1">
+        <div class="safety-img-wrap">
+          <img class="safety-img" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=800&auto=format&fit=crop" alt="Certified paragliding pilot pre-flight check">
+        </div>
+        <div class="safety-badge">
+          <div class="safety-badge-num">8,000+</div>
+          <div class="safety-badge-label">Safe Flights Completed</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GALLERY -->
+  <div class="gallery-section">
+    <div class="gallery-inner">
+      <span class="eyebrow reveal">In the Air</span>
+      <h2 class="section-title reveal d1">Flight <em>Gallery</em></h2>
+      <div class="gallery-grid reveal d2">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?q=80&w=800&auto=format&fit=crop" alt="Paraglider over Pokhara">
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=500&auto=format&fit=crop" alt="Himalayan peaks from above">
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1469521669194-babb45599def?q=80&w=500&auto=format&fit=crop" alt="Annapurna at sunrise">
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=500&auto=format&fit=crop" alt="Phewa Lake aerial">
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?q=80&w=500&auto=format&fit=crop" alt="Sunrise paragliding Sarangkot">
+          <div class="gallery-overlay"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-section">
+    <div class="faq-inner">
+      <div>
+        <span class="eyebrow reveal">Questions</span>
+        <h2 class="section-title reveal d1">Before You <em>Fly</em></h2>
+        <p class="reveal d2" style="font-family:var(--sans);font-size:0.875rem;color:var(--muted);line-height:1.8;margin-top:1.25rem;">Everything you need to know before your feet leave the ground. Don't see your question here? WhatsApp us directly and we'll answer within minutes.</p>
+      </div>
+      <div class="faq-list reveal d1">
+        <div class="faq-item">
+          <div class="faq-q">Do I need any experience to paraglide?<svg class="faq-q-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+          <div class="faq-a">None at all. Tandem paragliding means you fly attached to a certified pilot who controls everything. You just need to be able to run a few steps on launch and enjoy the view. We've flown guests from 5 to 75 years old.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What's the best time of year to fly?<svg class="faq-q-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+          <div class="faq-a">October to May offers the clearest skies and most stable thermals. The post-monsoon (Oct–Nov) and pre-monsoon (Mar–May) windows are peak season for mountain views. We do fly year-round, though monsoon months (June–Sept) have more weather cancellations.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is there a weight or age limit?<svg class="faq-q-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+          <div class="faq-a">Maximum weight is 110 kg. Minimum age is 5 years with signed guardian consent. We also recommend guests with serious heart conditions or vertigo consult their doctor first, though most healthy adults fly without issue.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What if the weather is bad on my booked day?<svg class="faq-q-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+          <div class="faq-a">Safety is non-negotiable. If conditions don't meet our standards, we postpone and rebook at no charge. We monitor forecasts daily and will contact you the evening before if we anticipate issues. Full refunds are offered if no suitable date is found during your stay.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can I bring my own camera or phone?<svg class="faq-q-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+          <div class="faq-a">Loose items must be secured — we provide a chest harness attachment point. Our GoPro footage covers all angles, and we strongly recommend using our provided system rather than a handheld phone, which can be dropped. All footage is transferred to your phone within minutes of landing.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How do I get to Sarangkot for the flight?<svg class="faq-q-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+          <div class="faq-a">Transport to and from Sarangkot is included in all our packages. We pick you up from your Pokhara lakeside hotel. If you're staying elsewhere in Pokhara, let us know when booking and we'll arrange pickup from the nearest convenient point.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUOTE -->
+  <section class="quote-section">
+    <div class="quote-bg"><img src="https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?q=80&w=1800&auto=format&fit=crop" alt="Paragliding Himalaya"></div>
+    <div class="quote-bg-overlay"></div>
+    <div class="quote-content">
+      <span class="quote-mark" aria-hidden="true">"</span>
+      <blockquote class="quote-text reveal">The mountains from a summit are magnificent.<br>The mountains from <em>within them</em> — that's something else entirely.</blockquote>
+      <div class="quote-attr reveal d1">Beyond Summit Guest · Sunrise Flight, Spring 2025</div>
+    </div>
+  </section>
+
+  <!-- BOOKING CTA -->
+  <section class="booking-section">
+    <div class="booking-inner">
+      <div>
+        <span class="eyebrow reveal">Reserve Your Spot</span>
+        <h2 class="section-title reveal d1">Ready to <em>Take Flight?</em></h2>
+        <p class="reveal d2" style="font-family:var(--sans);font-size:0.875rem;color:var(--muted);line-height:1.75;max-width:420px;margin-top:1.25rem;">Morning departure slots fill up fast, especially during peak season (Oct–May). Book at least 48 hours in advance for sunrise flights. Same-day bookings available subject to availability.</p>
+        <div class="booking-actions reveal d3">
+          <a href="contact.html" class="btn-book">
+            Book My Flight
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="https://wa.me/9779811157421" target="_blank" class="btn-link">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp Us Now
+          </a>
+        </div>
+      </div>
+      <div class="booking-visual reveal d1">
+        <div class="booking-img-wrap">
+          <img class="booking-img" src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?q=80&w=800&auto=format&fit=crop" alt="Sunrise paragliding Pokhara">
+        </div>
+        <div class="booking-badge">
+          <div class="booking-badge-num">8,000+</div>
+          <div class="booking-badge-label">Flights Completed</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OTHER ACTIVITIES -->
+  <div class="other-activities">
+    <div class="other-inner">
+      <span class="eyebrow reveal">Explore More</span>
+      <h2 class="section-title reveal d1">Other <em>Adventures</em></h2>
+      <div class="other-grid">
+        <a href="activities/rafting.html" class="other-card reveal">
+          <div class="other-card-img">
+            <img src="https://images.unsplash.com/photo-1506466010722-395ee2bef877?q=80&w=500&auto=format&fit=crop" alt="White Water Rafting">
+            <div class="other-card-tag">Water · Trisuli River</div>
+          </div>
+          <div class="other-card-body">
+            <div class="other-card-name">White Water Rafting</div>
+            <div class="other-card-meta">Grade 3–4 rapids · From $45</div>
+            <div class="other-card-link">View Activity <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </a>
+        <a href="activities/jungle-safari.html" class="other-card reveal d1">
+          <div class="other-card-img">
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=500&auto=format&fit=crop" alt="Jungle Safari">
+            <div class="other-card-tag">Wildlife · Chitwan</div>
+          </div>
+          <div class="other-card-body">
+            <div class="other-card-name">Jungle Safari</div>
+            <div class="other-card-meta">Rhinos & Tigers · From $85</div>
+            <div class="other-card-link">View Activity <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </a>
+        <a href="activities/helicopter-tours.html" class="other-card reveal d2">
+          <div class="other-card-img">
+            <img src="https://images.unsplash.com/photo-1469521669194-babb45599def?q=80&w=500&auto=format&fit=crop" alt="Helicopter Tour Everest">
+            <div class="other-card-tag">Aerial · Luxury</div>
+          </div>
+          <div class="other-card-body">
+            <div class="other-card-name">Helicopter Tours</div>
+            <div class="other-card-meta">Everest Sunrise · From $195</div>
+            <div class="other-card-link">View Activity <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </a>
+        <a href="activities/mountain-biking.html" class="other-card reveal d3">
+          <div class="other-card-img">
+            <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=500&auto=format&fit=crop" alt="Mountain Biking">
+            <div class="other-card-tag">Cycling · Kathmandu Valley</div>
+          </div>
+          <div class="other-card-body">
+            <div class="other-card-name">Mountain Biking</div>
+            <div class="other-card-meta">Temple trails · From $35</div>
+            <div class="other-card-link">View Activity <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT STRIP -->
+  <div class="contact-strip">
+    <div class="contact-strip-inner">
+      <div class="cs-item">
+        <div class="cs-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.71 3.53 2 2 0 0 1 3.68 1.38h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.07a16 16 0 0 0 6 6l1.06-1.06a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <div><div class="cs-label">Call Anytime</div><div class="cs-value"><a href="tel:+9779811157421">+977 9811 157 421</a></div></div>
+      </div>
+      <div class="cs-item">
+        <div class="cs-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+        <div><div class="cs-label">Email Us</div><div class="cs-value"><a href="mailto:info@beyondsummitexped.com">info@beyondsummitexped.com</a></div></div>
+      </div>
+      <div class="cs-item">
+        <div class="cs-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div><div class="cs-label">Find Us</div><div class="cs-value"><a href="https://maps.google.com/?q=Thamel,Kathmandu,Nepal" target="_blank">Thamel, Kathmandu</a></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" style="display:inline-flex;align-items:center;gap:.75rem;margin-bottom:1rem">
+          <svg width="30" height="30" viewBox="0 0 40 40" fill="none">
+            <path d="M20 4 L4 36 L36 36 Z" stroke="rgba(240,192,128,0.8)" stroke-width="1.2" fill="none"/>
+            <path d="M20 4 L12 36 L20 30 Z" fill="rgba(240,192,128,0.25)"/>
+            <circle cx="20" cy="4" r="1.8" fill="rgba(240,192,128,0.9)"/>
+          </svg>
+          <div class="footer-logo-text">Beyond Summit<em>Expeditions · Nepal</em></div>
+        </a>
+        <p class="footer-desc">Nepal's premier mountaineering & adventure company. Licensed by the Department of Tourism, Government of Nepal.</p>
+        <div class="footer-contact">
+          <a href="tel:+9779811157421"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.71 3.53 2 2 0 0 1 3.68 1.38h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.07a16 16 0 0 0 6 6l1.06-1.06a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>+977-9811157421</a>
+          <a href="mailto:info@beyondsummitexped.com"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@beyondsummitexped.com</a>
+          <a href="https://maps.google.com/?q=Thamel,Kathmandu" target="_blank"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Thamel, Kathmandu, Nepal</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Expeditions</h4>
+        <ul>
+          <li><a href="/articles/everest-base-camp-guide.html">Mount Everest</a></li>
+          <li><a href="/articles/amadablam-blog.html">Ama Dablam</a></li>
+          <li><a href="/articles/manaslu-blog.html">Manaslu</a></li>
+          <li><a href="/articles/merapeak.html">Mera Peak</a></li>
+          <li><a href="/expeditions.html">All Expeditions</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Activities</h4>
+        <ul>
+          <li><a href="activities/paragliding.html" style="color:rgba(255,255,255,0.65)">Paragliding</a></li>
+          <li><a href="activities/rafting.html">White Water Rafting</a></li>
+          <li><a href="activities/jungle-safari.html">Jungle Safari</a></li>
+          <li><a href="activities/helicopter-tours.html">Helicopter Tours</a></li>
+          <li><a href="activities/mountain-biking.html">Mountain Biking</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="guides.html">Our Guides</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Beyond Summit Expeditions · Licensed by Dept. of Tourism, Government of Nepal</p>
+      <div class="footer-socials">
+        <a href="https://instagram.com/beyondsummitexpeditions" class="social-ico" target="_blank" aria-label="Instagram">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://facebook.com/beyondsummitexped" class="social-ico" target="_blank" aria-label="Facebook">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* NAV */
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    }, { passive: true });
+
+    /* HAMBURGER */
+    const hamburger = document.getElementById('hamburger');
+    const drawer = document.getElementById('mobileDrawer');
+    let drawerOpen = false;
+    function closeDrawer() {
+      drawerOpen = false;
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      drawer.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    hamburger.addEventListener('click', () => {
+      drawerOpen = !drawerOpen;
+      hamburger.classList.toggle('open', drawerOpen);
+      hamburger.setAttribute('aria-expanded', String(drawerOpen));
+      drawer.classList.toggle('open', drawerOpen);
+      document.body.style.overflow = drawerOpen ? 'hidden' : '';
+    });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
+
+    /* SCROLL REVEAL */
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -40px 0px', threshold: 0.05 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+    /* FAQ */
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+
+    /* SMOOTH ANCHOR */
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const t = document.querySelector(a.getAttribute('href'));
+        if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Whitewater Rafting Nepal 2026 | Beyond Summit Expeditions</title>
+  <meta name="description" content="Nepal's best whitewater rafting. The Trishuli, Bhote Koshi, Sun Koshi and Kali Gandaki rivers — from half-day thrills to 10-day wilderness expeditions. Expert guides, top safety standards.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --cream:#faf7f2;--cream-dark:#f2ede4;--parchment:#ede8de;
+      --amber:#b8651a;--amber-light:#d4812a;--amber-pale:#f0c080;
+      --charcoal:#1c1814;--stone:#3d3530;--muted:#7a6e65;
+      --border:rgba(60,45,30,0.1);--border-strong:rgba(60,45,30,0.18);
+      /* river accent — deep teal */
+      --river:#1a5c6b;--river-light:#2a7a8c;--river-pale:rgba(26,92,107,0.08);
+      --serif:"Playfair Display",Georgia,serif;
+      --sans:"DM Sans",system-ui,sans-serif;
+      --mono:"DM Mono",monospace;
+      --ease:cubic-bezier(0.22,1,0.36,1);
+      --shadow-sm:0 2px 12px rgba(60,40,20,0.08);
+      --shadow-md:0 8px 32px rgba(60,40,20,0.12);
+      --shadow-lg:0 20px 60px rgba(60,40,20,0.18)
+    }
+    html{scroll-behavior:smooth;font-size:16px}
+    body{font-family:var(--sans);background:var(--cream);color:var(--charcoal);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}ul{list-style:none}img{display:block}
+
+    /* ═══ NAV ═══ */
+    nav{position:fixed;top:0;left:0;right:0;z-index:800;display:flex;align-items:center;justify-content:space-between;padding:1.5rem 4rem;transition:all 0.5s var(--ease);background:transparent}
+    nav.scrolled{background:rgba(250,247,242,0.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:1rem 4rem;box-shadow:var(--shadow-sm)}
+    .nav-logo{display:flex;align-items:center;gap:0.75rem}
+    .nav-logo-icon{width:30px;height:30px}
+    .nav-logo-text{font-family:var(--serif);font-size:1.4rem;font-weight:700;color:var(--cream);letter-spacing:0.01em;transition:color 0.4s}
+    nav.scrolled .nav-logo-text{color:var(--charcoal)}
+    .nav-logo-text em{display:block;font-style:normal;font-family:var(--mono);font-size:0.52rem;letter-spacing:0.4em;text-transform:uppercase;color:rgba(250,247,242,0.7);margin-top:2px;transition:color 0.4s}
+    nav.scrolled .nav-logo-text em{color:var(--amber)}
+    .nav-links{display:flex;align-items:center;gap:2rem}
+    .nav-links a{font-size:0.875rem;font-weight:400;color:rgba(250,247,242,0.85);transition:color 0.3s;letter-spacing:0.02em}
+    nav.scrolled .nav-links a{color:var(--stone)}
+    .nav-links a:hover{color:var(--amber-light)!important}
+    .nav-cta{background:var(--amber);color:white!important;padding:0.6rem 1.5rem;font-size:0.82rem!important;font-weight:500!important;letter-spacing:0.04em!important;transition:background 0.3s,transform 0.3s!important}
+    .nav-cta:hover{background:var(--amber-light)!important;transform:translateY(-1px)}
+    .nav-hamburger{display:none;flex-direction:column;justify-content:center;width:44px;height:44px;gap:5px;cursor:pointer;background:rgba(250,247,242,0.12);border:1px solid rgba(250,247,242,0.25);border-radius:6px;padding:0 12px;transition:all 0.3s}
+    nav.scrolled .nav-hamburger{background:rgba(60,40,20,0.06);border-color:var(--border)}
+    .nav-hamburger span{display:block;width:100%;height:1.5px;background:white;transition:all 0.4s var(--ease)}
+    nav.scrolled .nav-hamburger span{background:var(--charcoal)}
+    .nav-hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+    .nav-hamburger.open span:nth-child(2){opacity:0}
+    .nav-hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+    /* ═══ MOBILE DRAWER ═══ */
+    .mobile-drawer{position:fixed;inset:0;z-index:700;background:var(--cream);display:flex;flex-direction:column;padding:6rem 2rem 2rem;transform:translateX(100%);transition:transform 0.5s var(--ease)}
+    .mobile-drawer.open{transform:none}
+    .mobile-drawer-link{display:flex;align-items:center;justify-content:space-between;padding:1.25rem 0;border-bottom:1px solid var(--border);font-family:var(--serif);font-size:1.8rem;color:var(--charcoal);opacity:0;transform:translateX(20px);transition:opacity 0.4s,transform 0.4s,color 0.3s}
+    .mobile-drawer.open .mobile-drawer-link:nth-child(1){opacity:1;transform:none;transition-delay:0.06s}
+    .mobile-drawer.open .mobile-drawer-link:nth-child(2){opacity:1;transform:none;transition-delay:0.1s}
+    .mobile-drawer.open .mobile-drawer-link:nth-child(3){opacity:1;transform:none;transition-delay:0.14s}
+    .mobile-drawer.open .mobile-drawer-link:nth-child(4){opacity:1;transform:none;transition-delay:0.18s}
+    .mobile-drawer.open .mobile-drawer-link:nth-child(5){opacity:1;transform:none;transition-delay:0.22s}
+    .mobile-drawer-link:hover,.mobile-drawer-link.highlight{color:var(--amber)}
+
+    /* ═══ HERO ═══ */
+    .hero{position:relative;width:100%;height:100svh;min-height:650px;overflow:hidden}
+    .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(0.52) saturate(1.15);transform:scale(1.06);animation:heroZoom 14s var(--ease) forwards}
+    @keyframes heroZoom{to{transform:scale(1)}}
+    .hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,20,28,0.92) 0%,rgba(10,20,28,0.3) 40%,transparent 68%),linear-gradient(to right,rgba(10,20,28,0.7) 0%,transparent 58%)}
+    /* water ripple pattern */
+    .hero-pattern{position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 38px,rgba(42,122,140,0.04) 38px,rgba(42,122,140,0.04) 40px);pointer-events:none}
+    .hero-content{position:absolute;bottom:0;left:0;right:0;padding:0 5rem 5rem;z-index:2}
+    .hero-eyebrow{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.35em;text-transform:uppercase;color:rgba(160,220,235,0.75);margin-bottom:1rem;display:flex;align-items:center;gap:0.75rem;opacity:0;animation:riseUp 0.8s 0.2s var(--ease) forwards;transform:translateY(20px)}
+    .hero-eyebrow-dot{width:6px;height:6px;border-radius:50%;background:rgba(160,220,235,0.75)}
+    .hero-title{font-family:var(--serif);font-size:clamp(3.5rem,9vw,8.5rem);font-weight:400;line-height:0.88;color:white;margin-bottom:1.25rem;opacity:0;animation:riseUp 1s 0.35s var(--ease) forwards;transform:translateY(24px)}
+    .hero-title em{font-style:italic;color:rgba(160,220,235,0.85);display:block}
+    .hero-subtitle{font-family:var(--mono);font-size:0.72rem;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:2.5rem;opacity:0;animation:riseUp 0.9s 0.5s var(--ease) forwards;transform:translateY(20px)}
+    .hero-actions{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;opacity:0;animation:riseUp 0.9s 0.65s var(--ease) forwards;transform:translateY(20px)}
+    .btn-primary{display:inline-flex;align-items:center;gap:0.6rem;background:var(--amber);color:white;padding:0.9rem 2.25rem;font-size:0.88rem;font-weight:500;letter-spacing:0.04em;transition:background 0.3s,transform 0.3s,gap 0.3s}
+    .btn-primary:hover{background:var(--amber-light);transform:translateX(3px);gap:0.9rem}
+    .btn-ghost{font-size:0.82rem;color:rgba(255,255,255,0.6);display:flex;align-items:center;gap:0.5rem;border-bottom:1px solid rgba(255,255,255,0.22);padding-bottom:2px;background:none;border-top:none;border-left:none;border-right:none;cursor:pointer;transition:color 0.3s,border-color 0.3s}
+    .btn-ghost:hover{color:white;border-bottom-color:white}
+    .hero-scroll{position:absolute;bottom:2rem;right:5rem;z-index:2;font-family:var(--mono);font-size:0.5rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.28);display:flex;align-items:center;gap:0.75rem}
+    .hero-scroll::before{content:"";width:36px;height:1px;background:rgba(255,255,255,0.18)}
+    @keyframes riseUp{to{opacity:1;transform:translateY(0)}}
+
+    /* ═══ STATS ═══ */
+    .stats-strip{background:white;border-bottom:1px solid var(--border)}
+    .stats-inner{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:repeat(6,1fr)}
+    .stat-item{display:flex;flex-direction:column;align-items:center;gap:0.3rem;padding:1.6rem 0.6rem;border-right:1px solid var(--border);text-align:center;transition:background 0.3s}
+    .stat-item:last-child{border-right:none}
+    .stat-item:hover{background:rgba(26,92,107,0.03)}
+    .stat-icon{color:var(--river);margin-bottom:0.2rem}
+    .stat-num{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--river);line-height:1}
+    .stat-label{font-family:var(--mono);font-size:0.46rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted)}
+
+    /* ═══ TAB NAV ═══ */
+    .tab-nav-wrap{position:sticky;top:0;z-index:400;background:rgba(250,247,242,0.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);box-shadow:var(--shadow-sm)}
+    .tab-nav-inner{max-width:1300px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 3rem}
+    .tab-nav{display:flex;overflow-x:auto;scrollbar-width:none}
+    .tab-nav::-webkit-scrollbar{display:none}
+    .tab-btn{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);background:none;border:none;border-bottom:2px solid transparent;cursor:pointer;padding:1.1rem 1.5rem;margin-bottom:-1px;transition:color 0.3s,border-color 0.3s;white-space:nowrap}
+    .tab-btn:hover{color:var(--charcoal)}
+    .tab-btn.active{color:var(--amber);border-bottom-color:var(--amber)}
+    .tab-enquire{background:var(--amber);color:white;font-size:0.82rem;font-weight:500;padding:0.65rem 1.5rem;white-space:nowrap;flex-shrink:0;transition:background 0.3s}
+    .tab-enquire:hover{background:var(--amber-light)}
+
+    /* ═══ COMMONS ═══ */
+    .section-anchor{display:flex;align-items:center;gap:1rem;padding:0.7rem 3rem;background:var(--cream-dark);border-bottom:1px solid var(--border)}
+    .section-anchor span{font-family:var(--mono);font-size:0.52rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--amber)}
+    .section-anchor::after{content:"";flex:1;height:1px;background:var(--border)}
+    .page-section{padding:5rem 0}
+    .page-section.alt-bg{background:white}
+    .section-inner{max-width:1300px;margin:0 auto;padding:0 3rem}
+    .eyebrow{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.32em;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:0.75rem}
+    .section-title{font-family:var(--serif);font-size:clamp(2rem,4vw,3rem);font-weight:400;line-height:1;letter-spacing:-0.01em;color:var(--charcoal)}
+    .section-title em{font-style:italic;color:var(--amber)}
+
+    /* ═══ REVEAL ANIMATIONS ═══ */
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity 0.9s var(--ease),transform 0.9s var(--ease)}
+    .reveal.in{opacity:1;transform:none}
+    .reveal.d1{transition-delay:0.12s}.reveal.d2{transition-delay:0.22s}.reveal.d3{transition-delay:0.34s}.reveal.d4{transition-delay:0.46s}
+    .reveal-r{opacity:0;transform:translateX(32px);transition:opacity 0.9s var(--ease),transform 0.9s var(--ease)}
+    .reveal-r.in{opacity:1;transform:none}
+
+    /* ═══ OVERVIEW ═══ */
+    .overview-layout{display:grid;grid-template-columns:1fr 360px;gap:5rem;align-items:start;padding-top:3rem}
+    .overview-lead{font-family:var(--serif);font-size:1.15rem;font-style:italic;color:var(--stone);line-height:1.65;margin-bottom:1.4rem}
+    .overview-body p{font-size:0.9rem;line-height:1.85;color:var(--stone);margin-bottom:1rem}
+    .overview-body strong{color:var(--charcoal)}
+    .alert{padding:1.4rem;margin:1.5rem 0;border-left:3px solid var(--amber);background:rgba(184,101,26,0.06)}
+    .alert.info{border-left-color:var(--river);background:var(--river-pale)}
+    .alert-label{font-family:var(--mono);font-size:0.5rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--amber);margin-bottom:0.45rem;display:flex;align-items:center;gap:0.45rem}
+    .alert.info .alert-label{color:var(--river)}
+    .alert p{font-size:0.84rem;line-height:1.7;color:var(--stone);margin:0}
+
+    /* mosaic images */
+    .overview-mosaic{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin:2rem 0}
+    .overview-mosaic-tall{grid-row:span 2;overflow:hidden;border-radius:110px 110px 0 0}
+    .overview-mosaic-tall img{width:100%;height:100%;min-height:380px;object-fit:cover;transition:transform 1.4s var(--ease),filter 0.5s;filter:brightness(0.85) saturate(1.1)}
+    .overview-mosaic-tall:hover img{transform:scale(1.06);filter:brightness(0.95) saturate(1.2)}
+    .overview-mosaic-sq{overflow:hidden}
+    .overview-mosaic-sq img{width:100%;height:170px;object-fit:cover;transition:transform 1.4s var(--ease),filter 0.5s;filter:brightness(0.85) saturate(1.1)}
+    .overview-mosaic-sq:hover img{transform:scale(1.06)}
+    .img-caption{font-family:var(--mono);font-size:0.5rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-top:0.65rem;display:flex;align-items:center;gap:0.5rem}
+    .img-caption::before{content:"";width:18px;height:1px;background:var(--amber)}
+
+    /* facts grid */
+    .facts-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-top:1.5rem}
+    .fact-item{background:white;border:1px solid var(--border);padding:0.8rem;transition:border-color 0.3s}
+    .fact-item:hover{border-color:rgba(26,92,107,0.3)}
+    .fact-label{font-family:var(--mono);font-size:0.44rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-bottom:0.2rem}
+    .fact-val{font-family:var(--serif);font-size:0.9rem;color:var(--charcoal)}
+
+    /* sidebar */
+    .sidebar{position:sticky;top:108px}
+    .sidebar-card{background:white;border:1px solid var(--border);padding:1.75rem;margin-bottom:1.25rem;box-shadow:var(--shadow-sm)}
+    .sidebar-card h3{font-family:var(--serif);font-size:1.15rem;font-weight:400;color:var(--charcoal);margin-bottom:1.1rem;padding-bottom:0.75rem;border-bottom:1px solid var(--border)}
+    .sidebar-row{display:flex;align-items:center;gap:0.8rem;padding:0.65rem 0;border-bottom:1px solid var(--border)}
+    .sidebar-row:last-child{border-bottom:none}
+    .sidebar-icon{color:var(--amber);flex-shrink:0}
+    .sidebar-label{font-family:var(--mono);font-size:0.43rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted)}
+    .sidebar-val{font-size:0.86rem;font-weight:500;color:var(--charcoal)}
+    .btn-book-full{display:block;background:var(--charcoal);color:white;text-align:center;padding:0.9rem;font-size:0.85rem;font-weight:500;margin-top:1rem;transition:background 0.3s,transform 0.3s}
+    .btn-book-full:hover{background:var(--stone);transform:translateY(-2px)}
+    .btn-pdf{display:block;text-align:center;padding:0.7rem;font-family:var(--mono);font-size:0.5rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);margin-top:0.6rem;background:none;width:100%;cursor:pointer;transition:all 0.3s}
+    .btn-pdf:hover{border-color:var(--amber);color:var(--amber)}
+
+    /* ═══ RIVER CARDS ═══ */
+    .rivers-section{padding:5rem 0;background:white}
+    .rivers-intro{font-family:var(--serif);font-size:1.05rem;font-style:italic;color:var(--stone);line-height:1.7;max-width:680px;margin:1rem 0 3rem}
+    .rivers-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+    @media(min-width:1024px){.rivers-grid{grid-template-columns:repeat(2,1fr)}}
+
+    .river-card{background:var(--cream);border:1px solid var(--border);overflow:hidden;transition:transform 0.5s var(--ease),box-shadow 0.5s var(--ease)}
+    .river-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+    .river-card-img{position:relative;aspect-ratio:16/9;overflow:hidden}
+    .river-card-img img{width:100%;height:100%;object-fit:cover;filter:brightness(0.75) saturate(1.15);transition:transform 1.4s var(--ease),filter 0.5s}
+    .river-card:hover .river-card-img img{transform:scale(1.07);filter:brightness(0.88) saturate(1.2)}
+    .river-grade-badge{position:absolute;top:1rem;left:1rem;font-family:var(--mono);font-size:0.5rem;letter-spacing:0.18em;text-transform:uppercase;padding:0.3rem 0.8rem;font-weight:700}
+    .grade-ii{background:rgba(39,174,96,0.9);color:white}
+    .grade-iii{background:rgba(241,196,15,0.92);color:rgba(0,0,0,0.8)}
+    .grade-iv{background:rgba(230,126,34,0.92);color:white}
+    .grade-v{background:rgba(192,57,43,0.92);color:white}
+    .river-duration{position:absolute;bottom:1rem;right:1rem;font-family:var(--mono);font-size:0.5rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.75);background:rgba(15,10,5,0.45);backdrop-filter:blur(6px);padding:0.25rem 0.65rem}
+    .river-card-body{padding:1.75rem}
+    .river-name{font-family:var(--serif);font-size:1.5rem;font-weight:400;color:var(--charcoal);margin-bottom:0.3rem;transition:color 0.3s}
+    .river-card:hover .river-name{color:var(--river)}
+    .river-subtitle{font-family:var(--mono);font-size:0.5rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--amber);margin-bottom:0.875rem}
+    .river-desc{font-size:0.84rem;color:var(--stone);line-height:1.75;margin-bottom:1.25rem}
+    .river-specs{display:grid;grid-template-columns:repeat(3,1fr);gap:0.5rem;padding-top:1rem;border-top:1px solid var(--border)}
+    .river-spec-label{font-family:var(--mono);font-size:0.42rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:0.2rem}
+    .river-spec-val{font-size:0.82rem;font-weight:500;color:var(--charcoal)}
+    .river-tags{display:flex;flex-wrap:wrap;gap:0.35rem;margin-bottom:1rem}
+    .rtag{font-family:var(--mono);font-size:0.44rem;letter-spacing:0.12em;text-transform:uppercase;background:var(--cream-dark);color:var(--muted);border:1px solid var(--border);padding:0.16rem 0.55rem}
+    .rtag.blue{background:var(--river-pale);color:var(--river);border-color:rgba(26,92,107,0.2)}
+    .rtag.gold{background:rgba(184,101,26,0.1);color:var(--amber);border-color:rgba(184,101,26,0.2)}
+    .rtag.red{background:rgba(192,57,43,0.08);color:#c03920;border-color:rgba(192,57,43,0.2)}
+    .river-cta{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.78rem;font-weight:500;color:var(--amber);border-bottom:1px solid rgba(184,101,26,0.3);padding-bottom:2px;transition:gap 0.3s,border-color 0.3s}
+    .river-card:hover .river-cta{gap:0.8rem;border-color:var(--amber)}
+
+    /* ═══ DATES BAND ═══ */
+    .dates-band{background:var(--charcoal);padding:3rem 0;margin:3rem 0}
+    .dates-label{font-family:var(--mono);font-size:0.56rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--amber-pale);margin-bottom:1.5rem}
+    .dates-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+    .date-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);padding:1.5rem;transition:background 0.3s,border-color 0.3s}
+    .date-card:hover{background:rgba(26,92,107,0.15);border-color:rgba(42,122,140,0.4)}
+    .date-season{font-family:var(--mono);font-size:0.46rem;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.36);margin-bottom:0.4rem}
+    .date-range{font-family:var(--serif);font-size:1.1rem;color:white;margin-bottom:0.35rem}
+    .date-spots{font-family:var(--mono);font-size:0.5rem;letter-spacing:0.1em;color:rgba(160,220,235,0.75)}
+    .date-price{font-size:0.8rem;color:rgba(255,255,255,0.5);margin-top:0.3rem}
+
+    /* ═══ DETAILS / TABS ═══ */
+    .detail-tabs{display:flex;border-bottom:1px solid var(--border);margin-bottom:2.5rem;overflow-x:auto;scrollbar-width:none}
+    .detail-tabs::-webkit-scrollbar{display:none}
+    .dtab{display:flex;flex-direction:column;align-items:center;gap:0.3rem;padding:1.2rem 2rem;cursor:pointer;border:none;border-bottom:2px solid transparent;margin-bottom:-1px;background:none;transition:all 0.3s;white-space:nowrap}
+    .dtab svg{color:var(--muted);transition:color 0.3s}
+    .dtab span{font-family:var(--mono);font-size:0.52rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);transition:color 0.3s}
+    .dtab.active{border-bottom-color:var(--amber)}
+    .dtab.active svg,.dtab.active span{color:var(--amber)}
+    .dtab:hover svg,.dtab:hover span{color:var(--charcoal)}
+    .dpanel{display:none}.dpanel.active{display:block}
+
+    /* included */
+    .inc-cols{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+    .inc-col h3{font-family:var(--serif);font-size:1.05rem;font-weight:400;color:var(--charcoal);padding-bottom:0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.875rem;display:flex;align-items:center;gap:0.5rem}
+    .inc-dot{width:8px;height:8px;border-radius:50%;background:var(--amber);flex-shrink:0}
+    .inc-dot.no{background:#c04040}
+    .inc-col li{font-size:0.84rem;color:var(--stone);padding:0.38rem 0 0.38rem 1.3rem;position:relative;border-bottom:1px solid var(--border);line-height:1.6}
+    .inc-col li:last-child{border-bottom:none}
+    .inc-col li::before{content:"✓";position:absolute;left:0;color:var(--amber);font-size:0.7rem;font-weight:700;top:0.45rem}
+    .inc-col.not li::before{content:"✗";color:#c04040}
+
+    /* grade comparison table */
+    .grade-table{width:100%;border-collapse:collapse;margin-top:1.5rem}
+    .grade-table th{text-align:left;font-family:var(--mono);font-size:0.48rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--amber);padding:0.7rem 1rem;border-bottom:2px solid rgba(184,101,26,0.25);background:var(--cream-dark)}
+    .grade-table td{padding:0.8rem 1rem;border-bottom:1px solid var(--border);font-size:0.82rem;color:var(--stone)}
+    .grade-table td:first-child{color:var(--charcoal);font-weight:600}
+    .grade-table tr:nth-child(even) td{background:var(--cream)}
+    .grade-pill{font-family:var(--mono);font-size:0.44rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.18rem 0.55rem;border:1px solid;display:inline-block}
+    .g-ii{background:rgba(39,174,96,0.1);color:#1e7e44;border-color:rgba(39,174,96,0.3)}
+    .g-iii{background:rgba(241,196,15,0.1);color:#9a7d00;border-color:rgba(241,196,15,0.4)}
+    .g-iv{background:rgba(230,126,34,0.1);color:#b05a10;border-color:rgba(230,126,34,0.3)}
+    .g-v{background:rgba(192,57,43,0.1);color:#c03920;border-color:rgba(192,57,43,0.3)}
+
+    /* gear cards */
+    .gear-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:2rem}
+    .gcol{background:white;border:1px solid var(--border);padding:1.4rem}
+    .gcol h3{font-family:var(--mono);font-size:0.54rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--amber);border-bottom:1px solid var(--border);padding-bottom:0.7rem;margin-bottom:0.875rem}
+    .gcol li{font-size:0.78rem;color:var(--stone);padding:0.3rem 0 0.3rem 1rem;position:relative;border-bottom:1px solid var(--border);line-height:1.5}
+    .gcol li:last-child{border-bottom:none}
+    .gcol li::before{content:"·";position:absolute;left:0;color:var(--river);font-size:1rem;line-height:1.1}
+    .gcol li strong{color:var(--charcoal)}
+
+    /* safety cards */
+    .pcards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin:2.5rem 0}
+    .pcard{background:white;border:1px solid var(--border);padding:1.6rem;transition:border-color 0.3s,box-shadow 0.3s}
+    .pcard:hover{border-color:rgba(26,92,107,0.3);box-shadow:var(--shadow-sm)}
+    .pcard-icon{color:var(--amber);margin-bottom:0.75rem}
+    .pcard h3{font-family:var(--serif);font-size:1rem;font-weight:400;color:var(--charcoal);margin-bottom:0.65rem}
+    .pcard p{font-size:0.82rem;line-height:1.7;color:var(--stone);margin-bottom:0.4rem}
+    .pcard li{font-size:0.8rem;color:var(--stone);padding:0.26rem 0 0.26rem 1.1rem;position:relative;border-bottom:1px solid var(--border);line-height:1.5}
+    .pcard li:last-child{border-bottom:none}
+    .pcard li::before{content:"▸";position:absolute;left:0;color:var(--river);font-size:0.58rem;top:0.34rem}
+
+    /* cost table */
+    .cost-table{width:100%;border-collapse:collapse}
+    .cost-table th{text-align:left;font-family:var(--mono);font-size:0.48rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--amber);padding:0.7rem 1rem;border-bottom:2px solid rgba(184,101,26,0.25);background:white}
+    .cost-table td{padding:0.82rem 1rem;border-bottom:1px solid var(--border);font-size:0.84rem;color:var(--stone);vertical-align:top}
+    .cost-table tr:nth-child(even) td{background:var(--cream)}
+    .cost-table tr.total td{font-family:var(--serif);font-size:1rem;font-weight:500;color:var(--charcoal);background:var(--parchment);border-color:rgba(184,101,26,0.25)}
+    .cost-table td:first-child{color:var(--charcoal);font-weight:500}
+
+    /* ═══ TIPS BAND ═══ */
+    .tips-band{background:white;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:4rem 0}
+    .tips-inner{max-width:1300px;margin:0 auto;padding:0 3rem}
+    .tips-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:2.5rem}
+    .tip-item{text-align:center;padding:1.75rem 1.1rem;border:1px solid var(--border);transition:border-color 0.3s,box-shadow 0.3s}
+    .tip-item:hover{border-color:rgba(26,92,107,0.3);box-shadow:var(--shadow-sm)}
+    .tip-icon{width:46px;height:46px;margin:0 auto 0.875rem;background:var(--river-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--river)}
+    .tip-title{font-family:var(--serif);font-size:0.95rem;font-weight:400;color:var(--charcoal);margin-bottom:0.35rem}
+    .tip-desc{font-size:0.76rem;color:var(--muted);line-height:1.65}
+
+    /* ═══ QUOTE BAND ═══ */
+    .quote-band{position:relative;overflow:hidden;min-height:44vh;display:flex;align-items:center;justify-content:center}
+    .quote-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(0.28) saturate(0.6)}
+    .quote-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(5,18,25,0.8),rgba(5,18,25,0.45),rgba(5,18,25,0.7))}
+    .quote-content{position:relative;z-index:2;text-align:center;padding:4rem 3rem;max-width:820px}
+    .qmark{font-family:var(--serif);font-size:4rem;color:rgba(160,220,235,0.25);line-height:0;display:block;margin-bottom:1.75rem}
+    .qtext{font-family:var(--serif);font-size:clamp(1.35rem,2.5vw,2.1rem);font-style:italic;color:white;line-height:1.45;margin-bottom:1.65rem}
+    .qtext em{color:rgba(160,220,235,0.85);font-style:normal}
+    .qattr{font-family:var(--mono);font-size:0.54rem;letter-spacing:0.24em;text-transform:uppercase;color:rgba(255,255,255,0.3);display:flex;align-items:center;justify-content:center;gap:1rem}
+    .qattr::before,.qattr::after{content:"";width:22px;height:1px;background:rgba(255,255,255,0.15)}
+
+    /* ═══ RELATED ═══ */
+    .related-section{background:var(--charcoal);padding:6rem 0}
+    .related-inner{max-width:1300px;margin:0 auto;padding:0 3rem}
+    .related-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:2.75rem}
+    .related-eyebrow{font-family:var(--mono);font-size:0.54rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--amber-pale);display:block;margin-bottom:0.5rem}
+    .related-title{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.5rem);font-weight:400;color:white}
+    .related-title em{font-style:italic;color:var(--amber-pale)}
+    .related-view-all{font-family:var(--mono);font-size:0.52rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.38);display:flex;align-items:center;gap:0.45rem;border-bottom:1px solid rgba(255,255,255,0.12);padding-bottom:2px;transition:color 0.3s,border-color 0.3s}
+    .related-view-all:hover{color:var(--amber-pale);border-bottom-color:var(--amber-pale)}
+    .related-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+    .rcard{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);overflow:hidden;transition:border-color 0.4s,transform 0.5s var(--ease),box-shadow 0.5s}
+    .rcard:hover{border-color:rgba(184,101,26,0.4);transform:translateY(-6px);box-shadow:0 24px 48px rgba(0,0,0,0.3)}
+    .rcard-img-wrap{overflow:hidden;position:relative}
+    .rcard-img{width:100%;height:200px;object-fit:cover;filter:brightness(0.7) saturate(1.05);transition:transform 1.4s var(--ease),filter 0.5s;display:block}
+    .rcard:hover .rcard-img{transform:scale(1.07);filter:brightness(0.85) saturate(1.15)}
+    .rcard-badge{position:absolute;top:0.875rem;left:0.875rem;font-family:var(--mono);font-size:0.44rem;letter-spacing:0.16em;text-transform:uppercase;background:rgba(250,247,242,0.9);color:var(--stone);padding:0.22rem 0.6rem;backdrop-filter:blur(8px)}
+    .rcard-body{padding:1.4rem}
+    .rcard-num{font-family:var(--mono);font-size:0.46rem;letter-spacing:0.16em;text-transform:uppercase;color:rgba(240,192,128,0.55);margin-bottom:0.3rem}
+    .rcard-name{font-family:var(--serif);font-size:1.3rem;font-weight:400;color:white;margin-bottom:0.35rem}
+    .rcard-desc{font-size:0.76rem;color:rgba(255,255,255,0.4);line-height:1.6;margin-bottom:0.875rem}
+    .rcard-link{font-size:0.74rem;font-weight:500;color:var(--amber-pale);display:flex;align-items:center;gap:0.4rem;transition:gap 0.3s}
+    .rcard:hover .rcard-link{gap:0.7rem}
+
+    /* ═══ CONTACT STRIP ═══ */
+    .contact-strip{background:var(--cream-dark);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+    .contact-inner{max-width:1300px;margin:0 auto;padding:0 3rem;display:grid;grid-template-columns:repeat(3,1fr)}
+    .contact-item{display:flex;align-items:center;gap:1.1rem;padding:2.1rem 2rem;border-right:1px solid var(--border);transition:background 0.3s}
+    .contact-item:first-child{padding-left:0}
+    .contact-item:last-child{border-right:none}
+    .contact-item:hover{background:rgba(184,101,26,0.04)}
+    .contact-icon{width:40px;height:40px;flex-shrink:0;background:white;border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--amber)}
+    .contact-label{font-family:var(--mono);font-size:0.46rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-bottom:0.22rem}
+    .contact-value{font-size:0.86rem;font-weight:500;color:var(--charcoal)}
+    .contact-value a:hover{color:var(--amber)}
+
+    /* ═══ FOOTER ═══ */
+    footer{background:var(--charcoal);border-top:1px solid rgba(255,255,255,0.05);padding:5rem 4rem 2.5rem}
+    .footer-grid{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:4rem;margin-bottom:4rem;padding-bottom:4rem;border-bottom:1px solid rgba(255,255,255,0.06)}
+    .footer-logo-text{font-family:var(--serif);font-size:1.3rem;font-weight:700;color:white}
+    .footer-logo-text em{display:block;font-style:normal;font-family:var(--mono);font-size:0.5rem;letter-spacing:0.35em;text-transform:uppercase;color:var(--amber);margin-top:3px}
+    .footer-desc{font-size:0.8rem;color:rgba(255,255,255,0.38);line-height:1.75;margin-top:1rem}
+    .footer-contact{margin-top:1.5rem;display:flex;flex-direction:column;gap:0.5rem}
+    .footer-contact a{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.06em;color:rgba(255,255,255,0.34);display:flex;align-items:center;gap:0.5rem;transition:color 0.3s}
+    .footer-contact a:hover{color:var(--amber-pale)}
+    .footer-col h4{font-family:var(--mono);font-size:0.52rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--amber);margin-bottom:1.25rem}
+    .footer-col ul{display:flex;flex-direction:column;gap:0.6rem}
+    .footer-col a{font-size:0.8rem;color:rgba(255,255,255,0.38);transition:color 0.3s,padding-left 0.3s}
+    .footer-col a:hover{color:rgba(255,255,255,0.7);padding-left:4px}
+    .footer-bottom{max-width:1300px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+    .footer-bottom p{font-family:var(--mono);font-size:0.55rem;letter-spacing:0.1em;color:rgba(255,255,255,0.18)}
+    .footer-socials{display:flex;gap:0.75rem}
+    .social-ico{width:32px;height:32px;border-radius:50%;border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.28);transition:all 0.3s}
+    .social-ico:hover{border-color:var(--amber);color:var(--amber)}
+
+    /* ═══ WA FLOAT ═══ */
+    .wa-float{position:fixed;bottom:2rem;right:2rem;z-index:500;width:52px;height:52px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;color:white;box-shadow:0 6px 20px rgba(37,211,102,0.4);transition:transform 0.4s var(--ease)}
+    .wa-float:hover{transform:scale(1.1)}
+
+    /* ═══ RESPONSIVE ═══ */
+    @media(max-width:1100px){
+      .rivers-grid{grid-template-columns:1fr}
+      .overview-layout{grid-template-columns:1fr;gap:3rem}
+      .sidebar{position:static}
+      .related-cards{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:1024px){
+      nav{padding:1.25rem 2rem}nav.scrolled{padding:0.875rem 2rem}
+      .nav-links{display:none}.nav-hamburger{display:flex}
+      .hero-content{padding:0 2.5rem 4rem}
+      .section-inner,.related-inner,.tips-inner{padding:0 2rem}
+      .tab-nav-inner{padding:0 1rem}
+      .dates-grid{grid-template-columns:1fr 1fr}
+      .tips-grid{grid-template-columns:1fr 1fr}
+      .pcards{grid-template-columns:1fr 1fr}
+      .gear-cols{grid-template-columns:1fr 1fr}
+      .inc-cols{grid-template-columns:1fr}
+      .contact-inner{grid-template-columns:1fr;padding:0 2rem}
+      .contact-item{border-right:none;border-bottom:1px solid var(--border);padding:1.5rem 0}
+      .contact-item:last-child{border-bottom:none}
+      footer{padding:4rem 2rem 2rem}
+      .footer-grid{grid-template-columns:1fr 1fr;gap:2.5rem}
+    }
+    @media(max-width:768px){
+      .hero-content{padding:0 1.5rem 3rem}.hero-title{font-size:clamp(3rem,13vw,5rem)}
+      .hero-scroll{display:none}
+      .stats-inner{grid-template-columns:repeat(3,1fr)}
+      .rivers-grid{grid-template-columns:1fr}
+      .dates-grid{grid-template-columns:1fr}
+      .tips-grid{grid-template-columns:1fr 1fr}
+      .pcards{grid-template-columns:1fr}
+      .gear-cols{grid-template-columns:1fr}
+      .related-cards{grid-template-columns:1fr}
+      .related-header{flex-direction:column;align-items:flex-start;gap:1rem}
+      footer{padding:3.5rem 1.5rem 1.5rem}
+      .footer-grid{grid-template-columns:1fr;gap:2rem}
+      .footer-bottom{flex-direction:column;gap:1rem;text-align:center}
+    }
+    @media(max-width:480px){
+      .stats-inner{grid-template-columns:repeat(2,1fr)}
+      .tips-grid{grid-template-columns:1fr}
+      .facts-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/9779811157421" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- Mobile Drawer -->
+<div class="mobile-drawer" id="mobileDrawer">
+  <a href="index.html" class="mobile-drawer-link" onclick="closeDrawer()">Home <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+  <a href="index.html#expeditions" class="mobile-drawer-link" onclick="closeDrawer()">Expeditions <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+  <a href="index.html#trekking" class="mobile-drawer-link" onclick="closeDrawer()">Trekking <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+  <a href="index.html#activities" class="mobile-drawer-link" onclick="closeDrawer()">Outdoor Activities <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+  <a href="contact.html" class="mobile-drawer-link highlight" onclick="closeDrawer()">Book Your Ascent &rarr;</a>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">
+    <svg class="nav-logo-icon" viewBox="0 0 40 40" fill="none">
+      <path d="M20 4 L4 36 L36 36 Z" stroke="rgba(240,192,128,0.8)" stroke-width="1.2" fill="none"/>
+      <path d="M20 4 L12 36 L20 30 Z" fill="rgba(240,192,128,0.25)"/>
+      <circle cx="20" cy="4" r="1.8" fill="rgba(240,192,128,0.9)"/>
+    </svg>
+    <div class="nav-logo-text">BEYOND SUMMIT<em>Expeditions &middot; Nepal</em></div>
+  </a>
+  <div class="nav-links">
+    <a href="index.html#expeditions">Expeditions</a>
+    <a href="index.html#trekking">Trekking</a>
+    <a href="index.html#eightthousanders">8000ers</a>
+    <a href="guides.html">Guides</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html" class="nav-cta">Book Now &rarr;</a>
+  </div>
+  <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ══════════════════════════════════════
+     HERO
+══════════════════════════════════════ -->
+<section class="hero">
+  <img class="hero-bg"
+    src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=1800&auto=format&fit=crop"
+    alt="Whitewater rafting on a Himalayan river" loading="eager">
+  <div class="hero-overlay"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span class="hero-eyebrow-dot"></span>
+      Nepal &middot; Himalayan Rivers &middot; Grade II–V Whitewater
+    </div>
+    <h1 class="hero-title">White<em>water</em></h1>
+    <p class="hero-subtitle">Trishuli &middot; Bhote Koshi &middot; Sun Koshi &middot; Kali Gandaki &middot; Seti</p>
+    <div class="hero-actions">
+      <a href="contact.html" class="btn-primary">Book a River <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <button class="btn-ghost" onclick="scrollToSec('rivers',document.querySelector('[onclick*=rivers]'))">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        View All Rivers
+      </button>
+    </div>
+  </div>
+  <div class="hero-scroll">Scroll to Explore</div>
+</section>
+
+<!-- ══════════════════════════════════════
+     STATS STRIP
+══════════════════════════════════════ -->
+<div class="stats-strip">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <div class="stat-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12c0-4.97 4-9 9-9s9 4.03 9 9"/><path d="M3 12c1.5 2 3 3 5 3s4-2 6-2 4 1 5 3"/></svg></div>
+      <div class="stat-num">5</div><div class="stat-label">Major Rivers</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+      <div class="stat-num">II–V</div><div class="stat-label">Grade Range</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+      <div class="stat-num">1–10</div><div class="stat-label">Days Duration</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+      <div class="stat-num">All</div><div class="stat-label">Levels Welcome</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+      <div class="stat-num">Sep–Jun</div><div class="stat-label">Season</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <div class="stat-num">Nepal</div><div class="stat-label">Country</div>
+    </div>
+  </div>
+</div>
+
+<!-- TAB NAV -->
+<div class="tab-nav-wrap">
+  <div class="tab-nav-inner">
+    <nav class="tab-nav">
+      <button class="tab-btn active" onclick="scrollToSec('overview',this)">Overview</button>
+      <button class="tab-btn" onclick="scrollToSec('rivers',this)">Rivers</button>
+      <button class="tab-btn" onclick="scrollToSec('details',this)">Details</button>
+      <button class="tab-btn" onclick="scrollToSec('practical',this)">Practical Info</button>
+    </nav>
+    <a href="contact.html" class="tab-enquire">Book Now</a>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     OVERVIEW
+══════════════════════════════════════ -->
+<div id="overview" class="page-section">
+  <div class="section-anchor"><span>Overview</span></div>
+  <div class="section-inner">
+    <div class="overview-layout">
+
+      <!-- LEFT: text + mosaic -->
+      <div>
+        <span class="eyebrow reveal">About Rafting in Nepal</span>
+        <h2 class="section-title reveal d1">Nepal&rsquo;s Rivers Are<br><em>World-Class</em></h2>
+        <p class="overview-lead reveal d2">Himalayan snowmelt carved some of the planet's most dramatic gorges. Now they offer whitewater experiences you simply cannot find anywhere else on earth.</p>
+
+        <div class="overview-mosaic reveal d2">
+          <div class="overview-mosaic-tall">
+            <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=700&auto=format&fit=crop" alt="Rafting Nepal gorge">
+          </div>
+          <div style="display:flex;flex-direction:column;gap:0.75rem">
+            <div class="overview-mosaic-sq">
+              <img src="https://images.unsplash.com/photo-1530866495561-507c9faab2ed?q=80&w=700&auto=format&fit=crop" alt="Nepal river camp">
+            </div>
+            <div class="overview-mosaic-sq">
+              <img src="https://images.unsplash.com/photo-1555993539-1732b0258235?q=80&w=700&auto=format&fit=crop" alt="Himalayan landscape from river">
+            </div>
+          </div>
+        </div>
+        <div class="img-caption">Kali Gandaki Gorge &mdash; deepest on earth, best run October through December</div>
+
+        <div class="overview-body reveal d3">
+          <p><strong>Nepal has more whitewater per square kilometre than almost any country on earth.</strong> The rivers here descend from over 8,000 metres to sea level in a matter of hundreds of kilometres — creating gradient, power, and character in the water that nothing else replicates. From the gentle, family-friendly Trishuli day trip to the demanding ten-day Sun Koshi expedition through one of Asia's last true wilderness corridors, every experience level has a river waiting.</p>
+
+          <div class="alert info">
+            <div class="alert-label">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 12c0-4.97 4-9 9-9s9 4.03 9 9"/><path d="M3 12c1.5 2 3 3 5 3s4-2 6-2 4 1 5 3"/></svg>
+              No Rafting Experience Required
+            </div>
+            <p>Our half-day and one-day Trishuli trips are open to complete beginners from age 12. Multi-day river expeditions require basic swimming ability. We provide all safety equipment, certified guides and comprehensive pre-trip briefings.</p>
+          </div>
+
+          <p>Beyond Summit's rafting guides hold <strong>internationally certified swift-water rescue qualifications</strong> and carry full first-aid kits, throw bags, and satellite communication on all multi-day expeditions. Safety is the only non-negotiable.</p>
+
+          <h3 style="font-family:var(--serif);font-size:1.25rem;font-weight:400;color:var(--charcoal);margin:2rem 0 1rem">Key Facts</h3>
+          <div class="facts-grid">
+            <div class="fact-item"><div class="fact-label">Best Rivers</div><div class="fact-val">5 world-class routes</div></div>
+            <div class="fact-item"><div class="fact-label">Duration</div><div class="fact-val">Half-day to 10 days</div></div>
+            <div class="fact-item"><div class="fact-label">Difficulty</div><div class="fact-val">Grade II to Grade V</div></div>
+            <div class="fact-item"><div class="fact-label">Min. Age</div><div class="fact-val">12 (Trishuli day trip)</div></div>
+            <div class="fact-item"><div class="fact-label">Season</div><div class="fact-val">Sep–Jun (river dependent)</div></div>
+            <div class="fact-item"><div class="fact-label">Permits</div><div class="fact-val">Handled by Beyond Summit</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar reveal-r">
+        <div class="sidebar-card">
+          <h3>Quick Facts</h3>
+          <div class="sidebar-row">
+            <div class="sidebar-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+            <div><div class="sidebar-label">Grade Range</div><div class="sidebar-val">II — V</div></div>
+          </div>
+          <div class="sidebar-row">
+            <div class="sidebar-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div><div class="sidebar-label">Duration Options</div><div class="sidebar-val">Half-day to 10 days</div></div>
+          </div>
+          <div class="sidebar-row">
+            <div class="sidebar-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+            <div><div class="sidebar-label">Min. Age</div><div class="sidebar-val">12 years (Grade II–III)</div></div>
+          </div>
+          <div class="sidebar-row">
+            <div class="sidebar-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+            <div><div class="sidebar-label">Best Season</div><div class="sidebar-val">Oct–Dec, Mar–May</div></div>
+          </div>
+          <div class="sidebar-row">
+            <div class="sidebar-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <div><div class="sidebar-label">Price From</div><div class="sidebar-val">USD 35 / person</div></div>
+          </div>
+          <div class="sidebar-row">
+            <div class="sidebar-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+            <div><div class="sidebar-label">Guides</div><div class="sidebar-val">Swift-water certified</div></div>
+          </div>
+          <a href="contact.html" class="btn-book-full">Book a River Trip &rarr;</a>
+          <button class="btn-pdf" onclick="window.print()">&#8595; Download PDF Brochure</button>
+        </div>
+
+        <!-- River image card -->
+        <div class="sidebar-card" style="background:var(--charcoal);border:none;padding:0;overflow:hidden">
+          <img src="https://images.unsplash.com/photo-1530866495561-507c9faab2ed?q=80&w=600&auto=format&fit=crop"
+            alt="Nepal river camp at sunset"
+            style="width:100%;height:180px;object-fit:cover;filter:brightness(0.7) saturate(1.1)">
+          <div style="padding:1.5rem">
+            <div style="font-family:var(--mono);font-size:0.46rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(160,220,235,0.6);margin-bottom:0.5rem">Multi-Day Expeditions</div>
+            <p style="font-family:var(--serif);font-style:italic;font-size:0.86rem;color:rgba(255,255,255,0.75);line-height:1.6;">&ldquo;Beach camps under Himalayan stars. No road access. No noise. Just river.&rdquo;</p>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+
+    <!-- DATES BAND -->
+    <div class="dates-band">
+      <div class="section-inner">
+        <div class="dates-label reveal">Upcoming Departures &mdash; 2026</div>
+        <div class="dates-grid">
+          <div class="date-card reveal"><div class="date-season">Trishuli Day Trips</div><div class="date-range">Daily Departures</div><div class="date-spots">Open year-round</div><div class="date-price">From USD 35/person</div></div>
+          <div class="date-card reveal d1"><div class="date-season">Bhote Koshi 2-Day</div><div class="date-range">Every Weekend</div><div class="date-spots">Min 4 people</div><div class="date-price">From USD 120/person</div></div>
+          <div class="date-card reveal d2"><div class="date-season">Sun Koshi Expedition</div><div class="date-range">15 Mar — 25 Mar 2026</div><div class="date-spots">4 spots remaining</div><div class="date-price">From USD 680/person</div></div>
+          <div class="date-card reveal d3"><div class="date-season">Custom Expedition</div><div class="date-range">Your Dates</div><div class="date-spots">Private groups, any river</div><div class="date-price">Price on request</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     RIVERS
+══════════════════════════════════════ -->
+<div id="rivers" class="rivers-section">
+  <div class="section-anchor"><span>Our Rivers</span></div>
+  <div class="section-inner">
+    <span class="eyebrow reveal">Choose Your River</span>
+    <h2 class="section-title reveal d1">Five <em>Legendary</em> Rivers</h2>
+    <p class="rivers-intro reveal d2">Each river has its own personality — its own rhythm, gorge character, and surrounding landscape. Pick by difficulty, duration, or the scenery you want to wake up to.</p>
+
+    <div class="rivers-grid">
+
+      <!-- TRISHULI -->
+      <div class="river-card reveal">
+        <div class="river-card-img">
+          <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=800&auto=format&fit=crop" alt="Trishuli River rafting" loading="lazy">
+          <span class="river-grade-badge grade-iii">Grade III</span>
+          <span class="river-duration">1–2 Days</span>
+        </div>
+        <div class="river-card-body">
+          <div class="river-subtitle">Nepal's Most Popular · Kathmandu to Chitwan Corridor</div>
+          <h3 class="river-name">Trishuli River</h3>
+          <p class="river-desc">The classic Nepal introduction. The Trishuli runs alongside the Prithvi Highway, making logistics smooth and the day-trip experience accessible from Kathmandu or Pokhara. The rapids — named Upset, Snob, and Ladies' Delight — are exhilarating without being intimidating. Himalayan foothills frame every bend.</p>
+          <div class="river-tags">
+            <span class="rtag blue">Beginner Friendly</span>
+            <span class="rtag gold">Day Trip from KTM</span>
+            <span class="rtag">Year-round</span>
+          </div>
+          <div class="river-specs">
+            <div><div class="river-spec-label">Length</div><div class="river-spec-val">32 km</div></div>
+            <div><div class="river-spec-label">From</div><div class="river-spec-val">USD 35</div></div>
+            <div><div class="river-spec-label">Age</div><div class="river-spec-val">12+</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BHOTE KOSHI -->
+      <div class="river-card reveal d1">
+        <div class="river-card-img">
+          <img src="https://images.unsplash.com/photo-1530866495561-507c9faab2ed?q=80&w=800&auto=format&fit=crop" alt="Bhote Koshi gorge rafting" loading="lazy">
+          <span class="river-grade-badge grade-iv">Grade IV–V</span>
+          <span class="river-duration">2 Days</span>
+        </div>
+        <div class="river-card-body">
+          <div class="river-subtitle">Nepal's Most Intense Day Run · Tibet Border Gorge</div>
+          <h3 class="river-name">Bhote Koshi</h3>
+          <p class="river-desc">Nepal's steepest commercial rafting river. The Bhote Koshi drops 37 metres per kilometre through a narrow granite gorge near the Tibet border — twice the gradient of the Colorado through the Grand Canyon. Two days, continuous Class IV–V, riverside camp. Not for the faint-hearted. Absolutely unforgettable.</p>
+          <div class="river-tags">
+            <span class="rtag red">Advanced</span>
+            <span class="rtag blue">Gorge Experience</span>
+            <span class="rtag">Oct–Dec, Mar–Jun</span>
+          </div>
+          <div class="river-specs">
+            <div><div class="river-spec-label">Length</div><div class="river-spec-val">18 km</div></div>
+            <div><div class="river-spec-label">From</div><div class="river-spec-val">USD 120</div></div>
+            <div><div class="river-spec-label">Age</div><div class="river-spec-val">18+</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SUN KOSHI -->
+      <div class="river-card reveal">
+        <div class="river-card-img">
+          <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?q=80&w=800&auto=format&fit=crop" alt="Sun Koshi wilderness river" loading="lazy">
+          <span class="river-grade-badge grade-iv">Grade IV</span>
+          <span class="river-duration">10 Days</span>
+        </div>
+        <div class="river-card-body">
+          <div class="river-subtitle">One of Asia's Greatest River Journeys · Wilderness Expedition</div>
+          <h3 class="river-name">Sun Koshi</h3>
+          <p class="river-desc">Ranked among the world's top ten river journeys. Ten days through one of Nepal's last true wilderness corridors — no roads, no villages, no noise beyond the river itself. The river passes through deep jungle gorges, white-sand beaches, and remote settlements where your raft is the only outside contact for weeks at a time.</p>
+          <div class="river-tags">
+            <span class="rtag red">Intermediate–Advanced</span>
+            <span class="rtag gold">Top 10 World Journeys</span>
+            <span class="rtag blue">Full Expedition</span>
+          </div>
+          <div class="river-specs">
+            <div><div class="river-spec-label">Length</div><div class="river-spec-val">270 km</div></div>
+            <div><div class="river-spec-label">From</div><div class="river-spec-val">USD 680</div></div>
+            <div><div class="river-spec-label">Age</div><div class="river-spec-val">16+</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- KALI GANDAKI -->
+      <div class="river-card reveal d1">
+        <div class="river-card-img">
+          <img src="https://images.unsplash.com/photo-1466187836-55b365a20bec?q=80&w=800&auto=format&fit=crop" alt="Kali Gandaki gorge" loading="lazy">
+          <span class="river-grade-badge grade-iii">Grade III–IV</span>
+          <span class="river-duration">3–4 Days</span>
+        </div>
+        <div class="river-card-body">
+          <div class="river-subtitle">World's Deepest Gorge · Annapurna &amp; Dhaulagiri Views</div>
+          <h3 class="river-name">Kali Gandaki</h3>
+          <p class="river-desc">The Kali Gandaki flows through the world's deepest river gorge — flanked by Annapurna and Dhaulagiri, both over 8,000 metres. A three-to-four-day run combining good whitewater with extraordinary landscape drama. Often combined with the Annapurna Circuit or Upper Mustang trek for a complete Nepal adventure.</p>
+          <div class="river-tags">
+            <span class="rtag blue">Spectacular Scenery</span>
+            <span class="rtag gold">Trek Combo Option</span>
+            <span class="rtag">Oct–Jun</span>
+          </div>
+          <div class="river-specs">
+            <div><div class="river-spec-label">Length</div><div class="river-spec-val">60 km</div></div>
+            <div><div class="river-spec-label">From</div><div class="river-spec-val">USD 180</div></div>
+            <div><div class="river-spec-label">Age</div><div class="river-spec-val">14+</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SETI -->
+      <div class="river-card reveal" style="grid-column:1/-1">
+        <div class="river-card-img" style="aspect-ratio:21/9">
+          <img src="https://images.unsplash.com/photo-1555993539-1732b0258235?q=80&w=1200&auto=format&fit=crop" alt="Seti River Pokhara" loading="lazy">
+          <span class="river-grade-badge grade-ii">Grade II</span>
+          <span class="river-duration">Half-Day</span>
+        </div>
+        <div class="river-card-body" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start">
+          <div>
+            <div class="river-subtitle">Pokhara's Gentle River · Family &amp; Relaxation Run</div>
+            <h3 class="river-name">Seti River</h3>
+            <p class="river-desc">Pokhara's own river — milky white from glacial minerals, flowing through a hidden canyon carved 100 metres deep beneath the city streets. The Seti half-day trip is the perfect first rafting experience, the ideal family activity, or a gentle complement to a Pokhara rest day. Annapurna views on clear days.</p>
+            <div class="river-tags">
+              <span class="rtag blue">Family Friendly</span>
+              <span class="rtag gold">From Pokhara</span>
+              <span class="rtag">All year</span>
+            </div>
+          </div>
+          <div class="river-specs" style="border-top:none;padding-top:0;grid-template-columns:1fr 1fr 1fr;align-self:end">
+            <div><div class="river-spec-label">Length</div><div class="river-spec-val">12 km</div></div>
+            <div><div class="river-spec-label">From</div><div class="river-spec-val">USD 25</div></div>
+            <div><div class="river-spec-label">Age</div><div class="river-spec-val">8+</div></div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /rivers-grid -->
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     DETAILS TABS
+══════════════════════════════════════ -->
+<div id="details" class="page-section alt-bg">
+  <div class="section-anchor"><span>Details</span></div>
+  <div class="section-inner">
+    <span class="eyebrow reveal">What You Need to Know</span>
+    <h2 class="section-title reveal d1">Full <em>Details</em></h2>
+    <div class="detail-tabs" style="margin-top:2.5rem">
+      <button class="dtab active" onclick="switchTab('included',event)">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        <span>Included / Not Included</span>
+      </button>
+      <button class="dtab" onclick="switchTab('grades',event)">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        <span>Grade Guide</span>
+      </button>
+      <button class="dtab" onclick="switchTab('gear',event)">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <span>What to Bring</span>
+      </button>
+    </div>
+
+    <!-- INCLUDED PANEL -->
+    <div id="dpanel-included" class="dpanel active">
+      <div class="inc-cols">
+        <div class="inc-col">
+          <h3><span class="inc-dot"></span> What's Included</h3>
+          <ul>
+            <li>Self-bailing whitewater raft (top international brands)</li>
+            <li>Certified swift-water rescue guide (1:6 ratio max)</li>
+            <li>Full safety briefing and paddle instruction</li>
+            <li>Helmet and ISO-approved personal flotation device</li>
+            <li>Wetsuit and splash jacket (on request / cold-season)</li>
+            <li>Dry bag for personal items (10L)</li>
+            <li>Throw bags and rescue equipment</li>
+            <li>First aid kit and satellite communicator (multi-day)</li>
+            <li>All riverside meals (multi-day expeditions)</li>
+            <li>Beach camp equipment — tents, sleeping pads, kitchen</li>
+            <li>Permits and National Park entry fees</li>
+            <li>Transportation from Kathmandu/Pokhara (day trips)</li>
+            <li>Post-trip hot shower and changing facilities (day trips)</li>
+          </ul>
+        </div>
+        <div class="inc-col not">
+          <h3><span class="inc-dot no"></span> Not Included</h3>
+          <ul>
+            <li>Personal travel insurance (strongly recommended)</li>
+            <li>Helicopter rescue insurance (mandatory on multi-day)</li>
+            <li>Personal snacks and drinks en route</li>
+            <li>Alcoholic beverages</li>
+            <li>Personal wetsuit (available to rent)</li>
+            <li>Camera or waterproof case (bring your own)</li>
+            <li>Tips for guides (customary and appreciated)</li>
+            <li>Accommodation before/after rafting</li>
+            <li>International flights</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- GRADE GUIDE PANEL -->
+    <div id="dpanel-grades" class="dpanel">
+      <div class="alert info" style="margin-top:0">
+        <div class="alert-label">International Whitewater Grading Scale</div>
+        <p>The International Scale of River Difficulty classifies rapids from Grade I (flatwater) to Grade VI (generally unrunnable). We operate Grade II through Grade V commercially. Your Beyond Summit guide will always assess live conditions on the day — river grades change with water level.</p>
+      </div>
+      <div style="overflow-x:auto">
+        <table class="grade-table">
+          <thead>
+            <tr><th>Grade</th><th>Classification</th><th>Description</th><th>BSE River</th><th>Suitable For</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="grade-pill g-ii">Grade II</span></td>
+              <td>Beginner</td>
+              <td>Easy rapids with small waves. Obvious clear channels. Requires basic paddle strokes.</td>
+              <td>Seti River</td>
+              <td>All ages 8+. No experience needed.</td>
+            </tr>
+            <tr>
+              <td><span class="grade-pill g-iii">Grade III</span></td>
+              <td>Intermediate</td>
+              <td>Moderate rapids with irregular waves. Some maneuvering required. Swim recovery straightforward.</td>
+              <td>Trishuli, Kali Gandaki</td>
+              <td>Age 12+. No experience needed. Good fitness.</td>
+            </tr>
+            <tr>
+              <td><span class="grade-pill g-iv">Grade IV</span></td>
+              <td>Advanced</td>
+              <td>Powerful rapids demanding precise maneuvering. Long swims possible. Scout ahead required.</td>
+              <td>Kali Gandaki upper, Sun Koshi</td>
+              <td>Age 14–16+. Basic swim confidence. Some prior rafting helpful.</td>
+            </tr>
+            <tr>
+              <td><span class="grade-pill g-v">Grade V</span></td>
+              <td>Expert</td>
+              <td>Extremely difficult. Long violent rapids, steep drops, limited recovery zones. Serious hazard.</td>
+              <td>Bhote Koshi</td>
+              <td>Age 18+. Strong swimmer essential. Prior Class IV experience required.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- GEAR PANEL -->
+    <div id="dpanel-gear" class="dpanel">
+      <div class="alert" style="margin-top:0">
+        <div class="alert-label">What to Bring on Your Rafting Day</div>
+        <p>We provide all safety equipment. Bring what keeps you comfortable on and off the water. Pack light — everything on the river either gets wet or goes into a dry bag.</p>
+      </div>
+      <div class="gear-cols">
+        <div class="gcol reveal">
+          <h3>Clothing</h3>
+          <ul>
+            <li><strong>Swimwear</strong> under everything — you will get wet</li>
+            <li><strong>Quick-dry shorts or leggings</strong></li>
+            <li><strong>Synthetic or wool t-shirt</strong> — no cotton</li>
+            <li><strong>Light fleece</strong> (Oct–Mar, mornings)</li>
+            <li><strong>Sandals with strap</strong> or old trainers</li>
+            <li>Flip-flops or dry shoes for camp (multi-day)</li>
+          </ul>
+        </div>
+        <div class="gcol reveal d1">
+          <h3>Personal Items</h3>
+          <ul>
+            <li><strong>Sunscreen SPF 50+</strong> — water reflects UV intensely</li>
+            <li><strong>Sunglasses with strap</strong> — they will fly off</li>
+            <li><strong>Lip balm SPF</strong></li>
+            <li><strong>Water bottle</strong> (we provide refills)</li>
+            <li><strong>Energy snacks</strong> for long sections</li>
+            <li>Small towel for after the river</li>
+            <li>Change of dry clothes in your vehicle bag</li>
+          </ul>
+        </div>
+        <div class="gcol reveal d2">
+          <h3>Multi-Day Extras</h3>
+          <ul>
+            <li><strong>Sleeping bag</strong> (down, 5–10°C rating)</li>
+            <li><strong>Headtorch</strong> — beach camps have no power</li>
+            <li><strong>Insect repellent</strong> (terai section)</li>
+            <li><strong>Small personal dry bag</strong> for valuables</li>
+            <li><strong>Book or cards</strong> — evenings on the beach are long and quiet</li>
+            <li>Waterproof camera or phone case</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     PRACTICAL INFO
+══════════════════════════════════════ -->
+<div id="practical" class="page-section">
+  <div class="section-anchor"><span>Practical Info</span></div>
+  <div class="section-inner">
+    <span class="eyebrow reveal">Everything You Need to Know</span>
+    <h2 class="section-title reveal d1">Practical <em>Information</em></h2>
+
+    <h3 style="font-family:var(--serif);font-size:1.35rem;font-weight:400;color:var(--charcoal);margin:2.5rem 0 1rem" class="reveal">Price Guide 2026</h3>
+    <div style="overflow-x:auto" class="reveal d1">
+      <table class="cost-table">
+        <thead><tr><th>River &amp; Trip</th><th>Duration</th><th>Grade</th><th>Price (2026)</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Seti River — Half Day</td><td>~3 hrs on water</td><td><span class="grade-pill g-ii">II</span></td><td>USD 25/person</td><td>Departs Pokhara daily. All ages.</td></tr>
+          <tr><td>Trishuli — Day Trip</td><td>1 day</td><td><span class="grade-pill g-iii">III</span></td><td>USD 35/person</td><td>Departs KTM or Pokhara. Lunch included.</td></tr>
+          <tr><td>Trishuli — 2 Day</td><td>2 days / 1 night</td><td><span class="grade-pill g-iii">III</span></td><td>USD 85/person</td><td>Beach camp, all meals.</td></tr>
+          <tr><td>Kali Gandaki — 3 Day</td><td>3 days / 2 nights</td><td><span class="grade-pill g-iv">III–IV</span></td><td>USD 180/person</td><td>Gorge camping, full board.</td></tr>
+          <tr><td>Bhote Koshi — 2 Day</td><td>2 days / 1 night</td><td><span class="grade-pill g-v">IV–V</span></td><td>USD 120/person</td><td>Min. 4 people. Age 18+. Advanced only.</td></tr>
+          <tr><td>Sun Koshi Expedition</td><td>10 days / 9 nights</td><td><span class="grade-pill g-iv">IV</span></td><td>USD 680/person</td><td>Full expedition. All food, camp, permits.</td></tr>
+          <tr class="total"><td>Private Group Booking</td><td>Any river, any dates</td><td>—</td><td>Price on request</td><td>Min. 4 people. Discounts from 8+.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="pcards">
+      <div class="pcard reveal">
+        <div class="pcard-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+        <h3>Best Seasons</h3>
+        <p><strong>October–December</strong> is ideal — post-monsoon flows are powerful and consistent, skies are clear, temperatures warm.</p>
+        <p><strong>March–May</strong> is excellent — lower water, technical rapids, spring heat pleasant.</p>
+        <p style="font-size:0.8rem;color:#c04040;margin-top:0.5rem"><strong>July–August:</strong> Monsoon flood conditions. Most rivers closed. Bhote Koshi remains open for expert-only runs with modified itineraries.</p>
+      </div>
+      <div class="pcard reveal d1">
+        <div class="pcard-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <h3>Safety Standards</h3>
+        <ul>
+          <li>All guides: swift-water rescue certified (SRT Level II+)</li>
+          <li>ISO-approved PFDs and helmets on every trip</li>
+          <li>Throw bags, first aid, satellite phone (multi-day)</li>
+          <li>Daily river condition assessment before launch</li>
+          <li>Client-to-guide ratio: max 6:1</li>
+          <li>Mandatory pre-trip briefing and swim assessment</li>
+        </ul>
+      </div>
+      <div class="pcard reveal d2">
+        <div class="pcard-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.71 3.53 2 2 0 0 1 3.68 1.38h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.07a16 16 0 0 0 6 6l1.06-1.06a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <h3>How to Book</h3>
+        <ul>
+          <li>Day trips: book 24hrs in advance</li>
+          <li>Multi-day: book 2 weeks ahead minimum</li>
+          <li>Sun Koshi: book 4–6 weeks ahead — limited seats</li>
+          <li>Contact via WhatsApp, email or enquiry form</li>
+          <li>30% deposit confirms your booking</li>
+          <li>Full payment 7 days before departure</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     TIPS BAND
+══════════════════════════════════════ -->
+<div class="tips-band">
+  <div class="tips-inner">
+    <span class="eyebrow reveal">From Our River Guides</span>
+    <h2 class="section-title reveal d1">Insider <em>Tips</em></h2>
+    <div class="tips-grid">
+      <div class="tip-item reveal">
+        <div class="tip-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="tip-title">Start Early</div>
+        <div class="tip-desc">Himalayan rivers warm up fast. Start by 7am on summer days — you'll have the gorge to yourself and avoid afternoon winds.</div>
+      </div>
+      <div class="tip-item reveal d1">
+        <div class="tip-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div class="tip-title">Listen to Your Guide</div>
+        <div class="tip-desc">Our guides read the water every single day. When they say lean left, lean left immediately — there's always a reason.</div>
+      </div>
+      <div class="tip-item reveal d2">
+        <div class="tip-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 15a4 4 0 0 0 4 4h9a5 5 0 1 0-.1-9.999 5.002 5.002 0 0 0-9.78 2.096A4.001 4.001 0 0 0 3 15z"/></svg>
+        </div>
+        <div class="tip-title">Respect the Water Level</div>
+        <div class="tip-desc">After rain, rivers can rise metres in hours. We check levels every morning and will reschedule if conditions exceed client capability.</div>
+      </div>
+      <div class="tip-item reveal d3">
+        <div class="tip-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+        </div>
+        <div class="tip-title">Waterproof Your Camera</div>
+        <div class="tip-desc">The best river shots come from the raft. A cheap waterproof case is worth 50 times its cost. We won't stop for you to fish your phone out of the Bhote Koshi.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     QUOTE BAND
+══════════════════════════════════════ -->
+<section class="quote-band">
+  <img class="quote-bg"
+    src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=1600&auto=format&fit=crop"
+    alt="River at dusk">
+  <div class="quote-overlay"></div>
+  <div class="quote-content">
+    <span class="qmark" aria-hidden="true">&ldquo;</span>
+    <blockquote class="qtext reveal">The river does not care how experienced you are. It only cares that you <em>pay attention</em>.</blockquote>
+    <div class="qattr reveal d1">Ram Bahadur Thapa &middot; Senior River Guide &middot; 22 years on Nepal's rivers</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     RELATED ACTIVITIES
+══════════════════════════════════════ -->
+<section class="related-section">
+  <div class="related-inner">
+    <div class="related-header">
+      <div>
+        <span class="related-eyebrow reveal">You May Also Like</span>
+        <h2 class="related-title reveal d1">More <em>Outdoor Activities</em></h2>
+      </div>
+      <a href="/activities.html" class="related-view-all reveal d1">All Activities <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+    <div class="related-cards">
+      <a href="/activities/paragliding.html" class="rcard reveal">
+        <div class="rcard-img-wrap">
+          <img class="rcard-img" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=600&auto=format&fit=crop" alt="Paragliding Pokhara" style="filter:brightness(0.65) saturate(1.1) hue-rotate(-10deg)">
+          <span class="rcard-badge">Pokhara</span>
+        </div>
+        <div class="rcard-body">
+          <div class="rcard-num">Aerial Adventure &middot; Annapurna Views</div>
+          <div class="rcard-name">Paragliding</div>
+          <div class="rcard-desc">Soar above Phewa Lake with Annapurna and Machapuchare as your backdrop. Pokhara is one of the world's top paragliding destinations.</div>
+          <div class="rcard-link">View Activity <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </div>
+      </a>
+      <a href="/activities/bungee.html" class="rcard reveal d1">
+        <div class="rcard-img-wrap">
+          <img class="rcard-img" src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?q=80&w=600&auto=format&fit=crop" alt="Bungee jumping Nepal" style="filter:brightness(0.6) saturate(1) hue-rotate(5deg)">
+          <span class="rcard-badge">Bhote Koshi</span>
+        </div>
+        <div class="rcard-body">
+          <div class="rcard-num">160m Drop &middot; Gorge View</div>
+          <div class="rcard-name">Bungee Jump</div>
+          <div class="rcard-desc">The Last Resort's 160-metre plunge above the Bhote Koshi gorge — one of the tallest bungee jumps in the world. Pairs perfectly with a rafting day.</div>
+          <div class="rcard-link">View Activity <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </div>
+      </a>
+      <a href="/articles/annapurna-blog.html" class="rcard reveal d2">
+        <div class="rcard-img-wrap">
+          <img class="rcard-img" src="https://images.unsplash.com/photo-1506466010722-395ee2bef877?q=80&w=600&auto=format&fit=crop" alt="Annapurna Circuit trekking">
+          <span class="rcard-badge">Trek</span>
+        </div>
+        <div class="rcard-body">
+          <div class="rcard-num">Classic Trek &middot; 15–21 Days</div>
+          <div class="rcard-name">Annapurna Circuit</div>
+          <div class="rcard-desc">Combine your Kali Gandaki raft run with the full Annapurna Circuit — one of the world's great mountain journeys. River out, trail back.</div>
+          <div class="rcard-link">View Trek <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT STRIP -->
+<div class="contact-strip">
+  <div class="contact-inner">
+    <div class="contact-item">
+      <div class="contact-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.71 3.53 2 2 0 0 1 3.68 1.38h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.07a16 16 0 0 0 6 6l1.06-1.06a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+      <div><div class="contact-label">Call Anytime</div><div class="contact-value"><a href="tel:+9779811157421">+977 9811 157 421</a></div></div>
+    </div>
+    <div class="contact-item">
+      <div class="contact-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+      <div><div class="contact-label">Email Us</div><div class="contact-value"><a href="mailto:info@beyondsummitexped.com">info@beyondsummitexped.com</a></div></div>
+    </div>
+    <div class="contact-item">
+      <div class="contact-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <div><div class="contact-label">Find Us</div><div class="contact-value"><a href="https://maps.google.com/?q=Thamel,Kathmandu,Nepal" target="_blank" rel="noopener noreferrer">Thamel, Kathmandu</a></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo-text">Beyond Summit<em>Expeditions &middot; Nepal</em></div>
+      <p class="footer-desc">Nepal's premier mountaineering and outdoor adventure company. Licensed by the Department of Tourism, Government of Nepal. We take you where others pause.</p>
+      <div class="footer-contact">
+        <a href="tel:+9779811157421"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.71 3.53 2 2 0 0 1 3.68 1.38h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.07a16 16 0 0 0 6 6l1.06-1.06a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +977-9811157421</a>
+        <a href="mailto:info@beyondsummitexped.com"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> info@beyondsummitexped.com</a>
+        <a href="https://maps.google.com/?q=Thamel,Kathmandu" target="_blank" rel="noopener noreferrer"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Thamel, Kathmandu, Nepal</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Expeditions</h4>
+      <ul>
+        <li><a href="/articles/everest-base-camp-guide.html">Mount Everest</a></li>
+        <li><a href="/articles/amadablam-blog.html">Ama Dablam</a></li>
+        <li><a href="/articles/manaslu-blog.html">Manaslu</a></li>
+        <li><a href="/articles/merapeak.html">Mera Peak</a></li>
+        <li><a href="/articles/islandpeak.html">Island Peak</a></li>
+        <li><a href="/expeditions.html">All Expeditions</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Outdoor Activities</h4>
+      <ul>
+        <li><a href="/activities/rafting.html">Whitewater Rafting</a></li>
+        <li><a href="/activities/paragliding.html">Paragliding</a></li>
+        <li><a href="/activities/bungee.html">Bungee Jumping</a></li>
+        <li><a href="/activities/zip-line.html">Zip Line</a></li>
+        <li><a href="/activities/canyoning.html">Canyoning</a></li>
+        <li><a href="/activities.html">All Activities</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="/about.html">About Us</a></li>
+        <li><a href="/guides.html">Our Guides</a></li>
+        <li><a href="/safety.html">Safety</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Beyond Summit Expeditions &middot; Licensed by Dept. of Tourism, Government of Nepal</p>
+    <div class="footer-socials">
+      <a href="https://instagram.com/beyondsummitexpeditions" class="social-ico" target="_blank" aria-label="Instagram">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+      <a href="https://facebook.com/beyondsummitexped" class="social-ico" target="_blank" aria-label="Facebook">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* ── NAV ── */
+  const navbar=document.getElementById('navbar');
+  window.addEventListener('scroll',()=>{navbar.classList.toggle('scrolled',window.scrollY>60);},{passive:true});
+
+  /* ── HAMBURGER ── */
+  const hamburger=document.getElementById('hamburger'),drawer=document.getElementById('mobileDrawer');
+  let dOpen=false;
+  function closeDrawer(){dOpen=false;hamburger.classList.remove('open');hamburger.setAttribute('aria-expanded','false');drawer.classList.remove('open');document.body.style.overflow='';}
+  hamburger.addEventListener('click',()=>{dOpen=!dOpen;hamburger.classList.toggle('open',dOpen);hamburger.setAttribute('aria-expanded',String(dOpen));drawer.classList.toggle('open',dOpen);document.body.style.overflow=dOpen?'hidden':'';});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDrawer();});
+
+  /* ── TAB NAV scroll spy ── */
+  const secIds=['overview','rivers','details','practical'];
+  const tabBtns=document.querySelectorAll('.tab-btn');
+  function scrollToSec(id,btn){
+    document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+    if(btn)btn.classList.add('active');
+    const el=document.getElementById(id);if(!el)return;
+    const offset=navbar.offsetHeight+document.querySelector('.tab-nav-wrap').offsetHeight+8;
+    window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-offset,behavior:'smooth'});
+  }
+  window.addEventListener('scroll',()=>{
+    const offset=navbar.offsetHeight+document.querySelector('.tab-nav-wrap').offsetHeight+24;
+    let active=0;
+    secIds.forEach((id,i)=>{const el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<=offset)active=i;});
+    tabBtns.forEach((b,i)=>b.classList.toggle('active',i===active));
+  },{passive:true});
+
+  /* ── DETAIL TABS ── */
+  function switchTab(panel,e){
+    document.querySelectorAll('.dpanel').forEach(p=>p.classList.remove('active'));
+    document.querySelectorAll('.dtab').forEach(b=>b.classList.remove('active'));
+    document.getElementById('dpanel-'+panel).classList.add('active');
+    e.currentTarget.classList.add('active');
+  }
+
+  /* ── SCROLL REVEAL ── */
+  const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}});},{rootMargin:'0px 0px -48px 0px',threshold:0.07});
+  document.querySelectorAll('.reveal,.reveal-r').forEach(el=>obs.observe(el));
+
+  /* ── SMOOTH ANCHORS ── */
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}});});
+</script>
+</body>
+</html>
