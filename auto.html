@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
+<title>AutoViindu – Book a Service</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#07090F;--bg2:#0D1018;--bg3:#121520;
+  --card:rgba(255,255,255,.035);--card-b:rgba(255,255,255,.07);
+  --gold:#F0B429;--gold-d:#C09818;--gold-dim:rgba(240,180,41,.12);
+  --green:#22c55e;--green-d:#1A6B2A;--green-dim:rgba(34,197,94,.1);
+  --blue:#60a5fa;--blue-dim:rgba(96,165,250,.1);
+  --red:#f87171;--red-dim:rgba(248,113,113,.1);
+  --text:#EEF0F8;--text2:#9AA0B8;--text3:#4A5070;
+  --border:rgba(255,255,255,.075);--border2:rgba(255,255,255,.12);
+  --sh:0 2px 12px rgba(0,0,0,.35);--sh-lg:0 20px 60px rgba(0,0,0,.5);
+  --r8:8px;--r12:12px;--r16:16px;--r20:20px;--rpill:999px;
+  --ease:.22s cubic-bezier(.4,0,.2,1);
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+html{scroll-behavior:smooth;}
+body{font-family:'Outfit',sans-serif;color:var(--text);background:var(--bg);overflow-x:hidden;min-height:100vh;}
+
+/* Grid background */
+body::before{
+  content:'';position:fixed;inset:0;
+  background-image:
+    linear-gradient(rgba(240,180,41,.025) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(240,180,41,.025) 1px,transparent 1px);
+  background-size:48px 48px;
+  pointer-events:none;z-index:0;
+}
+body::after{
+  content:'';position:fixed;inset:0;
+  background:radial-gradient(ellipse 80% 50% at 50% 0%,rgba(26,107,42,.06),transparent);
+  pointer-events:none;z-index:0;
+}
+
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px;position:relative;z-index:1;}
+@media(max-width:600px){.wrap{padding:0 14px;}}
+
+/* ── ANIMS ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.85)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes hsPulse{0%,100%{r:10;opacity:.3}50%{r:16;opacity:.08}}
+@keyframes tagIn{from{scale:.6;opacity:0}to{scale:1;opacity:1}}
+@keyframes ringPop{0%{transform:scale(0);opacity:0}70%{transform:scale(1.1)}100%{transform:scale(1);opacity:1}}
+@keyframes scanline{0%{transform:translateY(-100%)}100%{transform:translateY(200%)}}
+
+/* ── TOPBAR ── */
+.topbar{background:rgba(0,0,0,.7);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:7px 0;position:relative;z-index:100;}
+.topbar-inner{display:flex;justify-content:space-between;align-items:center;}
+.tb-left{display:flex;align-items:center;gap:20px;}
+.tb-item{display:flex;align-items:center;gap:5px;font-size:11.5px;font-family:'Rajdhani',sans-serif;font-weight:600;letter-spacing:.4px;color:var(--text3);}
+.tb-back{font-size:12px;font-family:'Rajdhani',sans-serif;font-weight:700;color:var(--gold);letter-spacing:.5px;cursor:pointer;display:flex;align-items:center;gap:4px;transition:opacity var(--ease);}
+.tb-back:hover{opacity:.7;}
+@media(max-width:560px){.tb-item.hide-sm{display:none;}}
+
+/* ── HEADER ── */
+.hdr{position:sticky;top:0;z-index:900;background:rgba(7,9,15,.92);backdrop-filter:blur(30px);border-bottom:1px solid var(--border);}
+.hdr-inner{display:flex;align-items:center;justify-content:space-between;height:60px;}
+.logo-area{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.logo-badge{
+  width:38px;height:38px;border-radius:9px;
+  background:linear-gradient(135deg,#C09818,#F0B429);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Bebas Neue',sans-serif;font-size:21px;color:#07090F;
+  box-shadow:0 4px 16px rgba(240,180,41,.25);
+}
+.logo-text{font-family:'Bebas Neue',sans-serif;font-size:21px;letter-spacing:2px;color:var(--text);}
+.logo-text span{color:var(--gold);}
+.hdr-live{
+  display:flex;align-items:center;gap:7px;
+  padding:5px 14px;
+  background:rgba(34,197,94,.07);
+  border:1px solid rgba(34,197,94,.18);
+  border-radius:var(--rpill);
+  font-family:'Rajdhani',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:.8px;
+  color:var(--green);text-transform:uppercase;
+}
+.live-dot{width:6px;height:6px;background:var(--green);border-radius:50%;animation:pulse 2s infinite;}
+
+/* ── HERO ── */
+.hero{
+  position:relative;padding:44px 0 20px;text-align:center;overflow:hidden;
+}
+.hero-glow{
+  position:absolute;top:-80px;left:50%;transform:translateX(-50%);
+  width:700px;height:380px;
+  background:radial-gradient(ellipse,rgba(192,152,24,.1),transparent 70%);
+  pointer-events:none;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:5px 16px;
+  background:rgba(240,180,41,.09);border:1px solid rgba(240,180,41,.2);
+  border-radius:var(--rpill);
+  font-family:'Rajdhani',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:.8px;
+  color:var(--gold);text-transform:uppercase;margin-bottom:14px;
+}
+.hero-title{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(46px,8vw,76px);line-height:.9;letter-spacing:2px;margin-bottom:10px;
+}
+.hero-title .line2{color:var(--gold);}
+.hero-sub{font-size:13.5px;color:var(--text2);max-width:380px;margin:0 auto;line-height:1.7;}
+
+/* ── PROGRESS ── */
+.prog-wrap{max-width:540px;margin:22px auto 0;padding:0 20px;position:relative;z-index:20;}
+.prog-card{
+  background:rgba(255,255,255,.03);
+  border:1px solid var(--border);
+  border-radius:var(--r16);
+  padding:18px 22px;
+  backdrop-filter:blur(16px);
+}
+.prog-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;}
+.prog-lbl{font-family:'Rajdhani',sans-serif;font-size:10.5px;font-weight:700;letter-spacing:1px;color:var(--text3);text-transform:uppercase;}
+.prog-pct{font-family:'Bebas Neue',sans-serif;font-size:19px;color:var(--gold);letter-spacing:1px;}
+.prog-bar{height:3px;background:rgba(255,255,255,.06);border-radius:100px;overflow:hidden;margin-bottom:14px;}
+.prog-fill{height:100%;background:linear-gradient(90deg,var(--green-d),var(--gold));border-radius:100px;transition:width .55s cubic-bezier(.4,0,.2,1);width:0%;}
+.prog-steps{display:flex;justify-content:space-between;}
+.prog-step{display:flex;flex-direction:column;align-items:center;gap:5px;flex:1;}
+.prog-dot{
+  width:24px;height:24px;border-radius:50%;
+  border:1.5px solid var(--border2);background:var(--bg);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Rajdhani',sans-serif;font-size:11px;font-weight:700;color:var(--text3);
+  transition:all .3s ease;
+}
+.prog-step.done .prog-dot{background:var(--green-d);border-color:var(--green);color:#fff;}
+.prog-step.active .prog-dot{background:var(--gold);border-color:var(--gold);color:#07090F;box-shadow:0 0 14px rgba(240,180,41,.45);}
+.prog-name{font-family:'Rajdhani',sans-serif;font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--text3);}
+.prog-step.active .prog-name{color:var(--gold);}
+.prog-step.done .prog-name{color:var(--green);}
+
+/* ── FORM OUTER ── */
+.form-outer{max-width:720px;margin:0 auto;padding:30px 20px 80px;position:relative;z-index:10;}
+
+/* ── STEP PANEL ── */
+.step-panel{display:none;}
+.step-panel.active{display:block;animation:fadeUp .32s cubic-bezier(.4,0,.2,1) both;}
+.step-eyebrow{
+  font-family:'Rajdhani',sans-serif;font-size:11px;font-weight:700;letter-spacing:1px;
+  color:var(--gold);text-transform:uppercase;
+  display:flex;align-items:center;gap:6px;margin-bottom:5px;
+}
+.step-eyebrow::before{content:'';width:18px;height:1.5px;background:var(--gold);border-radius:2px;}
+.step-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(30px,5vw,42px);letter-spacing:1px;color:var(--text);margin-bottom:4px;}
+.step-sub{font-size:13px;color:var(--text2);line-height:1.65;margin-bottom:26px;}
+
+/* ── CAR SELECTOR BOX ── */
+.car-box{
+  background:rgba(255,255,255,.02);
+  border:1px solid var(--border);
+  border-radius:var(--r20);
+  padding:24px 16px 16px;
+  margin-bottom:24px;
+  position:relative;overflow:hidden;
+}
+/* Garage floor */
+.car-box::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:60px;
+  background:linear-gradient(0deg,rgba(240,180,41,.04),transparent);
+  pointer-events:none;
+}
+.car-box-floor{
+  position:absolute;bottom:26px;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(240,180,41,.12),transparent);
+}
+.car-hint{
+  font-family:'Rajdhani',sans-serif;font-size:11px;font-weight:700;letter-spacing:.9px;
+  color:var(--text3);text-align:center;text-transform:uppercase;margin-bottom:14px;
+  display:flex;align-items:center;justify-content:center;gap:10px;
+}
+.car-hint::before,.car-hint::after{content:'';flex:1;height:1px;background:var(--border);max-width:60px;}
+
+/* scan line effect */
+.car-scan{
+  position:absolute;top:0;left:0;right:0;height:60px;
+  background:linear-gradient(180deg,transparent,rgba(240,180,41,.03),transparent);
+  animation:scanline 4s ease infinite;
+  pointer-events:none;
+}
+
+.car-svg-wrap{display:flex;justify-content:center;position:relative;}
+.car-svg-wrap svg{width:100%;max-width:560px;height:auto;}
+
+/* Zone overlays — CSS toggle */
+.zone-group{pointer-events:none;transition:opacity .25s ease;}
+
+/* Hotspot nodes */
+.hs-node{cursor:pointer;}
+.hs-ring{animation:hsPulse 2.5s ease infinite;transform-origin:center;}
+.hs-node:nth-of-type(2) .hs-ring{animation-delay:.65s;}
+.hs-node:nth-of-type(3) .hs-ring{animation-delay:1.3s;}
+.hs-node:nth-of-type(4) .hs-ring{animation-delay:1.95s;}
+.hs-node.active .hs-ring{animation:none;opacity:0;}
+.hs-node.active .hs-core{r:8 !important;}
+
+/* Selected tags */
+.svc-tags{
+  display:flex;flex-wrap:wrap;gap:5px;justify-content:center;
+  min-height:28px;margin-top:10px;
+}
+.svc-tag{
+  display:inline-flex;align-items:center;gap:5px;
+  padding:4px 12px;border-radius:var(--rpill);
+  font-family:'Rajdhani',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:.4px;
+  animation:tagIn .2s ease both;
+}
+.svc-hint{font-family:'Rajdhani',sans-serif;font-size:11px;color:var(--text3);letter-spacing:.5px;}
+
+/* Legend cards */
+.svc-legend{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:14px;}
+@media(max-width:440px){.svc-legend{grid-template-columns:1fr;}}
+.svc-leg-item{
+  display:flex;align-items:flex-start;gap:10px;
+  padding:11px 12px;
+  background:var(--card);border:1.5px solid var(--border);
+  border-radius:var(--r12);cursor:pointer;
+  transition:all .2s ease;position:relative;overflow:hidden;
+}
+.svc-leg-item:hover{border-color:var(--border2);transform:translateY(-1px);}
+.svc-leg-item.active{background:rgba(var(--c-rgb),.07);border-color:rgba(var(--c-rgb),.35);}
+.svc-leg-dot{
+  width:9px;height:9px;border-radius:50%;flex-shrink:0;margin-top:3px;
+  background:var(--c,var(--gold));transition:box-shadow .3s;
+}
+.svc-leg-item.active .svc-leg-dot{box-shadow:0 0 10px var(--c);}
+.svc-leg-name{font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:700;letter-spacing:.3px;color:var(--text);}
+.svc-leg-desc{font-size:11px;color:var(--text2);margin-top:1px;line-height:1.45;}
+.svc-leg-check{
+  width:15px;height:15px;border-radius:50%;
+  border:1.5px solid var(--border2);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-left:auto;
+  transition:all .2s;
+}
+.svc-leg-item.active .svc-leg-check{background:var(--c);border-color:var(--c);}
+
+/* ── URGENCY ── */
+.urg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+.urg-card{
+  padding:15px 8px;
+  background:var(--card);border:1.5px solid var(--border);
+  border-radius:var(--r12);cursor:pointer;text-align:center;
+  transition:all .2s ease;
+}
+.urg-card:hover{border-color:var(--border2);transform:translateY(-2px);}
+.urg-card.active{border-color:rgba(var(--uc-rgb),.4);background:rgba(var(--uc-rgb),.07);}
+.urg-icon-box{
+  width:34px;height:34px;border-radius:50%;
+  background:rgba(255,255,255,.05);
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 7px;transition:background .2s;
+}
+.urg-card.active .urg-icon-box{background:rgba(var(--uc-rgb),.15);}
+.urg-name{font-family:'Rajdhani',sans-serif;font-size:12.5px;font-weight:700;letter-spacing:.3px;color:var(--text);}
+.urg-card.active .urg-name{color:var(--uc);}
+.urg-sub{font-size:10.5px;color:var(--text3);margin-top:2px;}
+
+/* ── SEC LABEL ── */
+.sec-lbl{
+  font-family:'Rajdhani',sans-serif;font-size:10.5px;font-weight:700;letter-spacing:1px;
+  text-transform:uppercase;color:var(--text3);
+  margin:24px 0 11px;display:flex;align-items:center;gap:8px;
+}
+.sec-lbl::after{content:'';flex:1;height:1px;background:var(--border);}
+.req{color:#f87171;}
+
+/* ── FUEL GRID ── */
+.fuel-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;}
+@media(max-width:440px){.fuel-grid{grid-template-columns:repeat(2,1fr);}}
+.fuel-card{
+  padding:13px 6px;
+  background:var(--card);border:1.5px solid var(--border);
+  border-radius:var(--r12);cursor:pointer;text-align:center;
+  transition:all .2s ease;
+}
+.fuel-card:hover{border-color:var(--border2);transform:translateY(-2px);}
+.fuel-card.active{border-color:rgba(240,180,41,.4);background:rgba(240,180,41,.07);}
+.fuel-emoji{font-size:20px;margin-bottom:5px;display:block;}
+.fuel-name{font-family:'Rajdhani',sans-serif;font-size:12.5px;font-weight:700;letter-spacing:.3px;color:var(--text2);}
+.fuel-card.active .fuel-name{color:var(--gold);}
+
+/* ── INPUTS ── */
+.field{margin-bottom:13px;}
+.field-lbl{
+  display:block;font-family:'Rajdhani',sans-serif;
+  font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;
+  color:var(--text3);margin-bottom:6px;
+}
+.inp{
+  width:100%;padding:11px 14px;
+  background:rgba(255,255,255,.04);border:1.5px solid var(--border);
+  border-radius:var(--r8);color:var(--text);
+  font-family:'Outfit',sans-serif;font-size:14px;font-weight:500;
+  outline:none;transition:all .2s;
+}
+.inp:hover{border-color:var(--border2);}
+.inp:focus{border-color:var(--gold);background:rgba(240,180,41,.03);box-shadow:0 0 0 3px rgba(240,180,41,.07);}
+.inp::placeholder{color:var(--text3);}
+select.inp{
+  appearance:none;cursor:pointer;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234A5070' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 11px center;background-size:13px;padding-right:34px;
+}
+select.inp option{background:#0D1018;color:var(--text);}
+.inp-row{display:grid;grid-template-columns:1fr 1fr;gap:11px;}
+@media(max-width:460px){.inp-row{grid-template-columns:1fr;}}
+.err-msg{font-size:11.5px;color:#f87171;font-weight:600;margin-top:4px;display:none;font-family:'Rajdhani',sans-serif;letter-spacing:.3px;}
+
+/* ── TOGGLES ── */
+.toggle-stack{display:flex;flex-direction:column;gap:7px;}
+.toggle-row{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:13px 14px;
+  background:var(--card);border:1.5px solid var(--border);
+  border-radius:var(--r12);cursor:pointer;transition:all .2s;
+}
+.toggle-row:hover{border-color:var(--border2);}
+.toggle-row.on{border-color:rgba(34,197,94,.3);background:rgba(34,197,94,.05);}
+.toggle-info{flex:1;}
+.toggle-name{font-family:'Rajdhani',sans-serif;font-size:13.5px;font-weight:700;letter-spacing:.3px;color:var(--text);}
+.toggle-sub{font-size:11.5px;color:var(--text3);margin-top:1px;}
+.toggle-row.on .toggle-sub{color:rgba(34,197,94,.6);}
+.sw{width:40px;height:23px;background:rgba(255,255,255,.08);border-radius:var(--rpill);position:relative;flex-shrink:0;transition:background .2s;}
+.sw::after{content:'';position:absolute;top:2.5px;left:2.5px;width:18px;height:18px;background:rgba(255,255,255,.35);border-radius:50%;transition:transform .2s;}
+.toggle-row.on .sw{background:var(--green);}
+.toggle-row.on .sw::after{transform:translateX(17px);background:#fff;}
+
+/* ── DIVIDER ── */
+.divider{height:1px;background:var(--border);margin:20px 0;}
+
+/* ── REVIEW CARD ── */
+.review-card{
+  background:rgba(255,255,255,.02);border:1px solid var(--border);
+  border-radius:var(--r12);overflow:hidden;margin-bottom:16px;
+}
+.review-row{display:flex;gap:14px;align-items:baseline;padding:10px 15px;border-bottom:1px solid var(--border);}
+.review-row:last-child{border-bottom:none;}
+.review-key{font-family:'Rajdhani',sans-serif;font-size:10.5px;font-weight:700;letter-spacing:.7px;text-transform:uppercase;color:var(--text3);min-width:76px;flex-shrink:0;}
+.review-val{font-size:13px;font-weight:500;color:var(--text);}
+
+/* ── CHECKBOX ── */
+.check-row{display:flex;align-items:flex-start;gap:10px;padding:8px 0;cursor:pointer;}
+.check-row input{display:none;}
+.cbox{width:17px;height:17px;border:1.5px solid var(--border2);border-radius:4px;flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center;transition:all .2s;background:rgba(255,255,255,.03);}
+.check-row input:checked+.cbox{background:var(--green-d);border-color:var(--green);}
+.check-row input:checked+.cbox::after{content:'✓';color:#fff;font-size:10.5px;font-weight:900;}
+.check-text{font-size:12.5px;color:var(--text2);line-height:1.55;}
+.check-text a{color:var(--gold);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(240,180,41,.3);}
+
+/* ── TRUST STRIP ── */
+.trust-strip{display:flex;flex-wrap:wrap;gap:18px;padding-top:16px;}
+.trust-item{display:flex;align-items:center;gap:6px;font-family:'Rajdhani',sans-serif;font-size:12px;font-weight:600;letter-spacing:.3px;color:var(--text3);}
+.trust-item svg{color:var(--green);}
+
+/* ── BUTTONS ── */
+.btn-row{display:flex;gap:9px;margin-top:24px;}
+.btn-back{
+  padding:12px 16px;background:transparent;
+  border:1.5px solid var(--border);border-radius:var(--r8);
+  font-family:'Rajdhani',sans-serif;font-size:14px;font-weight:700;letter-spacing:.5px;
+  color:var(--text3);cursor:pointer;display:flex;align-items:center;gap:6px;
+  transition:all .2s;
+}
+.btn-back:hover{border-color:var(--border2);color:var(--text);}
+.btn-next{
+  flex:1;padding:13px 24px;
+  background:var(--gold);color:#07090F;border:none;border-radius:var(--r8);
+  font-family:'Rajdhani',sans-serif;font-size:14.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;
+  cursor:pointer;display:flex;align-items:center;justify-content:center;gap:7px;
+  transition:all .2s;box-shadow:0 4px 20px rgba(240,180,41,.22);
+}
+.btn-next:hover{background:#F8C340;transform:translateY(-1px);box-shadow:0 8px 28px rgba(240,180,41,.32);}
+.btn-next:active{transform:scale(.97);}
+.btn-submit{
+  flex:1;padding:14px 24px;
+  background:linear-gradient(135deg,#1A6B2A,#0D4A1B);color:#fff;border:none;border-radius:var(--r8);
+  font-family:'Rajdhani',sans-serif;font-size:14.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+  cursor:pointer;display:flex;align-items:center;justify-content:center;gap:7px;
+  transition:all .2s;box-shadow:0 4px 20px rgba(26,107,42,.28);
+}
+.btn-submit:hover{transform:translateY(-1px);box-shadow:0 8px 28px rgba(26,107,42,.38);}
+.btn-submit:active{transform:scale(.97);}
+.btn-submit.loading{pointer-events:none;opacity:.65;}
+.spin{display:inline-block;animation:spin .7s linear infinite;}
+
+/* ── SUCCESS ── */
+.success-screen{display:none;text-align:center;padding:60px 20px 48px;}
+.success-screen.show{display:block;animation:fadeUp .4s ease both;}
+.success-ring{
+  width:68px;height:68px;
+  background:linear-gradient(135deg,#1A6B2A,#0D4A1B);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 18px;
+  box-shadow:0 8px 30px rgba(26,107,42,.4);
+  animation:ringPop .5s cubic-bezier(.36,.07,.19,.97) both .1s;
+}
+.success-title{font-family:'Bebas Neue',sans-serif;font-size:42px;letter-spacing:2px;color:var(--text);margin-bottom:8px;}
+.success-sub{font-size:13.5px;color:var(--text2);line-height:1.7;margin-bottom:26px;max-width:360px;margin-left:auto;margin-right:auto;}
+.ref-box{
+  background:rgba(240,180,41,.07);border:1px solid rgba(240,180,41,.2);
+  border-radius:var(--r12);padding:16px 24px;display:inline-block;margin-bottom:14px;
+}
+.ref-label{font-family:'Rajdhani',sans-serif;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:5px;}
+.ref-num{font-family:'Bebas Neue',sans-serif;font-size:32px;letter-spacing:4px;color:var(--text);}
+.contact-box{font-size:13px;color:var(--text2);line-height:1.85;}
+.contact-box strong{color:var(--text);}
+.btn-reset{
+  margin-top:18px;padding:10px 26px;background:transparent;
+  border:1.5px solid var(--border);border-radius:var(--r8);
+  font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;
+  color:var(--text3);cursor:pointer;transition:all .2s;
+}
+.btn-reset:hover{border-color:var(--gold);color:var(--gold);}
+
+/* ── FOOTER ── */
+footer{
+  background:rgba(0,0,0,.4);border-top:1px solid var(--border);
+  padding:16px 0;text-align:center;
+  font-family:'Rajdhani',sans-serif;font-size:12px;letter-spacing:.5px;color:var(--text3);
+  position:relative;z-index:10;
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="wrap topbar-inner">
+    <div class="tb-left">
+      <span class="tb-item">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="11" height="11" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.61 3.47 2 2 0 013.6 1.29h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.9a16 16 0 006.13 6.13l1.27-.94a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        +977-9701076240
+      </span>
+      <span class="tb-item hide-sm">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="11" height="11" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Mon–Sat &nbsp;9am–6pm
+      </span>
+      <span class="tb-item hide-sm">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="11" height="11" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Kathmandu, Nepal
+      </span>
+    </div>
+    <a class="tb-back" href="javascript:history.back()">← Back to Site</a>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="hdr">
+  <div class="wrap hdr-inner">
+    <a class="logo-area" href="javascript:history.back()">
+      <div class="logo-badge">A</div>
+      <div class="logo-text">Auto<span>Viindu</span></div>
+    </a>
+    <div class="hdr-live">
+      <span class="live-dot"></span>
+      Booking Open
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-glow"></div>
+  <div class="wrap">
+    <div class="hero-badge">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="11" height="11" stroke-linecap="round"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+      AutoViindu Service Booking
+    </div>
+    <h1 class="hero-title">
+      Book Your<br><span class="line2">Car Service</span>
+    </h1>
+    <p class="hero-sub">Tap your car's zone to choose a service — 3 quick steps, confirmed within 1 hour.</p>
+  </div>
+</div>
+
+<!-- PROGRESS -->
+<div class="prog-wrap">
+  <div class="prog-card">
+    <div class="prog-top">
+      <span class="prog-lbl">Progress</span>
+      <span class="prog-pct" id="prog-pct">Step 1 / 3</span>
+    </div>
+    <div class="prog-bar"><div class="prog-fill" id="prog-fill"></div></div>
+    <div class="prog-steps">
+      <div class="prog-step active" id="pd-1"><div class="prog-dot">1</div><div class="prog-name">Service</div></div>
+      <div class="prog-step" id="pd-2"><div class="prog-dot">2</div><div class="prog-name">Vehicle</div></div>
+      <div class="prog-step" id="pd-3"><div class="prog-dot">3</div><div class="prog-name">Confirm</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- FORM -->
+<div class="form-outer">
+
+<!-- ══════════════ STEP 1 ══════════════ -->
+<div class="step-panel active" id="step-1">
+  <div class="step-eyebrow">Step 1 of 3</div>
+  <div class="step-title">Select Service</div>
+  <div class="step-sub">Tap any glowing zone on the car — or pick from the list below.</div>
+
+  <!-- INTERACTIVE CAR -->
+  <div class="car-box" id="car-box">
+    <div class="car-scan"></div>
+    <div class="car-box-floor"></div>
+    <div class="car-hint">Tap a zone to select your service</div>
+
+    <div class="car-svg-wrap">
+      <svg id="car-svg" viewBox="0 0 600 230" xmlns="http://www.w3.org/2000/svg" style="cursor:default;">
+        <defs>
+          <!-- Body gradients -->
+          <linearGradient id="g-body" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#2C3048"/>
+            <stop offset="55%" stop-color="#1C1F30"/>
+            <stop offset="100%" stop-color="#10121A"/>
+          </linearGradient>
+          <linearGradient id="g-roof" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#3A3F58"/>
+            <stop offset="100%" stop-color="#1E2236"/>
+          </linearGradient>
+          <linearGradient id="g-glass" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#5880A0" stop-opacity=".85"/>
+            <stop offset="100%" stop-color="#2A4866" stop-opacity=".65"/>
+          </linearGradient>
+          <linearGradient id="g-wheel" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#3A3A3A"/>
+            <stop offset="100%" stop-color="#1A1A1A"/>
+          </linearGradient>
+          <radialGradient id="g-hl" cx="40%" cy="40%" r="60%">
+            <stop offset="0%" stop-color="#FFE090" stop-opacity=".95"/>
+            <stop offset="100%" stop-color="#C09818" stop-opacity=".2"/>
+          </radialGradient>
+          <radialGradient id="g-tl" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#FF5555" stop-opacity=".9"/>
+            <stop offset="100%" stop-color="#CC2222" stop-opacity=".2"/>
+          </radialGradient>
+          <!-- Zone highlight gradients -->
+          <linearGradient id="g-z-engine" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#F0B429"/>
+            <stop offset="100%" stop-color="#C09818"/>
+          </linearGradient>
+          <linearGradient id="g-z-body" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#60a5fa"/>
+            <stop offset="100%" stop-color="#2563eb"/>
+          </linearGradient>
+          <linearGradient id="g-z-interior" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#22c55e"/>
+            <stop offset="100%" stop-color="#16a34a"/>
+          </linearGradient>
+          <linearGradient id="g-z-wheel" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#f87171"/>
+            <stop offset="100%" stop-color="#dc2626"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Ground shadow -->
+        <ellipse cx="300" cy="218" rx="245" ry="10" fill="rgba(0,0,0,.4)"/>
+
+        <!-- ═══ CAR BODY ═══ -->
+        <!-- Main lower body + sill -->
+        <path d="M 92 150 L 92 168 Q 93 176 106 178 L 128 179 Q 131 162 131 162 L 145 152 Z" fill="url(#g-body)" stroke="rgba(255,255,255,.05)" stroke-width=".5"/>
+        <path d="M 145 152 L 465 152 L 476 160 L 134 160 Z" fill="#0C0E16"/>
+        <path d="M 465 150 L 465 168 L 490 168 L 500 160 L 500 150 Z" fill="url(#g-body)" stroke="rgba(255,255,255,.04)" stroke-width=".5"/>
+
+        <!-- Front bumper -->
+        <path d="M 88 140 Q 84 140 82 145 Q 80 151 84 155 L 106 162 L 125 152 L 125 132 L 92 132 Z" fill="url(#g-body)" stroke="rgba(255,255,255,.04)" stroke-width=".5"/>
+        <path d="M 82 150 Q 80 157 86 162 L 106 166 L 106 162 L 86 157 Z" fill="#090B14"/>
+        <rect x="88" y="152" width="20" height="4" rx="2" fill="#181B28"/>
+
+        <!-- Main body slab -->
+        <path d="M 125 132 L 125 152 L 465 152 L 478 132 L 478 122 L 462 120 L 125 120 Z" fill="url(#g-body)" stroke="rgba(255,255,255,.05)" stroke-width=".5"/>
+
+        <!-- Body character lines -->
+        <path d="M 100 132 Q 210 126 300 126 Q 390 126 474 130" stroke="rgba(255,255,255,.1)" stroke-width="1.2" fill="none"/>
+        <path d="M 130 142 L 464 142" stroke="rgba(255,255,255,.04)" stroke-width=".8"/>
+
+        <!-- ROOF/CABIN -->
+        <path d="M 200 120 Q 206 92 228 77 L 268 63 Q 298 52 325 52 Q 362 52 394 61 L 433 77 Q 452 91 458 120 Z" fill="url(#g-roof)" stroke="rgba(255,255,255,.06)" stroke-width=".5"/>
+
+        <!-- A-pillar shadow -->
+        <path d="M 200 120 Q 215 92 230 78 L 242 72 L 258 70 L 252 98 L 222 120 Z" fill="#0A0C16" opacity=".8"/>
+        <!-- C-pillar shadow -->
+        <path d="M 458 120 Q 452 92 440 78 L 428 72 L 415 70 L 420 98 L 446 120 Z" fill="#0A0C16" opacity=".8"/>
+
+        <!-- Windshield -->
+        <path d="M 224 120 L 234 74 L 272 62 L 298 60 L 298 98 L 255 103 Z" fill="url(#g-glass)" opacity=".9"/>
+        <path d="M 238 77 L 246 71 L 250 82 L 242 89 Z" fill="white" opacity=".1"/>
+        <path d="M 285 62 L 294 61 L 294 80 L 282 78 Z" fill="white" opacity=".06"/>
+
+        <!-- Rear window -->
+        <path d="M 374 61 L 423 73 L 445 101 L 442 120 L 398 120 L 363 97 Z" fill="url(#g-glass)" opacity=".9"/>
+        <path d="M 418 76 L 425 72 L 428 83 L 420 88 Z" fill="white" opacity=".1"/>
+
+        <!-- Middle door glass -->
+        <path d="M 302 59 Q 334 51 365 61 L 394 98 L 302 98 Z" fill="url(#g-glass)" opacity=".85"/>
+        <path d="M 325 56 L 348 51 L 348 65 L 325 70 Z" fill="white" opacity=".07"/>
+
+        <!-- B-pillar -->
+        <rect x="297" y="60" width="6" height="58" fill="#0A0C16" opacity=".95"/>
+
+        <!-- REAR -->
+        <path d="M 478 122 L 478 152 L 506 152 L 514 162 Q 518 165 516 172 L 494 175 Q 487 160 487 160 L 478 152 Z" fill="url(#g-body)" stroke="rgba(255,255,255,.04)" stroke-width=".5"/>
+        <path d="M 514 156 Q 520 156 522 160 Q 524 166 520 170 L 495 173 L 495 168 L 518 165 Q 518 160 516 158 Z" fill="#090B14"/>
+        <rect x="496" y="157" width="20" height="4" rx="2" fill="#181B28"/>
+
+        <!-- HEADLIGHTS -->
+        <path d="M 83 127 Q 81 122 83 117 L 100 114 L 112 118 L 109 132 L 88 134 Z" fill="#0C0E1C"/>
+        <!-- DRL strip -->
+        <path d="M 85 122 Q 90 119 103 119 L 110 124" stroke="#FFD060" stroke-width="2.2" fill="none" stroke-linecap="round" opacity=".85"/>
+        <!-- Main beam -->
+        <ellipse cx="95" cy="126" rx="9" ry="6.5" fill="url(#g-hl)" opacity=".65"/>
+        <ellipse cx="90" cy="120" rx="5" ry="3" fill="#FFE0A0" opacity=".2"/>
+        <!-- Cover glass -->
+        <path d="M 82 117 L 114 115 L 112 134 L 82 136 Z" fill="rgba(180,210,240,.05)" stroke="rgba(255,255,255,.09)" stroke-width=".5"/>
+
+        <!-- TAILLIGHTS -->
+        <path d="M 503 120 L 518 120 L 522 135 L 517 152 L 503 152 Z" fill="#0C0E1C"/>
+        <!-- LED strip -->
+        <path d="M 505 124 L 516 124 L 516 148 L 505 148" stroke="#FF3333" stroke-width="2.2" fill="none" stroke-linecap="round" opacity=".8"/>
+        <ellipse cx="510" cy="135" rx="4.5" ry="8" fill="url(#g-tl)" opacity=".55"/>
+        <path d="M 503 120 L 520 120 L 522 154 L 503 154 Z" fill="rgba(200,50,50,.04)" stroke="rgba(255,80,80,.1)" stroke-width=".5"/>
+
+        <!-- ═══ WHEELS ═══ -->
+        <!-- Front wheel -->
+        <g id="wheel-f">
+          <circle cx="168" cy="181" r="36" fill="url(#g-wheel)"/>
+          <circle cx="168" cy="181" r="36" fill="none" stroke="#2E2E2E" stroke-width="2.5"/>
+          <circle cx="168" cy="181" r="29" fill="#161616"/>
+          <circle cx="168" cy="181" r="23" fill="none" stroke="#3C3C3C" stroke-width="1.5"/>
+          <!-- 6-spoke rim -->
+          <g stroke="#505050" stroke-width="3" stroke-linecap="round">
+            <line x1="168" y1="158" x2="168" y2="168"/>
+            <line x1="187.8" y1="163.2" x2="180.6" y2="170.4"/>
+            <line x1="189.4" y1="181" x2="181" y2="181"/>
+            <line x1="187.8" y1="198.8" x2="180.6" y2="191.6"/>
+            <line x1="168" y1="204" x2="168" y2="194"/>
+            <line x1="148.2" y1="198.8" x2="155.4" y2="191.6"/>
+            <line x1="146.6" y1="181" x2="155" y2="181"/>
+            <line x1="148.2" y1="163.2" x2="155.4" y2="170.4"/>
+          </g>
+          <circle cx="168" cy="181" r="19" fill="none" stroke="#3A3A3A" stroke-width=".8"/>
+          <circle cx="168" cy="181" r="8" fill="#222" stroke="#4A4A4A" stroke-width="1"/>
+          <circle cx="168" cy="181" r="3.5" fill="#C09818"/>
+          <!-- Brake caliper -->
+          <path d="M 160 161 Q 152 164 152 172" stroke="#ef4444" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".5"/>
+        </g>
+        <!-- Rear wheel -->
+        <g id="wheel-r">
+          <circle cx="432" cy="181" r="36" fill="url(#g-wheel)"/>
+          <circle cx="432" cy="181" r="36" fill="none" stroke="#2E2E2E" stroke-width="2.5"/>
+          <circle cx="432" cy="181" r="29" fill="#161616"/>
+          <circle cx="432" cy="181" r="23" fill="none" stroke="#3C3C3C" stroke-width="1.5"/>
+          <g stroke="#505050" stroke-width="3" stroke-linecap="round">
+            <line x1="432" y1="158" x2="432" y2="168"/>
+            <line x1="451.8" y1="163.2" x2="444.6" y2="170.4"/>
+            <line x1="453.4" y1="181" x2="445" y2="181"/>
+            <line x1="451.8" y1="198.8" x2="444.6" y2="191.6"/>
+            <line x1="432" y1="204" x2="432" y2="194"/>
+            <line x1="412.2" y1="198.8" x2="419.4" y2="191.6"/>
+            <line x1="410.6" y1="181" x2="419" y2="181"/>
+            <line x1="412.2" y1="163.2" x2="419.4" y2="170.4"/>
+          </g>
+          <circle cx="432" cy="181" r="19" fill="none" stroke="#3A3A3A" stroke-width=".8"/>
+          <circle cx="432" cy="181" r="8" fill="#222" stroke="#4A4A4A" stroke-width="1"/>
+          <circle cx="432" cy="181" r="3.5" fill="#C09818"/>
+          <path d="M 424 161 Q 416 164 416 172" stroke="#ef4444" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".5"/>
+        </g>
+
+        <!-- Wheel arches -->
+        <path d="M 124 160 Q 136 152 168 152 Q 200 152 206 160 Q 205 166 200 167 Q 174 167 168 167 Q 162 167 136 167 Q 128 166 124 160 Z" fill="#080A12" stroke="rgba(255,255,255,.04)" stroke-width=".5"/>
+        <path d="M 392 160 Q 406 152 432 152 Q 458 152 472 160 Q 470 166 465 167 Q 448 167 432 167 Q 416 167 400 167 Q 392 166 392 160 Z" fill="#080A12" stroke="rgba(255,255,255,.04)" stroke-width=".5"/>
+
+        <!-- ═══ ZONE HIGHLIGHTS ═══ (toggled via JS opacity) -->
+        <!-- Engine zone (front) -->
+        <g id="z-engine" class="zone-group" style="opacity:0;transition:opacity .3s;">
+          <path d="M 82 117 L 125 117 L 125 152 L 82 152 Q 78 152 78 145 L 78 128 Q 78 120 82 117 Z" fill="url(#g-z-engine)" opacity=".18"/>
+          <path d="M 82 117 L 125 117 L 125 152 L 82 152 Q 78 152 78 145 L 78 128 Q 78 120 82 117 Z" fill="none" stroke="#F0B429" stroke-width="1.8" opacity=".55"/>
+        </g>
+
+        <!-- Body zone (sides) -->
+        <g id="z-body" class="zone-group" style="opacity:0;transition:opacity .3s;">
+          <rect x="125" y="120" width="353" height="32" fill="url(#g-z-body)" opacity=".14"/>
+          <rect x="125" y="152" width="353" height="10" fill="url(#g-z-body)" opacity=".1"/>
+          <rect x="125" y="120" width="353" height="42" fill="none" stroke="#60a5fa" stroke-width="1.2" opacity=".4"/>
+        </g>
+
+        <!-- Interior zone (cabin/roof) -->
+        <g id="z-interior" class="zone-group" style="opacity:0;transition:opacity .3s;">
+          <path d="M 200 120 Q 206 92 228 77 L 268 63 Q 298 52 325 52 Q 362 52 394 61 L 433 77 Q 452 91 458 120 Z" fill="url(#g-z-interior)" opacity=".16"/>
+          <path d="M 200 120 Q 206 92 228 77 L 268 63 Q 298 52 325 52 Q 362 52 394 61 L 433 77 Q 452 91 458 120 Z" fill="none" stroke="#22c55e" stroke-width="1.8" opacity=".5"/>
+        </g>
+
+        <!-- Wheel zone -->
+        <g id="z-wheel" class="zone-group" style="opacity:0;transition:opacity .3s;">
+          <circle cx="168" cy="181" r="37" fill="url(#g-z-wheel)" opacity=".2"/>
+          <circle cx="168" cy="181" r="37" fill="none" stroke="#f87171" stroke-width="1.8" opacity=".65"/>
+          <circle cx="432" cy="181" r="37" fill="url(#g-z-wheel)" opacity=".2"/>
+          <circle cx="432" cy="181" r="37" fill="none" stroke="#f87171" stroke-width="1.8" opacity=".65"/>
+        </g>
+
+        <!-- ═══ HOTSPOT NODES ═══ -->
+        <!-- 1. Workshop / Engine -->
+        <g class="hs-node" id="hs-engine" onclick="toggleSvc('workshop')" style="cursor:pointer;">
+          <circle class="hs-ring" cx="104" cy="124" r="10" fill="#F0B429" opacity=".2"/>
+          <circle class="hs-core" cx="104" cy="124" r="7" fill="#F0B429"/>
+          <circle cx="104" cy="124" r="4.5" fill="white" opacity=".85"/>
+          <line x1="104" y1="117" x2="104" y2="100" stroke="#F0B429" stroke-width="1" opacity=".45" stroke-dasharray="2,3"/>
+          <rect x="64" y="87" width="80" height="16" rx="8" fill="rgba(240,180,41,.12)" stroke="rgba(240,180,41,.28)" stroke-width=".8"/>
+          <text x="104" y="99" text-anchor="middle" font-family="Rajdhani,sans-serif" font-size="9" font-weight="700" fill="#F0B429" letter-spacing=".6">WORKSHOP</text>
+        </g>
+
+        <!-- 2. Cosmetic / Body -->
+        <g class="hs-node" id="hs-body" onclick="toggleSvc('cosmetic')" style="cursor:pointer;">
+          <circle class="hs-ring" cx="295" cy="138" r="10" fill="#60a5fa" opacity=".2"/>
+          <circle class="hs-core" cx="295" cy="138" r="7" fill="#60a5fa"/>
+          <circle cx="295" cy="138" r="4.5" fill="white" opacity=".85"/>
+          <line x1="295" y1="131" x2="295" y2="114" stroke="#60a5fa" stroke-width="1" opacity=".45" stroke-dasharray="2,3"/>
+          <rect x="247" y="101" width="96" height="16" rx="8" fill="rgba(96,165,250,.1)" stroke="rgba(96,165,250,.28)" stroke-width=".8"/>
+          <text x="295" y="113" text-anchor="middle" font-family="Rajdhani,sans-serif" font-size="9" font-weight="700" fill="#60a5fa" letter-spacing=".6">COSMETIC CARE</text>
+        </g>
+
+        <!-- 3. Smart Fitments / Interior -->
+        <g class="hs-node" id="hs-interior" onclick="toggleSvc('fitments')" style="cursor:pointer;">
+          <circle class="hs-ring" cx="338" cy="80" r="10" fill="#22c55e" opacity=".2"/>
+          <circle class="hs-core" cx="338" cy="80" r="7" fill="#22c55e"/>
+          <circle cx="338" cy="80" r="4.5" fill="white" opacity=".85"/>
+          <line x1="338" y1="73" x2="338" y2="55" stroke="#22c55e" stroke-width="1" opacity=".45" stroke-dasharray="2,3"/>
+          <rect x="289" y="42" width="98" height="16" rx="8" fill="rgba(34,197,94,.1)" stroke="rgba(34,197,94,.28)" stroke-width=".8"/>
+          <text x="338" y="54" text-anchor="middle" font-family="Rajdhani,sans-serif" font-size="9" font-weight="700" fill="#22c55e" letter-spacing=".6">SMART FITMENTS</text>
+        </g>
+
+        <!-- 4. Roadside / Wheel -->
+        <g class="hs-node" id="hs-wheel" onclick="toggleSvc('roadside')" style="cursor:pointer;">
+          <circle class="hs-ring" cx="432" cy="145" r="10" fill="#f87171" opacity=".2"/>
+          <circle class="hs-core" cx="432" cy="145" r="7" fill="#f87171"/>
+          <circle cx="432" cy="145" r="4.5" fill="white" opacity=".85"/>
+          <line x1="432" y1="138" x2="432" y2="118" stroke="#f87171" stroke-width="1" opacity=".45" stroke-dasharray="2,3"/>
+          <rect x="381" y="105" width="102" height="16" rx="8" fill="rgba(248,113,113,.1)" stroke="rgba(248,113,113,.28)" stroke-width=".8"/>
+          <text x="432" y="117" text-anchor="middle" font-family="Rajdhani,sans-serif" font-size="9" font-weight="700" fill="#f87171" letter-spacing=".6">ROADSIDE ASSIST</text>
+        </g>
+      </svg>
+    </div>
+
+    <!-- Tag pills showing selected -->
+    <div class="svc-tags" id="svc-tags">
+      <span class="svc-hint">No service selected yet</span>
+    </div>
+  </div>
+
+  <!-- Legend / clickable service cards -->
+  <div class="svc-legend">
+    <div class="svc-leg-item" id="leg-workshop" style="--c:#F0B429;--c-rgb:240,180,41;" onclick="toggleSvc('workshop')">
+      <div class="svc-leg-dot" style="background:#F0B429;"></div>
+      <div class="svc-leg-name">Workshop<br><span class="svc-leg-desc">Engine, AC, suspension, electrical</span></div>
+      <div class="svc-leg-check">
+        <svg fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="3.5" width="8" height="8" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg>
+      </div>
+    </div>
+    <div class="svc-leg-item" id="leg-cosmetic" style="--c:#60a5fa;--c-rgb:96,165,250;" onclick="toggleSvc('cosmetic')">
+      <div class="svc-leg-dot" style="background:#60a5fa;"></div>
+      <div class="svc-leg-name">Cosmetic Care<br><span class="svc-leg-desc">Wash, polish, detailing, ceramic</span></div>
+      <div class="svc-leg-check">
+        <svg fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="3.5" width="8" height="8" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg>
+      </div>
+    </div>
+    <div class="svc-leg-item" id="leg-fitments" style="--c:#22c55e;--c-rgb:34,197,94;" onclick="toggleSvc('fitments')">
+      <div class="svc-leg-dot" style="background:#22c55e;"></div>
+      <div class="svc-leg-name">Smart Fitments<br><span class="svc-leg-desc">GPS, dashcam, OBD, TPMS</span></div>
+      <div class="svc-leg-check">
+        <svg fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="3.5" width="8" height="8" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg>
+      </div>
+    </div>
+    <div class="svc-leg-item" id="leg-roadside" style="--c:#f87171;--c-rgb:248,113,113;" onclick="toggleSvc('roadside')">
+      <div class="svc-leg-dot" style="background:#f87171;"></div>
+      <div class="svc-leg-name">Roadside Assist<br><span class="svc-leg-desc">24/7 towing, jumpstart, tyre</span></div>
+      <div class="svc-leg-check">
+        <svg fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="3.5" width="8" height="8" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg>
+      </div>
+    </div>
+  </div>
+  <div class="err-msg" id="err-svc" style="margin-top:10px;">⚠ Please select at least one service to continue</div>
+
+  <!-- Urgency -->
+  <div class="sec-lbl" style="margin-top:28px;">How urgent? <span class="req">*</span></div>
+  <div class="urg-grid">
+    <div class="urg-card" id="urg-now" style="--uc:#f87171;--uc-rgb:248,113,113;" onclick="setUrgency('Immediate',this)">
+      <div class="urg-icon-box"><svg fill="none" viewBox="0 0 24 24" stroke="#f87171" stroke-width="2" width="18" height="18" stroke-linecap="round"><path d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126z"/></svg></div>
+      <div class="urg-name">Immediate</div>
+      <div class="urg-sub">Need help now</div>
+    </div>
+    <div class="urg-card active" id="urg-soon" style="--uc:#F0B429;--uc-rgb:240,180,41;" onclick="setUrgency('This week',this)">
+      <div class="urg-icon-box"><svg fill="none" viewBox="0 0 24 24" stroke="#F0B429" stroke-width="2" width="18" height="18" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+      <div class="urg-name">This week</div>
+      <div class="urg-sub">In a few days</div>
+    </div>
+    <div class="urg-card" id="urg-plan" style="--uc:#60a5fa;--uc-rgb:96,165,250;" onclick="setUrgency('Planning',this)">
+      <div class="urg-icon-box"><svg fill="none" viewBox="0 0 24 24" stroke="#60a5fa" stroke-width="2" width="18" height="18" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg></div>
+      <div class="urg-name">Planning</div>
+      <div class="urg-sub">Just exploring</div>
+    </div>
+  </div>
+
+  <div class="btn-row">
+    <button class="btn-next" onclick="goStep(2)">
+      Continue
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" width="15" height="15" stroke-linecap="round"><path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+    </button>
+  </div>
+
+  <div class="trust-strip">
+    <div class="trust-item"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="13" height="13" stroke-linecap="round"><path d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"/></svg> Confirmed within 1 hour</div>
+    <div class="trust-item"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="13" height="13" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg> No upfront payment</div>
+    <div class="trust-item"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="13" height="13" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07"/></svg> We call you</div>
+  </div>
+</div>
+
+<!-- ══════════════ STEP 2 ══════════════ -->
+<div class="step-panel" id="step-2">
+  <div class="step-eyebrow">Step 2 of 3</div>
+  <div class="step-title">Your Vehicle</div>
+  <div class="step-sub">Quick details so our team arrives fully prepared.</div>
+
+  <div class="sec-lbl">Fuel / Powertrain <span class="req">*</span></div>
+  <div class="fuel-grid">
+    <div class="fuel-card" data-val="Petrol" onclick="selectFuel(this)">
+      <span class="fuel-emoji">🔥</span>
+      <div class="fuel-name">Petrol</div>
+    </div>
+    <div class="fuel-card" data-val="Diesel" onclick="selectFuel(this)">
+      <span class="fuel-emoji">⛽</span>
+      <div class="fuel-name">Diesel</div>
+    </div>
+    <div class="fuel-card" data-val="Electric" onclick="selectFuel(this)">
+      <span class="fuel-emoji">⚡</span>
+      <div class="fuel-name">Electric</div>
+    </div>
+    <div class="fuel-card" data-val="Hybrid" onclick="selectFuel(this)">
+      <span class="fuel-emoji">🌿</span>
+      <div class="fuel-name">Hybrid</div>
+    </div>
+  </div>
+  <div class="err-msg" id="err-fuel">⚠ Please select fuel type</div>
+
+  <div class="sec-lbl" style="margin-top:24px;">Make &amp; Model <span class="req">*</span></div>
+  <div class="inp-row">
+    <div class="field">
+      <label class="field-lbl">Brand</label>
+      <select class="inp" id="vbrand">
+        <option value="">Select brand</option>
+        <option>Toyota</option><option>Honda</option><option>Hyundai</option>
+        <option>Kia</option><option>Maruti Suzuki</option><option>BMW</option>
+        <option>Mercedes-Benz</option><option>Tesla</option><option>BYD</option>
+        <option>MG</option><option>Tata</option><option>Audi</option>
+        <option>Volkswagen</option><option>Nissan</option><option>Lexus</option>
+        <option>Jeep</option><option>Other</option>
+      </select>
+      <div class="err-msg" id="err-brand">⚠ Required</div>
+    </div>
+    <div class="field">
+      <label class="field-lbl">Model</label>
+      <input class="inp" id="vmodel" placeholder="e.g. Prius, City, Seltos">
+      <div class="err-msg" id="err-model">⚠ Required</div>
+    </div>
+  </div>
+  <div class="inp-row">
+    <div class="field">
+      <label class="field-lbl">Year <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--text3);">(optional)</span></label>
+      <select class="inp" id="vyear">
+        <option value="">Year</option>
+        <script>for(let y=2025;y>=2000;y--)document.write(`<option>${y}</option>`);</script>
+      </select>
+    </div>
+    <div class="field">
+      <label class="field-lbl">Reg. Number <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--text3);">(optional)</span></label>
+      <input class="inp" id="vreg" placeholder="BA 1 PA 1234" style="text-transform:uppercase;">
+    </div>
+  </div>
+
+  <div class="btn-row">
+    <button class="btn-back" onclick="goStep(1)">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" width="13" height="13" stroke-linecap="round"><path d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"/></svg>
+      Back
+    </button>
+    <button class="btn-next" onclick="goStep(3)">
+      Continue
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" width="15" height="15" stroke-linecap="round"><path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+    </button>
+  </div>
+</div>
+
+<!-- ══════════════ STEP 3 ══════════════ -->
+<div class="step-panel" id="step-3">
+  <div class="step-eyebrow">Step 3 of 3</div>
+  <div class="step-title">Almost Done</div>
+  <div class="step-sub">Your contact info — we'll call you to confirm everything.</div>
+
+  <div class="inp-row">
+    <div class="field">
+      <label class="field-lbl">Full Name <span class="req">*</span></label>
+      <input class="inp" id="fname" placeholder="Your full name">
+      <div class="err-msg" id="err-fname">⚠ Required</div>
+    </div>
+    <div class="field">
+      <label class="field-lbl">Mobile <span class="req">*</span></label>
+      <input class="inp" id="fmobile" type="tel" placeholder="98XXXXXXXX" maxlength="10">
+      <div class="err-msg" id="err-fmobile">⚠ Enter a valid 10-digit number</div>
+    </div>
+  </div>
+  <div class="field">
+    <label class="field-lbl">Address / Area <span class="req">*</span></label>
+    <input class="inp" id="faddress" placeholder="Street, area, city">
+    <div class="err-msg" id="err-faddress">⚠ Required</div>
+  </div>
+
+  <div class="sec-lbl" style="margin-top:22px;">Add-ons</div>
+  <div class="toggle-stack">
+    <div class="toggle-row" id="tog-pickup" onclick="toggleRow(this)">
+      <div class="toggle-info">
+        <div class="toggle-name">Pick-up &amp; Drop-off</div>
+        <div class="toggle-sub">We collect and return your vehicle</div>
+      </div>
+      <div class="sw"></div>
+    </div>
+    <div class="toggle-row" id="tog-appt" onclick="toggleRow(this)">
+      <div class="toggle-info">
+        <div class="toggle-name">Schedule a Time Slot</div>
+        <div class="toggle-sub">We'll arrange your preferred appointment</div>
+      </div>
+      <div class="sw"></div>
+    </div>
+  </div>
+
+  <div class="field" style="margin-top:14px;">
+    <label class="field-lbl">Notes <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--text3);">(optional)</span></label>
+    <textarea class="inp" id="fnotes" rows="2" placeholder="Any symptoms, preferred time, extra details…" style="resize:vertical;"></textarea>
+  </div>
+
+  <div class="divider"></div>
+  <div id="review-box" class="review-card"></div>
+
+  <label class="check-row" onclick="toggleCB('cb1')">
+    <input type="checkbox" id="cb1">
+    <div class="cbox"></div>
+    <span class="check-text">The information I've provided is accurate and correct.</span>
+  </label>
+  <label class="check-row" onclick="toggleCB('cb2')">
+    <input type="checkbox" id="cb2">
+    <div class="cbox"></div>
+    <span class="check-text">I agree to <a href="#">AutoViindu's terms and conditions</a>.</span>
+  </label>
+  <div class="err-msg" id="err-terms">⚠ Please agree to both checkboxes to proceed</div>
+
+  <div class="btn-row">
+    <button class="btn-back" onclick="goStep(2)">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" width="13" height="13" stroke-linecap="round"><path d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"/></svg>
+      Back
+    </button>
+    <button class="btn-submit" id="submit-btn" onclick="submitForm()">
+      <span id="submit-label">
+        Confirm Booking
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" style="width:14px;height:14px;display:inline-block;vertical-align:middle;margin-left:4px;" stroke-linecap="round"><path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+      </span>
+    </button>
+  </div>
+</div>
+
+<!-- ══════════════ SUCCESS ══════════════ -->
+<div class="success-screen" id="success-screen">
+  <div class="success-ring">
+    <svg fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2.5" width="26" height="26" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg>
+  </div>
+  <div style="font-family:'Rajdhani',sans-serif;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--green);margin-bottom:6px;">Request Received</div>
+  <div class="success-title">You're All Set!</div>
+  <p class="success-sub">Our team will call you within <strong>1 hour</strong> to confirm your booking and discuss all details.</p>
+  <div class="ref-box">
+    <div class="ref-label">Reference Number</div>
+    <div class="ref-num" id="ref-num">AV-000000</div>
+  </div>
+  <br>
+  <div class="contact-box">
+    <strong>+977-9701076240</strong><br>
+    Newroad, Kathmandu &nbsp;·&nbsp; Mon–Sat, 9am–6pm
+  </div>
+  <button class="btn-reset" onclick="resetForm()">Submit Another Request</button>
+</div>
+
+</div><!-- /form-outer -->
+
+<footer>
+  © 2025 AutoViindu Pvt. Ltd. &nbsp;·&nbsp; Kathmandu, Nepal &nbsp;·&nbsp; Your trust, our commitment
+</footer>
+
+<script>
+const APPS_SCRIPT_URL = 'YOUR_APPS_SCRIPT_URL';
+
+let state = {
+  serviceCategory:'', urgency:'This week',
+  fuelType:'', brand:'', model:'', year:'', regNumber:'',
+  fullName:'', mobile:'', address:'',
+  pickupRequired:'No', appointmentNeeded:'No', notes:''
+};
+let currentStep = 1;
+
+// Service zone definitions
+const ZONES = {
+  workshop: {
+    zoneEl:'z-engine', hsEl:'hs-engine', legEl:'leg-workshop',
+    label:'Workshop', color:'#F0B429', rgb:'240,180,41'
+  },
+  cosmetic: {
+    zoneEl:'z-body', hsEl:'hs-body', legEl:'leg-cosmetic',
+    label:'Cosmetic Care', color:'#60a5fa', rgb:'96,165,250'
+  },
+  fitments: {
+    zoneEl:'z-interior', hsEl:'hs-interior', legEl:'leg-fitments',
+    label:'Smart Fitments', color:'#22c55e', rgb:'34,197,94'
+  },
+  roadside: {
+    zoneEl:'z-wheel', hsEl:'hs-wheel', legEl:'leg-roadside',
+    label:'Roadside Assist', color:'#f87171', rgb:'248,113,113'
+  }
+};
+let selected = new Set();
+
+function haptic(t) {
+  if (!navigator.vibrate) return;
+  const map = {select:8,nav:6,error:[18,8,18],success:[10,6,10,6,40]};
+  navigator.vibrate(map[t]||6);
+}
+
+function toggleSvc(key) {
+  haptic('select');
+  const z = ZONES[key];
+  const zone = document.getElementById(z.zoneEl);
+  const hs   = document.getElementById(z.hsEl);
+  const leg  = document.getElementById(z.legEl);
+
+  if (selected.has(key)) {
+    selected.delete(key);
+    zone.style.opacity = '0';
+    hs.classList.remove('active');
+    leg.classList.remove('active');
+  } else {
+    selected.add(key);
+    zone.style.opacity = '1';
+    hs.classList.add('active');
+    leg.classList.add('active');
+  }
+
+  state.serviceCategory = [...selected].map(k => ZONES[k].label).join(', ');
+  renderTags();
+  if (state.serviceCategory) hide('err-svc');
+}
+
+function renderTags() {
+  const el = document.getElementById('svc-tags');
+  if (!selected.size) {
+    el.innerHTML = '<span class="svc-hint">No service selected yet</span>';
+    return;
+  }
+  el.innerHTML = [...selected].map(k => {
+    const z = ZONES[k];
+    return `<span class="svc-tag" style="background:rgba(${z.rgb},.1);border:1px solid rgba(${z.rgb},.3);color:${z.color};">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3.5" width="8" height="8" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg>
+      ${z.label}
+    </span>`;
+  }).join('');
+}
+
+function setUrgency(val, el) {
+  haptic('select');
+  document.querySelectorAll('.urg-card').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  state.urgency = val;
+}
+
+function selectFuel(el) {
+  haptic('select');
+  document.querySelectorAll('.fuel-card').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  state.fuelType = el.dataset.val;
+  hide('err-fuel');
+}
+
+function toggleRow(el) {
+  el.classList.toggle('on');
+  haptic('select');
+  if (el.id === 'tog-pickup') state.pickupRequired = el.classList.contains('on') ? 'Yes' : 'No';
+  if (el.id === 'tog-appt')   state.appointmentNeeded = el.classList.contains('on') ? 'Yes' : 'No';
+}
+
+function toggleCB(id) {
+  const cb = document.getElementById(id);
+  cb.checked = !cb.checked;
+  haptic('select');
+}
+
+function goStep(n) {
+  if (n > currentStep && !validateStep(currentStep)) return;
+  haptic('nav');
+  document.querySelectorAll('.step-panel').forEach(p => p.classList.remove('active'));
+  const p = document.getElementById('step-'+n);
+  if (p) p.classList.add('active');
+  for (let i=1;i<=3;i++) {
+    const d = document.getElementById('pd-'+i);
+    d.classList.remove('active','done');
+    if (i<n) d.classList.add('done');
+    else if (i===n) d.classList.add('active');
+  }
+  document.getElementById('prog-fill').style.width = [0,50,100][n-1]+'%';
+  document.getElementById('prog-pct').textContent = `Step ${n} / 3`;
+  currentStep = n;
+  if (n===3) buildReview();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function validateStep(n) {
+  let ok = true;
+  if (n===1) {
+    if (!state.serviceCategory) { show('err-svc'); ok=false; } else hide('err-svc');
+  }
+  if (n===2) {
+    if (!state.fuelType)            { show('err-fuel');  ok=false; } else hide('err-fuel');
+    const b = v('vbrand');
+    if (!b)                         { show('err-brand'); ok=false; } else { hide('err-brand'); state.brand=b; }
+    const m = v('vmodel').trim();
+    if (!m)                         { show('err-model'); ok=false; } else { hide('err-model'); state.model=m; }
+    state.year = v('vyear');
+    state.regNumber = v('vreg').toUpperCase();
+  }
+  if (!ok) haptic('error');
+  return ok;
+}
+
+function buildReview() {
+  state.notes = v('fnotes');
+  const veh = [state.brand, state.model, state.year, state.fuelType].filter(Boolean).join(' · ');
+  const rows = [
+    ['Service', state.serviceCategory||'—'],
+    ['Urgency', state.urgency],
+    ['Vehicle', veh||'—'],
+    ['Pickup',  state.pickupRequired],
+    ['Slot',    state.appointmentNeeded],
+  ].filter(r => r[1] && r[1]!=='—');
+  document.getElementById('review-box').innerHTML = rows.map(([k,val]) =>
+    `<div class="review-row"><span class="review-key">${k}</span><span class="review-val">${val}</span></div>`
+  ).join('');
+}
+
+async function submitForm() {
+  const name = v('fname').trim();
+  const mob  = v('fmobile').trim();
+  const addr = v('faddress').trim();
+  let ok = true;
+  if (!name)               { show('err-fname');    ok=false; } else hide('err-fname');
+  if (!mob||mob.length<10) { show('err-fmobile');  ok=false; } else hide('err-fmobile');
+  if (!addr)               { show('err-faddress'); ok=false; } else hide('err-faddress');
+  if (!document.getElementById('cb1').checked || !document.getElementById('cb2').checked) {
+    show('err-terms'); ok=false;
+  } else hide('err-terms');
+  if (!ok) { haptic('error'); return; }
+
+  state.fullName = name; state.mobile = mob; state.address = addr; state.notes = v('fnotes');
+  const ref = 'AV-'+Date.now().toString().slice(-6);
+  const payload = {...state, ref, timestamp: new Date().toLocaleString('en-GB',{timeZone:'Asia/Kathmandu'})};
+
+  const btn = document.getElementById('submit-btn');
+  btn.classList.add('loading');
+  document.getElementById('submit-label').innerHTML = '<span class="spin">↻</span> Confirming…';
+
+  if (APPS_SCRIPT_URL && APPS_SCRIPT_URL !== 'YOUR_APPS_SCRIPT_URL') {
+    try { await fetch(APPS_SCRIPT_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}); }
+    catch(e){ console.warn('Sheets error:',e); }
+  } else {
+    await new Promise(r => setTimeout(r,1000));
+    console.log('DEMO payload:', payload);
+  }
+
+  haptic('success');
+  document.querySelectorAll('.step-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById('ref-num').textContent = ref;
+  document.getElementById('success-screen').classList.add('show');
+  document.getElementById('prog-fill').style.width = '100%';
+  document.getElementById('prog-pct').textContent = 'Complete!';
+  for(let i=1;i<=3;i++){const d=document.getElementById('pd-'+i);d.classList.remove('active');d.classList.add('done');}
+}
+
+function resetForm() {
+  state = {serviceCategory:'',urgency:'This week',fuelType:'',brand:'',model:'',year:'',regNumber:'',fullName:'',mobile:'',address:'',pickupRequired:'No',appointmentNeeded:'No',notes:''};
+  selected.clear();
+  document.getElementById('success-screen').classList.remove('show');
+  // Reset car
+  Object.values(ZONES).forEach(z => {
+    document.getElementById(z.zoneEl).style.opacity = '0';
+    document.getElementById(z.hsEl).classList.remove('active');
+    document.getElementById(z.legEl).classList.remove('active');
+  });
+  renderTags();
+  document.querySelectorAll('.fuel-card').forEach(c => c.classList.remove('active'));
+  document.querySelectorAll('.urg-card').forEach(c => c.classList.remove('active'));
+  document.getElementById('urg-soon').classList.add('active');
+  document.querySelectorAll('.toggle-row').forEach(t => t.classList.remove('on'));
+  document.querySelectorAll('input[type=checkbox]').forEach(c => c.checked=false);
+  document.querySelectorAll('.inp').forEach(i => {
+    if(i.tagName==='INPUT'||i.tagName==='TEXTAREA') i.value='';
+    if(i.tagName==='SELECT') i.selectedIndex=0;
+  });
+  document.getElementById('submit-btn').classList.remove('loading');
+  document.getElementById('submit-label').innerHTML = 'Confirm Booking <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" style="width:14px;height:14px;display:inline-block;vertical-align:middle;margin-left:4px;" stroke-linecap="round"><path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>';
+  document.getElementById('prog-fill').style.width = '0%';
+  document.getElementById('prog-pct').textContent = 'Step 1 / 3';
+  for(let i=1;i<=3;i++){const d=document.getElementById('pd-'+i);d.classList.remove('done','active');if(i===1)d.classList.add('active');}
+  currentStep = 1;
+  document.getElementById('step-1').classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function v(id)    { return document.getElementById(id)?.value||''; }
+function show(id) { const e=document.getElementById(id); if(e) e.style.display='block'; }
+function hide(id) { const e=document.getElementById(id); if(e) e.style.display='none'; }
+</script>
+</body>
+</html>
