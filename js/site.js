@@ -9,15 +9,15 @@
     set: (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} }
   };
 
-  /* Theme toggle (system by default) */
+  /* Theme toggle (light by default) */
   d.querySelectorAll('[data-theme-toggle]').forEach(btn => {
     const label = () => {
-      const t = root.dataset.theme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      const t = root.dataset.theme || 'light';
       btn.querySelector('span').textContent = t === 'dark' ? 'Light mode' : 'Dark mode';
     };
     label();
     btn.addEventListener('click', () => {
-      const cur = root.dataset.theme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      const cur = root.dataset.theme || 'light';
       root.dataset.theme = cur === 'dark' ? 'light' : 'dark';
       store.set('theme', root.dataset.theme); label();
     });

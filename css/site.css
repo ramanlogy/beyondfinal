@@ -41,15 +41,6 @@
   --z-sticky: 20; --z-nav: 50; --z-menu: 60; --z-float: 40;
   color-scheme: light;
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0d1310; --surface: #141c18; --surface-2: #1c2621; --ink: #e6ece7; --ink-2: #b1bcb5; --ink-3: #87938b;
-    --line: rgba(230, 236, 231, .12); --line-2: rgba(230, 236, 231, .22);
-    --accent: #5fc297; --accent-hover: #7ed2ad; --accent-ink: #08160f; --accent-soft: #17332a;
-    --deep: #09100c; --deep-ink: #dfe7e1; --shadow: 0 1px 2px rgba(0,0,0,.3), 0 12px 32px -14px rgba(0,0,0,.6);
-    color-scheme: dark;
-  }
-}
 :root[data-theme="dark"] {
   --bg: #0d1310; --surface: #141c18; --surface-2: #1c2621; --ink: #e6ece7; --ink-2: #b1bcb5; --ink-3: #87938b;
   --line: rgba(230, 236, 231, .12); --line-2: rgba(230, 236, 231, .22);
@@ -512,7 +503,6 @@ td:first-child { font-weight: 500; }
 .field .help { font-size: .8rem; color: var(--ink-3); }
 .field .err { font-size: .82rem; color: #b3261e; display: none; }
 :root[data-theme="dark"] .field .err { color: #f2b8b5; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .field .err { color: #f2b8b5; } }
 .field.invalid input, .field.invalid select { border-color: #b3261e; }
 .field.invalid .err { display: block; }
 .form-actions { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; }

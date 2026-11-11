@@ -124,8 +124,7 @@ def head(title, desc, path, image="/images/web/hero-1600.webp", ld=None, preload
 <meta property="og:image" content="{SITE}{image}">
 <meta property="og:locale" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#f1f3ee" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0d1310" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f1f3ee">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="/fonts/geist-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>{pre}
