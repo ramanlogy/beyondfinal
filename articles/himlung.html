@@ -1,1000 +1,377 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Complete Guide to Himlung Himal Climbing 2026 | Beyond Summit Expeditions</title>
-  <meta name="description" content="The definitive Himlung Himal guide for 2026. Full 21-day itinerary through the Nar Phu Valley, permit costs, gear list and honest expectations for this remote 7,126m Himalayan expedition peak. Updated February 2026.">
-  <meta name="author" content="Beyond Summit Expeditions">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=DM+Sans:wght@300;400;500;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --gold: #c9933a; --gold-light: #e8b564; --gold-pale: #f5e6cc;
-      --onyx: #0d0d0f; --mist: #f7f5f2; --snow: #ffffff;
-      --text: #2a2a2e; --text-muted: #7a7a82; --border: #e8e4df;
-      --teal: #1a5c52; --teal-pale: rgba(26,92,82,0.07);
-      --blue: #1e3a5f; --blue-pale: rgba(30,58,95,0.07);
-      --font-display: 'DM Serif Display', serif;
-      --font-serif: 'Cormorant Garamond', serif;
-      --font-body: 'DM Sans', sans-serif;
-      --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      --radius: 1.5rem;
-    }
-    html { scroll-behavior: smooth; }
-    body { font-family: var(--font-body); color: var(--text); background: var(--snow); -webkit-font-smoothing: antialiased; }
-    ::-webkit-scrollbar { width: 5px; }
-    ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 10px; }
-
-    /* NAV */
-    .nav {
-      position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.97);
-      backdrop-filter: blur(20px); border-bottom: 1px solid var(--border);
-      padding: 1rem 1.5rem; display: flex; align-items: center; justify-content: space-between;
-    }
-    @media(min-width:1024px) { .nav { padding: 1rem 4rem; } }
-    .nav-logo { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; }
-    .nav-logo-icon { width: 28px; height: 28px; background: var(--gold); clip-path: polygon(50% 0%,0% 100%,100% 100%); flex-shrink: 0; }
-    .nav-logo-name { font-family: var(--font-display); font-size: 1rem; color: var(--onyx); }
-    .nav-back { display: flex; align-items: center; gap: 0.5rem; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; transition: color var(--transition); }
-    .nav-back:hover { color: var(--gold); }
-    .nav-back svg { transition: transform var(--transition); }
-    .nav-back:hover svg { transform: translateX(-3px); }
-
-    /* BREADCRUMB */
-    .breadcrumb { padding: 1rem 1.5rem; max-width: 800px; margin: 0 auto; }
-    @media(min-width:1024px) { .breadcrumb { padding: 1.25rem 0; } }
-    .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; }
-    .breadcrumb li { display: flex; align-items: center; gap: 0.4rem; font-size: 0.72rem; color: var(--text-muted); }
-    .breadcrumb li a { color: var(--text-muted); text-decoration: none; transition: color var(--transition); }
-    .breadcrumb li a:hover { color: var(--gold); }
-    .breadcrumb li:not(:last-child)::after { content: '›'; opacity: 0.5; }
-    .breadcrumb li:last-child { color: var(--text); font-weight: 600; }
-
-    /* HERO */
-    .article-hero { position: relative; height: 55vh; min-height: 320px; overflow: hidden; background: var(--onyx); }
-    .article-hero img { width: 100%; height: 100%; object-fit: cover; opacity: 0.65; }
-    .article-hero-gradient { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(13,13,15,0.35) 0%, rgba(13,13,15,0.1) 40%, var(--snow) 100%); }
-    .article-hero-label {
-      position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
-      font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase;
-      color: rgba(255,255,255,0.45); white-space: nowrap;
-    }
-
-    /* LAYOUT */
-    .article-wrap { max-width: 1120px; margin: 0 auto; padding: 0 1.5rem; }
-    @media(min-width:1024px) { .article-wrap { display: grid; grid-template-columns: 1fr 300px; gap: 4rem; padding: 0 2rem; } }
-    .article-main { padding-bottom: 4rem; }
-
-    /* HEADER */
-    .article-header { margin-bottom: 2.5rem; }
-    .article-meta-top { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; margin-bottom: 1.25rem; }
-    .article-cat { background: var(--gold-pale); color: var(--gold); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 100px; }
-    .article-cat.solo { background: var(--blue-pale); color: var(--blue); }
-    .article-cat.red { background: rgba(180,40,40,0.08); color: #9b2020; }
-    .article-date { font-size: 0.78rem; color: var(--text-muted); }
-    .article-read { font-size: 0.78rem; color: var(--text-muted); }
-    .article-title { font-family: var(--font-display); font-size: clamp(1.9rem, 5vw, 3.2rem); line-height: 1.1; color: var(--onyx); margin-bottom: 1.25rem; letter-spacing: -0.01em; }
-    .article-excerpt { font-size: 1.1rem; line-height: 1.7; color: var(--text-muted); border-left: 3px solid var(--gold); padding-left: 1.25rem; margin-bottom: 1.75rem; }
-    .article-share { display: flex; align-items: center; gap: 0.75rem; padding: 1rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-    .article-share span { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); }
-    .share-btn { display: flex; align-items: center; gap: 0.4rem; background: var(--mist); border: none; cursor: pointer; padding: 0.4rem 0.9rem; border-radius: 100px; font-family: var(--font-body); font-size: 0.72rem; font-weight: 600; color: var(--text); transition: var(--transition); }
-    .share-btn:hover { background: var(--gold-pale); color: var(--gold); }
-
-    /* CONTENT */
-    .article-content { font-size: 1rem; line-height: 1.85; color: var(--text); }
-    @media(min-width:768px) { .article-content { font-size: 1.05rem; } }
-    .article-content h2 { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2rem); color: var(--onyx); margin: 2.5rem 0 1rem; line-height: 1.15; }
-    .article-content h3 { font-family: var(--font-display); font-size: 1.3rem; color: var(--onyx); margin: 2rem 0 0.75rem; }
-    .article-content p { margin-bottom: 1.25rem; }
-    .article-content ul, .article-content ol { margin: 0 0 1.25rem 1.5rem; }
-    .article-content li { margin-bottom: 0.5rem; }
-    .article-content strong { font-weight: 700; color: var(--onyx); }
-    .article-content a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
-    .article-content a:hover { color: var(--onyx); }
-    .article-content blockquote {
-      background: var(--mist); border-left: 4px solid var(--gold);
-      padding: 1.5rem 1.75rem; border-radius: 0 var(--radius) var(--radius) 0;
-      margin: 2rem 0; font-family: var(--font-serif); font-size: 1.2rem;
-      color: var(--onyx); line-height: 1.6; font-style: italic;
-    }
-    .article-content blockquote cite { display: block; margin-top: 0.75rem; font-size: 0.8rem; font-style: normal; color: var(--text-muted); font-family: var(--font-body); }
-
-    /* EXPEDITION BANNER */
-    .expedition-banner {
-      background: linear-gradient(135deg, rgba(155,32,32,0.07), rgba(155,32,32,0.02));
-      border: 1.5px solid rgba(155,32,32,0.2);
-      border-radius: var(--radius); padding: 1.5rem 1.75rem; margin: 2rem 0;
-      display: flex; gap: 1.25rem; align-items: flex-start;
-    }
-    .expedition-banner-icon { flex-shrink: 0; margin-top: 0.15rem; color: #9b2020; }
-    .expedition-banner h4 { font-family: var(--font-display); font-size: 1rem; color: #9b2020; margin-bottom: 0.4rem; }
-    .expedition-banner p { font-size: 0.88rem; line-height: 1.65; color: var(--text); margin: 0; }
-
-    /* SOLO BANNER */
-    .solo-banner {
-      background: linear-gradient(135deg, var(--blue-pale), rgba(30,58,95,0.03));
-      border: 1.5px solid rgba(30,58,95,0.2);
-      border-radius: var(--radius); padding: 1.5rem 1.75rem; margin: 2rem 0;
-      display: flex; gap: 1.25rem; align-items: flex-start;
-    }
-    .solo-banner-icon { flex-shrink: 0; margin-top: 0.15rem; color: var(--blue); }
-    .solo-banner h4 { font-family: var(--font-display); font-size: 1rem; color: var(--blue); margin-bottom: 0.4rem; }
-    .solo-banner p { font-size: 0.88rem; line-height: 1.65; color: var(--text); margin: 0; }
-
-    /* PROGRESSION LADDER */
-    .progression-ladder { margin: 2rem 0; display: flex; flex-direction: column; }
-    .ladder-step {
-      display: flex; align-items: center; gap: 1rem; padding: 0.9rem 1.25rem;
-      border: 1px solid var(--border); border-bottom: none; background: var(--snow);
-      transition: background var(--transition);
-    }
-    .ladder-step:first-child { border-radius: var(--radius) var(--radius) 0 0; }
-    .ladder-step:last-child { border-bottom: 1px solid var(--border); border-radius: 0 0 var(--radius) var(--radius); }
-    .ladder-step.active { background: var(--mist); border-color: rgba(201,147,58,0.3); }
-    .ladder-step.active .ladder-peak { color: var(--gold); }
-    .ladder-num { width: 28px; height: 28px; background: var(--mist); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 0.8rem; color: var(--text-muted); flex-shrink: 0; }
-    .ladder-step.active .ladder-num { background: var(--gold); color: var(--snow); }
-    .ladder-peak { font-weight: 700; font-size: 0.88rem; color: var(--text); }
-    .ladder-alt { font-size: 0.75rem; color: var(--text-muted); margin-left: auto; white-space: nowrap; }
-
-    /* VS BANNER */
-    .vs-banner {
-      display: flex; align-items: flex-start; gap: 1rem;
-      background: linear-gradient(135deg, rgba(201,147,58,0.08), rgba(201,147,58,0.04));
-      border: 1px solid rgba(201,147,58,0.25); border-radius: var(--radius);
-      padding: 1.25rem 1.5rem; margin: 2rem 0;
-    }
-    .vs-banner-icon { flex-shrink: 0; color: var(--gold); margin-top: 0.15rem; }
-    .vs-banner p { margin: 0; font-size: 0.9rem; line-height: 1.6; color: var(--text); }
-    .vs-banner strong { color: var(--gold); }
-
-    /* INFO BOXES */
-    .info-box { border-radius: var(--radius); padding: 1.5rem 1.75rem; margin: 2rem 0; border: 1px solid transparent; }
-    .info-box.tip { background: rgba(201,147,58,0.08); border-color: rgba(201,147,58,0.2); }
-    .info-box.warning { background: rgba(231,76,60,0.06); border-color: rgba(231,76,60,0.2); }
-    .info-box.note { background: var(--mist); border-color: var(--border); }
-    .info-box.green { background: rgba(39,174,96,0.06); border-color: rgba(39,174,96,0.2); }
-    .info-box.blue { background: var(--blue-pale); border-color: rgba(30,58,95,0.2); }
-    .info-box-header { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.6rem; }
-    .info-box-title { font-size: 0.7rem; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; }
-    .info-box.tip .info-box-title { color: var(--gold); }
-    .info-box.warning .info-box-title { color: #c0392b; }
-    .info-box.note .info-box-title { color: var(--text-muted); }
-    .info-box.green .info-box-title { color: #27ae60; }
-    .info-box.blue .info-box-title { color: var(--blue); }
-    .info-box-icon { flex-shrink: 0; }
-    .info-box.tip .info-box-icon { color: var(--gold); }
-    .info-box.warning .info-box-icon { color: #c0392b; }
-    .info-box.note .info-box-icon { color: var(--text-muted); }
-    .info-box.green .info-box-icon { color: #27ae60; }
-    .info-box.blue .info-box-icon { color: var(--blue); }
-    .info-box p { font-size: 0.9rem; line-height: 1.7; margin: 0; color: var(--text); }
-
-    /* ITINERARY */
-    .phase-label { font-size: 0.65rem; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); padding: 1rem 0 0.25rem; border-top: 2px solid var(--border); margin-top: 1rem; display: block; }
-    .phase-label:first-child { border-top: none; margin-top: 0; padding-top: 0; }
-    .itinerary { margin: 2rem 0; }
-    .itinerary-day { display: flex; gap: 1.25rem; padding: 1.25rem 0; border-bottom: 1px solid var(--border); }
-    .itinerary-day:last-child { border-bottom: none; }
-    .day-number { width: 48px; height: 48px; flex-shrink: 0; background: var(--onyx); color: var(--snow); border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; font-family: var(--font-display); }
-    .day-number.summit-day { background: linear-gradient(135deg, #3a1a00, #c9933a); }
-    .day-number.acclimatise { background: #1c3a2d; }
-    .day-number.rest { background: #1a2a4a; }
-    .day-number span:first-child { font-size: 0.5rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); }
-    .day-number.acclimatise span:first-child { color: #6abf99; }
-    .day-number.rest span:first-child { color: #8aabdb; }
-    .day-number span:last-child { font-size: 1.1rem; line-height: 1; }
-    .day-content h4 { font-family: var(--font-display); font-size: 1.05rem; color: var(--onyx); margin-bottom: 0.3rem; }
-    .day-content p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin: 0; }
-    .day-meta { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.4rem; }
-    .day-tag { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; background: var(--mist); color: var(--text-muted); padding: 0.2rem 0.6rem; border-radius: 100px; }
-    .day-tag.peak { background: rgba(201,147,58,0.1); color: var(--gold); }
-    .day-tag.blue { background: var(--blue-pale); color: var(--blue); }
-    .day-tag.green { background: rgba(39,174,96,0.08); color: #27ae60; }
-    .day-tag.red { background: rgba(155,32,32,0.08); color: #9b2020; }
-
-    /* TABLES */
-    .cost-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
-    .cost-table th { text-align: left; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); padding: 0.75rem 1rem; border-bottom: 2px solid var(--gold-pale); }
-    .cost-table td { padding: 0.85rem 1rem; border-bottom: 1px solid var(--border); font-size: 0.88rem; }
-    .cost-table tr:nth-child(even) td { background: var(--mist); }
-    .cost-table tr:last-child td { font-weight: 700; border-bottom: none; }
-
-    .compare-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
-    .compare-table th { text-align: left; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); padding: 0.75rem 1rem; border-bottom: 2px solid var(--gold-pale); }
-    .compare-table td { padding: 0.85rem 1rem; border-bottom: 1px solid var(--border); font-size: 0.88rem; vertical-align: top; }
-    .compare-table tr:nth-child(even) td { background: var(--mist); }
-    .compare-table tr:last-child td { border-bottom: none; }
-    .compare-table .hl { color: var(--gold); font-weight: 700; }
-
-    /* SIDEBAR */
-    .article-sidebar { padding-top: 2rem; }
-    @media(min-width:1024px) { .article-sidebar { padding-top: 0; } }
-    .sidebar-sticky { position: sticky; top: 5rem; display: flex; flex-direction: column; gap: 1.5rem; }
-    .sidebar-widget { background: var(--mist); border-radius: var(--radius); padding: 1.5rem; border: 1px solid var(--border); }
-    .sidebar-widget-title { font-family: var(--font-display); font-size: 1.1rem; color: var(--onyx); margin-bottom: 1rem; }
-    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 0.35rem; }
-    .toc-list li a { font-size: 0.82rem; color: var(--text-muted); text-decoration: none; transition: color var(--transition); display: block; padding: 0.2rem 0; }
-    .toc-list li a:hover { color: var(--gold); padding-left: 4px; }
-    .cta-widget { background: var(--onyx); border-radius: var(--radius); padding: 1.75rem; text-align: center; }
-    .cta-widget h3 { font-family: var(--font-display); color: var(--snow); font-size: 1.4rem; margin-bottom: 0.6rem; }
-    .cta-widget p { font-size: 0.82rem; color: rgba(255,255,255,0.5); line-height: 1.65; margin-bottom: 1.25rem; }
-    .btn-gold { display: block; background: var(--gold); color: var(--snow); text-decoration: none; text-align: center; padding: 0.85rem 1.5rem; border-radius: 0.75rem; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; transition: var(--transition); }
-    .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); }
-    .sidebar-fact { display: flex; align-items: center; gap: 0.75rem; padding: 0.6rem 0; border-bottom: 1px solid var(--border); }
-    .sidebar-fact:last-child { border-bottom: none; }
-    .sidebar-fact-icon { color: var(--gold); flex-shrink: 0; }
-    .sidebar-fact-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-muted); }
-    .sidebar-fact-val { font-size: 0.9rem; font-weight: 700; color: var(--text); }
-    .sidebar-next-peaks { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.5rem; }
-    .next-peak-item { display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; padding: 0.5rem 0.75rem; background: var(--snow); border-radius: 0.6rem; border: 1px solid var(--border); text-decoration: none; color: var(--text); transition: border-color var(--transition), color var(--transition); }
-    .next-peak-item:hover { border-color: var(--gold); color: var(--gold); }
-    .next-peak-item span:last-child { font-size: 0.68rem; color: var(--text-muted); }
-
-    /* RELATED */
-    .related-posts { background: var(--mist); padding: 4rem 1.5rem; }
-    @media(min-width:1024px) { .related-posts { padding: 5rem 4rem; } }
-    .related-grid { display: grid; gap: 1.5rem; max-width: 1120px; margin: 2rem auto 0; }
-    @media(min-width:640px) { .related-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media(min-width:1024px) { .related-grid { grid-template-columns: repeat(3, 1fr); } }
-    .related-card { background: var(--snow); border-radius: var(--radius); overflow: hidden; text-decoration: none; display: block; border: 1px solid var(--border); transition: transform var(--transition), box-shadow var(--transition); }
-    .related-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.08); }
-    .related-card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; }
-    .related-card-body { padding: 1.25rem; }
-    .related-card-cat { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.4rem; display: block; }
-    .related-card-title { font-family: var(--font-display); font-size: 1.1rem; color: var(--onyx); line-height: 1.25; }
-    .related-posts h2 { font-family: var(--font-display); font-size: 2rem; color: var(--onyx); text-align: center; }
-
-    /* FOOTER */
-    .footer { background: var(--onyx); color: rgba(255,255,255,0.5); padding: 3rem 1.5rem; text-align: center; }
-    .footer a { color: var(--gold-light); text-decoration: none; }
-    .footer p { font-size: 0.8rem; }
-  </style>
-</head>
-<body>
-
-  <nav class="nav" role="navigation" aria-label="Site navigation">
-    <a href="/" class="nav-logo" aria-label="Beyond Summit Expeditions - Home">
-      <div class="nav-logo-icon" aria-hidden="true"></div>
-      <span class="nav-logo-name">Beyond Summit</span>
-    </a>
-    <a href="/blog" class="nav-back">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
-      All Articles
-    </a>
-  </nav>
-
-  <div class="breadcrumb" aria-label="Breadcrumb">
-    <ol>
-      <li><a href="/">Home</a></li>
-      <li><a href="/blog">Blog</a></li>
-      <li>Himlung Himal Climbing Guide 2026</li>
-    </ol>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Himlung Himal Expedition (7,126 m): 24-Day Itinerary &amp; Map</title>
+<meta name="description" content="24-day Himlung Himal expedition, a non-technical 7,000 m peak reached through the restricted Nar Phu valley. Route map, altitude profile and requirements. From US$4,500.">
+<link rel="canonical" href="https://www.beyondsummitexped.com/articles/himlung.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Beyond Summit Expeditions">
+<meta property="og:title" content="Himlung Himal Expedition (7,126 m): 24-Day Itinerary &amp; Map">
+<meta property="og:description" content="24-day Himlung Himal expedition, a non-technical 7,000 m peak reached through the restricted Nar Phu valley. Route map, altitude profile and requirements. From US$4,500.">
+<meta property="og:url" content="https://www.beyondsummitexped.com/articles/himlung.html">
+<meta property="og:image" content="https://www.beyondsummitexped.com/images/places/phu-1600.webp">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f1f3ee" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d1310" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/geist-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="/images/places/phu-1024.webp" imagesrcset="/images/places/phu-640.webp 640w, /images/places/phu-1024.webp 1024w, /images/places/phu-1600.webp 1600w" imagesizes="100vw" fetchpriority="high">
+<link rel="stylesheet" href="/css/site.css?v=2">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="di3Rvm0gqVdeUF9iTgLxQQ" async></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TravelAgency","@id":"https://www.beyondsummitexped.com/#organization","name":"Beyond Summit Expeditions","url":"https://www.beyondsummitexped.com/","logo":"https://www.beyondsummitexped.com/favicon.svg","image":"https://www.beyondsummitexped.com/images/web/hero-1600.webp","description":"Small-group trekking and mountaineering company in Thamel, Kathmandu, licensed by the Department of Tourism, Government of Nepal.","telephone":"+9779811157421","email":"info@beyondsummitexped.com","priceRange":"$$","address":{"@type":"PostalAddress","streetAddress":"Thamel","addressLocality":"Kathmandu","postalCode":"44600","addressCountry":"NP"},"areaServed":{"@type":"Country","name":"Nepal"},"sameAs":["https://www.instagram.com/beyondsummitexpeditions","https://www.facebook.com/beyondsummitexped","https://www.youtube.com/@beyondsummitexpeditions"],"founder":{"@type":"Person","name":"Elwin Tamang"},"memberOf":[{"@type":"Organization","name":"Trekking Agencies' Association of Nepal","alternateName":"TAAN","url":"https://www.taan.org.np/"},{"@type":"Organization","name":"Nepal Mountaineering Association","alternateName":"NMA","url":"https://www.nepalmountaineering.org/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.beyondsummitexped.com/"},{"@type":"ListItem","position":2,"name":"Climbing","item":"https://www.beyondsummitexped.com/expeditions.html"},{"@type":"ListItem","position":3,"name":"Himlung Himal"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TouristTrip","name":"Himlung Himal Expedition","description":"24-day Himlung Himal expedition, a non-technical 7,000 m peak reached through the restricted Nar Phu valley. Route map, altitude profile and requirements. From US$4,500.","url":"https://www.beyondsummitexped.com/articles/himlung.html","image":"https://www.beyondsummitexped.com/images/places/phu-1600.webp","touristType":"Mountaineers","provider":{"@id":"https://www.beyondsummitexped.com/#organization"},"itinerary":{"@type":"ItemList","numberOfItems":14,"itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"TouristAttraction","name":"Day 1: Kathmandu: briefing and gear check","description":"We collect your permits, go through every piece of kit with your lead guide and fill any gaps in Thamel."}},{"@type":"ListItem","position":2,"item":{"@type":"TouristAttraction","name":"Day 2: Drive to Koto","description":"Via Besisahar and the Marsyangdi valley road to Koto, where the restricted Nar Phu area begins."}},{"@type":"ListItem","position":3,"item":{"@type":"TouristAttraction","name":"Day 3: Koto to Meta","description":"Up the narrow Nar Khola gorge, past waterfalls and cave shelters, to Meta."}},{"@type":"ListItem","position":4,"item":{"@type":"TouristAttraction","name":"Day 4: Meta to Kyang","description":"Past old chortens and abandoned winter settlements."}},{"@type":"ListItem","position":5,"item":{"@type":"TouristAttraction","name":"Day 5: Kyang to Phu","description":"Through a narrow gate in the cliffs to Phu, a village of stone houses that has barely changed in centuries."}},{"@type":"ListItem","position":6,"item":{"@type":"TouristAttraction","name":"Day 6: Rest day in Phu","description":"A visit to Tashi Lhakhang monastery above the village."}},{"@type":"ListItem","position":7,"item":{"@type":"TouristAttraction","name":"Day 7: Phu to Base Camp","description":"Up the side valley to base camp at about 4,900 m."}},{"@type":"ListItem","position":8,"item":{"@type":"TouristAttraction","name":"Day 8-9: Base camp: puja and training","description":"Puja ceremony, rest and a fixed-rope refresher."}},{"@type":"ListItem","position":9,"item":{"@type":"TouristAttraction","name":"Day 10-13: First rotation","description":"Carry and sleep at Camp 1, tag Camp 2, back to base camp."}},{"@type":"ListItem","position":10,"item":{"@type":"TouristAttraction","name":"Day 14-15: Rest at Base Camp","description":"Rest, eat well and wait for the right forecast."}},{"@type":"ListItem","position":11,"item":{"@type":"TouristAttraction","name":"Day 16-21: Summit push and weather days","description":"Up through the camps to the summit (7,126 m), along a broad snow ridge with views into Tibet and across to Manaslu. Spare days are kept for wind and snow."}},{"@type":"ListItem","position":12,"item":{"@type":"TouristAttraction","name":"Day 22: Base Camp to Meta","description":"A long day down the valley, through Phu and Kyang to Meta."}},{"@type":"ListItem","position":13,"item":{"@type":"TouristAttraction","name":"Day 23: Meta to Koto, drive to Besisahar","description":"Out of the restricted area and down the road."}},{"@type":"ListItem","position":14,"item":{"@type":"TouristAttraction","name":"Day 24: Drive to Kathmandu","description":"A full day's drive back to Kathmandu."}}]},"offers":{"@type":"Offer","price":4500,"priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://www.beyondsummitexped.com/articles/himlung.html","seller":{"@id":"https://www.beyondsummitexped.com/#organization"}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is Himlung a good first 7,000 m peak?","acceptedAnswer":{"@type":"Answer","text":"Yes. The route is mostly a glacier and snow climb on fixed lines, with a few steeper sections, and the approach gives good acclimatisation. You should have climbed at least one 6,000 m peak first."}},{"@type":"Question","name":"Will I use supplemental oxygen?","acceptedAnswer":{"@type":"Answer","text":"Most climbers summit without it. Oxygen is carried for emergencies and can be added for summit day on request."}},{"@type":"Question","name":"Why is Nar Phu restricted?","acceptedAnswer":{"@type":"Answer","text":"It lies close to the Tibetan border and was closed to foreigners until 2003. Permits are issued through a registered agency to groups with a licensed guide."}}]}</script>
+</head><body class="has-photo-hero is-trip">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header" id="header">
+  <div class="wrap header-inner">
+    <a href="/" class="brand" aria-label="Beyond Summit Expeditions, home"><svg class="logo-mark" viewBox="-1.5 -1.5 88 59" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M45.4 0 47.3 2.3 49.6 4.8 51.6 8.5 52.9 13.6 54.2 17.2 56.1 19.6 58.6 24.7 55.9 23.9 53.9 17.8 51.8 16.5 49.7 14.1 44.7 11.9 44.5 6.8 45 1.7Z" fill="currentColor" stroke="none" opacity=".9"/><path d="M0 50.8 2.9 46.6 5.1 43.2 7.2 41.3 8.8 38.1 11.2 34.5 12.6 31.5 13.7 30.8 15.2 25.6 17.8 20.7 19.6 17.9 20.5 19.2 21.8 18 23.4 19.9 25 22.3 26.3 21.9 27.7 24 29.5 24.8 30.9 23.9 32.8 19.9 35 17.9 37.2 13.8 39.6 8.9 41.6 5.1 43.4 2.8 45.4 0 47.3 2.3 49.6 4.8 51.6 8.5 52.9 13.6 54.2 17.2 56.1 19.6 58.6 24.7 60.4 26.7 63.3 28.4 67.4 29.1 71.7 27.7 75 29.7 81.3 31.8 85 29.1" stroke-width="1.6" vector-effect="non-scaling-stroke"/><path d="M3.7 55.7 10.2 49.3 12.8 47.9 20.3 39.3 24 38.3 28.3 47.1 36.7 55.7 M52.7 53.4 58.8 48.8 63.6 44.4 66.8 40.5 76.2 38.1 85 29.1" stroke-width="1.15" vector-effect="non-scaling-stroke"/><path d="M45 1.7 44.5 6.8 44.7 11.9 M19 20.9 19.5 27.4 19.6 34.6 20.7 38.9" stroke-width=".9" vector-effect="non-scaling-stroke" opacity=".6"/></svg><span>Beyond Summit<small>Expeditions, Kathmandu</small></span></a>
+    <nav class="nav" aria-label="Main"><a href="/trekking.html">Treks</a><a href="/expeditions.html" aria-current="page">Climbing</a><a href="/outdoor.html">Activities</a><a href="/gallery.html">Gallery</a><a href="/blog.html">Journal</a><a href="/about.html">About</a><a href="/contact.html" class="btn btn-primary">Plan your trip</a></nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span></button>
   </div>
-
-  <div class="article-hero" role="img" aria-label="Himlung Himal rising above the Nar Phu Valley with glaciated ridges in the evening light">
-    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1800&auto=format&fit=crop" alt="Himlung Himal summit slopes above the remote Nar Phu Valley, Nepal" loading="eager">
-    <div class="article-hero-gradient"></div>
-    <div class="article-hero-label">Himlung Himal · 7,126m · Nar Phu Valley, Nepal</div>
+</header>
+<nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
+  <a href="/trekking.html">Treks<svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a><a href="/expeditions.html">Climbing<svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a><a href="/outdoor.html">Activities<svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a><a href="/gallery.html">Gallery<svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a><a href="/blog.html">Journal<svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a><a href="/about.html">About<svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a><a href="/guides.html">Our team<svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a><a href="/contact.html">Contact<svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+  <a href="/contact.html" class="btn btn-primary btn-block">Plan your trip</a>
+  <div class="contact-mini"><a href="tel:+9779811157421">+977 981 115 7421</a><a href="mailto:info@beyondsummitexped.com">info@beyondsummitexped.com</a><span>Thamel, Kathmandu 44600, Nepal</span></div>
+</nav>
+<main id="main">
+<section class="photo-hero trip-hero on-photo" aria-labelledby="trip-title">
+  <picture><img src="/images/places/phu-1024.webp" srcset="/images/places/phu-640.webp 640w, /images/places/phu-1024.webp 1024w, /images/places/phu-1600.webp 1600w" sizes="100vw" width="1600" height="1068" alt="The stone village of Phu in the Nar Phu valley, on the approach to Himlung" fetchpriority="high" decoding="async"></picture>
+  <div class="wrap hero-in">
+    <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="/">Home</a></li><li><a href="/expeditions.html">Climbing</a></li><li aria-current="page">Himlung Himal</li></ol></nav>
+    <h1 id="trip-title">Himlung Himal Expedition</h1>
+    <p class="lede">A first 7,000 m summit, reached through the hidden Nar Phu valley.</p>
+    <div class="facts-bar">
+      <div><span>Duration</span><strong>24 days</strong></div>
+      <div><span>Max altitude</span><strong>7,126 m</strong></div>
+      <div><span>Grade</span><strong>Alpine PD</strong></div>
+      <div><span>Group</span><strong>2 to 6</strong></div>
+      <div><span>From</span><strong>US$4,500</strong></div>
+    </div>
   </div>
-
-  <article class="article-wrap">
-
-    <main class="article-main">
-      <header class="article-header">
-        <div class="article-meta-top">
-          <span class="article-cat">Expedition Peak Guide</span>
-          <span class="article-cat red">
-            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="display:inline;vertical-align:middle;margin-right:3px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            Nepal's Most Accessible 7,000m Peak
-          </span>
-          <time class="article-date" datetime="2026-02-19">February 19, 2026</time>
-          <span class="article-read">· 16 min read</span>
-        </div>
-        <h1 class="article-title">Complete Guide to Himlung Himal Climbing 2026</h1>
-        <p class="article-excerpt">
-          At 7,126 metres, Himlung Himal is the most accessible seven-thousander in Nepal — and one of the least-known. The approach winds through the Nar Phu Valley, a restricted-access gorge so remote it wasn't opened to foreign trekkers until 2002. What waits at the end is a genuine high-altitude expedition, without the crowds that have come to define better-known peaks.
-        </p>
-        <div class="article-share" aria-label="Share this article">
-          <span>Share:</span>
-          <button class="share-btn" onclick="navigator.clipboard?.writeText(window.location.href)">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-            Copy Link
-          </button>
-          <button class="share-btn">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-            Facebook
-          </button>
-        </div>
-      </header>
-
-      <div class="article-content">
-
-        <p>Most climbers have heard of Manaslu. Fewer know that just a ridge system away, tucked behind the restricted Nar Phu Valley on the Nepal-Tibet border, sits a 7,126-metre peak that can be reached without the bureaucratic complexity, the permit lottery, or the expedition cost of its more famous neighbour. Himlung Himal is that peak — and it rewards the people who find it with something increasingly rare in the Himalaya: genuine wilderness at genuinely extreme altitude.</p>
-
-        <p>The Nar Phu Valley is classified as a restricted area. A special permit is required to enter it, and the permit quota is deliberately kept low. The result is a mountain approached through one of the most culturally intact, visually spectacular valleys in Nepal, where the villages have barely changed in centuries and the trail sees only a handful of expedition teams each season. <strong>This is what Himalayan climbing looked like before Instagram.</strong></p>
-
-        <div class="expedition-banner">
-          <div class="expedition-banner-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          </div>
-          <div>
-            <h4>This Is Not a Trekking Peak</h4>
-            <p>Himlung Himal is classified by the Nepal Mountaineering Association as an <strong>expedition peak</strong>. It is, by a meaningful margin, the most technically accessible 7,000m peak in Nepal — but that is not the same as easy. The mountain requires three high camps, real glacier and mixed terrain, previous experience above 6,000m, and a serious commitment to acclimatisation. This guide is written for climbers who are ready to make that step up. <a href="#skills">Read our honest skills assessment →</a></p>
-          </div>
-        </div>
-
-        <div class="info-box note">
-          <div class="info-box-header">
-            <svg class="info-box-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-            <div class="info-box-title">Key Facts at a Glance</div>
-          </div>
-          <p><strong>Summit altitude:</strong> 7,126m (23,379ft) · <strong>Classification:</strong> NMA expedition peak · <strong>Route:</strong> Northwest Ridge (normal route) · <strong>Total duration:</strong> 21–25 days · <strong>Best seasons:</strong> October–November and April–May · <strong>Technical grade:</strong> PD (peu difficile) — sustained glacier travel, mixed sections on the upper ridge, three high camps · <strong>High camps:</strong> Three (Camp 1 ~5,800m, Camp 2 ~6,400m, Camp 3 ~6,700m) · <strong>Prior experience required:</strong> Summits above 6,000m essential; glacier and crampon experience mandatory</p>
-        </div>
-
-        <h2 id="overview">What Makes Himlung Different</h2>
-
-        <p>There are over a dozen seven-thousanders in Nepal. Most of them are expedition-category peaks requiring weeks of logistical setup, large teams, and six-figure permit costs. Himlung sits in a different bracket. The permit is significantly cheaper than Manaslu or Dhaulagiri. The approach is shorter than most. The normal route — the Northwest Ridge — is non-technical by the standards of other peaks at this altitude. And the valley it sits in is one of the most beautiful, least-visited places in the entire Himalayan range.</p>
-
-        <p>What this creates is a specific opportunity: the chance to climb a genuine 7,000-metre peak on a realistic budget, with a realistic timeline, through terrain that most Himalayan climbers never see. Himlung is popular enough that the route is well-established and the high camp infrastructure is known — but niche enough that you'll share the mountain with one or two other teams at most. In peak season on a major trekking peak, that's almost unimaginable.</p>
-
-        <div class="solo-banner">
-          <div class="solo-banner-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          </div>
-          <div>
-            <h4>The Nar Phu Valley: A Restricted-Access Approach</h4>
-            <p>The Nar Phu Valley sits at the northern edge of the Annapurna Conservation Area, bordering the Tibetan Plateau. It was opened to trekkers only in 2002 and still requires a special restricted area permit. The villages of Kyang, Nar, and Phu have been inhabited for centuries by Tibetan-origin communities — the architecture, the monasteries, and the way of life bear almost no resemblance to the Nepal most climbers encounter on EBC or Annapurna Circuit routes. The approach alone is worth planning a trip around.</p>
-          </div>
-        </div>
-
-        <div class="vs-banner">
-          <div class="vs-banner-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-          </div>
-          <p>Choosing between <strong>Himlung Himal</strong> and <strong>Mera Peak (6,476m)</strong>? Himlung is 650m higher, technically more demanding, and requires prior 6,000m summiting experience. <strong>If Mera is your first taste of high altitude and glacier travel, Himlung is the logical next step</strong> — not a simultaneous objective. Complete Mera, acclimatise, return in a future season for Himlung. <a href="/blog/mera-peak-climbing-guide">Read our Mera Peak guide →</a></p>
-        </div>
-
-        <h2 id="progression">Where Himlung Fits</h2>
-
-        <p>Himlung Himal occupies a specific and important position in the progression of Himalayan climbing: it is the most credible bridge between trekking peaks and the major expedition peaks. At 7,126m, it breaks the 7,000-metre barrier — a psychologically and physiologically significant threshold — without demanding the full expedition infrastructure that Manaslu, Dhaulagiri, or Cho Oyu require.</p>
-
-        <div class="progression-ladder" role="list">
-          <div class="ladder-step" role="listitem">
-            <div class="ladder-num">1</div>
-            <div>
-              <div class="ladder-peak">Multi-day trekking (Annapurna Circuit, EBC)</div>
-              <div style="font-size:0.75rem;color:var(--text-muted)">Foundation altitude and endurance</div>
-            </div>
-            <span class="ladder-alt">5,000–5,400m</span>
-          </div>
-          <div class="ladder-step" role="listitem">
-            <div class="ladder-num">2</div>
-            <div>
-              <div class="ladder-peak">Island Peak, Lobuche East, or Mera Peak</div>
-              <div style="font-size:0.75rem;color:var(--text-muted)">First glacier travel, crampons, 6,000m altitude</div>
-            </div>
-            <span class="ladder-alt">6,100–6,476m</span>
-          </div>
-          <div class="ladder-step" role="listitem">
-            <div class="ladder-num">3</div>
-            <div>
-              <div class="ladder-peak">Ama Dablam or Baruntse</div>
-              <div style="font-size:0.75rem;color:var(--text-muted)">Technical alpine ground, exposed ridges, multi-camp</div>
-            </div>
-            <span class="ladder-alt">6,800m</span>
-          </div>
-          <div class="ladder-step active" role="listitem">
-            <div class="ladder-num">4</div>
-            <div>
-              <div class="ladder-peak">Himlung Himal <span style="font-size:0.7rem;color:var(--gold);font-weight:700;margin-left:0.4rem">YOU ARE HERE</span></div>
-              <div style="font-size:0.75rem;color:var(--text-muted)">Expedition peak — 7,000m barrier, three camps, restricted valley</div>
-            </div>
-            <span class="ladder-alt">7,126m</span>
-          </div>
-          <div class="ladder-step" role="listitem">
-            <div class="ladder-num">5</div>
-            <div>
-              <div class="ladder-peak">Manaslu, Cho Oyu, Dhaulagiri</div>
-              <div style="font-size:0.75rem;color:var(--text-muted)">Eight-thousander-adjacent expeditions, full teams</div>
-            </div>
-            <span class="ladder-alt">8,000m+</span>
-          </div>
-        </div>
-
-        <h2 id="best-time">When to Go</h2>
-
-        <h3>Autumn (October to November)</h3>
-        <p>October is the prime month. Post-monsoon, the sky over the Nar Phu Valley clears dramatically — the kind of clear that produces that particular cobalt-blue Himalayan sky against white ridgelines that looks like a screen saver and is actually real life. The Northwest Ridge is in good condition through October and into mid-November. Summit windows tend to be longer and more stable in autumn, and the nights at high camp — while intensely cold — are predictable. <strong>Late October is the sweet spot.</strong></p>
-
-        <h3>Spring (April to May)</h3>
-        <p>Spring is Himlung's second season and has a devoted following among climbers who prefer the lower valley in bloom. The approach through Nar Phu in April is extraordinary — wild flowers on the lower trail, ancient monasteries framed by snow peaks, yak caravans crossing the high passes. On the mountain itself, April tends to produce good snow conditions on the upper ridge. May can become unsettled earlier than expected as the pre-monsoon builds. <strong>Our preferred spring window is mid-April through early May.</strong></p>
-
-        <div class="info-box warning">
-          <div class="info-box-header">
-            <svg class="info-box-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-            <div class="info-box-title">Altitude Demands Respect at 7,126m</div>
-          </div>
-          <p>At 7,126m, Himlung sits in the zone where altitude sickness becomes a genuine physiological threat, not just a discomfort. HACE (high-altitude cerebral edema) and HAPE (high-altitude pulmonary edema) are real risks above 6,000m, and Himlung's three-camp system means extended time in the death zone precursor zone. Our expedition includes a pulse oximeter check protocol at each camp, Gamow bag availability at base camp, and Sherpa guides trained in altitude emergency response. This is not a precaution — it is a standard operating procedure on any 7,000m peak.</p>
-        </div>
-
-        <h2 id="route">The Route — What You're Actually Climbing</h2>
-
-        <p>Himlung Himal's normal route — the Northwest Ridge — was first climbed in 1992 by a Japanese-Nepalese expedition. It has since become the established line, documented and refined over three decades of expedition traffic (relatively limited by Himalayan standards). The route is not technically extreme, but it is sustained, high, and committing.</p>
-
-        <h3>The Approach: Nar Phu Valley</h3>
-        <p>The approach from Koto on the Annapurna Circuit takes 4–5 days through the Nar Phu Valley to base camp at approximately 4,950m. The trail passes through Kyang and the ancient monastery village of Phu — the end of the road for most trekkers, who turn around here. Beyond Phu, the trail continues up the Phu Khola valley toward the Himlung base camp, threading through increasingly dramatic moraine and glacial terrain. The restricted valley permit means fewer than a few hundred trekkers enter this section each year.</p>
-
-        <h3>Base Camp to Camp 1 (5,800m)</h3>
-        <p>The route from base camp to Camp 1 traverses the Himlung Glacier — first on the lower glacier approach, then up a steeper section of mixed snow and ice to the camp at around 5,800m. This section requires crampons throughout and involves navigating moderate crevasse terrain. Camp 1 is established on a relatively sheltered plateau with views back down the valley and the Nar Phu peaks rising on either side.</p>
-
-        <h3>Camp 1 to Camp 2 (6,400m)</h3>
-        <p>The push to Camp 2 is the most technically demanding section of the standard route. The Northwest Ridge proper begins here, with steeper snow and occasional short mixed sections requiring ice axe and crampon technique beyond basic glacier walking. Fixed ropes are placed on the steep sections by the lead Sherpa team during the first rotation. Camp 2 is a tent-only affair on a narrow ridge crest — exposed, cold, and beautiful in that specific way that high exposed camps are beautiful.</p>
-
-        <h3>Camp 2 to Camp 3 (6,700m) and Summit</h3>
-        <p>Above Camp 2, the ridge continues at sustained high angle to Camp 3 at approximately 6,700m — one of the highest camps Beyond Summit operates, and the launch point for summit day. From Camp 3, the summit push is 400 vertical metres on the upper ridge and final summit slopes. The climbing is not technically extreme but the altitude is serious: every step above 6,700m is at the outer edge of where acclimatised human physiology can function effectively without supplemental oxygen. Summit day from Camp 3 typically takes 6–8 hours return.</p>
-
-        <div class="info-box tip">
-          <div class="info-box-header">
-            <svg class="info-box-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <div class="info-box-title">On Supplemental Oxygen</div>
-          </div>
-          <p>Himlung Himal is regularly climbed without supplemental oxygen by well-acclimatised, fit climbers. Beyond Summit does not include O2 as standard equipment, but it is available on request and we can advise whether it makes sense for your profile and ambitions. For clients with limited high-altitude experience making their first 7,000m attempt, we occasionally recommend bringing a single cylinder for emergency use. Talk to our team during the planning phase — this is an individual decision with no universal right answer.</p>
-        </div>
-
-        <h2 id="itinerary">21-Day Himlung Himal Itinerary</h2>
-
-        <p>The following is Beyond Summit's standard itinerary for Himlung Himal. It incorporates two acclimatisation rotations — essential on a peak of this altitude — and buffer days at key junctures. Do not attempt to compress this itinerary. Seven-thousand metres rewards patience and punishes speed.</p>
-
-        <div class="itinerary">
-
-          <span class="phase-label">Phase 1 — Approach Through the Nar Phu Valley</span>
-
-          <div class="itinerary-day">
-            <div class="day-number"><span>Day</span><span>1–2</span></div>
-            <div class="day-content">
-              <h4>Kathmandu → Besisahar → Koto (2,610m)</h4>
-              <p>Fly or drive to Besisahar, the starting point of the Annapurna Circuit, then continue by jeep or on foot to Koto — the entry point to the Nar Phu Valley and where the special restricted area permit is checked. The Kathmandu briefing on Day 1 covers expedition logistics, gear review, crampon and technical skills for returning clients, and an introduction to the altitude management protocol Beyond Summit uses above 6,000m.</p>
-              <div class="day-meta"><span class="day-tag">Drive or jeep to Koto</span><span class="day-tag red">Restricted area permit required</span></div>
-            </div>
-          </div>
-
-          <div class="itinerary-day">
-            <div class="day-number"><span>Day</span><span>3–5</span></div>
-            <div class="day-content">
-              <h4>Koto → Meta → Kyang → Phu (4,080m)</h4>
-              <p>Three days of genuine exploration-style trekking through the Nar Phu gorge — one of the most dramatic valleys in Nepal, barely wider than a river canyon in places. Meta and Kyang are tiny settlements; Phu is the largest village in the valley, home to a remarkable Tibetan-style monastery and a way of life that has survived largely unchanged at 4,080m. Most trekkers who enter Nar Phu turn around at Phu. The expedition continues.</p>
-              <div class="day-meta"><span class="day-tag">Remote, restricted valley</span><span class="day-tag green">Tibetan-origin villages</span><span class="day-tag">Phu: 4,080m</span></div>
-            </div>
-          </div>
-
-          <div class="itinerary-day">
-            <div class="day-number acclimatise"><span>Rest</span><span>4,080</span></div>
-            <div class="day-content">
-              <h4>Acclimatisation Day — Phu Village</h4>
-              <p>The climb to base camp gains nearly 900m of altitude in a single day — significant after a multi-day approach. This rest day allows exploration of Phu and its monastery, a short hike to the lateral moraine above the village for views toward Himlung, and important physiological acclimatisation before the final push to base camp. The monastery at Phu is one of the most atmospheric cultural sites in the entire Annapurna region.</p>
-              <div class="day-meta"><span class="day-tag blue">Acclimatisation</span><span class="day-tag green">Phu Monastery visit</span></div>
-            </div>
-          </div>
-
-          <div class="itinerary-day">
-            <div class="day-number"><span>Day</span><span>7</span></div>
-            <div class="day-content">
-              <h4>Phu → Base Camp (4,950m)</h4>
-              <p>The final approach to base camp follows the Phu Khola valley upstream through moraine and glacial terrain to the established base camp area at roughly 4,950m. The Himlung glacier becomes visible above, framed by the ridges of the Northwest Face. Base camp is home for the next two weeks — tents, cook tent, dining tent, toilet tent, and a team of Sherpa guides and support staff who make the logistics of a 7,000m expedition manageable.</p>
-              <div class="day-meta"><span class="day-tag">Base Camp: 4,950m</span><span class="day-tag">Himlung Glacier first views</span></div>
-            </div>
-          </div>
-
-          <span class="phase-label">Phase 2 — First Acclimatisation Rotation</span>
-
-          <div class="itinerary-day">
-            <div class="day-number"><span>Day</span><span>8–9</span></div>
-            <div class="day-content">
-              <h4>Base Camp → Camp 1 (5,800m) → Base Camp</h4>
-              <p>First rotation to Camp 1. This is an acclimatisation climb — carry some gear to the camp, sleep one night at 5,800m, and descend the following morning. The purpose is physiological: sleeping at 5,800m triggers red blood cell production and altitude adaptation that cannot be replicated at base camp altitude. The descent back to base camp on Day 9 feels disproportionately good. Rest for two days before the second rotation.</p>
-              <div class="day-meta"><span class="day-tag blue">First rotation</span><span class="day-tag">Camp 1: 5,800m</span><span class="day-tag">1 night high camp</span></div>
-            </div>
-          </div>
-
-          <div class="itinerary-day">
-            <div class="day-number acclimatise"><span>Rest</span><span>4,950</span></div>
-            <div class="day-content">
-              <h4>Rest Days — Base Camp (2 days)</h4>
-              <p>Two full rest days at base camp. Eat well. Sleep as much as possible. The body is adapting to altitude and the work happening internally is significant. Beyond Summit's base camp cook produces full hot meals; nutrition at altitude is one of the most overlooked performance factors on 7,000m peaks. Use these days to check and re-organise high camp gear, rest, and prepare mentally for the second rotation.</p>
-              <div class="day-meta"><span class="day-tag blue">Recovery</span><span class="day-tag">2 days base camp</span></div>
-            </div>
-          </div>
-
-          <span class="phase-label">Phase 3 — Second Acclimatisation Rotation</span>
-
-          <div class="itinerary-day">
-            <div class="day-number"><span>Day</span><span>12–14</span></div>
-            <div class="day-content">
-              <h4>Base Camp → Camp 1 → Camp 2 (6,400m) → Base Camp</h4>
-              <p>The second rotation pushes to Camp 2 at 6,400m — the highest point most climbers will have reached in their careers to this point. Spend one night at Camp 2, then descend all the way to base camp over two days. This rotation is where the expedition sorts itself out: how your body handles 6,400m determines the shape of summit week. Beyond Summit guides monitor client pulse oximetry, hydration, and symptom presentation throughout.</p>
-              <div class="day-meta"><span class="day-tag blue">Second rotation</span><span class="day-tag">Camp 2: 6,400m</span><span class="day-tag red">Highest point to date</span></div>
-            </div>
-          </div>
-
-          <div class="itinerary-day">
-            <div class="day-number acclimatise"><span>Rest</span><span>4,950</span></div>
-            <div class="day-content">
-              <h4>Rest Days — Base Camp (2 days)</h4>
-              <p>Two more recovery days at base camp before the summit push. By now the routine is familiar: eat, hydrate, rest, repeat. The Sherpa team uses these days to pre-position additional equipment at Camp 2 and establish Camp 3 if conditions allow. This is the logistical engine that makes summit day possible and it happens largely out of sight of the clients. Acknowledge the work being done on your behalf.</p>
-              <div class="day-meta"><span class="day-tag blue">Final recovery</span><span class="day-tag">Sherpa team establishes Camp 3</span></div>
-            </div>
-          </div>
-
-          <span class="phase-label">Phase 4 — Summit Push</span>
-
-          <div class="itinerary-day">
-            <div class="day-number"><span>Day</span><span>17</span></div>
-            <div class="day-content">
-              <h4>Base Camp → Camp 1 (5,800m)</h4>
-              <p>The summit push begins. After days of rest the legs feel fresh and the acclimatisation schedule has done its work. The move to Camp 1 is now familiar territory — treat it accordingly: don't rush, don't arrive tired, eat and hydrate well in the evening. Tomorrow climbs to the highest camp of the expedition and the day after that is summit day.</p>
-              <div class="day-meta"><span class="day-tag">Camp 1: 5,800m</span><span class="day-tag peak">Summit push begins</span></div>
-            </div>
-          </div>
-
-          <div class="itinerary-day">
-            <div class="day-number"><span>Day</span><span>18</span></div>
-            <div class="day-content">
-              <h4>Camp 1 → Camp 2 → Camp 3 (6,700m)</h4>
-              <p>A long day: through Camp 2 and on to Camp 3 at 6,700m. This is the highest camp Beyond Summit operates on Himlung — a small platform on the upper ridge, tent-only, exposed to wind from the northwest. Arrive by early afternoon. Prepare equipment meticulously for summit day: check harness, crampons, headtorch, thermos, down suit layers. Eat what you can, drink more than feels comfortable, and sleep by 18:00. Tomorrow's alarm is at 01:00.</p>
-              <div class="day-meta"><span class="day-tag">Camp 3: ~6,700m</span><span class="day-tag red">Exposed high camp</span><span class="day-tag">Long day</span></div>
-            </div>
-          </div>
-
-          <div class="itinerary-day">
-            <div class="day-number summit-day"><span>▲</span><span>7126</span></div>
-            <div class="day-content">
-              <h4>Summit Day — Camp 3 → 7,126m → Camp 2</h4>
-              <p>Alarm at 01:00. Dress in full down suit in the tent — at 6,700m before dawn, the cold is not inconvenient, it is dangerous. The headtorches string out up the upper ridge in the dark, moving steadily. The Northwest Ridge above Camp 3 involves some of the most committing terrain on the route — steep snow, occasional short mixed steps, exposure to the valley below on both sides. <strong>The summit at 7,126m is a snow plateau with views across the Tibetan border, west to the Annapurna massif, north to the peaks of Mustang.</strong> Descend to Camp 2 for the night. Himlung is climbed.</p>
-              <div class="day-meta"><span class="day-tag peak">Summit: 7,126m</span><span class="day-tag">01:00 departure</span><span class="day-tag">Full day: 10–14 hrs</span></div>
-            </div>
-          </div>
-
-          <span class="phase-label">Phase 5 — Descent and Return</span>
-
-          <div class="itinerary-day">
-            <div class="day-number"><span>Day</span><span>20–21</span></div>
-            <div class="day-content">
-              <h4>Camp 2 → Camp 1 → Base Camp (2 days)</h4>
-              <p>Descend through the camp system over two careful days. Post-summit descent is where accidents happen — the euphoria is real and the fatigue is severe. Move deliberately, use fixed ropes, arrive at base camp and allow the cook team to feed you the biggest meal of the expedition. You've earned it. Base camp celebrations are a Beyond Summit tradition; the team dinner that night is included in the package.</p>
-              <div class="day-meta"><span class="day-tag">Careful descent</span><span class="day-tag green">Base camp celebration</span></div>
-            </div>
-          </div>
-
-          <div class="itinerary-day">
-            <div class="day-number"><span>Day</span><span>22–24</span></div>
-            <div class="day-content">
-              <h4>Base Camp → Koto → Besisahar → Kathmandu</h4>
-              <p>Three days out through the Nar Phu Valley — the same trail, entirely different mood. The valley looks different after a summit. Kyang and Phu feel like old friends. Drive from Koto to Besisahar and onward to Kathmandu, with buffer built in for road conditions. Final team dinner in Thamel on the last evening. Most clients describe the Kathmandu celebration as the second-best meal of the trip after the base camp one.</p>
-              <div class="day-meta"><span class="day-tag">Return through Nar Phu</span><span class="day-tag">Buffer days included</span></div>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="info-box blue">
-          <div class="info-box-header">
-            <svg class="info-box-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            <div class="info-box-title">Why Two Rotations Matter</div>
-          </div>
-          <p>The two-rotation acclimatisation schedule built into this itinerary is not padding — it is the most important factor in your summit chances. Research on high-altitude physiology is consistent: climbers who attempt peaks above 7,000m without sleeping above 6,000m at least once before the summit push have significantly higher turnaround rates due to altitude sickness. The rotations are uncomfortable and unglamorous. They are also the reason beyond-Summit's Himlung summit success rate is above 70% for well-prepared clients who complete the full acclimatisation schedule.</p>
-        </div>
-
-        <h2 id="skills">Honest Skills Assessment</h2>
-
-        <p>Himlung Himal is the most accessible seven-thousander in Nepal. That means something specific: compared to Manaslu, Dhaulagiri, or Annapurna, the technical demands on the Northwest Ridge normal route are lower. It does not mean Himlung is easy. The distinction matters and deserves clarity.</p>
-
-        <ul>
-          <li><strong>Prior 6,000m summit experience is mandatory, not optional:</strong> We require at least one summit above 6,000m — Mera Peak, Ama Dablam, Baruntse, Aconcagua, Kilimanjaro, or equivalent — before we will accept a booking for Himlung. This is not box-ticking. Your body needs to have proven it can function at extreme altitude before we take it to 7,126m.</li>
-          <li><strong>Crampon and ice axe proficiency:</strong> The upper Northwest Ridge involves sustained crampon terrain steeper than Mera Peak's North Face. Technique matters here. Pre-departure we provide a technical refresher, but you should arrive already comfortable on steep snow and ice — not learning it during the expedition.</li>
-          <li><strong>Fixed rope ascending:</strong> Camp 2 and sections of the upper ridge have fixed ropes on steep terrain. Jumar / ascender technique and the confidence to use it efficiently at 6,500m with tired arms is a real skill requirement. Practice it before you leave home.</li>
-          <li><strong>Cold tolerance and high-camp living:</strong> Nights at Camp 3 can reach –30°C with wind. Sleeping, eating, and managing your gear effectively in that environment requires previous high-camp experience. It is genuinely hard to prepare for the cold until you've experienced it — which is another reason the Mera or Ama Dablam prerequisite matters.</li>
-          <li><strong>Self-sufficiency at altitude:</strong> On a 7,000m peak with small groups, guides cannot solve every problem for every client simultaneously. You need to be able to manage your own hydration, your own layering decisions, and your own pace judgement at extreme altitude. This comes from experience, not instruction.</li>
-        </ul>
-
-        <div class="info-box green">
-          <div class="info-box-header">
-            <svg class="info-box-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-            <div class="info-box-title">Who Himlung Is Right For</div>
-          </div>
-          <p>The ideal Himlung candidate has summited at least one 6,000m+ peak, has camped above 5,500m, is comfortable with crampons and fixed lines, and is physically fit enough to maintain aerobic output for 10–14 hours at extreme altitude. They understand that summit day is the hardest single physical effort of their life to that point and have done the training to prepare for it. If that description fits you, Himlung is a magnificent objective and Beyond Summit is the right team to climb it with.</p>
-        </div>
-
-        <h2 id="compare">Himlung vs Mera vs Manaslu</h2>
-
-        <p>Three different categories of Himalayan challenge. Here's where Himlung sits between Nepal's most popular high-altitude objectives:</p>
-
-        <table class="compare-table" aria-label="Comparison of Himlung Himal, Mera Peak and Manaslu">
-          <thead>
-            <tr>
-              <th>Factor</th>
-              <th>Himlung Himal</th>
-              <th>Mera Peak</th>
-              <th>Manaslu</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Summit altitude</strong></td>
-              <td class="hl">7,126m — True 7,000m peak</td>
-              <td>6,476m — Highest trekking peak</td>
-              <td>8,163m — Eight-thousander</td>
-            </tr>
-            <tr>
-              <td><strong>Classification</strong></td>
-              <td class="hl">NMA expedition peak</td>
-              <td>NMA trekking peak</td>
-              <td>Full expedition</td>
-            </tr>
-            <tr>
-              <td><strong>Technical difficulty</strong></td>
-              <td class="hl">PD — ridge route, fixed ropes</td>
-              <td>F — glacier dome, easiest</td>
-              <td>PD–AD — mixed, objective hazard</td>
-            </tr>
-            <tr>
-              <td><strong>High camps</strong></td>
-              <td class="hl">Three (up to 6,700m)</td>
-              <td>Two (up to 5,800m)</td>
-              <td>Four (up to 7,400m)</td>
-            </tr>
-            <tr>
-              <td><strong>Prior experience required</strong></td>
-              <td class="hl">6,000m summit essential</td>
-              <td>High-altitude trekking</td>
-              <td>7,000m summit essential</td>
-            </tr>
-            <tr>
-              <td><strong>Approach</strong></td>
-              <td class="hl">Nar Phu Valley — restricted, remote</td>
-              <td>Hinku Valley — remote</td>
-              <td>Tsum Valley / Budhi Gandaki</td>
-            </tr>
-            <tr>
-              <td><strong>Team size / crowding</strong></td>
-              <td class="hl">Very low — few expeditions per season</td>
-              <td>Low — remote approach</td>
-              <td>High — up to 400 climbers/season</td>
-            </tr>
-            <tr>
-              <td><strong>Trip duration</strong></td>
-              <td>21–25 days</td>
-              <td>17–21 days</td>
-              <td>50–60 days</td>
-            </tr>
-            <tr>
-              <td><strong>Total cost approx.</strong></td>
-              <td>$6,000–$9,000</td>
-              <td>$3,000–$4,000</td>
-              <td>$18,000–$30,000+</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h2 id="permits">Permits and Costs</h2>
-
-        <p>Himlung Himal's permit structure is more complex than trekking peaks due to its expedition classification and the additional restricted-area permit required for the Nar Phu Valley. The total permit cost is significantly higher than Mera or Island Peak but remains a fraction of what an eight-thousander expedition requires.</p>
-
-        <table class="cost-table" aria-label="Himlung Himal climb cost breakdown 2026">
-          <thead>
-            <tr>
-              <th>Item</th>
-              <th>Cost (2026)</th>
-              <th>Notes</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>NMA Expedition Peak Permit</strong></td>
-              <td>$1,500 / person (autumn)<br>$1,000 / person (spring)</td>
-              <td>Arranged by Beyond Summit through NMA. Significantly lower than eight-thousander permits. Autumn premium reflects demand.</td>
-            </tr>
-            <tr>
-              <td><strong>Nar Phu Restricted Area Permit</strong></td>
-              <td>$90 / person / week</td>
-              <td>Required for the entire Nar Phu Valley approach. Checked at Koto. Minimum 10-day permit typically required for this expedition.</td>
-            </tr>
-            <tr>
-              <td><strong>Annapurna Conservation Area Permit</strong></td>
-              <td>NPR 3,000 (~$22) / person</td>
-              <td>Required for the initial approach from Koto. Included in Beyond Summit package.</td>
-            </tr>
-            <tr>
-              <td><strong>Beyond Summit Himlung Package</strong></td>
-              <td>$4,500–$6,500 / person</td>
-              <td>Climbing Sherpa (1:2 client ratio), base camp cook and team, all tented camp infrastructure, fixed ropes and hardware, Gamow bag and medical kit, Kathmandu briefing, all meals at base camp and camps, porters to base camp.</td>
-            </tr>
-            <tr>
-              <td><strong>International flights + Kathmandu hotels</strong></td>
-              <td>~$600–$1,200</td>
-              <td>Dependent on origin. Kathmandu pre/post hotel 2–3 nights included in package.</td>
-            </tr>
-            <tr>
-              <td><strong>Personal gear (if purchasing)</strong></td>
-              <td>$800–$2,500</td>
-              <td>8,000m-rated sleeping bag, down suit, mountaineering boots, crampons, harness, ice axe. Extensive rental available in Kathmandu — book ahead for popular sizes.</td>
-            </tr>
-            <tr>
-              <td><strong>Travel and rescue insurance</strong></td>
-              <td>$200–$400</td>
-              <td>Mandatory for booking. Must cover helicopter evacuation from 7,000m (minimum $300,000 medical evacuation). Beyond Summit can advise on appropriate policies.</td>
-            </tr>
-            <tr>
-              <td><strong>Total estimated cost per person</strong></td>
-              <td><strong>$7,710–$12,212</strong></td>
-              <td><strong>Excluding international flights from origin country. Private expedition options available for 2–4 climbers — contact us for pricing.</strong></td>
-            </tr>
-          </tbody>
-        </table>
-
-        <blockquote>
-          "Himlung is the peak I bring clients to when they're ready to stop trekking and start climbing. The Nar Phu Valley changes people before they even reach base camp. And the summit at 7,126m — the Tibet border is right there, the Annapurnas are right there — there is nothing like it on a smaller peak."
-          <cite>— Pemba Dorjee Sherpa, Expedition Leader, Beyond Summit Expeditions. Himlung summits: 14. Total summits above 7,000m: 31</cite>
-        </blockquote>
-
-        <h2 id="fitness">Getting Ready for Himlung</h2>
-
-        <p>Himlung Himal asks more of you than Mera Peak — and it should. The preparation window we recommend is a minimum of 16 weeks of structured training, starting from a baseline of regular aerobic fitness. If you have never trained seriously for a high-altitude objective before, build to Himlung over multiple seasons rather than arriving undertrained.</p>
-
-        <p><strong>Target benchmarks heading into the final 12 weeks:</strong></p>
-
-        <ul>
-          <li>Long mountain days: 8–10 hours on trail with 1,200–1,500m of elevation gain, once every two weeks minimum. These sessions should end tired, not destroyed — the distinction matters. Destroyed in training means recovering instead of training; tired means adapting.</li>
-          <li>Weighted carries: 14–18kg pack on long training days. On summit day from Camp 3, you carry your personal gear, water, food, and emergency kit at 6,700m. Simulate the weight in training; do not arrive at base camp and discover that 15kg feels heavy.</li>
-          <li>Sustained aerobic base: Four sessions per week at conversational pace — running, cycling, rowing — for 60–90 minutes each. Zone 2 training (the pace where you can hold a conversation, barely) is what builds the aerobic engine that keeps you moving at altitude.</li>
-          <li>Cold weather camping: At least one multi-day winter camping trip in the three months before departure. Camp 3 at 6,700m is –30°C with wind. That number should be real to your body before you arrive in Nepal, not abstract.</li>
-          <li>Strength work: Lower body compound movements — squats, lunges, single-leg work — twice per week from 12 weeks out. The descent on summit day at 7,000m is where undertrained legs fail. Build the eccentric strength to absorb it.</li>
-        </ul>
-
-        <div class="info-box tip">
-          <div class="info-box-header">
-            <svg class="info-box-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9c1.51 0 2.93.37 4.18 1.02"/></svg>
-            <div class="info-box-title">A Note on Pre-Acclimatisation</div>
-          </div>
-          <p>Some Himlung clients choose to pre-acclimatise before joining the expedition — spending 1–2 weeks in Ladakh, Kilimanjaro, the Altiplano, or another high-altitude destination before arriving in Nepal. The evidence on pre-acclimatisation is positive but not transformative: it helps on the early rotations and may marginally improve summit-day performance. It is not a substitute for arriving fit, and it is not required. If you are considering it, discuss it with our team during the planning phase.</p>
-        </div>
-
-        <h2 id="gear">What to Bring</h2>
-
-        <p>Himlung Himal at 7,126m demands genuine expedition-grade equipment. The temperatures on the upper Northwest Ridge are serious, the exposure is real, and the consequences of gear failure at Camp 3 are severe. This is not a place to test untried equipment. Use what you have trained with.</p>
-
-        <h3>Technical Climbing Equipment</h3>
-        <ul>
-          <li><strong>Mountaineering boots rated to –40°C:</strong> Double or triple layer plastic/composite shell or equivalent. Your boots are the most critical item of gear on this mountain. Try them for 20+ hours before the expedition. Blisters at 6,700m are a turnaround.</li>
-          <li><strong>12-point crampons, step-in or hybrid binding:</strong> Checked, adjusted, and tested at home before departure. Carry a crampon repair kit. Beyond Summit's Sherpa team can perform field repairs but a broken bail at Camp 2 ruins summit week.</li>
-          <li><strong>Ice axe — technical length:</strong> 55–60cm for most climbers on the steeper upper sections. Our briefing covers appropriate length for your height; bring this to the Kathmandu session if possible.</li>
-          <li><strong>Climbing harness:</strong> Sized and fitted over full down suit. Test this at home — a harness that fits over a fleece is a different size to one that fits over a 900-fill down bib and jacket.</li>
-          <li><strong>Ascender (jumar) and backup prusik:</strong> For fixed rope sections above Camp 1. Know how to use your ascender before you arrive in Nepal. It should be automatic.</li>
-          <li><strong>Locking carabiners (4+), belay device:</strong> Standard expedition complement. Beyond Summit provides additional hardware on the fixed rope sections.</li>
-        </ul>
-
-        <h3>High Altitude Clothing</h3>
-        <ul>
-          <li><strong>Down suit (one-piece or two-piece) rated to –40°C:</strong> This is the core warmth layer for summit day above Camp 3. One-piece suits are warmer and simpler; two-piece allows better temperature regulation on the approach to Camp 3. Either works. Both need to fit over all mid-layers simultaneously.</li>
-          <li><strong>Sleeping bag rated to –30°C:</strong> At Camp 3, you need to sleep in this bag to be functional on summit day. There is no middle ground. A summer bag with extra blankets is not a solution.</li>
-          <li><strong>Expedition-weight base layer (top and bottom):</strong> Merino or synthetic. Two sets — one for sleeping, one for climbing. They will get wet from exertion and freezing in the nights. Rotate them.</li>
-          <li><strong>Insulated mid-layers:</strong> 600–800-fill down jacket and insulated trousers for camp wear and as backup layers under the down suit on summit day.</li>
-          <li><strong>High-altitude gloves:</strong> A layered system — thin liner gloves, midweight fleece or softshell gloves, and heavyweight overmitts for the summit slope. Never on Himlung should your hands be cold enough to lose dexterity. Cold hands at 7,000m end summit bids.</li>
-          <li><strong>Balaclava and expedition-weight hat:</strong> Multiple options. The wind on the Northwest Ridge at dawn is not a comfort issue — it is a safety issue. Cover every inch of exposed skin.</li>
-        </ul>
-
-        <h3>Camp and Support Equipment</h3>
-        <ul>
-          <li><strong>Headtorch with lithium batteries (3 full sets):</strong> Summit starts at 01:00. Alkaline batteries die in the cold. Lithium only above 5,000m. Three spare sets minimum — the consequences of no light at 6,700m are severe.</li>
-          <li><strong>Thermos (1 litre):</strong> The only hot liquid between leaving Camp 3 and returning is what you carry. Fill it the night before with something caloric — not just water.</li>
-          <li><strong>Sunscreen (SPF 50+) and glacier glasses (category 4 wraparound):</strong> Snow blindness from UV exposure on glaciers at 7,000m is temporary but agonising and sidelines you for summit week. Protect your eyes on every single rotation, not just summit day.</li>
-          <li><strong>Pulse oximeter:</strong> Carry your own. Beyond Summit provides team units but personal monitoring between formal checks allows you to catch altitude deterioration early. The numbers don't lie.</li>
-        </ul>
-
-        <div class="info-box note">
-          <div class="info-box-header">
-            <svg class="info-box-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-            <div class="info-box-title">Gear Sourcing in Kathmandu</div>
-          </div>
-          <p>Thamel in Kathmandu has a mature market for expedition gear rental and purchase — double-boot rentals, down suit hire, sleeping bag rental, ice axe and crampon hire are all available. Quality varies significantly. Beyond Summit's Kathmandu briefing includes a gear check session and referrals to our preferred equipment partners who we have vetted for quality at altitude. Book ahead for any rental gear during peak season (September–October).</p>
-        </div>
-
-        <h2 id="faq-section">Frequently Asked Questions</h2>
-
-        <h3>Do I need Mera Peak as a prerequisite for Himlung?</h3>
-        <p>Not specifically Mera — but a summit above 6,000m is required. Mera is an excellent preparation route for Himlung because both peaks involve glacier travel and the acclimatisation schedules are complementary. Other valid prerequisites include Ama Dablam, Baruntse, Aconcagua (6,961m), Denali (6,190m), or a comparable high-altitude objective with glacier and crampon terrain. If you are unsure whether your prior experience qualifies, contact our team and be specific about what you've climbed and in what conditions.</p>
-
-        <h3>Is Himlung possible without a Sherpa climbing guide?</h3>
-        <p>Technically, independent expeditions are permitted under Nepal mountaineering regulations, but it is not something Beyond Summit organises or recommends. The fixed rope infrastructure on the upper Northwest Ridge is established by expedition Sherpa teams — independent climbers typically benefit from this infrastructure without contributing to it. More importantly: at 7,126m, having an experienced Sherpa climbing partner is the single most valuable safety asset available. Our Himlung teams operate at a 1:2 Sherpa-to-client ratio on the mountain.</p>
-
-        <h3>What is the summit success rate on Himlung?</h3>
-        <p>Beyond Summit's historical Himlung summit rate for clients who complete the full acclimatisation schedule is approximately 72%. The most common reasons for turnaround are adverse weather on summit day, AMS symptoms at Camp 2 during the second rotation (typically in clients who have not met our prior altitude experience requirement), and — rarely — equipment issues on the upper ridge. We prioritise safety over summit percentage: we would rather a client descend healthy than summit and require evacuation.</p>
-
-        <h3>What happens if a climber needs evacuation from high camp?</h3>
-        <p>Helicopter evacuation from base camp at 4,950m is the standard emergency response for serious altitude illness. Beyond Summit maintains Gamow bag availability at base camp and pulse oximeter monitoring throughout the expedition. Evacuation from the high camps to base camp is conducted by Sherpa team on an emergency basis if a client cannot descend under their own power. International helicopter rescue coverage is mandatory for all clients and must be confirmed before departure. Emergency evacuation costs from this area typically run $4,000–$8,000 — entirely covered by appropriate insurance.</p>
-
-        <h3>Can Himlung be combined with another objective?</h3>
-        <p>The Nar Phu Valley approach naturally combines with an Annapurna Circuit trek before or after the expedition. Beyond Summit can arrange a post-expedition Annapurna traverse for clients with additional time. Combining Himlung with another peak in the same trip is not something we offer — 21 days is the minimum required to do Himlung properly, and adding a second objective invites the kind of fatigue and schedule compression that causes accidents on 7,000m peaks.</p>
-
-        <h2 id="book">Book Your Himlung Himal Expedition</h2>
-
-        <p>Beyond Summit runs Himlung Himal expeditions in two seasons: autumn (October–November) and spring (April–May). Groups are strictly limited to four climbers per Sherpa climbing guide — Himlung at this group size allows for genuine personal attention on the technical sections and responsive decision-making if conditions change on the upper mountain.</p>
-
-        <p>Bookings open 10 months before each expedition. Demand in autumn particularly tends to exceed available slots. Private expeditions for 2–3 climbers can be arranged outside the fixed windows subject to Sherpa team availability.</p>
-
-        <p>All packages include the full Kathmandu briefing and gear check, all permits (NMA expedition, restricted area, conservation area), base camp infrastructure (cook tent, dining tent, toilet tents), high camp tent equipment, all Sherpa team wages, fixed ropes and hardware, Gamow bag and expedition medical kit, cook and cook tent staff, and the post-summit Kathmandu team dinner.</p>
-
-        <p><a href="/expeditions/himlung-himal">View our Himlung Himal expedition packages →</a> or <a href="/contact">get in touch with our team</a> to discuss prerequisites, training plans, and which season suits your schedule.</p>
-
+  <p class="photo-credit">Photo: Sharadgurung7711, <a href="https://commons.wikimedia.org/wiki/File:NarPhuVillage.jpg" rel="noopener" target="_blank">CC BY-SA 4.0</a></p>
+</section>
+
+<nav class="trip-nav" aria-label="On this page"><div class="wrap"><ul>
+  <li><a href="#overview">Overview</a></li><li><a href="#route">Route map</a></li><li><a href="#itinerary">Day by day</a></li>
+  <li><a href="#included">What's included</a></li><li><a href="#permits">Permits</a></li><li><a href="#when">When to go</a></li><li><a href="#faq">Questions</a></li>
+</ul></div></nav>
+
+<div class="wrap trip-layout">
+  <div class="trip-main">
+    <section id="overview" aria-labelledby="ov-title">
+      <h2 id="ov-title">About this climb</h2>
+      <p class="lede">Himlung Himal (7,126 m) rises on the Tibetan border north of the Annapurnas. It&#x27;s a glaciated, mostly non-technical climb and one of the best first 7,000 m peaks, a real step up in altitude without the cost and difficulty of an 8,000 m mountain. The walk in, through the medieval villages of Nar Phu, is an adventure in itself.</p>
+      <ul class="highlights"><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>A 7,000 m summit on the Tibetan border</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>The restricted Nar Phu valley and the stone village of Phu</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Mostly non-technical glacier climbing</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Good preparation for an 8,000 m peak</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Rotations and rest days on a proper expedition schedule</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Small team with personal climbing Sherpa on summit day</span></li></ul>
+    </section>
+
+    <section id="route" aria-labelledby="route-title">
+      <h2 id="route-title">Route and altitude</h2>
+      <div class="route">
+        <div class="route-panel"><h3><span>Route map</span><span>Expedition</span></h3><div class="map"><svg viewBox="0 0 640 420" role="img" aria-label="Route map of the Himlung Himal Expedition"><path class="track" d="M221.5,386.0 L190.6,221.0 L225.4,122.3 L236.5,37.7 L333.1,35.6 L449.4,34.0 L333.1,35.6 L236.5,37.7 L225.4,122.3 L190.6,221.0 L221.5,386.0"/><path class="seg" data-i="2" d="M221.5,386.0 L190.6,221.0"/><path class="seg" data-i="3" d="M190.6,221.0 L225.4,122.3"/><path class="seg" data-i="4" d="M225.4,122.3 L236.5,37.7"/><path class="seg" data-i="6" d="M236.5,37.7 L333.1,35.6"/><path class="seg" data-i="10" d="M333.1,35.6 L449.4,34.0 L333.1,35.6"/><path class="seg" data-i="11" d="M333.1,35.6 L236.5,37.7 L225.4,122.3 L190.6,221.0"/><path class="seg" data-i="12" d="M190.6,221.0 L221.5,386.0"/><circle class="stop" data-i="1" cx="221.5" cy="386.0" r="4"><title>Koto, 2,600 m</title></circle><circle class="stop" data-i="2" cx="190.6" cy="221.0" r="4"><title>Meta, 3,560 m</title></circle><circle class="stop" data-i="3" cx="225.4" cy="122.3" r="4"><title>Kyang, 3,820 m</title></circle><circle class="stop" data-i="4" cx="236.5" cy="37.7" r="4"><title>Phu, 4,080 m</title></circle><circle class="stop" data-i="6" cx="333.1" cy="35.6" r="4"><title>Himlung Base Camp, 4,900 m</title></circle><circle class="stop peak" cx="449.4" cy="34.0" r="5"><title>Himlung summit, 7,126 m</title></circle><text x="456.4" y="38.0" text-anchor="start" class="strong">Himlung summit 7,126 m</text><text x="228.5" y="390.0" text-anchor="start" class="strong">Koto</text><text x="197.6" y="225.0" text-anchor="start" class="">Meta</text><text x="232.4" y="126.3" text-anchor="start" class="">Kyang</text><text x="243.5" y="41.7" text-anchor="start" class="">Phu</text><text x="340.1" y="39.6" text-anchor="start" class="">Himlung Base Camp</text><g class="map-scale"><path d="M10,406 V410 H82.0 V406" fill="none" stroke="currentColor" stroke-width="1" style="stroke:var(--ink-3)"/><text x="87.0" y="410" class="map-scale" style="paint-order:normal;stroke:none">5 km</text></g><text x="626" y="22" class="north" text-anchor="middle" style="paint-order:normal;stroke:none">N</text><path d="M626,26 l-4,10 h8z" style="fill:var(--ink-3)"/></svg></div></div>
+        <div class="route-panel"><h3><span>Altitude, day by day</span><span>Max 7,126 m</span></h3><div class="profile profile-wrap"><svg viewBox="0 0 640 220" role="img" aria-label="Altitude profile: overnight altitude each day, highest 7,126 m at Himlung summit"><line class="grid" x1="44" x2="628" y1="194.0" y2="194.0"/><text class="axis" x="38" y="197.5" text-anchor="end">0</text><line class="grid" x1="44" x2="628" y1="151.5" y2="151.5"/><text class="axis" x="38" y="155.0" text-anchor="end">2,000</text><line class="grid" x1="44" x2="628" y1="109.0" y2="109.0"/><text class="axis" x="38" y="112.5" text-anchor="end">4,000</text><line class="grid" x1="44" x2="628" y1="66.5" y2="66.5"/><text class="axis" x="38" y="70.0" text-anchor="end">6,000</text><line class="grid" x1="44" x2="628" y1="24.0" y2="24.0"/><text class="axis" x="38" y="27.5" text-anchor="end">8,000</text><path class="area" d="M44,194.0 L44.0,164.2 L92.7,138.8 L141.3,118.3 L190.0,112.8 L238.7,107.3 L287.3,107.3 L336.0,89.9 L384.7,89.9 L433.3,89.9 L482.0,89.9 L530.7,89.9 L579.3,118.3 L628.0,177.8 L628.0,194.0 Z"/><path class="line" d="M44.0,164.2 L92.7,138.8 L141.3,118.3 L190.0,112.8 L238.7,107.3 L287.3,107.3 L336.0,89.9 L384.7,89.9 L433.3,89.9 L482.0,89.9 L530.7,89.9 L579.3,118.3 L628.0,177.8"/><line class="cursor" x1="0" x2="0" y1="24" y2="194"/><circle class="pt" cx="44.0" cy="164.2" r="4"/><text class="axis" x="44.0" y="212" text-anchor="middle">1</text><circle class="pt" cx="92.7" cy="138.8" r="4"/><text class="axis" x="92.7" y="212" text-anchor="middle">2</text><circle class="pt" cx="141.3" cy="118.3" r="4"/><text class="axis" x="141.3" y="212" text-anchor="middle">3</text><circle class="pt" cx="190.0" cy="112.8" r="4"/><text class="axis" x="190.0" y="212" text-anchor="middle">4</text><circle class="pt" cx="238.7" cy="107.3" r="4"/><text class="axis" x="238.7" y="212" text-anchor="middle">5</text><circle class="pt" cx="287.3" cy="107.3" r="4"/><text class="axis" x="287.3" y="212" text-anchor="middle">6</text><circle class="pt" cx="336.0" cy="89.9" r="4"/><text class="axis" x="336.0" y="212" text-anchor="middle">7</text><circle class="pt" cx="384.7" cy="89.9" r="4"/><text class="axis" x="384.7" y="212" text-anchor="middle">8</text><circle class="pt" cx="433.3" cy="89.9" r="4"/><text class="axis" x="433.3" y="212" text-anchor="middle">10</text><circle class="pt" cx="482.0" cy="89.9" r="4"/><text class="axis" x="482.0" y="212" text-anchor="middle">14</text><line x1="530.7" x2="530.7" y1="42.6" y2="89.9" style="stroke:var(--ink-3);stroke-width:1;stroke-dasharray:2 2"/><circle class="hi" cx="530.7" cy="42.6" r="4"/><circle class="pt" cx="530.7" cy="89.9" r="4"/><text class="axis" x="530.7" y="212" text-anchor="middle">16</text><circle class="pt" cx="579.3" cy="118.3" r="4"/><text class="axis" x="579.3" y="212" text-anchor="middle">22</text><circle class="pt" cx="628.0" cy="177.8" r="4"/><text class="axis" x="628.0" y="212" text-anchor="middle">23</text><text class="lbl" x="530.7" y="33.6" text-anchor="end">Himlung 7,126 m</text><text class="axis" x="44" y="14">metres</text><text class="axis" x="628" y="212" text-anchor="end" style="display:none">day</text><rect class="hit" x="19.7" y="24" width="48.7" height="170" data-x="44.0" data-y="164.2" data-day="1" data-tip="&lt;b&gt;Day 1&lt;/b&gt;&lt;br&gt;Sleep: Kathmandu, 1,400 m" tabindex="0" role="button" aria-label="Day 1: sleep at Kathmandu, 1,400 m"/><rect class="hit" x="68.3" y="24" width="48.7" height="170" data-x="92.7" data-y="138.8" data-day="2" data-tip="&lt;b&gt;Day 2&lt;/b&gt;&lt;br&gt;Sleep: Koto, 2,600 m" tabindex="0" role="button" aria-label="Day 2: sleep at Koto, 2,600 m"/><rect class="hit" x="117.0" y="24" width="48.7" height="170" data-x="141.3" data-y="118.3" data-day="3" data-tip="&lt;b&gt;Day 3&lt;/b&gt;&lt;br&gt;Sleep: Meta, 3,560 m" tabindex="0" role="button" aria-label="Day 3: sleep at Meta, 3,560 m"/><rect class="hit" x="165.7" y="24" width="48.7" height="170" data-x="190.0" data-y="112.8" data-day="4" data-tip="&lt;b&gt;Day 4&lt;/b&gt;&lt;br&gt;Sleep: Kyang, 3,820 m" tabindex="0" role="button" aria-label="Day 4: sleep at Kyang, 3,820 m"/><rect class="hit" x="214.3" y="24" width="48.7" height="170" data-x="238.7" data-y="107.3" data-day="5" data-tip="&lt;b&gt;Day 5&lt;/b&gt;&lt;br&gt;Sleep: Phu, 4,080 m" tabindex="0" role="button" aria-label="Day 5: sleep at Phu, 4,080 m"/><rect class="hit" x="263.0" y="24" width="48.7" height="170" data-x="287.3" data-y="107.3" data-day="6" data-tip="&lt;b&gt;Day 6&lt;/b&gt;&lt;br&gt;Sleep: Phu, 4,080 m" tabindex="0" role="button" aria-label="Day 6: sleep at Phu, 4,080 m"/><rect class="hit" x="311.7" y="24" width="48.7" height="170" data-x="336.0" data-y="89.9" data-day="7" data-tip="&lt;b&gt;Day 7&lt;/b&gt;&lt;br&gt;Sleep: Himlung Base Camp, 4,900 m" tabindex="0" role="button" aria-label="Day 7: sleep at Himlung Base Camp, 4,900 m"/><rect class="hit" x="360.3" y="24" width="48.7" height="170" data-x="384.7" data-y="89.9" data-day="8-9" data-tip="&lt;b&gt;Day 8-9&lt;/b&gt;&lt;br&gt;Sleep: Himlung Base Camp, 4,900 m" tabindex="0" role="button" aria-label="Day 8-9: sleep at Himlung Base Camp, 4,900 m"/><rect class="hit" x="409.0" y="24" width="48.7" height="170" data-x="433.3" data-y="89.9" data-day="10-13" data-tip="&lt;b&gt;Day 10-13&lt;/b&gt;&lt;br&gt;Sleep: Himlung Base Camp, 4,900 m" tabindex="0" role="button" aria-label="Day 10-13: sleep at Himlung Base Camp, 4,900 m"/><rect class="hit" x="457.7" y="24" width="48.7" height="170" data-x="482.0" data-y="89.9" data-day="14-15" data-tip="&lt;b&gt;Day 14-15&lt;/b&gt;&lt;br&gt;Sleep: Himlung Base Camp, 4,900 m" tabindex="0" role="button" aria-label="Day 14-15: sleep at Himlung Base Camp, 4,900 m"/><rect class="hit" x="506.3" y="24" width="48.7" height="170" data-x="530.7" data-y="42.6" data-day="16-21" data-tip="&lt;b&gt;Day 16-21&lt;/b&gt;&lt;br&gt;Sleep: Himlung Base Camp, 4,900 m&lt;br&gt;High point: Himlung summit, 7,126 m" tabindex="0" role="button" aria-label="Day 16-21: sleep at Himlung Base Camp, 4,900 m"/><rect class="hit" x="555.0" y="24" width="48.7" height="170" data-x="579.3" data-y="118.3" data-day="22" data-tip="&lt;b&gt;Day 22&lt;/b&gt;&lt;br&gt;Sleep: Meta, 3,560 m" tabindex="0" role="button" aria-label="Day 22: sleep at Meta, 3,560 m"/><rect class="hit" x="603.7" y="24" width="48.7" height="170" data-x="628.0" data-y="177.8" data-day="23" data-tip="&lt;b&gt;Day 23&lt;/b&gt;&lt;br&gt;Sleep: Besisahar, 760 m" tabindex="0" role="button" aria-label="Day 23: sleep at Besisahar, 760 m"/></svg><div class="tip" role="status"></div></div><div class="legend-inline"><span><i style="background:var(--accent)"></i>Where you sleep</span><span><i style="border:1.5px solid var(--ink);background:var(--surface)"></i>Highest point that day</span><span>Days along the bottom. Hover or tap for details.</span></div><details class="note"><summary>Show as a table</summary><div class="table-wrap"><table><thead><tr><th>Day</th><th>Overnight</th><th>Altitude</th><th>High point</th></tr></thead><tbody><tr><td>Day 1</td><td>Kathmandu</td><td>1,400 m</td><td></td></tr><tr><td>Day 2</td><td>Koto</td><td>2,600 m</td><td></td></tr><tr><td>Day 3</td><td>Meta</td><td>3,560 m</td><td></td></tr><tr><td>Day 4</td><td>Kyang</td><td>3,820 m</td><td></td></tr><tr><td>Day 5</td><td>Phu</td><td>4,080 m</td><td></td></tr><tr><td>Day 6</td><td>Phu</td><td>4,080 m</td><td></td></tr><tr><td>Day 7</td><td>Himlung Base Camp</td><td>4,900 m</td><td></td></tr><tr><td>Day 8-9</td><td>Himlung Base Camp</td><td>4,900 m</td><td></td></tr><tr><td>Day 10-13</td><td>Himlung Base Camp</td><td>4,900 m</td><td></td></tr><tr><td>Day 14-15</td><td>Himlung Base Camp</td><td>4,900 m</td><td></td></tr><tr><td>Day 16-21</td><td>Himlung Base Camp</td><td>4,900 m</td><td>Himlung summit, 7,126 m</td></tr><tr><td>Day 22</td><td>Meta</td><td>3,560 m</td><td></td></tr><tr><td>Day 23</td><td>Besisahar</td><td>760 m</td><td></td></tr></tbody></table></div></details></div>
       </div>
-    </main>
+      <p class="note">Route lines join overnight stops and viewpoints in walking order. They are a guide to the shape of the route, not a navigation track.</p>
+    </section>
 
-    <!-- SIDEBAR -->
-    <aside class="article-sidebar">
-      <div class="sidebar-sticky">
-
-        <div class="sidebar-widget">
-          <h2 class="sidebar-widget-title">Quick Facts</h2>
-          <div class="sidebar-fact">
-            <div class="sidebar-fact-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            </div>
-            <div>
-              <div class="sidebar-fact-label">Summit Altitude</div>
-              <div class="sidebar-fact-val">7,126m (23,379ft)</div>
-            </div>
-          </div>
-          <div class="sidebar-fact">
-            <div class="sidebar-fact-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <div>
-              <div class="sidebar-fact-label">Total Duration</div>
-              <div class="sidebar-fact-val">21–25 Days</div>
-            </div>
-          </div>
-          <div class="sidebar-fact">
-            <div class="sidebar-fact-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            </div>
-            <div>
-              <div class="sidebar-fact-label">Technical Grade</div>
-              <div class="sidebar-fact-val">PD — Ridge / glacier</div>
-            </div>
-          </div>
-          <div class="sidebar-fact">
-            <div class="sidebar-fact-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <div>
-              <div class="sidebar-fact-label">Approach</div>
-              <div class="sidebar-fact-val">Nar Phu Valley (restricted)</div>
-            </div>
-          </div>
-          <div class="sidebar-fact">
-            <div class="sidebar-fact-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-            </div>
-            <div>
-              <div class="sidebar-fact-label">Price From</div>
-              <div class="sidebar-fact-val">USD 4,500 / person</div>
-            </div>
-          </div>
-          <div class="sidebar-fact">
-            <div class="sidebar-fact-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            </div>
-            <div>
-              <div class="sidebar-fact-label">Permit Type</div>
-              <div class="sidebar-fact-val">NMA Expedition Peak</div>
-            </div>
-          </div>
-          <div class="sidebar-fact">
-            <div class="sidebar-fact-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            </div>
-            <div>
-              <div class="sidebar-fact-label">Max Group Size</div>
-              <div class="sidebar-fact-val">4 per guide (1:2 ratio)</div>
-            </div>
-          </div>
-          <div class="sidebar-fact">
-            <div class="sidebar-fact-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-            </div>
-            <div>
-              <div class="sidebar-fact-label">High Camps</div>
-              <div class="sidebar-fact-val">Three (up to 6,700m)</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="sidebar-widget">
-          <h2 class="sidebar-widget-title">Prerequisites</h2>
-          <p style="font-size:0.78rem;color:var(--text-muted);margin-bottom:0.75rem;line-height:1.55;">Consider these before Himlung:</p>
-          <div class="sidebar-next-peaks">
-            <a href="/blog/mera-peak-climbing-guide" class="next-peak-item">Mera Peak <span>6,476m</span></a>
-            <a href="/blog/ama-dablam-climbing-guide" class="next-peak-item">Ama Dablam <span>6,812m</span></a>
-            <a href="/blog/baruntse-climbing-guide" class="next-peak-item">Baruntse <span>7,129m</span></a>
-          </div>
-        </div>
-
-        <div class="sidebar-widget">
-          <h2 class="sidebar-widget-title">Next Steps</h2>
-          <p style="font-size:0.78rem;color:var(--text-muted);margin-bottom:0.75rem;line-height:1.55;">After Himlung, the door opens:</p>
-          <div class="sidebar-next-peaks">
-            <a href="/expeditions/manaslu" class="next-peak-item">Manaslu <span>8,163m →</span></a>
-            <a href="/expeditions/cho-oyu" class="next-peak-item">Cho Oyu <span>8,188m →</span></a>
-            <a href="/expeditions/everest" class="next-peak-item">Everest <span>8,849m →</span></a>
-          </div>
-        </div>
-
-        <div class="sidebar-widget">
-          <h2 class="sidebar-widget-title">In This Guide</h2>
-          <ul class="toc-list">
-            <li><a href="#overview">What Makes Himlung Different</a></li>
-            <li><a href="#progression">Where Himlung Fits</a></li>
-            <li><a href="#best-time">When to Go</a></li>
-            <li><a href="#route">The Route</a></li>
-            <li><a href="#itinerary">21-Day Itinerary</a></li>
-            <li><a href="#skills">Honest Skills Assessment</a></li>
-            <li><a href="#compare">Himlung vs Mera vs Manaslu</a></li>
-            <li><a href="#permits">Permits & Costs</a></li>
-            <li><a href="#fitness">Getting Ready</a></li>
-            <li><a href="#gear">What to Bring</a></li>
-            <li><a href="#faq-section">FAQs</a></li>
-            <li><a href="#book">Book Your Expedition</a></li>
-          </ul>
-        </div>
-
-        <div class="cta-widget">
-          <h3>Climb Himlung 2026</h3>
-          <p>Nepal's most accessible 7,000m peak. Small teams, expert Sherpa guides, two seasons.</p>
-          <a href="/expeditions/himlung-himal" class="btn-gold">View Packages</a>
-        </div>
-
-      </div>
-    </aside>
-
+    <section id="itinerary" aria-labelledby="it-title">
+      <h2 id="it-title">Day by day</h2>
+      <ol class="itin-layout"><li class="day" id="day-1" data-day="0" data-label="Day 1: Kathmandu: briefing and gear check">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>1</b></div>
+  <article class="day-card" style="grid-template-columns:1fr">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 1: </span>Kathmandu: briefing and gear check</h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Sleep 1,400 m</span></div>
+      <p>We collect your permits, go through every piece of kit with your lead guide and fill any gaps in Thamel.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Hotel in Kathmandu</span><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: D</span></div>
+    </div>
+    
   </article>
+</li><li class="day" id="day-2" data-day="1" data-label="Day 2: Drive to Koto">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>2</b></div>
+  <article class="day-card">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 2: </span>Drive to Koto</h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg>9 to 10 h drive</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Sleep 2,600 m</span></div>
+      <p>Via Besisahar and the Marsyangdi valley road to Koto, where the restricted Nar Phu area begins.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Tea house, twin room</span><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: B, L, D</span></div>
+    </div>
+    <div class="day-map map"><svg viewBox="0 0 240 170" role="img" aria-label="Map of day 2: Koto"><path class="track" d="M120.0,85.0 L80.7,-125.0 L125.0,-250.6 L139.1,-358.2 L262.3,-360.9 L410.5,-362.9 L262.3,-360.9 L139.1,-358.2 L125.0,-250.6 L80.7,-125.0 L120.0,85.0" style="opacity:.3"/><circle class="stop on" cx="120.0" cy="85.0" r="5"/><text x="127.0" y="89.0" text-anchor="start" class="strong">Koto</text></svg></div>
+  </article>
+</li><li class="day" id="day-3" data-day="2" data-label="Day 3: Koto to Meta">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>3</b></div>
+  <article class="day-card">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 3: </span>Koto to Meta</h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,168a32.06,32.06,0,0,0-31,24H72a32,32,0,0,1,0-64h96a40,40,0,0,0,0-80H72a8,8,0,0,0,0,16h96a24,24,0,0,1,0,48H72a48,48,0,0,0,0,96h97a32,32,0,1,0,31-40Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,200,216Z"/></svg>about 16 km</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg>6 to 7 h</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Sleep 3,560 m</span></div>
+      <p>Up the narrow Nar Khola gorge, past waterfalls and cave shelters, to Meta.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Tea house, twin room</span><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: B, L, D</span></div>
+    </div>
+    <div class="day-map map"><svg viewBox="0 0 240 170" role="img" aria-label="Map of day 3: Koto to Meta"><path class="track" d="M130.3,140.0 L109.7,30.0 L132.9,-35.8 L140.3,-92.2 L204.8,-93.5 L282.4,-94.6 L204.8,-93.5 L140.3,-92.2 L132.9,-35.8 L109.7,30.0 L130.3,140.0" style="opacity:.3"/><path class="track-day" d="M130.3,140.0 L109.7,30.0"/><circle class="stop" cx="130.3" cy="140.0" r="4"/><circle class="stop on" cx="109.7" cy="30.0" r="5"/><text x="116.7" y="34.0" text-anchor="start" class="strong">Meta</text><text x="137.3" y="144.0" text-anchor="start" class="">Koto</text></svg></div>
+  </article>
+</li><li class="day" id="day-4" data-day="3" data-label="Day 4: Meta to Kyang">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>4</b></div>
+  <article class="day-card">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 4: </span>Meta to Kyang</h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,168a32.06,32.06,0,0,0-31,24H72a32,32,0,0,1,0-64h96a40,40,0,0,0,0-80H72a8,8,0,0,0,0,16h96a24,24,0,0,1,0,48H72a48,48,0,0,0,0,96h97a32,32,0,1,0,31-40Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,200,216Z"/></svg>about 8 km</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg>4 to 5 h</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Sleep 3,820 m</span></div>
+      <p>Past old chortens and abandoned winter settlements.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Tea house, twin room</span><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: B, L, D</span></div>
+    </div>
+    <div class="day-map map"><svg viewBox="0 0 240 170" role="img" aria-label="Map of day 4: Meta to Kyang"><path class="track" d="M135.0,324.0 L100.6,140.0 L139.4,30.0 L151.7,-64.3 L259.5,-66.6 L389.2,-68.4 L259.5,-66.6 L151.7,-64.3 L139.4,30.0 L100.6,140.0 L135.0,324.0" style="opacity:.3"/><path class="track-day" d="M100.6,140.0 L139.4,30.0"/><circle class="stop" cx="100.6" cy="140.0" r="4"/><circle class="stop on" cx="139.4" cy="30.0" r="5"/><text x="146.4" y="34.0" text-anchor="start" class="strong">Kyang</text><text x="107.6" y="144.0" text-anchor="start" class="">Meta</text></svg></div>
+  </article>
+</li><li class="day" id="day-5" data-day="4" data-label="Day 5: Kyang to Phu">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>5</b></div>
+  <article class="day-card">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 5: </span>Kyang to Phu</h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,168a32.06,32.06,0,0,0-31,24H72a32,32,0,0,1,0-64h96a40,40,0,0,0,0-80H72a8,8,0,0,0,0,16h96a24,24,0,0,1,0,48H72a48,48,0,0,0,0,96h97a32,32,0,1,0,31-40Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,200,216Z"/></svg>about 9 km</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg>4 h</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Sleep 4,080 m</span></div>
+      <p>Through a narrow gate in the cliffs to Phu, a village of stone houses that has barely changed in centuries.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Tea house, twin room</span><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: B, L, D</span></div>
+    </div>
+    <div class="day-map map"><svg viewBox="0 0 240 170" role="img" aria-label="Map of day 5: Kyang to Phu"><path class="track" d="M107.7,482.9 L67.6,268.3 L112.8,140.0 L127.2,30.0 L252.8,27.3 L404.0,25.2 L252.8,27.3 L127.2,30.0 L112.8,140.0 L67.6,268.3 L107.7,482.9" style="opacity:.3"/><path class="track-day" d="M112.8,140.0 L127.2,30.0"/><circle class="stop" cx="112.8" cy="140.0" r="4"/><circle class="stop on" cx="127.2" cy="30.0" r="5"/><text x="134.2" y="34.0" text-anchor="start" class="strong">Phu</text><text x="119.8" y="144.0" text-anchor="start" class="">Kyang</text></svg></div>
+  </article>
+</li><li class="day" id="day-6" data-day="5" data-label="Day 6: Rest day in Phu">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>6</b></div>
+  <article class="day-card">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 6: </span>Rest day in Phu<span class="badge">Acclimatisation</span></h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,168a32.06,32.06,0,0,0-31,24H72a32,32,0,0,1,0-64h96a40,40,0,0,0,0-80H72a8,8,0,0,0,0,16h96a24,24,0,0,1,0,48H72a48,48,0,0,0,0,96h97a32,32,0,1,0,31-40Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,200,216Z"/></svg>about 4 km</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg>Easy</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Sleep 4,080 m</span></div>
+      <p>A visit to Tashi Lhakhang monastery above the village.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Tea house, twin room</span><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: B, L, D</span></div>
+    </div>
+    <div class="day-map map"><svg viewBox="0 0 240 170" role="img" aria-label="Map of day 6: Phu"><path class="track" d="M100.9,528.2 L61.7,318.2 L105.9,192.7 L120.0,85.0 L242.9,82.4 L390.8,80.3 L242.9,82.4 L120.0,85.0 L105.9,192.7 L61.7,318.2 L100.9,528.2" style="opacity:.3"/><circle class="stop on" cx="120.0" cy="85.0" r="5"/><text x="127.0" y="89.0" text-anchor="start" class="strong">Phu</text></svg></div>
+  </article>
+</li><li class="day" id="day-7" data-day="6" data-label="Day 7: Phu to Base Camp">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>7</b></div>
+  <article class="day-card">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 7: </span>Phu to Base Camp</h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,168a32.06,32.06,0,0,0-31,24H72a32,32,0,0,1,0-64h96a40,40,0,0,0,0-80H72a8,8,0,0,0,0,16h96a24,24,0,0,1,0,48H72a48,48,0,0,0,0,96h97a32,32,0,1,0,31-40Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,200,216Z"/></svg>about 10 km</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg>5 to 6 h</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Sleep 4,900 m</span></div>
+      <p>Up the side valley to base camp at about 4,900 m.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Tent</span><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: B, L, D</span></div>
+    </div>
+    <div class="day-map map"><svg viewBox="0 0 240 170" role="img" aria-label="Map of day 7: Phu to Himlung Base Camp"><path class="track" d="M2.0,736.1 L-55.4,428.5 L9.4,244.6 L30.0,86.9 L210.0,83.1 L426.6,80.1 L210.0,83.1 L30.0,86.9 L9.4,244.6 L-55.4,428.5 L2.0,736.1" style="opacity:.3"/><path class="track-day" d="M30.0,86.9 L210.0,83.1"/><circle class="stop" cx="30.0" cy="86.9" r="4"/><circle class="stop on" cx="210.0" cy="83.1" r="5"/><text x="203.0" y="87.1" text-anchor="end" class="strong">Himlung Base Camp</text><text x="37.0" y="90.9" text-anchor="start" class="">Phu</text></svg></div>
+  </article>
+</li><li class="day" id="day-8-9" data-day="7" data-label="Day 8-9: Base camp: puja and training">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>8-9</b></div>
+  <article class="day-card">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 8-9: </span>Base camp: puja and training<span class="badge">Training</span></h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Sleep 4,900 m</span></div>
+      <p>Puja ceremony, rest and a fixed-rope refresher.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Tent</span><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: All</span></div>
+    </div>
+    <div class="day-map map"><svg viewBox="0 0 240 170" role="img" aria-label="Map of day 8-9: Himlung Base Camp"><path class="track" d="M-22.0,530.9 L-61.2,320.9 L-17.0,195.3 L-2.9,87.6 L120.0,85.0 L267.9,83.0 L120.0,85.0 L-2.9,87.6 L-17.0,195.3 L-61.2,320.9 L-22.0,530.9" style="opacity:.3"/><circle class="stop on" cx="120.0" cy="85.0" r="5"/><text x="120.0" y="76.0" text-anchor="middle" class="strong">Himlung Base Camp</text></svg></div>
+  </article>
+</li><li class="day" id="day-10-13" data-day="8" data-label="Day 10-13: First rotation">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>10-13</b></div>
+  <article class="day-card">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 10-13: </span>First rotation<span class="badge">Rotation</span></h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Sleep 4,900 m</span></div>
+      <p>Carry and sleep at Camp 1, tag Camp 2, back to base camp.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Tent</span><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: All</span></div>
+    </div>
+    <div class="day-map map"><svg viewBox="0 0 240 170" role="img" aria-label="Map of day 10-13: Himlung Base Camp"><path class="track" d="M-22.0,530.9 L-61.2,320.9 L-17.0,195.3 L-2.9,87.6 L120.0,85.0 L267.9,83.0 L120.0,85.0 L-2.9,87.6 L-17.0,195.3 L-61.2,320.9 L-22.0,530.9" style="opacity:.3"/><circle class="stop on" cx="120.0" cy="85.0" r="5"/><text x="120.0" y="76.0" text-anchor="middle" class="strong">Himlung Base Camp</text></svg></div>
+  </article>
+</li><li class="day" id="day-14-15" data-day="9" data-label="Day 14-15: Rest at Base Camp">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>14-15</b></div>
+  <article class="day-card">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 14-15: </span>Rest at Base Camp<span class="badge">Rest</span></h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Sleep 4,900 m</span></div>
+      <p>Rest, eat well and wait for the right forecast.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Tent</span><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: All</span></div>
+    </div>
+    <div class="day-map map"><svg viewBox="0 0 240 170" role="img" aria-label="Map of day 14-15: Himlung Base Camp"><path class="track" d="M-22.0,530.9 L-61.2,320.9 L-17.0,195.3 L-2.9,87.6 L120.0,85.0 L267.9,83.0 L120.0,85.0 L-2.9,87.6 L-17.0,195.3 L-61.2,320.9 L-22.0,530.9" style="opacity:.3"/><circle class="stop on" cx="120.0" cy="85.0" r="5"/><text x="120.0" y="76.0" text-anchor="middle" class="strong">Himlung Base Camp</text></svg></div>
+  </article>
+</li><li class="day" id="day-16-21" data-day="10" data-label="Day 16-21: Summit push and weather days">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>16-21</b></div>
+  <article class="day-card">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 16-21: </span>Summit push and weather days<span class="badge">Summit window</span></h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M240,56v64a8,8,0,0,1-16,0V75.31l-82.34,82.35a8,8,0,0,1-11.32,0L96,123.31,29.66,189.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0L136,140.69,212.69,64H168a8,8,0,0,1,0-16h64A8,8,0,0,1,240,56Z"/></svg>High point 7,126 m</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Sleep 4,900 m</span></div>
+      <p>Up through the camps to the summit (7,126 m), along a broad snow ridge with views into Tibet and across to Manaslu. Spare days are kept for wind and snow.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Tent</span><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: All</span></div>
+    </div>
+    <div class="day-map map"><svg viewBox="0 0 240 170" role="img" aria-label="Map of day 16-21: Himlung Base Camp to Himlung summit to Himlung Base Camp"><path class="track" d="M-142.8,629.0 L-190.6,373.3 L-136.8,220.5 L-119.6,89.5 L30.0,86.2 L210.0,83.8 L30.0,86.2 L-119.6,89.5 L-136.8,220.5 L-190.6,373.3 L-142.8,629.0" style="opacity:.3"/><path class="track-day" d="M30.0,86.2 L210.0,83.8 L30.0,86.2"/><circle class="stop on" cx="30.0" cy="86.2" r="5"/><circle class="stop peak" cx="210.0" cy="83.8" r="5"/><text x="37.0" y="90.2" text-anchor="start" class="strong">Himlung Base Camp</text><text x="210.0" y="74.8" text-anchor="middle" class="strong">Himlung</text></svg></div>
+  </article>
+</li><li class="day" id="day-22" data-day="11" data-label="Day 22: Base Camp to Meta">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>22</b></div>
+  <article class="day-card">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 22: </span>Base Camp to Meta</h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,168a32.06,32.06,0,0,0-31,24H72a32,32,0,0,1,0-64h96a40,40,0,0,0,0-80H72a8,8,0,0,0,0,16h96a24,24,0,0,1,0,48H72a48,48,0,0,0,0,96h97a32,32,0,1,0,31-40Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,200,216Z"/></svg>about 24 km</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg>7 to 8 h</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Sleep 3,560 m</span></div>
+      <p>A long day down the valley, through Phu and Kyang to Meta.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Tea house, twin room</span><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: B, L, D</span></div>
+    </div>
+    <div class="day-map map"><svg viewBox="0 0 240 170" role="img" aria-label="Map of day 22: Himlung Base Camp to Phu to Kyang to Meta"><path class="track" d="M96.0,237.9 L77.7,140.0 L98.4,81.4 L104.9,31.2 L162.3,30.0 L231.3,29.1 L162.3,30.0 L104.9,31.2 L98.4,81.4 L77.7,140.0 L96.0,237.9" style="opacity:.3"/><path class="track-day" d="M162.3,30.0 L104.9,31.2 L98.4,81.4 L77.7,140.0"/><circle class="stop" cx="162.3" cy="30.0" r="4"/><circle class="stop" cx="104.9" cy="31.2" r="4"/><circle class="stop" cx="98.4" cy="81.4" r="4"/><circle class="stop on" cx="77.7" cy="140.0" r="5"/><text x="84.7" y="144.0" text-anchor="start" class="strong">Meta</text><text x="155.3" y="34.0" text-anchor="end" class="">Himlung Base Camp</text><text x="105.4" y="85.4" text-anchor="start" class="">Kyang</text></svg></div>
+  </article>
+</li><li class="day" id="day-23" data-day="12" data-label="Day 23: Meta to Koto, drive to Besisahar">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>23</b></div>
+  <article class="day-card">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 23: </span>Meta to Koto, drive to Besisahar</h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,168a32.06,32.06,0,0,0-31,24H72a32,32,0,0,1,0-64h96a40,40,0,0,0,0-80H72a8,8,0,0,0,0,16h96a24,24,0,0,1,0,48H72a48,48,0,0,0,0,96h97a32,32,0,1,0,31-40Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,200,216Z"/></svg>about 16 km</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg>6 h walk, 3 h drive</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Sleep 760 m</span></div>
+      <p>Out of the restricted area and down the road.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Hotel</span><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: B, L, D</span></div>
+    </div>
+    <div class="day-map map"><svg viewBox="0 0 240 170" role="img" aria-label="Map of day 23: Meta to Koto"><path class="track" d="M130.3,140.0 L109.7,30.0 L132.9,-35.8 L140.3,-92.2 L204.8,-93.5 L282.4,-94.6 L204.8,-93.5 L140.3,-92.2 L132.9,-35.8 L109.7,30.0 L130.3,140.0" style="opacity:.3"/><path class="track-day" d="M109.7,30.0 L130.3,140.0"/><circle class="stop" cx="109.7" cy="30.0" r="4"/><circle class="stop on" cx="130.3" cy="140.0" r="5"/><text x="137.3" y="144.0" text-anchor="start" class="strong">Koto</text><text x="116.7" y="34.0" text-anchor="start" class="">Meta</text></svg></div>
+  </article>
+</li><li class="day" id="day-24" data-day="13" data-label="Day 24: Drive to Kathmandu">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>24</b></div>
+  <article class="day-card" style="grid-template-columns:1fr">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 24: </span>Drive to Kathmandu</h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg>6 to 7 h drive</span></div>
+      <p>A full day&#x27;s drive back to Kathmandu.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: B</span></div>
+    </div>
+    
+  </article>
+</li></ol>
+      <p class="note">Walking times are for a steady pace with stops. Your guide may change overnight stops to suit the weather, trail conditions and how the group is feeling.</p>
+    </section>
 
-  <section class="related-posts" aria-labelledby="related-heading">
-    <div style="max-width:1120px;margin:0 auto">
-      <h2 id="related-heading">More From Our Blog</h2>
-      <div class="related-grid">
-        <a href="/blog/mera-peak-climbing-guide" class="related-card">
-          <img src="https://images.unsplash.com/photo-1555993539-1732b0258235?q=80&w=600&auto=format&fit=crop" alt="Mera Peak summit plateau Nepal" loading="lazy">
-          <div class="related-card-body">
-            <span class="related-card-cat">Trekking Peak Guide</span>
-            <h3 class="related-card-title">Complete Guide to Mera Peak Climbing 2026</h3>
-          </div>
-        </a>
-        <a href="/blog/ama-dablam-climbing-guide" class="related-card">
-          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=600&auto=format&fit=crop" alt="Ama Dablam from the Khumbu Valley" loading="lazy">
-          <div class="related-card-body">
-            <span class="related-card-cat">Expedition Guide</span>
-            <h3 class="related-card-title">Complete Guide to Climbing Ama Dablam 2026</h3>
-          </div>
-        </a>
-        <a href="/blog/high-altitude-acclimatization-guide" class="related-card">
-          <img src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?q=80&w=600&auto=format&fit=crop" alt="High altitude trekking Nepal" loading="lazy">
-          <div class="related-card-body">
-            <span class="related-card-cat">Safety</span>
-            <h3 class="related-card-title">High Altitude Acclimatization: A Complete Safety Guide</h3>
-          </div>
-        </a>
+    <section id="included" aria-labelledby="inc-title">
+      <h2 id="inc-title">What's included</h2>
+      <div class="incl">
+        <div class="yes"><h3>Included in the price</h3><ul><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Airport pick-up and drop-off in Kathmandu</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>A licensed climbing guide (1 guide to 2 climbers on summit day) and a trekking guide</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Porters on the approach, paid and insured</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Climbing royalty, trekking permits and conservation fees</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Tea houses on the approach; tents, cook and meals at base and high camp</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Group climbing gear: fixed rope, anchors, ice screws</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Skills session at base camp before the summit push</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Transport and domestic flights shown in the itinerary</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Satellite communication and a full medical kit with oxygen</span></li></ul></div>
+        <div class="no"><h3>Not included</h3><ul><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128Z"/></svg><span>International flights and Nepal visa</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128Z"/></svg><span>Insurance covering climbing to the summit altitude and helicopter rescue</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128Z"/></svg><span>Personal climbing gear (can be hired in Kathmandu or Chhukung)</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128Z"/></svg><span>Summit bonus and tips for guides and porters</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128Z"/></svg><span>Drinks, showers and charging in tea houses</span></li></ul></div>
+      </div>
+    </section>
+
+    <section id="permits" aria-labelledby="perm-title">
+      <h2 id="perm-title">Permits and practical details</h2>
+      <div class="info">
+        <div class="info-item"><h3><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,112a8,8,0,0,1-8,8H152a8,8,0,0,1,0-16h40A8,8,0,0,1,200,112Zm-8,24H152a8,8,0,0,0,0,16h40a8,8,0,0,0,0-16Zm40-80V200a16,16,0,0,1-16,16H40a16,16,0,0,1-16-16V56A16,16,0,0,1,40,40H216A16,16,0,0,1,232,56ZM216,200V56H40V200H216Zm-80.26-34a8,8,0,1,1-15.5,4c-2.63-10.26-13.06-18-24.25-18s-21.61,7.74-24.25,18a8,8,0,1,1-15.5-4,39.84,39.84,0,0,1,17.19-23.34,32,32,0,1,1,45.12,0A39.76,39.76,0,0,1,135.75,166ZM96,136a16,16,0,1,0-16-16A16,16,0,0,0,96,136Z"/></svg>Permits you need</h3><ul><li><strong>Himlung Himal climbing royalty (Department of Tourism)</strong><br>Seasonal; revised in September 2025</li><li><strong>Nar Phu Restricted Area Permit</strong><br>Weekly fee, higher in autumn</li><li><strong>Annapurna Conservation Area Permit (ACAP)</strong><br>NPR 3,000</li></ul><p class="note">All royalties and permits are included in the price.</p></div>
+        <div class="info-item"><h3><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,56H176V48a24,24,0,0,0-24-24H104A24,24,0,0,0,80,48v8H40A16,16,0,0,0,24,72V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V72A16,16,0,0,0,216,56ZM96,48a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96ZM216,200H40V72H216V200Zm-56-64a8,8,0,0,1-8,8H136v16a8,8,0,0,1-16,0V144H104a8,8,0,0,1,0-16h16V112a8,8,0,0,1,16,0v16h16A8,8,0,0,1,160,136Z"/></svg>Altitude and safety</h3><p>Above 3,000 m we check everyone's oxygen level and pulse each evening, and talk through how you're sleeping and eating. If altitude symptoms don't ease with rest, we go down. No summit or pass is worth pushing on for. Your insurance needs to cover helicopter rescue up to 7,126 m.</p></div>
+        <div class="info-item"><h3><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Where you stay</h3><p>Tea houses on the walk in, then two-person tents at base camp and high camp. At base camp a cook team looks after you, with a dining tent and a toilet tent.</p></div>
+        <div class="info-item"><h3><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M168,40.58V32A24,24,0,0,0,144,8H112A24,24,0,0,0,88,32v8.58A56.09,56.09,0,0,0,40,96V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V96A56.09,56.09,0,0,0,168,40.58ZM112,24h32a8,8,0,0,1,8,8v8H104V32A8,8,0,0,1,112,24Zm56,136H88v-8a8,8,0,0,1,8-8h64a8,8,0,0,1,8,8ZM88,176h48v8a8,8,0,0,0,16,0v-8h16v40H88Zm112,40H184V152a24,24,0,0,0-24-24H96a24,24,0,0,0-24,24v64H56V96A40,40,0,0,1,96,56h64a40,40,0,0,1,40,40V216ZM152,88a8,8,0,0,1-8,8H112a8,8,0,0,1,0-16h32A8,8,0,0,1,152,88Z"/></svg>Fitness and preparation</h3><p>You need good hill fitness, some experience walking in crampons and a head for heights. When you book, we send a training plan and a full kit list, and we check your gear together in Kathmandu.</p></div>
+      </div>
+    </section>
+
+    <section id="when" aria-labelledby="when-title">
+      <h2 id="when-title">When to go</h2>
+      <div class="months" role="img" aria-label="Best months: October, November"><div class="month " title="January">Jan</div><div class="month " title="February">Feb</div><div class="month " title="March">Mar</div><div class="month good" title="April">Apr</div><div class="month good" title="May">May</div><div class="month " title="June">Jun</div><div class="month " title="July">Jul</div><div class="month " title="August">Aug</div><div class="month " title="September">Sep</div><div class="month best" title="October">Oct</div><div class="month best" title="November">Nov</div><div class="month " title="December">Dec</div></div><div class="months-key"><span><i style="background:var(--accent)"></i>Best</span><span><i style="background:var(--accent-soft)"></i>Good</span><span><i style="background:var(--surface-2)"></i>Possible, but not ideal</span></div>
+      <p class="note">Best months: Oct to Nov. Private departures run on any date that suits you within the season.</p>
+    </section>
+
+    <section aria-labelledby="gal-title">
+      <h2 id="gal-title">Along the way</h2>
+      <div class="gallery"><figure><img src="/images/places/phu-1024.webp" srcset="/images/places/phu-640.webp 640w, /images/places/phu-1024.webp 1024w, /images/places/phu-1600.webp 1600w" sizes="(max-width: 860px) 50vw, 33vw" width="1600" height="1068" alt="The stone village of Phu in the Nar Phu valley, on the approach to Himlung" loading="lazy" decoding="async"><figcaption>The stone village of Phu in the Nar Phu valley, on the approach to Himlung</figcaption></figure><figure><img src="/images/web/high-peaks-1024.webp" srcset="/images/web/high-peaks-640.webp 640w, /images/web/high-peaks-1024.webp 1024w, /images/web/high-peaks-1600.webp 1600w" sizes="(max-width: 860px) 50vw, 33vw" width="1600" height="1200" alt="High snow peaks above a valley" loading="lazy" decoding="async"><figcaption>High snow peaks above a valley</figcaption></figure><figure><img src="/images/web/glacier-walk-1024.webp" srcset="/images/web/glacier-walk-640.webp 640w, /images/web/glacier-walk-1024.webp 900w" sizes="(max-width: 860px) 50vw, 33vw" width="900" height="1200" alt="Climbers walking up a snow slope under a deep blue sky" loading="lazy" decoding="async"><figcaption>Climbers walking up a snow slope under a deep blue sky</figcaption></figure><figure><img src="/images/web/snow-group-1024.webp" srcset="/images/web/snow-group-640.webp 640w, /images/web/snow-group-1024.webp 1024w, /images/web/snow-group-1600.webp 1600w" sizes="(max-width: 860px) 50vw, 33vw" width="1600" height="739" alt="A trekking group in the snow at high altitude" loading="lazy" decoding="async"><figcaption>A trekking group in the snow at high altitude</figcaption></figure><figure><img src="/images/web/dusk-range-1024.webp" srcset="/images/web/dusk-range-640.webp 640w, /images/web/dusk-range-1024.webp 1024w, /images/web/dusk-range-1600.webp 1600w" sizes="(max-width: 860px) 50vw, 33vw" width="1600" height="1280" alt="Snow peaks at dusk" loading="lazy" decoding="async"><figcaption>Snow peaks at dusk</figcaption></figure></div>
+      <p class="credit">The stone village of Phu in the Nar Phu valley: Photo: Sharadgurung7711, <a href="https://commons.wikimedia.org/wiki/File:NarPhuVillage.jpg" rel="noopener" target="_blank">CC BY-SA 4.0</a></p>
+    </section>
+
+    <section id="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">Common questions</h2>
+      <div class="faq"><details><summary>Is Himlung a good first 7,000 m peak?<svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></summary><div><p>Yes. The route is mostly a glacier and snow climb on fixed lines, with a few steeper sections, and the approach gives good acclimatisation. You should have climbed at least one 6,000 m peak first.</p></div></details><details><summary>Will I use supplemental oxygen?<svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></summary><div><p>Most climbers summit without it. Oxygen is carried for emergencies and can be added for summit day on request.</p></div></details><details><summary>Why is Nar Phu restricted?<svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></summary><div><p>It lies close to the Tibetan border and was closed to foreigners until 2003. Permits are issued through a registered agency to groups with a licensed guide.</p></div></details></div>
+    </section>
+  </div>
+
+  <aside class="trip-aside" aria-label="Trip summary">
+    <div class="summary">
+      <div class="summary-top"><small>From, per person</small><p class="amount">US$4,500 <span>24 days</span></p></div>
+      <dl><div><dt><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"/></svg>Duration</dt><dd>24 days</dd></div><div><dt><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M164,80a28,28,0,1,0-28-28A28,28,0,0,0,164,80Zm0-40a12,12,0,1,1-12,12A12,12,0,0,1,164,40Zm90.88,155.92-54.56-92.08A15.87,15.87,0,0,0,186.55,96h0a15.85,15.85,0,0,0-13.76,7.84L146.63,148l-44.84-76.1a16,16,0,0,0-27.58,0L1.11,195.94A8,8,0,0,0,8,208H248a8,8,0,0,0,6.88-12.08ZM88,80l23.57,40H64.43ZM22,192l33-56h66l18.74,31.8,0,0L154,192Zm150.57,0-16.66-28.28L186.55,112,234,192Z"/></svg>Max altitude</dt><dd>7,126 m</dd></div><div><dt><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M240,56v64a8,8,0,0,1-16,0V75.31l-82.34,82.35a8,8,0,0,1-11.32,0L96,123.31,29.66,189.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0L136,140.69,212.69,64H168a8,8,0,0,1,0-16h64A8,8,0,0,1,240,56Z"/></svg>Grade</dt><dd>Alpine PD</dd></div><div><dt><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M244.8,150.4a8,8,0,0,1-11.2-1.6A51.6,51.6,0,0,0,192,128a8,8,0,0,1-7.37-4.89,8,8,0,0,1,0-6.22A8,8,0,0,1,192,112a24,24,0,1,0-23.24-30,8,8,0,1,1-15.5-4A40,40,0,1,1,219,117.51a67.94,67.94,0,0,1,27.43,21.68A8,8,0,0,1,244.8,150.4ZM190.92,212a8,8,0,1,1-13.84,8,57,57,0,0,0-98.16,0,8,8,0,1,1-13.84-8,72.06,72.06,0,0,1,33.74-29.92,48,48,0,1,1,58.36,0A72.06,72.06,0,0,1,190.92,212ZM128,176a32,32,0,1,0-32-32A32,32,0,0,0,128,176ZM72,120a8,8,0,0,0-8-8A24,24,0,1,1,87.24,82a8,8,0,1,0,15.5-4A40,40,0,1,0,37,117.51,67.94,67.94,0,0,0,9.6,139.19a8,8,0,1,0,12.8,9.61A51.6,51.6,0,0,1,64,128,8,8,0,0,0,72,120Z"/></svg>Group size</dt><dd>2 to 6</dd></div><div><dt><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z"/></svg>Starts</dt><dd>Kathmandu</dd></div><div><dt><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm72,88a64,64,0,1,1-64-64A64.07,64.07,0,0,1,192,128Zm-16,0a48,48,0,1,0-48,48A48.05,48.05,0,0,0,176,128ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z"/></svg>Best months</dt><dd>Oct to Nov</dd></div></dl>
+      <div class="summary-actions">
+        <a href="/contact.html?trip=himlung-himal" class="btn btn-primary btn-block">Plan your trip <svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+        <a href="https://wa.me/9779811157421?text=Hello,%20I&#x27;m%20interested%20in%20the%20Himlung%20Himal%20Expedition%20(24%20days)." class="btn btn-ghost btn-block" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg> Ask on WhatsApp</a>
+        <p class="summary-note">No payment needed to enquire. We reply within one working day.</p>
+      </div>
+      <div class="summary-accred"><span>Licensed in Nepal</span><div class="accred-minis"><a class="accred-mini" href="https://tourismdepartment.gov.np/" target="_blank" rel="noopener" title="Department of Tourism, Government of Nepal: Licensed trekking and mountaineering agency"><span class="accred-text" aria-hidden="true"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,136a8,8,0,0,1-8,8H72a8,8,0,0,1,0-16h48A8,8,0,0,1,128,136Zm-8-40H72a8,8,0,0,0,0,16h48a8,8,0,0,0,0-16Zm112,65.47V224A8,8,0,0,1,220,231l-24-13.74L172,231A8,8,0,0,1,160,224V200H40a16,16,0,0,1-16-16V56A16,16,0,0,1,40,40H216a16,16,0,0,1,16,16V86.53a51.88,51.88,0,0,1,0,74.94ZM160,184V161.47A52,52,0,0,1,216,76V56H40V184Zm56-12a51.88,51.88,0,0,1-40,0v38.22l16-9.16a8,8,0,0,1,7.94,0l16,9.16Zm16-48a36,36,0,1,0-36,36A36,36,0,0,0,232,124Z"/></svg><b>Govt. of<br>Nepal</b></span><span class="sr-only">Department of Tourism, Government of Nepal</span></a><a class="accred-mini" href="https://ntb.gov.np/" target="_blank" rel="noopener" title="Nepal Tourism Board: Registered with Nepal&#x27;s national tourism body"><picture><source srcset="/images/logos/ntb.webp" type="image/webp"><img src="/images/logos/ntb.png" alt="Nepal Tourism Board logo" width="33" height="34" loading="lazy" decoding="async"></picture><span class="sr-only">Nepal Tourism Board</span></a><a class="accred-mini" href="https://www.taan.org.np/" target="_blank" rel="noopener" title="Trekking Agencies&#x27; Association of Nepal: Member of the national trekking association"><picture><source srcset="/images/logos/taan.webp" type="image/webp"><img src="/images/logos/taan.png" alt="Trekking Agencies&#x27; Association of Nepal logo" width="25" height="34" loading="lazy" decoding="async"></picture><span class="sr-only">Trekking Agencies&#x27; Association of Nepal</span></a><a class="accred-mini" href="https://www.nepalmountaineering.org/" target="_blank" rel="noopener" title="Nepal Mountaineering Association: Member agency for peak climbing"><picture><source srcset="/images/logos/nma.webp" type="image/webp"><img src="/images/logos/nma.png" alt="Nepal Mountaineering Association logo" width="39" height="34" loading="lazy" decoding="async"></picture><span class="sr-only">Nepal Mountaineering Association</span></a></div></div>
+    </div>
+    <div class="aside-live">
+      <div class="route-panel"><h3><span id="mapDay">Route overview</span></h3><div class="map map-big"><svg viewBox="0 0 340 300" role="img" aria-label="Route map of the Himlung Himal Expedition"><path class="track" d="M105.1,266.0 L84.7,157.2 L107.6,92.2 L114.9,36.4 L178.6,35.1 L255.3,34.0 L178.6,35.1 L114.9,36.4 L107.6,92.2 L84.7,157.2 L105.1,266.0"/><path class="seg" data-i="2" d="M105.1,266.0 L84.7,157.2"/><path class="seg" data-i="3" d="M84.7,157.2 L107.6,92.2"/><path class="seg" data-i="4" d="M107.6,92.2 L114.9,36.4"/><path class="seg" data-i="6" d="M114.9,36.4 L178.6,35.1"/><path class="seg" data-i="10" d="M178.6,35.1 L255.3,34.0 L178.6,35.1"/><path class="seg" data-i="11" d="M178.6,35.1 L114.9,36.4 L107.6,92.2 L84.7,157.2"/><path class="seg" data-i="12" d="M84.7,157.2 L105.1,266.0"/><circle class="stop" data-i="1" cx="105.1" cy="266.0" r="4"><title>Koto, 2,600 m</title></circle><circle class="stop" data-i="2" cx="84.7" cy="157.2" r="4"><title>Meta, 3,560 m</title></circle><circle class="stop" data-i="3" cx="107.6" cy="92.2" r="4"><title>Kyang, 3,820 m</title></circle><circle class="stop" data-i="4" cx="114.9" cy="36.4" r="4"><title>Phu, 4,080 m</title></circle><circle class="stop" data-i="6" cx="178.6" cy="35.1" r="4"><title>Himlung Base Camp, 4,900 m</title></circle><circle class="stop peak" cx="255.3" cy="34.0" r="5"><title>Himlung summit, 7,126 m</title></circle><text x="248.3" y="38.0" text-anchor="end" class="strong">Himlung summit 7,126 m</text><text x="112.1" y="270.0" text-anchor="start" class="strong">Koto</text><text x="91.7" y="161.2" text-anchor="start" class="">Meta</text><text x="114.6" y="96.2" text-anchor="start" class="">Kyang</text><text x="107.9" y="40.4" text-anchor="end" class="">Phu</text><text x="178.6" y="51.1" text-anchor="middle" class="">Himlung Base Camp</text><g class="map-scale"><path d="M10,286 V290 H57.5 V286" fill="none" stroke="currentColor" stroke-width="1" style="stroke:var(--ink-3)"/><text x="62.5" y="290" class="map-scale" style="paint-order:normal;stroke:none">5 km</text></g><text x="326" y="22" class="north" text-anchor="middle" style="paint-order:normal;stroke:none">N</text><path d="M326,26 l-4,10 h8z" style="fill:var(--ink-3)"/></svg></div></div>
+    </div>
+  </aside>
+</div>
+
+<section class="section" aria-labelledby="rel-title"><div class="wrap">
+  <div class="head-row"><div class="head"><h2 id="rel-title">Other trips you might like</h2></div><a class="link" href="/expeditions.html">All climbing <svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a></div>
+  <div class="cards"><a href="/articles/annapurna-blog.html" class="card reveal" data-tags="annapurna moderate classic two-weeks trek short">
+  <div class="ph"><img src="/images/places/abc-sanctuary-1024.webp" srcset="/images/places/abc-sanctuary-640.webp 640w, /images/places/abc-sanctuary-1024.webp 1024w, /images/places/abc-sanctuary-1600.webp 1600w" sizes="(max-width: 640px) 100vw, (max-width: 1099px) 50vw, 400px" width="1600" height="1067" alt="Annapurna South and Moditse above the trail into the Annapurna Sanctuary" loading="lazy" decoding="async"></div>
+  <div class="card-body">
+    <p class="card-region">Annapurna region</p>
+    <h3>Annapurna Base Camp</h3>
+    <p class="card-text">Sunrise from Poon Hill, then up the Modi Khola gorge into the Annapurna Sanctuary. No flights, and gentler altitude than Everest.</p>
+    <div class="card-facts">
+      <span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"/></svg>12 days</span>
+      <span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M164,80a28,28,0,1,0-28-28A28,28,0,0,0,164,80Zm0-40a12,12,0,1,1-12,12A12,12,0,0,1,164,40Zm90.88,155.92-54.56-92.08A15.87,15.87,0,0,0,186.55,96h0a15.85,15.85,0,0,0-13.76,7.84L146.63,148l-44.84-76.1a16,16,0,0,0-27.58,0L1.11,195.94A8,8,0,0,0,8,208H248a8,8,0,0,0,6.88-12.08ZM88,80l23.57,40H64.43ZM22,192l33-56h66l18.74,31.8,0,0L154,192Zm150.57,0-16.66-28.28L186.55,112,234,192Z"/></svg>4,130 m</span>
+      <span class="chip"><span class="grade" title="Grade 3 of 5"><i><b class="on"></b><b class="on"></b><b class="on"></b><b class=""></b><b class=""></b></i>Moderate</span></span>
+    </div>
+    <div class="card-foot"><p class="price"><small>From</small><strong>US$1,100</strong></p><span class="link">View itinerary <svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span></div>
+  </div>
+</a><a href="/articles/annapurna-circuit.html" class="card reveal" data-tags="annapurna strenuous classic long trek">
+  <div class="ph"><img src="/images/places/thorong-la-1024.webp" srcset="/images/places/thorong-la-640.webp 640w, /images/places/thorong-la-1024.webp 1024w, /images/places/thorong-la-1600.webp 1600w" sizes="(max-width: 640px) 100vw, (max-width: 1099px) 50vw, 400px" width="1600" height="1067" alt="Prayer flags on the Thorong La, 5,416 m, on the Annapurna Circuit" loading="lazy" decoding="async"></div>
+  <div class="card-body">
+    <p class="card-region">Annapurna region</p>
+    <h3>Annapurna Circuit</h3>
+    <p class="card-text">Rice terraces to high desert in a single walk, with a detour to Tilicho Lake and a 5,416 m pass to cross.</p>
+    <div class="card-facts">
+      <span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"/></svg>18 days</span>
+      <span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M164,80a28,28,0,1,0-28-28A28,28,0,0,0,164,80Zm0-40a12,12,0,1,1-12,12A12,12,0,0,1,164,40Zm90.88,155.92-54.56-92.08A15.87,15.87,0,0,0,186.55,96h0a15.85,15.85,0,0,0-13.76,7.84L146.63,148l-44.84-76.1a16,16,0,0,0-27.58,0L1.11,195.94A8,8,0,0,0,8,208H248a8,8,0,0,0,6.88-12.08ZM88,80l23.57,40H64.43ZM22,192l33-56h66l18.74,31.8,0,0L154,192Zm150.57,0-16.66-28.28L186.55,112,234,192Z"/></svg>5,416 m</span>
+      <span class="chip"><span class="grade" title="Grade 4 of 5"><i><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b class=""></b></i>Challenging</span></span>
+    </div>
+    <div class="card-foot"><p class="price"><small>From</small><strong>US$1,350</strong></p><span class="link">View itinerary <svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span></div>
+  </div>
+</a><a href="/articles/manaslu-blog.html" class="card reveal" data-tags="manaslu strenuous restricted two-weeks trek">
+  <div class="ph"><img src="/images/places/larkya-la-1024.webp" srcset="/images/places/larkya-la-640.webp 640w, /images/places/larkya-la-1024.webp 1024w, /images/places/larkya-la-1600.webp 1600w" sizes="(max-width: 640px) 100vw, (max-width: 1099px) 50vw, 400px" width="1600" height="747" alt="Prayer flags on the Larkya La pass, 5,106 m, on the Manaslu Circuit" loading="lazy" decoding="async"></div>
+  <div class="card-body">
+    <p class="card-region">Gorkha, Manaslu region</p>
+    <h3>Manaslu Circuit</h3>
+    <p class="card-text">Deep gorges, Tibetan Buddhist villages and the Larkya La, on a trail that sees a fraction of the Everest crowds.</p>
+    <div class="card-facts">
+      <span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"/></svg>16 days</span>
+      <span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M164,80a28,28,0,1,0-28-28A28,28,0,0,0,164,80Zm0-40a12,12,0,1,1-12,12A12,12,0,0,1,164,40Zm90.88,155.92-54.56-92.08A15.87,15.87,0,0,0,186.55,96h0a15.85,15.85,0,0,0-13.76,7.84L146.63,148l-44.84-76.1a16,16,0,0,0-27.58,0L1.11,195.94A8,8,0,0,0,8,208H248a8,8,0,0,0,6.88-12.08ZM88,80l23.57,40H64.43ZM22,192l33-56h66l18.74,31.8,0,0L154,192Zm150.57,0-16.66-28.28L186.55,112,234,192Z"/></svg>5,106 m</span>
+      <span class="chip"><span class="grade" title="Grade 4 of 5"><i><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b class=""></b></i>Challenging</span></span>
+    </div>
+    <div class="card-foot"><p class="price"><small>From</small><strong>US$1,950</strong></p><span class="link">View itinerary <svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span></div>
+  </div>
+</a></div>
+</div></section>
+<section class="section-sm"><div class="wrap"><div class="cta reveal">
+  <img src="/images/places/phu-1024.webp" srcset="/images/places/phu-640.webp 640w, /images/places/phu-1024.webp 1024w, /images/places/phu-1600.webp 1600w" sizes="100vw" width="1600" height="1068" alt="" loading="lazy" decoding="async">
+  <div><h2>Thinking about the Himlung Himal?</h2><p>Tell us your dates and who&#x27;s coming. We&#x27;ll send a day-by-day plan, a clear price and an honest view on whether it&#x27;s the right trip for you.</p></div>
+  <div class="cta-actions">
+    <a href="/contact.html?trip=himlung-himal" class="btn btn-light">Plan your trip <svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="https://wa.me/9779811157421" class="btn btn-onphoto" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg> WhatsApp us</a>
+    <div class="cta-lines"><a href="tel:+9779811157421">+977 981 115 7421</a><a href="mailto:info@beyondsummitexped.com">info@beyondsummitexped.com</a></div>
+  </div>
+</div></div></section>
+</main>
+<div class="mobile-book"><p class="price"><small>From, per person</small><strong>US$4,500</strong></p><a href="/contact.html?trip=himlung-himal" class="btn btn-primary">Plan your trip</a></div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="/" class="brand" aria-label="Beyond Summit Expeditions, home"><svg class="logo-mark" viewBox="-1.5 -1.5 88 59" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M45.4 0 47.3 2.3 49.6 4.8 51.6 8.5 52.9 13.6 54.2 17.2 56.1 19.6 58.6 24.7 55.9 23.9 53.9 17.8 51.8 16.5 49.7 14.1 44.7 11.9 44.5 6.8 45 1.7Z" fill="currentColor" stroke="none" opacity=".9"/><path d="M0 50.8 2.9 46.6 5.1 43.2 7.2 41.3 8.8 38.1 11.2 34.5 12.6 31.5 13.7 30.8 15.2 25.6 17.8 20.7 19.6 17.9 20.5 19.2 21.8 18 23.4 19.9 25 22.3 26.3 21.9 27.7 24 29.5 24.8 30.9 23.9 32.8 19.9 35 17.9 37.2 13.8 39.6 8.9 41.6 5.1 43.4 2.8 45.4 0 47.3 2.3 49.6 4.8 51.6 8.5 52.9 13.6 54.2 17.2 56.1 19.6 58.6 24.7 60.4 26.7 63.3 28.4 67.4 29.1 71.7 27.7 75 29.7 81.3 31.8 85 29.1" stroke-width="1.6" vector-effect="non-scaling-stroke"/><path d="M3.7 55.7 10.2 49.3 12.8 47.9 20.3 39.3 24 38.3 28.3 47.1 36.7 55.7 M52.7 53.4 58.8 48.8 63.6 44.4 66.8 40.5 76.2 38.1 85 29.1" stroke-width="1.15" vector-effect="non-scaling-stroke"/><path d="M45 1.7 44.5 6.8 44.7 11.9 M19 20.9 19.5 27.4 19.6 34.6 20.7 38.9" stroke-width=".9" vector-effect="non-scaling-stroke" opacity=".6"/></svg><span>Beyond Summit<small>Expeditions, Kathmandu</small></span></a>
+        <p class="footer-about">A trekking and mountaineering company in Thamel, Kathmandu, licensed by the Department of Tourism, Government of Nepal.</p>
+        <p class="footer-about"><a href="tel:+9779811157421">+977 981 115 7421</a><br><a href="mailto:info@beyondsummitexped.com">info@beyondsummitexped.com</a></p>
+      </div>
+      <div><h4>Treks</h4><ul><li><a href="/articles/everest-blog-new.html">Everest Base Camp</a></li><li><a href="/articles/annapurna-blog.html">Annapurna Base Camp</a></li><li><a href="/articles/annapurna-circuit.html">Annapurna Circuit</a></li><li><a href="/articles/manaslu-blog.html">Manaslu Circuit</a></li><li><a href="/articles/upper-mustang-blog.html">Upper Mustang</a></li><li><a href="/articles/langtang-valley.html">Langtang Valley</a></li></ul></div><div><h4>Climbing</h4><ul><li><a href="/articles/islandpeak.html">Island Peak</a></li><li><a href="/articles/merapeak.html">Mera Peak</a></li><li><a href="/articles/lobuche.html">Lobuche East</a></li><li><a href="/articles/amadablam-blog.html">Ama Dablam</a></li><li><a href="/articles/himlung.html">Himlung Himal</a></li><li><a href="/expeditions.html#eight-thousanders">8,000 m expeditions</a></li></ul></div><div><h4>Plan</h4><ul><li><a href="/articles/nepal-trekking-permits.html">Trekking permits 2026</a></li><li><a href="/articles/best-time-to-trek-nepal.html">Best time to trek</a></li><li><a href="/outdoor.html">Activities</a></li><li><a href="/blog.html">Journal</a></li></ul></div><div><h4>Company</h4><ul><li><a href="/about.html">About us</a></li><li><a href="/guides.html">Our team</a></li><li><a href="/gallery.html">Photo gallery</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/photo-credits.html">Photo credits</a></li></ul></div>
+    </div>
+    <div class="footer-accred"><p>Licensed and registered in Nepal</p><div class="accred-minis"><a class="accred-mini" href="https://tourismdepartment.gov.np/" target="_blank" rel="noopener" title="Department of Tourism, Government of Nepal: Licensed trekking and mountaineering agency"><span class="accred-text" aria-hidden="true"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,136a8,8,0,0,1-8,8H72a8,8,0,0,1,0-16h48A8,8,0,0,1,128,136Zm-8-40H72a8,8,0,0,0,0,16h48a8,8,0,0,0,0-16Zm112,65.47V224A8,8,0,0,1,220,231l-24-13.74L172,231A8,8,0,0,1,160,224V200H40a16,16,0,0,1-16-16V56A16,16,0,0,1,40,40H216a16,16,0,0,1,16,16V86.53a51.88,51.88,0,0,1,0,74.94ZM160,184V161.47A52,52,0,0,1,216,76V56H40V184Zm56-12a51.88,51.88,0,0,1-40,0v38.22l16-9.16a8,8,0,0,1,7.94,0l16,9.16Zm16-48a36,36,0,1,0-36,36A36,36,0,0,0,232,124Z"/></svg><b>Govt. of<br>Nepal</b></span><span class="sr-only">Department of Tourism, Government of Nepal</span></a><a class="accred-mini" href="https://ntb.gov.np/" target="_blank" rel="noopener" title="Nepal Tourism Board: Registered with Nepal&#x27;s national tourism body"><picture><source srcset="/images/logos/ntb.webp" type="image/webp"><img src="/images/logos/ntb.png" alt="Nepal Tourism Board logo" width="33" height="34" loading="lazy" decoding="async"></picture><span class="sr-only">Nepal Tourism Board</span></a><a class="accred-mini" href="https://www.taan.org.np/" target="_blank" rel="noopener" title="Trekking Agencies&#x27; Association of Nepal: Member of the national trekking association"><picture><source srcset="/images/logos/taan.webp" type="image/webp"><img src="/images/logos/taan.png" alt="Trekking Agencies&#x27; Association of Nepal logo" width="25" height="34" loading="lazy" decoding="async"></picture><span class="sr-only">Trekking Agencies&#x27; Association of Nepal</span></a><a class="accred-mini" href="https://www.nepalmountaineering.org/" target="_blank" rel="noopener" title="Nepal Mountaineering Association: Member agency for peak climbing"><picture><source srcset="/images/logos/nma.webp" type="image/webp"><img src="/images/logos/nma.png" alt="Nepal Mountaineering Association logo" width="39" height="34" loading="lazy" decoding="async"></picture><span class="sr-only">Nepal Mountaineering Association</span></a></div></div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Beyond Summit Expeditions</p>
+      <button class="theme-toggle" type="button" data-theme-toggle><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm72,88a64,64,0,1,1-64-64A64.07,64.07,0,0,1,192,128Zm-16,0a48,48,0,1,0-48,48A48.05,48.05,0,0,0,176,128ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z"/></svg><span>Dark mode</span></button>
+      <div class="socials">
+        <a href="https://www.instagram.com/beyondsummitexpeditions" target="_blank" rel="noopener" aria-label="Instagram"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"/></svg></a>
+        <a href="https://www.facebook.com/beyondsummitexped" target="_blank" rel="noopener" aria-label="Facebook"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"/></svg></a>
+        <a href="https://www.youtube.com/@beyondsummitexpeditions" target="_blank" rel="noopener" aria-label="YouTube"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M164.44,121.34l-48-32A8,8,0,0,0,104,96v64a8,8,0,0,0,12.44,6.66l48-32a8,8,0,0,0,0-13.32ZM120,145.05V111l25.58,17ZM234.33,69.52a24,24,0,0,0-14.49-16.4C185.56,39.88,131,40,128,40s-57.56-.12-91.84,13.12a24,24,0,0,0-14.49,16.4C19.08,79.5,16,97.74,16,128s3.08,48.5,5.67,58.48a24,24,0,0,0,14.49,16.41C69,215.56,120.4,216,127.34,216h1.32c6.94,0,58.37-.44,91.18-13.11a24,24,0,0,0,14.49-16.41c2.59-10,5.67-28.22,5.67-58.48S236.92,79.5,234.33,69.52Zm-15.49,113a8,8,0,0,1-4.77,5.49c-31.65,12.22-85.48,12-86,12H128c-.54,0-54.33.2-86-12a8,8,0,0,1-4.77-5.49C34.8,173.39,32,156.57,32,128s2.8-45.39,5.16-54.47A8,8,0,0,1,41.93,68c30.52-11.79,81.66-12,85.85-12h.27c.54,0,54.38-.18,86,12a8,8,0,0,1,4.77,5.49C221.2,82.61,224,99.43,224,128S221.2,173.39,218.84,182.47Z"/></svg></a>
       </div>
     </div>
-  </section>
-
-  <footer class="footer">
-    <p>© 2026 <a href="/">Beyond Summit Expeditions</a> · Licensed by Dept. of Tourism, Nepal · <a href="/privacy-policy">Privacy</a> · <a href="/terms">Terms</a></p>
-  </footer>
-
+  </div>
+</footer>
+<a href="https://wa.me/9779811157421" class="wa-float" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg></a>
+<script src="/js/site.js?v=2" defer></script>
 </body>
 </html>

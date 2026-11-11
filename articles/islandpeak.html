@@ -1,869 +1,410 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Complete Guide to Island Peak Climbing 2026 | Beyond Summit Expeditions</title>
-  <meta name="description" content="The definitive Island Peak (Imja Tse) guide for 2026. Full 17-day itinerary, the real story on the headwall, permit costs, gear list and honest expectations for Nepal's most popular trekking peak at 6,189m. Updated February 2026.">
-  <meta name="author" content="Beyond Summit Expeditions">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=DM+Sans:wght@300;400;500;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --gold: #c9933a; --gold-light: #e8b564; --gold-pale: #f5e6cc;
-      --onyx: #0d0d0f; --mist: #f7f5f2; --snow: #ffffff;
-      --text: #2a2a2e; --text-muted: #7a7a82; --border: #e8e4df;
-      --rust: #7a3020; --rust-pale: rgba(122,48,32,0.07);
-      --font-display: 'DM Serif Display', serif;
-      --font-serif: 'Cormorant Garamond', serif;
-      --font-body: 'DM Sans', sans-serif;
-      --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      --radius: 1.5rem;
-    }
-    html { scroll-behavior: smooth; }
-    body { font-family: var(--font-body); color: var(--text); background: var(--snow); -webkit-font-smoothing: antialiased; }
-    ::-webkit-scrollbar { width: 5px; }
-    ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 10px; }
-
-    .nav {
-      position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.97);
-      backdrop-filter: blur(20px); border-bottom: 1px solid var(--border);
-      padding: 1rem 1.5rem; display: flex; align-items: center; justify-content: space-between;
-    }
-    @media(min-width:1024px) { .nav { padding: 1rem 4rem; } }
-    .nav-logo { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; }
-    .nav-logo-icon { width: 28px; height: 28px; background: var(--gold); clip-path: polygon(50% 0%,0% 100%,100% 100%); flex-shrink: 0; }
-    .nav-logo-name { font-family: var(--font-display); font-size: 1rem; color: var(--onyx); }
-    .nav-back { display: flex; align-items: center; gap: 0.5rem; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; transition: color var(--transition); }
-    .nav-back:hover { color: var(--gold); }
-    .nav-back svg { transition: transform var(--transition); }
-    .nav-back:hover svg { transform: translateX(-3px); }
-
-    .breadcrumb { padding: 1rem 1.5rem; max-width: 800px; margin: 0 auto; }
-    @media(min-width:1024px) { .breadcrumb { padding: 1.25rem 0; } }
-    .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; }
-    .breadcrumb li { display: flex; align-items: center; gap: 0.4rem; font-size: 0.72rem; color: var(--text-muted); }
-    .breadcrumb li a { color: var(--text-muted); text-decoration: none; transition: color var(--transition); }
-    .breadcrumb li a:hover { color: var(--gold); }
-    .breadcrumb li:not(:last-child)::after { content: '›'; opacity: 0.5; }
-    .breadcrumb li:last-child { color: var(--text); font-weight: 600; }
-
-    .article-hero { position: relative; height: 55vh; min-height: 320px; overflow: hidden; background: var(--onyx); }
-    .article-hero img { width: 100%; height: 100%; object-fit: cover; opacity: 0.62; }
-    .article-hero-gradient { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(13,13,15,0.4) 0%, rgba(13,13,15,0.1) 40%, var(--snow) 100%); }
-    .article-hero-label {
-      position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
-      font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase;
-      color: rgba(255,255,255,0.45); white-space: nowrap;
-    }
-
-    .article-wrap { max-width: 1120px; margin: 0 auto; padding: 0 1.5rem; }
-    @media(min-width:1024px) { .article-wrap { display: grid; grid-template-columns: 1fr 300px; gap: 4rem; padding: 0 2rem; } }
-    .article-main { padding-bottom: 4rem; }
-
-    .article-header { margin-bottom: 2.5rem; }
-    .article-meta-top { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; margin-bottom: 1.25rem; }
-    .article-cat { background: var(--gold-pale); color: var(--gold); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 100px; }
-    .article-cat.popular { background: var(--rust-pale); color: var(--rust); }
-    .article-date { font-size: 0.78rem; color: var(--text-muted); }
-    .article-read { font-size: 0.78rem; color: var(--text-muted); }
-    .article-title { font-family: var(--font-display); font-size: clamp(1.9rem, 5vw, 3.2rem); line-height: 1.1; color: var(--onyx); margin-bottom: 1.25rem; letter-spacing: -0.01em; }
-    .article-excerpt { font-size: 1.1rem; line-height: 1.7; color: var(--text-muted); border-left: 3px solid var(--gold); padding-left: 1.25rem; margin-bottom: 1.75rem; }
-    .article-share { display: flex; align-items: center; gap: 0.75rem; padding: 1rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-    .article-share span { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); }
-    .share-btn { display: flex; align-items: center; gap: 0.4rem; background: var(--mist); border: none; cursor: pointer; padding: 0.4rem 0.9rem; border-radius: 100px; font-family: var(--font-body); font-size: 0.72rem; font-weight: 600; color: var(--text); transition: var(--transition); }
-    .share-btn:hover { background: var(--gold-pale); color: var(--gold); }
-
-    .article-content { font-size: 1rem; line-height: 1.85; color: var(--text); }
-    @media(min-width:768px) { .article-content { font-size: 1.05rem; } }
-    .article-content h2 { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2rem); color: var(--onyx); margin: 2.5rem 0 1rem; line-height: 1.15; }
-    .article-content h3 { font-family: var(--font-display); font-size: 1.3rem; color: var(--onyx); margin: 2rem 0 0.75rem; }
-    .article-content p { margin-bottom: 1.25rem; }
-    .article-content ul, .article-content ol { margin: 0 0 1.25rem 1.5rem; }
-    .article-content li { margin-bottom: 0.5rem; }
-    .article-content strong { font-weight: 700; color: var(--onyx); }
-    .article-content a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
-    .article-content a:hover { color: var(--onyx); }
-    .article-content blockquote {
-      background: var(--mist); border-left: 4px solid var(--gold);
-      padding: 1.5rem 1.75rem; border-radius: 0 var(--radius) var(--radius) 0;
-      margin: 2rem 0; font-family: var(--font-serif); font-size: 1.2rem;
-      color: var(--onyx); line-height: 1.6; font-style: italic;
-    }
-    .article-content blockquote cite { display: block; margin-top: 0.75rem; font-size: 0.8rem; font-style: normal; color: var(--text-muted); font-family: var(--font-body); }
-
-    /* HONEST BANNER */
-    .honest-banner {
-      background: linear-gradient(135deg, var(--rust-pale), rgba(122,48,32,0.03));
-      border: 1.5px solid rgba(122,48,32,0.2);
-      border-radius: var(--radius); padding: 1.5rem 1.75rem; margin: 2rem 0;
-      display: flex; gap: 1.25rem; align-items: flex-start;
-    }
-    .honest-banner-icon { flex-shrink: 0; margin-top: 0.1rem; color: var(--rust); }
-    .honest-banner h4 { font-family: var(--font-display); font-size: 1rem; color: var(--rust); margin-bottom: 0.4rem; }
-    .honest-banner p { font-size: 0.88rem; line-height: 1.65; color: var(--text); margin: 0; }
-
-    /* PROGRESSION LADDER */
-    .progression-ladder { margin: 2rem 0; display: flex; flex-direction: column; }
-    .ladder-step {
-      display: flex; align-items: center; gap: 1rem; padding: 0.9rem 1.25rem;
-      border: 1px solid var(--border); border-bottom: none; background: var(--snow);
-    }
-    .ladder-step:first-child { border-radius: var(--radius) var(--radius) 0 0; }
-    .ladder-step:last-child { border-bottom: 1px solid var(--border); border-radius: 0 0 var(--radius) var(--radius); }
-    .ladder-step.active { background: var(--mist); border-color: rgba(201,147,58,0.3); }
-    .ladder-step.active .ladder-peak { color: var(--gold); }
-    .ladder-num { width: 28px; height: 28px; background: var(--mist); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 0.8rem; color: var(--text-muted); flex-shrink: 0; }
-    .ladder-step.active .ladder-num { background: var(--gold); color: var(--snow); }
-    .ladder-peak { font-weight: 700; font-size: 0.88rem; color: var(--text); }
-    .ladder-alt { font-size: 0.75rem; color: var(--text-muted); margin-left: auto; white-space: nowrap; }
-
-    /* VS BANNER */
-    .vs-banner {
-      display: flex; align-items: flex-start; gap: 1rem;
-      background: linear-gradient(135deg, rgba(201,147,58,0.08), rgba(201,147,58,0.04));
-      border: 1px solid rgba(201,147,58,0.25); border-radius: var(--radius);
-      padding: 1.25rem 1.5rem; margin: 2rem 0;
-    }
-    .vs-banner-icon { flex-shrink: 0; color: var(--gold); margin-top: 0.15rem; }
-    .vs-banner p { margin: 0; font-size: 0.9rem; line-height: 1.6; color: var(--text); }
-    .vs-banner strong { color: var(--gold); }
-
-    /* INFO BOXES */
-    .info-box { border-radius: var(--radius); padding: 1.5rem 1.75rem; margin: 2rem 0; border: 1px solid transparent; }
-    .info-box.tip { background: rgba(201,147,58,0.08); border-color: rgba(201,147,58,0.2); }
-    .info-box.warning { background: rgba(231,76,60,0.06); border-color: rgba(231,76,60,0.2); }
-    .info-box.note { background: var(--mist); border-color: var(--border); }
-    .info-box.green { background: rgba(39,174,96,0.06); border-color: rgba(39,174,96,0.2); }
-    .info-box.rust { background: var(--rust-pale); border-color: rgba(122,48,32,0.2); }
-    .info-box-header { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.6rem; }
-    .info-box-title { font-size: 0.7rem; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; }
-    .info-box.tip .info-box-title { color: var(--gold); }
-    .info-box.warning .info-box-title { color: #c0392b; }
-    .info-box.note .info-box-title { color: var(--text-muted); }
-    .info-box.green .info-box-title { color: #27ae60; }
-    .info-box.rust .info-box-title { color: var(--rust); }
-    .info-box-icon { flex-shrink: 0; }
-    .info-box.tip .info-box-icon { color: var(--gold); }
-    .info-box.warning .info-box-icon { color: #c0392b; }
-    .info-box.note .info-box-icon { color: var(--text-muted); }
-    .info-box.green .info-box-icon { color: #27ae60; }
-    .info-box.rust .info-box-icon { color: var(--rust); }
-    .info-box p { font-size: 0.9rem; line-height: 1.7; margin: 0; color: var(--text); }
-
-    /* ITINERARY */
-    .phase-label { font-size: 0.65rem; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); padding: 1rem 0 0.25rem; border-top: 2px solid var(--border); margin-top: 1rem; display: block; }
-    .phase-label:first-child { border-top: none; margin-top: 0; padding-top: 0; }
-    .itinerary { margin: 2rem 0; }
-    .itinerary-day { display: flex; gap: 1.25rem; padding: 1.25rem 0; border-bottom: 1px solid var(--border); }
-    .itinerary-day:last-child { border-bottom: none; }
-    .day-number { width: 48px; height: 48px; flex-shrink: 0; background: var(--onyx); color: var(--snow); border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; font-family: var(--font-display); }
-    .day-number.summit-day { background: linear-gradient(135deg, #3a1a00, #c9933a); }
-    .day-number.acclimatise { background: #1c3a2d; }
-    .day-number.rest { background: #3a2010; }
-    .day-number span:first-child { font-size: 0.5rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); }
-    .day-number.acclimatise span:first-child { color: #6abf99; }
-    .day-number.rest span:first-child { color: #e8a87c; }
-    .day-number span:last-child { font-size: 1.1rem; line-height: 1; }
-    .day-content h4 { font-family: var(--font-display); font-size: 1.05rem; color: var(--onyx); margin-bottom: 0.3rem; }
-    .day-content p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin: 0; }
-    .day-meta { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.4rem; }
-    .day-tag { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; background: var(--mist); color: var(--text-muted); padding: 0.2rem 0.6rem; border-radius: 100px; }
-    .day-tag.peak { background: rgba(201,147,58,0.1); color: var(--gold); }
-    .day-tag.rust { background: var(--rust-pale); color: var(--rust); }
-    .day-tag.green { background: rgba(39,174,96,0.08); color: #27ae60; }
-
-    /* TABLES */
-    .cost-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
-    .cost-table th { text-align: left; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); padding: 0.75rem 1rem; border-bottom: 2px solid var(--gold-pale); }
-    .cost-table td { padding: 0.85rem 1rem; border-bottom: 1px solid var(--border); font-size: 0.88rem; }
-    .cost-table tr:nth-child(even) td { background: var(--mist); }
-    .cost-table tr:last-child td { font-weight: 700; border-bottom: none; }
-
-    .compare-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
-    .compare-table th { text-align: left; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); padding: 0.75rem 1rem; border-bottom: 2px solid var(--gold-pale); }
-    .compare-table td { padding: 0.85rem 1rem; border-bottom: 1px solid var(--border); font-size: 0.88rem; vertical-align: top; }
-    .compare-table tr:nth-child(even) td { background: var(--mist); }
-    .compare-table tr:last-child td { border-bottom: none; }
-    .compare-table .hl { color: var(--gold); font-weight: 700; }
-
-    /* SIDEBAR */
-    .article-sidebar { padding-top: 2rem; }
-    @media(min-width:1024px) { .article-sidebar { padding-top: 0; } }
-    .sidebar-sticky { position: sticky; top: 5rem; display: flex; flex-direction: column; gap: 1.5rem; }
-    .sidebar-widget { background: var(--mist); border-radius: var(--radius); padding: 1.5rem; border: 1px solid var(--border); }
-    .sidebar-widget-title { font-family: var(--font-display); font-size: 1.1rem; color: var(--onyx); margin-bottom: 1rem; }
-    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 0.35rem; }
-    .toc-list li a { font-size: 0.82rem; color: var(--text-muted); text-decoration: none; transition: color var(--transition); display: block; padding: 0.2rem 0; }
-    .toc-list li a:hover { color: var(--gold); padding-left: 4px; }
-    .cta-widget { background: var(--onyx); border-radius: var(--radius); padding: 1.75rem; text-align: center; }
-    .cta-widget h3 { font-family: var(--font-display); color: var(--snow); font-size: 1.4rem; margin-bottom: 0.6rem; }
-    .cta-widget p { font-size: 0.82rem; color: rgba(255,255,255,0.5); line-height: 1.65; margin-bottom: 1.25rem; }
-    .btn-gold { display: block; background: var(--gold); color: var(--snow); text-decoration: none; text-align: center; padding: 0.85rem 1.5rem; border-radius: 0.75rem; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; transition: var(--transition); }
-    .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); }
-    .sidebar-fact { display: flex; align-items: center; gap: 0.75rem; padding: 0.6rem 0; border-bottom: 1px solid var(--border); }
-    .sidebar-fact:last-child { border-bottom: none; }
-    .sidebar-fact-icon { color: var(--gold); flex-shrink: 0; }
-    .sidebar-fact-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-muted); }
-    .sidebar-fact-val { font-size: 0.9rem; font-weight: 700; color: var(--text); }
-    .sidebar-next-peaks { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.5rem; }
-    .next-peak-item { display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; padding: 0.5rem 0.75rem; background: var(--snow); border-radius: 0.6rem; border: 1px solid var(--border); text-decoration: none; color: var(--text); transition: border-color var(--transition), color var(--transition); }
-    .next-peak-item:hover { border-color: var(--gold); color: var(--gold); }
-    .next-peak-item span:last-child { font-size: 0.68rem; color: var(--text-muted); }
-
-    .related-posts { background: var(--mist); padding: 4rem 1.5rem; }
-    @media(min-width:1024px) { .related-posts { padding: 5rem 4rem; } }
-    .related-grid { display: grid; gap: 1.5rem; max-width: 1120px; margin: 2rem auto 0; }
-    @media(min-width:640px) { .related-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media(min-width:1024px) { .related-grid { grid-template-columns: repeat(3, 1fr); } }
-    .related-card { background: var(--snow); border-radius: var(--radius); overflow: hidden; text-decoration: none; display: block; border: 1px solid var(--border); transition: transform var(--transition), box-shadow var(--transition); }
-    .related-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.08); }
-    .related-card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; }
-    .related-card-body { padding: 1.25rem; }
-    .related-card-cat { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.4rem; display: block; }
-    .related-card-title { font-family: var(--font-display); font-size: 1.1rem; color: var(--onyx); line-height: 1.25; }
-    .related-posts h2 { font-family: var(--font-display); font-size: 2rem; color: var(--onyx); text-align: center; }
-
-    .footer { background: var(--onyx); color: rgba(255,255,255,0.5); padding: 3rem 1.5rem; text-align: center; }
-    .footer a { color: var(--gold-light); text-decoration: none; }
-    .footer p { font-size: 0.8rem; }
-  </style>
-</head>
-<body>
-
-  <nav class="nav" role="navigation" aria-label="Site navigation">
-    <a href="/" class="nav-logo" aria-label="Beyond Summit Expeditions - Home">
-      <div class="nav-logo-icon" aria-hidden="true"></div>
-      <span class="nav-logo-name">Beyond Summit</span>
-    </a>
-    <a href="/blog" class="nav-back">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
-      All Articles
-    </a>
-  </nav>
-
-  <div class="breadcrumb" aria-label="Breadcrumb">
-    <ol>
-      <li><a href="/">Home</a></li>
-      <li><a href="/blog">Blog</a></li>
-      <li>Island Peak Climbing Guide 2026</li>
-    </ol>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Island Peak (Imja Tse) Climb: 17-Day Itinerary, Map &amp; Cost 2026</title>
+<meta name="description" content="17-day Island Peak climb (6,189 m) via Namche, Dingboche and Chhukung. Daily route map, altitude profile, skills training at base camp and permits. From US$2,100.">
+<link rel="canonical" href="https://www.beyondsummitexped.com/articles/islandpeak.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Beyond Summit Expeditions">
+<meta property="og:title" content="Island Peak (Imja Tse) Climb: 17-Day Itinerary, Map &amp; Cost 2026">
+<meta property="og:description" content="17-day Island Peak climb (6,189 m) via Namche, Dingboche and Chhukung. Daily route map, altitude profile, skills training at base camp and permits. From US$2,100.">
+<meta property="og:url" content="https://www.beyondsummitexped.com/articles/islandpeak.html">
+<meta property="og:image" content="https://www.beyondsummitexped.com/images/places/island-peak-chhukung-1600.webp">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f1f3ee" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d1310" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/geist-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="/images/places/island-peak-chhukung-1024.webp" imagesrcset="/images/places/island-peak-chhukung-640.webp 640w, /images/places/island-peak-chhukung-1024.webp 1024w, /images/places/island-peak-chhukung-1600.webp 1600w" imagesizes="100vw" fetchpriority="high">
+<link rel="stylesheet" href="/css/site.css?v=2">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="di3Rvm0gqVdeUF9iTgLxQQ" async></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TravelAgency","@id":"https://www.beyondsummitexped.com/#organization","name":"Beyond Summit Expeditions","url":"https://www.beyondsummitexped.com/","logo":"https://www.beyondsummitexped.com/favicon.svg","image":"https://www.beyondsummitexped.com/images/web/hero-1600.webp","description":"Small-group trekking and mountaineering company in Thamel, Kathmandu, licensed by the Department of Tourism, Government of Nepal.","telephone":"+9779811157421","email":"info@beyondsummitexped.com","priceRange":"$$","address":{"@type":"PostalAddress","streetAddress":"Thamel","addressLocality":"Kathmandu","postalCode":"44600","addressCountry":"NP"},"areaServed":{"@type":"Country","name":"Nepal"},"sameAs":["https://www.instagram.com/beyondsummitexpeditions","https://www.facebook.com/beyondsummitexped","https://www.youtube.com/@beyondsummitexpeditions"],"founder":{"@type":"Person","name":"Elwin Tamang"},"memberOf":[{"@type":"Organization","name":"Trekking Agencies' Association of Nepal","alternateName":"TAAN","url":"https://www.taan.org.np/"},{"@type":"Organization","name":"Nepal Mountaineering Association","alternateName":"NMA","url":"https://www.nepalmountaineering.org/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.beyondsummitexped.com/"},{"@type":"ListItem","position":2,"name":"Climbing","item":"https://www.beyondsummitexped.com/expeditions.html"},{"@type":"ListItem","position":3,"name":"Island Peak"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TouristTrip","name":"Island Peak Climb","description":"17-day Island Peak climb (6,189 m) via Namche, Dingboche and Chhukung. Daily route map, altitude profile, skills training at base camp and permits. From US$2,100.","url":"https://www.beyondsummitexped.com/articles/islandpeak.html","image":"https://www.beyondsummitexped.com/images/places/island-peak-chhukung-1600.webp","touristType":"Mountaineers","provider":{"@id":"https://www.beyondsummitexped.com/#organization"},"itinerary":{"@type":"ItemList","numberOfItems":17,"itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"TouristAttraction","name":"Day 1: Fly to Lukla, walk to Phakding","description":"Flight to Lukla (often via Ramechhap in season) and an easy walk along the Dudh Koshi."}},{"@type":"ListItem","position":2,"item":{"@type":"TouristAttraction","name":"Day 2: Phakding to Namche Bazaar","description":"Into Sagarmatha National Park and up the long hill to Namche."}},{"@type":"ListItem","position":3,"item":{"@type":"TouristAttraction","name":"Day 3: Rest day in Namche","description":"A hike above town for the first views of Everest, then rest."}},{"@type":"ListItem","position":4,"item":{"@type":"TouristAttraction","name":"Day 4: Namche to Tengboche","description":"The beautiful balcony trail above the Dudh Koshi, with Ama Dablam ahead, to Tengboche Monastery."}},{"@type":"ListItem","position":5,"item":{"@type":"TouristAttraction","name":"Day 5: Tengboche to Dingboche","description":"Above the tree line into the Imja valley. Island Peak comes into view."}},{"@type":"ListItem","position":6,"item":{"@type":"TouristAttraction","name":"Day 6: Rest day in Dingboche","description":"Up the ridge towards Nangkartshang to around 5,000 m."}},{"@type":"ListItem","position":7,"item":{"@type":"TouristAttraction","name":"Day 7: Dingboche to Chhukung","description":"A short walk up the valley under Lhotse's south face."}},{"@type":"ListItem","position":8,"item":{"@type":"TouristAttraction","name":"Day 8: Chhukung Ri","description":"A climb to Chhukung Ri (5,550 m), good acclimatisation for the summit and a fine view of Island Peak's route."}},{"@type":"ListItem","position":9,"item":{"@type":"TouristAttraction","name":"Day 9: Chhukung to Base Camp","description":"Along the Imja Glacier moraine to base camp at about 5,087 m."}},{"@type":"ListItem","position":10,"item":{"@type":"TouristAttraction","name":"Day 10: Skills day at Base Camp","description":"Your guide checks your gear and teaches fixed-rope technique: clipping in, jumar, descending on a figure-of-eight, walking in crampons and crossing ladders."}},{"@type":"ListItem","position":11,"item":{"@type":"TouristAttraction","name":"Day 11: Base Camp to High Camp","description":"Up a rocky gully to high camp at around 5,600 m. Early night."}},{"@type":"ListItem","position":12,"item":{"@type":"TouristAttraction","name":"Day 12: Summit day","description":"Leave around 1 am. Up the rock ridge to the glacier, rope up, cross to the foot of the headwall and climb about 100 m of steep snow on fixed ropes to the summit ridge (6,189 m). Back down to base camp."}},{"@type":"ListItem","position":13,"item":{"@type":"TouristAttraction","name":"Day 13: Reserve day","description":"Held for bad weather. If we summit on the first attempt, we use it to descend at a gentler pace."}},{"@type":"ListItem","position":14,"item":{"@type":"TouristAttraction","name":"Day 14: Base Camp to Pangboche","description":"Down the valley to Pangboche and its old monastery."}},{"@type":"ListItem","position":15,"item":{"@type":"TouristAttraction","name":"Day 15: Pangboche to Namche","description":"Down through the forest and over the Tengboche ridge to Namche, where the bakeries are waiting."}},{"@type":"ListItem","position":16,"item":{"@type":"TouristAttraction","name":"Day 16: Namche to Lukla","description":"Back to Lukla. Farewell evening with the team."}},{"@type":"ListItem","position":17,"item":{"@type":"TouristAttraction","name":"Day 17: Fly to Kathmandu","description":"Flight to Kathmandu or Ramechhap. We recommend a spare night in Kathmandu before your international flight."}}]},"offers":{"@type":"Offer","price":2100,"priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://www.beyondsummitexped.com/articles/islandpeak.html","seller":{"@id":"https://www.beyondsummitexped.com/#organization"}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do I need climbing experience for Island Peak?","acceptedAnswer":{"@type":"Answer","text":"You don't need previous Himalayan climbs, but you should be a strong hill walker and comfortable with exposure. A winter skills or crampon course at home helps a lot. We teach fixed-rope technique at base camp."}},{"@type":"Question","name":"How technical is the headwall?","acceptedAnswer":{"@type":"Answer","text":"It is about 100 m of 40 to 45 degree snow and ice on fixed ropes, followed by a narrow ridge to the summit. In late autumn the glacier crevasses can be wider and need ladders."}},{"@type":"Question","name":"What gear do I need?","acceptedAnswer":{"@type":"Answer","text":"Double or insulated mountaineering boots, crampons, harness, helmet, jumar, figure-of-eight, slings and karabiners, plus down jacket and warm gloves. Everything can be hired in Kathmandu or Chhukung; we send a full list."}},{"@type":"Question","name":"What is the success rate?","acceptedAnswer":{"@type":"Answer","text":"It depends on the weather and on how well each climber acclimatises. Our itinerary gives you two acclimatisation days, a climb of Chhukung Ri and a reserve day, which gives you the best chance."}}]}</script>
+</head><body class="has-photo-hero is-trip">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header" id="header">
+  <div class="wrap header-inner">
+    <a href="/" class="brand" aria-label="Beyond Summit Expeditions, home"><svg class="logo-mark" viewBox="-1.5 -1.5 88 59" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M45.4 0 47.3 2.3 49.6 4.8 51.6 8.5 52.9 13.6 54.2 17.2 56.1 19.6 58.6 24.7 55.9 23.9 53.9 17.8 51.8 16.5 49.7 14.1 44.7 11.9 44.5 6.8 45 1.7Z" fill="currentColor" stroke="none" opacity=".9"/><path d="M0 50.8 2.9 46.6 5.1 43.2 7.2 41.3 8.8 38.1 11.2 34.5 12.6 31.5 13.7 30.8 15.2 25.6 17.8 20.7 19.6 17.9 20.5 19.2 21.8 18 23.4 19.9 25 22.3 26.3 21.9 27.7 24 29.5 24.8 30.9 23.9 32.8 19.9 35 17.9 37.2 13.8 39.6 8.9 41.6 5.1 43.4 2.8 45.4 0 47.3 2.3 49.6 4.8 51.6 8.5 52.9 13.6 54.2 17.2 56.1 19.6 58.6 24.7 60.4 26.7 63.3 28.4 67.4 29.1 71.7 27.7 75 29.7 81.3 31.8 85 29.1" stroke-width="1.6" vector-effect="non-scaling-stroke"/><path d="M3.7 55.7 10.2 49.3 12.8 47.9 20.3 39.3 24 38.3 28.3 47.1 36.7 55.7 M52.7 53.4 58.8 48.8 63.6 44.4 66.8 40.5 76.2 38.1 85 29.1" stroke-width="1.15" vector-effect="non-scaling-stroke"/><path d="M45 1.7 44.5 6.8 44.7 11.9 M19 20.9 19.5 27.4 19.6 34.6 20.7 38.9" stroke-width=".9" vector-effect="non-scaling-stroke" opacity=".6"/></svg><span>Beyond Summit<small>Expeditions, Kathmandu</small></span></a>
+    <nav class="nav" aria-label="Main"><a href="/trekking.html">Treks</a><a href="/expeditions.html" aria-current="page">Climbing</a><a href="/outdoor.html">Activities</a><a href="/gallery.html">Gallery</a><a href="/blog.html">Journal</a><a href="/about.html">About</a><a href="/contact.html" class="btn btn-primary">Plan your trip</a></nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span></button>
   </div>
-
-  <div class="article-hero" role="img" aria-label="Island Peak's Northeast Ridge rising above the Chhukung Valley with Lhotse's south face in the background">
-    <img src="https://images.unsplash.com/photo-1502786129293-79981df4e689?q=80&w=1800&auto=format&fit=crop" alt="Island Peak Imja Tse summit ridge with dramatic Lhotse South Face rising behind" loading="eager">
-    <div class="article-hero-gradient"></div>
-    <div class="article-hero-label">Island Peak (Imja Tse) · 6,189m · Chhukung, Nepal</div>
+</header>
+<nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
+  <a href="/trekking.html">Treks<svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a><a href="/expeditions.html">Climbing<svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a><a href="/outdoor.html">Activities<svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a><a href="/gallery.html">Gallery<svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a><a href="/blog.html">Journal<svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a><a href="/about.html">About<svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a><a href="/guides.html">Our team<svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a><a href="/contact.html">Contact<svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+  <a href="/contact.html" class="btn btn-primary btn-block">Plan your trip</a>
+  <div class="contact-mini"><a href="tel:+9779811157421">+977 981 115 7421</a><a href="mailto:info@beyondsummitexped.com">info@beyondsummitexped.com</a><span>Thamel, Kathmandu 44600, Nepal</span></div>
+</nav>
+<main id="main">
+<section class="photo-hero trip-hero on-photo" aria-labelledby="trip-title">
+  <picture><img src="/images/places/island-peak-chhukung-1024.webp" srcset="/images/places/island-peak-chhukung-640.webp 640w, /images/places/island-peak-chhukung-1024.webp 1024w, /images/places/island-peak-chhukung-1600.webp 1600w" sizes="100vw" width="1600" height="1067" alt="Island Peak (Imja Tse) and the Nuptse wall on the way from Chhukung to base camp" fetchpriority="high" decoding="async"></picture>
+  <div class="wrap hero-in">
+    <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="/">Home</a></li><li><a href="/expeditions.html">Climbing</a></li><li aria-current="page">Island Peak</li></ol></nav>
+    <h1 id="trip-title">Island Peak Climb</h1>
+    <p class="lede">The most popular first Himalayan summit, after a week of trekking through the Khumbu.</p>
+    <div class="facts-bar">
+      <div><span>Duration</span><strong>17 days</strong></div>
+      <div><span>Max altitude</span><strong>6,189 m</strong></div>
+      <div><span>Grade</span><strong>Alpine PD</strong></div>
+      <div><span>Group</span><strong>2 to 6</strong></div>
+      <div><span>From</span><strong>US$2,100</strong></div>
+    </div>
   </div>
-
-  <article class="article-wrap">
-
-    <main class="article-main">
-      <header class="article-header">
-        <div class="article-meta-top">
-          <span class="article-cat">Trekking Peak Guide</span>
-          <span class="article-cat popular">
-            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="display:inline;vertical-align:middle;margin-right:3px"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            Most Climbed Trekking Peak
-          </span>
-          <time class="article-date" datetime="2026-02-19">February 19, 2026</time>
-          <span class="article-read">· 13 min read</span>
-        </div>
-        <h1 class="article-title">Complete Guide to Island Peak Climbing 2026</h1>
-        <p class="article-excerpt">
-          Island Peak is Nepal's most climbed trekking peak — which is both its greatest appeal and its biggest caveat. The mountain itself is genuinely spectacular: a 6,189m summit with the Lhotse South Face filling the entire sky above the headwall. But there are things you should know before you book.
-        </p>
-        <div class="article-share" aria-label="Share this article">
-          <span>Share:</span>
-          <button class="share-btn" onclick="navigator.clipboard?.writeText(window.location.href)">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-            Copy Link
-          </button>
-          <button class="share-btn">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-            Facebook
-          </button>
-        </div>
-      </header>
-
-      <div class="article-content">
-
-        <p>The name "Island Peak" came from Eric Shipton's 1951 Everest reconnaissance expedition, whose members looked up at the peak from the Chhukung valley and thought it resembled an island rising from a sea of ice. The Nepali name — <strong>Imja Tse</strong> — is more evocative: it refers to the Imja Glacier that wraps around its base. Both names are accurate. The mountain looks like something that shouldn't quite exist in the position it occupies, hemmed in by the Lhotse-Nuptse wall on one side and the sprawl of the Khumbu glacier system on the other.</p>
-
-        <p>Several hundred people attempt Island Peak each season, making it the busiest trekking peak in Nepal by a significant margin. This popularity is earned — the mountain has a dramatic setting, a satisfying route, and a summit view that includes Lhotse, Nuptse, Makalu, and the upper sections of Everest. But popularity has a cost, and it's worth understanding that cost before you commit.</p>
-
-        <div class="honest-banner">
-          <div class="honest-banner-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          </div>
-          <div>
-            <h4>An Honest Word About the Crowds</h4>
-            <p>In peak autumn season, the headwall fixed ropes on Island Peak can have 30–50 climbers on them simultaneously. This is not a rumour or an exaggeration — it's a known feature of the mountain. Early October mornings see queues at the base of the headwall. We'd rather tell you this now than have you find out at 05:30 on summit day. If that's a dealbreaker, we'll point you toward <a href="/blog/lobuche-east-peak-climbing-guide">Lobuche East</a> or <a href="/blog/mera-peak-guide">Mera Peak</a>. If it isn't — and for many people it genuinely isn't — Island Peak remains one of the best trekking peaks in Nepal.</p>
-          </div>
-        </div>
-
-        <div class="info-box note">
-          <div class="info-box-header">
-            <svg class="info-box-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-            <div class="info-box-title">Key Facts at a Glance</div>
-          </div>
-          <p><strong>Summit altitude:</strong> 6,189m (20,305ft) · <strong>Also known as:</strong> Imja Tse · <strong>Classification:</strong> NMA trekking peak · <strong>Normal route:</strong> Southeast Ridge via high camp · <strong>Total duration:</strong> 14–18 days · <strong>Best seasons:</strong> October–November and March–May · <strong>Technical grade:</strong> PD — headwall requires crampons, fixed rope ascent, rappel on descent · <strong>High camp:</strong> One camp at ~5,600m · <strong>Prior experience:</strong> High-altitude trekking required; no prior climbing experience needed</p>
-        </div>
-
-        <h2 id="overview">The Mountain, Honestly</h2>
-
-        <p>Island Peak has two distinct characters — and which one you experience depends heavily on when you go and who guides you. Below the headwall, the approach from Chhukung is a beautiful high-altitude walk through some of the most dramatic scenery in the Khumbu. The base camp at 5,087m looks directly across at Lhotse's south face — a wall of ice and rock so large it distorts your sense of scale. The glacier walk to the headwall is serious and committing without being technically difficult. And then there's the headwall.</p>
-
-        <p>The <strong>headwall</strong> — a steep 50–55° snow and ice slope of roughly 150 vertical metres just below the summit ridge — is the crux of the route and the defining experience of the climb. It's where crampons and a Jumar are essential, where confidence matters, and where, in peak season, you may be waiting in line. Above it, a narrow snow ridge leads to the summit at 6,189m. Below the headwall on the descent, rappel. The whole upper mountain — from high camp to the top and back — is done in a single day.</p>
-
-        <p>Island Peak was first climbed in 1953 by a British expedition team using it as acclimatisation for Everest. It has been in the NMA trekking peak list since 1978. The route has changed little since the first ascent; the crowds have changed considerably.</p>
-
-        <div class="vs-banner">
-          <div class="vs-banner-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-          </div>
-          <p>Island Peak is <strong>the most technically demanding</strong> of the three major trekking peaks covered in this series — harder than Mera's glacier dome, comparable to Lobuche East's mixed ridge. The headwall is steeper than anything on Mera and asks for more decisive crampon technique. If you're choosing between the three, read our <a href="/blog/lobuche-east-peak-climbing-guide">Lobuche East guide</a> and <a href="/blog/mera-peak-guide">Mera Peak guide</a> side by side. The right choice depends on your approach preferences as much as your technical ambition.</p>
-        </div>
-
-        <h2 id="progression">Where Island Peak Sits in the Progression</h2>
-
-        <p>Island Peak works well as a first technical climbing experience and equally well as a second peak after Lobuche East or Mera, adding slightly more altitude and a different technical challenge. Here's the full picture:</p>
-
-        <div class="progression-ladder" role="list">
-          <div class="ladder-step" role="listitem">
-            <div class="ladder-num">1</div>
-            <div>
-              <div class="ladder-peak">Everest Base Camp Trek</div>
-              <div style="font-size:0.75rem;color:var(--text-muted)">Foundation altitude, no technical skills</div>
-            </div>
-            <span class="ladder-alt">5,364m</span>
-          </div>
-          <div class="ladder-step active" role="listitem">
-            <div class="ladder-num">2</div>
-            <div>
-              <div class="ladder-peak">Island Peak (Imja Tse) <span style="font-size:0.7rem;color:var(--gold);font-weight:700;margin-left:0.4rem">YOU ARE HERE</span></div>
-              <div style="font-size:0.75rem;color:var(--text-muted)">First or second summit — fixed rope headwall, crampons</div>
-            </div>
-            <span class="ladder-alt">6,189m</span>
-          </div>
-          <div class="ladder-step" role="listitem">
-            <div class="ladder-num">3</div>
-            <div>
-              <div class="ladder-peak">Mera Peak</div>
-              <div style="font-size:0.75rem;color:var(--text-muted)">Higher altitude, glacier travel consolidation</div>
-            </div>
-            <span class="ladder-alt">6,476m</span>
-          </div>
-          <div class="ladder-step" role="listitem">
-            <div class="ladder-num">4</div>
-            <div>
-              <div class="ladder-peak">Ama Dablam</div>
-              <div style="font-size:0.75rem;color:var(--text-muted)">Full technical alpine — three high camps</div>
-            </div>
-            <span class="ladder-alt">6,812m</span>
-          </div>
-          <div class="ladder-step" role="listitem">
-            <div class="ladder-num">5</div>
-            <div>
-              <div class="ladder-peak">Eight-Thousanders</div>
-              <div style="font-size:0.75rem;color:var(--text-muted)">Manaslu, Lhotse, Everest and beyond</div>
-            </div>
-            <span class="ladder-alt">8,000m+</span>
-          </div>
-        </div>
-
-        <h2 id="best-time">When to Go — and a Note on Timing</h2>
-
-        <h3>Autumn (October to November)</h3>
-        <p>Autumn is when Island Peak is at its best and also at its busiest. The mountain is in excellent condition — firm snow on the headwall, stable weather windows, and clear views of the Lhotse face from the summit. <strong>The first two weeks of October</strong> are when crowds peak; late October through early November sees similar conditions with noticeably fewer people on the fixed ropes. If crowd management matters to you, aim for the back half of the autumn window.</p>
-
-        <h3>Spring (March to May)</h3>
-        <p>Spring is significantly quieter on Island Peak than autumn — most Khumbu spring traffic heads toward the big Everest season climbing, leaving Island Peak comparatively uncrowded. The headwall in spring can carry more variable snow conditions: April is typically the most reliable month. By late May, the mountain softens and conditions on the upper face become less predictable.</p>
-
-        <div class="info-box tip">
-          <div class="info-box-header">
-            <svg class="info-box-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
-            <div class="info-box-title">The Case for Spring</div>
-          </div>
-          <p>Beyond Summit runs more Island Peak groups in autumn, because that's what client demand dictates. But if you have flexibility on dates, <strong>April on Island Peak is genuinely excellent</strong>: fewer climbers, good snow on the headwall, and the Khumbu rhododendron season in full colour on the approach. The fixed ropes are the same; there's just nobody queuing for them at 05:00. Worth serious consideration.</p>
-        </div>
-
-        <h2 id="route">The Route — What's Actually Up There</h2>
-
-        <p>Island Peak's normal route approaches from Chhukung, crosses the moraine to a glacier camp at base camp (5,087m), and then climbs the Southeast Ridge via a single high camp to the headwall and summit. It's a compact, efficient route that packs a lot of variety into a relatively short vertical gain.</p>
-
-        <h3>Chhukung to Base Camp (5,087m)</h3>
-        <p>Base camp is a 2–3 hour walk from Chhukung (4,730m) across terminal moraine and the lower Imja Glacier. The walk is non-technical but requires careful footing on loose rock. Base camp itself is a broad, flat area on the moraine that offers one of the most striking views of any trekking peak in Nepal: the Lhotse south face rises almost directly ahead, its 3,200m vertical drop occupying the entire skyline. People stop talking when they first see it.</p>
-
-        <h3>Base Camp to High Camp (5,600m)</h3>
-        <p>High camp is reached via the lower glacier — crampons on, roped up, moving carefully over the crevassed section below the Southeast Ridge. A 3–4 hour push from base camp. High camp sits on a snow platform with fixed tent positions; our Sherpa team has this in place before clients ascend. Wind can be brutal at high camp — anchoring is checked by the guide on arrival. Sleep by 19:00. Tomorrow starts in the dark.</p>
-
-        <h3>High Camp to Summit (6,189m)</h3>
-        <p>The 03:00 departure from high camp follows the Southeast Ridge to the base of the headwall. The lower ridge is relatively straightforward — crampons, headtorch, moving carefully in the pre-dawn cold. The headwall arrives abruptly: a 150-metre section of 50–55° snow and ice on fixed rope, climbed with a Jumar. This section is technically the crux and the most committing part of the route. Above it, a final narrow snow arête leads to the summit plateau. The descent reverses the route, with rappel on the headwall fixed ropes.</p>
-
-        <div class="info-box warning">
-          <div class="info-box-header">
-            <svg class="info-box-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-            <div class="info-box-title">The Headwall in Busy Conditions</div>
-          </div>
-          <p>In peak season, the base of the headwall becomes a bottleneck. Groups arrive simultaneously, ropes get congested, and summit day timelines extend. Beyond Summit's response to this is to depart high camp earlier than most groups — 02:00 rather than 03:00 in October — targeting the headwall before the main wave of climbers. Our guides monitor conditions and adjust departure times accordingly. This is one of the strongest arguments for choosing a small, well-organised guided group over a larger operator on Island Peak.</p>
-        </div>
-
-        <h2 id="itinerary">17-Day Island Peak Itinerary</h2>
-
-        <p>Island Peak pairs naturally with the Everest Base Camp approach and the Chhukung valley — the itinerary below uses the EBC route as far as Dingboche, then branches south into the Chhukung valley for the climb. It's the most efficient combination available and gives solid acclimatisation through the EBC approach before the summit push.</p>
-
-        <div class="itinerary">
-
-          <span class="phase-label">Phase 1 — Approach via EBC Route</span>
-
-          <div class="itinerary-day">
-            <div class="day-number"><span>Day</span><span>1</span></div>
-            <div class="day-content">
-              <h4>Kathmandu → Lukla → Phakding (2,610m)</h4>
-              <p>Early mountain flight to Lukla (2,860m) and a short walk to Phakding along the Dudh Koshi. In Kathmandu the night before, Beyond Summit's pre-departure briefing covers the headwall technique — crampon walking, Jumar use, and rappel — so that the base camp skills session reinforces rather than introduces these concepts for the first time.</p>
-              <div class="day-meta"><span class="day-tag">Lukla flight</span><span class="day-tag">~3hr walk</span></div>
-            </div>
-          </div>
-
-          <div class="itinerary-day">
-            <div class="day-number"><span>Day</span><span>2–3</span></div>
-            <div class="day-content">
-              <h4>Phakding → Namche Bazaar + Acclimatisation Day</h4>
-              <p>The 800m climb to Namche Bazaar (3,440m) on Day 2 is the biggest single-day altitude gain on the approach — take it steady. Day 3 is a rest day: hike to the Everest View Hotel (3,962m) in the morning, return to Namche for the afternoon. The Saturday market in Namche is worth timing if it aligns.</p>
-              <div class="day-meta"><span class="day-tag green">Acclimatisation day</span><span class="day-tag">Namche: 3,440m</span></div>
-            </div>
-          </div>
-
-          <div class="itinerary-day">
-            <div class="day-number"><span>Day</span><span>4–6</span></div>
-            <div class="day-content">
-              <h4>Namche → Tengboche → Dingboche (4,410m)</h4>
-              <p>Three classic days on the EBC route. Tengboche Monastery (3,867m) on Day 4, Pangboche on Day 5, and the climb to Dingboche on Day 6. Island Peak's summit is just visible from the ridge above Pangboche — a first look at what's ahead. Dingboche is the point where the route splits: EBC traffic turns north, Island Peak climbers head east into Chhukung.</p>
-              <div class="day-meta"><span class="day-tag">Tengboche Monastery</span><span class="day-tag">Dingboche: 4,410m</span></div>
-            </div>
-          </div>
-
-          <div class="itinerary-day">
-            <div class="day-number acclimatise"><span>Rest</span><span>4,410</span></div>
-            <div class="day-content">
-              <h4>Acclimatisation Day — Dingboche</h4>
-              <p>A morning hike to Nagarjun Hill (5,083m) and back — the single most important altitude preparation day on the itinerary. Sleeping at 4,410m after touching 5,083m is the classic acclimatisation formula. The afternoon at Dingboche is genuinely free: read, hydrate, sleep if you can. This day is not negotiable and should not be skipped regardless of how well you feel.</p>
-              <div class="day-meta"><span class="day-tag green">Nagarjun Hill: 5,083m</span><span class="day-tag">Don't skip</span></div>
-            </div>
-          </div>
-
-          <div class="itinerary-day">
-            <div class="day-number"><span>Day</span><span>8–9</span></div>
-            <div class="day-content">
-              <h4>Dingboche → Chhukung (4,730m) → Island Peak Base Camp (5,087m)</h4>
-              <p>The walk from Dingboche to Chhukung takes 3–4 hours through the upper Imja Valley, with Lhotse and Island Peak growing larger ahead. On Day 9, the route continues to Island Peak Base Camp across the moraine. The first direct sighting of the Lhotse South Face from base camp tends to stop conversations mid-sentence.</p>
-              <div class="day-meta"><span class="day-tag">Chhukung: 4,730m</span><span class="day-tag peak">Base Camp: 5,087m</span></div>
-            </div>
-          </div>
-
-          <span class="phase-label">Phase 2 — The Climb</span>
-
-          <div class="itinerary-day">
-            <div class="day-number rest"><span>Day</span><span>10</span></div>
-            <div class="day-content">
-              <h4>Base Camp — Skills Session and Rest</h4>
-              <p>A full rest day at base camp before the climb. Beyond Summit's climbing guide runs a practical skills session: crampon fitting and walking technique on snow, Jumar operation on a practice rope anchored at camp, rappel technique with a belay device. Even climbers who've been on Lobuche East or done previous mountaineering attend this session — it aligns technique on the specific methods and gear used on this route, which matters on the headwall when everyone needs to move efficiently.</p>
-              <div class="day-meta"><span class="day-tag rust">Skills session</span><span class="day-tag">Headwall technique practice</span></div>
-            </div>
-          </div>
-
-          <div class="itinerary-day">
-            <div class="day-number"><span>Day</span><span>11</span></div>
-            <div class="day-content">
-              <h4>Base Camp → High Camp (5,600m)</h4>
-              <p>Crampons on at base camp. The route crosses the lower Imja Glacier — crevassed, requiring rope team travel — before gaining the Southeast Ridge and climbing to high camp at 5,600m. 4–5 hours. High camp tent platforms are set by our Sherpa team. Arrive in the early afternoon, melt snow for water, eat a warm meal, and sleep as early as possible. Beyond Summit's guides wake the group at 02:00 in peak season — significantly earlier than most operators to beat the headwall queue.</p>
-              <div class="day-meta"><span class="day-tag peak">High Camp: 5,600m</span><span class="day-tag">02:00 wake-up in peak season</span></div>
-            </div>
-          </div>
-
-          <div class="itinerary-day">
-            <div class="day-number summit-day"><span>▲</span><span>6189</span></div>
-            <div class="day-content">
-              <h4>Summit Day — High Camp → 6,189m → Base Camp</h4>
-              <p>Headtorches on in the dark. The lower Southeast Ridge to the headwall takes 2–3 hours from high camp. Then the headwall: 150 metres of fixed rope, Jumar clipped, crampons biting into 55° ice and snow. Above it, the narrow summit arête, and then the top. <strong>Lhotse's south face occupies the entire sky to the north — one of the most dramatic summit views in Himalayan trekking.</strong> Descend the headwall on rappel, return to base camp in the afternoon. Most groups reach Chhukung village for dinner — a warm lodge, hot food, and the particular satisfaction of having earned it.</p>
-              <div class="day-meta"><span class="day-tag peak">Summit: 6,189m</span><span class="day-tag">02:00 departure</span><span class="day-tag">Full day: 10–13 hrs</span></div>
-            </div>
-          </div>
-
-          <span class="phase-label">Phase 3 — Return</span>
-
-          <div class="itinerary-day">
-            <div class="day-number"><span>Day</span><span>13–15</span></div>
-            <div class="day-content">
-              <h4>Chhukung → Namche → Lukla</h4>
-              <p>The descent covers in three days what took six on the way up. The trail is familiar by now and moves fast — most groups are in good spirits and covering ground comfortably. One night in Namche, then a long final day to Lukla.</p>
-              <div class="day-meta"><span class="day-tag">Fast descent</span><span class="day-tag">Lukla: Day 15</span></div>
-            </div>
-          </div>
-
-          <div class="itinerary-day">
-            <div class="day-number"><span>Day</span><span>16–17</span></div>
-            <div class="day-content">
-              <h4>Lukla → Kathmandu + Buffer Day</h4>
-              <p>Lukla flights are weather-dependent. Day 16 is the target; Day 17 is the buffer. Do not book international flights before Day 18 at the earliest. In Kathmandu: a team dinner, a proper shower, and the specific comfort of sleeping at sea level after two and a half weeks above 3,400m.</p>
-              <div class="day-meta"><span class="day-tag">Weather-dependent flight</span><span class="day-tag">Buffer essential</span></div>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="info-box rust">
-          <div class="info-box-header">
-            <svg class="info-box-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
-            <div class="info-box-title">Why the EBC Approach Works</div>
-          </div>
-          <p>The EBC approach to Island Peak via Dingboche is longer than a direct Chhukung approach would be — but the extra days are acclimatisation, not tourism. Arriving at Chhukung having spent 7 days above 3,400m and crossed 5,083m at Nagarjun Hill means your body is genuinely prepared for high camp at 5,600m and the summit at 6,189m. Operators who cut this approach short have worse summit rates. The extra days at altitude are always worth it.</p>
-        </div>
-
-        <h2 id="skills">What You Actually Need to Be Able to Do</h2>
-
-        <p>Island Peak is frequently described as beginner-friendly, which is roughly true and also slightly misleading. The headwall is the most technical section on any of the three major trekking peaks covered in this series — not extreme by mountaineering standards, but demanding enough that poor crampon technique on a 55° slope has real consequences. Here's an honest list:</p>
-
-        <ul>
-          <li><strong>Crampon technique on steep terrain:</strong> The lower glacier and headwall require confident crampon walking. On the headwall specifically, this means front-pointing on steep ice rather than flat-footing on snow — a different skill that needs to be understood before summit day. Covered in the base camp skills session; internalised on the lower glacier on the way to high camp.</li>
-          <li><strong>Jumar on fixed rope:</strong> The headwall is climbed on a fixed rope with a Jumar. The technique is simple; using it efficiently at 5,900m when you've been climbing for three hours is less simple. Practice in the skills session matters more than people expect.</li>
-          <li><strong>Rappel on descent:</strong> The headwall is descended on rappel. This is the most technically demanding moment of the descent and should be practised deliberately in the base camp session, not improvised on the mountain.</li>
-          <li><strong>Patience and composure in a queue:</strong> This is not a technical skill but it matters on Island Peak in peak season. Waiting at the base of the headwall for 20–40 minutes in the cold while another group climbs above you is part of the Island Peak experience in October. Climbers who go in knowing this handle it better than those who don't.</li>
-          <li><strong>Physical stamina at altitude:</strong> Summit day from high camp is 10–13 hours at altitude between 5,600m and 6,189m. Prior high-altitude experience above 5,000m remains the most important preparation you can do.</li>
-        </ul>
-
-        <div class="info-box green">
-          <div class="info-box-header">
-            <svg class="info-box-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-            <div class="info-box-title">No Prior Climbing Experience Required</div>
-          </div>
-          <p>Like Lobuche East and Mera, Island Peak can be guided safely for trekkers with no prior mountaineering experience. The skills are learnable — and our guides have taught them to many hundreds of first-time climbers. What matters is fitness, honest altitude experience above 5,000m, and full engagement with the pre-summit skills sessions. If you arrive at base camp fit, acclimatised, and ready to learn, Island Peak is achievable.</p>
-        </div>
-
-        <h2 id="compare">Island Peak vs Lobuche East vs Mera Peak</h2>
-
-        <table class="compare-table" aria-label="Comparison of Island Peak, Lobuche East and Mera Peak">
-          <thead>
-            <tr>
-              <th>Factor</th>
-              <th>Island Peak</th>
-              <th>Lobuche East</th>
-              <th>Mera Peak</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Summit altitude</strong></td>
-              <td>6,189m</td>
-              <td>6,119m</td>
-              <td class="hl">6,476m — Highest</td>
-            </tr>
-            <tr>
-              <td><strong>Technical difficulty</strong></td>
-              <td class="hl">Hardest of three (headwall)</td>
-              <td>Moderate (mixed ridge)</td>
-              <td>Easiest (glacier dome)</td>
-            </tr>
-            <tr>
-              <td><strong>Best combined with</strong></td>
-              <td class="hl">Chhukung / EBC south</td>
-              <td>EBC — same trail</td>
-              <td>Hinku Valley standalone</td>
-            </tr>
-            <tr>
-              <td><strong>Summit view</strong></td>
-              <td class="hl">Lhotse South Face — dramatic, close</td>
-              <td>Full Khumbu massif</td>
-              <td>Five eight-thousanders — widest</td>
-            </tr>
-            <tr>
-              <td><strong>Crowds</strong></td>
-              <td class="hl">Highest — known queues in October</td>
-              <td>Moderate</td>
-              <td>Lowest — remote approach</td>
-            </tr>
-            <tr>
-              <td><strong>Approach character</strong></td>
-              <td>EBC route + Chhukung valley</td>
-              <td>EBC route</td>
-              <td>Remote Hinku Valley</td>
-            </tr>
-            <tr>
-              <td><strong>Best for</strong></td>
-              <td class="hl">Climbers who want a technical crux</td>
-              <td>EBC trekkers adding a summit</td>
-              <td>Altitude-focused, crowd-averse</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h2 id="permits">Permits and Costs</h2>
-
-        <p>Island Peak sits in the same NMA trekking peak permit system as Lobuche East and Mera — significantly cheaper than full expedition peaks, with logistics that are well-established after decades of traffic. The shorter approach (no Hinku Valley) keeps the overall package cost competitive.</p>
-
-        <table class="cost-table" aria-label="Island Peak climb cost breakdown 2026">
-          <thead>
-            <tr>
-              <th>Item</th>
-              <th>Cost (2026)</th>
-              <th>Notes</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>NMA Trekking Peak Permit</strong></td>
-              <td>$250 / person (autumn)<br>$125 / person (spring)</td>
-              <td>Arranged by Beyond Summit before departure. Autumn premium reflects demand.</td>
-            </tr>
-            <tr>
-              <td><strong>Sagarmatha National Park Entry</strong></td>
-              <td>NPR 3,000 (~$22) / person</td>
-              <td>Covers full Khumbu region including Island Peak approach. Included in package.</td>
-            </tr>
-            <tr>
-              <td><strong>TIMS Card</strong></td>
-              <td>NPR 2,000 (~$15) / person</td>
-              <td>Included with package.</td>
-            </tr>
-            <tr>
-              <td><strong>Beyond Summit Island Peak Package</strong></td>
-              <td>$2,100–$2,900 / person</td>
-              <td>Guide, porter, Sherpa climbing guide, high camp tents, fixed ropes, all teahouse accommodation, Kathmandu briefing and skills sessions, cook at base camp.</td>
-            </tr>
-            <tr>
-              <td><strong>Lukla flights (return)</strong></td>
-              <td>$280 / person</td>
-              <td>Weather-dependent. Build buffer into itinerary end.</td>
-            </tr>
-            <tr>
-              <td><strong>Personal gear</strong></td>
-              <td>$200–$600</td>
-              <td>Mountaineering boots are the major cost. Rental available in Kathmandu — book ahead via our team.</td>
-            </tr>
-            <tr>
-              <td><strong>Total estimated cost per person</strong></td>
-              <td><strong>$2,870–$3,817</strong></td>
-              <td><strong>Excluding international flights. Helicopter rescue insurance strongly recommended (~$150–200 additional).</strong></td>
-            </tr>
-          </tbody>
-        </table>
-
-        <blockquote>
-          "Island Peak asks you to trust yourself at the crux. The headwall is not hard — but it's steep enough that you can't just think your way through it. You have to commit, move, trust the crampon points. Clients who've practised this in the skills session do it without hesitation. The ones who haven't practised enough — you can see the moment they lose confidence. That's why we don't skip the practice."
-          <cite>— Pasang Dawa Sherpa, Lead Climbing Guide, Beyond Summit Expeditions. Island Peak summits: 91</cite>
-        </blockquote>
-
-        <h2 id="fitness">Getting Physically Ready</h2>
-
-        <p>Island Peak's summit day is demanding in a specific way: the headwall arrives after 3–4 hours of climbing, when your legs are tired and your lungs are already working hard at 5,900m. The technical crux of the route comes when you're fatigued, not fresh. Training for this requires building <strong>sustained aerobic endurance</strong> at moderate intensity, not just peak fitness.</p>
-
-        <ul>
-          <li>Long hikes of 6–8 hours with 1,000–1,200m of elevation gain, at least twice a month in the 12 weeks before departure</li>
-          <li>Sustained aerobic training 4 times per week — 45–60 minutes of running, cycling, or rowing at conversational pace</li>
-          <li>Stair climbing with a weighted pack (12–15kg), targeting 30–45 consecutive minutes — specifically for the headwall's sustained uphill demand</li>
-          <li>A multi-day trekking trip in the 2–3 months before departure, including at least one overnight above 3,000m if possible</li>
-        </ul>
-
-        <div class="info-box tip">
-          <div class="info-box-header">
-            <svg class="info-box-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9c1.51 0 2.93.37 4.18 1.02"/></svg>
-            <div class="info-box-title">Train for the Headwall Specifically</div>
-          </div>
-          <p>The headwall demands sustained effort with your arms and upper body alongside your legs — using a Jumar on a fixed rope is more physically demanding than it looks on a diagram. In the months before departure: include pull-ups, rowing, and loaded carrying in your training. Your forearms and grip will thank you partway up the fixed rope at 5,900m.</p>
-        </div>
-
-        <h2 id="gear">Gear for Island Peak</h2>
-
-        <p>Standard EBC trekking kit covers the approach through Dingboche and Chhukung. From base camp upward, the following additions are needed. Everything on this list can be rented in Kathmandu.</p>
-
-        <h3>Technical Climbing Additions</h3>
-        <ul>
-          <li><strong>Mountaineering boots:</strong> Crampon-compatible, insulated to –20°C. Your trekking boots are not suitable for the headwall. Non-negotiable — test fit with crampons attached before leaving Kathmandu.</li>
-          <li><strong>12-point crampons:</strong> Fitted to your mountaineering boots. Front-points essential for the headwall. Test on the glacier on the way to high camp — do not wait for the headwall to discover a fit issue.</li>
-          <li><strong>Jumar ascender:</strong> For the headwall fixed rope. Beyond Summit supplies these as part of the package; check at the Kathmandu briefing.</li>
-          <li><strong>Harness and locking carabiner:</strong> For the headwall ascent and the rappel descent. Comfortable over all your layers — test with everything on before summit day.</li>
-          <li><strong>Belay device:</strong> For the rappel descent. Covered in the base camp skills session; supplied with package.</li>
-          <li><strong>Helmet:</strong> Rockfall risk on the headwall and mixed sections. Not optional.</li>
-          <li><strong>Ice axe:</strong> For the lower glacier and the summit ridge. Standard walking length.</li>
-        </ul>
-
-        <h3>High Camp Additions</h3>
-        <ul>
-          <li><strong>Sleeping bag to –20°C:</strong> High camp at 5,600m is cold, and the pre-dawn departure adds cold. This is not a bag to underestimate.</li>
-          <li><strong>Down jacket, warm midlayer, expedition mitts:</strong> The headwall in the pre-dawn cold requires serious insulation on hands and torso. Bring more than you think you need.</li>
-          <li><strong>Headtorch with lithium batteries:</strong> A 02:00 departure is in complete darkness. Two full spare sets minimum. Do not rely on alkaline batteries in the cold.</li>
-          <li><strong>Glacier glasses:</strong> Category 4, wraparound. UV exposure on the headwall and summit ridge is severe. Snow blindness is avoidable; it just requires remembering to wear your glasses.</li>
-          <li><strong>Thermos and snacks:</strong> Hot liquid from the night before and high-calorie food you know you can eat when tired and at altitude. Appetite disappears above 5,500m — bring dense, palatable food.</li>
-        </ul>
-
-        <h2 id="faq-section">Frequently Asked Questions</h2>
-
-        <h3>Is Island Peak suitable for someone who has never climbed before?</h3>
-        <p>Yes, with important caveats. The technical skills are learnable and are taught in our pre-departure and base camp sessions. What cannot be taught in 17 days is cardiovascular fitness and the altitude acclimatisation capacity your body builds from prior high-altitude experience. If you have previously completed EBC or a similar high-altitude route (above 5,000m), are physically fit, and are willing to fully engage with the skills sessions, Island Peak is achievable for a first-time climber under good guidance.</p>
-
-        <h3>How crowded does it actually get?</h3>
-        <p>In the first two weeks of October, the headwall can have 30–50 climbers on the fixed ropes simultaneously. This creates queues and extends summit day timelines significantly. Beyond Summit's response is an earlier-than-average departure from high camp (02:00 in peak season) and small group sizes capped at six per guide. If crowds are a dealbreaker for you, we'll genuinely recommend Lobuche East or Mera Peak over Island Peak in October — both offer a more isolated experience at similar or higher altitudes.</p>
-
-        <h3>What is the success rate?</h3>
-        <p>Beyond Summit groups achieve summit rates above 82% on Island Peak. The primary reasons for turnaround are weather deterioration on summit day, AMS symptoms at high camp, and — occasionally — individual confidence issues at the headwall that are resolved by the guide's judgement and the client's own decision-making. Our itinerary is structured to minimise the first two; the skills sessions address the third.</p>
-
-        <h3>Can I combine Island Peak with EBC?</h3>
-        <p>Yes, and the itinerary above does exactly this. The EBC approach via Namche, Tengboche, and Dingboche provides the acclimatisation needed for the climb, and the Chhukung valley approach from Dingboche to Island Peak base camp adds only 1–2 days to a standard EBC itinerary. This is the most efficient and most popular way to book Island Peak and it genuinely works well.</p>
-
-        <h3>Is helicopter rescue insurance required?</h3>
-        <p>Yes, and it's a condition of all Beyond Summit packages. Emergency evacuation from the Chhukung area costs $3,000–$5,000 and is not covered by the NMA permit. Travel insurance with a minimum of $100,000 helicopter rescue coverage is the only financial protection available if you need to come off the mountain quickly. Our team will advise on appropriate policies before departure.</p>
-
-        <h2 id="book">Book Your Island Peak Expedition</h2>
-
-        <p>Beyond Summit runs Island Peak expeditions in both autumn (October–November) and spring (March–May). Groups are capped at six climbers per Sherpa guide — small enough for individual attention on the headwall, where it matters most.</p>
-
-        <p>Standalone Island Peak expeditions (without the full EBC combination) are available for returning trekkers who've already done EBC or for clients with a tighter schedule. Private expeditions for 2–4 clients can be customised within the two main seasons. We also run an Island Peak + Mera Peak combination for clients who want to experience both the Chhukung valley and the Hinku Valley — one of the finest back-to-back trekking peak itineraries available in Nepal.</p>
-
-        <p>All packages include the Kathmandu briefing and skills session, all permits, trekking guide, porter, dedicated Sherpa climbing guide, high camp tents and fixed ropes, base camp cook, and a post-summit dinner in Kathmandu.</p>
-
-        <p><a href="/trekking-peaks/island-peak">View our Island Peak packages →</a> or <a href="/contact">talk to our team</a> about which itinerary fits your schedule and experience level.</p>
-
+  <p class="photo-credit">Photo: Gerd Eichmann, <a href="https://commons.wikimedia.org/wiki/File:Chhukung_to_Imja_Tse_Camp-24-Nuptse-Imja_Tse-2007-gje.jpg" rel="noopener" target="_blank">CC BY-SA 4.0</a></p>
+</section>
+
+<nav class="trip-nav" aria-label="On this page"><div class="wrap"><ul>
+  <li><a href="#overview">Overview</a></li><li><a href="#route">Route map</a></li><li><a href="#itinerary">Day by day</a></li>
+  <li><a href="#included">What's included</a></li><li><a href="#permits">Permits</a></li><li><a href="#when">When to go</a></li><li><a href="#faq">Questions</a></li>
+</ul></div></nav>
+
+<div class="wrap trip-layout">
+  <div class="trip-main">
+    <section id="overview" aria-labelledby="ov-title">
+      <h2 id="ov-title">About this climb</h2>
+      <p class="lede">Island Peak (Imja Tse) is the most popular first Himalayan summit. After a week of trekking through the Khumbu you climb a rocky ridge, cross a glacier and go up a steep headwall on fixed ropes to a narrow summit ridge, with the south face of Lhotse towering above. You need fitness and a day of rope training, not previous expedition experience.</p>
+      <ul class="highlights"><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>A 6,189 m summit with Lhotse&#x27;s south face behind</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Training day on ropes, jumar and crampons at base camp</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Chhukung Ri (5,550 m) as an acclimatisation climb</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>The full Khumbu trek via Namche and Tengboche</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Reserve summit day for bad weather</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>One guide to two climbers on summit day</span></li></ul>
+    </section>
+
+    <section id="route" aria-labelledby="route-title">
+      <h2 id="route-title">Route and altitude</h2>
+      <div class="route">
+        <div class="route-panel"><h3><span>Route map</span><span>about 120 km</span></h3><div class="map"><svg viewBox="0 0 640 420" role="img" aria-label="Route map of the Island Peak Climb"><path class="peak-ref" d="M403.3,28.0 l5.5,9 h-11z"><title>Everest, 8,849 m</title></path><path class="peak-ref" d="M412.0,59.099999999999994 l5.5,9 h-11z"><title>Lhotse, 8,516 m</title></path><path class="peak-ref" d="M363.2,52.6 l5.5,9 h-11z"><title>Nuptse, 7,861 m</title></path><path class="peak-ref" d="M336.9,177.5 l5.5,9 h-11z"><title>Ama Dablam, 6,812 m</title></path><path class="peak-ref" d="M261.1,266.3 l5.5,9 h-11z"><title>Thamserku, 6,623 m</title></path><path class="peak-ref" d="M287.1,252.0 l5.5,9 h-11z"><title>Kangtega, 6,782 m</title></path><path class="peak-ref" d="M460.6,278.8 l5.5,9 h-11z"><title>Chamlang, 7,319 m</title></path><path class="peak-ref" d="M344.8,355.5 l5.5,9 h-11z"><title>Mera Peak, 6,476 m</title></path><path class="track" d="M201.2,386.0 L182.4,325.9 L179.4,250.4 L192.6,232.2 L179.4,250.4 L236.4,213.2 L263.1,189.7 L305.4,145.3 L310.2,131.2 L305.4,145.3 L347.6,132.2 L355.7,107.9 L347.6,132.2 L392.9,124.7 L413.5,127.1 L413.3,114.1 L413.5,127.1 L392.9,124.7 L347.6,132.2 L305.4,145.3 L263.1,189.7 L236.4,213.2 L179.4,250.4 L182.4,325.9 L201.2,386.0"/><path class="seg" data-i="0" d="M201.2,386.0 L182.4,325.9"/><path class="seg" data-i="1" d="M182.4,325.9 L179.4,250.4"/><path class="seg" data-i="2" d="M179.4,250.4 L192.6,232.2 L179.4,250.4"/><path class="seg" data-i="3" d="M179.4,250.4 L236.4,213.2"/><path class="seg" data-i="4" d="M236.4,213.2 L263.1,189.7 L305.4,145.3"/><path class="seg" data-i="5" d="M305.4,145.3 L310.2,131.2 L305.4,145.3"/><path class="seg" data-i="6" d="M305.4,145.3 L347.6,132.2"/><path class="seg" data-i="7" d="M347.6,132.2 L355.7,107.9 L347.6,132.2"/><path class="seg" data-i="8" d="M347.6,132.2 L392.9,124.7"/><path class="seg" data-i="10" d="M392.9,124.7 L413.5,127.1"/><path class="seg" data-i="11" d="M413.5,127.1 L413.3,114.1 L413.5,127.1 L392.9,124.7"/><path class="seg" data-i="13" d="M392.9,124.7 L347.6,132.2 L305.4,145.3 L263.1,189.7"/><path class="seg" data-i="14" d="M263.1,189.7 L236.4,213.2 L179.4,250.4"/><path class="seg" data-i="15" d="M179.4,250.4 L182.4,325.9 L201.2,386.0"/><circle class="stop" data-i="15" cx="201.2" cy="386.0" r="4"><title>Lukla, 2,860 m</title></circle><circle class="stop" data-i="0" cx="182.4" cy="325.9" r="4"><title>Phakding, 2,610 m</title></circle><circle class="stop" data-i="1" cx="179.4" cy="250.4" r="4"><title>Namche Bazaar, 3,440 m</title></circle><circle class="stop" cx="192.6" cy="232.2" r="4"><title>Hotel Everest View, 3,880 m</title></circle><circle class="stop" data-i="3" cx="236.4" cy="213.2" r="4"><title>Tengboche, 3,867 m</title></circle><circle class="stop" data-i="13" cx="263.1" cy="189.7" r="4"><title>Pangboche, 3,985 m</title></circle><circle class="stop" data-i="4" cx="305.4" cy="145.3" r="4"><title>Dingboche, 4,410 m</title></circle><circle class="stop" cx="310.2" cy="131.2" r="4"><title>Nangkartshang viewpoint, 5,083 m</title></circle><circle class="stop" data-i="6" cx="347.6" cy="132.2" r="4"><title>Chhukung, 4,730 m</title></circle><circle class="stop peak" cx="355.7" cy="107.9" r="5"><title>Chhukung Ri, 5,550 m</title></circle><circle class="stop" data-i="8" cx="392.9" cy="124.7" r="4"><title>Island Peak Base Camp, 5,087 m</title></circle><circle class="stop" data-i="10" cx="413.5" cy="127.1" r="4"><title>Island Peak High Camp, 5,600 m</title></circle><circle class="stop peak" cx="413.3" cy="114.1" r="5"><title>Island Peak summit, 6,189 m</title></circle><text x="420.3" y="118.1" text-anchor="start" class="strong">Island Peak summit 6,189 m</text><text x="208.2" y="390.0" text-anchor="start" class="strong">Lukla</text><text x="348.7" y="111.9" text-anchor="end" class="">Chhukung Ri</text><text x="189.4" y="329.9" text-anchor="start" class="">Phakding</text><text x="186.4" y="254.4" text-anchor="start" class="">Namche Bazaar</text><text x="243.4" y="217.2" text-anchor="start" class="">Tengboche</text><text x="270.1" y="193.7" text-anchor="start" class="">Pangboche</text><text x="312.4" y="149.3" text-anchor="start" class="">Dingboche</text><text x="354.6" y="136.2" text-anchor="start" class="">Chhukung</text><text x="420.5" y="131.1" text-anchor="start" class="">Island Peak High Camp</text><text x="199.6" y="236.2" text-anchor="start" class="">Hotel Everest View</text><text x="303.2" y="135.2" text-anchor="end" class="">Nangkartshang viewpoint</text><text x="410.3" y="40.0" text-anchor="start" class="peak-name">Everest</text><text x="419.0" y="71.1" text-anchor="start" class="peak-name">Lhotse</text><text x="370.2" y="64.6" text-anchor="start" class="peak-name">Nuptse</text><text x="343.9" y="189.5" text-anchor="start" class="peak-name">Ama Dablam</text><text x="268.1" y="278.3" text-anchor="start" class="peak-name">Thamserku</text><text x="294.1" y="264.0" text-anchor="start" class="peak-name">Kangtega</text><text x="467.6" y="290.8" text-anchor="start" class="peak-name">Chamlang</text><text x="351.8" y="367.5" text-anchor="start" class="peak-name">Mera Peak</text><g class="map-scale"><path d="M10,406 V410 H63.0 V406" fill="none" stroke="currentColor" stroke-width="1" style="stroke:var(--ink-3)"/><text x="68.0" y="410" class="map-scale" style="paint-order:normal;stroke:none">5 km</text></g><text x="626" y="22" class="north" text-anchor="middle" style="paint-order:normal;stroke:none">N</text><path d="M626,26 l-4,10 h8z" style="fill:var(--ink-3)"/></svg></div></div>
+        <div class="route-panel"><h3><span>Altitude, day by day</span><span>Max 6,189 m</span></h3><div class="profile profile-wrap"><svg viewBox="0 0 640 220" role="img" aria-label="Altitude profile: overnight altitude each day, highest 6,189 m at Island Peak summit"><line class="grid" x1="44" x2="628" y1="194.0" y2="194.0"/><text class="axis" x="38" y="197.5" text-anchor="end">0</text><line class="grid" x1="44" x2="628" y1="169.7" y2="169.7"/><text class="axis" x="38" y="173.2" text-anchor="end">1,000</text><line class="grid" x1="44" x2="628" y1="145.4" y2="145.4"/><text class="axis" x="38" y="148.9" text-anchor="end">2,000</text><line class="grid" x1="44" x2="628" y1="121.1" y2="121.1"/><text class="axis" x="38" y="124.6" text-anchor="end">3,000</text><line class="grid" x1="44" x2="628" y1="96.9" y2="96.9"/><text class="axis" x="38" y="100.4" text-anchor="end">4,000</text><line class="grid" x1="44" x2="628" y1="72.6" y2="72.6"/><text class="axis" x="38" y="76.1" text-anchor="end">5,000</text><line class="grid" x1="44" x2="628" y1="48.3" y2="48.3"/><text class="axis" x="38" y="51.8" text-anchor="end">6,000</text><line class="grid" x1="44" x2="628" y1="24.0" y2="24.0"/><text class="axis" x="38" y="27.5" text-anchor="end">7,000</text><path class="area" d="M44,194.0 L44.0,130.6 L82.9,110.5 L121.9,110.5 L160.8,100.1 L199.7,86.9 L238.7,86.9 L277.6,79.1 L316.5,79.1 L355.5,70.5 L394.4,70.5 L433.3,58.0 L472.3,70.5 L511.2,70.5 L550.1,97.2 L589.1,110.5 L628.0,124.5 L628.0,194.0 Z"/><path class="line" d="M44.0,130.6 L82.9,110.5 L121.9,110.5 L160.8,100.1 L199.7,86.9 L238.7,86.9 L277.6,79.1 L316.5,79.1 L355.5,70.5 L394.4,70.5 L433.3,58.0 L472.3,70.5 L511.2,70.5 L550.1,97.2 L589.1,110.5 L628.0,124.5"/><line class="cursor" x1="0" x2="0" y1="24" y2="194"/><circle class="pt" cx="44.0" cy="130.6" r="4"/><text class="axis" x="44.0" y="212" text-anchor="middle">1</text><circle class="pt" cx="82.9" cy="110.5" r="4"/><line x1="121.9" x2="121.9" y1="99.8" y2="110.5" style="stroke:var(--ink-3);stroke-width:1;stroke-dasharray:2 2"/><circle class="hi" cx="121.9" cy="99.8" r="4"/><circle class="pt" cx="121.9" cy="110.5" r="4"/><text class="axis" x="121.9" y="212" text-anchor="middle">3</text><circle class="pt" cx="160.8" cy="100.1" r="4"/><circle class="pt" cx="199.7" cy="86.9" r="4"/><text class="axis" x="199.7" y="212" text-anchor="middle">5</text><line x1="238.7" x2="238.7" y1="70.6" y2="86.9" style="stroke:var(--ink-3);stroke-width:1;stroke-dasharray:2 2"/><circle class="hi" cx="238.7" cy="70.6" r="4"/><circle class="pt" cx="238.7" cy="86.9" r="4"/><circle class="pt" cx="277.6" cy="79.1" r="4"/><text class="axis" x="277.6" y="212" text-anchor="middle">7</text><line x1="316.5" x2="316.5" y1="59.2" y2="79.1" style="stroke:var(--ink-3);stroke-width:1;stroke-dasharray:2 2"/><circle class="hi" cx="316.5" cy="59.2" r="4"/><circle class="pt" cx="316.5" cy="79.1" r="4"/><circle class="pt" cx="355.5" cy="70.5" r="4"/><text class="axis" x="355.5" y="212" text-anchor="middle">9</text><circle class="pt" cx="394.4" cy="70.5" r="4"/><circle class="pt" cx="433.3" cy="58.0" r="4"/><text class="axis" x="433.3" y="212" text-anchor="middle">11</text><line x1="472.3" x2="472.3" y1="43.7" y2="70.5" style="stroke:var(--ink-3);stroke-width:1;stroke-dasharray:2 2"/><circle class="hi" cx="472.3" cy="43.7" r="4"/><circle class="pt" cx="472.3" cy="70.5" r="4"/><circle class="pt" cx="511.2" cy="70.5" r="4"/><text class="axis" x="511.2" y="212" text-anchor="middle">13</text><circle class="pt" cx="550.1" cy="97.2" r="4"/><circle class="pt" cx="589.1" cy="110.5" r="4"/><text class="axis" x="589.1" y="212" text-anchor="middle">15</text><circle class="pt" cx="628.0" cy="124.5" r="4"/><text class="axis" x="628.0" y="212" text-anchor="middle">16</text><text class="lbl" x="472.3" y="34.7" text-anchor="end">Island Peak 6,189 m</text><text class="axis" x="44" y="14">metres</text><text class="axis" x="628" y="212" text-anchor="end" style="display:none">day</text><rect class="hit" x="24.5" y="24" width="38.9" height="170" data-x="44.0" data-y="130.6" data-day="1" data-tip="&lt;b&gt;Day 1&lt;/b&gt;&lt;br&gt;Sleep: Phakding, 2,610 m" tabindex="0" role="button" aria-label="Day 1: sleep at Phakding, 2,610 m"/><rect class="hit" x="63.5" y="24" width="38.9" height="170" data-x="82.9" data-y="110.5" data-day="2" data-tip="&lt;b&gt;Day 2&lt;/b&gt;&lt;br&gt;Sleep: Namche Bazaar, 3,440 m" tabindex="0" role="button" aria-label="Day 2: sleep at Namche Bazaar, 3,440 m"/><rect class="hit" x="102.4" y="24" width="38.9" height="170" data-x="121.9" data-y="99.8" data-day="3" data-tip="&lt;b&gt;Day 3&lt;/b&gt;&lt;br&gt;Sleep: Namche Bazaar, 3,440 m&lt;br&gt;High point: Hotel Everest View, 3,880 m" tabindex="0" role="button" aria-label="Day 3: sleep at Namche Bazaar, 3,440 m"/><rect class="hit" x="141.3" y="24" width="38.9" height="170" data-x="160.8" data-y="100.1" data-day="4" data-tip="&lt;b&gt;Day 4&lt;/b&gt;&lt;br&gt;Sleep: Tengboche, 3,867 m" tabindex="0" role="button" aria-label="Day 4: sleep at Tengboche, 3,867 m"/><rect class="hit" x="180.3" y="24" width="38.9" height="170" data-x="199.7" data-y="86.9" data-day="5" data-tip="&lt;b&gt;Day 5&lt;/b&gt;&lt;br&gt;Sleep: Dingboche, 4,410 m" tabindex="0" role="button" aria-label="Day 5: sleep at Dingboche, 4,410 m"/><rect class="hit" x="219.2" y="24" width="38.9" height="170" data-x="238.7" data-y="70.6" data-day="6" data-tip="&lt;b&gt;Day 6&lt;/b&gt;&lt;br&gt;Sleep: Dingboche, 4,410 m&lt;br&gt;High point: Nangkartshang viewpoint, 5,083 m" tabindex="0" role="button" aria-label="Day 6: sleep at Dingboche, 4,410 m"/><rect class="hit" x="258.1" y="24" width="38.9" height="170" data-x="277.6" data-y="79.1" data-day="7" data-tip="&lt;b&gt;Day 7&lt;/b&gt;&lt;br&gt;Sleep: Chhukung, 4,730 m" tabindex="0" role="button" aria-label="Day 7: sleep at Chhukung, 4,730 m"/><rect class="hit" x="297.1" y="24" width="38.9" height="170" data-x="316.5" data-y="59.2" data-day="8" data-tip="&lt;b&gt;Day 8&lt;/b&gt;&lt;br&gt;Sleep: Chhukung, 4,730 m&lt;br&gt;High point: Chhukung Ri, 5,550 m" tabindex="0" role="button" aria-label="Day 8: sleep at Chhukung, 4,730 m"/><rect class="hit" x="336.0" y="24" width="38.9" height="170" data-x="355.5" data-y="70.5" data-day="9" data-tip="&lt;b&gt;Day 9&lt;/b&gt;&lt;br&gt;Sleep: Island Peak Base Camp, 5,087 m" tabindex="0" role="button" aria-label="Day 9: sleep at Island Peak Base Camp, 5,087 m"/><rect class="hit" x="374.9" y="24" width="38.9" height="170" data-x="394.4" data-y="70.5" data-day="10" data-tip="&lt;b&gt;Day 10&lt;/b&gt;&lt;br&gt;Sleep: Island Peak Base Camp, 5,087 m" tabindex="0" role="button" aria-label="Day 10: sleep at Island Peak Base Camp, 5,087 m"/><rect class="hit" x="413.9" y="24" width="38.9" height="170" data-x="433.3" data-y="58.0" data-day="11" data-tip="&lt;b&gt;Day 11&lt;/b&gt;&lt;br&gt;Sleep: Island Peak High Camp, 5,600 m" tabindex="0" role="button" aria-label="Day 11: sleep at Island Peak High Camp, 5,600 m"/><rect class="hit" x="452.8" y="24" width="38.9" height="170" data-x="472.3" data-y="43.7" data-day="12" data-tip="&lt;b&gt;Day 12&lt;/b&gt;&lt;br&gt;Sleep: Island Peak Base Camp, 5,087 m&lt;br&gt;High point: Island Peak summit, 6,189 m" tabindex="0" role="button" aria-label="Day 12: sleep at Island Peak Base Camp, 5,087 m"/><rect class="hit" x="491.7" y="24" width="38.9" height="170" data-x="511.2" data-y="70.5" data-day="13" data-tip="&lt;b&gt;Day 13&lt;/b&gt;&lt;br&gt;Sleep: Island Peak Base Camp, 5,087 m" tabindex="0" role="button" aria-label="Day 13: sleep at Island Peak Base Camp, 5,087 m"/><rect class="hit" x="530.7" y="24" width="38.9" height="170" data-x="550.1" data-y="97.2" data-day="14" data-tip="&lt;b&gt;Day 14&lt;/b&gt;&lt;br&gt;Sleep: Pangboche, 3,985 m" tabindex="0" role="button" aria-label="Day 14: sleep at Pangboche, 3,985 m"/><rect class="hit" x="569.6" y="24" width="38.9" height="170" data-x="589.1" data-y="110.5" data-day="15" data-tip="&lt;b&gt;Day 15&lt;/b&gt;&lt;br&gt;Sleep: Namche Bazaar, 3,440 m" tabindex="0" role="button" aria-label="Day 15: sleep at Namche Bazaar, 3,440 m"/><rect class="hit" x="608.5" y="24" width="38.9" height="170" data-x="628.0" data-y="124.5" data-day="16" data-tip="&lt;b&gt;Day 16&lt;/b&gt;&lt;br&gt;Sleep: Lukla, 2,860 m" tabindex="0" role="button" aria-label="Day 16: sleep at Lukla, 2,860 m"/></svg><div class="tip" role="status"></div></div><div class="legend-inline"><span><i style="background:var(--accent)"></i>Where you sleep</span><span><i style="border:1.5px solid var(--ink);background:var(--surface)"></i>Highest point that day</span><span>Days along the bottom. Hover or tap for details.</span></div><details class="note"><summary>Show as a table</summary><div class="table-wrap"><table><thead><tr><th>Day</th><th>Overnight</th><th>Altitude</th><th>High point</th></tr></thead><tbody><tr><td>Day 1</td><td>Phakding</td><td>2,610 m</td><td></td></tr><tr><td>Day 2</td><td>Namche Bazaar</td><td>3,440 m</td><td></td></tr><tr><td>Day 3</td><td>Namche Bazaar</td><td>3,440 m</td><td>Hotel Everest View, 3,880 m</td></tr><tr><td>Day 4</td><td>Tengboche</td><td>3,867 m</td><td></td></tr><tr><td>Day 5</td><td>Dingboche</td><td>4,410 m</td><td></td></tr><tr><td>Day 6</td><td>Dingboche</td><td>4,410 m</td><td>Nangkartshang viewpoint, 5,083 m</td></tr><tr><td>Day 7</td><td>Chhukung</td><td>4,730 m</td><td></td></tr><tr><td>Day 8</td><td>Chhukung</td><td>4,730 m</td><td>Chhukung Ri, 5,550 m</td></tr><tr><td>Day 9</td><td>Island Peak Base Camp</td><td>5,087 m</td><td></td></tr><tr><td>Day 10</td><td>Island Peak Base Camp</td><td>5,087 m</td><td></td></tr><tr><td>Day 11</td><td>Island Peak High Camp</td><td>5,600 m</td><td></td></tr><tr><td>Day 12</td><td>Island Peak Base Camp</td><td>5,087 m</td><td>Island Peak summit, 6,189 m</td></tr><tr><td>Day 13</td><td>Island Peak Base Camp</td><td>5,087 m</td><td></td></tr><tr><td>Day 14</td><td>Pangboche</td><td>3,985 m</td><td></td></tr><tr><td>Day 15</td><td>Namche Bazaar</td><td>3,440 m</td><td></td></tr><tr><td>Day 16</td><td>Lukla</td><td>2,860 m</td><td></td></tr></tbody></table></div></details></div>
       </div>
-    </main>
+      <p class="note">Route lines join overnight stops and viewpoints in walking order. They are a guide to the shape of the route, not a navigation track.</p>
+    </section>
 
-    <!-- SIDEBAR -->
-    <aside class="article-sidebar">
-      <div class="sidebar-sticky">
-
-        <div class="sidebar-widget">
-          <h2 class="sidebar-widget-title">Quick Facts</h2>
-          <div class="sidebar-fact">
-            <div class="sidebar-fact-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            </div>
-            <div>
-              <div class="sidebar-fact-label">Summit Altitude</div>
-              <div class="sidebar-fact-val">6,189m (20,305ft)</div>
-            </div>
-          </div>
-          <div class="sidebar-fact">
-            <div class="sidebar-fact-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <div>
-              <div class="sidebar-fact-label">Total Duration</div>
-              <div class="sidebar-fact-val">14–18 Days</div>
-            </div>
-          </div>
-          <div class="sidebar-fact">
-            <div class="sidebar-fact-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            </div>
-            <div>
-              <div class="sidebar-fact-label">Technical Grade</div>
-              <div class="sidebar-fact-val">PD — Headwall crux</div>
-            </div>
-          </div>
-          <div class="sidebar-fact">
-            <div class="sidebar-fact-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            </div>
-            <div>
-              <div class="sidebar-fact-label">Popularity</div>
-              <div class="sidebar-fact-val">Busiest trekking peak</div>
-            </div>
-          </div>
-          <div class="sidebar-fact">
-            <div class="sidebar-fact-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-            </div>
-            <div>
-              <div class="sidebar-fact-label">Price From</div>
-              <div class="sidebar-fact-val">USD 2,100 / person</div>
-            </div>
-          </div>
-          <div class="sidebar-fact">
-            <div class="sidebar-fact-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <div>
-              <div class="sidebar-fact-label">Base</div>
-              <div class="sidebar-fact-val">Chhukung via Lukla</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="sidebar-widget">
-          <h2 class="sidebar-widget-title">What's Next</h2>
-          <p style="font-size:0.78rem;color:var(--text-muted);margin-bottom:0.75rem;line-height:1.55;">Island Peak is a strong step 2 or 3. Here's where it leads:</p>
-          <div class="sidebar-next-peaks">
-            <a href="/blog/mera-peak-guide" class="next-peak-item">Mera Peak <span>6,476m →</span></a>
-            <a href="/blog/ama-dablam-climbing-guide" class="next-peak-item">Ama Dablam <span>6,812m →</span></a>
-            <a href="/expeditions/manaslu" class="next-peak-item">Manaslu <span>8,163m →</span></a>
-          </div>
-        </div>
-
-        <div class="sidebar-widget">
-          <h2 class="sidebar-widget-title">In This Guide</h2>
-          <ul class="toc-list">
-            <li><a href="#overview">The Mountain, Honestly</a></li>
-            <li><a href="#progression">Where Island Peak Fits</a></li>
-            <li><a href="#best-time">When to Go</a></li>
-            <li><a href="#route">The Route</a></li>
-            <li><a href="#itinerary">17-Day Itinerary</a></li>
-            <li><a href="#skills">Skills Required</a></li>
-            <li><a href="#compare">Island Peak vs Lobuche vs Mera</a></li>
-            <li><a href="#permits">Permits & Costs</a></li>
-            <li><a href="#fitness">Getting Ready</a></li>
-            <li><a href="#gear">Gear List</a></li>
-            <li><a href="#faq-section">FAQs</a></li>
-            <li><a href="#book">Book Your Expedition</a></li>
-          </ul>
-        </div>
-
-        <div class="cta-widget">
-          <h3>Climb Island Peak 2026</h3>
-          <p>Nepal's most famous trekking peak. Small groups, early starts, expert guides on the headwall.</p>
-          <a href="/trekking-peaks/island-peak" class="btn-gold">View Packages</a>
-        </div>
-
-      </div>
-    </aside>
-
+    <section id="itinerary" aria-labelledby="it-title">
+      <h2 id="it-title">Day by day</h2>
+      <ol class="itin-layout"><li class="day" id="day-1" data-day="0" data-label="Day 1: Fly to Lukla, walk to Phakding">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>1</b></div>
+  <article class="day-card">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 1: </span>Fly to Lukla, walk to Phakding</h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,168a32.06,32.06,0,0,0-31,24H72a32,32,0,0,1,0-64h96a40,40,0,0,0,0-80H72a8,8,0,0,0,0,16h96a24,24,0,0,1,0,48H72a48,48,0,0,0,0,96h97a32,32,0,1,0,31-40Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,200,216Z"/></svg>about 8 km</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg>3 to 4 h</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Sleep 2,610 m</span></div>
+      <p>Flight to Lukla (often via Ramechhap in season) and an easy walk along the Dudh Koshi.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Tea house, twin room</span><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: L, D</span></div>
+    </div>
+    <div class="day-map map"><svg viewBox="0 0 240 170" role="img" aria-label="Map of day 1: Lukla to Phakding"><path class="track" d="M137.2,140.0 L102.8,30.0 L97.3,-108.0 L121.5,-141.4 L97.3,-108.0 L201.8,-176.0 L250.5,-219.1 L328.1,-300.2 L336.9,-326.0 L328.1,-300.2 L405.3,-324.3 L420.1,-368.7 L405.3,-324.3 L488.4,-337.9 L526.1,-333.6 L525.7,-357.3 L526.1,-333.6 L488.4,-337.9 L405.3,-324.3 L328.1,-300.2 L250.5,-219.1 L201.8,-176.0 L97.3,-108.0 L102.8,30.0 L137.2,140.0" style="opacity:.3"/><path class="track-day" d="M137.2,140.0 L102.8,30.0"/><circle class="stop" cx="137.2" cy="140.0" r="4"/><circle class="stop on" cx="102.8" cy="30.0" r="5"/><text x="109.8" y="34.0" text-anchor="start" class="strong">Phakding</text><text x="144.2" y="144.0" text-anchor="start" class="">Lukla</text></svg></div>
   </article>
+</li><li class="day" id="day-2" data-day="1" data-label="Day 2: Phakding to Namche Bazaar">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>2</b></div>
+  <article class="day-card">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 2: </span>Phakding to Namche Bazaar</h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,168a32.06,32.06,0,0,0-31,24H72a32,32,0,0,1,0-64h96a40,40,0,0,0,0-80H72a8,8,0,0,0,0,16h96a24,24,0,0,1,0,48H72a48,48,0,0,0,0,96h97a32,32,0,1,0,31-40Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,200,216Z"/></svg>about 10 km</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg>6 to 7 h</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Sleep 3,440 m</span></div>
+      <p>Into Sagarmatha National Park and up the long hill to Namche.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Tea house, twin room</span><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: B, L, D</span></div>
+    </div>
+    <div class="day-map map"><svg viewBox="0 0 240 170" role="img" aria-label="Map of day 2: Phakding to Namche Bazaar"><path class="track" d="M149.5,227.7 L122.2,140.0 L117.8,30.0 L137.1,3.4 L117.8,30.0 L201.0,-24.2 L239.9,-58.5 L301.7,-123.2 L308.7,-143.8 L301.7,-123.2 L363.2,-142.5 L375.0,-177.8 L363.2,-142.5 L429.4,-153.3 L459.4,-149.8 L459.1,-168.7 L459.4,-149.8 L429.4,-153.3 L363.2,-142.5 L301.7,-123.2 L239.9,-58.5 L201.0,-24.2 L117.8,30.0 L122.2,140.0 L149.5,227.7" style="opacity:.3"/><path class="track-day" d="M122.2,140.0 L117.8,30.0"/><circle class="stop" cx="122.2" cy="140.0" r="4"/><circle class="stop on" cx="117.8" cy="30.0" r="5"/><text x="124.8" y="34.0" text-anchor="start" class="strong">Namche Bazaar</text><text x="129.2" y="144.0" text-anchor="start" class="">Phakding</text></svg></div>
+  </article>
+</li><li class="day" id="day-3" data-day="2" data-label="Day 3: Rest day in Namche">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>3</b></div>
+  <article class="day-card">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 3: </span>Rest day in Namche<span class="badge">Acclimatisation</span></h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,168a32.06,32.06,0,0,0-31,24H72a32,32,0,0,1,0-64h96a40,40,0,0,0,0-80H72a8,8,0,0,0,0,16h96a24,24,0,0,1,0,48H72a48,48,0,0,0,0,96h97a32,32,0,1,0,31-40Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,200,216Z"/></svg>about 5 km</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg>3 to 4 h</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M240,56v64a8,8,0,0,1-16,0V75.31l-82.34,82.35a8,8,0,0,1-11.32,0L96,123.31,29.66,189.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0L136,140.69,212.69,64H168a8,8,0,0,1,0-16h64A8,8,0,0,1,240,56Z"/></svg>High point 3,880 m</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Sleep 3,440 m</span></div>
+      <p>A hike above town for the first views of Everest, then rest.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Tea house, twin room</span><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: B, L, D</span></div>
+    </div>
+    <div class="day-map map"><svg viewBox="0 0 240 170" role="img" aria-label="Map of day 3: Namche Bazaar to Hotel Everest View to Namche Bazaar"><path class="track" d="M159.3,460.3 L110.7,304.3 L102.9,108.7 L137.1,61.3 L102.9,108.7 L250.8,12.2 L319.9,-48.9 L429.8,-163.9 L442.2,-200.6 L429.8,-163.9 L539.2,-198.1 L560.2,-261.0 L539.2,-198.1 L656.9,-217.4 L710.3,-211.2 L709.8,-244.8 L710.3,-211.2 L656.9,-217.4 L539.2,-198.1 L429.8,-163.9 L319.9,-48.9 L250.8,12.2 L102.9,108.7 L110.7,304.3 L159.3,460.3" style="opacity:.3"/><path class="track-day" d="M102.9,108.7 L137.1,61.3 L102.9,108.7"/><circle class="stop on" cx="102.9" cy="108.7" r="5"/><circle class="stop" cx="137.1" cy="61.3" r="4"/><text x="109.9" y="112.7" text-anchor="start" class="strong">Namche Bazaar</text><text x="137.1" y="52.3" text-anchor="middle" class="">Hotel Everest View</text></svg></div>
+  </article>
+</li><li class="day" id="day-4" data-day="3" data-label="Day 4: Namche to Tengboche">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>4</b></div>
+  <article class="day-card">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 4: </span>Namche to Tengboche</h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,168a32.06,32.06,0,0,0-31,24H72a32,32,0,0,1,0-64h96a40,40,0,0,0,0-80H72a8,8,0,0,0,0,16h96a24,24,0,0,1,0,48H72a48,48,0,0,0,0,96h97a32,32,0,1,0,31-40Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,200,216Z"/></svg>about 10 km</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg>5 to 6 h</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Sleep 3,867 m</span></div>
+      <p>The beautiful balcony trail above the Dudh Koshi, with Ama Dablam ahead, to Tengboche Monastery.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Tea house, twin room</span><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: B, L, D</span></div>
+    </div>
+    <div class="day-map map"><svg viewBox="0 0 240 170" role="img" aria-label="Map of day 4: Namche Bazaar to Tengboche"><path class="track" d="M102.5,484.9 L53.9,328.9 L46.0,133.2 L80.3,85.9 L46.0,133.2 L194.0,36.8 L263.1,-24.3 L373.0,-139.4 L385.4,-176.0 L373.0,-139.4 L482.3,-173.5 L503.4,-236.4 L482.3,-173.5 L600.0,-192.8 L653.5,-186.7 L652.9,-220.2 L653.5,-186.7 L600.0,-192.8 L482.3,-173.5 L373.0,-139.4 L263.1,-24.3 L194.0,36.8 L46.0,133.2 L53.9,328.9 L102.5,484.9" style="opacity:.3"/><path class="track-day" d="M46.0,133.2 L194.0,36.8"/><circle class="stop" cx="46.0" cy="133.2" r="4"/><circle class="stop on" cx="194.0" cy="36.8" r="5"/><text x="187.0" y="40.8" text-anchor="end" class="strong">Tengboche</text><text x="53.0" y="137.2" text-anchor="start" class="">Namche Bazaar</text></svg></div>
+  </article>
+</li><li class="day" id="day-5" data-day="4" data-label="Day 5: Tengboche to Dingboche">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>5</b></div>
+  <article class="day-card">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 5: </span>Tengboche to Dingboche</h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,168a32.06,32.06,0,0,0-31,24H72a32,32,0,0,1,0-64h96a40,40,0,0,0,0-80H72a8,8,0,0,0,0,16h96a24,24,0,0,1,0,48H72a48,48,0,0,0,0,96h97a32,32,0,1,0,31-40Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,200,216Z"/></svg>about 11 km</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg>5 to 6 h</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Sleep 4,410 m</span></div>
+      <p>Above the tree line into the Imja valley. Island Peak comes into view.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Tea house, twin room</span><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: B, L, D</span></div>
+    </div>
+    <div class="day-map map"><svg viewBox="0 0 240 170" role="img" aria-label="Map of day 5: Tengboche to Pangboche to Dingboche"><path class="track" d="M7.0,419.9 L-23.3,322.4 L-28.2,200.2 L-6.8,170.7 L-28.2,200.2 L64.1,140.0 L107.3,101.9 L175.9,30.0 L183.6,7.1 L175.9,30.0 L244.1,8.6 L257.3,-30.6 L244.1,8.6 L317.6,-3.4 L351.0,0.5 L350.6,-20.5 L351.0,0.5 L317.6,-3.4 L244.1,8.6 L175.9,30.0 L107.3,101.9 L64.1,140.0 L-28.2,200.2 L-23.3,322.4 L7.0,419.9" style="opacity:.3"/><path class="track-day" d="M64.1,140.0 L107.3,101.9 L175.9,30.0"/><circle class="stop" cx="64.1" cy="140.0" r="4"/><circle class="stop" cx="107.3" cy="101.9" r="4"/><circle class="stop on" cx="175.9" cy="30.0" r="5"/><text x="168.9" y="34.0" text-anchor="end" class="strong">Dingboche</text><text x="71.1" y="144.0" text-anchor="start" class="">Tengboche</text><text x="114.3" y="105.9" text-anchor="start" class="">Pangboche</text></svg></div>
+  </article>
+</li><li class="day" id="day-6" data-day="5" data-label="Day 6: Rest day in Dingboche">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>6</b></div>
+  <article class="day-card">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 6: </span>Rest day in Dingboche<span class="badge">Acclimatisation</span></h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,168a32.06,32.06,0,0,0-31,24H72a32,32,0,0,1,0-64h96a40,40,0,0,0,0-80H72a8,8,0,0,0,0,16h96a24,24,0,0,1,0,48H72a48,48,0,0,0,0,96h97a32,32,0,1,0,31-40Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,200,216Z"/></svg>about 5 km</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg>4 to 5 h</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M240,56v64a8,8,0,0,1-16,0V75.31l-82.34,82.35a8,8,0,0,1-11.32,0L96,123.31,29.66,189.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0L136,140.69,212.69,64H168a8,8,0,0,1,0-16h64A8,8,0,0,1,240,56Z"/></svg>High point 5,083 m</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Sleep 4,410 m</span></div>
+      <p>Up the ridge towards Nangkartshang to around 5,000 m.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Tea house, twin room</span><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: B, L, D</span></div>
+    </div>
+    <div class="day-map map"><svg viewBox="0 0 240 170" role="img" aria-label="Map of day 6: Dingboche to Nangkartshang viewpoint to Dingboche"><path class="track" d="M-156.5,727.6 L-205.1,571.6 L-212.9,375.9 L-178.6,328.6 L-212.9,375.9 L-65.1,279.4 L4.0,218.4 L113.8,103.3 L126.2,66.7 L113.8,103.3 L223.1,69.1 L244.1,6.2 L223.1,69.1 L340.7,49.9 L394.1,56.0 L393.6,22.4 L394.1,56.0 L340.7,49.9 L223.1,69.1 L113.8,103.3 L4.0,218.4 L-65.1,279.4 L-212.9,375.9 L-205.1,571.6 L-156.5,727.6" style="opacity:.3"/><path class="track-day" d="M113.8,103.3 L126.2,66.7 L113.8,103.3"/><circle class="stop on" cx="113.8" cy="103.3" r="5"/><circle class="stop" cx="126.2" cy="66.7" r="4"/><text x="120.8" y="107.3" text-anchor="start" class="strong">Dingboche</text><text x="126.2" y="57.7" text-anchor="middle" class="">Nangkartshang viewpoint</text></svg></div>
+  </article>
+</li><li class="day" id="day-7" data-day="6" data-label="Day 7: Dingboche to Chhukung">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>7</b></div>
+  <article class="day-card">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 7: </span>Dingboche to Chhukung</h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,168a32.06,32.06,0,0,0-31,24H72a32,32,0,0,1,0-64h96a40,40,0,0,0,0-80H72a8,8,0,0,0,0,16h96a24,24,0,0,1,0,48H72a48,48,0,0,0,0,96h97a32,32,0,1,0,31-40Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,200,216Z"/></svg>about 5 km</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg>3 h</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Sleep 4,730 m</span></div>
+      <p>A short walk up the valley under Lhotse&#x27;s south face.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Tea house, twin room</span><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: B, L, D</span></div>
+    </div>
+    <div class="day-map map"><svg viewBox="0 0 240 170" role="img" aria-label="Map of day 7: Dingboche to Chhukung"><path class="track" d="M-204.9,726.3 L-253.5,570.3 L-261.3,374.7 L-227.1,327.4 L-261.3,374.7 L-113.5,278.2 L-44.4,217.2 L65.4,102.1 L77.8,65.5 L65.4,102.1 L174.6,67.9 L195.7,5.0 L174.6,67.9 L292.2,48.7 L345.7,54.8 L345.1,21.2 L345.7,54.8 L292.2,48.7 L174.6,67.9 L65.4,102.1 L-44.4,217.2 L-113.5,278.2 L-261.3,374.7 L-253.5,570.3 L-204.9,726.3" style="opacity:.3"/><path class="track-day" d="M65.4,102.1 L174.6,67.9"/><circle class="stop" cx="65.4" cy="102.1" r="4"/><circle class="stop on" cx="174.6" cy="67.9" r="5"/><text x="167.6" y="71.9" text-anchor="end" class="strong">Chhukung</text><text x="72.4" y="106.1" text-anchor="start" class="">Dingboche</text></svg></div>
+  </article>
+</li><li class="day" id="day-8" data-day="7" data-label="Day 8: Chhukung Ri">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>8</b></div>
+  <article class="day-card">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 8: </span>Chhukung Ri<span class="badge">Acclimatisation</span></h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,168a32.06,32.06,0,0,0-31,24H72a32,32,0,0,1,0-64h96a40,40,0,0,0,0-80H72a8,8,0,0,0,0,16h96a24,24,0,0,1,0,48H72a48,48,0,0,0,0,96h97a32,32,0,1,0,31-40Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,200,216Z"/></svg>about 6 km</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg>5 to 6 h</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M240,56v64a8,8,0,0,1-16,0V75.31l-82.34,82.35a8,8,0,0,1-11.32,0L96,123.31,29.66,189.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0L136,140.69,212.69,64H168a8,8,0,0,1,0-16h64A8,8,0,0,1,240,56Z"/></svg>High point 5,550 m</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Sleep 4,730 m</span></div>
+      <p>A climb to Chhukung Ri (5,550 m), good acclimatisation for the summit and a fine view of Island Peak&#x27;s route.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Tea house, twin room</span><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: B, L, D</span></div>
+    </div>
+    <div class="day-map map"><svg viewBox="0 0 240 170" role="img" aria-label="Map of day 8: Chhukung to Chhukung Ri to Chhukung"><path class="track" d="M-270.0,774.9 L-318.6,618.9 L-326.4,423.2 L-292.2,375.9 L-326.4,423.2 L-178.6,326.8 L-109.5,265.7 L0.2,150.6 L12.6,114.0 L0.2,150.6 L109.5,116.4 L130.5,53.6 L109.5,116.4 L227.1,97.2 L280.5,103.3 L280.0,69.7 L280.5,103.3 L227.1,97.2 L109.5,116.4 L0.2,150.6 L-109.5,265.7 L-178.6,326.8 L-326.4,423.2 L-318.6,618.9 L-270.0,774.9" style="opacity:.3"/><path class="track-day" d="M109.5,116.4 L130.5,53.6 L109.5,116.4"/><circle class="stop on" cx="109.5" cy="116.4" r="5"/><circle class="stop peak" cx="130.5" cy="53.6" r="5"/><text x="116.5" y="120.4" text-anchor="start" class="strong">Chhukung</text><text x="137.5" y="57.6" text-anchor="start" class="strong">Chhukung Ri</text></svg></div>
+  </article>
+</li><li class="day" id="day-9" data-day="8" data-label="Day 9: Chhukung to Base Camp">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>9</b></div>
+  <article class="day-card">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 9: </span>Chhukung to Base Camp</h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,168a32.06,32.06,0,0,0-31,24H72a32,32,0,0,1,0-64h96a40,40,0,0,0,0-80H72a8,8,0,0,0,0,16h96a24,24,0,0,1,0,48H72a48,48,0,0,0,0,96h97a32,32,0,1,0,31-40Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,200,216Z"/></svg>about 7 km</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg>3 to 4 h</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Sleep 5,087 m</span></div>
+      <p>Along the Imja Glacier moraine to base camp at about 5,087 m.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Tent</span><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: B, L, D</span></div>
+    </div>
+    <div class="day-map map"><svg viewBox="0 0 240 170" role="img" aria-label="Map of day 9: Chhukung to Island Peak Base Camp"><path class="track" d="M-318.3,753.0 L-366.9,597.1 L-374.7,401.4 L-340.5,354.1 L-374.7,401.4 L-226.9,304.9 L-157.8,243.9 L-48.1,128.8 L-35.6,92.2 L-48.1,128.8 L61.2,94.6 L82.2,31.7 L61.2,94.6 L178.8,75.4 L232.2,81.5 L231.7,47.9 L232.2,81.5 L178.8,75.4 L61.2,94.6 L-48.1,128.8 L-157.8,243.9 L-226.9,304.9 L-374.7,401.4 L-366.9,597.1 L-318.3,753.0" style="opacity:.3"/><path class="track-day" d="M61.2,94.6 L178.8,75.4"/><circle class="stop" cx="61.2" cy="94.6" r="4"/><circle class="stop on" cx="178.8" cy="75.4" r="5"/><text x="171.8" y="79.4" text-anchor="end" class="strong">Island Peak Base Camp</text><text x="68.2" y="98.6" text-anchor="start" class="">Chhukung</text></svg></div>
+  </article>
+</li><li class="day" id="day-10" data-day="9" data-label="Day 10: Skills day at Base Camp">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>10</b></div>
+  <article class="day-card">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 10: </span>Skills day at Base Camp<span class="badge">Training</span></h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg>Training</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Sleep 5,087 m</span></div>
+      <p>Your guide checks your gear and teaches fixed-rope technique: clipping in, jumar, descending on a figure-of-eight, walking in crampons and crossing ladders.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Tent</span><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: B, L, D</span></div>
+    </div>
+    <div class="day-map map"><svg viewBox="0 0 240 170" role="img" aria-label="Map of day 10: Island Peak Base Camp"><path class="track" d="M-211.4,536.8 L-243.8,432.8 L-249.0,302.3 L-226.2,270.8 L-249.0,302.3 L-150.5,238.0 L-104.4,197.3 L-31.2,120.6 L-23.0,96.2 L-31.2,120.6 L41.6,97.8 L55.6,55.9 L41.6,97.8 L120.0,85.0 L155.6,89.1 L155.2,66.7 L155.6,89.1 L120.0,85.0 L41.6,97.8 L-31.2,120.6 L-104.4,197.3 L-150.5,238.0 L-249.0,302.3 L-243.8,432.8 L-211.4,536.8" style="opacity:.3"/><circle class="stop on" cx="120.0" cy="85.0" r="5"/><text x="120.0" y="76.0" text-anchor="middle" class="strong">Island Peak Base Camp</text></svg></div>
+  </article>
+</li><li class="day" id="day-11" data-day="10" data-label="Day 11: Base Camp to High Camp">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>11</b></div>
+  <article class="day-card">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 11: </span>Base Camp to High Camp</h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,168a32.06,32.06,0,0,0-31,24H72a32,32,0,0,1,0-64h96a40,40,0,0,0,0-80H72a8,8,0,0,0,0,16h96a24,24,0,0,1,0,48H72a48,48,0,0,0,0,96h97a32,32,0,1,0,31-40Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,200,216Z"/></svg>about 3 km</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg>3 h</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Sleep 5,600 m</span></div>
+      <p>Up a rocky gully to high camp at around 5,600 m. Early night.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Tent</span><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: B, L, D</span></div>
+    </div>
+    <div class="day-map map"><svg viewBox="0 0 240 170" role="img" aria-label="Map of day 11: Island Peak Base Camp to Island Peak High Camp"><path class="track" d="M-403.8,759.6 L-452.4,603.6 L-460.2,408.0 L-426.0,360.6 L-460.2,408.0 L-312.4,311.5 L-243.3,250.4 L-133.6,135.4 L-121.2,98.7 L-133.6,135.4 L-24.3,101.2 L-3.3,38.3 L-24.3,101.2 L93.3,81.9 L146.7,88.1 L146.2,54.5 L146.7,88.1 L93.3,81.9 L-24.3,101.2 L-133.6,135.4 L-243.3,250.4 L-312.4,311.5 L-460.2,408.0 L-452.4,603.6 L-403.8,759.6" style="opacity:.3"/><path class="track-day" d="M93.3,81.9 L146.7,88.1"/><circle class="stop" cx="93.3" cy="81.9" r="4"/><circle class="stop on" cx="146.7" cy="88.1" r="5"/><text x="146.7" y="79.1" text-anchor="middle" class="strong">Island Peak High Camp</text><text x="93.3" y="97.9" text-anchor="middle" class="">Island Peak Base Camp</text></svg></div>
+  </article>
+</li><li class="day" id="day-12" data-day="11" data-label="Day 12: Summit day">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>12</b></div>
+  <article class="day-card">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 12: </span>Summit day<span class="badge">Summit day</span></h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,168a32.06,32.06,0,0,0-31,24H72a32,32,0,0,1,0-64h96a40,40,0,0,0,0-80H72a8,8,0,0,0,0,16h96a24,24,0,0,1,0,48H72a48,48,0,0,0,0,96h97a32,32,0,1,0,31-40Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,200,216Z"/></svg>about 6 km</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg>10 to 12 h</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M240,56v64a8,8,0,0,1-16,0V75.31l-82.34,82.35a8,8,0,0,1-11.32,0L96,123.31,29.66,189.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0L136,140.69,212.69,64H168a8,8,0,0,1,0-16h64A8,8,0,0,1,240,56Z"/></svg>High point 6,189 m</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Sleep 5,087 m</span></div>
+      <p>Leave around 1 am. Up the rock ridge to the glacier, rope up, cross to the foot of the headwall and climb about 100 m of steep snow on fixed ropes to the summit ridge (6,189 m). Back down to base camp.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Tent</span><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: B, L, D</span></div>
+    </div>
+    <div class="day-map map"><svg viewBox="0 0 240 170" role="img" aria-label="Map of day 12: Island Peak High Camp to Island Peak summit to Island Peak High Camp to Island Peak Base Camp"><path class="track" d="M-403.8,773.3 L-452.4,617.4 L-460.2,421.7 L-426.0,374.4 L-460.2,421.7 L-312.4,325.2 L-243.3,264.2 L-133.6,149.1 L-121.1,112.5 L-133.6,149.1 L-24.3,114.9 L-3.3,52.0 L-24.3,114.9 L93.3,95.7 L146.7,101.8 L146.2,68.2 L146.7,101.8 L93.3,95.7 L-24.3,114.9 L-133.6,149.1 L-243.3,264.2 L-312.4,325.2 L-460.2,421.7 L-452.4,617.4 L-403.8,773.3" style="opacity:.3"/><path class="track-day" d="M146.7,101.8 L146.2,68.2 L146.7,101.8 L93.3,95.7"/><circle class="stop" cx="146.7" cy="101.8" r="4"/><circle class="stop peak" cx="146.2" cy="68.2" r="5"/><circle class="stop on" cx="93.3" cy="95.7" r="5"/><text x="93.3" y="86.7" text-anchor="middle" class="strong">Island Peak Base Camp</text><text x="146.2" y="59.2" text-anchor="middle" class="strong">Island Peak</text><text x="146.7" y="117.8" text-anchor="middle" class="">Island Peak High Camp</text></svg></div>
+  </article>
+</li><li class="day" id="day-13" data-day="12" data-label="Day 13: Reserve day">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>13</b></div>
+  <article class="day-card">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 13: </span>Reserve day<span class="badge">Weather buffer</span></h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Sleep 5,087 m</span></div>
+      <p>Held for bad weather. If we summit on the first attempt, we use it to descend at a gentler pace.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Tent</span><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: B, L, D</span></div>
+    </div>
+    <div class="day-map map"><svg viewBox="0 0 240 170" role="img" aria-label="Map of day 13: Island Peak Base Camp"><path class="track" d="M-211.4,536.8 L-243.8,432.8 L-249.0,302.3 L-226.2,270.8 L-249.0,302.3 L-150.5,238.0 L-104.4,197.3 L-31.2,120.6 L-23.0,96.2 L-31.2,120.6 L41.6,97.8 L55.6,55.9 L41.6,97.8 L120.0,85.0 L155.6,89.1 L155.2,66.7 L155.6,89.1 L120.0,85.0 L41.6,97.8 L-31.2,120.6 L-104.4,197.3 L-150.5,238.0 L-249.0,302.3 L-243.8,432.8 L-211.4,536.8" style="opacity:.3"/><circle class="stop on" cx="120.0" cy="85.0" r="5"/><text x="120.0" y="76.0" text-anchor="middle" class="strong">Island Peak Base Camp</text></svg></div>
+  </article>
+</li><li class="day" id="day-14" data-day="13" data-label="Day 14: Base Camp to Pangboche">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>14</b></div>
+  <article class="day-card">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 14: </span>Base Camp to Pangboche</h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,168a32.06,32.06,0,0,0-31,24H72a32,32,0,0,1,0-64h96a40,40,0,0,0,0-80H72a8,8,0,0,0,0,16h96a24,24,0,0,1,0,48H72a48,48,0,0,0,0,96h97a32,32,0,1,0,31-40Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,200,216Z"/></svg>about 15 km</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg>6 h</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Sleep 3,985 m</span></div>
+      <p>Down the valley to Pangboche and its old monastery.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Tea house, twin room</span><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: B, L, D</span></div>
+    </div>
+    <div class="day-map map"><svg viewBox="0 0 240 170" role="img" aria-label="Map of day 14: Island Peak Base Camp to Chhukung to Dingboche to Pangboche"><path class="track" d="M-55.8,402.2 L-81.8,318.8 L-86.0,214.2 L-67.6,189.0 L-86.0,214.2 L-6.9,162.7 L30.0,130.0 L88.7,68.5 L95.3,48.9 L88.7,68.5 L147.1,50.2 L158.4,16.6 L147.1,50.2 L210.0,40.0 L238.6,43.2 L238.3,25.3 L238.6,43.2 L210.0,40.0 L147.1,50.2 L88.7,68.5 L30.0,130.0 L-6.9,162.7 L-86.0,214.2 L-81.8,318.8 L-55.8,402.2" style="opacity:.3"/><path class="track-day" d="M210.0,40.0 L147.1,50.2 L88.7,68.5 L30.0,130.0"/><circle class="stop" cx="210.0" cy="40.0" r="4"/><circle class="stop" cx="147.1" cy="50.2" r="4"/><circle class="stop" cx="88.7" cy="68.5" r="4"/><circle class="stop on" cx="30.0" cy="130.0" r="5"/><text x="37.0" y="134.0" text-anchor="start" class="strong">Pangboche</text><text x="203.0" y="44.0" text-anchor="end" class="">Island Peak Base Camp</text><text x="147.1" y="66.2" text-anchor="middle" class="">Chhukung</text><text x="81.7" y="72.5" text-anchor="end" class="">Dingboche</text></svg></div>
+  </article>
+</li><li class="day" id="day-15" data-day="14" data-label="Day 15: Pangboche to Namche">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>15</b></div>
+  <article class="day-card">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 15: </span>Pangboche to Namche</h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,168a32.06,32.06,0,0,0-31,24H72a32,32,0,0,1,0-64h96a40,40,0,0,0,0-80H72a8,8,0,0,0,0,16h96a24,24,0,0,1,0,48H72a48,48,0,0,0,0,96h97a32,32,0,1,0,31-40Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,200,216Z"/></svg>about 13 km</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg>5 to 6 h</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Sleep 3,440 m</span></div>
+      <p>Down through the forest and over the Tengboche ridge to Namche, where the bakeries are waiting.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Tea house, twin room</span><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: B, L, D</span></div>
+    </div>
+    <div class="day-map map"><svg viewBox="0 0 240 170" role="img" aria-label="Map of day 15: Pangboche to Tengboche to Namche Bazaar"><path class="track" d="M83.6,385.6 L49.7,276.6 L44.2,140.0 L68.2,107.0 L44.2,140.0 L147.5,72.6 L195.8,30.0 L272.5,-50.4 L281.2,-75.9 L272.5,-50.4 L348.9,-74.2 L363.6,-118.2 L348.9,-74.2 L431.1,-87.7 L468.4,-83.4 L468.0,-106.9 L468.4,-83.4 L431.1,-87.7 L348.9,-74.2 L272.5,-50.4 L195.8,30.0 L147.5,72.6 L44.2,140.0 L49.7,276.6 L83.6,385.6" style="opacity:.3"/><path class="track-day" d="M195.8,30.0 L147.5,72.6 L44.2,140.0"/><circle class="stop" cx="195.8" cy="30.0" r="4"/><circle class="stop" cx="147.5" cy="72.6" r="4"/><circle class="stop on" cx="44.2" cy="140.0" r="5"/><text x="51.2" y="144.0" text-anchor="start" class="strong">Namche Bazaar</text><text x="188.8" y="34.0" text-anchor="end" class="">Pangboche</text><text x="154.5" y="76.6" text-anchor="start" class="">Tengboche</text></svg></div>
+  </article>
+</li><li class="day" id="day-16" data-day="15" data-label="Day 16: Namche to Lukla">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>16</b></div>
+  <article class="day-card">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 16: </span>Namche to Lukla</h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,168a32.06,32.06,0,0,0-31,24H72a32,32,0,0,1,0-64h96a40,40,0,0,0,0-80H72a8,8,0,0,0,0,16h96a24,24,0,0,1,0,48H72a48,48,0,0,0,0,96h97a32,32,0,1,0,31-40Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,200,216Z"/></svg>about 18 km</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg>6 to 7 h</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Sleep 2,860 m</span></div>
+      <p>Back to Lukla. Farewell evening with the team.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Tea house, twin room</span><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: B, L, D</span></div>
+    </div>
+    <div class="day-map map"><svg viewBox="0 0 240 170" role="img" aria-label="Map of day 16: Namche Bazaar to Phakding to Lukla"><path class="track" d="M128.8,140.0 L113.6,91.2 L111.2,30.0 L121.9,15.2 L111.2,30.0 L157.5,-0.2 L179.1,-19.3 L213.5,-55.3 L217.4,-66.7 L213.5,-55.3 L247.7,-66.0 L254.3,-85.6 L247.7,-66.0 L284.6,-72.0 L301.3,-70.1 L301.1,-80.6 L301.3,-70.1 L284.6,-72.0 L247.7,-66.0 L213.5,-55.3 L179.1,-19.3 L157.5,-0.2 L111.2,30.0 L113.6,91.2 L128.8,140.0" style="opacity:.3"/><path class="track-day" d="M111.2,30.0 L113.6,91.2 L128.8,140.0"/><circle class="stop" cx="111.2" cy="30.0" r="4"/><circle class="stop" cx="113.6" cy="91.2" r="4"/><circle class="stop on" cx="128.8" cy="140.0" r="5"/><text x="135.8" y="144.0" text-anchor="start" class="strong">Lukla</text><text x="118.2" y="34.0" text-anchor="start" class="">Namche Bazaar</text><text x="120.6" y="95.2" text-anchor="start" class="">Phakding</text></svg></div>
+  </article>
+</li><li class="day" id="day-17" data-day="16" data-label="Day 17: Fly to Kathmandu">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>17</b></div>
+  <article class="day-card">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 17: </span>Fly to Kathmandu</h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg>35 min flight</span></div>
+      <p>Flight to Kathmandu or Ramechhap. We recommend a spare night in Kathmandu before your international flight.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: B</span></div>
+    </div>
+    <div class="day-map map"><svg viewBox="0 0 240 170" role="img" aria-label="Map of day 17: Lukla"><path class="track" d="M120.0,85.0 L87.6,-19.0 L82.3,-149.4 L105.2,-181.0 L82.3,-149.4 L181.1,-213.7 L227.2,-254.4 L300.6,-331.2 L308.8,-355.6 L300.6,-331.2 L373.5,-353.9 L387.6,-395.9 L373.5,-353.9 L452.1,-366.8 L487.8,-362.7 L487.4,-385.1 L487.8,-362.7 L452.1,-366.8 L373.5,-353.9 L300.6,-331.2 L227.2,-254.4 L181.1,-213.7 L82.3,-149.4 L87.6,-19.0 L120.0,85.0" style="opacity:.3"/><circle class="stop on" cx="120.0" cy="85.0" r="5"/><text x="127.0" y="89.0" text-anchor="start" class="strong">Lukla</text></svg></div>
+  </article>
+</li></ol>
+      <p class="note">Walking times are for a steady pace with stops. Your guide may change overnight stops to suit the weather, trail conditions and how the group is feeling.</p>
+    </section>
 
-  <section class="related-posts" aria-labelledby="related-heading">
-    <div style="max-width:1120px;margin:0 auto">
-      <h2 id="related-heading">More From Our Blog</h2>
-      <div class="related-grid">
-        <a href="/blog/lobuche-east-peak-climbing-guide" class="related-card">
-          <img src="https://images.unsplash.com/photo-1516298773066-c48f8eb9e73e?q=80&w=600&auto=format&fit=crop" alt="Lobuche East Peak Khumbu" loading="lazy">
-          <div class="related-card-body">
-            <span class="related-card-cat">Trekking Peak Guide</span>
-            <h3 class="related-card-title">Complete Guide to Lobuche East Peak Climbing 2026</h3>
-          </div>
-        </a>
-        <a href="/blog/mera-peak-guide" class="related-card">
-          <img src="https://images.unsplash.com/photo-1555993539-1732b0258235?q=80&w=600&auto=format&fit=crop" alt="Mera Peak Hinku Valley" loading="lazy">
-          <div class="related-card-body">
-            <span class="related-card-cat">Trekking Peak Guide</span>
-            <h3 class="related-card-title">Complete Guide to Mera Peak Climbing 2026</h3>
-          </div>
-        </a>
-        <a href="/blog/ama-dablam-climbing-guide" class="related-card">
-          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=600&auto=format&fit=crop" alt="Ama Dablam Khumbu Valley" loading="lazy">
-          <div class="related-card-body">
-            <span class="related-card-cat">Expedition Guide</span>
-            <h3 class="related-card-title">Complete Guide to Climbing Ama Dablam 2026</h3>
-          </div>
-        </a>
+    <section id="included" aria-labelledby="inc-title">
+      <h2 id="inc-title">What's included</h2>
+      <div class="incl">
+        <div class="yes"><h3>Included in the price</h3><ul><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Airport pick-up and drop-off in Kathmandu</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>A licensed climbing guide (1 guide to 2 climbers on summit day) and a trekking guide</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Porters on the approach, paid and insured</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Climbing royalty, trekking permits and conservation fees</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Tea houses on the approach; tents, cook and meals at base and high camp</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Group climbing gear: fixed rope, anchors, ice screws</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Skills session at base camp before the summit push</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Transport and domestic flights shown in the itinerary</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Satellite communication and a full medical kit with oxygen</span></li></ul></div>
+        <div class="no"><h3>Not included</h3><ul><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128Z"/></svg><span>International flights and Nepal visa</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128Z"/></svg><span>Insurance covering climbing to the summit altitude and helicopter rescue</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128Z"/></svg><span>Personal climbing gear (can be hired in Kathmandu or Chhukung)</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128Z"/></svg><span>Summit bonus and tips for guides and porters</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128Z"/></svg><span>Drinks, showers and charging in tea houses</span></li></ul></div>
+      </div>
+    </section>
+
+    <section id="permits" aria-labelledby="perm-title">
+      <h2 id="perm-title">Permits and practical details</h2>
+      <div class="info">
+        <div class="info-item"><h3><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,112a8,8,0,0,1-8,8H152a8,8,0,0,1,0-16h40A8,8,0,0,1,200,112Zm-8,24H152a8,8,0,0,0,0,16h40a8,8,0,0,0,0-16Zm40-80V200a16,16,0,0,1-16,16H40a16,16,0,0,1-16-16V56A16,16,0,0,1,40,40H216A16,16,0,0,1,232,56ZM216,200V56H40V200H216Zm-80.26-34a8,8,0,1,1-15.5,4c-2.63-10.26-13.06-18-24.25-18s-21.61,7.74-24.25,18a8,8,0,1,1-15.5-4,39.84,39.84,0,0,1,17.19-23.34,32,32,0,1,1,45.12,0A39.76,39.76,0,0,1,135.75,166ZM96,136a16,16,0,1,0-16-16A16,16,0,0,0,96,136Z"/></svg>Permits you need</h3><ul><li><strong>Island Peak climbing permit (Nepal Mountaineering Association)</strong><br>Seasonal royalty, lowest in autumn</li><li><strong>Sagarmatha National Park entry</strong><br>NPR 3,000</li><li><strong>Khumbu Pasang Lhamu Rural Municipality fee</strong><br>Collected at Lukla or Monjo</li></ul><p class="note">NMA royalties were revised in September 2025. We include the current fee for your season in the price.</p></div>
+        <div class="info-item"><h3><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,56H176V48a24,24,0,0,0-24-24H104A24,24,0,0,0,80,48v8H40A16,16,0,0,0,24,72V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V72A16,16,0,0,0,216,56ZM96,48a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96ZM216,200H40V72H216V200Zm-56-64a8,8,0,0,1-8,8H136v16a8,8,0,0,1-16,0V144H104a8,8,0,0,1,0-16h16V112a8,8,0,0,1,16,0v16h16A8,8,0,0,1,160,136Z"/></svg>Altitude and safety</h3><p>Above 3,000 m we check everyone's oxygen level and pulse each evening, and talk through how you're sleeping and eating. If altitude symptoms don't ease with rest, we go down. No summit or pass is worth pushing on for. Your insurance needs to cover helicopter rescue up to 6,189 m.</p></div>
+        <div class="info-item"><h3><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Where you stay</h3><p>Tea houses on the walk in, then two-person tents at base camp and high camp. At base camp a cook team looks after you, with a dining tent and a toilet tent.</p></div>
+        <div class="info-item"><h3><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M168,40.58V32A24,24,0,0,0,144,8H112A24,24,0,0,0,88,32v8.58A56.09,56.09,0,0,0,40,96V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V96A56.09,56.09,0,0,0,168,40.58ZM112,24h32a8,8,0,0,1,8,8v8H104V32A8,8,0,0,1,112,24Zm56,136H88v-8a8,8,0,0,1,8-8h64a8,8,0,0,1,8,8ZM88,176h48v8a8,8,0,0,0,16,0v-8h16v40H88Zm112,40H184V152a24,24,0,0,0-24-24H96a24,24,0,0,0-24,24v64H56V96A40,40,0,0,1,96,56h64a40,40,0,0,1,40,40V216ZM152,88a8,8,0,0,1-8,8H112a8,8,0,0,1,0-16h32A8,8,0,0,1,152,88Z"/></svg>Fitness and preparation</h3><p>You need good hill fitness, some experience walking in crampons and a head for heights. When you book, we send a training plan and a full kit list, and we check your gear together in Kathmandu.</p></div>
+      </div>
+    </section>
+
+    <section id="when" aria-labelledby="when-title">
+      <h2 id="when-title">When to go</h2>
+      <div class="months" role="img" aria-label="Best months: April, May, October, November"><div class="month " title="January">Jan</div><div class="month " title="February">Feb</div><div class="month good" title="March">Mar</div><div class="month best" title="April">Apr</div><div class="month best" title="May">May</div><div class="month " title="June">Jun</div><div class="month " title="July">Jul</div><div class="month " title="August">Aug</div><div class="month " title="September">Sep</div><div class="month best" title="October">Oct</div><div class="month best" title="November">Nov</div><div class="month " title="December">Dec</div></div><div class="months-key"><span><i style="background:var(--accent)"></i>Best</span><span><i style="background:var(--accent-soft)"></i>Good</span><span><i style="background:var(--surface-2)"></i>Possible, but not ideal</span></div>
+      <p class="note">Best months: Apr to May, Oct to Nov. Private departures run on any date that suits you within the season.</p>
+    </section>
+
+    <section aria-labelledby="gal-title">
+      <h2 id="gal-title">Along the way</h2>
+      <div class="gallery"><figure><img src="/images/places/island-peak-1024.webp" srcset="/images/places/island-peak-640.webp 640w, /images/places/island-peak-1024.webp 1024w, /images/places/island-peak-1600.webp 1600w" sizes="(max-width: 860px) 50vw, 33vw" width="1600" height="1035" alt="Island Peak seen from the fields of Dingboche" loading="lazy" decoding="async"><figcaption>Island Peak seen from the fields of Dingboche</figcaption></figure><figure><img src="/images/places/dingboche-village-1024.webp" srcset="/images/places/dingboche-village-640.webp 640w, /images/places/dingboche-village-1024.webp 1024w, /images/places/dingboche-village-1600.webp 1600w" sizes="(max-width: 860px) 50vw, 33vw" width="1600" height="634" alt="Dingboche village in the Imja valley" loading="lazy" decoding="async"><figcaption>Dingboche village in the Imja valley</figcaption></figure><figure><img src="/images/places/ama-dablam-1024.webp" srcset="/images/places/ama-dablam-640.webp 640w, /images/places/ama-dablam-1024.webp 1024w, /images/places/ama-dablam-1600.webp 1600w" sizes="(max-width: 860px) 50vw, 33vw" width="1600" height="1067" alt="Ama Dablam rising above the Imja valley in the Khumbu" loading="lazy" decoding="async"><figcaption>Ama Dablam rising above the Imja valley in the Khumbu</figcaption></figure><figure><img src="/images/web/rope-team-1024.webp" srcset="/images/web/rope-team-640.webp 640w, /images/web/rope-team-1024.webp 901w" sizes="(max-width: 860px) 50vw, 33vw" width="901" height="1200" alt="A roped team resting on a snow summit" loading="lazy" decoding="async"><figcaption>A roped team resting on a snow summit</figcaption></figure><figure><img src="/images/web/summit-climber-1024.webp" srcset="/images/web/summit-climber-640.webp 640w, /images/web/summit-climber-1024.webp 901w" sizes="(max-width: 860px) 50vw, 33vw" width="901" height="1200" alt="A climber on a snow ridge above the clouds" loading="lazy" decoding="async"><figcaption>A climber on a snow ridge above the clouds</figcaption></figure></div>
+      <p class="credit">Island Peak seen from the fields of Dingboche: Photo: Rohit Sharma, <a href="https://commons.wikimedia.org/wiki/File:Island_Peak_(Imja_Tse)_from_Dingboche_Village.jpg" rel="noopener" target="_blank">CC BY-SA 4.0</a>; Dingboche village in the Imja valley: Photo: Ummidnp, <a href="https://commons.wikimedia.org/wiki/File:Dingboche_village.jpg" rel="noopener" target="_blank">CC BY-SA 4.0</a>; Ama Dablam rising above the Imja valley in the Khumbu: Photo: Vyacheslav Argenberg, <a href="https://commons.wikimedia.org/wiki/File:Ama_Dablam,_Nepal.jpg" rel="noopener" target="_blank">CC BY 4.0</a></p>
+    </section>
+
+    <section id="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">Common questions</h2>
+      <div class="faq"><details><summary>Do I need climbing experience for Island Peak?<svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></summary><div><p>You don&#x27;t need previous Himalayan climbs, but you should be a strong hill walker and comfortable with exposure. A winter skills or crampon course at home helps a lot. We teach fixed-rope technique at base camp.</p></div></details><details><summary>How technical is the headwall?<svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></summary><div><p>It is about 100 m of 40 to 45 degree snow and ice on fixed ropes, followed by a narrow ridge to the summit. In late autumn the glacier crevasses can be wider and need ladders.</p></div></details><details><summary>What gear do I need?<svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></summary><div><p>Double or insulated mountaineering boots, crampons, harness, helmet, jumar, figure-of-eight, slings and karabiners, plus down jacket and warm gloves. Everything can be hired in Kathmandu or Chhukung; we send a full list.</p></div></details><details><summary>What is the success rate?<svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></summary><div><p>It depends on the weather and on how well each climber acclimatises. Our itinerary gives you two acclimatisation days, a climb of Chhukung Ri and a reserve day, which gives you the best chance.</p></div></details></div>
+    </section>
+  </div>
+
+  <aside class="trip-aside" aria-label="Trip summary">
+    <div class="summary">
+      <div class="summary-top"><small>From, per person</small><p class="amount">US$2,100 <span>17 days</span></p></div>
+      <dl><div><dt><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"/></svg>Duration</dt><dd>17 days</dd></div><div><dt><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M164,80a28,28,0,1,0-28-28A28,28,0,0,0,164,80Zm0-40a12,12,0,1,1-12,12A12,12,0,0,1,164,40Zm90.88,155.92-54.56-92.08A15.87,15.87,0,0,0,186.55,96h0a15.85,15.85,0,0,0-13.76,7.84L146.63,148l-44.84-76.1a16,16,0,0,0-27.58,0L1.11,195.94A8,8,0,0,0,8,208H248a8,8,0,0,0,6.88-12.08ZM88,80l23.57,40H64.43ZM22,192l33-56h66l18.74,31.8,0,0L154,192Zm150.57,0-16.66-28.28L186.55,112,234,192Z"/></svg>Max altitude</dt><dd>6,189 m</dd></div><div><dt><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M240,56v64a8,8,0,0,1-16,0V75.31l-82.34,82.35a8,8,0,0,1-11.32,0L96,123.31,29.66,189.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0L136,140.69,212.69,64H168a8,8,0,0,1,0-16h64A8,8,0,0,1,240,56Z"/></svg>Grade</dt><dd>Alpine PD</dd></div><div><dt><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M244.8,150.4a8,8,0,0,1-11.2-1.6A51.6,51.6,0,0,0,192,128a8,8,0,0,1-7.37-4.89,8,8,0,0,1,0-6.22A8,8,0,0,1,192,112a24,24,0,1,0-23.24-30,8,8,0,1,1-15.5-4A40,40,0,1,1,219,117.51a67.94,67.94,0,0,1,27.43,21.68A8,8,0,0,1,244.8,150.4ZM190.92,212a8,8,0,1,1-13.84,8,57,57,0,0,0-98.16,0,8,8,0,1,1-13.84-8,72.06,72.06,0,0,1,33.74-29.92,48,48,0,1,1,58.36,0A72.06,72.06,0,0,1,190.92,212ZM128,176a32,32,0,1,0-32-32A32,32,0,0,0,128,176ZM72,120a8,8,0,0,0-8-8A24,24,0,1,1,87.24,82a8,8,0,1,0,15.5-4A40,40,0,1,0,37,117.51,67.94,67.94,0,0,0,9.6,139.19a8,8,0,1,0,12.8,9.61A51.6,51.6,0,0,1,64,128,8,8,0,0,0,72,120Z"/></svg>Group size</dt><dd>2 to 6</dd></div><div><dt><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z"/></svg>Starts</dt><dd>Kathmandu</dd></div><div><dt><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm72,88a64,64,0,1,1-64-64A64.07,64.07,0,0,1,192,128Zm-16,0a48,48,0,1,0-48,48A48.05,48.05,0,0,0,176,128ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z"/></svg>Best months</dt><dd>Apr to May, Oct to Nov</dd></div></dl>
+      <div class="summary-actions">
+        <a href="/contact.html?trip=island-peak" class="btn btn-primary btn-block">Plan your trip <svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+        <a href="https://wa.me/9779811157421?text=Hello,%20I&#x27;m%20interested%20in%20the%20Island%20Peak%20Climb%20(17%20days)." class="btn btn-ghost btn-block" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg> Ask on WhatsApp</a>
+        <p class="summary-note">No payment needed to enquire. We reply within one working day.</p>
+      </div>
+      <div class="summary-accred"><span>Licensed in Nepal</span><div class="accred-minis"><a class="accred-mini" href="https://tourismdepartment.gov.np/" target="_blank" rel="noopener" title="Department of Tourism, Government of Nepal: Licensed trekking and mountaineering agency"><span class="accred-text" aria-hidden="true"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,136a8,8,0,0,1-8,8H72a8,8,0,0,1,0-16h48A8,8,0,0,1,128,136Zm-8-40H72a8,8,0,0,0,0,16h48a8,8,0,0,0,0-16Zm112,65.47V224A8,8,0,0,1,220,231l-24-13.74L172,231A8,8,0,0,1,160,224V200H40a16,16,0,0,1-16-16V56A16,16,0,0,1,40,40H216a16,16,0,0,1,16,16V86.53a51.88,51.88,0,0,1,0,74.94ZM160,184V161.47A52,52,0,0,1,216,76V56H40V184Zm56-12a51.88,51.88,0,0,1-40,0v38.22l16-9.16a8,8,0,0,1,7.94,0l16,9.16Zm16-48a36,36,0,1,0-36,36A36,36,0,0,0,232,124Z"/></svg><b>Govt. of<br>Nepal</b></span><span class="sr-only">Department of Tourism, Government of Nepal</span></a><a class="accred-mini" href="https://ntb.gov.np/" target="_blank" rel="noopener" title="Nepal Tourism Board: Registered with Nepal&#x27;s national tourism body"><picture><source srcset="/images/logos/ntb.webp" type="image/webp"><img src="/images/logos/ntb.png" alt="Nepal Tourism Board logo" width="33" height="34" loading="lazy" decoding="async"></picture><span class="sr-only">Nepal Tourism Board</span></a><a class="accred-mini" href="https://www.taan.org.np/" target="_blank" rel="noopener" title="Trekking Agencies&#x27; Association of Nepal: Member of the national trekking association"><picture><source srcset="/images/logos/taan.webp" type="image/webp"><img src="/images/logos/taan.png" alt="Trekking Agencies&#x27; Association of Nepal logo" width="25" height="34" loading="lazy" decoding="async"></picture><span class="sr-only">Trekking Agencies&#x27; Association of Nepal</span></a><a class="accred-mini" href="https://www.nepalmountaineering.org/" target="_blank" rel="noopener" title="Nepal Mountaineering Association: Member agency for peak climbing"><picture><source srcset="/images/logos/nma.webp" type="image/webp"><img src="/images/logos/nma.png" alt="Nepal Mountaineering Association logo" width="39" height="34" loading="lazy" decoding="async"></picture><span class="sr-only">Nepal Mountaineering Association</span></a></div></div>
+    </div>
+    <div class="aside-live">
+      <div class="route-panel"><h3><span id="mapDay">Route overview</span></h3><div class="map map-big"><svg viewBox="0 0 340 300" role="img" aria-label="Route map of the Island Peak Climb"><path class="peak-ref" d="M224.9,28.0 l5.5,9 h-11z"><title>Everest, 8,849 m</title></path><path class="peak-ref" d="M230.6,48.5 l5.5,9 h-11z"><title>Lhotse, 8,516 m</title></path><path class="peak-ref" d="M198.5,44.2 l5.5,9 h-11z"><title>Nuptse, 7,861 m</title></path><path class="peak-ref" d="M181.1,126.5 l5.5,9 h-11z"><title>Ama Dablam, 6,812 m</title></path><path class="peak-ref" d="M131.2,185.1 l5.5,9 h-11z"><title>Thamserku, 6,623 m</title></path><path class="peak-ref" d="M148.3,175.6 l5.5,9 h-11z"><title>Kangtega, 6,782 m</title></path><path class="peak-ref" d="M262.6,193.3 l5.5,9 h-11z"><title>Chamlang, 7,319 m</title></path><path class="peak-ref" d="M186.3,243.9 l5.5,9 h-11z"><title>Mera Peak, 6,476 m</title></path><path class="track" d="M91.7,266.0 L79.3,226.4 L77.4,176.6 L86.1,164.6 L77.4,176.6 L114.9,152.1 L132.5,136.6 L160.4,107.4 L163.6,98.1 L160.4,107.4 L188.2,98.7 L193.5,82.7 L188.2,98.7 L218.1,93.8 L231.7,95.4 L231.5,86.8 L231.7,95.4 L218.1,93.8 L188.2,98.7 L160.4,107.4 L132.5,136.6 L114.9,152.1 L77.4,176.6 L79.3,226.4 L91.7,266.0"/><path class="seg" data-i="0" d="M91.7,266.0 L79.3,226.4"/><path class="seg" data-i="1" d="M79.3,226.4 L77.4,176.6"/><path class="seg" data-i="2" d="M77.4,176.6 L86.1,164.6 L77.4,176.6"/><path class="seg" data-i="3" d="M77.4,176.6 L114.9,152.1"/><path class="seg" data-i="4" d="M114.9,152.1 L132.5,136.6 L160.4,107.4"/><path class="seg" data-i="5" d="M160.4,107.4 L163.6,98.1 L160.4,107.4"/><path class="seg" data-i="6" d="M160.4,107.4 L188.2,98.7"/><path class="seg" data-i="7" d="M188.2,98.7 L193.5,82.7 L188.2,98.7"/><path class="seg" data-i="8" d="M188.2,98.7 L218.1,93.8"/><path class="seg" data-i="10" d="M218.1,93.8 L231.7,95.4"/><path class="seg" data-i="11" d="M231.7,95.4 L231.5,86.8 L231.7,95.4 L218.1,93.8"/><path class="seg" data-i="13" d="M218.1,93.8 L188.2,98.7 L160.4,107.4 L132.5,136.6"/><path class="seg" data-i="14" d="M132.5,136.6 L114.9,152.1 L77.4,176.6"/><path class="seg" data-i="15" d="M77.4,176.6 L79.3,226.4 L91.7,266.0"/><circle class="stop" data-i="15" cx="91.7" cy="266.0" r="4"><title>Lukla, 2,860 m</title></circle><circle class="stop" data-i="0" cx="79.3" cy="226.4" r="4"><title>Phakding, 2,610 m</title></circle><circle class="stop" data-i="1" cx="77.4" cy="176.6" r="4"><title>Namche Bazaar, 3,440 m</title></circle><circle class="stop" cx="86.1" cy="164.6" r="4"><title>Hotel Everest View, 3,880 m</title></circle><circle class="stop" data-i="3" cx="114.9" cy="152.1" r="4"><title>Tengboche, 3,867 m</title></circle><circle class="stop" data-i="13" cx="132.5" cy="136.6" r="4"><title>Pangboche, 3,985 m</title></circle><circle class="stop" data-i="4" cx="160.4" cy="107.4" r="4"><title>Dingboche, 4,410 m</title></circle><circle class="stop" cx="163.6" cy="98.1" r="4"><title>Nangkartshang viewpoint, 5,083 m</title></circle><circle class="stop" data-i="6" cx="188.2" cy="98.7" r="4"><title>Chhukung, 4,730 m</title></circle><circle class="stop peak" cx="193.5" cy="82.7" r="5"><title>Chhukung Ri, 5,550 m</title></circle><circle class="stop" data-i="8" cx="218.1" cy="93.8" r="4"><title>Island Peak Base Camp, 5,087 m</title></circle><circle class="stop" data-i="10" cx="231.7" cy="95.4" r="4"><title>Island Peak High Camp, 5,600 m</title></circle><circle class="stop peak" cx="231.5" cy="86.8" r="5"><title>Island Peak summit, 6,189 m</title></circle><text x="224.5" y="90.8" text-anchor="end" class="strong">Island Peak summit 6,189 m</text><text x="98.7" y="270.0" text-anchor="start" class="strong">Lukla</text><text x="193.5" y="73.7" text-anchor="middle" class="">Chhukung Ri</text><text x="86.3" y="230.4" text-anchor="start" class="">Phakding</text><text x="84.4" y="180.6" text-anchor="start" class="">Namche Bazaar</text><text x="121.9" y="156.1" text-anchor="start" class="">Tengboche</text><text x="139.5" y="140.6" text-anchor="start" class="">Pangboche</text><text x="167.4" y="111.4" text-anchor="start" class="">Dingboche</text><text x="231.9" y="40.0" text-anchor="start" class="peak-name">Everest</text><text x="237.6" y="60.5" text-anchor="start" class="peak-name">Lhotse</text><text x="191.5" y="56.2" text-anchor="end" class="peak-name">Nuptse</text><text x="181.1" y="125.5" text-anchor="middle" class="peak-name">Ama Dablam</text><text x="138.2" y="197.1" text-anchor="start" class="peak-name">Thamserku</text><text x="269.6" y="205.3" text-anchor="start" class="peak-name">Chamlang</text><text x="193.3" y="255.9" text-anchor="start" class="peak-name">Mera Peak</text><g class="map-scale"><path d="M10,286 V290 H79.9 V286" fill="none" stroke="currentColor" stroke-width="1" style="stroke:var(--ink-3)"/><text x="84.9" y="290" class="map-scale" style="paint-order:normal;stroke:none">10 km</text></g><text x="326" y="22" class="north" text-anchor="middle" style="paint-order:normal;stroke:none">N</text><path d="M326,26 l-4,10 h8z" style="fill:var(--ink-3)"/></svg></div></div>
+    </div>
+  </aside>
+</div>
+
+<section class="section" aria-labelledby="rel-title"><div class="wrap">
+  <div class="head-row"><div class="head"><h2 id="rel-title">Other trips you might like</h2></div><a class="link" href="/expeditions.html">All climbing <svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a></div>
+  <div class="cards"><a href="/articles/everest-blog-new.html" class="card reveal" data-tags="everest strenuous classic two-weeks trek">
+  <div class="ph"><img src="/images/places/everest-sunset-1024.webp" srcset="/images/places/everest-sunset-640.webp 640w, /images/places/everest-sunset-1024.webp 1024w, /images/places/everest-sunset-1600.webp 1600w" sizes="(max-width: 640px) 100vw, (max-width: 1099px) 50vw, 400px" width="1600" height="1067" alt="Sunset on the summit of Everest seen from Kala Patthar" loading="lazy" decoding="async"></div>
+  <div class="card-body">
+    <p class="card-region">Khumbu, Everest region</p>
+    <h3>Everest Base Camp</h3>
+    <p class="card-text">Sherpa villages, Tengboche Monastery and a sunrise view of Everest from Kala Patthar, with two rest days on the way up.</p>
+    <div class="card-facts">
+      <span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"/></svg>14 days</span>
+      <span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M164,80a28,28,0,1,0-28-28A28,28,0,0,0,164,80Zm0-40a12,12,0,1,1-12,12A12,12,0,0,1,164,40Zm90.88,155.92-54.56-92.08A15.87,15.87,0,0,0,186.55,96h0a15.85,15.85,0,0,0-13.76,7.84L146.63,148l-44.84-76.1a16,16,0,0,0-27.58,0L1.11,195.94A8,8,0,0,0,8,208H248a8,8,0,0,0,6.88-12.08ZM88,80l23.57,40H64.43ZM22,192l33-56h66l18.74,31.8,0,0L154,192Zm150.57,0-16.66-28.28L186.55,112,234,192Z"/></svg>5,644 m</span>
+      <span class="chip"><span class="grade" title="Grade 4 of 5"><i><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b class=""></b></i>Challenging</span></span>
+    </div>
+    <div class="card-foot"><p class="price"><small>From</small><strong>US$1,650</strong></p><span class="link">View itinerary <svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span></div>
+  </div>
+</a><a href="/articles/merapeak.html" class="card reveal" data-tags="everest six-thousander first-peak climb">
+  <div class="ph"><img src="/images/places/mera-zatrwa-1024.webp" srcset="/images/places/mera-zatrwa-640.webp 640w, /images/places/mera-zatrwa-1024.webp 1024w, /images/places/mera-zatrwa-1600.webp 1600w" sizes="(max-width: 640px) 100vw, (max-width: 1099px) 50vw, 400px" width="1600" height="1200" alt="Snow peaks seen through the forest near the Zatrwa La on the Mera Peak approach" loading="lazy" decoding="async"></div>
+  <div class="card-body">
+    <p class="card-region">Hinku valley, Everest region</p>
+    <h3>Mera Peak</h3>
+    <p class="card-text">A long glacier walk with no steep ice, and five of the world&#x27;s six highest mountains in view from the top.</p>
+    <div class="card-facts">
+      <span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"/></svg>16 days</span>
+      <span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M164,80a28,28,0,1,0-28-28A28,28,0,0,0,164,80Zm0-40a12,12,0,1,1-12,12A12,12,0,0,1,164,40Zm90.88,155.92-54.56-92.08A15.87,15.87,0,0,0,186.55,96h0a15.85,15.85,0,0,0-13.76,7.84L146.63,148l-44.84-76.1a16,16,0,0,0-27.58,0L1.11,195.94A8,8,0,0,0,8,208H248a8,8,0,0,0,6.88-12.08ZM88,80l23.57,40H64.43ZM22,192l33-56h66l18.74,31.8,0,0L154,192Zm150.57,0-16.66-28.28L186.55,112,234,192Z"/></svg>6,476 m</span>
+      <span class="chip"><span class="grade" title="Grade 4 of 5"><i><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b class=""></b></i>Alpine F</span></span>
+    </div>
+    <div class="card-foot"><p class="price"><small>From</small><strong>US$2,200</strong></p><span class="link">View itinerary <svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span></div>
+  </div>
+</a><a href="/articles/lobuche.html" class="card reveal" data-tags="everest six-thousander climb">
+  <div class="ph"><img src="/images/places/everest-lhotse-1024.webp" srcset="/images/places/everest-lhotse-640.webp 640w, /images/places/everest-lhotse-1024.webp 1024w, /images/places/everest-lhotse-1600.webp 1600w" sizes="(max-width: 640px) 100vw, (max-width: 1099px) 50vw, 400px" width="1600" height="830" alt="The Nuptse ridge with Everest, Lhotse and Lhotse Shar" loading="lazy" decoding="async"></div>
+  <div class="card-body">
+    <p class="card-region">Khumbu, Everest region</p>
+    <h3>Lobuche East</h3>
+    <p class="card-text">Trek to base camp and Kala Patthar, then put that acclimatisation to use on Lobuche East, facing Everest across the valley.</p>
+    <div class="card-facts">
+      <span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"/></svg>17 days</span>
+      <span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M164,80a28,28,0,1,0-28-28A28,28,0,0,0,164,80Zm0-40a12,12,0,1,1-12,12A12,12,0,0,1,164,40Zm90.88,155.92-54.56-92.08A15.87,15.87,0,0,0,186.55,96h0a15.85,15.85,0,0,0-13.76,7.84L146.63,148l-44.84-76.1a16,16,0,0,0-27.58,0L1.11,195.94A8,8,0,0,0,8,208H248a8,8,0,0,0,6.88-12.08ZM88,80l23.57,40H64.43ZM22,192l33-56h66l18.74,31.8,0,0L154,192Zm150.57,0-16.66-28.28L186.55,112,234,192Z"/></svg>6,119 m</span>
+      <span class="chip"><span class="grade" title="Grade 4 of 5"><i><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b class=""></b></i>Alpine PD+</span></span>
+    </div>
+    <div class="card-foot"><p class="price"><small>From</small><strong>US$2,400</strong></p><span class="link">View itinerary <svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span></div>
+  </div>
+</a></div>
+</div></section>
+<section class="section-sm"><div class="wrap"><div class="cta reveal">
+  <img src="/images/places/island-peak-1024.webp" srcset="/images/places/island-peak-640.webp 640w, /images/places/island-peak-1024.webp 1024w, /images/places/island-peak-1600.webp 1600w" sizes="100vw" width="1600" height="1035" alt="" loading="lazy" decoding="async">
+  <div><h2>Thinking about the Island Peak?</h2><p>Tell us your dates and who&#x27;s coming. We&#x27;ll send a day-by-day plan, a clear price and an honest view on whether it&#x27;s the right trip for you.</p></div>
+  <div class="cta-actions">
+    <a href="/contact.html?trip=island-peak" class="btn btn-light">Plan your trip <svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="https://wa.me/9779811157421" class="btn btn-onphoto" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg> WhatsApp us</a>
+    <div class="cta-lines"><a href="tel:+9779811157421">+977 981 115 7421</a><a href="mailto:info@beyondsummitexped.com">info@beyondsummitexped.com</a></div>
+  </div>
+</div></div></section>
+</main>
+<div class="mobile-book"><p class="price"><small>From, per person</small><strong>US$2,100</strong></p><a href="/contact.html?trip=island-peak" class="btn btn-primary">Plan your trip</a></div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="/" class="brand" aria-label="Beyond Summit Expeditions, home"><svg class="logo-mark" viewBox="-1.5 -1.5 88 59" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M45.4 0 47.3 2.3 49.6 4.8 51.6 8.5 52.9 13.6 54.2 17.2 56.1 19.6 58.6 24.7 55.9 23.9 53.9 17.8 51.8 16.5 49.7 14.1 44.7 11.9 44.5 6.8 45 1.7Z" fill="currentColor" stroke="none" opacity=".9"/><path d="M0 50.8 2.9 46.6 5.1 43.2 7.2 41.3 8.8 38.1 11.2 34.5 12.6 31.5 13.7 30.8 15.2 25.6 17.8 20.7 19.6 17.9 20.5 19.2 21.8 18 23.4 19.9 25 22.3 26.3 21.9 27.7 24 29.5 24.8 30.9 23.9 32.8 19.9 35 17.9 37.2 13.8 39.6 8.9 41.6 5.1 43.4 2.8 45.4 0 47.3 2.3 49.6 4.8 51.6 8.5 52.9 13.6 54.2 17.2 56.1 19.6 58.6 24.7 60.4 26.7 63.3 28.4 67.4 29.1 71.7 27.7 75 29.7 81.3 31.8 85 29.1" stroke-width="1.6" vector-effect="non-scaling-stroke"/><path d="M3.7 55.7 10.2 49.3 12.8 47.9 20.3 39.3 24 38.3 28.3 47.1 36.7 55.7 M52.7 53.4 58.8 48.8 63.6 44.4 66.8 40.5 76.2 38.1 85 29.1" stroke-width="1.15" vector-effect="non-scaling-stroke"/><path d="M45 1.7 44.5 6.8 44.7 11.9 M19 20.9 19.5 27.4 19.6 34.6 20.7 38.9" stroke-width=".9" vector-effect="non-scaling-stroke" opacity=".6"/></svg><span>Beyond Summit<small>Expeditions, Kathmandu</small></span></a>
+        <p class="footer-about">A trekking and mountaineering company in Thamel, Kathmandu, licensed by the Department of Tourism, Government of Nepal.</p>
+        <p class="footer-about"><a href="tel:+9779811157421">+977 981 115 7421</a><br><a href="mailto:info@beyondsummitexped.com">info@beyondsummitexped.com</a></p>
+      </div>
+      <div><h4>Treks</h4><ul><li><a href="/articles/everest-blog-new.html">Everest Base Camp</a></li><li><a href="/articles/annapurna-blog.html">Annapurna Base Camp</a></li><li><a href="/articles/annapurna-circuit.html">Annapurna Circuit</a></li><li><a href="/articles/manaslu-blog.html">Manaslu Circuit</a></li><li><a href="/articles/upper-mustang-blog.html">Upper Mustang</a></li><li><a href="/articles/langtang-valley.html">Langtang Valley</a></li></ul></div><div><h4>Climbing</h4><ul><li><a href="/articles/islandpeak.html">Island Peak</a></li><li><a href="/articles/merapeak.html">Mera Peak</a></li><li><a href="/articles/lobuche.html">Lobuche East</a></li><li><a href="/articles/amadablam-blog.html">Ama Dablam</a></li><li><a href="/articles/himlung.html">Himlung Himal</a></li><li><a href="/expeditions.html#eight-thousanders">8,000 m expeditions</a></li></ul></div><div><h4>Plan</h4><ul><li><a href="/articles/nepal-trekking-permits.html">Trekking permits 2026</a></li><li><a href="/articles/best-time-to-trek-nepal.html">Best time to trek</a></li><li><a href="/outdoor.html">Activities</a></li><li><a href="/blog.html">Journal</a></li></ul></div><div><h4>Company</h4><ul><li><a href="/about.html">About us</a></li><li><a href="/guides.html">Our team</a></li><li><a href="/gallery.html">Photo gallery</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/photo-credits.html">Photo credits</a></li></ul></div>
+    </div>
+    <div class="footer-accred"><p>Licensed and registered in Nepal</p><div class="accred-minis"><a class="accred-mini" href="https://tourismdepartment.gov.np/" target="_blank" rel="noopener" title="Department of Tourism, Government of Nepal: Licensed trekking and mountaineering agency"><span class="accred-text" aria-hidden="true"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,136a8,8,0,0,1-8,8H72a8,8,0,0,1,0-16h48A8,8,0,0,1,128,136Zm-8-40H72a8,8,0,0,0,0,16h48a8,8,0,0,0,0-16Zm112,65.47V224A8,8,0,0,1,220,231l-24-13.74L172,231A8,8,0,0,1,160,224V200H40a16,16,0,0,1-16-16V56A16,16,0,0,1,40,40H216a16,16,0,0,1,16,16V86.53a51.88,51.88,0,0,1,0,74.94ZM160,184V161.47A52,52,0,0,1,216,76V56H40V184Zm56-12a51.88,51.88,0,0,1-40,0v38.22l16-9.16a8,8,0,0,1,7.94,0l16,9.16Zm16-48a36,36,0,1,0-36,36A36,36,0,0,0,232,124Z"/></svg><b>Govt. of<br>Nepal</b></span><span class="sr-only">Department of Tourism, Government of Nepal</span></a><a class="accred-mini" href="https://ntb.gov.np/" target="_blank" rel="noopener" title="Nepal Tourism Board: Registered with Nepal&#x27;s national tourism body"><picture><source srcset="/images/logos/ntb.webp" type="image/webp"><img src="/images/logos/ntb.png" alt="Nepal Tourism Board logo" width="33" height="34" loading="lazy" decoding="async"></picture><span class="sr-only">Nepal Tourism Board</span></a><a class="accred-mini" href="https://www.taan.org.np/" target="_blank" rel="noopener" title="Trekking Agencies&#x27; Association of Nepal: Member of the national trekking association"><picture><source srcset="/images/logos/taan.webp" type="image/webp"><img src="/images/logos/taan.png" alt="Trekking Agencies&#x27; Association of Nepal logo" width="25" height="34" loading="lazy" decoding="async"></picture><span class="sr-only">Trekking Agencies&#x27; Association of Nepal</span></a><a class="accred-mini" href="https://www.nepalmountaineering.org/" target="_blank" rel="noopener" title="Nepal Mountaineering Association: Member agency for peak climbing"><picture><source srcset="/images/logos/nma.webp" type="image/webp"><img src="/images/logos/nma.png" alt="Nepal Mountaineering Association logo" width="39" height="34" loading="lazy" decoding="async"></picture><span class="sr-only">Nepal Mountaineering Association</span></a></div></div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Beyond Summit Expeditions</p>
+      <button class="theme-toggle" type="button" data-theme-toggle><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm72,88a64,64,0,1,1-64-64A64.07,64.07,0,0,1,192,128Zm-16,0a48,48,0,1,0-48,48A48.05,48.05,0,0,0,176,128ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z"/></svg><span>Dark mode</span></button>
+      <div class="socials">
+        <a href="https://www.instagram.com/beyondsummitexpeditions" target="_blank" rel="noopener" aria-label="Instagram"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"/></svg></a>
+        <a href="https://www.facebook.com/beyondsummitexped" target="_blank" rel="noopener" aria-label="Facebook"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"/></svg></a>
+        <a href="https://www.youtube.com/@beyondsummitexpeditions" target="_blank" rel="noopener" aria-label="YouTube"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M164.44,121.34l-48-32A8,8,0,0,0,104,96v64a8,8,0,0,0,12.44,6.66l48-32a8,8,0,0,0,0-13.32ZM120,145.05V111l25.58,17ZM234.33,69.52a24,24,0,0,0-14.49-16.4C185.56,39.88,131,40,128,40s-57.56-.12-91.84,13.12a24,24,0,0,0-14.49,16.4C19.08,79.5,16,97.74,16,128s3.08,48.5,5.67,58.48a24,24,0,0,0,14.49,16.41C69,215.56,120.4,216,127.34,216h1.32c6.94,0,58.37-.44,91.18-13.11a24,24,0,0,0,14.49-16.41c2.59-10,5.67-28.22,5.67-58.48S236.92,79.5,234.33,69.52Zm-15.49,113a8,8,0,0,1-4.77,5.49c-31.65,12.22-85.48,12-86,12H128c-.54,0-54.33.2-86-12a8,8,0,0,1-4.77-5.49C34.8,173.39,32,156.57,32,128s2.8-45.39,5.16-54.47A8,8,0,0,1,41.93,68c30.52-11.79,81.66-12,85.85-12h.27c.54,0,54.38-.18,86,12a8,8,0,0,1,4.77,5.49C221.2,82.61,224,99.43,224,128S221.2,173.39,218.84,182.47Z"/></svg></a>
       </div>
     </div>
-  </section>
-
-  <footer class="footer">
-    <p>© 2026 <a href="/">Beyond Summit Expeditions</a> · Licensed by Dept. of Tourism, Nepal · <a href="/privacy-policy">Privacy</a> · <a href="/terms">Terms</a></p>
-  </footer>
-
+  </div>
+</footer>
+<a href="https://wa.me/9779811157421" class="wa-float" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg></a>
+<script src="/js/site.js?v=2" defer></script>
 </body>
 </html>

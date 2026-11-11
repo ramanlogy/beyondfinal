@@ -1,823 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Guides | Beyond Summit Expeditions · Nepal</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
-
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --cream: #faf7f2;
-      --cream-dark: #f2ede4;
-      --parchment: #ede8de;
-      --amber: #b8651a;
-      --amber-light: #d4812a;
-      --amber-pale: #f0c080;
-      --charcoal: #1c1814;
-      --stone: #3d3530;
-      --muted: #7a6e65;
-      --border: rgba(60,45,30,0.1);
-      --border-strong: rgba(60,45,30,0.18);
-      --serif: 'Playfair Display', Georgia, serif;
-      --sans: 'DM Sans', system-ui, sans-serif;
-      --mono: 'DM Mono', monospace;
-      --ease: cubic-bezier(0.22, 1, 0.36, 1);
-      --shadow-sm: 0 2px 12px rgba(60,40,20,0.08);
-      --shadow-md: 0 8px 32px rgba(60,40,20,0.12);
-      --shadow-lg: 0 20px 60px rgba(60,40,20,0.16);
-    }
-
-    html { scroll-behavior: smooth; font-size: 16px; }
-    body { font-family: var(--sans); background: var(--cream); color: var(--charcoal); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
-    a { color: inherit; text-decoration: none; }
-    ul { list-style: none; }
-    img { display: block; }
-
-    /* ═══════════ NAV (identical to index) ═══════════ */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 800;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 1.5rem 4rem;
-      transition: all 0.5s var(--ease);
-      background: transparent;
-    }
-    nav.scrolled {
-      background: rgba(250,247,242,0.95);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border);
-      padding: 1rem 4rem;
-      box-shadow: var(--shadow-sm);
-    }
-    .nav-logo { display: flex; align-items: center; gap: 0.75rem; }
-    .nav-logo-icon { width: 30px; height: 30px; }
-    .nav-logo-text { font-family: var(--serif); font-size: 1.4rem; font-weight: 700; color: var(--cream); letter-spacing: 0.01em; transition: color 0.4s; }
-    nav.scrolled .nav-logo-text { color: var(--charcoal); }
-    .nav-logo-text em { display: block; font-style: normal; font-family: var(--mono); font-size: 0.52rem; letter-spacing: 0.4em; text-transform: uppercase; color: rgba(250,247,242,0.7); margin-top: 2px; transition: color 0.4s; }
-    nav.scrolled .nav-logo-text em { color: var(--amber); }
-    .nav-links { display: flex; align-items: center; gap: 2rem; }
-    .nav-links a { font-family: var(--sans); font-size: 0.875rem; font-weight: 400; color: rgba(250,247,242,0.85); transition: color 0.3s; letter-spacing: 0.02em; }
-    nav.scrolled .nav-links a { color: var(--stone); }
-    .nav-links a:hover { color: var(--amber-light) !important; }
-    .nav-links a.active { color: var(--amber-light) !important; font-weight: 500; }
-    .nav-cta { background: var(--amber); color: white !important; padding: 0.6rem 1.5rem; font-size: 0.82rem !important; font-weight: 500 !important; letter-spacing: 0.04em !important; transition: background 0.3s, transform 0.3s !important; }
-    .nav-cta:hover { background: var(--amber-light) !important; transform: translateY(-1px); color: white !important; }
-    .nav-hamburger { display: none; flex-direction: column; justify-content: center; width: 44px; height: 44px; gap: 5px; cursor: pointer; background: rgba(250,247,242,0.12); border: 1px solid rgba(250,247,242,0.25); border-radius: 6px; padding: 0 12px; transition: all 0.3s; }
-    nav.scrolled .nav-hamburger { background: rgba(60,40,20,0.06); border-color: var(--border); }
-    .nav-hamburger span { display: block; width: 100%; height: 1.5px; background: white; transition: all 0.4s var(--ease); }
-    nav.scrolled .nav-hamburger span { background: var(--charcoal); }
-    .nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
-    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
-    .nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
-
-    /* Mobile Drawer */
-    .mobile-drawer { position: fixed; inset: 0; z-index: 700; background: var(--cream); display: flex; flex-direction: column; padding: 6rem 2rem 2rem; transform: translateX(100%); transition: transform 0.5s var(--ease); }
-    .mobile-drawer.open { transform: none; }
-    .mobile-drawer-link { display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 0; border-bottom: 1px solid var(--border); font-family: var(--serif); font-size: 1.8rem; font-weight: 400; color: var(--charcoal); opacity: 0; transform: translateX(20px); transition: opacity 0.4s, transform 0.4s, color 0.3s; }
-    .mobile-drawer.open .mobile-drawer-link:nth-child(1) { opacity:1; transform:none; transition-delay:.06s; }
-    .mobile-drawer.open .mobile-drawer-link:nth-child(2) { opacity:1; transform:none; transition-delay:.10s; }
-    .mobile-drawer.open .mobile-drawer-link:nth-child(3) { opacity:1; transform:none; transition-delay:.14s; }
-    .mobile-drawer.open .mobile-drawer-link:nth-child(4) { opacity:1; transform:none; transition-delay:.18s; }
-    .mobile-drawer.open .mobile-drawer-link:nth-child(5) { opacity:1; transform:none; transition-delay:.22s; }
-    .mobile-drawer.open .mobile-drawer-link:nth-child(6) { opacity:1; transform:none; transition-delay:.26s; }
-    .mobile-drawer-link:hover { color: var(--amber); }
-    .mobile-drawer-link.highlight { color: var(--amber); }
-    .mobile-drawer-link.active-link { color: var(--amber); }
-
-    /* WhatsApp */
-    .wa-float { position: fixed; bottom: 2rem; right: 2rem; z-index: 500; width: 52px; height: 52px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; color: white; box-shadow: 0 6px 20px rgba(37,211,102,0.4); transition: transform 0.4s var(--ease); }
-    .wa-float:hover { transform: scale(1.1); }
-
-    /* Reveal */
-    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
-    .reveal.in { opacity: 1; transform: none; }
-    .reveal.d1 { transition-delay: 0.1s; }
-    .reveal.d2 { transition-delay: 0.2s; }
-    .reveal.d3 { transition-delay: 0.3s; }
-
-    /* Eyebrow */
-    .eyebrow { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--amber); display: block; margin-bottom: 0.875rem; }
-    .section-title { font-family: var(--serif); font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 400; line-height: 1; letter-spacing: -0.02em; color: var(--charcoal); }
-    .section-title em { font-style: italic; color: var(--amber); }
-
-    /* ═══════════ PAGE HERO ═══════════ */
-    .page-hero { position: relative; height: 72vh; min-height: 520px; display: flex; align-items: flex-end; overflow: hidden; }
-    .page-hero-bg { position: absolute; inset: 0; }
-    .page-hero-bg img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) saturate(1.05); }
-    .page-hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,10,5,0.88) 0%, rgba(15,10,5,0.35) 45%, transparent 100%), linear-gradient(to right, rgba(15,10,5,0.55) 0%, transparent 60%); }
-    .page-hero-content { position: relative; z-index: 2; padding: 0 5rem 5rem; width: 100%; max-width: 1300px; margin: 0 auto; }
-    .page-hero-badge { display: inline-flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem; opacity: 0; animation: riseUp 0.9s 0.2s var(--ease) forwards; }
-    .page-hero-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--amber-pale); }
-    .page-hero-badge-text { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--amber-pale); }
-    .page-hero-title { font-family: var(--serif); font-size: clamp(3.2rem, 8vw, 7.5rem); font-weight: 400; line-height: 0.9; letter-spacing: -0.025em; color: white; margin-bottom: 1.5rem; opacity: 0; animation: riseUp 1s 0.35s var(--ease) forwards; }
-    .page-hero-title em { font-style: italic; color: var(--amber-pale); }
-    .page-hero-sub { font-family: var(--sans); font-size: 0.95rem; color: rgba(255,255,255,0.5); max-width: 500px; line-height: 1.7; opacity: 0; animation: riseUp 0.9s 0.5s var(--ease) forwards; }
-    @keyframes riseUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
-
-    /* ═══════════ MARQUEE ═══════════ */
-    .marquee-bar { background: var(--charcoal); overflow: hidden; padding: 0.75rem 0; }
-    .marquee-track { display: flex; width: max-content; animation: marqueeScroll 40s linear infinite; }
-    .marquee-item { display: flex; align-items: center; gap: 0.75rem; padding: 0 1.75rem; white-space: nowrap; font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(240,192,128,0.7); }
-    .msep { color: var(--amber); font-size: 0.3rem; }
-    @keyframes marqueeScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-
-    /* ═══════════ STATS STRIP ═══════════ */
-    .stats-strip { background: white; border-bottom: 1px solid var(--border); }
-    .stats-inner { max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); }
-    .stat-item { display: flex; flex-direction: column; align-items: center; gap: 0.35rem; padding: 2.5rem 1rem; border-right: 1px solid var(--border); text-align: center; }
-    .stat-item:last-child { border-right: none; }
-    .stat-num { font-family: var(--serif); font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 500; color: var(--amber); line-height: 1; }
-    .stat-label { font-family: var(--mono); font-size: 0.56rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
-
-    /* ═══════════ INTRO ═══════════ */
-    .intro-section { padding: 6rem 0; }
-    .intro-inner { max-width: 1300px; margin: 0 auto; padding: 0 4rem; display: grid; grid-template-columns: 1fr 1.3fr; gap: 7rem; align-items: start; }
-    .intro-lead { font-family: var(--serif); font-size: clamp(1.35rem, 2vw, 1.75rem); font-weight: 400; font-style: italic; line-height: 1.5; color: var(--charcoal); margin-bottom: 1.5rem; }
-    .intro-lead em { color: var(--amber); }
-    .intro-body { font-family: var(--sans); font-size: 0.88rem; color: var(--muted); line-height: 1.85; }
-    .intro-philosophy { background: var(--charcoal); padding: 2.5rem; margin-top: 2.5rem; }
-    .intro-philosophy-text { font-family: var(--serif); font-size: 1rem; font-style: italic; color: rgba(255,255,255,0.65); line-height: 1.7; border-left: 2px solid var(--amber); padding-left: 1.5rem; }
-    .intro-philosophy-attr { font-family: var(--mono); font-size: 0.52rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--amber); margin-top: 1rem; display: block; }
-
-    /* ═══════════ FEATURED GUIDE ═══════════ */
-    .featured-section { background: var(--charcoal); padding: 6rem 0; }
-    .featured-inner { max-width: 1300px; margin: 0 auto; padding: 0 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
-    .featured-img-wrap { position: relative; overflow: hidden; }
-    .featured-img { width: 100%; display: block; filter: brightness(0.82) saturate(0.9); transition: transform 1.6s var(--ease); }
-    .featured-img-wrap:hover .featured-img { transform: scale(1.04); }
-    .featured-img-caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(to top, rgba(15,8,3,0.95), transparent); }
-    .featured-badge { display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--mono); font-size: 0.5rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--amber-pale); background: rgba(240,192,128,0.1); border: 1px solid rgba(240,192,128,0.25); padding: 0.3rem 0.8rem; margin-bottom: 1rem; }
-    .featured-summits { font-family: var(--serif); font-size: 3.5rem; font-weight: 400; color: white; line-height: 1; }
-    .featured-summits span { display: block; font-family: var(--mono); font-size: 0.5rem; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-top: 0.3rem; }
-    .featured-tag { font-family: var(--mono); font-size: 0.52rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--amber-pale); margin-bottom: 1rem; display: block; }
-    .featured-name { font-family: var(--serif); font-size: clamp(2.5rem, 4vw, 4rem); font-weight: 400; color: white; line-height: 0.95; margin-bottom: 0.5rem; }
-    .featured-role { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--amber-pale); opacity: 0.75; margin-bottom: 2rem; }
-    .featured-bio { font-family: var(--sans); font-size: 0.88rem; color: rgba(255,255,255,0.48); line-height: 1.8; margin-bottom: 2.5rem; }
-    .featured-stats { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(255,255,255,0.07); padding-top: 2rem; gap: 0; }
-    .fstat { border-right: 1px solid rgba(255,255,255,0.07); padding-right: 1.75rem; }
-    .fstat:last-child { border-right: none; padding-left: 1.75rem; padding-right: 0; }
-    .fstat:nth-child(2) { padding: 0 1.75rem; }
-    .fstat-num { font-family: var(--serif); font-size: 2.2rem; font-weight: 400; color: white; line-height: 1; }
-    .fstat-num em { font-style: normal; font-size: 1rem; color: var(--amber-pale); }
-    .fstat-label { font-family: var(--mono); font-size: 0.5rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.28); margin-top: 0.3rem; }
-
-    /* ═══════════ GUIDE GRID ═══════════ */
-    .guides-section { padding: 6rem 0; }
-    .guides-header { max-width: 1300px; margin: 0 auto; padding: 0 4rem; margin-bottom: 3rem; }
-    .guides-grid { max-width: 1300px; margin: 0 auto; padding: 0 4rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-
-    /* Guide Card */
-    .gcard { background: white; border: 1px solid var(--border); overflow: hidden; transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease); display: flex; flex-direction: column; }
-    .gcard:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
-    .gcard-img-wrap { position: relative; aspect-ratio: 3/4; overflow: hidden; }
-    .gcard-img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.8) saturate(0.95); transition: transform 1.6s var(--ease), filter 0.6s; }
-    .gcard:hover .gcard-img { transform: scale(1.07); filter: brightness(0.95) saturate(1.1); }
-    .gcard-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,8,3,0.85) 0%, rgba(15,8,3,0.15) 55%, transparent 100%); }
-    .gcard-badge { position: absolute; top: 1rem; left: 1rem; font-family: var(--mono); font-size: 0.5rem; letter-spacing: 0.22em; text-transform: uppercase; background: rgba(250,247,242,0.92); color: var(--stone); padding: 0.3rem 0.75rem; backdrop-filter: blur(8px); border: 1px solid rgba(60,45,30,0.12); }
-    .gcard-summit-count { position: absolute; top: 1rem; right: 1rem; text-align: right; }
-    .gcard-summit-num { font-family: var(--serif); font-size: 2.2rem; font-weight: 400; color: var(--amber-pale); opacity: 0.85; line-height: 1; }
-    .gcard-summit-label { font-family: var(--mono); font-size: 0.42rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-top: 0.1rem; }
-    .gcard-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
-    .gcard-name { font-family: var(--serif); font-size: 1.5rem; font-weight: 400; color: var(--charcoal); margin-bottom: 0.25rem; }
-    .gcard-role { font-family: var(--mono); font-size: 0.52rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--amber); margin-bottom: 1rem; }
-    .gcard-peaks { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.25rem; flex: 1; }
-    .gcard-peak-tag { font-family: var(--mono); font-size: 0.5rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); padding: 0.2rem 0.6rem; border: 1px solid var(--border-strong); }
-    .gcard-link { display: flex; align-items: center; gap: 0.4rem; font-family: var(--sans); font-size: 0.78rem; font-weight: 500; color: var(--amber); padding-top: 1rem; border-top: 1px solid var(--border); transition: gap 0.3s; }
-    .gcard:hover .gcard-link { gap: 0.7rem; }
-
-    /* ═══════════ VALUES SECTION ═══════════ */
-    .values-section { background: var(--cream-dark); border-top: 1px solid var(--border); padding: 6rem 0; }
-    .values-inner { max-width: 1300px; margin: 0 auto; padding: 0 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 7rem; }
-    .values-list { display: flex; flex-direction: column; }
-    .value-item { display: flex; gap: 1.75rem; padding: 2rem 0; border-bottom: 1px solid var(--border); }
-    .value-item:last-child { border-bottom: none; }
-    .value-num { font-family: var(--serif); font-size: 2.2rem; font-weight: 400; color: rgba(184,101,26,0.2); line-height: 1; flex-shrink: 0; width: 2.5rem; }
-    .value-title { font-family: var(--serif); font-size: 1.1rem; font-weight: 400; color: var(--charcoal); margin-bottom: 0.4rem; }
-    .value-desc { font-family: var(--sans); font-size: 0.82rem; color: var(--muted); line-height: 1.7; }
-    .values-visual { position: relative; }
-    .values-img-wrap { overflow: hidden; }
-    .values-img { width: 100%; display: block; filter: brightness(0.85) saturate(1.0); transition: transform 1.5s var(--ease); }
-    .values-img-wrap:hover .values-img { transform: scale(1.04); }
-    .values-caption { background: var(--charcoal); padding: 2rem; }
-    .values-caption-eyebrow { font-family: var(--mono); font-size: 0.5rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--amber); margin-bottom: 0.6rem; }
-    .values-caption-text { font-family: var(--serif); font-size: 1.05rem; font-weight: 400; font-style: italic; color: rgba(255,255,255,0.7); line-height: 1.6; }
-
-    /* ═══════════ QUOTE SECTION ═══════════ */
-    .quote-section { position: relative; overflow: hidden; min-height: 55vh; display: flex; align-items: center; justify-content: center; }
-    .quote-bg-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.28) saturate(0.6); }
-    .quote-bg-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(15,8,3,0.7), rgba(15,8,3,0.4), rgba(15,8,3,0.6)); }
-    .quote-content { position: relative; z-index: 2; text-align: center; padding: 5rem 4rem; max-width: 860px; }
-    .quote-mark { font-family: var(--serif); font-size: 5rem; color: var(--amber-pale); opacity: 0.25; line-height: 0; display: block; margin-bottom: 2rem; }
-    .quote-text { font-family: var(--serif); font-size: clamp(1.6rem, 3vw, 2.5rem); font-weight: 400; font-style: italic; color: white; line-height: 1.4; margin-bottom: 2rem; }
-    .quote-text em { color: var(--amber-pale); font-style: normal; }
-    .quote-attr { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(255,255,255,0.35); display: flex; align-items: center; justify-content: center; gap: 1rem; }
-    .quote-attr::before, .quote-attr::after { content: ''; width: 28px; height: 1px; background: rgba(255,255,255,0.15); }
-
-    /* ═══════════ BOOKING CTA ═══════════ */
-    .booking-section { padding: 7rem 0; }
-    .booking-inner { max-width: 1300px; margin: 0 auto; padding: 0 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
-    .booking-actions { display: flex; align-items: center; gap: 1.5rem; margin-top: 2.5rem; flex-wrap: wrap; }
-    .btn-book { display: inline-flex; align-items: center; gap: 0.6rem; background: var(--charcoal); color: white; padding: 0.95rem 2.25rem; font-family: var(--sans); font-size: 0.85rem; font-weight: 500; letter-spacing: 0.04em; transition: background 0.3s, transform 0.3s, gap 0.3s; }
-    .btn-book:hover { background: var(--stone); transform: translateX(4px); gap: 0.9rem; }
-    .btn-link { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); display: flex; align-items: center; gap: 0.4rem; transition: color 0.3s; }
-    .btn-link:hover { color: var(--amber); }
-    .booking-img-wrap { position: relative; overflow: hidden; }
-    .booking-img { width: 100%; display: block; filter: brightness(0.88) saturate(1.05); transition: transform 1.5s var(--ease); }
-    .booking-img-wrap:hover .booking-img { transform: scale(1.04); }
-    .booking-badge { position: absolute; bottom: -1.5rem; left: -1.5rem; background: white; border: 1px solid var(--border); padding: 1.5rem 2rem; box-shadow: var(--shadow-md); }
-    .booking-badge-num { font-family: var(--serif); font-size: 2.6rem; font-weight: 400; color: var(--amber); line-height: 1; }
-    .booking-badge-label { font-family: var(--mono); font-size: 0.52rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-top: 0.25rem; }
-
-    /* ═══════════ CONTACT STRIP ═══════════ */
-    .contact-strip { background: var(--cream-dark); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-    .contact-inner { max-width: 1300px; margin: 0 auto; padding: 0 4rem; display: grid; grid-template-columns: repeat(3, 1fr); }
-    .contact-item { display: flex; align-items: center; gap: 1.25rem; padding: 2.5rem 2rem; border-right: 1px solid var(--border); transition: background 0.3s; }
-    .contact-item:first-child { padding-left: 0; }
-    .contact-item:last-child { border-right: none; }
-    .contact-item:hover { background: rgba(184,101,26,0.04); }
-    .contact-icon { width: 42px; height: 42px; flex-shrink: 0; background: white; border: 1px solid var(--border); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--amber); }
-    .contact-label { font-family: var(--mono); font-size: 0.5rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.3rem; }
-    .contact-value { font-family: var(--sans); font-size: 0.9rem; font-weight: 500; color: var(--charcoal); }
-    .contact-value a { transition: color 0.3s; }
-    .contact-value a:hover { color: var(--amber); }
-
-    /* ═══════════ FOOTER (identical to index) ═══════════ */
-    footer { background: var(--charcoal); border-top: 1px solid rgba(255,255,255,0.05); padding: 5rem 4rem 2.5rem; }
-    .footer-grid { max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; margin-bottom: 4rem; padding-bottom: 4rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
-    .footer-logo-text { font-family: var(--serif); font-size: 1.3rem; font-weight: 700; color: white; }
-    .footer-logo-text em { display: block; font-style: normal; font-family: var(--mono); font-size: 0.5rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--amber); margin-top: 3px; }
-    .footer-desc { font-family: var(--sans); font-size: 0.8rem; color: rgba(255,255,255,0.38); line-height: 1.75; margin-top: 1rem; }
-    .footer-contact { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; }
-    .footer-contact a { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.06em; color: rgba(255,255,255,0.35); display: flex; align-items: center; gap: 0.5rem; transition: color 0.3s; }
-    .footer-contact a:hover { color: var(--amber-pale); }
-    .footer-col h4 { font-family: var(--mono); font-size: 0.52rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--amber); margin-bottom: 1.25rem; }
-    .footer-col ul { display: flex; flex-direction: column; gap: 0.6rem; }
-    .footer-col a { font-family: var(--sans); font-size: 0.8rem; color: rgba(255,255,255,0.38); transition: color 0.3s, padding-left 0.3s; }
-    .footer-col a:hover { color: rgba(255,255,255,0.7); padding-left: 4px; }
-    .footer-bottom { max-width: 1300px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
-    .footer-bottom p { font-family: var(--mono); font-size: 0.55rem; letter-spacing: 0.1em; color: rgba(255,255,255,0.18); }
-    .footer-socials { display: flex; gap: 0.75rem; }
-    .social-ico { width: 32px; height: 32px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.28); transition: all 0.3s; }
-    .social-ico:hover { border-color: var(--amber); color: var(--amber); }
-
-    /* ═══════════ RESPONSIVE ═══════════ */
-    @media (max-width: 1024px) {
-      nav { padding: 1.25rem 2rem; }
-      nav.scrolled { padding: 0.875rem 2rem; }
-      .nav-links { display: none; }
-      .nav-hamburger { display: flex; }
-      .page-hero-content { padding: 0 2.5rem 4rem; }
-      .intro-inner { grid-template-columns: 1fr; gap: 3rem; padding: 0 2.5rem; }
-      .featured-inner { grid-template-columns: 1fr; gap: 3rem; padding: 0 2.5rem; }
-      .guides-grid { grid-template-columns: repeat(2, 1fr); padding: 0 2.5rem; }
-      .guides-header { padding: 0 2.5rem; }
-      .values-inner { grid-template-columns: 1fr; gap: 3rem; padding: 0 2.5rem; }
-      .booking-inner { grid-template-columns: 1fr; gap: 3rem; padding: 0 2.5rem; }
-      .contact-inner { grid-template-columns: 1fr; padding: 0 2.5rem; }
-      .contact-item { border-right: none; border-bottom: 1px solid var(--border); padding: 1.75rem 0; }
-      .contact-item:last-child { border-bottom: none; }
-      .stats-inner { grid-template-columns: repeat(2, 1fr); }
-      .stat-item:nth-child(2) { border-right: none; }
-      footer { padding: 4rem 2.5rem 2rem; }
-      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
-      .featured-stats { grid-template-columns: 1fr; }
-      .fstat { border-right: none; padding: 0 0 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.07); }
-      .fstat:last-child { border-bottom: none; padding-left: 0; padding-bottom: 0; }
-      .fstat:nth-child(2) { padding: 0 0 1.5rem; }
-    }
-    @media (max-width: 768px) {
-      .page-hero-title { font-size: clamp(2.8rem, 12vw, 5rem); }
-      .guides-grid { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr; }
-      footer { padding: 3.5rem 1.5rem 1.5rem; }
-      .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
-      .quote-content { padding: 4rem 2rem; }
-      .booking-section { padding: 4rem 0; }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- WhatsApp -->
-  <a href="https://wa.me/9779811157421" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-  </a>
-
-  <!-- Mobile Drawer -->
-  <div class="mobile-drawer" id="mobileDrawer">
-    <a href="/index.html" class="mobile-drawer-link" onclick="closeDrawer()">Home <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-    <a href="/about.html" class="mobile-drawer-link" onclick="closeDrawer()">About <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-    <a href="/guides.html" class="mobile-drawer-link active-link" onclick="closeDrawer()">Our Guides <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-    <a href="/expeditions.html" class="mobile-drawer-link" onclick="closeDrawer()">Expeditions <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-    <a href="/blog.html" class="mobile-drawer-link" onclick="closeDrawer()">Blog <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-    <a href="/contact.html" class="mobile-drawer-link highlight" onclick="closeDrawer()">Book Your Ascent →</a>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Our Team: Elwin Tamang | Beyond Summit Expeditions, Nepal</title>
+<meta name="description" content="Meet Elwin Tamang, founder and lead guide of Beyond Summit Expeditions in Kathmandu, who plans and leads our small-group treks and climbs in Nepal.">
+<link rel="canonical" href="https://www.beyondsummitexped.com/guides.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Beyond Summit Expeditions">
+<meta property="og:title" content="Our Team: Elwin Tamang | Beyond Summit Expeditions, Nepal">
+<meta property="og:description" content="Meet Elwin Tamang, founder and lead guide of Beyond Summit Expeditions in Kathmandu, who plans and leads our small-group treks and climbs in Nepal.">
+<meta property="og:url" content="https://www.beyondsummitexped.com/guides.html">
+<meta property="og:image" content="https://www.beyondsummitexped.com/images/web/elwin-mountains-1024.webp">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f1f3ee" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d1310" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/geist-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="/images/web/elwin-mountains-1024.webp" imagesrcset="/images/web/elwin-mountains-640.webp 640w, /images/web/elwin-mountains-1024.webp 1024w, /images/web/elwin-mountains-1600.webp 1080w" imagesizes="100vw" fetchpriority="high">
+<link rel="stylesheet" href="/css/site.css?v=2">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="di3Rvm0gqVdeUF9iTgLxQQ" async></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TravelAgency","@id":"https://www.beyondsummitexped.com/#organization","name":"Beyond Summit Expeditions","url":"https://www.beyondsummitexped.com/","logo":"https://www.beyondsummitexped.com/favicon.svg","image":"https://www.beyondsummitexped.com/images/web/hero-1600.webp","description":"Small-group trekking and mountaineering company in Thamel, Kathmandu, licensed by the Department of Tourism, Government of Nepal.","telephone":"+9779811157421","email":"info@beyondsummitexped.com","priceRange":"$$","address":{"@type":"PostalAddress","streetAddress":"Thamel","addressLocality":"Kathmandu","postalCode":"44600","addressCountry":"NP"},"areaServed":{"@type":"Country","name":"Nepal"},"sameAs":["https://www.instagram.com/beyondsummitexpeditions","https://www.facebook.com/beyondsummitexped","https://www.youtube.com/@beyondsummitexpeditions"],"founder":{"@type":"Person","name":"Elwin Tamang"},"memberOf":[{"@type":"Organization","name":"Trekking Agencies' Association of Nepal","alternateName":"TAAN","url":"https://www.taan.org.np/"},{"@type":"Organization","name":"Nepal Mountaineering Association","alternateName":"NMA","url":"https://www.nepalmountaineering.org/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.beyondsummitexped.com/"},{"@type":"ListItem","position":2,"name":"About","item":"https://www.beyondsummitexped.com/about.html"},{"@type":"ListItem","position":3,"name":"Our team"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Elwin Tamang","jobTitle":"Founder and lead guide","image":"https://www.beyondsummitexped.com/images/web/elwin-mountains-1024.webp","worksFor":{"@id":"https://www.beyondsummitexped.com/#organization"}}</script>
+</head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header" id="header">
+  <div class="wrap header-inner">
+    <a href="/" class="brand" aria-label="Beyond Summit Expeditions, home"><svg class="logo-mark" viewBox="-1.5 -1.5 88 59" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M45.4 0 47.3 2.3 49.6 4.8 51.6 8.5 52.9 13.6 54.2 17.2 56.1 19.6 58.6 24.7 55.9 23.9 53.9 17.8 51.8 16.5 49.7 14.1 44.7 11.9 44.5 6.8 45 1.7Z" fill="currentColor" stroke="none" opacity=".9"/><path d="M0 50.8 2.9 46.6 5.1 43.2 7.2 41.3 8.8 38.1 11.2 34.5 12.6 31.5 13.7 30.8 15.2 25.6 17.8 20.7 19.6 17.9 20.5 19.2 21.8 18 23.4 19.9 25 22.3 26.3 21.9 27.7 24 29.5 24.8 30.9 23.9 32.8 19.9 35 17.9 37.2 13.8 39.6 8.9 41.6 5.1 43.4 2.8 45.4 0 47.3 2.3 49.6 4.8 51.6 8.5 52.9 13.6 54.2 17.2 56.1 19.6 58.6 24.7 60.4 26.7 63.3 28.4 67.4 29.1 71.7 27.7 75 29.7 81.3 31.8 85 29.1" stroke-width="1.6" vector-effect="non-scaling-stroke"/><path d="M3.7 55.7 10.2 49.3 12.8 47.9 20.3 39.3 24 38.3 28.3 47.1 36.7 55.7 M52.7 53.4 58.8 48.8 63.6 44.4 66.8 40.5 76.2 38.1 85 29.1" stroke-width="1.15" vector-effect="non-scaling-stroke"/><path d="M45 1.7 44.5 6.8 44.7 11.9 M19 20.9 19.5 27.4 19.6 34.6 20.7 38.9" stroke-width=".9" vector-effect="non-scaling-stroke" opacity=".6"/></svg><span>Beyond Summit<small>Expeditions, Kathmandu</small></span></a>
+    <nav class="nav" aria-label="Main"><a href="/trekking.html">Treks</a><a href="/expeditions.html">Climbing</a><a href="/outdoor.html">Activities</a><a href="/gallery.html">Gallery</a><a href="/blog.html">Journal</a><a href="/about.html" aria-current="page">About</a><a href="/contact.html" class="btn btn-primary">Plan your trip</a></nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span></button>
   </div>
-
-  <!-- NAV -->
-  <nav id="navbar">
-    <a href="/index.html" class="nav-logo">
-      <svg class="nav-logo-icon" viewBox="0 0 40 40" fill="none">
-        <path d="M20 4 L4 36 L36 36 Z" stroke="rgba(240,192,128,0.8)" stroke-width="1.2" fill="none"/>
-        <path d="M20 4 L12 36 L20 30 Z" fill="rgba(240,192,128,0.25)"/>
-        <circle cx="20" cy="4" r="1.8" fill="rgba(240,192,128,0.9)"/>
-      </svg>
-      <div class="nav-logo-text">BEYOND SUMMIT<em>Expeditions · Nepal</em></div>
-    </a>
-    <div class="nav-links">
-      <a href="/index.html">Expeditions</a>
-      <a href="/index.html#trekking">Trekking</a>
-      <a href="/index.html#eightthousanders">8000ers</a>
-      <a href="/guides.html" class="active">Guides</a>
-      <a href="/about.html">About</a>
-      <a href="/blog.html">Blog</a>
-      <a href="/contact.html" class="nav-cta">Book Your Ascent →</a>
-    </div>
-    <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
-
-  <!-- PAGE HERO -->
-  <section class="page-hero">
-    <div class="page-hero-bg">
-      <img src="https://images.unsplash.com/photo-1469521669194-babb45599def?q=85&w=1800&auto=format&fit=crop" alt="Sherpa guides on Himalayan ridge">
-    </div>
-    <div class="page-hero-content">
-      <div class="page-hero-badge">
-        <span class="page-hero-badge-dot"></span>
-        <span class="page-hero-badge-text">38 Active Guides · UIAA Certified</span>
-      </div>
-      <h1 class="page-hero-title">The Sherpas Who<br><em>Make It Real</em></h1>
-      <p class="page-hero-sub">Not just guides — mountaineers who have lived on these peaks, who know the weather patterns, the crevasses, and the precise moment to turn back.</p>
-    </div>
-  </section>
-
-  <!-- MARQUEE -->
-  <div class="marquee-bar" aria-hidden="true">
-    <div class="marquee-track">
-      <div class="marquee-item">Dawa Sherpa <span class="msep">◆</span> 14× Everest</div>
-      <div class="marquee-item">Pemba Norbu <span class="msep">◆</span> Co-Founder</div>
-      <div class="marquee-item">Mingma Dorje <span class="msep">◆</span> 11× Everest</div>
-      <div class="marquee-item">Ang Rita <span class="msep">◆</span> High Altitude Medic</div>
-      <div class="marquee-item">Nima Tenzin <span class="msep">◆</span> 18× Ama Dablam</div>
-      <div class="marquee-item">Tshering Namgyal <span class="msep">◆</span> 7× Everest</div>
-      <div class="marquee-item">Lakpa Sherpa <span class="msep">◆</span> Trekking Lead</div>
-      <div class="marquee-item">UIAA Certified <span class="msep">◆</span> 38 Guides</div>
-      <div class="marquee-item">Dawa Sherpa <span class="msep">◆</span> 14× Everest</div>
-      <div class="marquee-item">Pemba Norbu <span class="msep">◆</span> Co-Founder</div>
-      <div class="marquee-item">Mingma Dorje <span class="msep">◆</span> 11× Everest</div>
-      <div class="marquee-item">Ang Rita <span class="msep">◆</span> High Altitude Medic</div>
-      <div class="marquee-item">Nima Tenzin <span class="msep">◆</span> 18× Ama Dablam</div>
-      <div class="marquee-item">Tshering Namgyal <span class="msep">◆</span> 7× Everest</div>
-      <div class="marquee-item">Lakpa Sherpa <span class="msep">◆</span> Trekking Lead</div>
-      <div class="marquee-item">UIAA Certified <span class="msep">◆</span> 38 Guides</div>
-    </div>
+</header>
+<nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
+  <a href="/trekking.html">Treks<svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a><a href="/expeditions.html">Climbing<svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a><a href="/outdoor.html">Activities<svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a><a href="/gallery.html">Gallery<svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a><a href="/blog.html">Journal<svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a><a href="/about.html">About<svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a><a href="/guides.html">Our team<svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a><a href="/contact.html">Contact<svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+  <a href="/contact.html" class="btn btn-primary btn-block">Plan your trip</a>
+  <div class="contact-mini"><a href="tel:+9779811157421">+977 981 115 7421</a><a href="mailto:info@beyondsummitexped.com">info@beyondsummitexped.com</a><span>Thamel, Kathmandu 44600, Nepal</span></div>
+</nav>
+<main id="main">
+<section class="page-hero"><div class="wrap">
+  <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="/">Home</a></li><li><a href="/about.html">About</a></li><li aria-current="page">Our team</li></ol></nav>
+  <div class="page-hero-grid">
+    <div class="hero-in"><h1>Our team</h1><p class="lede">Beyond Summit Expeditions is a one-person company: Elwin Tamang plans your trip, answers your messages and leads on the trail.</p></div>
+    <figure><img src="/images/web/elwin-mountains-1024.webp" srcset="/images/web/elwin-mountains-640.webp 640w, /images/web/elwin-mountains-1024.webp 1024w, /images/web/elwin-mountains-1600.webp 1080w" sizes="(max-width: 860px) 100vw, 50vw" width="1080" height="1080" alt="Elwin Tamang standing above a glacier valley below snow peaks" fetchpriority="high" decoding="async"></figure>
   </div>
-
-  <!-- STATS -->
-  <div class="stats-strip">
-    <div class="stats-inner">
-      <div class="stat-item">
-        <div class="stat-num">38</div>
-        <div class="stat-label">Active Guides</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">150+</div>
-        <div class="stat-label">Everest Summits (Team Total)</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">100%</div>
-        <div class="stat-label">UIAA Certified</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">15 Yrs</div>
-        <div class="stat-label">Avg. Experience</div>
-      </div>
-    </div>
+  
+</div></section>
+<section class="section-sm"><div class="wrap"><div class="founder reveal">
+  <div class="founder-photos"><div class="ph"><img src="/images/web/elwin-mountains-1024.webp" srcset="/images/web/elwin-mountains-640.webp 640w, /images/web/elwin-mountains-1024.webp 1024w, /images/web/elwin-mountains-1600.webp 1080w" sizes="(max-width: 860px) 60vw, 28vw" width="1080" height="1080" alt="Elwin Tamang standing above a glacier valley below snow peaks" loading="lazy" decoding="async"></div><div class="ph"><img src="/images/web/elwin-guitar-1024.webp" srcset="/images/web/elwin-guitar-640.webp 640w, /images/web/elwin-guitar-1024.webp 1024w, /images/web/elwin-guitar-1600.webp 1440w" sizes="(max-width: 860px) 40vw, 18vw" width="1440" height="1920" alt="Elwin Tamang playing guitar outside a tea house" loading="lazy" decoding="async" style="object-position:50% 60%"></div></div>
+  <div class="founder-text"><p class="eyebrow"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M164,80a28,28,0,1,0-28-28A28,28,0,0,0,164,80Zm0-40a12,12,0,1,1-12,12A12,12,0,0,1,164,40Zm90.88,155.92-54.56-92.08A15.87,15.87,0,0,0,186.55,96h0a15.85,15.85,0,0,0-13.76,7.84L146.63,148l-44.84-76.1a16,16,0,0,0-27.58,0L1.11,195.94A8,8,0,0,0,8,208H248a8,8,0,0,0,6.88-12.08ZM88,80l23.57,40H64.43ZM22,192l33-56h66l18.74,31.8,0,0L154,192Zm150.57,0-16.66-28.28L186.55,112,234,192Z"/></svg>Founder and lead guide</p><h3>Elwin Tamang</h3><p>Elwin Tamang founded Beyond Summit Expeditions and runs it from Thamel, Kathmandu.</p><p>Elwin plans every trip personally, from the first message about dates to the drive back to your hotel, and leads groups on the trail. The photos on this site are from those trips.</p><p>When you write to us, Elwin is the one who answers.</p></div>
+</div></div></section>
+<section class="section"><div class="wrap split">
+  <div class="reveal"><h2>What that means for you</h2><p class="lede" style="margin-top:1rem">You deal with one person from start to finish, so nothing gets lost between an office and the trail. If you'd like to talk before you book, we'll set up a video call.</p></div>
+  <ul class="ticks reveal">
+    <li><span class="i-wrap"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M168,112a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,112Zm-8,24H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16Zm72-8A104,104,0,0,1,79.12,219.82L45.07,231.17a16,16,0,0,1-20.24-20.24l11.35-34.05A104,104,0,1,1,232,128Zm-16,0A88,88,0,1,0,51.81,172.06a8,8,0,0,1,.66,6.54L40,216,77.4,203.53a7.85,7.85,0,0,1,2.53-.42,8,8,0,0,1,4,1.08A88,88,0,0,0,216,128Z"/></svg></span><strong>One point of contact</strong><span>The person you message is the person who plans your trip.</span></li>
+    <li><span class="i-wrap"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M244.8,150.4a8,8,0,0,1-11.2-1.6A51.6,51.6,0,0,0,192,128a8,8,0,0,1-7.37-4.89,8,8,0,0,1,0-6.22A8,8,0,0,1,192,112a24,24,0,1,0-23.24-30,8,8,0,1,1-15.5-4A40,40,0,1,1,219,117.51a67.94,67.94,0,0,1,27.43,21.68A8,8,0,0,1,244.8,150.4ZM190.92,212a8,8,0,1,1-13.84,8,57,57,0,0,0-98.16,0,8,8,0,1,1-13.84-8,72.06,72.06,0,0,1,33.74-29.92,48,48,0,1,1,58.36,0A72.06,72.06,0,0,1,190.92,212ZM128,176a32,32,0,1,0-32-32A32,32,0,0,0,128,176ZM72,120a8,8,0,0,0-8-8A24,24,0,1,1,87.24,82a8,8,0,1,0,15.5-4A40,40,0,1,0,37,117.51,67.94,67.94,0,0,0,9.6,139.19a8,8,0,1,0,12.8,9.61A51.6,51.6,0,0,1,64,128,8,8,0,0,0,72,120Z"/></svg></span><strong>Small groups only</strong><span>Never more than eight trekkers, so everyone gets attention.</span></li>
+    <li><span class="i-wrap"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M254.3,107.91,228.78,56.85a16,16,0,0,0-21.47-7.15L182.44,62.13,130.05,48.27a8.14,8.14,0,0,0-4.1,0L73.56,62.13,48.69,49.7a16,16,0,0,0-21.47,7.15L1.7,107.9a16,16,0,0,0,7.15,21.47l27,13.51,55.49,39.63a8.06,8.06,0,0,0,2.71,1.25l64,16a8,8,0,0,0,7.6-2.1l55.07-55.08,26.42-13.21a16,16,0,0,0,7.15-21.46Zm-54.89,33.37L165,113.72a8,8,0,0,0-10.68.61C136.51,132.27,116.66,130,104,122L147.24,80h31.81l27.21,54.41ZM41.53,64,62,74.22,36.43,125.27,16,115.06Zm116,119.13L99.42,168.61l-49.2-35.14,28-56L128,64.28l9.8,2.59-45,43.68-.08.09a16,16,0,0,0,2.72,24.81c20.56,13.13,45.37,11,64.91-5L188,152.66Zm62-57.87-25.52-51L214.47,64,240,115.06Zm-87.75,92.67a8,8,0,0,1-7.75,6.06,8.13,8.13,0,0,1-1.95-.24L80.41,213.33a7.89,7.89,0,0,1-2.71-1.25L51.35,193.26a8,8,0,0,1,9.3-13l25.11,17.94L126,208.24A8,8,0,0,1,131.82,217.94Z"/></svg></span><strong>Porters treated fairly</strong><span>Paid fairly, insured, and loads kept under 20 kg.</span></li>
+  </ul>
+</div></section>
+<section class="section section-alt" aria-labelledby="g-title"><div class="wrap">
+  <div class="head-row"><div class="head"><h2 id="g-title">Photos from our trips</h2></div><a class="link" href="/gallery.html">See all photos <svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a></div>
+  <div class="g-strip reveal"><figure class="g-item" data-cat=""><a href="/images/web/larke-pass-group-1600.webp" data-lightbox data-caption="Larkya La, 5,106 m, Manaslu Circuit" aria-label="Open photo: Larkya La, 5,106 m, Manaslu Circuit"><img src="/images/web/larke-pass-group-1024.webp" srcset="/images/web/larke-pass-group-640.webp 640w, /images/web/larke-pass-group-1024.webp 1024w, /images/web/larke-pass-group-1600.webp 1400w" sizes="(max-width: 640px) 50vw, 25vw" width="1400" height="1050" alt="Our group at the Larkya La sign, 5,106 m, on the Manaslu Circuit" loading="lazy" decoding="async"></a><figcaption>Larkya La, 5,106 m, Manaslu Circuit</figcaption></figure><figure class="g-item" data-cat=""><a href="/images/web/waterfall-spray-1600.webp" data-lightbox data-caption="Through the spray of a waterfall" aria-label="Open photo: Through the spray of a waterfall"><img src="/images/web/waterfall-spray-1024.webp" srcset="/images/web/waterfall-spray-640.webp 640w, /images/web/waterfall-spray-1024.webp 1024w, /images/web/waterfall-spray-1600.webp 1080w" sizes="(max-width: 640px) 50vw, 25vw" width="1080" height="1080" alt="Trekkers walking through the spray of a tall waterfall" loading="lazy" decoding="async"></a><figcaption>Through the spray of a waterfall</figcaption></figure><figure class="g-item" data-cat=""><a href="/images/web/trail-joy-1600.webp" data-lightbox data-caption="Good mood on the forest trail" aria-label="Open photo: Good mood on the forest trail"><img src="/images/web/trail-joy-1024.webp" srcset="/images/web/trail-joy-640.webp 640w, /images/web/trail-joy-1024.webp 1024w, /images/web/trail-joy-1600.webp 1080w" sizes="(max-width: 640px) 50vw, 25vw" width="1080" height="1080" alt="A happy trekker on a sunny forest trail" loading="lazy" decoding="async"></a><figcaption>Good mood on the forest trail</figcaption></figure><figure class="g-item" data-cat=""><a href="/images/web/cholatse-lodge-1600.webp" data-lightbox data-caption="Cholatse above a lodge in the Khumbu" aria-label="Open photo: Cholatse above a lodge in the Khumbu"><img src="/images/web/cholatse-lodge-1024.webp" srcset="/images/web/cholatse-lodge-640.webp 640w, /images/web/cholatse-lodge-1024.webp 1024w, /images/web/cholatse-lodge-1600.webp 1080w" sizes="(max-width: 640px) 50vw, 25vw" width="1080" height="1080" alt="A trekking lodge below the north face of Cholatse" loading="lazy" decoding="async"></a><figcaption>Cholatse above a lodge in the Khumbu</figcaption></figure></div>
+</div></section>
+<section class="section-sm"><div class="wrap"><div class="cta reveal">
+  <img src="/images/web/valley-walk-1024.webp" srcset="/images/web/valley-walk-640.webp 640w, /images/web/valley-walk-1024.webp 1024w, /images/web/valley-walk-1600.webp 1600w" sizes="100vw" width="1600" height="1200" alt="" loading="lazy" decoding="async">
+  <div><h2>Talk to Elwin before you book</h2><p>Ask about routes, fitness and gear. No obligation, and you&#x27;ll get a reply from a real person, not a booking system.</p></div>
+  <div class="cta-actions">
+    <a href="/contact.html" class="btn btn-light">Plan your trip <svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="https://wa.me/9779811157421" class="btn btn-onphoto" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg> WhatsApp us</a>
+    <div class="cta-lines"><a href="tel:+9779811157421">+977 981 115 7421</a><a href="mailto:info@beyondsummitexped.com">info@beyondsummitexped.com</a></div>
   </div>
-
-  <!-- INTRO -->
-  <section class="intro-section">
-    <div class="intro-inner">
-      <div>
-        <span class="eyebrow reveal">Our Philosophy</span>
-        <p class="intro-lead reveal d1">A Sherpa guide is not a porter. They are <em>mountain intellectuals</em> — reading terrain, weather, and human physiology simultaneously.</p>
-        <p class="intro-body reveal d2">Every guide at Beyond Summit has summited their peak at least twice before leading a client team. They hold wilderness first-aid certification, high-altitude sickness management training, and UIAA-recognised climbing qualifications. Many have also completed the Himalayan Mountaineering Institute's guide programme.</p>
-        <p class="intro-body reveal d2" style="margin-top:1rem;">We pay our Sherpas above industry rates, provide full insurance, and co-own the company with our senior team leads. This is what genuine partnership looks like.</p>
-      </div>
-      <div class="reveal d1">
-        <div class="intro-philosophy">
-          <p class="intro-philosophy-text">"We do not conquer the mountain. We ask permission to pass through. The mountain always decides — and our job is to help you hear what it's saying."</p>
-          <span class="intro-philosophy-attr">— Dawa Sherpa · Chief Guide &amp; Co-Founder</span>
-        </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);margin-top:1px;">
-          <div style="background:var(--cream);padding:1.75rem;text-align:center;">
-            <div style="font-family:var(--serif);font-size:2.2rem;font-weight:400;color:var(--amber);line-height:1;">469+</div>
-            <div style="font-family:var(--mono);font-size:0.52rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-top:0.4rem;">Clients Guided</div>
-          </div>
-          <div style="background:var(--cream);padding:1.75rem;text-align:center;">
-            <div style="font-family:var(--serif);font-size:2.2rem;font-weight:400;color:var(--amber);line-height:1;">14</div>
-            <div style="font-family:var(--mono);font-size:0.52rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-top:0.4rem;">8000ers Guided</div>
-          </div>
-          <div style="background:var(--cream);padding:1.75rem;text-align:center;">
-            <div style="font-family:var(--serif);font-size:2.2rem;font-weight:400;color:var(--amber);line-height:1;">1:1</div>
-            <div style="font-family:var(--mono);font-size:0.52rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-top:0.4rem;">Sherpa Ratio (Summit Day)</div>
-          </div>
-          <div style="background:var(--cream);padding:1.75rem;text-align:center;">
-            <div style="font-family:var(--serif);font-size:2.2rem;font-weight:400;color:var(--amber);line-height:1;">10 Yrs</div>
-            <div style="font-family:var(--mono);font-size:0.52rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-top:0.4rem;">Operating History</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FEATURED GUIDE -->
-  <section class="featured-section">
-    <div class="featured-inner">
-      <div class="featured-img-wrap reveal">
-        <img class="featured-img" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=800&auto=format&fit=crop" alt="Dawa Sherpa — Chief Guide">
-        <div class="featured-img-caption">
-          <div class="featured-badge">Chief Expedition Guide</div>
-          <div class="featured-summits">14<em style="font-style:normal;font-size:1.5rem;color:var(--amber-pale);">×</em>
-            <span>Everest Summits</span>
-          </div>
-        </div>
-      </div>
-      <div class="reveal d1">
-        <span class="featured-tag">Featured · Co-Founder</span>
-        <h2 class="featured-name">Dawa<br>Sherpa</h2>
-        <div class="featured-role">IFMGA Certified · 14× Everest · All 14 Eight-Thousanders</div>
-        <p class="featured-bio">Born in Namche Bazaar, Dawa made his first Everest ascent at 24. Over the next two decades, he summited all fourteen 8000-metre peaks — including K2 in winter without supplemental oxygen. In 2015 he co-founded Beyond Summit to bring the Sherpa approach to safety and mountain knowledge to a global clientele. He personally leads our Everest and Annapurna expeditions each spring season.</p>
-        <div class="featured-stats">
-          <div class="fstat">
-            <div class="fstat-num">14<em>×</em></div>
-            <div class="fstat-label">Everest Summits</div>
-          </div>
-          <div class="fstat">
-            <div class="fstat-num">8000<em>+</em></div>
-            <div class="fstat-label">Metres Led</div>
-          </div>
-          <div class="fstat">
-            <div class="fstat-num">22<em>yr</em></div>
-            <div class="fstat-label">On the Mountain</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- GUIDES GRID -->
-  <section class="guides-section">
-    <div class="guides-header">
-      <span class="eyebrow reveal">The Full Team</span>
-      <h2 class="section-title reveal d1">Meet Our <em>Sherpa Guides</em></h2>
-      <p class="reveal d2" style="font-family:var(--sans);font-size:0.88rem;color:var(--muted);line-height:1.7;max-width:520px;margin-top:0.75rem;">Each guide is matched to clients based on experience, objectives, and personality. You meet your guide before you commit.</p>
-    </div>
-    <div class="guides-grid">
-
-      <div class="gcard reveal">
-        <div class="gcard-img-wrap">
-          <img class="gcard-img" src="images/man-on-top.jpeg" alt="Elwin Tammang">
-          <div class="gcard-overlay"></div>
-          <div class="gcard-badge">Lead Guide</div>
-          <div class="gcard-summit-count"><div class="gcard-summit-num">9</div><div class="gcard-summit-label">Everest</div></div>
-        </div>
-        <div class="gcard-body">
-          <div class="gcard-name">Elwin Tammang</div>
-          <div class="gcard-role">Co-Founder · Technical Climbing Specialist</div>
-          <div class="gcard-peaks">
-            <span class="gcard-peak-tag">Everest</span>
-            <span class="gcard-peak-tag">Manaslu</span>
-            <span class="gcard-peak-tag">Ama Dablam</span>
-          </div>
-          <a href="#" class="gcard-link">View Full Profile <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-        </div>
-      </div>
-
-      <div class="gcard reveal d1">
-        <div class="gcard-img-wrap">
-          <img class="gcard-img" src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?q=80&w=600&auto=format&fit=crop" alt="Ang Rita">
-          <div class="gcard-overlay"></div>
-          <div class="gcard-badge">High Altitude Medic</div>
-          <div class="gcard-summit-count"><div class="gcard-summit-num">6</div><div class="gcard-summit-label">Everest</div></div>
-        </div>
-        <div class="gcard-body">
-          <div class="gcard-name">Ang Rita</div>
-          <div class="gcard-role">Senior Medic Guide · Annapurna Specialist</div>
-          <div class="gcard-peaks">
-            <span class="gcard-peak-tag">Annapurna</span>
-            <span class="gcard-peak-tag">Lhotse</span>
-            <span class="gcard-peak-tag">Cho Oyu</span>
-          </div>
-          <a href="#" class="gcard-link">View Full Profile <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-        </div>
-      </div>
-
-      <div class="gcard reveal d2">
-        <div class="gcard-img-wrap">
-          <img class="gcard-img" src="https://images.unsplash.com/photo-1506466010722-395ee2bef877?q=80&w=600&auto=format&fit=crop" alt="Mingma Dorje">
-          <div class="gcard-overlay"></div>
-          <div class="gcard-badge">Lead Guide</div>
-          <div class="gcard-summit-count"><div class="gcard-summit-num">11</div><div class="gcard-summit-label">Everest</div></div>
-        </div>
-        <div class="gcard-body">
-          <div class="gcard-name">Mingma Dorje</div>
-          <div class="gcard-role">Senior Guide · Khumbu Ice Fall Expert</div>
-          <div class="gcard-peaks">
-            <span class="gcard-peak-tag">Everest</span>
-            <span class="gcard-peak-tag">K2</span>
-            <span class="gcard-peak-tag">Makalu</span>
-          </div>
-          <a href="#" class="gcard-link">View Full Profile <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-        </div>
-      </div>
-
-      <div class="gcard reveal">
-        <div class="gcard-img-wrap">
-          <img class="gcard-img" src="https://images.unsplash.com/photo-1469521669194-babb45599def?q=80&w=600&auto=format&fit=crop" alt="Lakpa Sherpa">
-          <div class="gcard-overlay"></div>
-          <div class="gcard-badge">Trekking Lead</div>
-          <div class="gcard-summit-count"><div class="gcard-summit-num">4</div><div class="gcard-summit-label">Everest</div></div>
-        </div>
-        <div class="gcard-body">
-          <div class="gcard-name">Lakpa Sherpa</div>
-          <div class="gcard-role">Head of Trekking Division</div>
-          <div class="gcard-peaks">
-            <span class="gcard-peak-tag">EBC Trek</span>
-            <span class="gcard-peak-tag">Mustang</span>
-            <span class="gcard-peak-tag">Langtang</span>
-          </div>
-          <a href="#" class="gcard-link">View Full Profile <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-        </div>
-      </div>
-
-      <div class="gcard reveal d1">
-        <div class="gcard-img-wrap">
-          <img class="gcard-img" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=600&auto=format&fit=crop" alt="Tshering Namgyal">
-          <div class="gcard-overlay"></div>
-          <div class="gcard-badge">Lead Guide</div>
-          <div class="gcard-summit-count"><div class="gcard-summit-num">7</div><div class="gcard-summit-label">Everest</div></div>
-        </div>
-        <div class="gcard-body">
-          <div class="gcard-name">Tshering Namgyal</div>
-          <div class="gcard-role">Manaslu &amp; Dhaulagiri Specialist</div>
-          <div class="gcard-peaks">
-            <span class="gcard-peak-tag">Manaslu</span>
-            <span class="gcard-peak-tag">Dhaulagiri</span>
-            <span class="gcard-peak-tag">Kangchenjunga</span>
-          </div>
-          <a href="#" class="gcard-link">View Full Profile <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-        </div>
-      </div>
-
-      <div class="gcard reveal d2">
-        <div class="gcard-img-wrap">
-          <img class="gcard-img" src="https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=600&auto=format&fit=crop" alt="Nima Tenzin" style="filter:brightness(0.75) saturate(0.85)">
-          <div class="gcard-overlay"></div>
-          <div class="gcard-badge">Ama Dablam Specialist</div>
-          <div class="gcard-summit-count"><div class="gcard-summit-num">18</div><div class="gcard-summit-label">Ama Dablam</div></div>
-        </div>
-        <div class="gcard-body">
-          <div class="gcard-name">Nima Tenzin</div>
-          <div class="gcard-role">Technical Rock &amp; Ice Climbing Lead</div>
-          <div class="gcard-peaks">
-            <span class="gcard-peak-tag">Ama Dablam</span>
-            <span class="gcard-peak-tag">Island Peak</span>
-            <span class="gcard-peak-tag">Mera Peak</span>
-          </div>
-          <a href="#" class="gcard-link">View Full Profile <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- VALUES / SHERPA WAY -->
-  <section class="values-section">
-    <div class="values-inner">
-      <div>
-        <span class="eyebrow reveal">The Sherpa Way</span>
-        <h2 class="section-title reveal d1">The Mountain is<br><em>Our Teacher</em></h2>
-        <p class="reveal d2" style="font-family:var(--sans);font-size:0.88rem;color:var(--muted);line-height:1.7;max-width:420px;margin-top:0.75rem;margin-bottom:2.5rem;">Three principles passed down across generations of Sherpa guides — the philosophy that keeps our clients alive and summiting.</p>
-        <div class="values-list">
-          <div class="value-item reveal">
-            <div class="value-num">01</div>
-            <div>
-              <div class="value-title">Lhakpa — Patient Endurance</div>
-              <div class="value-desc">The Sherpa approach to altitude is never to fight it. We read the mountain's rhythm, respect acclimatisation windows, and wait when the peak demands patience over urgency.</div>
-            </div>
-          </div>
-          <div class="value-item reveal d1">
-            <div class="value-num">02</div>
-            <div>
-              <div class="value-title">Nying — Heartfelt Care</div>
-              <div class="value-desc">Every client we guide is extended genuine familial care. We notice when you're struggling before you do. This attentiveness has saved lives and created lifelong bonds.</div>
-            </div>
-          </div>
-          <div class="value-item reveal d2">
-            <div class="value-num">03</div>
-            <div>
-              <div class="value-title">Rigpa — Mountain Knowledge</div>
-              <div class="value-desc">Route conditions, wind patterns, snow stability — knowledge built across hundreds of ascents and generations that cannot be taught in any classroom.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="values-visual reveal d1">
-        <div class="values-img-wrap">
-          <img class="values-img" src="https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=800&auto=format&fit=crop" alt="Sherpa guiding at altitude">
-        </div>
-        <div class="values-caption">
-          <div class="values-caption-eyebrow">Sherpa Proverb</div>
-          <div class="values-caption-text">"We do not conquer the mountain. We ask permission to pass through."</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- QUOTE -->
-  <section class="quote-section">
-    <img class="quote-bg-img" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1800&auto=format&fit=crop" alt="Mountain at high altitude">
-    <div class="quote-bg-overlay"></div>
-    <div class="quote-content">
-      <span class="quote-mark" aria-hidden="true">"</span>
-      <blockquote class="quote-text reveal">The Sherpa doesn't just carry your gear.<br>They carry your <em>dream</em>.</blockquote>
-      <div class="quote-attr reveal d1">Pemba Norbu · Co-Founder, Beyond Summit</div>
-    </div>
-  </section>
-
-  <!-- CONTACT STRIP -->
-  <div class="contact-strip">
-    <div class="contact-inner">
-      <div class="contact-item">
-        <div class="contact-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.71 3.53 2 2 0 0 1 3.68 1.38h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.07a16 16 0 0 0 6 6l1.06-1.06a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        </div>
-        <div>
-          <div class="contact-label">Call Anytime</div>
-          <div class="contact-value"><a href="tel:+9779811157421">+977 9811 157 421</a></div>
-        </div>
-      </div>
-      <div class="contact-item">
-        <div class="contact-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        </div>
-        <div>
-          <div class="contact-label">Email Us</div>
-          <div class="contact-value"><a href="mailto:info@beyondsummitexped.com">info@beyondsummitexped.com</a></div>
-        </div>
-      </div>
-      <div class="contact-item">
-        <div class="contact-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        </div>
-        <div>
-          <div class="contact-label">Find Us</div>
-          <div class="contact-value"><a href="https://maps.google.com/?q=Thamel,Kathmandu,Nepal" target="_blank" rel="noopener noreferrer">Thamel, Kathmandu</a></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- BOOKING CTA -->
-  <section class="booking-section">
-    <div class="booking-inner">
-      <div>
-        <span class="eyebrow reveal">Meet Your Guide</span>
-        <h2 class="section-title reveal d1">Speak With a Guide<br><em>Before You Climb</em></h2>
-        <p class="reveal d2" style="font-family:var(--sans);font-size:0.9rem;color:var(--muted);line-height:1.75;max-width:420px;margin-top:1rem;">Every client is matched with a guide based on their experience and objectives. We arrange a virtual call before you commit — because trust begins before Base Camp.</p>
-        <div class="booking-actions reveal d3">
-          <a href="/contact.html" class="btn-book">
-            Request a Guide Call
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-          <a href="tel:+9779811157421" class="btn-link">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.71 3.53 2 2 0 0 1 3.68 1.38h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.07a16 16 0 0 0 6 6l1.06-1.06a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            +977 9811 157 421
-          </a>
-        </div>
-      </div>
-      <div class="booking-visual reveal d1">
-        <div class="booking-img-wrap">
-          <img class="booking-img" src="https://images.unsplash.com/photo-1469521669194-babb45599def?q=80&w=800&auto=format&fit=crop" alt="Guide and client on mountain">
-        </div>
-        <div class="booking-badge">
-          <div class="booking-badge-num">38</div>
-          <div class="booking-badge-label">Expert Guides Available</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
+</div></div></section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
     <div class="footer-grid">
       <div>
-        <div class="footer-logo-text">Beyond Summit<em>Expeditions · Nepal</em></div>
-        <p class="footer-desc">Nepal's premier mountaineering company. Licensed by the Department of Tourism, Government of Nepal. We take you where others pause.</p>
-        <div class="footer-contact">
-          <a href="tel:+9779811157421">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.71 3.53 2 2 0 0 1 3.68 1.38h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.07a16 16 0 0 0 6 6l1.06-1.06a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            +977-9811157421
-          </a>
-          <a href="mailto:info@beyondsummitexped.com">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            info@beyondsummitexped.com
-          </a>
-          <a href="https://maps.google.com/?q=Thamel,Kathmandu" target="_blank">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Thamel, Kathmandu, Nepal
-          </a>
-        </div>
+        <a href="/" class="brand" aria-label="Beyond Summit Expeditions, home"><svg class="logo-mark" viewBox="-1.5 -1.5 88 59" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M45.4 0 47.3 2.3 49.6 4.8 51.6 8.5 52.9 13.6 54.2 17.2 56.1 19.6 58.6 24.7 55.9 23.9 53.9 17.8 51.8 16.5 49.7 14.1 44.7 11.9 44.5 6.8 45 1.7Z" fill="currentColor" stroke="none" opacity=".9"/><path d="M0 50.8 2.9 46.6 5.1 43.2 7.2 41.3 8.8 38.1 11.2 34.5 12.6 31.5 13.7 30.8 15.2 25.6 17.8 20.7 19.6 17.9 20.5 19.2 21.8 18 23.4 19.9 25 22.3 26.3 21.9 27.7 24 29.5 24.8 30.9 23.9 32.8 19.9 35 17.9 37.2 13.8 39.6 8.9 41.6 5.1 43.4 2.8 45.4 0 47.3 2.3 49.6 4.8 51.6 8.5 52.9 13.6 54.2 17.2 56.1 19.6 58.6 24.7 60.4 26.7 63.3 28.4 67.4 29.1 71.7 27.7 75 29.7 81.3 31.8 85 29.1" stroke-width="1.6" vector-effect="non-scaling-stroke"/><path d="M3.7 55.7 10.2 49.3 12.8 47.9 20.3 39.3 24 38.3 28.3 47.1 36.7 55.7 M52.7 53.4 58.8 48.8 63.6 44.4 66.8 40.5 76.2 38.1 85 29.1" stroke-width="1.15" vector-effect="non-scaling-stroke"/><path d="M45 1.7 44.5 6.8 44.7 11.9 M19 20.9 19.5 27.4 19.6 34.6 20.7 38.9" stroke-width=".9" vector-effect="non-scaling-stroke" opacity=".6"/></svg><span>Beyond Summit<small>Expeditions, Kathmandu</small></span></a>
+        <p class="footer-about">A trekking and mountaineering company in Thamel, Kathmandu, licensed by the Department of Tourism, Government of Nepal.</p>
+        <p class="footer-about"><a href="tel:+9779811157421">+977 981 115 7421</a><br><a href="mailto:info@beyondsummitexped.com">info@beyondsummitexped.com</a></p>
       </div>
-      <div class="footer-col">
-        <h4>Expeditions</h4>
-        <ul>
-          <li><a href="/articles/everest-base-camp-guide.html">Mount Everest</a></li>
-          <li><a href="/articles/amadablam-blog.html">Ama Dablam</a></li>
-          <li><a href="/articles/manaslu-blog.html">Manaslu</a></li>
-          <li><a href="/articles/merapeak.html">Mera Peak</a></li>
-          <li><a href="/articles/islandpeak.html">Island Peak</a></li>
-          <li><a href="/expeditions.html">All Expeditions</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Trekking</h4>
-        <ul>
-          <li><a href="/articles/everest-base-camp-guide.html">Everest Base Camp</a></li>
-          <li><a href="/articles/annapurna-blog.html">Annapurna Circuit</a></li>
-          <li><a href="/articles/upper-mustang-blog.html">Upper Mustang</a></li>
-          <li><a href="/articles/manaslu-blog.html">Manaslu Circuit</a></li>
-          <li><a href="/articles/langtang-valley-blog.html">Langtang Valley</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="/about.html">About Us</a></li>
-          <li><a href="/guides.html">Our Guides</a></li>
-          <li><a href="/safety.html">Safety</a></li>
-          <li><a href="/blog.html">Blog</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-        </ul>
-      </div>
+      <div><h4>Treks</h4><ul><li><a href="/articles/everest-blog-new.html">Everest Base Camp</a></li><li><a href="/articles/annapurna-blog.html">Annapurna Base Camp</a></li><li><a href="/articles/annapurna-circuit.html">Annapurna Circuit</a></li><li><a href="/articles/manaslu-blog.html">Manaslu Circuit</a></li><li><a href="/articles/upper-mustang-blog.html">Upper Mustang</a></li><li><a href="/articles/langtang-valley.html">Langtang Valley</a></li></ul></div><div><h4>Climbing</h4><ul><li><a href="/articles/islandpeak.html">Island Peak</a></li><li><a href="/articles/merapeak.html">Mera Peak</a></li><li><a href="/articles/lobuche.html">Lobuche East</a></li><li><a href="/articles/amadablam-blog.html">Ama Dablam</a></li><li><a href="/articles/himlung.html">Himlung Himal</a></li><li><a href="/expeditions.html#eight-thousanders">8,000 m expeditions</a></li></ul></div><div><h4>Plan</h4><ul><li><a href="/articles/nepal-trekking-permits.html">Trekking permits 2026</a></li><li><a href="/articles/best-time-to-trek-nepal.html">Best time to trek</a></li><li><a href="/outdoor.html">Activities</a></li><li><a href="/blog.html">Journal</a></li></ul></div><div><h4>Company</h4><ul><li><a href="/about.html">About us</a></li><li><a href="/guides.html">Our team</a></li><li><a href="/gallery.html">Photo gallery</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/photo-credits.html">Photo credits</a></li></ul></div>
     </div>
+    <div class="footer-accred"><p>Licensed and registered in Nepal</p><div class="accred-minis"><a class="accred-mini" href="https://tourismdepartment.gov.np/" target="_blank" rel="noopener" title="Department of Tourism, Government of Nepal: Licensed trekking and mountaineering agency"><span class="accred-text" aria-hidden="true"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,136a8,8,0,0,1-8,8H72a8,8,0,0,1,0-16h48A8,8,0,0,1,128,136Zm-8-40H72a8,8,0,0,0,0,16h48a8,8,0,0,0,0-16Zm112,65.47V224A8,8,0,0,1,220,231l-24-13.74L172,231A8,8,0,0,1,160,224V200H40a16,16,0,0,1-16-16V56A16,16,0,0,1,40,40H216a16,16,0,0,1,16,16V86.53a51.88,51.88,0,0,1,0,74.94ZM160,184V161.47A52,52,0,0,1,216,76V56H40V184Zm56-12a51.88,51.88,0,0,1-40,0v38.22l16-9.16a8,8,0,0,1,7.94,0l16,9.16Zm16-48a36,36,0,1,0-36,36A36,36,0,0,0,232,124Z"/></svg><b>Govt. of<br>Nepal</b></span><span class="sr-only">Department of Tourism, Government of Nepal</span></a><a class="accred-mini" href="https://ntb.gov.np/" target="_blank" rel="noopener" title="Nepal Tourism Board: Registered with Nepal&#x27;s national tourism body"><picture><source srcset="/images/logos/ntb.webp" type="image/webp"><img src="/images/logos/ntb.png" alt="Nepal Tourism Board logo" width="33" height="34" loading="lazy" decoding="async"></picture><span class="sr-only">Nepal Tourism Board</span></a><a class="accred-mini" href="https://www.taan.org.np/" target="_blank" rel="noopener" title="Trekking Agencies&#x27; Association of Nepal: Member of the national trekking association"><picture><source srcset="/images/logos/taan.webp" type="image/webp"><img src="/images/logos/taan.png" alt="Trekking Agencies&#x27; Association of Nepal logo" width="25" height="34" loading="lazy" decoding="async"></picture><span class="sr-only">Trekking Agencies&#x27; Association of Nepal</span></a><a class="accred-mini" href="https://www.nepalmountaineering.org/" target="_blank" rel="noopener" title="Nepal Mountaineering Association: Member agency for peak climbing"><picture><source srcset="/images/logos/nma.webp" type="image/webp"><img src="/images/logos/nma.png" alt="Nepal Mountaineering Association logo" width="39" height="34" loading="lazy" decoding="async"></picture><span class="sr-only">Nepal Mountaineering Association</span></a></div></div>
     <div class="footer-bottom">
-      <p>© 2026 Beyond Summit Expeditions · Licensed by Dept. of Tourism, Government of Nepal</p>
-      <div class="footer-socials">
-        <a href="https://instagram.com/beyondsummitexpeditions" class="social-ico" target="_blank" aria-label="Instagram">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-        </a>
-        <a href="https://facebook.com/beyondsummitexped" class="social-ico" target="_blank" aria-label="Facebook">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-        </a>
+      <p>&copy; 2026 Beyond Summit Expeditions</p>
+      <button class="theme-toggle" type="button" data-theme-toggle><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm72,88a64,64,0,1,1-64-64A64.07,64.07,0,0,1,192,128Zm-16,0a48,48,0,1,0-48,48A48.05,48.05,0,0,0,176,128ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z"/></svg><span>Dark mode</span></button>
+      <div class="socials">
+        <a href="https://www.instagram.com/beyondsummitexpeditions" target="_blank" rel="noopener" aria-label="Instagram"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"/></svg></a>
+        <a href="https://www.facebook.com/beyondsummitexped" target="_blank" rel="noopener" aria-label="Facebook"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"/></svg></a>
+        <a href="https://www.youtube.com/@beyondsummitexpeditions" target="_blank" rel="noopener" aria-label="YouTube"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M164.44,121.34l-48-32A8,8,0,0,0,104,96v64a8,8,0,0,0,12.44,6.66l48-32a8,8,0,0,0,0-13.32ZM120,145.05V111l25.58,17ZM234.33,69.52a24,24,0,0,0-14.49-16.4C185.56,39.88,131,40,128,40s-57.56-.12-91.84,13.12a24,24,0,0,0-14.49,16.4C19.08,79.5,16,97.74,16,128s3.08,48.5,5.67,58.48a24,24,0,0,0,14.49,16.41C69,215.56,120.4,216,127.34,216h1.32c6.94,0,58.37-.44,91.18-13.11a24,24,0,0,0,14.49-16.41c2.59-10,5.67-28.22,5.67-58.48S236.92,79.5,234.33,69.52Zm-15.49,113a8,8,0,0,1-4.77,5.49c-31.65,12.22-85.48,12-86,12H128c-.54,0-54.33.2-86-12a8,8,0,0,1-4.77-5.49C34.8,173.39,32,156.57,32,128s2.8-45.39,5.16-54.47A8,8,0,0,1,41.93,68c30.52-11.79,81.66-12,85.85-12h.27c.54,0,54.38-.18,86,12a8,8,0,0,1,4.77,5.49C221.2,82.61,224,99.43,224,128S221.2,173.39,218.84,182.47Z"/></svg></a>
       </div>
     </div>
-  </footer>
-
-  <script>
-    /* NAV SCROLL */
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 50);
-    }, { passive: true });
-
-    /* HAMBURGER */
-    const hamburger = document.getElementById('hamburger');
-    const drawer = document.getElementById('mobileDrawer');
-    let drawerOpen = false;
-    function closeDrawer() {
-      drawerOpen = false;
-      hamburger.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', 'false');
-      drawer.classList.remove('open');
-      document.body.style.overflow = '';
-    }
-    hamburger.addEventListener('click', () => {
-      drawerOpen = !drawerOpen;
-      hamburger.classList.toggle('open', drawerOpen);
-      hamburger.setAttribute('aria-expanded', String(drawerOpen));
-      drawer.classList.toggle('open', drawerOpen);
-      document.body.style.overflow = drawerOpen ? 'hidden' : '';
-    });
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
-
-    /* SCROLL REVEAL */
-    new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
-    }, { rootMargin: '0px 0px -50px 0px', threshold: 0.05 })
-    .observe = (() => {
-      const obs = new IntersectionObserver(entries => {
-        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
-      }, { rootMargin: '0px 0px -50px 0px', threshold: 0.05 });
-      document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-      return obs.observe.bind(obs);
-    })();
-  </script>
+  </div>
+</footer>
+<a href="https://wa.me/9779811157421" class="wa-float" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg></a>
+<dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+  <figure><img alt=""><figcaption></figcaption></figure>
+  <button type="button" class="lb-btn lb-close" data-lb="close" aria-label="Close"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg></button>
+  <button type="button" class="lb-btn lb-prev" data-lb="prev" aria-label="Previous photo"><svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></button>
+  <button type="button" class="lb-btn lb-next" data-lb="next" aria-label="Next photo"><svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></button>
+  <p class="lb-count" aria-live="polite"></p>
+</dialog>
+<script src="/js/site.js?v=2" defer></script>
 </body>
 </html>

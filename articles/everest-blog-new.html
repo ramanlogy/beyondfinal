@@ -1,1243 +1,377 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Complete Guide to Everest Base Camp Trek 2026 | Beyond Summit Expeditions</title>
-  <meta name="description" content="The definitive Everest Base Camp Trek guide for 2026. Covers the full 14-day itinerary, permits, best time to go, gear list, accommodation, costs, and fitness requirements.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Mono:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --obsidian: #0d0c0a;
-      --deep: #141210;
-      --bark: #1a1814;
-      --bark2: #1f1c17;
-      --amber: #c8832a;
-      --amber-light: #e8a84a;
-      --amber-pale: #f2d9a8;
-      --glacier: #8ab4c8;
-      --snow: #f5f2ec;
-      --mist: rgba(245,242,236,0.05);
-      --serif: 'Cormorant Garamond', Georgia, serif;
-      --mono: 'DM Mono', monospace;
-      --sans: 'Outfit', system-ui, sans-serif;
-      --ease: cubic-bezier(0.22, 1, 0.36, 1);
-      --border: rgba(245,242,236,0.07);
-    }
-
-    html { scroll-behavior: smooth; font-size: 16px; }
-    body {
-      font-family: var(--sans);
-      background: var(--obsidian);
-      color: var(--snow);
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
-      cursor: none;
-    }
-    a { color: inherit; text-decoration: none; }
-
-    /* ── NOISE ── */
-    body::before {
-      content: '';
-      position: fixed; inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-      pointer-events: none; z-index: 9000; opacity: 0.35;
-    }
-
-    /* ── CURSOR ── */
-    .cursor {
-      position: fixed; top: 0; left: 0;
-      width: 10px; height: 10px;
-      background: var(--amber); border-radius: 50%;
-      pointer-events: none; z-index: 9999;
-      transform: translate(-50%, -50%);
-      transition: transform 0.1s, width 0.4s var(--ease), height 0.4s var(--ease);
-    }
-    .cursor-ring {
-      position: fixed; top: 0; left: 0;
-      width: 36px; height: 36px;
-      border: 1px solid rgba(200,131,42,0.4); border-radius: 50%;
-      pointer-events: none; z-index: 9998;
-      transform: translate(-50%, -50%);
-      transition: transform 0.18s var(--ease), width 0.4s var(--ease), height 0.4s var(--ease);
-    }
-    body:has(a:hover) .cursor { width: 16px; height: 16px; }
-    body:has(a:hover) .cursor-ring { width: 52px; height: 52px; border-color: rgba(200,131,42,0.7); }
-    @media (max-width: 768px) { .cursor, .cursor-ring { display: none; } body { cursor: auto; } }
-
-    /* ── NAV ── */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 800;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 2rem 4rem;
-      transition: padding 0.5s var(--ease), background 0.5s;
-    }
-    nav.shrunk {
-      padding: 1.25rem 4rem;
-      background: rgba(13,12,10,0.92);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav-logo { display: flex; align-items: center; gap: 0.75rem; }
-    .nav-logo-text {
-      font-family: var(--serif); font-size: 1.1rem;
-      letter-spacing: 0.04em; color: var(--snow);
-    }
-    .nav-logo-text em {
-      display: block; font-family: var(--mono); font-size: 0.52rem;
-      letter-spacing: 0.25em; text-transform: uppercase;
-      color: var(--amber); opacity: 0.8; font-style: normal; margin-top: 2px;
-    }
-    .nav-right { display: flex; align-items: center; gap: 2.5rem; }
-    .nav-links { display: flex; gap: 2rem; }
-    .nav-links a {
-      font-family: var(--mono); font-size: 0.62rem;
-      letter-spacing: 0.18em; text-transform: uppercase;
-      color: rgba(245,242,236,0.4); transition: color 0.3s;
-    }
-    .nav-links a:hover { color: var(--snow); }
-    .nav-back {
-      display: flex; align-items: center; gap: 0.6rem;
-      font-family: var(--mono); font-size: 0.6rem;
-      letter-spacing: 0.18em; text-transform: uppercase;
-      color: var(--amber); opacity: 0.8; transition: opacity 0.3s;
-    }
-    .nav-back:hover { opacity: 1; }
-    .nav-back svg { transition: transform 0.3s; }
-    .nav-back:hover svg { transform: translateX(-3px); }
-    @media (max-width: 768px) {
-      nav { padding: 1.5rem 1.5rem; }
-      nav.shrunk { padding: 1rem 1.5rem; }
-      .nav-links { display: none; }
-    }
-
-    /* ── HERO ── */
-    .article-hero {
-      position: relative; height: 92vh; min-height: 600px; overflow: hidden;
-      background: var(--obsidian);
-    }
-    .hero-img {
-      width: 100%; height: 100%; object-fit: cover;
-      filter: brightness(0.38) saturate(0.7);
-      transform: scale(1.08);
-      animation: heroZoom 14s ease forwards;
-    }
-    @keyframes heroZoom { to { transform: scale(1); } }
-    .hero-vignette {
-      position: absolute; inset: 0; z-index: 2; pointer-events: none;
-      background:
-        linear-gradient(to right, rgba(13,12,10,0.92) 0%, rgba(13,12,10,0.4) 50%, rgba(13,12,10,0.6) 100%),
-        linear-gradient(to top, rgba(13,12,10,1) 0%, rgba(13,12,10,0.3) 40%, transparent 70%),
-        linear-gradient(to bottom, rgba(13,12,10,0.8) 0%, transparent 25%);
-    }
-    .hero-altitude-deco {
-      position: absolute; right: 4rem; top: 0; bottom: 0; width: 1px;
-      background: linear-gradient(to bottom, transparent, rgba(200,131,42,0.2), transparent);
-      z-index: 3;
-    }
-    .hero-altitude-deco::before {
-      content: '5,364 m'; position: absolute; top: 50%; left: 1rem;
-      font-family: var(--mono); font-size: 0.55rem;
-      letter-spacing: 0.25em; text-transform: uppercase;
-      color: rgba(200,131,42,0.4); writing-mode: vertical-rl;
-      transform: translateY(-50%) rotate(180deg);
-    }
-    .hero-content {
-      position: absolute; inset: 0; z-index: 10;
-      display: flex; flex-direction: column; justify-content: flex-end;
-      padding: 0 4rem 5rem; max-width: 900px;
-    }
-    .hero-cat {
-      display: inline-flex; align-items: center; gap: 1rem;
-      margin-bottom: 1.75rem;
-      opacity: 0; animation: fadeUp 0.9s 0.2s var(--ease) forwards;
-    }
-    .hero-cat-label {
-      font-family: var(--mono); font-size: 0.58rem;
-      letter-spacing: 0.28em; text-transform: uppercase; color: var(--amber);
-    }
-    .hero-cat-line { width: 40px; height: 1px; background: rgba(200,131,42,0.4); }
-    .hero-cat-sub {
-      font-family: var(--mono); font-size: 0.55rem;
-      letter-spacing: 0.2em; text-transform: uppercase;
-      color: rgba(245,242,236,0.3);
-    }
-    .hero-title {
-      font-family: var(--serif);
-      font-size: clamp(3.2rem, 7vw, 7rem);
-      font-weight: 300; line-height: 0.9;
-      letter-spacing: -0.02em; color: var(--snow);
-      margin-bottom: 2rem;
-      opacity: 0; animation: fadeUp 1s 0.4s var(--ease) forwards;
-    }
-    .hero-title em { font-style: italic; color: var(--amber-light); }
-    .hero-meta-row {
-      display: flex; flex-wrap: wrap; align-items: center; gap: 2rem;
-      opacity: 0; animation: fadeUp 0.9s 0.6s var(--ease) forwards;
-    }
-    .hero-meta-item { display: flex; flex-direction: column; gap: 0.2rem; }
-    .hero-meta-val {
-      font-family: var(--mono); font-size: 0.72rem;
-      letter-spacing: 0.08em; color: var(--snow);
-    }
-    .hero-meta-key {
-      font-family: var(--mono); font-size: 0.5rem;
-      letter-spacing: 0.2em; text-transform: uppercase;
-      color: rgba(245,242,236,0.3);
-    }
-    .hero-meta-sep { width: 1px; height: 32px; background: var(--border); }
-    .hero-scroll-hint {
-      position: absolute; bottom: 2.5rem; right: 4rem; z-index: 10;
-      display: flex; flex-direction: column; align-items: center; gap: 0.6rem;
-      opacity: 0; animation: fadeUp 1s 1s var(--ease) forwards;
-    }
-    .hero-scroll-hint span {
-      font-family: var(--mono); font-size: 0.5rem;
-      letter-spacing: 0.25em; text-transform: uppercase;
-      color: rgba(245,242,236,0.25); writing-mode: vertical-rl;
-    }
-    .scroll-line {
-      width: 1px; height: 50px;
-      background: linear-gradient(to bottom, rgba(200,131,42,0.6), transparent);
-      animation: scrollPulse 2s infinite;
-    }
-    @keyframes scrollPulse {
-      0%, 100% { transform: scaleY(1); opacity: 1; }
-      50% { transform: scaleY(0.6); opacity: 0.4; }
-    }
-    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
-    .hero-content > * { transform: translateY(20px); }
-
-    /* ── MARQUEE ── */
-    .marquee-bar {
-      background: var(--bark2); overflow: hidden; padding: 0.75rem 0;
-      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
-    }
-    .marquee-track { display: flex; width: max-content; animation: marqueeAnim 35s linear infinite; }
-    .marquee-item {
-      display: flex; align-items: center; gap: 0.75rem; padding: 0 1.75rem;
-      font-family: var(--mono); font-size: 0.55rem;
-      letter-spacing: 0.2em; text-transform: uppercase;
-      color: rgba(245,242,236,0.2); white-space: nowrap;
-    }
-    .marquee-sep { color: var(--amber); font-size: 0.3rem; }
-    @keyframes marqueeAnim { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-
-    /* ── LAYOUT ── */
-    .page-layout {
-      max-width: 1340px; margin: 0 auto;
-      display: grid; grid-template-columns: 1fr 320px;
-      gap: 0; padding: 0;
-    }
-    @media (max-width: 1100px) { .page-layout { grid-template-columns: 1fr; } }
-
-    /* ── ARTICLE ── */
-    .article-main {
-      border-right: 1px solid var(--border);
-      padding: 5rem 5rem 6rem 4rem;
-    }
-    @media (max-width: 1100px) { .article-main { border-right: none; padding: 3rem 1.5rem; } }
-
-    /* Lead */
-    .article-lead {
-      margin-bottom: 4rem; padding-bottom: 4rem;
-      border-bottom: 1px solid var(--border);
-    }
-    .article-lead p {
-      font-family: var(--serif); font-size: clamp(1.2rem, 2vw, 1.55rem);
-      font-weight: 300; color: rgba(245,242,236,0.65);
-      line-height: 1.7; letter-spacing: 0.01em;
-    }
-    .article-share-row {
-      display: flex; align-items: center; gap: 1rem; margin-top: 2rem;
-    }
-    .share-label {
-      font-family: var(--mono); font-size: 0.52rem;
-      letter-spacing: 0.2em; text-transform: uppercase;
-      color: rgba(245,242,236,0.25);
-    }
-    .share-btn {
-      display: flex; align-items: center; gap: 0.4rem;
-      background: rgba(245,242,236,0.04);
-      border: 1px solid var(--border);
-      padding: 0.4rem 0.9rem; cursor: pointer;
-      font-family: var(--mono); font-size: 0.55rem;
-      letter-spacing: 0.15em; text-transform: uppercase;
-      color: rgba(245,242,236,0.35); transition: all 0.3s;
-    }
-    .share-btn:hover {
-      background: rgba(200,131,42,0.08);
-      border-color: rgba(200,131,42,0.3); color: var(--amber-light);
-    }
-
-    /* Content typography */
-    .article-content { font-size: 1rem; line-height: 1.9; color: rgba(245,242,236,0.7); }
-
-    .article-content h2 {
-      font-family: var(--serif);
-      font-size: clamp(2rem, 3.5vw, 3rem);
-      font-weight: 300; color: var(--snow);
-      line-height: 1.05; letter-spacing: -0.02em;
-      margin: 4rem 0 1.5rem;
-      padding-top: 1rem;
-      border-top: 1px solid var(--border);
-    }
-    .article-content h2 em { font-style: italic; color: var(--amber-light); }
-
-    .article-content h3 {
-      font-family: var(--serif); font-size: 1.6rem; font-weight: 400;
-      color: rgba(245,242,236,0.9); margin: 2.5rem 0 0.875rem;
-    }
-
-    .article-content p { margin-bottom: 1.5rem; font-size: 1rem; }
-    @media (min-width: 768px) { .article-content p { font-size: 1.05rem; } }
-
-    .article-content strong { font-weight: 600; color: var(--snow); }
-
-    .article-content ul, .article-content ol {
-      margin: 0 0 1.75rem 0; display: flex; flex-direction: column; gap: 0.6rem;
-    }
-    .article-content li {
-      padding-left: 1.75rem; position: relative;
-      font-size: 1rem; color: rgba(245,242,236,0.65);
-    }
-    .article-content ul li::before {
-      content: '◆'; position: absolute; left: 0;
-      color: var(--amber); font-size: 0.4rem; top: 0.45em;
-    }
-    .article-content ol { counter-reset: ol-counter; }
-    .article-content ol li { counter-increment: ol-counter; }
-    .article-content ol li::before {
-      content: counter(ol-counter, decimal-leading-zero);
-      position: absolute; left: 0;
-      font-family: var(--mono); font-size: 0.6rem;
-      color: var(--amber); letter-spacing: 0.05em; top: 0.35em;
-    }
-
-    .article-content a { color: var(--amber-light); border-bottom: 1px solid rgba(200,131,42,0.3); padding-bottom: 1px; transition: border-color 0.3s; }
-    .article-content a:hover { border-color: var(--amber-light); }
-
-    /* Blockquote */
-    .article-content blockquote {
-      position: relative; margin: 3rem 0;
-      padding: 2.5rem 2.5rem 2rem;
-      background: rgba(200,131,42,0.04);
-      border-left: 2px solid var(--amber);
-    }
-    .article-content blockquote::before {
-      content: '"'; position: absolute; top: -0.5rem; left: 1.5rem;
-      font-family: var(--serif); font-size: 5rem; line-height: 1;
-      color: var(--amber); opacity: 0.25;
-    }
-    .article-content blockquote p {
-      font-family: var(--serif); font-size: 1.25rem; font-weight: 300;
-      font-style: italic; color: rgba(245,242,236,0.8);
-      line-height: 1.6; margin: 0;
-    }
-    .article-content blockquote cite {
-      display: block; margin-top: 1.25rem;
-      font-family: var(--mono); font-size: 0.58rem;
-      letter-spacing: 0.15em; text-transform: uppercase;
-      color: rgba(245,242,236,0.3); font-style: normal;
-    }
-    .article-content blockquote cite::before { content: '— '; color: var(--amber); }
-
-    /* Info boxes */
-    .info-box {
-      padding: 1.75rem 2rem; margin: 2.5rem 0;
-      border: 1px solid var(--border);
-      position: relative; overflow: hidden;
-    }
-    .info-box::before {
-      content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px;
-    }
-    .info-box.tip { background: rgba(200,131,42,0.05); }
-    .info-box.tip::before { background: var(--amber); }
-    .info-box.warning { background: rgba(200,60,40,0.05); border-color: rgba(200,60,40,0.15); }
-    .info-box.warning::before { background: #c03c28; }
-    .info-box.note { background: var(--mist); }
-    .info-box.note::before { background: rgba(245,242,236,0.15); }
-    .info-box-title {
-      font-family: var(--mono); font-size: 0.58rem;
-      letter-spacing: 0.28em; text-transform: uppercase;
-      margin-bottom: 0.75rem;
-    }
-    .info-box.tip .info-box-title { color: var(--amber); }
-    .info-box.warning .info-box-title { color: #e06050; }
-    .info-box.note .info-box-title { color: rgba(245,242,236,0.4); }
-    .info-box p {
-      font-size: 0.9rem; line-height: 1.75; color: rgba(245,242,236,0.6); margin: 0;
-    }
-    .info-box strong { color: rgba(245,242,236,0.9); }
-
-    /* Itinerary */
-    .itinerary { margin: 2.5rem 0; }
-    .itinerary-day {
-      display: flex; gap: 1.5rem;
-      padding: 1.5rem 0; border-bottom: 1px solid var(--border);
-      transition: background 0.3s;
-    }
-    .itinerary-day:last-child { border-bottom: none; }
-    .itinerary-day:hover { background: rgba(245,242,236,0.015); }
-    .day-badge {
-      flex-shrink: 0; width: 52px; height: 52px;
-      background: rgba(200,131,42,0.08);
-      border: 1px solid rgba(200,131,42,0.2);
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center; gap: 0;
-    }
-    .day-badge span:first-child {
-      font-family: var(--mono); font-size: 0.42rem;
-      letter-spacing: 0.2em; text-transform: uppercase; color: var(--amber); opacity: 0.8;
-    }
-    .day-badge span:last-child {
-      font-family: var(--serif); font-size: 1.4rem; font-weight: 300;
-      color: var(--snow); line-height: 1.1;
-    }
-    .day-info { flex: 1; }
-    .day-title {
-      font-family: var(--serif); font-size: 1.15rem; font-weight: 400;
-      color: var(--snow); margin-bottom: 0.4rem; line-height: 1.3;
-    }
-    .day-desc {
-      font-size: 0.85rem; color: rgba(245,242,236,0.45);
-      line-height: 1.7; margin-bottom: 0.6rem;
-    }
-    .day-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-    .day-tag {
-      font-family: var(--mono); font-size: 0.52rem;
-      letter-spacing: 0.12em; text-transform: uppercase;
-      color: rgba(245,242,236,0.3);
-      background: rgba(245,242,236,0.04);
-      border: 1px solid var(--border);
-      padding: 0.2rem 0.6rem;
-    }
-    .day-tag.highlight {
-      color: var(--amber-light);
-      background: rgba(200,131,42,0.07);
-      border-color: rgba(200,131,42,0.2);
-    }
-
-    /* Cost table */
-    .cost-table-wrap { margin: 2.5rem 0; overflow-x: auto; }
-    .cost-table { width: 100%; border-collapse: collapse; }
-    .cost-table th {
-      text-align: left; padding: 0.875rem 1.25rem;
-      font-family: var(--mono); font-size: 0.55rem;
-      letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--amber); border-bottom: 1px solid rgba(200,131,42,0.2);
-      white-space: nowrap;
-    }
-    .cost-table td {
-      padding: 1rem 1.25rem; font-size: 0.88rem;
-      border-bottom: 1px solid var(--border);
-      color: rgba(245,242,236,0.6); vertical-align: middle;
-    }
-    .cost-table tr:nth-child(even) td { background: rgba(245,242,236,0.02); }
-    .cost-table tr:last-child td {
-      font-weight: 600; color: var(--snow);
-      border-bottom: none;
-      border-top: 1px solid rgba(200,131,42,0.2);
-      background: rgba(200,131,42,0.05);
-    }
-    .cost-table td:first-child { color: rgba(245,242,236,0.85); }
-    .col-highlight { color: var(--amber-light) !important; }
-
-    /* Section divider */
-    .section-rule {
-      display: flex; align-items: center; gap: 1.5rem;
-      margin: 4rem 0; color: rgba(245,242,236,0.1);
-    }
-    .section-rule::before, .section-rule::after {
-      content: ''; flex: 1; height: 1px; background: currentColor;
-    }
-    .section-rule-diamond {
-      width: 6px; height: 6px; background: var(--amber);
-      transform: rotate(45deg); flex-shrink: 0;
-    }
-
-    /* ── SIDEBAR ── */
-    .article-sidebar { padding: 5rem 2.5rem 4rem; }
-    @media (max-width: 1100px) {
-      .article-sidebar {
-        padding: 0 1.5rem 3rem;
-        border-top: 1px solid var(--border);
-      }
-    }
-    .sidebar-sticky { position: sticky; top: 7rem; display: flex; flex-direction: column; gap: 1.5rem; }
-
-    .sidebar-widget {
-      border: 1px solid var(--border);
-      background: rgba(245,242,236,0.02);
-      padding: 1.75rem;
-    }
-    .widget-title {
-      font-family: var(--mono); font-size: 0.55rem;
-      letter-spacing: 0.28em; text-transform: uppercase;
-      color: var(--amber); opacity: 0.8;
-      margin-bottom: 1.25rem;
-      padding-bottom: 0.875rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    /* Quick facts */
-    .fact-row {
-      display: flex; align-items: center; gap: 0.875rem;
-      padding: 0.75rem 0; border-bottom: 1px solid var(--border);
-    }
-    .fact-row:last-child { border-bottom: none; }
-    .fact-icon { color: var(--amber); opacity: 0.7; flex-shrink: 0; }
-    .fact-label {
-      font-family: var(--mono); font-size: 0.5rem;
-      letter-spacing: 0.18em; text-transform: uppercase;
-      color: rgba(245,242,236,0.28); margin-bottom: 0.15rem;
-    }
-    .fact-val { font-size: 0.9rem; font-weight: 500; color: var(--snow); }
-
-    /* TOC */
-    .toc-list { display: flex; flex-direction: column; gap: 0; }
-    .toc-item {
-      display: flex; align-items: center; gap: 0.75rem;
-      padding: 0.55rem 0; border-bottom: 1px solid rgba(245,242,236,0.04);
-    }
-    .toc-item:last-child { border-bottom: none; }
-    .toc-item a {
-      font-size: 0.8rem; color: rgba(245,242,236,0.38);
-      transition: color 0.3s; flex: 1; line-height: 1.4;
-    }
-    .toc-item a:hover { color: var(--amber-light); }
-    .toc-num {
-      font-family: var(--mono); font-size: 0.5rem;
-      color: rgba(200,131,42,0.4); flex-shrink: 0;
-    }
-
-    /* CTA widget */
-    .cta-widget {
-      background: var(--amber);
-      padding: 2rem; text-align: center;
-      position: relative; overflow: hidden;
-    }
-    .cta-widget::before {
-      content: ''; position: absolute; top: -30px; right: -30px;
-      width: 100px; height: 100px; border-radius: 50%;
-      background: rgba(255,255,255,0.08);
-    }
-    .cta-widget h3 {
-      font-family: var(--serif); font-size: 1.8rem; font-weight: 300;
-      color: var(--obsidian); line-height: 1.1; margin-bottom: 0.6rem;
-    }
-    .cta-widget p {
-      font-size: 0.78rem; color: rgba(13,12,10,0.65); line-height: 1.6; margin-bottom: 1.5rem;
-    }
-    .btn-cta {
-      display: block; background: var(--obsidian); color: var(--snow);
-      padding: 0.85rem 1.5rem; text-align: center;
-      font-family: var(--mono); font-size: 0.62rem;
-      letter-spacing: 0.2em; text-transform: uppercase;
-      transition: background 0.3s; clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 100%, 0 100%);
-    }
-    .btn-cta:hover { background: #1a1814; }
-    .cta-price {
-      font-family: var(--serif); font-size: 2.4rem; font-weight: 300;
-      color: var(--obsidian); display: block; line-height: 1;
-      margin-bottom: 0.25rem;
-    }
-    .cta-price-label {
-      font-family: var(--mono); font-size: 0.52rem;
-      letter-spacing: 0.18em; color: rgba(13,12,10,0.55);
-      text-transform: uppercase; margin-bottom: 1.25rem; display: block;
-    }
-
-    /* ── RELATED POSTS ── */
-    .related-section {
-      background: var(--bark2);
-      border-top: 1px solid var(--border);
-      padding: 5rem 4rem;
-    }
-    @media (max-width: 768px) { .related-section { padding: 4rem 1.5rem; } }
-    .related-header { margin-bottom: 3rem; }
-    .eyebrow {
-      font-family: var(--mono); font-size: 0.6rem;
-      letter-spacing: 0.3em; text-transform: uppercase;
-      color: var(--amber); opacity: 0.8; display: block; margin-bottom: 0.75rem;
-    }
-    .related-header h2 {
-      font-family: var(--serif); font-size: clamp(2.2rem, 4vw, 3.5rem);
-      font-weight: 300; color: var(--snow); line-height: 1; letter-spacing: -0.02em;
-    }
-    .related-header h2 em { font-style: italic; color: var(--amber-light); }
-    .related-grid {
-      max-width: 1340px; margin: 0 auto;
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
-      background: var(--border);
-    }
-    @media (max-width: 768px) { .related-grid { grid-template-columns: 1fr; } }
-    .related-card { background: var(--bark2); display: block; transition: background 0.4s; }
-    .related-card:hover { background: var(--bark); }
-    .related-img-wrap { position: relative; aspect-ratio: 16/9; overflow: hidden; }
-    .related-img {
-      width: 100%; height: 100%; object-fit: cover;
-      filter: brightness(0.45) saturate(0.7);
-      transition: transform 1.5s var(--ease), filter 0.8s;
-    }
-    .related-card:hover .related-img { transform: scale(1.06); filter: brightness(0.6); }
-    .related-body { padding: 1.5rem 1.75rem 2rem; }
-    .related-cat {
-      font-family: var(--mono); font-size: 0.52rem;
-      letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--amber); opacity: 0.8; display: block; margin-bottom: 0.5rem;
-    }
-    .related-title {
-      font-family: var(--serif); font-size: 1.25rem; font-weight: 400;
-      color: var(--snow); line-height: 1.25;
-    }
-    .related-card:hover .related-title { color: var(--amber-light); }
-    .related-arrow {
-      display: flex; align-items: center; gap: 0.5rem;
-      margin-top: 1rem;
-      font-family: var(--mono); font-size: 0.55rem;
-      letter-spacing: 0.15em; text-transform: uppercase;
-      color: rgba(245,242,236,0.25); transition: color 0.3s, gap 0.3s;
-    }
-    .related-card:hover .related-arrow { color: var(--amber); gap: 0.85rem; }
-
-    /* ── FOOTER ── */
-    footer {
-      background: var(--obsidian);
-      border-top: 1px solid var(--border);
-      padding: 3rem 4rem;
-    }
-    @media (max-width: 768px) { footer { padding: 2.5rem 1.5rem; } }
-    .footer-inner {
-      max-width: 1340px; margin: 0 auto;
-      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
-    }
-    .footer-copy {
-      font-family: var(--mono); font-size: 0.58rem;
-      letter-spacing: 0.12em; color: rgba(245,242,236,0.2);
-    }
-    .footer-copy a { color: rgba(245,242,236,0.35); transition: color 0.3s; }
-    .footer-copy a:hover { color: var(--amber-light); }
-    .footer-links { display: flex; gap: 2rem; }
-    .footer-links a {
-      font-family: var(--mono); font-size: 0.58rem;
-      letter-spacing: 0.15em; text-transform: uppercase;
-      color: rgba(245,242,236,0.25); transition: color 0.3s;
-    }
-    .footer-links a:hover { color: var(--amber-light); }
-
-    /* ── WHATSAPP ── */
-    .wa-float {
-      position: fixed; bottom: 2rem; right: 2rem; z-index: 500;
-      width: 50px; height: 50px; border-radius: 50%;
-      background: #25D366; color: #fff;
-      display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 6px 24px rgba(37,211,102,0.3);
-      transition: transform 0.4s var(--ease), box-shadow 0.4s;
-    }
-    .wa-float:hover { transform: scale(1.1); box-shadow: 0 10px 36px rgba(37,211,102,0.45); }
-
-    /* ── REVEAL ── */
-    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
-    .reveal.in { opacity: 1; transform: none; }
-    .reveal.d1 { transition-delay: 0.1s; }
-    .reveal.d2 { transition-delay: 0.2s; }
-    .reveal.d3 { transition-delay: 0.3s; }
-
-    /* ── READING PROGRESS ── */
-    .reading-progress {
-      position: fixed; top: 0; left: 0; right: 0; height: 2px;
-      background: rgba(245,242,236,0.06); z-index: 1000;
-    }
-    .reading-progress-fill { height: 100%; background: var(--amber); width: 0%; transition: width 0.1s linear; }
-  </style>
-</head>
-<body>
-
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-ring" id="cursorRing"></div>
-
-  <!-- Reading Progress -->
-  <div class="reading-progress"><div class="reading-progress-fill" id="readingFill"></div></div>
-
-  <!-- WhatsApp -->
-  <a href="https://wa.me/9779811157421" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-  </a>
-
-  <!-- NAV -->
-  <nav id="navbar">
-    <a href="/" class="nav-logo">
-      <svg width="32" height="32" viewBox="0 0 40 40" fill="none">
-        <path d="M20 4 L4 36 L36 36 Z" stroke="rgba(200,131,42,0.7)" stroke-width="1.2" fill="none"/>
-        <path d="M20 4 L12 36 L20 30 Z" fill="rgba(200,131,42,0.22)"/>
-        <path d="M20 4 L20 30 L28 36 Z" fill="rgba(200,131,42,0.12)"/>
-        <circle cx="20" cy="4" r="1.8" fill="rgba(200,131,42,0.9)"/>
-      </svg>
-      <div class="nav-logo-text">Beyond Summit<em>Expeditions · Nepal</em></div>
-    </a>
-    <div class="nav-right">
-      <div class="nav-links">
-        <a href="/expeditions">Expeditions</a>
-        <a href="/trekking">Trekking</a>
-        <a href="/guides">Guides</a>
-      </div>
-      <a href="/blog" class="nav-back">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
-        All Articles
-      </a>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <div class="article-hero">
-    <img class="hero-img"
-      src="/assets/everestbasecamp.png"
-      alt="Khumbu Valley trail leading to Everest Base Camp at sunrise"
-      loading="eager">
-    <div class="hero-vignette"></div>
-    <div class="hero-altitude-deco"></div>
-    <div class="hero-content">
-      <div class="hero-cat">
-        <span class="hero-cat-label">Trekking Guide</span>
-        <span class="hero-cat-line"></span>
-        <span class="hero-cat-sub">Updated February 2026 · 12 min read</span>
-      </div>
-      <h1 class="hero-title">
-        Everest <em>Base Camp</em><br>Trek 2026
-      </h1>
-      <div class="hero-meta-row">
-        <div class="hero-meta-item">
-          <span class="hero-meta-val">14 Days</span>
-          <span class="hero-meta-key">Duration</span>
-        </div>
-        <div class="hero-meta-sep"></div>
-        <div class="hero-meta-item">
-          <span class="hero-meta-val">5,550 m</span>
-          <span class="hero-meta-key">Max Altitude</span>
-        </div>
-        <div class="hero-meta-sep"></div>
-        <div class="hero-meta-item">
-          <span class="hero-meta-val">~130 km</span>
-          <span class="hero-meta-key">Total Distance</span>
-        </div>
-        <div class="hero-meta-sep"></div>
-        <div class="hero-meta-item">
-          <span class="hero-meta-val">From $1,650</span>
-          <span class="hero-meta-key">Per Person</span>
-        </div>
-      </div>
-    </div>
-    <div class="hero-scroll-hint">
-      <div class="scroll-line"></div>
-      <span>Scroll</span>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Everest Base Camp Trek: 14-Day Itinerary, Map &amp; Cost 2026</title>
+<meta name="description" content="Day-by-day Everest Base Camp trek itinerary with route map and altitude profile. 14 days from Lukla via Namche, Tengboche and Kala Patthar (5,644 m). Small groups, from US$1,650.">
+<link rel="canonical" href="https://www.beyondsummitexped.com/articles/everest-blog-new.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Beyond Summit Expeditions">
+<meta property="og:title" content="Everest Base Camp Trek: 14-Day Itinerary, Map &amp; Cost 2026">
+<meta property="og:description" content="Day-by-day Everest Base Camp trek itinerary with route map and altitude profile. 14 days from Lukla via Namche, Tengboche and Kala Patthar (5,644 m). Small groups, from US$1,650.">
+<meta property="og:url" content="https://www.beyondsummitexped.com/articles/everest-blog-new.html">
+<meta property="og:image" content="https://www.beyondsummitexped.com/images/places/everest-nuptse-1600.webp">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f1f3ee" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d1310" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/geist-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="/images/places/everest-nuptse-1024.webp" imagesrcset="/images/places/everest-nuptse-640.webp 640w, /images/places/everest-nuptse-1024.webp 1024w, /images/places/everest-nuptse-1600.webp 1600w" imagesizes="100vw" fetchpriority="high">
+<link rel="stylesheet" href="/css/site.css?v=2">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="di3Rvm0gqVdeUF9iTgLxQQ" async></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TravelAgency","@id":"https://www.beyondsummitexped.com/#organization","name":"Beyond Summit Expeditions","url":"https://www.beyondsummitexped.com/","logo":"https://www.beyondsummitexped.com/favicon.svg","image":"https://www.beyondsummitexped.com/images/web/hero-1600.webp","description":"Small-group trekking and mountaineering company in Thamel, Kathmandu, licensed by the Department of Tourism, Government of Nepal.","telephone":"+9779811157421","email":"info@beyondsummitexped.com","priceRange":"$$","address":{"@type":"PostalAddress","streetAddress":"Thamel","addressLocality":"Kathmandu","postalCode":"44600","addressCountry":"NP"},"areaServed":{"@type":"Country","name":"Nepal"},"sameAs":["https://www.instagram.com/beyondsummitexpeditions","https://www.facebook.com/beyondsummitexped","https://www.youtube.com/@beyondsummitexpeditions"],"founder":{"@type":"Person","name":"Elwin Tamang"},"memberOf":[{"@type":"Organization","name":"Trekking Agencies' Association of Nepal","alternateName":"TAAN","url":"https://www.taan.org.np/"},{"@type":"Organization","name":"Nepal Mountaineering Association","alternateName":"NMA","url":"https://www.nepalmountaineering.org/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.beyondsummitexped.com/"},{"@type":"ListItem","position":2,"name":"Treks","item":"https://www.beyondsummitexped.com/trekking.html"},{"@type":"ListItem","position":3,"name":"Everest Base Camp"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TouristTrip","name":"Everest Base Camp Trek","description":"Day-by-day Everest Base Camp trek itinerary with route map and altitude profile. 14 days from Lukla via Namche, Tengboche and Kala Patthar (5,644 m). Small groups, from US$1,650.","url":"https://www.beyondsummitexped.com/articles/everest-blog-new.html","image":"https://www.beyondsummitexped.com/images/places/everest-nuptse-1600.webp","touristType":"Trekkers","provider":{"@id":"https://www.beyondsummitexped.com/#organization"},"itinerary":{"@type":"ItemList","numberOfItems":14,"itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"TouristAttraction","name":"Day 1: Fly to Lukla, walk to Phakding","description":"A 35-minute mountain flight to Lukla (in spring and autumn most Lukla flights leave from Ramechhap, a four-hour drive from Kathmandu). An easy walk downhill along the Dudh Koshi to Phakding."}},{"@type":"ListItem","position":2,"item":{"@type":"TouristAttraction","name":"Day 2: Phakding to Namche Bazaar","description":"Into Sagarmatha National Park at Monjo, then across the high Hillary Suspension Bridge and a long climb to Namche. On a clear day you get a first look at Everest halfway up the hill."}},{"@type":"ListItem","position":3,"item":{"@type":"TouristAttraction","name":"Day 3: Rest day in Namche","description":"Climb high, sleep low: a short hike to the Hotel Everest View (3,880 m) for views of Everest, Lhotse and Ama Dablam, then back to Namche for the night."}},{"@type":"ListItem","position":4,"item":{"@type":"TouristAttraction","name":"Day 4: Namche to Tengboche","description":"A balcony trail with Ama Dablam ahead, a drop to the river at Phunki Tenga and a steady climb through rhododendron forest to Tengboche Monastery in time for afternoon prayers."}},{"@type":"ListItem","position":5,"item":{"@type":"TouristAttraction","name":"Day 5: Tengboche to Dingboche","description":"Past the old gompa at Pangboche and above the tree line into the Imja valley. Dingboche is a village of stone-walled potato fields below Lhotse and Island Peak."}},{"@type":"ListItem","position":6,"item":{"@type":"TouristAttraction","name":"Day 6: Rest day in Dingboche","description":"A slow climb up the ridge behind the village towards Nangkartshang (around 5,080 m). Makalu, the world's fifth-highest peak, comes into view on a clear morning."}},{"@type":"ListItem","position":7,"item":{"@type":"TouristAttraction","name":"Day 7: Dingboche to Lobuche","description":"Up the open Pheriche valley, then a steep pull onto the Khumbu moraine at Thukla, where stone memorials remember climbers who died on Everest."}},{"@type":"ListItem","position":8,"item":{"@type":"TouristAttraction","name":"Day 8: Lobuche to Everest Base Camp","description":"Along the glacier to Gorak Shep for lunch, then out across the rubble to Everest Base Camp at 5,364 m, beside the Khumbu Icefall. Back to Gorak Shep for the night."}},{"@type":"ListItem","position":9,"item":{"@type":"TouristAttraction","name":"Day 9: Kala Patthar at sunrise, down to Pheriche","description":"An early start for the climb to Kala Patthar (5,644 m), the trek's high point and the classic view of Everest's summit. Breakfast at Gorak Shep, then a long descent to Pheriche."}},{"@type":"ListItem","position":10,"item":{"@type":"TouristAttraction","name":"Day 10: Pheriche to Namche Bazaar","description":"Back down the valley through Pangboche and over the Tengboche ridge. Thicker air makes the miles go quickly."}},{"@type":"ListItem","position":11,"item":{"@type":"TouristAttraction","name":"Day 11: Namche to Lukla","description":"The last day on foot, retracing the river trail to Lukla. An evening to thank the porters and guide."}},{"@type":"ListItem","position":12,"item":{"@type":"TouristAttraction","name":"Day 12: Fly back to Kathmandu","description":"Morning flight to Kathmandu or Ramechhap, then hotel."}},{"@type":"ListItem","position":13,"item":{"@type":"TouristAttraction","name":"Day 13: Spare day in Kathmandu","description":"Lukla flights are often delayed by cloud, so we keep a spare day. If you don't need it, we can arrange a guided visit to Boudhanath and Patan."}},{"@type":"ListItem","position":14,"item":{"@type":"TouristAttraction","name":"Day 14: Departure","description":"We drive you to Tribhuvan International Airport in good time for your flight home."}}]},"offers":{"@type":"Offer","price":1650,"priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://www.beyondsummitexped.com/articles/everest-blog-new.html","seller":{"@id":"https://www.beyondsummitexped.com/#organization"}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How hard is the Everest Base Camp trek?","acceptedAnswer":{"@type":"Answer","text":"There is no climbing, but you walk five to seven hours a day for twelve days and sleep above 4,000 m for six nights. Anyone who can hike a full day in hills at home and trains for two or three months beforehand can do it. Altitude, not fitness, is what stops most people, which is why we build in two rest days."}},{"@type":"Question","name":"Do Lukla flights really leave from Ramechhap?","acceptedAnswer":{"@type":"Answer","text":"In the busy months (roughly April to May and October to November) Nepal's aviation authority routes most Kathmandu to Lukla flights through Manthali airport in Ramechhap to ease congestion. That means a 4 to 5 hour drive before dawn. We arrange the transport and keep a spare day at the end for weather delays."}},{"@type":"Question","name":"Do I need a guide?","acceptedAnswer":{"@type":"Answer","text":"Since 2023 Nepal requires foreign trekkers in national parks to walk with a licensed guide from a registered agency. All our treks include one."}},{"@type":"Question","name":"What insurance do I need?","acceptedAnswer":{"@type":"Answer","text":"A policy that covers trekking up to 6,000 m and helicopter evacuation. Rescue from Gorak Shep by helicopter costs several thousand US dollars without it."}},{"@type":"Question","name":"Can I charge my phone and use Wi-Fi?","acceptedAnswer":{"@type":"Answer","text":"Yes, most tea houses sell charging and Wi-Fi by the hour, and many villages have mobile signal. Prices rise with altitude, so bring a power bank."}}]}</script>
+</head><body class="has-photo-hero is-trip">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header" id="header">
+  <div class="wrap header-inner">
+    <a href="/" class="brand" aria-label="Beyond Summit Expeditions, home"><svg class="logo-mark" viewBox="-1.5 -1.5 88 59" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M45.4 0 47.3 2.3 49.6 4.8 51.6 8.5 52.9 13.6 54.2 17.2 56.1 19.6 58.6 24.7 55.9 23.9 53.9 17.8 51.8 16.5 49.7 14.1 44.7 11.9 44.5 6.8 45 1.7Z" fill="currentColor" stroke="none" opacity=".9"/><path d="M0 50.8 2.9 46.6 5.1 43.2 7.2 41.3 8.8 38.1 11.2 34.5 12.6 31.5 13.7 30.8 15.2 25.6 17.8 20.7 19.6 17.9 20.5 19.2 21.8 18 23.4 19.9 25 22.3 26.3 21.9 27.7 24 29.5 24.8 30.9 23.9 32.8 19.9 35 17.9 37.2 13.8 39.6 8.9 41.6 5.1 43.4 2.8 45.4 0 47.3 2.3 49.6 4.8 51.6 8.5 52.9 13.6 54.2 17.2 56.1 19.6 58.6 24.7 60.4 26.7 63.3 28.4 67.4 29.1 71.7 27.7 75 29.7 81.3 31.8 85 29.1" stroke-width="1.6" vector-effect="non-scaling-stroke"/><path d="M3.7 55.7 10.2 49.3 12.8 47.9 20.3 39.3 24 38.3 28.3 47.1 36.7 55.7 M52.7 53.4 58.8 48.8 63.6 44.4 66.8 40.5 76.2 38.1 85 29.1" stroke-width="1.15" vector-effect="non-scaling-stroke"/><path d="M45 1.7 44.5 6.8 44.7 11.9 M19 20.9 19.5 27.4 19.6 34.6 20.7 38.9" stroke-width=".9" vector-effect="non-scaling-stroke" opacity=".6"/></svg><span>Beyond Summit<small>Expeditions, Kathmandu</small></span></a>
+    <nav class="nav" aria-label="Main"><a href="/trekking.html" aria-current="page">Treks</a><a href="/expeditions.html">Climbing</a><a href="/outdoor.html">Activities</a><a href="/gallery.html">Gallery</a><a href="/blog.html">Journal</a><a href="/about.html">About</a><a href="/contact.html" class="btn btn-primary">Plan your trip</a></nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span></button>
+  </div>
+</header>
+<nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
+  <a href="/trekking.html">Treks<svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a><a href="/expeditions.html">Climbing<svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a><a href="/outdoor.html">Activities<svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a><a href="/gallery.html">Gallery<svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a><a href="/blog.html">Journal<svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a><a href="/about.html">About<svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a><a href="/guides.html">Our team<svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a><a href="/contact.html">Contact<svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+  <a href="/contact.html" class="btn btn-primary btn-block">Plan your trip</a>
+  <div class="contact-mini"><a href="tel:+9779811157421">+977 981 115 7421</a><a href="mailto:info@beyondsummitexped.com">info@beyondsummitexped.com</a><span>Thamel, Kathmandu 44600, Nepal</span></div>
+</nav>
+<main id="main">
+<section class="photo-hero trip-hero on-photo" aria-labelledby="trip-title">
+  <picture><img src="/images/places/everest-nuptse-1024.webp" srcset="/images/places/everest-nuptse-640.webp 640w, /images/places/everest-nuptse-1024.webp 1024w, /images/places/everest-nuptse-1600.webp 1600w" sizes="100vw" width="1600" height="1130" alt="Everest and Nuptse above the Khumbu Glacier, seen from Kala Patthar" fetchpriority="high" decoding="async"></picture>
+  <div class="wrap hero-in">
+    <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="/">Home</a></li><li><a href="/trekking.html">Treks</a></li><li aria-current="page">Everest Base Camp</li></ol></nav>
+    <h1 id="trip-title">Everest Base Camp Trek</h1>
+    <p class="lede">Two weeks in the Khumbu, from the airstrip at Lukla to the foot of the Khumbu Icefall.</p>
+    <div class="facts-bar">
+      <div><span>Duration</span><strong>14 days</strong></div>
+      <div><span>Max altitude</span><strong>5,644 m</strong></div>
+      <div><span>Grade</span><strong>Challenging</strong></div>
+      <div><span>Group</span><strong>2 to 8</strong></div>
+      <div><span>From</span><strong>US$1,650</strong></div>
     </div>
   </div>
+  <p class="photo-credit">Photo: Vyacheslav Argenberg, <a href="https://commons.wikimedia.org/wiki/File:Everest,_Nuptse,_Khumbu_Glacier,_Nepal,_Himalayas.jpg" rel="noopener" target="_blank">CC BY 4.0</a></p>
+</section>
 
-  <!-- MARQUEE -->
-  <div class="marquee-bar" aria-hidden="true">
-    <div class="marquee-track">
-      <div class="marquee-item">Lukla <span class="marquee-sep">◆</span> 2,860m</div>
-      <div class="marquee-item">Namche Bazaar <span class="marquee-sep">◆</span> 3,440m</div>
-      <div class="marquee-item">Tengboche <span class="marquee-sep">◆</span> 3,867m</div>
-      <div class="marquee-item">Dingboche <span class="marquee-sep">◆</span> 4,410m</div>
-      <div class="marquee-item">Lobuche <span class="marquee-sep">◆</span> 4,940m</div>
-      <div class="marquee-item">Gorak Shep <span class="marquee-sep">◆</span> 5,140m</div>
-      <div class="marquee-item">Base Camp <span class="marquee-sep">◆</span> 5,364m</div>
-      <div class="marquee-item">Kala Patthar <span class="marquee-sep">◆</span> 5,550m</div>
-      <div class="marquee-item">Khumbu Glacier <span class="marquee-sep">◆</span> Sagarmatha NP</div>
-      <div class="marquee-item">Lukla <span class="marquee-sep">◆</span> 2,860m</div>
-      <div class="marquee-item">Namche Bazaar <span class="marquee-sep">◆</span> 3,440m</div>
-      <div class="marquee-item">Tengboche <span class="marquee-sep">◆</span> 3,867m</div>
-      <div class="marquee-item">Dingboche <span class="marquee-sep">◆</span> 4,410m</div>
-      <div class="marquee-item">Lobuche <span class="marquee-sep">◆</span> 4,940m</div>
-      <div class="marquee-item">Gorak Shep <span class="marquee-sep">◆</span> 5,140m</div>
-      <div class="marquee-item">Base Camp <span class="marquee-sep">◆</span> 5,364m</div>
-      <div class="marquee-item">Kala Patthar <span class="marquee-sep">◆</span> 5,550m</div>
+<nav class="trip-nav" aria-label="On this page"><div class="wrap"><ul>
+  <li><a href="#overview">Overview</a></li><li><a href="#route">Route map</a></li><li><a href="#itinerary">Day by day</a></li>
+  <li><a href="#included">What's included</a></li><li><a href="#permits">Permits</a></li><li><a href="#when">When to go</a></li><li><a href="#faq">Questions</a></li>
+</ul></div></nav>
+
+<div class="wrap trip-layout">
+  <div class="trip-main">
+    <section id="overview" aria-labelledby="ov-title">
+      <h2 id="ov-title">About this trek</h2>
+      <p class="lede">This is the classic walk to the foot of Everest. You follow the Dudh Koshi river up through Sherpa villages to Namche Bazaar, past the monastery at Tengboche and onto the moraine of the Khumbu Glacier. We build in two rest days on the way up, and on day nine you climb Kala Patthar at sunrise for the finest view of Everest&#x27;s summit you can get without climbing it.</p>
+      <ul class="highlights"><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Sunrise on Everest from Kala Patthar, 5,644 m</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Standing at Everest Base Camp beside the Khumbu Icefall</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Namche Bazaar, the Sherpa trading town</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Evening prayers at Tengboche Monastery</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Ama Dablam in view for most of the walk</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Two acclimatisation days built in</span></li></ul>
+    </section>
+
+    <section id="route" aria-labelledby="route-title">
+      <h2 id="route-title">Route and altitude</h2>
+      <div class="route">
+        <div class="route-panel"><h3><span>Route map</span><span>about 130 km</span></h3><div class="map"><svg viewBox="0 0 640 420" role="img" aria-label="Route map of the Everest Base Camp Trek"><path class="peak-ref" d="M404.3,79.6 l5.5,9 h-11z"><title>Nuptse, 7,861 m</title></path><path class="peak-ref" d="M380.1,194.2 l5.5,9 h-11z"><title>Ama Dablam, 6,812 m</title></path><path class="peak-ref" d="M310.6,275.7 l5.5,9 h-11z"><title>Thamserku, 6,623 m</title></path><path class="peak-ref" d="M334.5,262.5 l5.5,9 h-11z"><title>Kangtega, 6,782 m</title></path><path class="peak-ref" d="M348.6,28.0 l5.5,9 h-11z"><title>Pumori, 7,161 m</title></path><path class="peak-ref" d="M387.4,357.5 l5.5,9 h-11z"><title>Mera Peak, 6,476 m</title></path><path class="track" d="M255.7,386.0 L238.5,330.8 L235.7,261.6 L247.8,244.9 L235.7,261.6 L288.0,227.5 L312.5,205.9 L351.3,165.2 L355.7,152.2 L351.3,165.2 L331.5,106.2 L349.4,71.0 L368.4,50.5 L349.4,71.0 L348.9,54.7 L349.4,71.0 L331.5,106.2 L340.9,165.3 L312.5,205.9 L288.0,227.5 L235.7,261.6 L238.5,330.8 L255.7,386.0"/><path class="seg" data-i="0" d="M255.7,386.0 L238.5,330.8"/><path class="seg" data-i="1" d="M238.5,330.8 L235.7,261.6"/><path class="seg" data-i="2" d="M235.7,261.6 L247.8,244.9 L235.7,261.6"/><path class="seg" data-i="3" d="M235.7,261.6 L288.0,227.5"/><path class="seg" data-i="4" d="M288.0,227.5 L312.5,205.9 L351.3,165.2"/><path class="seg" data-i="5" d="M351.3,165.2 L355.7,152.2 L351.3,165.2"/><path class="seg" data-i="6" d="M351.3,165.2 L331.5,106.2"/><path class="seg" data-i="7" d="M331.5,106.2 L349.4,71.0 L368.4,50.5 L349.4,71.0"/><path class="seg" data-i="8" d="M349.4,71.0 L348.9,54.7 L349.4,71.0 L331.5,106.2 L340.9,165.3"/><path class="seg" data-i="9" d="M340.9,165.3 L312.5,205.9 L288.0,227.5 L235.7,261.6"/><path class="seg" data-i="10" d="M235.7,261.6 L238.5,330.8 L255.7,386.0"/><circle class="stop" data-i="10" cx="255.7" cy="386.0" r="4"><title>Lukla, 2,860 m</title></circle><circle class="stop" data-i="0" cx="238.5" cy="330.8" r="4"><title>Phakding, 2,610 m</title></circle><circle class="stop" data-i="1" cx="235.7" cy="261.6" r="4"><title>Namche Bazaar, 3,440 m</title></circle><circle class="stop" cx="247.8" cy="244.9" r="4"><title>Hotel Everest View, 3,880 m</title></circle><circle class="stop" data-i="3" cx="288.0" cy="227.5" r="4"><title>Tengboche, 3,867 m</title></circle><circle class="stop" cx="312.5" cy="205.9" r="4"><title>Pangboche, 3,985 m</title></circle><circle class="stop" data-i="4" cx="351.3" cy="165.2" r="4"><title>Dingboche, 4,410 m</title></circle><circle class="stop" cx="355.7" cy="152.2" r="4"><title>Nangkartshang viewpoint, 5,083 m</title></circle><circle class="stop" data-i="6" cx="331.5" cy="106.2" r="4"><title>Lobuche, 4,940 m</title></circle><circle class="stop" data-i="7" cx="349.4" cy="71.0" r="4"><title>Gorak Shep, 5,164 m</title></circle><circle class="stop peak" cx="368.4" cy="50.5" r="5"><title>Everest Base Camp, 5,364 m</title></circle><circle class="stop peak" cx="348.9" cy="54.7" r="5"><title>Kala Patthar, 5,644 m</title></circle><circle class="stop" data-i="8" cx="340.9" cy="165.3" r="4"><title>Pheriche, 4,371 m</title></circle><text x="355.9" y="58.7" text-anchor="start" class="strong">Kala Patthar 5,644 m</text><text x="262.7" y="390.0" text-anchor="start" class="strong">Lukla</text><text x="368.4" y="41.5" text-anchor="middle" class="">Everest Base Camp</text><text x="245.5" y="334.8" text-anchor="start" class="">Phakding</text><text x="242.7" y="265.6" text-anchor="start" class="">Namche Bazaar</text><text x="295.0" y="231.5" text-anchor="start" class="">Tengboche</text><text x="358.3" y="169.2" text-anchor="start" class="">Dingboche</text><text x="338.5" y="110.2" text-anchor="start" class="">Lobuche</text><text x="356.4" y="75.0" text-anchor="start" class="">Gorak Shep</text><text x="333.9" y="169.3" text-anchor="end" class="">Pheriche</text><text x="254.8" y="248.9" text-anchor="start" class="">Hotel Everest View</text><text x="319.5" y="209.9" text-anchor="start" class="">Pangboche</text><text x="362.7" y="156.2" text-anchor="start" class="">Nangkartshang viewpoint</text><text x="411.3" y="91.6" text-anchor="start" class="peak-name">Nuptse</text><text x="387.1" y="206.2" text-anchor="start" class="peak-name">Ama Dablam</text><text x="317.6" y="287.7" text-anchor="start" class="peak-name">Thamserku</text><text x="341.5" y="274.5" text-anchor="start" class="peak-name">Kangtega</text><text x="348.6" y="27.0" text-anchor="middle" class="peak-name">Pumori</text><text x="394.4" y="369.5" text-anchor="start" class="peak-name">Mera Peak</text><g class="map-scale"><path d="M10,406 V410 H58.6 V406" fill="none" stroke="currentColor" stroke-width="1" style="stroke:var(--ink-3)"/><text x="63.6" y="410" class="map-scale" style="paint-order:normal;stroke:none">5 km</text></g><text x="626" y="22" class="north" text-anchor="middle" style="paint-order:normal;stroke:none">N</text><path d="M626,26 l-4,10 h8z" style="fill:var(--ink-3)"/></svg></div></div>
+        <div class="route-panel"><h3><span>Altitude, day by day</span><span>Max 5,644 m</span></h3><div class="profile profile-wrap"><svg viewBox="0 0 640 220" role="img" aria-label="Altitude profile: overnight altitude each day, highest 5,644 m at Kala Patthar"><line class="grid" x1="44" x2="628" y1="194.0" y2="194.0"/><text class="axis" x="38" y="197.5" text-anchor="end">0</text><line class="grid" x1="44" x2="628" y1="165.7" y2="165.7"/><text class="axis" x="38" y="169.2" text-anchor="end">1,000</text><line class="grid" x1="44" x2="628" y1="137.3" y2="137.3"/><text class="axis" x="38" y="140.8" text-anchor="end">2,000</text><line class="grid" x1="44" x2="628" y1="109.0" y2="109.0"/><text class="axis" x="38" y="112.5" text-anchor="end">3,000</text><line class="grid" x1="44" x2="628" y1="80.7" y2="80.7"/><text class="axis" x="38" y="84.2" text-anchor="end">4,000</text><line class="grid" x1="44" x2="628" y1="52.3" y2="52.3"/><text class="axis" x="38" y="55.8" text-anchor="end">5,000</text><line class="grid" x1="44" x2="628" y1="24.0" y2="24.0"/><text class="axis" x="38" y="27.5" text-anchor="end">6,000</text><path class="area" d="M44,194.0 L44.0,120.0 L92.7,96.5 L141.3,96.5 L190.0,84.4 L238.7,69.0 L287.3,69.0 L336.0,54.0 L384.7,47.7 L433.3,70.2 L482.0,96.5 L530.7,113.0 L579.3,154.3 L628.0,154.3 L628.0,194.0 Z"/><path class="line" d="M44.0,120.0 L92.7,96.5 L141.3,96.5 L190.0,84.4 L238.7,69.0 L287.3,69.0 L336.0,54.0 L384.7,47.7 L433.3,70.2 L482.0,96.5 L530.7,113.0 L579.3,154.3 L628.0,154.3"/><line class="cursor" x1="0" x2="0" y1="24" y2="194"/><circle class="pt" cx="44.0" cy="120.0" r="4"/><text class="axis" x="44.0" y="212" text-anchor="middle">1</text><circle class="pt" cx="92.7" cy="96.5" r="4"/><text class="axis" x="92.7" y="212" text-anchor="middle">2</text><line x1="141.3" x2="141.3" y1="84.1" y2="96.5" style="stroke:var(--ink-3);stroke-width:1;stroke-dasharray:2 2"/><circle class="hi" cx="141.3" cy="84.1" r="4"/><circle class="pt" cx="141.3" cy="96.5" r="4"/><text class="axis" x="141.3" y="212" text-anchor="middle">3</text><circle class="pt" cx="190.0" cy="84.4" r="4"/><text class="axis" x="190.0" y="212" text-anchor="middle">4</text><circle class="pt" cx="238.7" cy="69.0" r="4"/><text class="axis" x="238.7" y="212" text-anchor="middle">5</text><line x1="287.3" x2="287.3" y1="50.0" y2="69.0" style="stroke:var(--ink-3);stroke-width:1;stroke-dasharray:2 2"/><circle class="hi" cx="287.3" cy="50.0" r="4"/><circle class="pt" cx="287.3" cy="69.0" r="4"/><text class="axis" x="287.3" y="212" text-anchor="middle">6</text><circle class="pt" cx="336.0" cy="54.0" r="4"/><text class="axis" x="336.0" y="212" text-anchor="middle">7</text><line x1="384.7" x2="384.7" y1="42.0" y2="47.7" style="stroke:var(--ink-3);stroke-width:1;stroke-dasharray:2 2"/><circle class="hi" cx="384.7" cy="42.0" r="4"/><circle class="pt" cx="384.7" cy="47.7" r="4"/><text class="axis" x="384.7" y="212" text-anchor="middle">8</text><line x1="433.3" x2="433.3" y1="34.1" y2="70.2" style="stroke:var(--ink-3);stroke-width:1;stroke-dasharray:2 2"/><circle class="hi" cx="433.3" cy="34.1" r="4"/><circle class="pt" cx="433.3" cy="70.2" r="4"/><text class="axis" x="433.3" y="212" text-anchor="middle">9</text><circle class="pt" cx="482.0" cy="96.5" r="4"/><text class="axis" x="482.0" y="212" text-anchor="middle">10</text><circle class="pt" cx="530.7" cy="113.0" r="4"/><text class="axis" x="530.7" y="212" text-anchor="middle">11</text><circle class="pt" cx="579.3" cy="154.3" r="4"/><text class="axis" x="579.3" y="212" text-anchor="middle">12</text><circle class="pt" cx="628.0" cy="154.3" r="4"/><text class="axis" x="628.0" y="212" text-anchor="middle">13</text><text class="lbl" x="433.3" y="25.1" text-anchor="end">Kala Patthar 5,644 m</text><text class="axis" x="44" y="14">metres</text><text class="axis" x="628" y="212" text-anchor="end" style="display:none">day</text><rect class="hit" x="19.7" y="24" width="48.7" height="170" data-x="44.0" data-y="120.0" data-day="1" data-tip="&lt;b&gt;Day 1&lt;/b&gt;&lt;br&gt;Sleep: Phakding, 2,610 m" tabindex="0" role="button" aria-label="Day 1: sleep at Phakding, 2,610 m"/><rect class="hit" x="68.3" y="24" width="48.7" height="170" data-x="92.7" data-y="96.5" data-day="2" data-tip="&lt;b&gt;Day 2&lt;/b&gt;&lt;br&gt;Sleep: Namche Bazaar, 3,440 m" tabindex="0" role="button" aria-label="Day 2: sleep at Namche Bazaar, 3,440 m"/><rect class="hit" x="117.0" y="24" width="48.7" height="170" data-x="141.3" data-y="84.1" data-day="3" data-tip="&lt;b&gt;Day 3&lt;/b&gt;&lt;br&gt;Sleep: Namche Bazaar, 3,440 m&lt;br&gt;High point: Hotel Everest View, 3,880 m" tabindex="0" role="button" aria-label="Day 3: sleep at Namche Bazaar, 3,440 m"/><rect class="hit" x="165.7" y="24" width="48.7" height="170" data-x="190.0" data-y="84.4" data-day="4" data-tip="&lt;b&gt;Day 4&lt;/b&gt;&lt;br&gt;Sleep: Tengboche, 3,867 m" tabindex="0" role="button" aria-label="Day 4: sleep at Tengboche, 3,867 m"/><rect class="hit" x="214.3" y="24" width="48.7" height="170" data-x="238.7" data-y="69.0" data-day="5" data-tip="&lt;b&gt;Day 5&lt;/b&gt;&lt;br&gt;Sleep: Dingboche, 4,410 m" tabindex="0" role="button" aria-label="Day 5: sleep at Dingboche, 4,410 m"/><rect class="hit" x="263.0" y="24" width="48.7" height="170" data-x="287.3" data-y="50.0" data-day="6" data-tip="&lt;b&gt;Day 6&lt;/b&gt;&lt;br&gt;Sleep: Dingboche, 4,410 m&lt;br&gt;High point: Nangkartshang viewpoint, 5,083 m" tabindex="0" role="button" aria-label="Day 6: sleep at Dingboche, 4,410 m"/><rect class="hit" x="311.7" y="24" width="48.7" height="170" data-x="336.0" data-y="54.0" data-day="7" data-tip="&lt;b&gt;Day 7&lt;/b&gt;&lt;br&gt;Sleep: Lobuche, 4,940 m" tabindex="0" role="button" aria-label="Day 7: sleep at Lobuche, 4,940 m"/><rect class="hit" x="360.3" y="24" width="48.7" height="170" data-x="384.7" data-y="42.0" data-day="8" data-tip="&lt;b&gt;Day 8&lt;/b&gt;&lt;br&gt;Sleep: Gorak Shep, 5,164 m&lt;br&gt;High point: Everest Base Camp, 5,364 m" tabindex="0" role="button" aria-label="Day 8: sleep at Gorak Shep, 5,164 m"/><rect class="hit" x="409.0" y="24" width="48.7" height="170" data-x="433.3" data-y="34.1" data-day="9" data-tip="&lt;b&gt;Day 9&lt;/b&gt;&lt;br&gt;Sleep: Pheriche, 4,371 m&lt;br&gt;High point: Kala Patthar, 5,644 m" tabindex="0" role="button" aria-label="Day 9: sleep at Pheriche, 4,371 m"/><rect class="hit" x="457.7" y="24" width="48.7" height="170" data-x="482.0" data-y="96.5" data-day="10" data-tip="&lt;b&gt;Day 10&lt;/b&gt;&lt;br&gt;Sleep: Namche Bazaar, 3,440 m" tabindex="0" role="button" aria-label="Day 10: sleep at Namche Bazaar, 3,440 m"/><rect class="hit" x="506.3" y="24" width="48.7" height="170" data-x="530.7" data-y="113.0" data-day="11" data-tip="&lt;b&gt;Day 11&lt;/b&gt;&lt;br&gt;Sleep: Lukla, 2,860 m" tabindex="0" role="button" aria-label="Day 11: sleep at Lukla, 2,860 m"/><rect class="hit" x="555.0" y="24" width="48.7" height="170" data-x="579.3" data-y="154.3" data-day="12" data-tip="&lt;b&gt;Day 12&lt;/b&gt;&lt;br&gt;Sleep: Kathmandu, 1,400 m" tabindex="0" role="button" aria-label="Day 12: sleep at Kathmandu, 1,400 m"/><rect class="hit" x="603.7" y="24" width="48.7" height="170" data-x="628.0" data-y="154.3" data-day="13" data-tip="&lt;b&gt;Day 13&lt;/b&gt;&lt;br&gt;Sleep: Kathmandu, 1,400 m" tabindex="0" role="button" aria-label="Day 13: sleep at Kathmandu, 1,400 m"/></svg><div class="tip" role="status"></div></div><div class="legend-inline"><span><i style="background:var(--accent)"></i>Where you sleep</span><span><i style="border:1.5px solid var(--ink);background:var(--surface)"></i>Highest point that day</span><span>Days along the bottom. Hover or tap for details.</span></div><details class="note"><summary>Show as a table</summary><div class="table-wrap"><table><thead><tr><th>Day</th><th>Overnight</th><th>Altitude</th><th>High point</th></tr></thead><tbody><tr><td>Day 1</td><td>Phakding</td><td>2,610 m</td><td></td></tr><tr><td>Day 2</td><td>Namche Bazaar</td><td>3,440 m</td><td></td></tr><tr><td>Day 3</td><td>Namche Bazaar</td><td>3,440 m</td><td>Hotel Everest View, 3,880 m</td></tr><tr><td>Day 4</td><td>Tengboche</td><td>3,867 m</td><td></td></tr><tr><td>Day 5</td><td>Dingboche</td><td>4,410 m</td><td></td></tr><tr><td>Day 6</td><td>Dingboche</td><td>4,410 m</td><td>Nangkartshang viewpoint, 5,083 m</td></tr><tr><td>Day 7</td><td>Lobuche</td><td>4,940 m</td><td></td></tr><tr><td>Day 8</td><td>Gorak Shep</td><td>5,164 m</td><td>Everest Base Camp, 5,364 m</td></tr><tr><td>Day 9</td><td>Pheriche</td><td>4,371 m</td><td>Kala Patthar, 5,644 m</td></tr><tr><td>Day 10</td><td>Namche Bazaar</td><td>3,440 m</td><td></td></tr><tr><td>Day 11</td><td>Lukla</td><td>2,860 m</td><td></td></tr><tr><td>Day 12</td><td>Kathmandu</td><td>1,400 m</td><td></td></tr><tr><td>Day 13</td><td>Kathmandu</td><td>1,400 m</td><td></td></tr></tbody></table></div></details></div>
+      </div>
+      <p class="note">Route lines join overnight stops and viewpoints in walking order. They are a guide to the shape of the route, not a navigation track.</p>
+    </section>
+
+    <section id="itinerary" aria-labelledby="it-title">
+      <h2 id="it-title">Day by day</h2>
+      <ol class="itin-layout"><li class="day" id="day-1" data-day="0" data-label="Day 1: Fly to Lukla, walk to Phakding">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>1</b></div>
+  <article class="day-card">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 1: </span>Fly to Lukla, walk to Phakding</h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,168a32.06,32.06,0,0,0-31,24H72a32,32,0,0,1,0-64h96a40,40,0,0,0,0-80H72a8,8,0,0,0,0,16h96a24,24,0,0,1,0,48H72a48,48,0,0,0,0,96h97a32,32,0,1,0,31-40Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,200,216Z"/></svg>about 8 km</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg>3 to 4 h</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Sleep 2,610 m</span></div>
+      <p>A 35-minute mountain flight to Lukla (in spring and autumn most Lukla flights leave from Ramechhap, a four-hour drive from Kathmandu). An easy walk downhill along the Dudh Koshi to Phakding.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Tea house, twin room</span><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: L, D</span></div>
     </div>
+    <div class="day-map map"><svg viewBox="0 0 240 170" role="img" aria-label="Map of day 1: Lukla to Phakding"><path class="track" d="M137.2,140.0 L102.8,30.0 L97.3,-108.0 L121.5,-141.4 L97.3,-108.0 L201.8,-176.0 L250.5,-219.1 L328.1,-300.2 L336.9,-326.0 L328.1,-300.2 L288.7,-417.7 L324.3,-487.9 L362.2,-528.8 L324.3,-487.9 L323.3,-520.4 L324.3,-487.9 L288.7,-417.7 L307.3,-300.0 L250.5,-219.1 L201.8,-176.0 L97.3,-108.0 L102.8,30.0 L137.2,140.0" style="opacity:.3"/><path class="track-day" d="M137.2,140.0 L102.8,30.0"/><circle class="stop" cx="137.2" cy="140.0" r="4"/><circle class="stop on" cx="102.8" cy="30.0" r="5"/><text x="109.8" y="34.0" text-anchor="start" class="strong">Phakding</text><text x="144.2" y="144.0" text-anchor="start" class="">Lukla</text></svg></div>
+  </article>
+</li><li class="day" id="day-2" data-day="1" data-label="Day 2: Phakding to Namche Bazaar">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>2</b></div>
+  <article class="day-card">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 2: </span>Phakding to Namche Bazaar</h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,168a32.06,32.06,0,0,0-31,24H72a32,32,0,0,1,0-64h96a40,40,0,0,0,0-80H72a8,8,0,0,0,0,16h96a24,24,0,0,1,0,48H72a48,48,0,0,0,0,96h97a32,32,0,1,0,31-40Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,200,216Z"/></svg>about 10 km</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg>6 to 7 h</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Sleep 3,440 m</span></div>
+      <p>Into Sagarmatha National Park at Monjo, then across the high Hillary Suspension Bridge and a long climb to Namche. On a clear day you get a first look at Everest halfway up the hill.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Tea house, twin room</span><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: B, L, D</span></div>
+    </div>
+    <div class="day-map map"><svg viewBox="0 0 240 170" role="img" aria-label="Map of day 2: Phakding to Namche Bazaar"><path class="track" d="M149.5,227.7 L122.2,140.0 L117.8,30.0 L137.1,3.4 L117.8,30.0 L201.0,-24.2 L239.9,-58.5 L301.7,-123.2 L308.7,-143.8 L301.7,-123.2 L270.2,-216.9 L298.6,-272.9 L328.9,-305.5 L298.6,-272.9 L297.9,-298.8 L298.6,-272.9 L270.2,-216.9 L285.1,-123.1 L239.9,-58.5 L201.0,-24.2 L117.8,30.0 L122.2,140.0 L149.5,227.7" style="opacity:.3"/><path class="track-day" d="M122.2,140.0 L117.8,30.0"/><circle class="stop" cx="122.2" cy="140.0" r="4"/><circle class="stop on" cx="117.8" cy="30.0" r="5"/><text x="124.8" y="34.0" text-anchor="start" class="strong">Namche Bazaar</text><text x="129.2" y="144.0" text-anchor="start" class="">Phakding</text></svg></div>
+  </article>
+</li><li class="day" id="day-3" data-day="2" data-label="Day 3: Rest day in Namche">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>3</b></div>
+  <article class="day-card">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 3: </span>Rest day in Namche<span class="badge">Acclimatisation</span></h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,168a32.06,32.06,0,0,0-31,24H72a32,32,0,0,1,0-64h96a40,40,0,0,0,0-80H72a8,8,0,0,0,0,16h96a24,24,0,0,1,0,48H72a48,48,0,0,0,0,96h97a32,32,0,1,0,31-40Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,200,216Z"/></svg>about 5 km</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg>3 to 4 h</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M240,56v64a8,8,0,0,1-16,0V75.31l-82.34,82.35a8,8,0,0,1-11.32,0L96,123.31,29.66,189.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0L136,140.69,212.69,64H168a8,8,0,0,1,0-16h64A8,8,0,0,1,240,56Z"/></svg>High point 3,880 m</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Sleep 3,440 m</span></div>
+      <p>Climb high, sleep low: a short hike to the Hotel Everest View (3,880 m) for views of Everest, Lhotse and Ama Dablam, then back to Namche for the night.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Tea house, twin room</span><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: B, L, D</span></div>
+    </div>
+    <div class="day-map map"><svg viewBox="0 0 240 170" role="img" aria-label="Map of day 3: Namche Bazaar to Hotel Everest View to Namche Bazaar"><path class="track" d="M159.3,460.3 L110.7,304.3 L102.9,108.7 L137.1,61.3 L102.9,108.7 L250.8,12.2 L319.9,-48.9 L429.8,-163.9 L442.2,-200.6 L429.8,-163.9 L373.9,-330.6 L424.4,-430.1 L478.1,-488.1 L424.4,-430.1 L423.1,-476.2 L424.4,-430.1 L373.9,-330.6 L400.4,-163.6 L319.9,-48.9 L250.8,12.2 L102.9,108.7 L110.7,304.3 L159.3,460.3" style="opacity:.3"/><path class="track-day" d="M102.9,108.7 L137.1,61.3 L102.9,108.7"/><circle class="stop on" cx="102.9" cy="108.7" r="5"/><circle class="stop" cx="137.1" cy="61.3" r="4"/><text x="109.9" y="112.7" text-anchor="start" class="strong">Namche Bazaar</text><text x="137.1" y="52.3" text-anchor="middle" class="">Hotel Everest View</text></svg></div>
+  </article>
+</li><li class="day" id="day-4" data-day="3" data-label="Day 4: Namche to Tengboche">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>4</b></div>
+  <article class="day-card">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 4: </span>Namche to Tengboche</h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,168a32.06,32.06,0,0,0-31,24H72a32,32,0,0,1,0-64h96a40,40,0,0,0,0-80H72a8,8,0,0,0,0,16h96a24,24,0,0,1,0,48H72a48,48,0,0,0,0,96h97a32,32,0,1,0,31-40Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,200,216Z"/></svg>about 10 km</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg>5 to 6 h</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Sleep 3,867 m</span></div>
+      <p>A balcony trail with Ama Dablam ahead, a drop to the river at Phunki Tenga and a steady climb through rhododendron forest to Tengboche Monastery in time for afternoon prayers.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Tea house, twin room</span><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: B, L, D</span></div>
+    </div>
+    <div class="day-map map"><svg viewBox="0 0 240 170" role="img" aria-label="Map of day 4: Namche Bazaar to Tengboche"><path class="track" d="M102.5,484.9 L53.9,328.9 L46.0,133.2 L80.3,85.9 L46.0,133.2 L194.0,36.8 L263.1,-24.3 L373.0,-139.4 L385.4,-176.0 L373.0,-139.4 L317.1,-306.0 L367.6,-405.5 L421.3,-463.5 L367.6,-405.5 L366.2,-451.6 L367.6,-405.5 L317.1,-306.0 L343.5,-139.1 L263.1,-24.3 L194.0,36.8 L46.0,133.2 L53.9,328.9 L102.5,484.9" style="opacity:.3"/><path class="track-day" d="M46.0,133.2 L194.0,36.8"/><circle class="stop" cx="46.0" cy="133.2" r="4"/><circle class="stop on" cx="194.0" cy="36.8" r="5"/><text x="187.0" y="40.8" text-anchor="end" class="strong">Tengboche</text><text x="53.0" y="137.2" text-anchor="start" class="">Namche Bazaar</text></svg></div>
+  </article>
+</li><li class="day" id="day-5" data-day="4" data-label="Day 5: Tengboche to Dingboche">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>5</b></div>
+  <article class="day-card">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 5: </span>Tengboche to Dingboche</h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,168a32.06,32.06,0,0,0-31,24H72a32,32,0,0,1,0-64h96a40,40,0,0,0,0-80H72a8,8,0,0,0,0,16h96a24,24,0,0,1,0,48H72a48,48,0,0,0,0,96h97a32,32,0,1,0,31-40Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,200,216Z"/></svg>about 11 km</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg>5 to 6 h</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Sleep 4,410 m</span></div>
+      <p>Past the old gompa at Pangboche and above the tree line into the Imja valley. Dingboche is a village of stone-walled potato fields below Lhotse and Island Peak.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Tea house, twin room</span><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: B, L, D</span></div>
+    </div>
+    <div class="day-map map"><svg viewBox="0 0 240 170" role="img" aria-label="Map of day 5: Tengboche to Pangboche to Dingboche"><path class="track" d="M7.0,419.9 L-23.3,322.4 L-28.2,200.2 L-6.8,170.7 L-28.2,200.2 L64.1,140.0 L107.3,101.9 L175.9,30.0 L183.6,7.1 L175.9,30.0 L141.0,-74.1 L172.5,-136.2 L206.0,-172.5 L172.5,-136.2 L171.7,-165.0 L172.5,-136.2 L141.0,-74.1 L157.5,30.2 L107.3,101.9 L64.1,140.0 L-28.2,200.2 L-23.3,322.4 L7.0,419.9" style="opacity:.3"/><path class="track-day" d="M64.1,140.0 L107.3,101.9 L175.9,30.0"/><circle class="stop" cx="64.1" cy="140.0" r="4"/><circle class="stop" cx="107.3" cy="101.9" r="4"/><circle class="stop on" cx="175.9" cy="30.0" r="5"/><text x="168.9" y="34.0" text-anchor="end" class="strong">Dingboche</text><text x="71.1" y="144.0" text-anchor="start" class="">Tengboche</text><text x="114.3" y="105.9" text-anchor="start" class="">Pangboche</text></svg></div>
+  </article>
+</li><li class="day" id="day-6" data-day="5" data-label="Day 6: Rest day in Dingboche">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>6</b></div>
+  <article class="day-card">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 6: </span>Rest day in Dingboche<span class="badge">Acclimatisation</span></h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,168a32.06,32.06,0,0,0-31,24H72a32,32,0,0,1,0-64h96a40,40,0,0,0,0-80H72a8,8,0,0,0,0,16h96a24,24,0,0,1,0,48H72a48,48,0,0,0,0,96h97a32,32,0,1,0,31-40Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,200,216Z"/></svg>about 5 km</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg>4 to 5 h</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M240,56v64a8,8,0,0,1-16,0V75.31l-82.34,82.35a8,8,0,0,1-11.32,0L96,123.31,29.66,189.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0L136,140.69,212.69,64H168a8,8,0,0,1,0-16h64A8,8,0,0,1,240,56Z"/></svg>High point 5,083 m</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Sleep 4,410 m</span></div>
+      <p>A slow climb up the ridge behind the village towards Nangkartshang (around 5,080 m). Makalu, the world&#x27;s fifth-highest peak, comes into view on a clear morning.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Tea house, twin room</span><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: B, L, D</span></div>
+    </div>
+    <div class="day-map map"><svg viewBox="0 0 240 170" role="img" aria-label="Map of day 6: Dingboche to Nangkartshang viewpoint to Dingboche"><path class="track" d="M-156.5,727.6 L-205.1,571.6 L-212.9,375.9 L-178.6,328.6 L-212.9,375.9 L-65.1,279.4 L4.0,218.4 L113.8,103.3 L126.2,66.7 L113.8,103.3 L58.0,-63.4 L108.4,-162.9 L162.1,-220.9 L108.4,-162.9 L107.1,-209.0 L108.4,-162.9 L58.0,-63.4 L84.4,103.6 L4.0,218.4 L-65.1,279.4 L-212.9,375.9 L-205.1,571.6 L-156.5,727.6" style="opacity:.3"/><path class="track-day" d="M113.8,103.3 L126.2,66.7 L113.8,103.3"/><circle class="stop on" cx="113.8" cy="103.3" r="5"/><circle class="stop" cx="126.2" cy="66.7" r="4"/><text x="120.8" y="107.3" text-anchor="start" class="strong">Dingboche</text><text x="126.2" y="57.7" text-anchor="middle" class="">Nangkartshang viewpoint</text></svg></div>
+  </article>
+</li><li class="day" id="day-7" data-day="6" data-label="Day 7: Dingboche to Lobuche">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>7</b></div>
+  <article class="day-card">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 7: </span>Dingboche to Lobuche</h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,168a32.06,32.06,0,0,0-31,24H72a32,32,0,0,1,0-64h96a40,40,0,0,0,0-80H72a8,8,0,0,0,0,16h96a24,24,0,0,1,0,48H72a48,48,0,0,0,0,96h97a32,32,0,1,0,31-40Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,200,216Z"/></svg>about 8 km</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg>5 h</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Sleep 4,940 m</span></div>
+      <p>Up the open Pheriche valley, then a steep pull onto the Khumbu moraine at Thukla, where stone memorials remember climbers who died on Everest.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Tea house, twin room</span><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: B, L, D</span></div>
+    </div>
+    <div class="day-map map"><svg viewBox="0 0 240 170" role="img" aria-label="Map of day 7: Dingboche to Lobuche"><path class="track" d="M-39.9,552.0 L-72.0,449.0 L-77.2,319.9 L-54.5,288.7 L-77.2,319.9 L20.4,256.2 L66.0,216.0 L138.4,140.0 L146.6,115.8 L138.4,140.0 L101.6,30.0 L134.9,-35.7 L170.3,-74.0 L134.9,-35.7 L134.0,-66.1 L134.9,-35.7 L101.6,30.0 L119.0,140.2 L66.0,216.0 L20.4,256.2 L-77.2,319.9 L-72.0,449.0 L-39.9,552.0" style="opacity:.3"/><path class="track-day" d="M138.4,140.0 L101.6,30.0"/><circle class="stop" cx="138.4" cy="140.0" r="4"/><circle class="stop on" cx="101.6" cy="30.0" r="5"/><text x="108.6" y="34.0" text-anchor="start" class="strong">Lobuche</text><text x="145.4" y="144.0" text-anchor="start" class="">Dingboche</text></svg></div>
+  </article>
+</li><li class="day" id="day-8" data-day="7" data-label="Day 8: Lobuche to Everest Base Camp">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>8</b></div>
+  <article class="day-card">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 8: </span>Lobuche to Everest Base Camp<span class="badge">Base camp</span></h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,168a32.06,32.06,0,0,0-31,24H72a32,32,0,0,1,0-64h96a40,40,0,0,0,0-80H72a8,8,0,0,0,0,16h96a24,24,0,0,1,0,48H72a48,48,0,0,0,0,96h97a32,32,0,1,0,31-40Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,200,216Z"/></svg>about 15 km</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg>7 to 8 h</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M240,56v64a8,8,0,0,1-16,0V75.31l-82.34,82.35a8,8,0,0,1-11.32,0L96,123.31,29.66,189.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0L136,140.69,212.69,64H168a8,8,0,0,1,0-16h64A8,8,0,0,1,240,56Z"/></svg>High point 5,364 m</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Sleep 5,164 m</span></div>
+      <p>Along the glacier to Gorak Shep for lunch, then out across the rubble to Everest Base Camp at 5,364 m, beside the Khumbu Icefall. Back to Gorak Shep for the night.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Tea house, twin room</span><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: B, L, D</span></div>
+    </div>
+    <div class="day-map map"><svg viewBox="0 0 240 170" role="img" aria-label="Map of day 8: Lobuche to Gorak Shep to Everest Base Camp to Gorak Shep"><path class="track" d="M-66.0,692.3 L-99.9,583.4 L-105.4,446.8 L-81.4,413.7 L-105.4,446.8 L-2.2,379.4 L46.0,336.8 L122.6,256.4 L131.3,230.8 L122.6,256.4 L83.7,140.0 L118.9,70.5 L156.3,30.0 L118.9,70.5 L117.9,38.3 L118.9,70.5 L83.7,140.0 L102.1,256.6 L46.0,336.8 L-2.2,379.4 L-105.4,446.8 L-99.9,583.4 L-66.0,692.3" style="opacity:.3"/><path class="track-day" d="M83.7,140.0 L118.9,70.5 L156.3,30.0 L118.9,70.5"/><circle class="stop" cx="83.7" cy="140.0" r="4"/><circle class="stop on" cx="118.9" cy="70.5" r="5"/><circle class="stop peak" cx="156.3" cy="30.0" r="5"/><text x="125.9" y="74.5" text-anchor="start" class="strong">Gorak Shep</text><text x="149.3" y="34.0" text-anchor="end" class="strong">Everest Base Camp</text><text x="90.7" y="144.0" text-anchor="start" class="">Lobuche</text></svg></div>
+  </article>
+</li><li class="day" id="day-9" data-day="8" data-label="Day 9: Kala Patthar at sunrise, down to Pheriche">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>9</b></div>
+  <article class="day-card">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 9: </span>Kala Patthar at sunrise, down to Pheriche<span class="badge">Highest point</span></h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,168a32.06,32.06,0,0,0-31,24H72a32,32,0,0,1,0-64h96a40,40,0,0,0,0-80H72a8,8,0,0,0,0,16h96a24,24,0,0,1,0,48H72a48,48,0,0,0,0,96h97a32,32,0,1,0,31-40Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,200,216Z"/></svg>about 13 km</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg>7 to 8 h</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M240,56v64a8,8,0,0,1-16,0V75.31l-82.34,82.35a8,8,0,0,1-11.32,0L96,123.31,29.66,189.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0L136,140.69,212.69,64H168a8,8,0,0,1,0-16h64A8,8,0,0,1,240,56Z"/></svg>High point 5,644 m</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Sleep 4,371 m</span></div>
+      <p>An early start for the climb to Kala Patthar (5,644 m), the trek&#x27;s high point and the classic view of Everest&#x27;s summit. Breakfast at Gorak Shep, then a long descent to Pheriche.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Tea house, twin room</span><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: B, L, D</span></div>
+    </div>
+    <div class="day-map map"><svg viewBox="0 0 240 170" role="img" aria-label="Map of day 9: Gorak Shep to Kala Patthar to Gorak Shep to Lobuche to Pheriche"><path class="track" d="M35.7,359.6 L18.6,304.7 L15.9,235.8 L27.9,219.2 L15.9,235.8 L67.9,201.9 L92.2,180.4 L130.8,139.9 L135.1,127.0 L130.8,139.9 L111.1,81.2 L128.9,46.2 L147.8,25.8 L128.9,46.2 L128.4,30.0 L128.9,46.2 L111.1,81.2 L120.4,140.0 L92.2,180.4 L67.9,201.9 L15.9,235.8 L18.6,304.7 L35.7,359.6" style="opacity:.3"/><path class="track-day" d="M128.9,46.2 L128.4,30.0 L128.9,46.2 L111.1,81.2 L120.4,140.0"/><circle class="stop" cx="128.9" cy="46.2" r="4"/><circle class="stop peak" cx="128.4" cy="30.0" r="5"/><circle class="stop" cx="111.1" cy="81.2" r="4"/><circle class="stop on" cx="120.4" cy="140.0" r="5"/><text x="127.4" y="144.0" text-anchor="start" class="strong">Pheriche</text><text x="135.4" y="34.0" text-anchor="start" class="strong">Kala Patthar</text><text x="135.9" y="50.2" text-anchor="start" class="">Gorak Shep</text><text x="118.1" y="85.2" text-anchor="start" class="">Lobuche</text></svg></div>
+  </article>
+</li><li class="day" id="day-10" data-day="9" data-label="Day 10: Pheriche to Namche Bazaar">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>10</b></div>
+  <article class="day-card">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 10: </span>Pheriche to Namche Bazaar</h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,168a32.06,32.06,0,0,0-31,24H72a32,32,0,0,1,0-64h96a40,40,0,0,0,0-80H72a8,8,0,0,0,0,16h96a24,24,0,0,1,0,48H72a48,48,0,0,0,0,96h97a32,32,0,1,0,31-40Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,200,216Z"/></svg>about 14 km</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg>6 to 7 h</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Sleep 3,440 m</span></div>
+      <p>Back down the valley through Pangboche and over the Tengboche ridge. Thicker air makes the miles go quickly.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Tea house, twin room</span><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: B, L, D</span></div>
+    </div>
+    <div class="day-map map"><svg viewBox="0 0 240 170" role="img" aria-label="Map of day 10: Pheriche to Pangboche to Tengboche to Namche Bazaar"><path class="track" d="M82.7,282.1 L63.1,219.0 L59.9,140.0 L73.8,120.9 L59.9,140.0 L119.7,101.0 L147.6,76.4 L192.0,29.9 L197.0,15.1 L192.0,29.9 L169.4,-37.5 L189.8,-77.7 L211.5,-101.1 L189.8,-77.7 L189.2,-96.3 L189.8,-77.7 L169.4,-37.5 L180.1,30.0 L147.6,76.4 L119.7,101.0 L59.9,140.0 L63.1,219.0 L82.7,282.1" style="opacity:.3"/><path class="track-day" d="M180.1,30.0 L147.6,76.4 L119.7,101.0 L59.9,140.0"/><circle class="stop" cx="180.1" cy="30.0" r="4"/><circle class="stop" cx="147.6" cy="76.4" r="4"/><circle class="stop" cx="119.7" cy="101.0" r="4"/><circle class="stop on" cx="59.9" cy="140.0" r="5"/><text x="66.9" y="144.0" text-anchor="start" class="strong">Namche Bazaar</text><text x="173.1" y="34.0" text-anchor="end" class="">Pheriche</text><text x="154.6" y="80.4" text-anchor="start" class="">Pangboche</text><text x="126.7" y="105.0" text-anchor="start" class="">Tengboche</text></svg></div>
+  </article>
+</li><li class="day" id="day-11" data-day="10" data-label="Day 11: Namche to Lukla">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>11</b></div>
+  <article class="day-card">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 11: </span>Namche to Lukla</h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,168a32.06,32.06,0,0,0-31,24H72a32,32,0,0,1,0-64h96a40,40,0,0,0,0-80H72a8,8,0,0,0,0,16h96a24,24,0,0,1,0,48H72a48,48,0,0,0,0,96h97a32,32,0,1,0,31-40Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,200,216Z"/></svg>about 18 km</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg>6 to 7 h</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Sleep 2,860 m</span></div>
+      <p>The last day on foot, retracing the river trail to Lukla. An evening to thank the porters and guide.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Tea house, twin room</span><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: B, L, D</span></div>
+    </div>
+    <div class="day-map map"><svg viewBox="0 0 240 170" role="img" aria-label="Map of day 11: Namche Bazaar to Phakding to Lukla"><path class="track" d="M128.8,140.0 L113.6,91.2 L111.2,30.0 L121.9,15.2 L111.2,30.0 L157.5,-0.2 L179.1,-19.3 L213.5,-55.3 L217.4,-66.7 L213.5,-55.3 L196.0,-107.4 L211.8,-138.5 L228.6,-156.7 L211.8,-138.5 L211.4,-153.0 L211.8,-138.5 L196.0,-107.4 L204.3,-55.2 L179.1,-19.3 L157.5,-0.2 L111.2,30.0 L113.6,91.2 L128.8,140.0" style="opacity:.3"/><path class="track-day" d="M111.2,30.0 L113.6,91.2 L128.8,140.0"/><circle class="stop" cx="111.2" cy="30.0" r="4"/><circle class="stop" cx="113.6" cy="91.2" r="4"/><circle class="stop on" cx="128.8" cy="140.0" r="5"/><text x="135.8" y="144.0" text-anchor="start" class="strong">Lukla</text><text x="118.2" y="34.0" text-anchor="start" class="">Namche Bazaar</text><text x="120.6" y="95.2" text-anchor="start" class="">Phakding</text></svg></div>
+  </article>
+</li><li class="day" id="day-12" data-day="11" data-label="Day 12: Fly back to Kathmandu">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>12</b></div>
+  <article class="day-card">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 12: </span>Fly back to Kathmandu</h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg>35 min flight</span><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Sleep 1,400 m</span></div>
+      <p>Morning flight to Kathmandu or Ramechhap, then hotel.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Hotel in Kathmandu</span><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: B</span></div>
+    </div>
+    <div class="day-map map"><svg viewBox="0 0 240 170" role="img" aria-label="Map of day 12: Lukla"><path class="track" d="M120.0,85.0 L87.6,-19.0 L82.3,-149.4 L105.2,-181.0 L82.3,-149.4 L181.1,-213.7 L227.2,-254.4 L300.6,-331.2 L308.8,-355.6 L300.6,-331.2 L263.3,-442.3 L297.0,-508.6 L332.8,-547.3 L297.0,-508.6 L296.1,-539.3 L297.0,-508.6 L263.3,-442.3 L280.9,-331.0 L227.2,-254.4 L181.1,-213.7 L82.3,-149.4 L87.6,-19.0 L120.0,85.0" style="opacity:.3"/><circle class="stop on" cx="120.0" cy="85.0" r="5"/><text x="127.0" y="89.0" text-anchor="start" class="strong">Lukla</text></svg></div>
+  </article>
+</li><li class="day" id="day-13" data-day="12" data-label="Day 13: Spare day in Kathmandu">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>13</b></div>
+  <article class="day-card" style="grid-template-columns:1fr">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 13: </span>Spare day in Kathmandu<span class="badge">Weather buffer</span></h3>
+      <div class="day-stats"><span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Sleep 1,400 m</span></div>
+      <p>Lukla flights are often delayed by cloud, so we keep a spare day. If you don&#x27;t need it, we can arrange a guided visit to Boudhanath and Patan.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Hotel in Kathmandu</span><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: B</span></div>
+    </div>
+    
+  </article>
+</li><li class="day" id="day-14" data-day="13" data-label="Day 14: Departure">
+  <div class="day-no" aria-hidden="true"><small>Day</small><b>14</b></div>
+  <article class="day-card" style="grid-template-columns:1fr">
+    <div class="day-body">
+      <h3><span class="sr-only">Day 14: </span>Departure</h3>
+      <div class="day-stats"></div>
+      <p>We drive you to Tribhuvan International Airport in good time for your flight home.</p>
+      <div class="day-stay"><span><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,104h-8.37a88,88,0,0,0-175.26,0H32a8,8,0,0,0-8,8,104.35,104.35,0,0,0,56,92.28V208a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-3.72A104.35,104.35,0,0,0,232,112,8,8,0,0,0,224,104Zm-24.46,0H148.12a71.84,71.84,0,0,1,41.27-29.57A71.45,71.45,0,0,1,199.54,104ZM173.48,56.23q2.75,2.25,5.27,4.75a87.92,87.92,0,0,0-49.15,43H100.1A72.26,72.26,0,0,1,168,56C169.83,56,171.66,56.09,173.48,56.23ZM128,40a71.87,71.87,0,0,1,19,2.57A88.36,88.36,0,0,0,83.33,104H56.46A72.08,72.08,0,0,1,128,40Zm36.66,152A8,8,0,0,0,160,199.3V208H96v-8.7A8,8,0,0,0,91.34,192a88.29,88.29,0,0,1-51-72H215.63A88.29,88.29,0,0,1,164.66,192Z"/></svg>Meals: B</span></div>
+    </div>
+    
+  </article>
+</li></ol>
+      <p class="note">Walking times are for a steady pace with stops. Your guide may change overnight stops to suit the weather, trail conditions and how the group is feeling.</p>
+    </section>
+
+    <section id="included" aria-labelledby="inc-title">
+      <h2 id="inc-title">What's included</h2>
+      <div class="incl">
+        <div class="yes"><h3>Included in the price</h3><ul><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Airport pick-up and drop-off in Kathmandu</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>A licensed, English-speaking trekking guide, first-aid trained</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Porters (one for every two trekkers, 10 kg of your kit each, so loads stay under 20 kg), paid and insured</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>All trekking permits and conservation fees</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Tea-house rooms on the trek, twin sharing</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Breakfast, lunch and dinner on the trek</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Transport and domestic flights shown in the itinerary</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Kathmandu hotel on the nights shown</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Pulse oximeter checks and a group first-aid kit</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Help arranging helicopter evacuation, paid by your insurer</span></li></ul></div>
+        <div class="no"><h3>Not included</h3><ul><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128Z"/></svg><span>International flights and Nepal visa (US$30 for 15 days, US$50 for 30 days, on arrival)</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128Z"/></svg><span>Travel insurance covering trekking to the trip&#x27;s maximum altitude and helicopter rescue</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128Z"/></svg><span>Drinks, hot showers, battery charging and Wi-Fi in tea houses</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128Z"/></svg><span>Tips for guide and porters</span></li><li><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128Z"/></svg><span>Extra nights caused by leaving the trek early or flight delays</span></li></ul></div>
+      </div>
+    </section>
+
+    <section id="permits" aria-labelledby="perm-title">
+      <h2 id="perm-title">Permits and practical details</h2>
+      <div class="info">
+        <div class="info-item"><h3><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,112a8,8,0,0,1-8,8H152a8,8,0,0,1,0-16h40A8,8,0,0,1,200,112Zm-8,24H152a8,8,0,0,0,0,16h40a8,8,0,0,0,0-16Zm40-80V200a16,16,0,0,1-16,16H40a16,16,0,0,1-16-16V56A16,16,0,0,1,40,40H216A16,16,0,0,1,232,56ZM216,200V56H40V200H216Zm-80.26-34a8,8,0,1,1-15.5,4c-2.63-10.26-13.06-18-24.25-18s-21.61,7.74-24.25,18a8,8,0,1,1-15.5-4,39.84,39.84,0,0,1,17.19-23.34,32,32,0,1,1,45.12,0A39.76,39.76,0,0,1,135.75,166ZM96,136a16,16,0,1,0-16-16A16,16,0,0,0,96,136Z"/></svg>Permits you need</h3><ul><li><strong>Sagarmatha National Park entry</strong><br>NPR 3,000 per person (foreign nationals)</li><li><strong>Khumbu Pasang Lhamu Rural Municipality fee</strong><br>Collected at Lukla or Monjo</li></ul><p class="note">A TIMS card is not used in the Khumbu. Both fees are included in our price.</p></div>
+        <div class="info-item"><h3><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,56H176V48a24,24,0,0,0-24-24H104A24,24,0,0,0,80,48v8H40A16,16,0,0,0,24,72V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V72A16,16,0,0,0,216,56ZM96,48a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96ZM216,200H40V72H216V200Zm-56-64a8,8,0,0,1-8,8H136v16a8,8,0,0,1-16,0V144H104a8,8,0,0,1,0-16h16V112a8,8,0,0,1,16,0v16h16A8,8,0,0,1,160,136Z"/></svg>Altitude and safety</h3><p>Above 3,000 m we check everyone's oxygen level and pulse each evening, and talk through how you're sleeping and eating. If altitude symptoms don't ease with rest, we go down. No summit or pass is worth pushing on for. Your insurance needs to cover helicopter rescue up to 5,644 m.</p></div>
+        <div class="info-item"><h3><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Zm88,72V88h96a24,24,0,0,1,24,24v48Z"/></svg>Where you stay</h3><p>Simple, family-run tea houses: twin rooms, shared bathrooms higher up, and a warm dining room around the stove where everyone gathers in the evening. Hot showers and phone charging cost a few dollars extra.</p></div>
+        <div class="info-item"><h3><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M168,40.58V32A24,24,0,0,0,144,8H112A24,24,0,0,0,88,32v8.58A56.09,56.09,0,0,0,40,96V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V96A56.09,56.09,0,0,0,168,40.58ZM112,24h32a8,8,0,0,1,8,8v8H104V32A8,8,0,0,1,112,24Zm56,136H88v-8a8,8,0,0,1,8-8h64a8,8,0,0,1,8,8ZM88,176h48v8a8,8,0,0,0,16,0v-8h16v40H88Zm112,40H184V152a24,24,0,0,0-24-24H96a24,24,0,0,0-24,24v64H56V96A40,40,0,0,1,96,56h64a40,40,0,0,1,40,40V216ZM152,88a8,8,0,0,1-8,8H112a8,8,0,0,1,0-16h32A8,8,0,0,1,152,88Z"/></svg>Fitness and preparation</h3><p>If you can walk for six hours on hilly ground several days in a row, you'll be fine. Two or three months of regular hill walks with a loaded daypack is the best preparation.</p></div>
+      </div>
+    </section>
+
+    <section id="when" aria-labelledby="when-title">
+      <h2 id="when-title">When to go</h2>
+      <div class="months" role="img" aria-label="Best months: March, April, October, November"><div class="month " title="January">Jan</div><div class="month " title="February">Feb</div><div class="month best" title="March">Mar</div><div class="month best" title="April">Apr</div><div class="month good" title="May">May</div><div class="month " title="June">Jun</div><div class="month " title="July">Jul</div><div class="month " title="August">Aug</div><div class="month good" title="September">Sep</div><div class="month best" title="October">Oct</div><div class="month best" title="November">Nov</div><div class="month good" title="December">Dec</div></div><div class="months-key"><span><i style="background:var(--accent)"></i>Best</span><span><i style="background:var(--accent-soft)"></i>Good</span><span><i style="background:var(--surface-2)"></i>Possible, but not ideal</span></div>
+      <p class="note">Best months: Mar to Apr, Oct to Nov. Private departures run on any date that suits you within the season.</p>
+    </section>
+
+    <section aria-labelledby="gal-title">
+      <h2 id="gal-title">Along the way</h2>
+      <div class="gallery"><figure><img src="/images/places/namche-1024.webp" srcset="/images/places/namche-640.webp 640w, /images/places/namche-1024.webp 1024w, /images/places/namche-1600.webp 1600w" sizes="(max-width: 860px) 50vw, 33vw" width="1600" height="1151" alt="Namche Bazaar in its horseshoe-shaped bowl with Kongde Ri behind" loading="lazy" decoding="async"><figcaption>Namche Bazaar in its horseshoe-shaped bowl with Kongde Ri behind</figcaption></figure><figure><img src="/images/places/tengboche-1024.webp" srcset="/images/places/tengboche-640.webp 640w, /images/places/tengboche-1024.webp 1024w, /images/places/tengboche-1600.webp 1600w" sizes="(max-width: 860px) 50vw, 33vw" width="1600" height="1067" alt="Tengboche Monastery with Lhotse and Ama Dablam behind" loading="lazy" decoding="async"><figcaption>Tengboche Monastery with Lhotse and Ama Dablam behind</figcaption></figure><figure><img src="/images/places/dingboche-1024.webp" srcset="/images/places/dingboche-640.webp 640w, /images/places/dingboche-1024.webp 1024w, /images/places/dingboche-1600.webp 1600w" sizes="(max-width: 860px) 50vw, 33vw" width="1600" height="1067" alt="Stone-walled fields of Dingboche below Lhotse" loading="lazy" decoding="async"><figcaption>Stone-walled fields of Dingboche below Lhotse</figcaption></figure><figure><img src="/images/places/ebc-glacier-1024.webp" srcset="/images/places/ebc-glacier-640.webp 640w, /images/places/ebc-glacier-1024.webp 1024w, /images/places/ebc-glacier-1600.webp 1600w" sizes="(max-width: 860px) 50vw, 33vw" width="1600" height="1067" alt="The Khumbu Glacier and icefall on the walk from Gorak Shep to Everest Base Camp" loading="lazy" decoding="async"><figcaption>The Khumbu Glacier and icefall on the walk from Gorak Shep to Everest Base Camp</figcaption></figure><figure><img src="/images/places/lukla-1024.webp" srcset="/images/places/lukla-640.webp 640w, /images/places/lukla-1024.webp 1024w, /images/places/lukla-1600.webp 1600w" sizes="(max-width: 860px) 50vw, 33vw" width="1600" height="900" alt="The short sloping runway at Tenzing-Hillary Airport, Lukla" loading="lazy" decoding="async"><figcaption>The short sloping runway at Tenzing-Hillary Airport, Lukla</figcaption></figure></div>
+      <p class="credit">Namche Bazaar in its horseshoe-shaped bowl with Kongde Ri behind: Photo: Nirojsedhai, <a href="https://commons.wikimedia.org/wiki/File:Namche_Bazaar_facing_Kongde_Ri_towards_west.jpg" rel="noopener" target="_blank">CC BY-SA 4.0</a>; Tengboche Monastery with Lhotse and Ama Dablam behind: Photo: Gerd Eichmann, <a href="https://commons.wikimedia.org/wiki/File:Tengboche-74-Lhotse_und_Ama_Dablam-2007-gje.jpg" rel="noopener" target="_blank">CC BY-SA 4.0</a>; Stone-walled fields of Dingboche below Lhotse: Photo: Superikonoskop, <a href="https://commons.wikimedia.org/wiki/File:Dingboche_Lhotse.jpg" rel="noopener" target="_blank">CC BY-SA 3.0</a>; The Khumbu Glacier and icefall on the walk from Gorak Shep to Everest Base Camp: Photo: Gerd Eichmann, <a href="https://commons.wikimedia.org/wiki/File:Gorak_Shep_to_Everest_Base_Camp-96-Khumbu-Gletscher-2007-gje.jpg" rel="noopener" target="_blank">CC BY-SA 4.0</a>; The short sloping runway at Tenzing-Hillary Airport: Photo: Icicles Adventure Treks, <a href="https://commons.wikimedia.org/wiki/File:Lukla_Airport_View.jpg" rel="noopener" target="_blank">CC BY-SA 4.0</a></p>
+    </section>
+
+    <section id="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">Common questions</h2>
+      <div class="faq"><details><summary>How hard is the Everest Base Camp trek?<svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></summary><div><p>There is no climbing, but you walk five to seven hours a day for twelve days and sleep above 4,000 m for six nights. Anyone who can hike a full day in hills at home and trains for two or three months beforehand can do it. Altitude, not fitness, is what stops most people, which is why we build in two rest days.</p></div></details><details><summary>Do Lukla flights really leave from Ramechhap?<svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></summary><div><p>In the busy months (roughly April to May and October to November) Nepal&#x27;s aviation authority routes most Kathmandu to Lukla flights through Manthali airport in Ramechhap to ease congestion. That means a 4 to 5 hour drive before dawn. We arrange the transport and keep a spare day at the end for weather delays.</p></div></details><details><summary>Do I need a guide?<svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></summary><div><p>Since 2023 Nepal requires foreign trekkers in national parks to walk with a licensed guide from a registered agency. All our treks include one.</p></div></details><details><summary>What insurance do I need?<svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></summary><div><p>A policy that covers trekking up to 6,000 m and helicopter evacuation. Rescue from Gorak Shep by helicopter costs several thousand US dollars without it.</p></div></details><details><summary>Can I charge my phone and use Wi-Fi?<svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></summary><div><p>Yes, most tea houses sell charging and Wi-Fi by the hour, and many villages have mobile signal. Prices rise with altitude, so bring a power bank.</p></div></details></div>
+    </section>
   </div>
 
-  <!-- PAGE LAYOUT -->
-  <div class="page-layout">
-
-    <!-- MAIN ARTICLE -->
-    <main class="article-main">
-
-      <!-- Lead -->
-      <div class="article-lead reveal">
-        <p>Everything you need to plan the trek of a lifetime — the full 14-day itinerary, permit requirements, best seasons, gear list, realistic costs, and expert acclimatization tips from guides who've made this journey over 400 times.</p>
-        <div class="article-share-row">
-          <span class="share-label">Share:</span>
-          <button class="share-btn" onclick="navigator.clipboard?.writeText(window.location.href)">
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-            Copy Link
-          </button>
-          <button class="share-btn">
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-            Facebook
-          </button>
-        </div>
+  <aside class="trip-aside" aria-label="Trip summary">
+    <div class="summary">
+      <div class="summary-top"><small>From, per person</small><p class="amount">US$1,650 <span>14 days</span></p></div>
+      <dl><div><dt><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"/></svg>Duration</dt><dd>14 days</dd></div><div><dt><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M164,80a28,28,0,1,0-28-28A28,28,0,0,0,164,80Zm0-40a12,12,0,1,1-12,12A12,12,0,0,1,164,40Zm90.88,155.92-54.56-92.08A15.87,15.87,0,0,0,186.55,96h0a15.85,15.85,0,0,0-13.76,7.84L146.63,148l-44.84-76.1a16,16,0,0,0-27.58,0L1.11,195.94A8,8,0,0,0,8,208H248a8,8,0,0,0,6.88-12.08ZM88,80l23.57,40H64.43ZM22,192l33-56h66l18.74,31.8,0,0L154,192Zm150.57,0-16.66-28.28L186.55,112,234,192Z"/></svg>Max altitude</dt><dd>5,644 m</dd></div><div><dt><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M240,56v64a8,8,0,0,1-16,0V75.31l-82.34,82.35a8,8,0,0,1-11.32,0L96,123.31,29.66,189.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0L136,140.69,212.69,64H168a8,8,0,0,1,0-16h64A8,8,0,0,1,240,56Z"/></svg>Grade</dt><dd>Challenging</dd></div><div><dt><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M244.8,150.4a8,8,0,0,1-11.2-1.6A51.6,51.6,0,0,0,192,128a8,8,0,0,1-7.37-4.89,8,8,0,0,1,0-6.22A8,8,0,0,1,192,112a24,24,0,1,0-23.24-30,8,8,0,1,1-15.5-4A40,40,0,1,1,219,117.51a67.94,67.94,0,0,1,27.43,21.68A8,8,0,0,1,244.8,150.4ZM190.92,212a8,8,0,1,1-13.84,8,57,57,0,0,0-98.16,0,8,8,0,1,1-13.84-8,72.06,72.06,0,0,1,33.74-29.92,48,48,0,1,1,58.36,0A72.06,72.06,0,0,1,190.92,212ZM128,176a32,32,0,1,0-32-32A32,32,0,0,0,128,176ZM72,120a8,8,0,0,0-8-8A24,24,0,1,1,87.24,82a8,8,0,1,0,15.5-4A40,40,0,1,0,37,117.51,67.94,67.94,0,0,0,9.6,139.19a8,8,0,1,0,12.8,9.61A51.6,51.6,0,0,1,64,128,8,8,0,0,0,72,120Z"/></svg>Group size</dt><dd>2 to 8</dd></div><div><dt><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z"/></svg>Starts</dt><dd>Kathmandu</dd></div><div><dt><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm72,88a64,64,0,1,1-64-64A64.07,64.07,0,0,1,192,128Zm-16,0a48,48,0,1,0-48,48A48.05,48.05,0,0,0,176,128ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z"/></svg>Best months</dt><dd>Mar to Apr, Oct to Nov</dd></div></dl>
+      <div class="summary-actions">
+        <a href="/contact.html?trip=everest-base-camp" class="btn btn-primary btn-block">Plan your trip <svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+        <a href="https://wa.me/9779811157421?text=Hello,%20I&#x27;m%20interested%20in%20the%20Everest%20Base%20Camp%20Trek%20(14%20days)." class="btn btn-ghost btn-block" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg> Ask on WhatsApp</a>
+        <p class="summary-note">No payment needed to enquire. We reply within one working day.</p>
       </div>
+      <div class="summary-accred"><span>Licensed in Nepal</span><div class="accred-minis"><a class="accred-mini" href="https://tourismdepartment.gov.np/" target="_blank" rel="noopener" title="Department of Tourism, Government of Nepal: Licensed trekking and mountaineering agency"><span class="accred-text" aria-hidden="true"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,136a8,8,0,0,1-8,8H72a8,8,0,0,1,0-16h48A8,8,0,0,1,128,136Zm-8-40H72a8,8,0,0,0,0,16h48a8,8,0,0,0,0-16Zm112,65.47V224A8,8,0,0,1,220,231l-24-13.74L172,231A8,8,0,0,1,160,224V200H40a16,16,0,0,1-16-16V56A16,16,0,0,1,40,40H216a16,16,0,0,1,16,16V86.53a51.88,51.88,0,0,1,0,74.94ZM160,184V161.47A52,52,0,0,1,216,76V56H40V184Zm56-12a51.88,51.88,0,0,1-40,0v38.22l16-9.16a8,8,0,0,1,7.94,0l16,9.16Zm16-48a36,36,0,1,0-36,36A36,36,0,0,0,232,124Z"/></svg><b>Govt. of<br>Nepal</b></span><span class="sr-only">Department of Tourism, Government of Nepal</span></a><a class="accred-mini" href="https://ntb.gov.np/" target="_blank" rel="noopener" title="Nepal Tourism Board: Registered with Nepal&#x27;s national tourism body"><picture><source srcset="/images/logos/ntb.webp" type="image/webp"><img src="/images/logos/ntb.png" alt="Nepal Tourism Board logo" width="33" height="34" loading="lazy" decoding="async"></picture><span class="sr-only">Nepal Tourism Board</span></a><a class="accred-mini" href="https://www.taan.org.np/" target="_blank" rel="noopener" title="Trekking Agencies&#x27; Association of Nepal: Member of the national trekking association"><picture><source srcset="/images/logos/taan.webp" type="image/webp"><img src="/images/logos/taan.png" alt="Trekking Agencies&#x27; Association of Nepal logo" width="25" height="34" loading="lazy" decoding="async"></picture><span class="sr-only">Trekking Agencies&#x27; Association of Nepal</span></a><a class="accred-mini" href="https://www.nepalmountaineering.org/" target="_blank" rel="noopener" title="Nepal Mountaineering Association: Member agency for peak climbing"><picture><source srcset="/images/logos/nma.webp" type="image/webp"><img src="/images/logos/nma.png" alt="Nepal Mountaineering Association logo" width="39" height="34" loading="lazy" decoding="async"></picture><span class="sr-only">Nepal Mountaineering Association</span></a></div></div>
+    </div>
+    <div class="aside-live">
+      <div class="route-panel"><h3><span id="mapDay">Route overview</span></h3><div class="map map-big"><svg viewBox="0 0 340 300" role="img" aria-label="Route map of the Everest Base Camp Trek"><path class="peak-ref" d="M225.6,62.0 l5.5,9 h-11z"><title>Nuptse, 7,861 m</title></path><path class="peak-ref" d="M209.6,137.5 l5.5,9 h-11z"><title>Ama Dablam, 6,812 m</title></path><path class="peak-ref" d="M163.8,191.3 l5.5,9 h-11z"><title>Thamserku, 6,623 m</title></path><path class="peak-ref" d="M179.6,182.6 l5.5,9 h-11z"><title>Kangtega, 6,782 m</title></path><path class="peak-ref" d="M188.9,28.0 l5.5,9 h-11z"><title>Pumori, 7,161 m</title></path><path class="peak-ref" d="M214.4,245.2 l5.5,9 h-11z"><title>Mera Peak, 6,476 m</title></path><path class="track" d="M127.6,266.0 L116.3,229.6 L114.4,184.0 L122.4,173.0 L114.4,184.0 L148.9,161.5 L165.0,147.3 L190.6,120.5 L193.5,111.9 L190.6,120.5 L177.6,81.6 L189.4,58.4 L201.9,44.9 L189.4,58.4 L189.1,47.7 L189.4,58.4 L177.6,81.6 L183.8,120.5 L165.0,147.3 L148.9,161.5 L114.4,184.0 L116.3,229.6 L127.6,266.0"/><path class="seg" data-i="0" d="M127.6,266.0 L116.3,229.6"/><path class="seg" data-i="1" d="M116.3,229.6 L114.4,184.0"/><path class="seg" data-i="2" d="M114.4,184.0 L122.4,173.0 L114.4,184.0"/><path class="seg" data-i="3" d="M114.4,184.0 L148.9,161.5"/><path class="seg" data-i="4" d="M148.9,161.5 L165.0,147.3 L190.6,120.5"/><path class="seg" data-i="5" d="M190.6,120.5 L193.5,111.9 L190.6,120.5"/><path class="seg" data-i="6" d="M190.6,120.5 L177.6,81.6"/><path class="seg" data-i="7" d="M177.6,81.6 L189.4,58.4 L201.9,44.9 L189.4,58.4"/><path class="seg" data-i="8" d="M189.4,58.4 L189.1,47.7 L189.4,58.4 L177.6,81.6 L183.8,120.5"/><path class="seg" data-i="9" d="M183.8,120.5 L165.0,147.3 L148.9,161.5 L114.4,184.0"/><path class="seg" data-i="10" d="M114.4,184.0 L116.3,229.6 L127.6,266.0"/><circle class="stop" data-i="10" cx="127.6" cy="266.0" r="4"><title>Lukla, 2,860 m</title></circle><circle class="stop" data-i="0" cx="116.3" cy="229.6" r="4"><title>Phakding, 2,610 m</title></circle><circle class="stop" data-i="1" cx="114.4" cy="184.0" r="4"><title>Namche Bazaar, 3,440 m</title></circle><circle class="stop" cx="122.4" cy="173.0" r="4"><title>Hotel Everest View, 3,880 m</title></circle><circle class="stop" data-i="3" cx="148.9" cy="161.5" r="4"><title>Tengboche, 3,867 m</title></circle><circle class="stop" cx="165.0" cy="147.3" r="4"><title>Pangboche, 3,985 m</title></circle><circle class="stop" data-i="4" cx="190.6" cy="120.5" r="4"><title>Dingboche, 4,410 m</title></circle><circle class="stop" cx="193.5" cy="111.9" r="4"><title>Nangkartshang viewpoint, 5,083 m</title></circle><circle class="stop" data-i="6" cx="177.6" cy="81.6" r="4"><title>Lobuche, 4,940 m</title></circle><circle class="stop" data-i="7" cx="189.4" cy="58.4" r="4"><title>Gorak Shep, 5,164 m</title></circle><circle class="stop peak" cx="201.9" cy="44.9" r="5"><title>Everest Base Camp, 5,364 m</title></circle><circle class="stop peak" cx="189.1" cy="47.7" r="5"><title>Kala Patthar, 5,644 m</title></circle><circle class="stop" data-i="8" cx="183.8" cy="120.5" r="4"><title>Pheriche, 4,371 m</title></circle><text x="196.1" y="51.7" text-anchor="start" class="strong">Kala Patthar 5,644 m</text><text x="134.6" y="270.0" text-anchor="start" class="strong">Lukla</text><text x="194.9" y="48.9" text-anchor="end" class="">Everest Base Camp</text><text x="123.3" y="233.6" text-anchor="start" class="">Phakding</text><text x="121.4" y="188.0" text-anchor="start" class="">Namche Bazaar</text><text x="155.9" y="165.5" text-anchor="start" class="">Tengboche</text><text x="197.6" y="124.5" text-anchor="start" class="">Dingboche</text><text x="184.6" y="85.6" text-anchor="start" class="">Lobuche</text><text x="182.4" y="62.4" text-anchor="end" class="">Gorak Shep</text><text x="176.8" y="124.5" text-anchor="end" class="">Pheriche</text><text x="115.4" y="177.0" text-anchor="end" class="">Hotel Everest View</text><text x="172.0" y="151.3" text-anchor="start" class="">Pangboche</text><text x="193.5" y="102.9" text-anchor="middle" class="">Nangkartshang viewpoint</text><text x="232.6" y="74.0" text-anchor="start" class="peak-name">Nuptse</text><text x="170.8" y="203.3" text-anchor="start" class="peak-name">Thamserku</text><text x="188.9" y="27.0" text-anchor="middle" class="peak-name">Pumori</text><text x="221.4" y="257.2" text-anchor="start" class="peak-name">Mera Peak</text><g class="map-scale"><path d="M10,286 V290 H74.1 V286" fill="none" stroke="currentColor" stroke-width="1" style="stroke:var(--ink-3)"/><text x="79.1" y="290" class="map-scale" style="paint-order:normal;stroke:none">10 km</text></g><text x="326" y="22" class="north" text-anchor="middle" style="paint-order:normal;stroke:none">N</text><path d="M326,26 l-4,10 h8z" style="fill:var(--ink-3)"/></svg></div></div>
+    </div>
+  </aside>
+</div>
 
-      <!-- Content -->
-      <div class="article-content">
-
-        <p>The <strong>Everest Base Camp Trek</strong> is not just a walk — it's a pilgrimage into the heart of the world's most dramatic mountain landscape. Every year, tens of thousands of trekkers travel to Nepal to make this iconic journey through the Khumbu region, following the same trails used by legendary mountaineers including Sir Edmund Hillary and Tenzing Norgay.</p>
-
-        <p>This guide, updated for 2026, draws on the experience of Beyond Summit's guides who have collectively completed this route over 400 times. Whether you're a seasoned trekker or setting foot on a Himalayan trail for the first time, here is everything you need to know.</p>
-
-        <h2 id="overview">What is the <em>EBC Trek?</em></h2>
-
-        <p>Everest Base Camp sits at <strong>5,364 metres (17,598 feet)</strong> above sea level, at the foot of the Khumbu Icefall on the Nepalese side of Mount Everest. The classic trek starts and ends in <strong>Lukla</strong>, reached by a short mountain flight from Kathmandu, and covers approximately <strong>130 kilometres</strong> of trail through Sagarmatha National Park — a UNESCO World Heritage Site.</p>
-
-        <p>The route climbs through Sherpa villages, ancient Buddhist monasteries, rhododendron forests (in season), and the glaciated upper Khumbu, before arriving at the largest high-altitude base camp in the world. It's a journey through living Himalayan culture as much as it is a physical challenge.</p>
-
-        <div class="info-box note reveal">
-          <div class="info-box-title">Key Facts at a Glance</div>
-          <p><strong>Distance:</strong> ~130km total (Lukla–Lukla) &nbsp;·&nbsp; <strong>Maximum altitude:</strong> 5,364m (EBC) / 5,550m (Kala Patthar) &nbsp;·&nbsp; <strong>Standard duration:</strong> 12–16 days &nbsp;·&nbsp; <strong>Best seasons:</strong> March–May and October–November &nbsp;·&nbsp; <strong>Difficulty:</strong> Moderate to Strenuous &nbsp;·&nbsp; <strong>Technical climbing:</strong> None required</p>
-        </div>
-
-        <div class="section-rule reveal"><div class="section-rule-diamond"></div></div>
-
-        <h2 id="best-time">Best Time to <em>Trek</em></h2>
-
-        <p>The Khumbu Valley is trekkable year-round, but two seasons dominate the EBC trekking calendar.</p>
-
-        <h3>Spring — March to May</h3>
-        <p>Spring is the most popular trekking season, coinciding with the Everest climbing season. <strong>April and May</strong> offer the most stable weather, comfortable daytime temperatures (5–12°C at altitude), and spectacular views before the monsoon haze arrives. The trails are busiest during this period — Namche Bazaar in May can feel surprisingly lively — but for a reason: the conditions are exceptional.</p>
-
-        <h3>Autumn — October to November</h3>
-        <p>Autumn is our personal favourite at Beyond Summit. Post-monsoon skies are crystal clear, offering exceptional photographic visibility. Temperatures are slightly cooler than spring, and trails are less crowded. <strong>October</strong> offers the finest balance of weather and views.</p>
-
-        <div class="info-box warning reveal">
-          <div class="info-box-title">Monsoon (June–September)</div>
-          <p>While technically passable, monsoon season brings persistent cloud cover, leeches, flooded trails, and flight delays. Most experienced trekkers and operators avoid this window. December through February is cold — very cold above 4,000m — but offers dramatic winter solitude for experienced high-altitude trekkers.</p>
-        </div>
-
-        <div class="section-rule reveal"><div class="section-rule-diamond"></div></div>
-
-        <h2 id="itinerary">14-Day <em>Itinerary</em></h2>
-
-        <p>Below is Beyond Summit's standard 14-day EBC itinerary. We incorporate <strong>three acclimatization days</strong> rather than the two used by budget operators — a significant safety difference at this altitude.</p>
-
-        <div class="itinerary reveal">
-          <div class="itinerary-day">
-            <div class="day-badge"><span>Day</span><span>1</span></div>
-            <div class="day-info">
-              <div class="day-title">Kathmandu → Lukla → Phakding</div>
-              <div class="day-desc">An early morning flight brings you to Lukla (2,860m) — one of the most thrilling runways in the world. A 3–4 hour walk along the Dudh Koshi River leads to Phakding (2,610m).</div>
-              <div class="day-tags"><span class="day-tag">~8 km walk</span><span class="day-tag">+0 m net gain</span></div>
-            </div>
-          </div>
-          <div class="itinerary-day">
-            <div class="day-badge"><span>Day</span><span>2</span></div>
-            <div class="day-info">
-              <div class="day-title">Phakding → Namche Bazaar</div>
-              <div class="day-desc">The biggest single ascent of the trek — 800 vertical metres through forest and over suspension bridges to reach the Sherpa capital, Namche Bazaar (3,440m). First views of Everest on a clear day.</div>
-              <div class="day-tags"><span class="day-tag">~11 km</span><span class="day-tag">+830 m altitude</span></div>
-            </div>
-          </div>
-          <div class="itinerary-day">
-            <div class="day-badge"><span>Day</span><span>3</span></div>
-            <div class="day-info">
-              <div class="day-title">Acclimatization Day — Namche Bazaar</div>
-              <div class="day-desc">A mandatory rest day. We recommend a day hike up to the Everest View Hotel (3,962m) for stunning panoramic views, returning to sleep at 3,440m. Visit Namche's Saturday market if timing aligns.</div>
-              <div class="day-tags"><span class="day-tag highlight">Acclimatization</span><span class="day-tag">Optional day hike</span></div>
-            </div>
-          </div>
-          <div class="itinerary-day">
-            <div class="day-badge"><span>Day</span><span>4</span></div>
-            <div class="day-info">
-              <div class="day-title">Namche → Tengboche</div>
-              <div class="day-desc">Pass through Kyangjuma with breathtaking views of Ama Dablam, Everest, and Lhotse. Tengboche Monastery (3,867m) is the spiritual heart of the Khumbu — arrive in time for the evening puja ceremony.</div>
-              <div class="day-tags"><span class="day-tag">~10 km</span><span class="day-tag">+427 m altitude</span></div>
-            </div>
-          </div>
-          <div class="itinerary-day">
-            <div class="day-badge"><span>Day</span><span>5</span></div>
-            <div class="day-info">
-              <div class="day-title">Tengboche → Dingboche</div>
-              <div class="day-desc">Descend to Deboche, cross the Imja Khola, and climb through rhododendron forest to Pangboche before continuing to Dingboche (4,410m) — the gateway to the high Khumbu.</div>
-              <div class="day-tags"><span class="day-tag">~12 km</span><span class="day-tag">+543 m altitude</span></div>
-            </div>
-          </div>
-          <div class="itinerary-day">
-            <div class="day-badge"><span>Day</span><span>6</span></div>
-            <div class="day-info">
-              <div class="day-title">Acclimatization Day — Dingboche</div>
-              <div class="day-desc">Second acclimatization day. Hike to Nagarjun Hill (5,083m) for phenomenal views of Island Peak, Makalu, and Lhotse South Face. This altitude day hike is excellent preparation for what lies ahead.</div>
-              <div class="day-tags"><span class="day-tag highlight">Acclimatization</span><span class="day-tag">Hike to 5,083 m</span></div>
-            </div>
-          </div>
-          <div class="itinerary-day">
-            <div class="day-badge"><span>Day</span><span>7</span></div>
-            <div class="day-info">
-              <div class="day-title">Dingboche → Lobuche</div>
-              <div class="day-desc">Cross the terminal moraine of the Khumbu Glacier to Lobuche (4,940m). The landscape becomes increasingly austere and lunar. Pass the memorial chortens honouring lost mountaineers.</div>
-              <div class="day-tags"><span class="day-tag">~8 km</span><span class="day-tag">+530 m altitude</span></div>
-            </div>
-          </div>
-          <div class="itinerary-day">
-            <div class="day-badge"><span>Day</span><span>8</span></div>
-            <div class="day-info">
-              <div class="day-title">Lobuche → Gorak Shep → Everest Base Camp</div>
-              <div class="day-desc">The culminating day. Reach Gorak Shep (5,140m), drop your pack, and push on to <strong>Everest Base Camp (5,364m)</strong>. Stand on the Khumbu Glacier and look up at the route taken by every Everest climber. Return to Gorak Shep.</div>
-              <div class="day-tags"><span class="day-tag highlight">Summit Day</span><span class="day-tag">~16 km round trip</span><span class="day-tag">+424 m to EBC</span></div>
-            </div>
-          </div>
-          <div class="itinerary-day">
-            <div class="day-badge"><span>Day</span><span>9</span></div>
-            <div class="day-info">
-              <div class="day-title">Gorak Shep → Kala Patthar → Pheriche</div>
-              <div class="day-desc">Rise at 04:30 to summit Kala Patthar (<strong>5,550m</strong>) at sunrise — the highest point of the trek, with the definitive view of Everest's summit ridge. Descend all the way to Pheriche (4,243m).</div>
-              <div class="day-tags"><span class="day-tag highlight">5,550 m — Highest Point</span><span class="day-tag">Sunrise hike</span></div>
-            </div>
-          </div>
-          <div class="itinerary-day">
-            <div class="day-badge"><span>Day</span><span>10–14</span></div>
-            <div class="day-info">
-              <div class="day-title">Pheriche → Namche → Lukla → Kathmandu</div>
-              <div class="day-desc">Descend in four stages: Pheriche → Namche (Day 10), Namche → Lukla (Days 11–12), Lukla → Kathmandu flight (Day 13), Kathmandu buffer/rest day (Day 14). Descents feel dramatically faster than ascents.</div>
-              <div class="day-tags"><span class="day-tag">Return journey</span><span class="day-tag">Buffer day included</span></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="info-box tip reveal">
-          <div class="info-box-title">Pro Tip — Acclimatization</div>
-          <p>Follow the golden rule: <strong>"Climb high, sleep low."</strong> Beyond Summit adds a third acclimatization day above 4,000m compared to budget operators. This dramatically reduces the risk of Acute Mountain Sickness (AMS). If you feel unwell at altitude — persistent headache, nausea, loss of coordination — descent is the only cure. Do not ascend with symptoms.</p>
-        </div>
-
-        <div class="section-rule reveal"><div class="section-rule-diamond"></div></div>
-
-        <h2 id="permits">Permits Required <em>2026</em></h2>
-
-        <p>All trekkers need two permits to trek in the Khumbu region:</p>
-
-        <ol>
-          <li><strong>Sagarmatha National Park Permit</strong> — NPR 3,000 (~USD 22) per person. Encompasses the entire Khumbu Valley including Everest.</li>
-          <li><strong>TIMS Card</strong> (Trekkers' Information Management System) — NPR 2,000 (~USD 15) for independent trekkers; covered by your agent if booking with a licensed operator like Beyond Summit.</li>
-        </ol>
-
-        <p>When you trek with Beyond Summit Expeditions, <strong>all permits are arranged on your behalf</strong> before departure and included in the package cost. Since April 2023, solo unguided trekking in Nepal's national parks is no longer legally permitted — all trekkers must be accompanied by a licensed guide.</p>
-
-        <div class="section-rule reveal"><div class="section-rule-diamond"></div></div>
-
-        <h2 id="costs">How Much Does It <em>Cost?</em></h2>
-
-        <p>Costs vary significantly based on style of trekking and who you book with. Here is a realistic breakdown for 2026:</p>
-
-        <div class="cost-table-wrap reveal">
-          <table class="cost-table">
-            <thead>
-              <tr>
-                <th>Item</th>
-                <th>Budget</th>
-                <th>Mid-Range</th>
-                <th>Beyond Summit</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Agency Package</td>
-                <td>$900–1,200</td>
-                <td>$1,200–1,800</td>
-                <td class="col-highlight">$1,650–2,200</td>
-              </tr>
-              <tr>
-                <td>Kathmandu–Lukla Flights</td>
-                <td>$220–280 RT</td>
-                <td>$220–280 RT</td>
-                <td class="col-highlight">$280 RT</td>
-              </tr>
-              <tr>
-                <td>Permits (NP + TIMS)</td>
-                <td>Included</td>
-                <td>Included</td>
-                <td class="col-highlight">Included</td>
-              </tr>
-              <tr>
-                <td>Gear Rental</td>
-                <td>$50–120</td>
-                <td>$0–80</td>
-                <td class="col-highlight">$0 (included)</td>
-              </tr>
-              <tr>
-                <td>Personal Expenses</td>
-                <td>$200–350</td>
-                <td>$200–300</td>
-                <td class="col-highlight">$150–200</td>
-              </tr>
-              <tr>
-                <td>Total (excl. international flights)</td>
-                <td>$1,400–1,900</td>
-                <td>$1,700–2,400</td>
-                <td class="col-highlight">$2,100–2,700</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <blockquote class="reveal">
-          <p>You'll spend one of the most beautiful two weeks of your life on this trail. The difference between a great experience and a miserable one often comes down to the quality of your guide and how your itinerary handles acclimatization — not saving $300 on the package.</p>
-          <cite>Pemba Sherpa, Senior Trek Guide — Beyond Summit Expeditions</cite>
-        </blockquote>
-
-        <div class="section-rule reveal"><div class="section-rule-diamond"></div></div>
-
-        <h2 id="fitness">Fitness <em>Requirements</em></h2>
-
-        <p>The EBC trek requires no mountaineering skills, but it does demand a solid base of fitness. You will be walking for <strong>5–8 hours per day</strong> at altitudes above 3,000 metres, often on uneven terrain. The cumulative elevation gain over the trek exceeds 8,000 metres.</p>
-
-        <p>We recommend a minimum of <strong>8–12 weeks of dedicated preparation</strong> before your trek, including:</p>
-
-        <ul>
-          <li>Weekly long hikes (3–6 hours) on hilly terrain, ideally with a loaded daypack</li>
-          <li>Cardiovascular training 3–4 times per week (running, cycling, swimming)</li>
-          <li>Stair climbs with a weighted pack to simulate ascent effort</li>
-          <li>Core and leg strengthening exercises (squats, lunges, step-ups)</li>
-        </ul>
-
-        <p>If you are over 50 or have any pre-existing cardiovascular or respiratory conditions, consult your physician and consider a high-altitude medical consultation before booking.</p>
-
-        <div class="section-rule reveal"><div class="section-rule-diamond"></div></div>
-
-        <h2 id="gear">Essential Gear <em>Checklist</em></h2>
-
-        <p>Packing correctly is half the battle. Your base weight should not exceed <strong>10–12kg</strong>; porters (included in Beyond Summit packages) carry the bulk of your kit.</p>
-
-        <ul>
-          <li><strong>Footwear:</strong> Waterproof, ankle-supporting trekking boots (broken in before the trek), warm camp shoes/sandals, gaiters</li>
-          <li><strong>Layering system:</strong> Moisture-wicking base layers, mid-layer fleece or softshell, insulated down jacket (800+ fill), waterproof hardshell jacket and trousers</li>
-          <li><strong>Sleeping:</strong> Down sleeping bag rated to –15°C (most teahouse rooms lack adequate heating above 4,500m)</li>
-          <li><strong>Accessories:</strong> Warm hat, balaclava, liner gloves + waterproof outer gloves, UV-protective sunglasses, SPF 50+ sunscreen</li>
-          <li><strong>Trekking poles:</strong> Strongly recommended, especially for descent</li>
-          <li><strong>Medications:</strong> Ibuprofen, diamox (consult GP), oral rehydration salts, blister kit, personal prescriptions</li>
-          <li><strong>Electronics:</strong> Power bank (teahouses charge for electricity), camera, offline maps downloaded</li>
-        </ul>
-
-        <div class="info-box tip reveal">
-          <div class="info-box-title">Gear Rental in Kathmandu</div>
-          <p>Everything you need — sleeping bags, down jackets, trekking poles, duffel bags — can be rented affordably in Kathmandu's Thamel district. Beyond Summit arranges quality gear rental as part of your pre-departure briefing day.</p>
-        </div>
-
-        <div class="section-rule reveal"><div class="section-rule-diamond"></div></div>
-
-        <h2 id="faq">Frequently <em>Asked Questions</em></h2>
-
-        <h3>Do I need a guide for the EBC trek?</h3>
-        <p>Since April 2023, solo, unguided trekking in Nepal's national parks is <strong>no longer legally permitted</strong>. All trekkers must be accompanied by a licensed guide. Beyond Summit's guides are TIMS-registered, fluent in English, and trained in wilderness first aid.</p>
-
-        <h3>Can I trek EBC without prior high-altitude experience?</h3>
-        <p>Yes. The EBC trek reaches 5,364m, which is challenging but manageable without prior Himalayan experience if you are fit, follow your guide's pace, and take acclimatization seriously. We have guided trekkers in their 60s and 70s to Base Camp.</p>
-
-        <h3>What is the failure rate on the EBC trek?</h3>
-        <p>Industry statistics suggest 7–10% of trekkers do not reach Base Camp, primarily due to altitude sickness. Beyond Summit's itinerary — with three acclimatization days — gives our guests a significantly higher completion rate. Turnaround decisions are always made by our guides in consultation with clients, and never rushed.</p>
-
-        <div class="section-rule reveal"><div class="section-rule-diamond"></div></div>
-
-        <h2 id="book">Book Your <em>Trek</em></h2>
-
-        <p>Ready to make this journey? Beyond Summit Expeditions operates group departures every two weeks throughout the spring and autumn seasons, as well as fully private treks tailored to your schedule and pace. Our team handles all logistics from Kathmandu airport arrival to departure.</p>
-
-        <p><a href="/trekking/everest-base-camp">View our full EBC trek packages</a> or <a href="/contact">contact our team</a> for a personalised quote.</p>
-
-      </div>
-    </main>
-
-    <!-- SIDEBAR -->
-    <aside class="article-sidebar">
-      <div class="sidebar-sticky">
-
-        <!-- Quick Facts -->
-        <div class="sidebar-widget reveal">
-          <div class="widget-title">Quick Facts</div>
-          <div class="fact-row">
-            <div class="fact-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg></div>
-            <div>
-              <div class="fact-label">Max Altitude</div>
-              <div class="fact-val">5,550 m — Kala Patthar</div>
-            </div>
-          </div>
-          <div class="fact-row">
-            <div class="fact-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-            <div>
-              <div class="fact-label">Duration</div>
-              <div class="fact-val">14 Days (12–16 range)</div>
-            </div>
-          </div>
-          <div class="fact-row">
-            <div class="fact-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg></div>
-            <div>
-              <div class="fact-label">Start / End</div>
-              <div class="fact-val">Lukla via Kathmandu</div>
-            </div>
-          </div>
-          <div class="fact-row">
-            <div class="fact-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-            <div>
-              <div class="fact-label">Difficulty</div>
-              <div class="fact-val">Moderate – Strenuous</div>
-            </div>
-          </div>
-          <div class="fact-row">
-            <div class="fact-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
-            <div>
-              <div class="fact-label">Best Seasons</div>
-              <div class="fact-val">Mar–May · Oct–Nov</div>
-            </div>
-          </div>
-          <div class="fact-row">
-            <div class="fact-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
-            <div>
-              <div class="fact-label">Total Distance</div>
-              <div class="fact-val">~130 km</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- CTA -->
-        <div class="cta-widget reveal d1">
-          <span class="cta-price">$1,650</span>
-          <span class="cta-price-label">Per person · All-inclusive</span>
-          <p>Spring & autumn departures. Small groups, expert Sherpa guides, all permits included.</p>
-          <a href="/trekking/everest-base-camp" class="btn-cta">Book This Trek →</a>
-        </div>
-
-        <!-- TOC -->
-        <div class="sidebar-widget reveal d2">
-          <div class="widget-title">In This Guide</div>
-          <div class="toc-list">
-            <div class="toc-item"><span class="toc-num">01</span><a href="#overview">What is the EBC Trek?</a></div>
-            <div class="toc-item"><span class="toc-num">02</span><a href="#best-time">Best Time to Trek</a></div>
-            <div class="toc-item"><span class="toc-num">03</span><a href="#itinerary">14-Day Itinerary</a></div>
-            <div class="toc-item"><span class="toc-num">04</span><a href="#permits">Permits Required</a></div>
-            <div class="toc-item"><span class="toc-num">05</span><a href="#costs">How Much Does It Cost?</a></div>
-            <div class="toc-item"><span class="toc-num">06</span><a href="#fitness">Fitness Requirements</a></div>
-            <div class="toc-item"><span class="toc-num">07</span><a href="#gear">Essential Gear Checklist</a></div>
-            <div class="toc-item"><span class="toc-num">08</span><a href="#faq">FAQs</a></div>
-            <div class="toc-item"><span class="toc-num">09</span><a href="#book">Book Your Trek</a></div>
-          </div>
-        </div>
-
-      </div>
-    </aside>
+<section class="section" aria-labelledby="rel-title"><div class="wrap">
+  <div class="head-row"><div class="head"><h2 id="rel-title">Other trips you might like</h2></div><a class="link" href="/trekking.html">All treks <svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a></div>
+  <div class="cards"><a href="/articles/annapurna-blog.html" class="card reveal" data-tags="annapurna moderate classic two-weeks trek short">
+  <div class="ph"><img src="/images/places/abc-sanctuary-1024.webp" srcset="/images/places/abc-sanctuary-640.webp 640w, /images/places/abc-sanctuary-1024.webp 1024w, /images/places/abc-sanctuary-1600.webp 1600w" sizes="(max-width: 640px) 100vw, (max-width: 1099px) 50vw, 400px" width="1600" height="1067" alt="Annapurna South and Moditse above the trail into the Annapurna Sanctuary" loading="lazy" decoding="async"></div>
+  <div class="card-body">
+    <p class="card-region">Annapurna region</p>
+    <h3>Annapurna Base Camp</h3>
+    <p class="card-text">Sunrise from Poon Hill, then up the Modi Khola gorge into the Annapurna Sanctuary. No flights, and gentler altitude than Everest.</p>
+    <div class="card-facts">
+      <span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"/></svg>12 days</span>
+      <span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M164,80a28,28,0,1,0-28-28A28,28,0,0,0,164,80Zm0-40a12,12,0,1,1-12,12A12,12,0,0,1,164,40Zm90.88,155.92-54.56-92.08A15.87,15.87,0,0,0,186.55,96h0a15.85,15.85,0,0,0-13.76,7.84L146.63,148l-44.84-76.1a16,16,0,0,0-27.58,0L1.11,195.94A8,8,0,0,0,8,208H248a8,8,0,0,0,6.88-12.08ZM88,80l23.57,40H64.43ZM22,192l33-56h66l18.74,31.8,0,0L154,192Zm150.57,0-16.66-28.28L186.55,112,234,192Z"/></svg>4,130 m</span>
+      <span class="chip"><span class="grade" title="Grade 3 of 5"><i><b class="on"></b><b class="on"></b><b class="on"></b><b class=""></b><b class=""></b></i>Moderate</span></span>
+    </div>
+    <div class="card-foot"><p class="price"><small>From</small><strong>US$1,100</strong></p><span class="link">View itinerary <svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span></div>
   </div>
-
-  <!-- RELATED POSTS -->
-  <section class="related-section">
-    <div class="related-header reveal">
-      <span class="eyebrow">Continue Reading</span>
-      <h2>More From Our <em>Blog</em></h2>
+</a><a href="/articles/annapurna-circuit.html" class="card reveal" data-tags="annapurna strenuous classic long trek">
+  <div class="ph"><img src="/images/places/thorong-la-1024.webp" srcset="/images/places/thorong-la-640.webp 640w, /images/places/thorong-la-1024.webp 1024w, /images/places/thorong-la-1600.webp 1600w" sizes="(max-width: 640px) 100vw, (max-width: 1099px) 50vw, 400px" width="1600" height="1067" alt="Prayer flags on the Thorong La, 5,416 m, on the Annapurna Circuit" loading="lazy" decoding="async"></div>
+  <div class="card-body">
+    <p class="card-region">Annapurna region</p>
+    <h3>Annapurna Circuit</h3>
+    <p class="card-text">Rice terraces to high desert in a single walk, with a detour to Tilicho Lake and a 5,416 m pass to cross.</p>
+    <div class="card-facts">
+      <span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"/></svg>18 days</span>
+      <span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M164,80a28,28,0,1,0-28-28A28,28,0,0,0,164,80Zm0-40a12,12,0,1,1-12,12A12,12,0,0,1,164,40Zm90.88,155.92-54.56-92.08A15.87,15.87,0,0,0,186.55,96h0a15.85,15.85,0,0,0-13.76,7.84L146.63,148l-44.84-76.1a16,16,0,0,0-27.58,0L1.11,195.94A8,8,0,0,0,8,208H248a8,8,0,0,0,6.88-12.08ZM88,80l23.57,40H64.43ZM22,192l33-56h66l18.74,31.8,0,0L154,192Zm150.57,0-16.66-28.28L186.55,112,234,192Z"/></svg>5,416 m</span>
+      <span class="chip"><span class="grade" title="Grade 4 of 5"><i><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b class=""></b></i>Challenging</span></span>
     </div>
-    <div class="related-grid">
-      <a href="/blog/best-time-to-climb-mount-everest" class="related-card reveal">
-        <div class="related-img-wrap">
-          <img class="related-img" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=600&auto=format&fit=crop" alt="Mount Everest at sunrise" loading="lazy">
-        </div>
-        <div class="related-body">
-          <span class="related-cat">Expedition Planning</span>
-          <div class="related-title">Best Time to Climb Mount Everest: Season Guide</div>
-          <div class="related-arrow">Read More <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-        </div>
-      </a>
-      <a href="/blog/high-altitude-acclimatization-guide" class="related-card reveal d1">
-        <div class="related-img-wrap">
-          <img class="related-img" src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?q=80&w=600&auto=format&fit=crop" alt="High altitude trekking in Nepal" loading="lazy">
-        </div>
-        <div class="related-body">
-          <span class="related-cat">Safety</span>
-          <div class="related-title">High Altitude Acclimatization: A Complete Guide</div>
-          <div class="related-arrow">Read More <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-        </div>
-      </a>
-      <a href="/blog/annapurna-circuit-vs-base-camp" class="related-card reveal d2">
-        <div class="related-img-wrap">
-          <img class="related-img" src="https://images.unsplash.com/photo-1506466010722-395ee2bef877?q=80&w=600&auto=format&fit=crop" alt="Annapurna Circuit trail" loading="lazy">
-        </div>
-        <div class="related-body">
-          <span class="related-cat">Trekking Guide</span>
-          <div class="related-title">Annapurna Circuit vs Base Camp: Which is Right for You?</div>
-          <div class="related-arrow">Read More <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-        </div>
-      </a>
+    <div class="card-foot"><p class="price"><small>From</small><strong>US$1,350</strong></p><span class="link">View itinerary <svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span></div>
+  </div>
+</a><a href="/articles/manaslu-blog.html" class="card reveal" data-tags="manaslu strenuous restricted two-weeks trek">
+  <div class="ph"><img src="/images/places/larkya-la-1024.webp" srcset="/images/places/larkya-la-640.webp 640w, /images/places/larkya-la-1024.webp 1024w, /images/places/larkya-la-1600.webp 1600w" sizes="(max-width: 640px) 100vw, (max-width: 1099px) 50vw, 400px" width="1600" height="747" alt="Prayer flags on the Larkya La pass, 5,106 m, on the Manaslu Circuit" loading="lazy" decoding="async"></div>
+  <div class="card-body">
+    <p class="card-region">Gorkha, Manaslu region</p>
+    <h3>Manaslu Circuit</h3>
+    <p class="card-text">Deep gorges, Tibetan Buddhist villages and the Larkya La, on a trail that sees a fraction of the Everest crowds.</p>
+    <div class="card-facts">
+      <span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"/></svg>16 days</span>
+      <span class="chip"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M164,80a28,28,0,1,0-28-28A28,28,0,0,0,164,80Zm0-40a12,12,0,1,1-12,12A12,12,0,0,1,164,40Zm90.88,155.92-54.56-92.08A15.87,15.87,0,0,0,186.55,96h0a15.85,15.85,0,0,0-13.76,7.84L146.63,148l-44.84-76.1a16,16,0,0,0-27.58,0L1.11,195.94A8,8,0,0,0,8,208H248a8,8,0,0,0,6.88-12.08ZM88,80l23.57,40H64.43ZM22,192l33-56h66l18.74,31.8,0,0L154,192Zm150.57,0-16.66-28.28L186.55,112,234,192Z"/></svg>5,106 m</span>
+      <span class="chip"><span class="grade" title="Grade 4 of 5"><i><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b class=""></b></i>Challenging</span></span>
     </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-inner">
-      <p class="footer-copy">© 2026 <a href="/">Beyond Summit Expeditions</a> · Licensed by Dept. of Tourism, Nepal</p>
-      <div class="footer-links">
-        <a href="/privacy-policy">Privacy</a>
-        <a href="/terms">Terms</a>
-        <a href="/contact">Contact</a>
+    <div class="card-foot"><p class="price"><small>From</small><strong>US$1,950</strong></p><span class="link">View itinerary <svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span></div>
+  </div>
+</a></div>
+</div></section>
+<section class="section-sm"><div class="wrap"><div class="cta reveal">
+  <img src="/images/places/namche-1024.webp" srcset="/images/places/namche-640.webp 640w, /images/places/namche-1024.webp 1024w, /images/places/namche-1600.webp 1600w" sizes="100vw" width="1600" height="1151" alt="" loading="lazy" decoding="async">
+  <div><h2>Thinking about the Everest Base Camp?</h2><p>Tell us your dates and who&#x27;s coming. We&#x27;ll send a day-by-day plan, a clear price and an honest view on whether it&#x27;s the right trip for you.</p></div>
+  <div class="cta-actions">
+    <a href="/contact.html?trip=everest-base-camp" class="btn btn-light">Plan your trip <svg class="i i-arrow" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="https://wa.me/9779811157421" class="btn btn-onphoto" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg> WhatsApp us</a>
+    <div class="cta-lines"><a href="tel:+9779811157421">+977 981 115 7421</a><a href="mailto:info@beyondsummitexped.com">info@beyondsummitexped.com</a></div>
+  </div>
+</div></div></section>
+</main>
+<div class="mobile-book"><p class="price"><small>From, per person</small><strong>US$1,650</strong></p><a href="/contact.html?trip=everest-base-camp" class="btn btn-primary">Plan your trip</a></div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="/" class="brand" aria-label="Beyond Summit Expeditions, home"><svg class="logo-mark" viewBox="-1.5 -1.5 88 59" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M45.4 0 47.3 2.3 49.6 4.8 51.6 8.5 52.9 13.6 54.2 17.2 56.1 19.6 58.6 24.7 55.9 23.9 53.9 17.8 51.8 16.5 49.7 14.1 44.7 11.9 44.5 6.8 45 1.7Z" fill="currentColor" stroke="none" opacity=".9"/><path d="M0 50.8 2.9 46.6 5.1 43.2 7.2 41.3 8.8 38.1 11.2 34.5 12.6 31.5 13.7 30.8 15.2 25.6 17.8 20.7 19.6 17.9 20.5 19.2 21.8 18 23.4 19.9 25 22.3 26.3 21.9 27.7 24 29.5 24.8 30.9 23.9 32.8 19.9 35 17.9 37.2 13.8 39.6 8.9 41.6 5.1 43.4 2.8 45.4 0 47.3 2.3 49.6 4.8 51.6 8.5 52.9 13.6 54.2 17.2 56.1 19.6 58.6 24.7 60.4 26.7 63.3 28.4 67.4 29.1 71.7 27.7 75 29.7 81.3 31.8 85 29.1" stroke-width="1.6" vector-effect="non-scaling-stroke"/><path d="M3.7 55.7 10.2 49.3 12.8 47.9 20.3 39.3 24 38.3 28.3 47.1 36.7 55.7 M52.7 53.4 58.8 48.8 63.6 44.4 66.8 40.5 76.2 38.1 85 29.1" stroke-width="1.15" vector-effect="non-scaling-stroke"/><path d="M45 1.7 44.5 6.8 44.7 11.9 M19 20.9 19.5 27.4 19.6 34.6 20.7 38.9" stroke-width=".9" vector-effect="non-scaling-stroke" opacity=".6"/></svg><span>Beyond Summit<small>Expeditions, Kathmandu</small></span></a>
+        <p class="footer-about">A trekking and mountaineering company in Thamel, Kathmandu, licensed by the Department of Tourism, Government of Nepal.</p>
+        <p class="footer-about"><a href="tel:+9779811157421">+977 981 115 7421</a><br><a href="mailto:info@beyondsummitexped.com">info@beyondsummitexped.com</a></p>
+      </div>
+      <div><h4>Treks</h4><ul><li><a href="/articles/everest-blog-new.html">Everest Base Camp</a></li><li><a href="/articles/annapurna-blog.html">Annapurna Base Camp</a></li><li><a href="/articles/annapurna-circuit.html">Annapurna Circuit</a></li><li><a href="/articles/manaslu-blog.html">Manaslu Circuit</a></li><li><a href="/articles/upper-mustang-blog.html">Upper Mustang</a></li><li><a href="/articles/langtang-valley.html">Langtang Valley</a></li></ul></div><div><h4>Climbing</h4><ul><li><a href="/articles/islandpeak.html">Island Peak</a></li><li><a href="/articles/merapeak.html">Mera Peak</a></li><li><a href="/articles/lobuche.html">Lobuche East</a></li><li><a href="/articles/amadablam-blog.html">Ama Dablam</a></li><li><a href="/articles/himlung.html">Himlung Himal</a></li><li><a href="/expeditions.html#eight-thousanders">8,000 m expeditions</a></li></ul></div><div><h4>Plan</h4><ul><li><a href="/articles/nepal-trekking-permits.html">Trekking permits 2026</a></li><li><a href="/articles/best-time-to-trek-nepal.html">Best time to trek</a></li><li><a href="/outdoor.html">Activities</a></li><li><a href="/blog.html">Journal</a></li></ul></div><div><h4>Company</h4><ul><li><a href="/about.html">About us</a></li><li><a href="/guides.html">Our team</a></li><li><a href="/gallery.html">Photo gallery</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/photo-credits.html">Photo credits</a></li></ul></div>
+    </div>
+    <div class="footer-accred"><p>Licensed and registered in Nepal</p><div class="accred-minis"><a class="accred-mini" href="https://tourismdepartment.gov.np/" target="_blank" rel="noopener" title="Department of Tourism, Government of Nepal: Licensed trekking and mountaineering agency"><span class="accred-text" aria-hidden="true"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,136a8,8,0,0,1-8,8H72a8,8,0,0,1,0-16h48A8,8,0,0,1,128,136Zm-8-40H72a8,8,0,0,0,0,16h48a8,8,0,0,0,0-16Zm112,65.47V224A8,8,0,0,1,220,231l-24-13.74L172,231A8,8,0,0,1,160,224V200H40a16,16,0,0,1-16-16V56A16,16,0,0,1,40,40H216a16,16,0,0,1,16,16V86.53a51.88,51.88,0,0,1,0,74.94ZM160,184V161.47A52,52,0,0,1,216,76V56H40V184Zm56-12a51.88,51.88,0,0,1-40,0v38.22l16-9.16a8,8,0,0,1,7.94,0l16,9.16Zm16-48a36,36,0,1,0-36,36A36,36,0,0,0,232,124Z"/></svg><b>Govt. of<br>Nepal</b></span><span class="sr-only">Department of Tourism, Government of Nepal</span></a><a class="accred-mini" href="https://ntb.gov.np/" target="_blank" rel="noopener" title="Nepal Tourism Board: Registered with Nepal&#x27;s national tourism body"><picture><source srcset="/images/logos/ntb.webp" type="image/webp"><img src="/images/logos/ntb.png" alt="Nepal Tourism Board logo" width="33" height="34" loading="lazy" decoding="async"></picture><span class="sr-only">Nepal Tourism Board</span></a><a class="accred-mini" href="https://www.taan.org.np/" target="_blank" rel="noopener" title="Trekking Agencies&#x27; Association of Nepal: Member of the national trekking association"><picture><source srcset="/images/logos/taan.webp" type="image/webp"><img src="/images/logos/taan.png" alt="Trekking Agencies&#x27; Association of Nepal logo" width="25" height="34" loading="lazy" decoding="async"></picture><span class="sr-only">Trekking Agencies&#x27; Association of Nepal</span></a><a class="accred-mini" href="https://www.nepalmountaineering.org/" target="_blank" rel="noopener" title="Nepal Mountaineering Association: Member agency for peak climbing"><picture><source srcset="/images/logos/nma.webp" type="image/webp"><img src="/images/logos/nma.png" alt="Nepal Mountaineering Association logo" width="39" height="34" loading="lazy" decoding="async"></picture><span class="sr-only">Nepal Mountaineering Association</span></a></div></div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Beyond Summit Expeditions</p>
+      <button class="theme-toggle" type="button" data-theme-toggle><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm72,88a64,64,0,1,1-64-64A64.07,64.07,0,0,1,192,128Zm-16,0a48,48,0,1,0-48,48A48.05,48.05,0,0,0,176,128ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z"/></svg><span>Dark mode</span></button>
+      <div class="socials">
+        <a href="https://www.instagram.com/beyondsummitexpeditions" target="_blank" rel="noopener" aria-label="Instagram"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"/></svg></a>
+        <a href="https://www.facebook.com/beyondsummitexped" target="_blank" rel="noopener" aria-label="Facebook"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"/></svg></a>
+        <a href="https://www.youtube.com/@beyondsummitexpeditions" target="_blank" rel="noopener" aria-label="YouTube"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M164.44,121.34l-48-32A8,8,0,0,0,104,96v64a8,8,0,0,0,12.44,6.66l48-32a8,8,0,0,0,0-13.32ZM120,145.05V111l25.58,17ZM234.33,69.52a24,24,0,0,0-14.49-16.4C185.56,39.88,131,40,128,40s-57.56-.12-91.84,13.12a24,24,0,0,0-14.49,16.4C19.08,79.5,16,97.74,16,128s3.08,48.5,5.67,58.48a24,24,0,0,0,14.49,16.41C69,215.56,120.4,216,127.34,216h1.32c6.94,0,58.37-.44,91.18-13.11a24,24,0,0,0,14.49-16.41c2.59-10,5.67-28.22,5.67-58.48S236.92,79.5,234.33,69.52Zm-15.49,113a8,8,0,0,1-4.77,5.49c-31.65,12.22-85.48,12-86,12H128c-.54,0-54.33.2-86-12a8,8,0,0,1-4.77-5.49C34.8,173.39,32,156.57,32,128s2.8-45.39,5.16-54.47A8,8,0,0,1,41.93,68c30.52-11.79,81.66-12,85.85-12h.27c.54,0,54.38-.18,86,12a8,8,0,0,1,4.77,5.49C221.2,82.61,224,99.43,224,128S221.2,173.39,218.84,182.47Z"/></svg></a>
       </div>
     </div>
-  </footer>
-
-  <script>
-    /* ── CURSOR ── */
-    const cursor = document.getElementById('cursor');
-    const ring = document.getElementById('cursorRing');
-    let mx = 0, my = 0, rx = 0, ry = 0;
-    if (window.matchMedia('(pointer: fine)').matches) {
-      document.addEventListener('mousemove', e => {
-        mx = e.clientX; my = e.clientY;
-        cursor.style.left = mx + 'px'; cursor.style.top = my + 'px';
-      });
-      (function animateRing() {
-        rx += (mx - rx) * 0.15; ry += (my - ry) * 0.15;
-        ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
-        requestAnimationFrame(animateRing);
-      })();
-    }
-
-    /* ── NAV SHRINK ── */
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => navbar.classList.toggle('shrunk', window.scrollY > 60), { passive: true });
-
-    /* ── READING PROGRESS ── */
-    const fill = document.getElementById('readingFill');
-    window.addEventListener('scroll', () => {
-      const doc = document.documentElement;
-      const scrolled = doc.scrollTop;
-      const total = doc.scrollHeight - doc.clientHeight;
-      fill.style.width = (scrolled / total * 100) + '%';
-    }, { passive: true });
-
-    /* ── SCROLL REVEAL ── */
-    const reveals = document.querySelectorAll('.reveal');
-    const obs = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
-    }, { rootMargin: '0px 0px -40px 0px', threshold: 0.05 });
-    reveals.forEach(el => obs.observe(el));
-
-    /* ── TOC ACTIVE ── */
-    const sections = document.querySelectorAll('[id]');
-    const tocLinks = document.querySelectorAll('.toc-item a');
-    const tocObs = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          tocLinks.forEach(l => l.style.color = '');
-          const active = document.querySelector(`.toc-item a[href="#${e.target.id}"]`);
-          if (active) active.style.color = 'rgba(232,168,74,0.9)';
-        }
-      });
-    }, { rootMargin: '-30% 0px -60% 0px' });
-    sections.forEach(s => tocObs.observe(s));
-
-    /* ── SMOOTH ANCHOR ── */
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', e => {
-        const t = document.querySelector(a.getAttribute('href'));
-        if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
-      });
-    });
-  </script>
+  </div>
+</footer>
+<a href="https://wa.me/9779811157421" class="wa-float" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp"><svg class="i" viewBox="0 0 256 256" aria-hidden="true"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg></a>
+<script src="/js/site.js?v=2" defer></script>
 </body>
 </html>

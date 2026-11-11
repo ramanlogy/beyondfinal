@@ -1,0 +1,122 @@
+{
+ "autumn-valley": {
+  "w": 1400,
+  "h": 1050
+ },
+ "dusk-range": {
+  "w": 1600,
+  "h": 1280
+ },
+ "forest-trail": {
+  "w": 1400,
+  "h": 1050
+ },
+ "glacier-walk": {
+  "w": 900,
+  "h": 1200
+ },
+ "hero": {
+  "w": 1600,
+  "h": 1200
+ },
+ "high-peaks": {
+  "w": 1600,
+  "h": 1200
+ },
+ "larke-pass-group": {
+  "w": 1400,
+  "h": 1050
+ },
+ "prayer-flags": {
+  "w": 750,
+  "h": 1000
+ },
+ "rope-team": {
+  "w": 901,
+  "h": 1200
+ },
+ "snow-group": {
+  "w": 1600,
+  "h": 739
+ },
+ "summit-climber": {
+  "w": 901,
+  "h": 1200
+ },
+ "team-sign": {
+  "w": 1600,
+  "h": 739
+ },
+ "valley-walk": {
+  "w": 1600,
+  "h": 1200
+ },
+ "waterfall-trail": {
+  "w": 1400,
+  "h": 1050
+ },
+ "yak-meadow": {
+  "w": 1600,
+  "h": 739
+ },
+ "teahouse-group": {
+  "w": 1080,
+  "h": 1080
+ },
+ "golden-peaks": {
+  "w": 1080,
+  "h": 1080
+ },
+ "gate-group": {
+  "w": 1080,
+  "h": 1080
+ },
+ "snow-village": {
+  "w": 1080,
+  "h": 1080
+ },
+ "moraine-walk": {
+  "w": 1080,
+  "h": 1080
+ },
+ "trail-joy": {
+  "w": 1080,
+  "h": 1080
+ },
+ "snow-gate": {
+  "w": 1080,
+  "h": 1080
+ },
+ "road-cheer": {
+  "w": 1080,
+  "h": 1080
+ },
+ "waterfall-spray": {
+  "w": 1080,
+  "h": 1080
+ },
+ "snow-bridge": {
+  "w": 1080,
+  "h": 1080
+ },
+ "cholatse-lodge": {
+  "w": 1080,
+  "h": 1080
+ },
+ "elwin-mountains": {
+  "w": 1080,
+  "h": 1080
+ },
+ "elwin-guitar": {
+  "w": 1440,
+  "h": 1920
+ },
+ "traveller-child": {
+  "w": 1440,
+  "h": 1920
+ },
+ "traveller-local": {
+  "w": 1440,
+  "h": 1920
+ }
+}
