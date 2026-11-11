@@ -21,3 +21,7 @@ Photos: place photos come from Wikimedia Commons (`tools/commons_search.py`, `to
 640/1024/1600 WebP versions the same way the build expects (`name-640.webp` and so on) and add it to `data/own_photos.json`.
 
 The build also regenerates `sitemap.xml` and `robots.txt`.
+
+Icons: our own line set in `icons/` (24 px grid, 1.5 stroke, round caps — the same hand as the Ama Dablam logo).
+Edit or add one in `tools/make_icons.py` and run `python3 _src/tools/make_icons.py` to rewrite the SVGs. The four
+social logos (WhatsApp, Instagram, Facebook, YouTube) are the brands' own marks and stay as they are.

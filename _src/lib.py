@@ -19,15 +19,19 @@ e = lambda s: html.escape(str(s), quote=True)
 fmt = lambda n: f"{n:,}"
 
 
-# ── icons (Phosphor regular, MIT) ────────────────────────────────────────────
+# ── icons: our own line set (tools/make_icons.py) + brand logos from Phosphor (MIT) ──
 _ICONS = {}
 def icon(name, cls="i"):
+    """Inline an icon from _src/icons. Our own line icons (24 grid, 1.5 stroke, see tools/make_icons.py) keep their
+    stroke attributes; the four social/brand logos are filled shapes and keep theirs."""
     if name not in _ICONS:
         svg = open(os.path.join(SRC, "icons", f"{name}.svg")).read()
-        inner = re.search(r"<svg[^>]*>(.*)</svg>", svg, re.S).group(1)
-        _ICONS[name] = inner
+        m = re.search(r"<svg([^>]*)>(.*)</svg>", svg, re.S)
+        attrs = re.sub(r'\s*xmlns="[^"]*"', "", m.group(1))
+        _ICONS[name] = (attrs, m.group(2))
+    attrs, inner = _ICONS[name]
     extra = " i-arrow" if name == "arrow-right" else ""
-    return f'<svg class="{cls}{extra}" viewBox="0 0 256 256" aria-hidden="true">{_ICONS[name]}</svg>'
+    return f'<svg class="{cls}{extra}"{attrs} aria-hidden="true">{inner}</svg>'
 
 
 # ── photos ────────────────────────────────────────────────────────────────────
@@ -330,21 +334,57 @@ def dedupe(seq):
 def path_d(points):
     return "M" + " L".join(f"{x},{y}" for x, y in points)
 
-def place_labels(cands, W, H, fs=11):
-    """Greedy label placement. cands: list of (priority, x, y, text, cls). Returns svg <text> list."""
-    boxes, out = [], []
+def _seg_hits_box(x1, y1, x2, y2, bx, by, bw, bh):
+    """Liang-Barsky: does the segment cross the rectangle?"""
+    t0, t1, dx, dy = 0.0, 1.0, x2 - x1, y2 - y1
+    for p, q in ((-dx, x1 - bx), (dx, bx + bw - x1), (-dy, y1 - by), (dy, by + bh - y1)):
+        if p == 0:
+            if q < 0: return False
+        else:
+            t = q / p
+            if p < 0: t0 = max(t0, t)
+            else: t1 = min(t1, t)
+            if t0 > t1: return False
+    return True
+
+def place_labels(cands, W, H, fs=11, pad=3, lines=()):
+    """Label placement. cands: list of (priority, x, y, text, cls); lines: [(points, weight)] route lines to keep clear of.
+    Labels never overlap each other or a stop dot. Among the clear spots the one crossing the least route line wins
+    (the day's own route weighs more than the faint context line). Highest priority is placed first; the start/finish
+    and high point may shrink a little to fit, other labels that cannot be placed cleanly are dropped."""
+    r = 6  # keep-out radius around every stop dot
+    boxes = [(x - r, y - r, 2 * r, 2 * r) for _, x, y, _, _ in cands]
+    segs = [(p[i][0], p[i][1], p[i + 1][0], p[i + 1][1], wt) for p, wt in lines for i in range(len(p) - 1)]
+    out = []
     for pr, x, y, t, cls in sorted(cands, key=lambda c: c[0]):
-        w, h = len(t) * fs * .56 + 2, fs * 1.15
-        for dx, dy, anchor in ((7, 4, "start"), (-7, 4, "end"), (0, -9, "middle"), (0, 16, "middle")):
-            if anchor == "start": bx = x + dx
-            elif anchor == "end": bx = x + dx - w
-            else: bx = x - w / 2
-            by = y + dy - h * .8
-            if bx < 1 or bx + w > W - 1 or by < 1 or by + h > H - 1: continue
-            if any(not (bx + w < a or bx > a + aw or by + h < b or by > b + bh) for a, b, aw, bh in boxes): continue
-            boxes.append((bx, by, w, h))
-            out.append(f'<text x="{x + dx}" y="{y + dy}" text-anchor="{anchor}" class="{cls}">{e(t)}</text>')
-            break
+        bold = "strong" in cls
+        own = (x - r, y - r, 2 * r, 2 * r)
+        for k in ((1, .86, .74) if pr <= 1 else (1,)):
+            f = fs * k
+            w, h = len(t) * f * (.6 if bold else .56) + 4, f * 1.2
+            g = f * .35
+            spots = ((r + g, f * .35, "start"), (-r - g, f * .35, "end"),
+                     (0, -r - g, "middle"), (0, r + g + f * .85, "middle"),
+                     (r * .7, -r - g * .4, "start"), (-r * .7, -r - g * .4, "end"),
+                     (r * .7, r + g + f * .8, "start"), (-r * .7, r + g + f * .8, "end"))
+            best = None
+            for n, (dx, dy, anchor) in enumerate(spots):
+                bx = x + dx if anchor == "start" else x + dx - w if anchor == "end" else x - w / 2
+                by = y + dy - h * .8
+                if bx < pad or bx + w > W - pad or by < pad or by + h > H - pad: continue
+                if any(bb != own and not (bx + w < a or bx > a + aw or by + h < b or by > b + bh)
+                       for bb in boxes for a, b, aw, bh in (bb,)): continue
+                cost = n * .1 + sum(wt for x1, y1, x2, y2, wt in segs
+                                    if _seg_hits_box(x1, y1, x2, y2, bx + 1, by + 1, w - 2, h - 2))
+                if best is None or cost < best[0]: best = (cost, dx, dy, anchor, bx, by)
+                if cost < 1: break
+            # crossing the faint context line is fine; only shrink to keep clear of the day's own route
+            if best and (best[0] < 10 or k == (.74 if pr <= 1 else 1)):
+                _, dx, dy, anchor, bx, by = best
+                boxes.append((bx, by, w, h))
+                size = "" if k == 1 else f' style="font-size:{f:.1f}px"'
+                out.append(f'<text x="{x + dx:.1f}" y="{y + dy:.1f}" text-anchor="{anchor}" class="{cls}"{size}>{e(t)}</text>')
+                break
     return out
 
 def scale_bar(proj, W, H):
@@ -405,7 +445,7 @@ def overview_map(trip, P, W=640, H=420, live=False):
     for name, alt, la, lo in refs:
         x, y = proj({"lat": la, "lon": lo})
         cands.append((5, x, y + 2, name, "peak-name"))
-    parts += place_labels(cands, W, H)
+    parts += place_labels(cands, W, H, lines=[(full_xy, 10)])
     parts.append(scale_bar(proj, W, H))
     parts.append(f'<text x="{W-14}" y="22" class="north" text-anchor="middle" style="paint-order:normal;stroke:none">N</text><path d="M{W-14},26 l-4,10 h8z" style="fill:var(--ink-3)"/>')
     cls = "map map-big" if live else "map"
@@ -435,7 +475,8 @@ def day_map(trip, P, i, W=240, H=170):
         parts.append(f'<circle class="{cls}" cx="{x}" cy="{y}" r="{5 if (k == hi or last) else 4}"/>')
         pr = 0 if last else 1 if k == hi else 2 if first else 3
         cands.append((pr, x, y, P[k]["name"].replace(" summit", ""), "strong" if pr <= 1 else ""))
-    parts += place_labels(cands, W, H, fs=13)
+    lines = [(ctx, 1)] + ([(xy, 10)] if len(xy) > 1 else [])
+    parts += place_labels(cands, W, H, fs=14, lines=lines)  # matches .day-map text { font-size: 14px }
     return f'<svg viewBox="0 0 {W} {H}" role="img" aria-label="Map of day {e(d["n"])}: {e(" to ".join(P[k]["name"] for k in dedupe(r)))}">{"".join(parts)}</svg>'
 
 def day_high(d, P):

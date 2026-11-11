@@ -270,7 +270,7 @@ def home():
     <label><span>Region</span><select name="region">{opt([("all", "Anywhere in Nepal"), ("everest", "Everest"), ("annapurna", "Annapurna"), ("manaslu", "Manaslu"), ("mustang", "Mustang"), ("langtang", "Langtang")])}</select></label>
     <label><span>Length</span><select name="length">{opt([("all", "Any length"), ("short", "Up to 12 days"), ("two-weeks", "About two weeks"), ("long", "Three weeks or more")])}</select></label>
     <label><span>Level</span><select name="level">{opt([("all", "Any level"), ("moderate", "Moderate"), ("strenuous", "Challenging")])}</select></label>
-    <button class="btn btn-primary" type="submit">{icon("compass")} Show trips</button>
+    <button class="btn btn-primary" type="submit">Show trips</button>
   </form>
 </div>
 
@@ -308,7 +308,7 @@ def home():
     <div class="ph">{img("team-sign", "(max-width: 860px) 40vw, 20vw", pos="30% 50%")}</div>
   </div>
   <div class="reveal">
-    <p class="eyebrow">{icon("hand-heart")}How we travel</p>
+    <p class="eyebrow">How we travel</p>
     <h2 id="how-title">Small groups, at the pace of the mountains</h2>
     <p class="lede" style="margin-top:1rem">Never more than eight people, rest days in every itinerary, and plans that change with the weather and with how you're feeling.</p>
     <ul class="ticks">
@@ -672,7 +672,7 @@ def founder_card(link=False):
     more = f'<p><a class="link" href="/guides.html">More about Elwin {icon("arrow-right")}</a></p>' if link else ""
     return f"""<div class="founder reveal">
   <div class="founder-photos"><div class="ph">{img(f["photo"], "(max-width: 860px) 60vw, 28vw")}</div><div class="ph">{img(f["photo2"], "(max-width: 860px) 40vw, 18vw", pos="50% 60%")}</div></div>
-  <div class="founder-text"><p class="eyebrow">{icon("mountains")}{e(f["role"])}</p><h3>{e(f["name"])}</h3>{"".join(f"<p>{e(p)}</p>" for p in f["bio"])}{more}</div>
+  <div class="founder-text"><p class="eyebrow">{e(f["role"])}</p><h3>{e(f["name"])}</h3>{"".join(f"<p>{e(p)}</p>" for p in f["bio"])}{more}</div>
 </div>"""
 
 def about():

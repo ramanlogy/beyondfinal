@@ -59,7 +59,7 @@ a { color: inherit; text-decoration: none; }
 ul, ol { list-style: none; }
 button, input, select, textarea { font: inherit; color: inherit; }
 button { background: none; border: 0; cursor: pointer; }
-svg.i { width: 1.15em; height: 1.15em; flex: none; fill: currentColor; }
+svg.i { width: 1.15em; height: 1.15em; flex: none; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
 [id] { scroll-margin-top: calc(var(--nav-h) + 20px); }
 ::selection { background: var(--accent); color: var(--accent-ink); }
@@ -197,7 +197,7 @@ p { text-wrap: pretty; }
 /* Trust strip */
 .trust { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; }
 .trust > div { background: var(--surface); padding: 1.25rem 1.4rem; display: grid; grid-template-columns: auto 1fr; gap: .2rem .85rem; align-items: start; }
-.trust .i { width: 1.6rem; height: 1.6rem; color: var(--accent); grid-row: span 2; margin-top: .1rem; }
+.trust .i { width: 1.5rem; height: 1.5rem; color: var(--accent); grid-row: span 2; margin-top: .1rem; }
 .trust strong { font-weight: 600; font-size: .98rem; }
 .trust span { font-size: .88rem; color: var(--ink-2); line-height: 1.45; }
 
@@ -259,8 +259,9 @@ figcaption.credit, .credit { font-size: .75rem; color: var(--ink-3); margin-top:
 .split-media .ph:first-child { grid-row: span 2; aspect-ratio: 3 / 4; }
 .split-media .ph { aspect-ratio: 1 / 1; }
 .ticks { display: grid; gap: 1rem; margin-top: 1.75rem; }
-.ticks li { display: grid; grid-template-columns: 2.25rem 1fr; gap: .2rem .85rem; }
-.ticks .i-wrap { grid-row: span 2; width: 2.25rem; height: 2.25rem; border-radius: 999px; background: var(--accent-soft); color: var(--accent); display: grid; place-items: center; }
+.ticks li { display: grid; grid-template-columns: 1.5rem 1fr; gap: .15rem .9rem; }
+.ticks .i-wrap { grid-row: span 2; color: var(--accent); padding-top: .1rem; }
+.ticks .i-wrap .i { width: 1.4rem; height: 1.4rem; }
 .ticks strong { font-weight: 600; }
 .ticks span { color: var(--ink-2); font-size: .95rem; }
 
@@ -467,7 +468,9 @@ figcaption.credit, .credit { font-size: .75rem; color: var(--ink-3); margin-top:
 .values { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem 2.5rem; }
 .values h3 { font-size: 1.1rem; margin: .8rem 0 .35rem; }
 .values p { font-size: .95rem; color: var(--ink-2); }
-.values .i-wrap { width: 2.6rem; height: 2.6rem; border-radius: 999px; background: var(--accent-soft); color: var(--accent); display: grid; place-items: center; }
+.values > div { border-top: 1px solid var(--line); padding-top: 1.25rem; }
+.values .i-wrap { display: block; color: var(--accent); }
+.values .i-wrap .i { width: 1.75rem; height: 1.75rem; }
 
 .article-layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: clamp(2rem, 5vw, 5rem); align-items: start; }
 .toc { position: sticky; top: calc(var(--nav-h) + 24px); font-size: .92rem; border-left: 1px solid var(--line); padding-left: 1.1rem; }
@@ -509,9 +512,10 @@ td:first-child { font-weight: 500; }
 .form-status { grid-column: 1 / -1; font-size: .92rem; padding: .85rem 1rem; border-radius: var(--r-sm); background: var(--accent-soft); display: none; }
 .form-status.show { display: block; }
 .contact-list { display: grid; gap: .75rem; }
-.contact-list a, .contact-list div { display: grid; grid-template-columns: 2.5rem 1fr; gap: .1rem .9rem; align-items: center; padding: 1rem 1.1rem; border-radius: var(--r); background: var(--surface); border: 1px solid var(--line); transition: border-color .2s; }
+.contact-list a, .contact-list div { display: grid; grid-template-columns: 1.5rem 1fr; gap: .1rem .9rem; align-items: center; padding: 1rem 1.1rem; border-radius: var(--r); background: var(--surface); border: 1px solid var(--line); transition: border-color .2s; }
 .contact-list a:hover { border-color: var(--ink-3); }
-.contact-list .i-wrap { grid-row: span 2; width: 2.5rem; height: 2.5rem; border-radius: 999px; background: var(--accent-soft); color: var(--accent); display: grid; place-items: center; }
+.contact-list .i-wrap { grid-row: span 2; color: var(--accent); display: grid; }
+.contact-list .i-wrap .i { width: 1.35rem; height: 1.35rem; }
 .contact-list small { color: var(--ink-3); font-size: .82rem; }
 .contact-list strong { font-weight: 500; }
 
